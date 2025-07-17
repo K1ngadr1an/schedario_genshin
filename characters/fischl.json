@@ -1,0 +1,209 @@
+{
+  "displayName": "Fischl",
+  "img": "images/characters/fischl.png",
+  "tags": ["Bow", "Electro", "Mondstadt", "4★", "Sub-DPS", "Support"],
+  "description": "An investigator for Mondstadt's Adventurers' Guild, Fischl excels at off-field Electro application and consistent damage with Oz.",
+  "weapons": [
+    {
+      "name": "The Stringless",
+      "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Alley Hunter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Alley_Hunter.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Elegy for the End",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Thundering Fury (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+    },
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (2) + Thundering Fury (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Electro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["ATK%", "Elemental Mastery", "CRIT Rate", "CRIT DMG"],
+  "talents": [
+    "Normal Attack: Bolts of Downfall",
+    "Nightrider",
+    "Midnight Phantasmagoria"
+  ],
+  "info": "Fischl is a top-tier Electro sub-DPS and support, providing consistent Electro application and damage with Oz. Build her for ATK%, Elemental Mastery, and CRIT stats.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "The Stringless",
+        "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Thundering Fury (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Fischl" },
+      { "name": "Beidou" },
+      { "name": "Xingqiu" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Fischl" },
+      { "name": "Keqing" },
+      { "name": "Kazuha" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Fischl" },
+      { "name": "Raiden Shogun" },
+      { "name": "Sara" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Bolts of Downfall",
+      "desc": "Performs up to 5 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Bolts_of_Downfall.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Electro DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.1%",
+          "hit2": "46.8%",
+          "hit3": "58.1%",
+          "hit4": "57.7%",
+          "hit5": "72.1%",
+          "charged": "124%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "47.7%",
+          "hit2": "50.7%",
+          "hit3": "63.0%",
+          "hit4": "62.6%",
+          "hit5": "78.3%",
+          "charged": "134%",
+          "plunge": "61.2%",
+          "lowhigh": "122.3% / 152.8%"
+        }
+      ]
+    },
+    {
+      "name": "Nightrider",
+      "desc": "Summons Oz, the night raven, who deals Electro DMG in a small AoE and continuously attacks nearby enemies with Freikugel.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Nightrider.png",
+      "details_html": "<div class='skill-section'><b>Nightrider</b><br>Summons Oz, who deals Electro DMG in a small AoE and continuously attacks nearby enemies with Freikugel. Oz remains on the field for a set duration or until resummoned.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "summon_dmg": "115.4% ATK",
+          "freikugel": "87.8% ATK",
+          "duration": "10s",
+          "cd": "25s"
+        },
+        {
+          "level": 2,
+          "summon_dmg": "123.1% ATK",
+          "freikugel": "93.7% ATK",
+          "duration": "10s",
+          "cd": "25s"
+        }
+      ]
+    },
+    {
+      "name": "Midnight Phantasmagoria",
+      "desc": "Fischl takes on Oz's form, moving at high speed and dealing Electro DMG to enemies she passes through. At the end, Oz remains on the battlefield to continue attacking.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Midnight_Phantasmagoria.png",
+      "details_html": "<div class='skill-section'><b>Midnight Phantasmagoria</b><br>Fischl takes on Oz's form, moving at high speed and dealing Electro DMG to enemies she passes through. At the end, Oz remains on the battlefield to continue attacking.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "208% ATK",
+          "duration": "2s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "223% ATK",
+          "duration": "2s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Stellar Predator",
+      "phase": "Ascension Phase 1",
+      "desc": "When a fully-charged Aimed Shot hits Oz, it deals AoE Electro DMG equal to 152.7% of the arrow's DMG."
+    },
+    {
+      "name": "Undone Be Thy Sinful Hex",
+      "phase": "Ascension Phase 4",
+      "desc": "When Oz is on the field, he attacks with an additional joint attack dealing 30% of Fischl's ATK as Electro DMG."
+    },
+    {
+      "name": "Mein Hausgarten",
+      "phase": "Passive",
+      "desc": "When dispatched on an expedition in Mondstadt, the time consumed is reduced by 25%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Gaze of the Deep",
+      "phase": "Constellation Lv. 1",
+      "desc": "Oz attacks with an additional joint attack dealing 22% of Fischl's ATK as Electro DMG."
+    },
+    {
+      "name": "Devourer of All Sins",
+      "phase": "Constellation Lv. 2",
+      "desc": "Nightrider's DMG is increased by 200%, and its AoE is increased by 50%."
+    },
+    {
+      "name": "Wings of Nightmare",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Nightrider by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Her Pilgrimage of Bleak",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Midnight Phantasmagoria is used, deals 222% of ATK as Electro DMG to nearby enemies."
+    },
+    {
+      "name": "Against the Fleeing Light",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Midnight Phantasmagoria by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Evernight Raven",
+      "phase": "Constellation Lv. 6",
+      "desc": "Oz remains on the field for an additional 2s. Joint attacks deal 30% more DMG."
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "displayName": "Nahida",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Nahida_Icon.png",
+  "tags": [
+    "Catalyst",
+    "Dendro",
+    "Sumeru",
+    "5★",
+    "Support",
+    "Sub-DPS",
+    "Archon"
+  ],
+  "description": "The Dendro Archon and Lesser Lord Kusanali, Nahida is a powerful support and sub-DPS who excels at Dendro application and Elemental Mastery scaling.",
+  "weapons": [
+    {
+      "name": "A Thousand Floating Dreams",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_A_Thousand_Floating_Dreams.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Sacrificial Fragments",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Fragments.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Deepwood Memories (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Deepwood Memories (2) + Gilded Dreams (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Elemental Mastery / ATK%" },
+    { "type": "Goblet", "value": "Dendro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG / Elemental Mastery" }
+  ],
+  "substats": ["Elemental Mastery", "CRIT Rate", "CRIT DMG", "ATK%"],
+  "talents": ["Normal Attack: Akara", "All Schemes to Know", "Illusory Heart"],
+  "info": "Nahida is a Dendro support and sub-DPS who excels at off-field Dendro application and Elemental Mastery scaling. Build her for EM, Dendro DMG Bonus, and CRIT stats.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "A Thousand Floating Dreams",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_A_Thousand_Floating_Dreams.png",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Deepwood Memories (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Nahida" },
+      { "name": "Nilou" },
+      { "name": "Yelan" },
+      { "name": "Kokomi" }
+    ],
+    [
+      { "name": "Nahida" },
+      { "name": "Alhaitham" },
+      { "name": "Kuki Shinobu" },
+      { "name": "Yelan" }
+    ],
+    [
+      { "name": "Nahida" },
+      { "name": "Raiden Shogun" },
+      { "name": "Fischl" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Akara",
+      "desc": "Performs up to 4 attacks that deal Dendro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Akara.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 attacks that deal Dendro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to deal AoE Dendro DMG after a short casting time.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Dendro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "40.7%",
+          "hit2": "37.6%",
+          "hit3": "46.8%",
+          "hit4": "58.2%",
+          "charged": "132.0%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "44.0%",
+          "hit2": "40.7%",
+          "hit3": "50.7%",
+          "hit4": "63.0%",
+          "charged": "143.0%",
+          "plunge": "61.0%",
+          "lowhigh": "122.1% / 152.6%"
+        }
+      ]
+    },
+    {
+      "name": "All Schemes to Know",
+      "desc": "Nahida sends forth karmic bonds of wood and tree, marking enemies and linking them. Marked enemies take Dendro DMG when reactions are triggered.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_All_Schemes_to_Know.png",
+      "details_html": "<div class='skill-section'><b>All Schemes to Know</b><br>Marks enemies with the Seed of Skandha, linking them. When reactions are triggered, linked enemies take Dendro DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "98.6% ATK + 196.8% EM",
+          "tri-karma_purification": "103.2% ATK + 206.4% EM",
+          "cd": "5s (press) / 12s (hold)"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "106.0% ATK + 211.8% EM",
+          "tri-karma_purification": "111.1% ATK + 222.2% EM",
+          "cd": "5s (press) / 12s (hold)"
+        }
+      ]
+    },
+    {
+      "name": "Illusory Heart",
+      "desc": "Nahida manifests the Court of Dreams, expanding a Shrine of Maya that boosts party members' EM and triggers additional effects based on team composition.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Illusory_Heart.png",
+      "details_html": "<div class='skill-section'><b>Illusory Heart</b><br>Expands the Shrine of Maya, boosting EM and providing additional effects based on team elements.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "442% ATK",
+          "em_bonus": "100",
+          "duration": "15s",
+          "cd": "13.5s",
+          "energy_cost": "50"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "475% ATK",
+          "em_bonus": "120",
+          "duration": "15s",
+          "cd": "13.5s",
+          "energy_cost": "50"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Compassion Illuminated",
+      "phase": "Ascension Phase 1",
+      "desc": "When Nahida is in the Shrine of Maya, her Elemental Mastery is increased by 25% of the party member with the highest EM."
+    },
+    {
+      "name": "Awakening Elucidated",
+      "phase": "Ascension Phase 4",
+      "desc": "Each point of Nahida's Elemental Mastery above 200 increases the DMG of All Schemes to Know and Tri-Karma Purification."
+    },
+    {
+      "name": "On All Things Meditated",
+      "phase": "Passive",
+      "desc": "Nahida can harvest certain resources in Sumeru with a single tap."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "The Seed of Stored Knowledge",
+      "phase": "Constellation Lv. 1",
+      "desc": "All Schemes to Know can mark 1 additional opponent."
+    },
+    {
+      "name": "The Root of All Fullness",
+      "phase": "Constellation Lv. 2",
+      "desc": "Opponents marked by Seeds of Skandha will be affected by increased CRIT Rate and DEF Shred."
+    },
+    {
+      "name": "The Shoot of Conscious Attainment",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of All Schemes to Know by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "The Stem of Manifest Inference",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Nahida triggers a Dendro reaction, all nearby party members gain increased Elemental Mastery."
+    },
+    {
+      "name": "The Leaves of Enlightening Speech",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Illusory Heart by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "The Fruit of Reason's Culmination",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Nahida hits an opponent marked by Seeds of Skandha, the mark is removed and triggers a Tri-Karma Purification: Karmic Oblivion that deals massive Dendro DMG."
+    }
+  ]
+}

@@ -1,0 +1,5023 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dettagli Personaggio - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dettaglio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Modal Login/Registrazione - stile coerente con il resto del sito */
+      #loginModal.modal {
+        display: none;
+        position: fixed;
+        z-index: 5000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 14, 30, 0.85);
+        align-items: center;
+        justify-content: center;
+      }
+      #loginModal.show {
+        display: flex !important;
+      }
+      #loginModal .modal-content {
+        background: #20283a;
+        border-radius: 18px;
+        max-width: 350px;
+        width: 92vw;
+        box-shadow: 0 8px 40px #000b;
+        position: relative;
+        overflow: hidden;
+        padding: 36px 32px 28px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        color: #e0e0e0;
+        font-family: "Segoe UI", "Fredoka", sans-serif;
+      }
+      #loginModal .modal-content h2 {
+        color: #ffe082;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 18px;
+        letter-spacing: 0.5px;
+      }
+      #loginModal .modal-content input {
+        background: #23263a;
+        border: 1.5px solid rgba(100, 255, 218, 0.18);
+        border-radius: 10px;
+        color: #e0e0e0;
+        font-size: 1.08em;
+        padding: 10px 14px;
+        margin-bottom: 16px;
+        outline: none;
+        transition: border 0.2s, box-shadow 0.2s;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #loginModal .modal-content input:focus {
+        border: 1.5px solid #64ffda;
+        box-shadow: 0 0 8px #64ffda44;
+      }
+      #loginModal .modal-content button {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        font-weight: 700;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 0;
+        font-size: 1.1em;
+        cursor: pointer;
+        margin-top: 8px;
+        box-shadow: 0 4px 16px #0005;
+        transition: background 0.18s, color 0.18s, transform 0.12s;
+      }
+      #loginModal .modal-content button:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda);
+        color: #16213e;
+        transform: translateY(-2px) scale(1.03);
+      }
+      #loginModal .close {
+        position: absolute;
+        top: 10px;
+        right: 18px;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #ffe082;
+        cursor: pointer;
+        z-index: 10;
+        transition: color 0.18s;
+      }
+      #loginModal .close:hover {
+        color: #64ffda;
+      }
+      @media (max-width: 500px) {
+        #loginModal .modal-content {
+          max-width: 98vw;
+          padding: 18px 6vw 18px 6vw;
+        }
+      }
+      /* Pulsanti Login/Registrati nell'header userControls */
+      #userControls button {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        font-weight: 700;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 22px;
+        font-size: 1.08em;
+        cursor: pointer;
+        margin: 0 6px 0 0;
+        box-shadow: 0 4px 16px #0005;
+        transition: background 0.18s, color 0.18s, transform 0.12s;
+        outline: none;
+        letter-spacing: 0.5px;
+        display: inline-block;
+      }
+      #userControls button:last-child {
+        margin-right: 0;
+      }
+      #userControls button:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda);
+        color: #16213e;
+        transform: translateY(-2px) scale(1.03);
+      }
+      @media (max-width: 700px) {
+        #mainFooter {
+          display: none !important;
+        }
+        #footerHamburger {
+          display: flex !important;
+          position: fixed;
+          bottom: 1.5rem;
+          right: 1.5rem;
+          z-index: 1001;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 54px;
+          height: 54px;
+          background: #20283a;
+          border-radius: 50%;
+          box-shadow: 0 4px 16px #0005;
+          border: 2px solid #64ffda;
+          cursor: pointer;
+        }
+        #footerHamburger span {
+          display: block;
+          width: 28px;
+          height: 4px;
+          margin: 3px 0;
+          background: #64ffda;
+          border-radius: 2px;
+          transition: 0.2s;
+        }
+        #footerActionsModal {
+          display: none !important;
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          z-index: 1002;
+          background: rgba(10, 14, 30, 0.85);
+          align-items: flex-end;
+          justify-content: center;
+          transition: display 0.2s, opacity 0.2s;
+        }
+        #footerActionsModal.open {
+          display: flex !important;
+        }
+        .footer-actions-content {
+          background: #20283a;
+          border-radius: 18px 18px 0 0;
+          width: 100vw;
+          max-width: 420px;
+          margin-bottom: 0;
+          padding: 2rem 1.5rem 1.5rem 1.5rem;
+          box-shadow: 0 -8px 40px #000b;
+        }
+        .footer-actions-row {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .close-footer-actions {
+          background: none;
+          border: none;
+          color: #64ffda;
+          font-size: 2rem;
+          position: absolute;
+          top: 1rem;
+          right: 1.5rem;
+          cursor: pointer;
+        }
+        html,
+        body {
+          width: 100vw !important;
+          overflow-x: hidden !important;
+          box-sizing: border-box !important;
+        }
+        .character-detail-page {
+          width: 100vw !important;
+          overflow-x: hidden !important;
+          box-sizing: border-box !important;
+        }
+        .artifact-select-container {
+          flex-direction: column !important;
+          align-items: stretch !important;
+          gap: 0.5rem;
+          width: 100% !important;
+          max-width: 100vw !important;
+        }
+        .artifact-select-btn {
+          font-size: 1.15em !important;
+          padding: 1em 0 !important;
+          width: 100% !important;
+          min-width: 0 !important;
+          margin-top: 0.3em;
+          box-sizing: border-box !important;
+          word-break: break-word !important;
+          white-space: normal !important;
+        }
+        #detailMainSet,
+        #detailSubSet {
+          font-size: 1.1em !important;
+          padding: 0.9em 1.2em !important;
+          width: 100% !important;
+          min-width: 0 !important;
+          box-sizing: border-box !important;
+        }
+        /* Ottimizza la tabella artefatti su mobile senza spazio vuoto a destra */
+        .detail-section .detail-stats {
+          width: 100% !important;
+          min-width: 0 !important;
+          margin-left: 0 !important;
+          padding-left: 1vw !important;
+          padding-right: 1vw !important;
+          overflow-x: visible !important;
+          box-sizing: border-box;
+        }
+        .character-dropdown {
+          position: absolute !important;
+          left: 0 !important;
+          width: 90vw !important;
+          min-width: 0 !important;
+          max-width: 90vw !important;
+          z-index: 1003 !important;
+          top: auto !important;
+          bottom: 100% !important;
+        }
+        .character-option,
+        .character-option-info,
+        .character-option-name {
+          font-size: 1.08em !important;
+        }
+        .character-options-container {
+          max-height: 340px !important;
+        }
+        .dropdown-header,
+        .character-options-container {
+          padding-left: 0.5em !important;
+          padding-right: 0.5em !important;
+        }
+        .team-member-select {
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100vw !important;
+          overflow: visible !important;
+        }
+        .team-member-input {
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100vw !important;
+          overflow: visible !important;
+          white-space: normal !important;
+          text-overflow: unset !important;
+          word-break: break-word !important;
+          display: flex !important;
+          align-items: center !important;
+          padding: 0.5em 0.3em !important;
+        }
+        .team-member-avatar {
+          width: 38px !important;
+          height: 38px !important;
+          min-width: 38px !important;
+          min-height: 38px !important;
+          max-width: 38px !important;
+          max-height: 38px !important;
+          margin-right: 0.7em !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          font-size: 1.5em !important;
+          border-radius: 50% !important;
+          background: #23263a !important;
+          object-fit: cover !important;
+          background-size: cover !important;
+          background-position: center !important;
+          border: 2px solid #64ffda !important;
+          overflow: hidden !important;
+        }
+        .team-member-name {
+          overflow: visible !important;
+          text-overflow: unset !important;
+          white-space: normal !important;
+          max-width: 60vw !important;
+          display: inline-block !important;
+          word-break: break-word !important;
+        }
+        .team-comp {
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100vw !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          box-sizing: border-box !important;
+          position: relative !important;
+          z-index: 1 !important;
+        }
+        .team-comp .detail-stats {
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100vw !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          box-sizing: border-box !important;
+        }
+        .form-group {
+          width: 100% !important;
+          box-sizing: border-box !important;
+        }
+      }
+      @media (min-width: 701px) {
+        #footerHamburger,
+        #footerActionsModal {
+          display: none !important;
+        }
+        #mainFooter {
+          display: flex !important;
+        }
+      }
+      @media (max-width: 700px) {
+        .character-select-modal {
+          display: none;
+          position: fixed;
+          z-index: 20000;
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(10, 14, 30, 0.95);
+          align-items: center;
+          justify-content: center;
+        }
+        .character-select-modal.show {
+          display: flex;
+        }
+        .character-select-modal-content {
+          background: #20283a;
+          border-radius: 18px;
+          width: 98vw;
+          max-width: 480px;
+          max-height: 92vh;
+          box-shadow: 0 8px 40px #000b;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+        .character-select-modal-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.2em 1.2em 0.5em 1.2em;
+          background: #23263a;
+        }
+        .character-select-modal-header h3 {
+          color: #64ffda;
+          font-size: 1.2em;
+          font-weight: 700;
+          margin: 0;
+        }
+        .character-select-modal-close {
+          background: none;
+          border: none;
+          color: #64ffda;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+        .character-select-modal-body {
+          overflow-y: auto;
+          padding: 1em 1.2em 1.2em 1.2em;
+          flex: 1;
+        }
+        .character-select-option {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+          padding: 0.7em 0.5em;
+          border-radius: 10px;
+          background: none;
+          border: none;
+          width: 100%;
+          color: #e0e0e0;
+          font-size: 1.08em;
+          margin-bottom: 0.2em;
+          cursor: pointer;
+          transition: background 0.15s;
+        }
+        .character-select-option:hover {
+          background: rgba(100, 255, 218, 0.08);
+        }
+        .character-select-avatar {
+          width: 38px;
+          height: 38px;
+          min-width: 38px;
+          min-height: 38px;
+          max-width: 38px;
+          max-height: 38px;
+          border-radius: 50%;
+          background: #23263a;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5em;
+          object-fit: cover;
+          background-size: cover;
+          background-position: center;
+          border: 2px solid #64ffda;
+          overflow: hidden;
+          position: relative;
+          transition: all 0.3s ease;
+        }
+        .character-select-info {
+          flex: 1;
+          min-width: 0;
+        }
+        .character-select-name {
+          font-weight: 600;
+          color: #64ffda;
+          font-size: 1.08em;
+          margin-bottom: 0.1em;
+          word-break: break-word;
+        }
+        .character-select-details {
+          font-size: 0.95em;
+          color: #b0eaff;
+        }
+        .team-member-select,
+        .team-member-input {
+          min-width: 80px !important;
+          min-height: 38px !important;
+          display: flex !important;
+          align-items: center !important;
+        }
+        .team-member-avatar {
+          width: 38px !important;
+          height: 38px !important;
+          min-width: 38px !important;
+          min-height: 38px !important;
+          max-width: 38px !important;
+          max-height: 38px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+      }
+      /* Modal selezione personaggio mobile */
+      @media (max-width: 700px) {
+        .character-select-modal {
+          display: none;
+          position: fixed;
+          z-index: 20000;
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(10, 14, 30, 0.95);
+          align-items: center;
+          justify-content: center;
+        }
+        .character-select-modal.show {
+          display: flex;
+        }
+        .character-select-modal-content {
+          background: #20283a;
+          border-radius: 18px;
+          width: 98vw;
+          max-width: 480px;
+          max-height: 92vh;
+          box-shadow: 0 8px 40px #000b;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+        .character-select-modal-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.2em 1.2em 0.5em 1.2em;
+          background: #23263a;
+        }
+        .character-select-modal-header h3 {
+          color: #64ffda;
+          font-size: 1.2em;
+          font-weight: 700;
+          margin: 0;
+        }
+        .character-select-modal-close {
+          background: none;
+          border: none;
+          color: #64ffda;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+        .character-select-modal-body {
+          overflow-y: auto;
+          padding: 1em 1.2em 1.2em 1.2em;
+          flex: 1;
+        }
+        .character-select-option {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+          padding: 0.7em 0.5em;
+          border-radius: 10px;
+          background: none;
+          border: none;
+          width: 100%;
+          color: #e0e0e0;
+          font-size: 1.08em;
+          margin-bottom: 0.2em;
+          cursor: pointer;
+          transition: background 0.15s;
+        }
+        .character-select-option:hover {
+          background: rgba(100, 255, 218, 0.08);
+        }
+        .character-select-avatar {
+          width: 38px;
+          height: 38px;
+          min-width: 38px;
+          min-height: 38px;
+          max-width: 38px;
+          max-height: 38px;
+          border-radius: 50%;
+          background: #23263a;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5em;
+          object-fit: cover;
+          background-size: cover;
+          background-position: center;
+          border: 2px solid #64ffda;
+          overflow: hidden;
+          position: relative;
+          transition: all 0.3s ease;
+        }
+        .character-select-info {
+          flex: 1;
+          min-width: 0;
+        }
+        .character-select-name {
+          font-weight: 600;
+          color: #64ffda;
+          font-size: 1.08em;
+          margin-bottom: 0.1em;
+          word-break: break-word;
+        }
+        .character-select-details {
+          font-size: 0.95em;
+          color: #b0eaff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="gestione personaggio.html" class="nav-link active"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls" style="margin-left: auto"></span>
+    </nav>
+
+    <!-- Modal login/registrazione -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">×</span>
+        <h2>Login / Registrati</h2>
+        <input id="loginUsername" placeholder="Username" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button onclick="doLogin()">Login</button>
+      </div>
+    </div>
+
+    <!-- Pagina Dettagli Personaggio -->
+    <div class="character-detail-page">
+      <!-- Test content per forzare scrollbar orizzontale -->
+      <div
+        class="test-horizontal-scroll"
+        style="
+          width: 2000px;
+          height: 50px;
+          background: linear-gradient(
+            90deg,
+            rgba(100, 255, 218, 0.1),
+            rgba(100, 255, 218, 0.3)
+          );
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          border: 1px solid rgba(100, 255, 218, 0.2);
+        "
+      >
+        <span style="color: #64ffda; font-weight: 600"
+          >🔄 Test Scrollbar Orizzontale - Scorri a destra per vedere la
+          scrollbar</span
+        >
+      </div>
+
+      <div class="detail-header">
+        <button
+          class="btn btn-secondary"
+          onclick="window.location.href='index.html'"
+        >
+          ← Torna alla Galleria
+        </button>
+        <h1 id="detailCharacterName">Nome Personaggio</h1>
+        <div class="character-basic-info">
+          <span id="detailElement">💨 Anemo</span>
+          <span id="detailWeapon">⚔️ Spada</span>
+          <span id="detailRegion">🏰 Mondstadt</span>
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <!-- Statistiche Base -->
+        <div class="detail-section">
+          <h3>📊 Statistiche Base</h3>
+          <div class="detail-stats">
+            <div class="form-group">
+              <label for="detailLevel">Livello</label>
+              <input type="number" id="detailLevel" min="1" max="90" />
+            </div>
+            <div class="form-group">
+              <label for="detailConstellation">Costellazione</label>
+              <input type="number" id="detailConstellation" min="0" max="6" />
+            </div>
+            <div class="form-group">
+              <label for="detailBaseAtk">ATK Base</label>
+              <input type="number" id="detailBaseAtk" />
+            </div>
+            <div class="form-group">
+              <label for="detailBaseHP">HP Base</label>
+              <input type="number" id="detailBaseHP" />
+            </div>
+            <div class="form-group">
+              <label for="detailBaseDef">DEF Base</label>
+              <input type="number" id="detailBaseDef" />
+            </div>
+            <div class="form-group">
+              <label for="detailCritRate">Crit Rate (%)</label>
+              <input type="number" id="detailCritRate" step="0.1" />
+            </div>
+            <div class="form-group">
+              <label for="detailCritDMG">Crit DMG (%)</label>
+              <input type="number" id="detailCritDMG" step="0.1" />
+            </div>
+            <div class="form-group">
+              <label for="detailElementalDMG">DMG Elementale (%)</label>
+              <input type="number" id="detailElementalDMG" step="0.1" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Armi -->
+        <div class="detail-section weapon-section">
+          <h3>⚔️ Armi</h3>
+          <div class="detail-stats">
+            <div class="form-group">
+              <label for="detailCurrentWeapon">Arma Attuale</label>
+              <select id="detailCurrentWeapon" onchange="updateWeaponStats()">
+                <option value="">Seleziona arma...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="detailWeaponLevel">Livello Arma</label>
+              <input
+                type="number"
+                id="detailWeaponLevel"
+                min="1"
+                max="90"
+                onchange="updateWeaponStats()"
+              />
+            </div>
+            <div class="form-group">
+              <label for="detailWeaponRefinement">Raffinamento</label>
+              <input
+                type="number"
+                id="detailWeaponRefinement"
+                min="1"
+                max="5"
+                onchange="updateWeaponStats()"
+              />
+            </div>
+          </div>
+
+          <!-- Statistiche Arma -->
+          <div class="weapon-stats">
+            <h4>Statistiche Arma</h4>
+            <div style="margin-bottom: 1rem; text-align: center">
+              <button
+                class="btn btn-secondary"
+                onclick="calculateWeaponStats()"
+                style="font-size: 0.9rem; padding: 0.5rem 1rem"
+              >
+                🧮 Calcola Automaticamente
+              </button>
+            </div>
+            <div class="detail-stats">
+              <div class="form-group">
+                <label for="detailWeaponBaseAtk">ATK Base Arma</label>
+                <input
+                  type="number"
+                  id="detailWeaponBaseAtk"
+                  min="0"
+                  step="1"
+                  placeholder="ATK base dell'arma"
+                />
+              </div>
+              <div class="form-group">
+                <label for="detailWeaponBonus">Bonus Arma (%)</label>
+                <input
+                  type="number"
+                  id="detailWeaponBonus"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  placeholder="Bonus percentuale dell'arma"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Talenti -->
+        <div class="detail-section">
+          <h3>🎯 Talenti</h3>
+          <div class="detail-stats">
+            <div class="form-group">
+              <label for="detailNormalAttack">Attacco Normale</label>
+              <input type="number" id="detailNormalAttack" min="1" max="15" />
+            </div>
+            <div class="form-group">
+              <label for="detailElementalSkill">Abilità Elementale</label>
+              <input type="number" id="detailElementalSkill" min="1" max="15" />
+            </div>
+            <div class="form-group">
+              <label for="detailElementalBurst">Burst</label>
+              <input type="number" id="detailElementalBurst" min="1" max="15" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Artefatti Consigliati -->
+        <div class="detail-section">
+          <h3>💎 Artefatti Consigliati</h3>
+          <div class="detail-stats">
+            <div class="form-group">
+              <label for="detailMainSet">Set Principale</label>
+              <div class="artifact-select-container">
+                <input
+                  type="text"
+                  id="detailMainSet"
+                  placeholder="Nome set principale"
+                  readonly
+                />
+                <button
+                  class="btn btn-secondary artifact-select-btn"
+                  onclick="openArtifactModal('main')"
+                >
+                  🔍 Seleziona Set
+                </button>
+              </div>
+              <textarea
+                id="detailMainSetNotes"
+                rows="3"
+                placeholder="Note sul set principale..."
+                style="margin-top: 0.5rem"
+              ></textarea>
+              <div style="margin-top: 1.5rem"></div>
+              <label for="detailSubSet">Set Secondario</label>
+              <div class="artifact-select-container">
+                <input
+                  type="text"
+                  id="detailSubSet"
+                  placeholder="Nome set secondario"
+                  readonly
+                />
+                <button
+                  class="btn btn-secondary artifact-select-btn"
+                  onclick="openArtifactModal('sub')"
+                >
+                  🔍 Seleziona Set
+                </button>
+              </div>
+              <textarea
+                id="detailSubSetNotes"
+                rows="3"
+                placeholder="Note sul set secondario..."
+                style="margin-top: 0.5rem"
+              ></textarea>
+              <div
+                class="detail-stats"
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 1.5rem;
+                  margin-top: 1.5rem;
+                "
+              >
+                <div>
+                  <div class="form-group">
+                    <label for="detailSandsMain">Sands Main Stat</label>
+                    <input
+                      type="text"
+                      id="detailSandsMain"
+                      placeholder="ATK%, HP%, DEF%, EM, ER%"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="detailGobletMain">Goblet Main Stat</label>
+                    <input
+                      type="text"
+                      id="detailGobletMain"
+                      placeholder="DMG Elementale, ATK%, HP%, DEF%"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="detailCircletMain">Circlet Main Stat</label>
+                    <input
+                      type="text"
+                      id="detailCircletMain"
+                      placeholder="Crit Rate, Crit DMG, ATK%, HP%, DEF%"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div class="form-group">
+                    <label for="detailSubStatsPriority"
+                      >Priorità Sub Stats</label
+                    >
+                    <textarea
+                      id="detailSubStatsPriority"
+                      rows="8"
+                      placeholder="Ordine di priorità per sub stats..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Artefatti -->
+        <div id="artifactModal" class="artifact-modal">
+          <div class="artifact-modal-content">
+            <div class="artifact-modal-header">
+              <h3 class="artifact-modal-title" id="artifactModalTitle">
+                Seleziona Set Artefatti
+              </h3>
+              <button
+                class="artifact-modal-close"
+                onclick="closeArtifactModal()"
+              >
+                ×
+              </button>
+            </div>
+            <div class="artifact-modal-body">
+              <div class="artifact-search-container">
+                <input
+                  type="text"
+                  id="artifactSearchInput"
+                  placeholder="🔍 Cerca artefatti per nome, tipo, personaggio..."
+                  class="artifact-search-input"
+                />
+              </div>
+              <div class="artifact-filters">
+                <select id="artifactTypeFilter" class="artifact-filter-select">
+                  <option value="">Tutti i Tipi</option>
+                  <option value="Geo">Geo</option>
+                  <option value="Anemo">Anemo</option>
+                  <option value="Pyro">Pyro</option>
+                  <option value="Hydro">Hydro</option>
+                  <option value="Electro">Electro</option>
+                  <option value="Cryo">Cryo</option>
+                  <option value="Dendro">Dendro</option>
+                </select>
+                <select
+                  id="artifactRarityFilter"
+                  class="artifact-filter-select"
+                >
+                  <option value="">Tutte le Rarità</option>
+                  <option value="5">5★</option>
+                  <option value="4">4★</option>
+                </select>
+              </div>
+              <div class="artifact-list" id="artifactList">
+                <!-- Artefatti generati dinamicamente -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Comps -->
+        <div class="detail-section">
+          <h3>👥 Team Comps</h3>
+
+          <!-- Container per tutti i team -->
+          <div id="teamsContainer">
+            <!-- Team 1 -->
+            <div class="team-comp" data-team-id="1">
+              <h4>Team 1</h4>
+              <div class="detail-stats">
+                <div class="form-group">
+                  <label for="detailTeam1Name">Nome Team</label>
+                  <input
+                    type="text"
+                    id="detailTeam1Name"
+                    placeholder="Nome del team"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam1Member1">Membro 1</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam1Member1"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name"
+                        >Seleziona personaggio</span
+                      >
+                      <input
+                        type="hidden"
+                        id="detailTeam1Member1_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam1Member1_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam1Member2">Membro 2</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam1Member2"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name"
+                        >Seleziona personaggio</span
+                      >
+                      <input
+                        type="hidden"
+                        id="detailTeam1Member2_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam1Member2_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam1Member3">Membro 3</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam1Member3"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name"
+                        >Seleziona personaggio</span
+                      >
+                      <input
+                        type="hidden"
+                        id="detailTeam1Member3_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam1Member3_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam1Member4">Membro 4</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam1Member4"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name"
+                        >Seleziona personaggio</span
+                      >
+                      <input
+                        type="hidden"
+                        id="detailTeam1Member4_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam1Member4_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam1Notes">Note Team</label>
+                  <textarea
+                    id="detailTeam1Notes"
+                    rows="3"
+                    placeholder="Note sul team..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team 2 -->
+            <div class="team-comp" data-team-id="2">
+              <h4>Team 2</h4>
+              <div class="detail-stats">
+                <div class="form-group">
+                  <label for="detailTeam2Name">Nome Team</label>
+                  <input
+                    type="text"
+                    id="detailTeam2Name"
+                    placeholder="Nome del team"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam2Member1">Membro 1</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam2Member1"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name"
+                        >Seleziona personaggio</span
+                      >
+                      <input
+                        type="hidden"
+                        id="detailTeam2Member1_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam2Member1_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam2Member2">Membro 2</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam2Member2"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name"
+                        >Seleziona personaggio</span
+                      >
+                      <input
+                        type="hidden"
+                        id="detailTeam2Member2_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam2Member2_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam2Member3">Membro 3</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam2Member3"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name"
+                        >Seleziona personaggio</span
+                      >
+                      <input
+                        type="hidden"
+                        id="detailTeam2Member3_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam2Member3_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam2Member4">Membro 4</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam2Member4"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name"
+                        >Seleziona personaggio</span
+                      >
+                      <input
+                        type="hidden"
+                        id="detailTeam2Member4_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam2Member4_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam2Notes">Note Team</label>
+                  <textarea
+                    id="detailTeam2Notes"
+                    rows="3"
+                    placeholder="Note sul team..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note Personali -->
+        <div class="detail-section">
+          <h3>📝 Note Personali</h3>
+          <div class="form-group">
+            <textarea
+              id="detailPersonalNotes"
+              rows="6"
+              placeholder="Scrivi qui le tue note personali sul personaggio..."
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Comp Popup -->
+    <div id="teamCompPopup" class="team-comp-popup">
+      <div class="team-comp-popup-content">
+        <div class="team-comp-popup-header">
+          <h3 class="team-comp-popup-title" id="popupTeamTitle">
+            Dettagli Team
+          </h3>
+          <button class="team-comp-popup-close" onclick="closeTeamCompPopup()">
+            ×
+          </button>
+        </div>
+        <div class="team-comp-popup-body">
+          <div class="team-members-grid" id="popupTeamMembers">
+            <!-- Membri del team generati dinamicamente -->
+          </div>
+          <div class="form-group">
+            <label for="popupTeamNotes">Note Team</label>
+            <textarea
+              id="popupTeamNotes"
+              rows="4"
+              placeholder="Note sul team..."
+              readonly
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hamburger menu solo mobile -->
+    <button
+      class="footer-hamburger"
+      id="footerHamburger"
+      aria-label="Azioni rapide"
+      style="display: none"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <div
+      class="footer-actions-modal"
+      id="footerActionsModal"
+      style="display: none"
+    >
+      <div class="footer-actions-content">
+        <button
+          class="close-footer-actions"
+          id="closeFooterActions"
+          aria-label="Chiudi menu"
+        >
+          ×
+        </button>
+        <div class="footer-actions-row">
+          <button class="btn" onclick="saveCharacterDetail()">💾 Salva</button>
+          <button class="btn btn-secondary" onclick="exportCharacterData()">
+            📤 Esporta
+          </button>
+          <button class="btn btn-danger" onclick="resetCharacterDetail()">
+            🔄 Reset
+          </button>
+          <button class="btn btn-secondary" onclick="addNewTeam()">
+            ➕ Aggiungi Team
+          </button>
+          <button class="btn btn-danger" onclick="removeLastTeam()">
+            🗑️ Rimuovi Team
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Footer fisso desktop -->
+    <footer class="detail-actions" id="mainFooter">
+      <button class="btn" onclick="saveCharacterDetail()">💾 Salva</button>
+      <button class="btn btn-secondary" onclick="exportCharacterData()">
+        📤 Esporta
+      </button>
+      <button class="btn btn-danger" onclick="resetCharacterDetail()">
+        🔄 Reset
+      </button>
+      <button class="btn btn-secondary" onclick="addNewTeam()">
+        ➕ Aggiungi Team
+      </button>
+      <button class="btn btn-danger" onclick="removeLastTeam()">
+        🗑️ Rimuovi Team
+      </button>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Variabili globali
+      let currentMobileMemberId = null;
+
+      // Gestione errori per evitare errori di connessione da estensioni
+      window.addEventListener("error", function (e) {
+        // Filtra errori di connessione da estensioni del browser
+        if (e.message && e.message.includes("Could not establish connection")) {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // Gestione errori per Promise
+      window.addEventListener("unhandledrejection", function (e) {
+        // Filtra errori di connessione da estensioni del browser
+        if (
+          e.reason &&
+          e.reason.message &&
+          e.reason.message.includes("Could not establish connection")
+        ) {
+          e.preventDefault();
+          return false;
+        }
+      });
+      // Funzione per caricare i personaggi da character.json
+      async function loadCharacters() {
+        try {
+          // Usa i dati da script.js se disponibili
+          if (
+            typeof window.allCharacters !== "undefined" &&
+            window.allCharacters.length > 0
+          ) {
+            console.log(
+              "Personaggi caricati da script.js:",
+              window.allCharacters.length
+            );
+            return;
+          }
+
+          // Altrimenti prova a caricare da character.json
+          const response = await fetch("character.json");
+          const data = await response.json();
+          window.allCharacters = data.characters || [];
+          console.log(
+            "Personaggi caricati da character.json:",
+            window.allCharacters.length
+          );
+        } catch (error) {
+          console.error("Errore nel caricamento dei personaggi:", error);
+          // Fallback: usa un array vuoto
+          window.allCharacters = [];
+        }
+      }
+
+      // Funzioni helper per emoji (se non sono già definite in script.js)
+      function getElementEmoji(element) {
+        const elementEmojis = {
+          Pyro: "🔥",
+          Hydro: "💧",
+          Electro: "⚡",
+          Cryo: "❄️",
+          Anemo: "💨",
+          Geo: "🪨",
+          Dendro: "🌱",
+        };
+        return elementEmojis[element] || "💨";
+      }
+
+      function getWeaponEmoji(weapon) {
+        const weaponEmojis = {
+          Sword: "⚔️",
+          Claymore: "🗡️",
+          Polearm: "🔱",
+          Bow: "🏹",
+          Catalyst: "📖",
+        };
+        return weaponEmojis[weapon] || "⚔️";
+      }
+
+      function getRegionEmoji(region) {
+        const regionEmojis = {
+          Mondstadt: "🏰",
+          Liyue: "🏮",
+          Inazuma: "⛩️",
+          Sumeru: "🏛️",
+          Fontaine: "🌊",
+          Natlan: "🌋",
+          Snezhnaya: "❄️",
+          "Khaenri'ah": "⚫",
+          Other: "🌍",
+        };
+        return regionEmojis[region] || "🏰";
+      }
+
+      // Funzione per caricare le armi da armi.json
+      async function loadWeapons() {
+        try {
+          const response = await fetch("armi.json");
+          const weapons = await response.json();
+          window.allWeapons = weapons;
+          console.log("Armi caricate da armi.json:", weapons.length);
+        } catch (error) {
+          console.error("Errore nel caricamento delle armi:", error);
+          window.allWeapons = [];
+        }
+      }
+
+      // Funzione per popolare il dropdown delle armi
+      function populateWeaponDropdown() {
+        const weaponSelect = document.getElementById("detailCurrentWeapon");
+        if (!weaponSelect) return;
+
+        weaponSelect.innerHTML = '<option value="">Seleziona arma...</option>';
+
+        if (window.allWeapons && window.allWeapons.length > 0) {
+          window.allWeapons.forEach((weapon) => {
+            const option = document.createElement("option");
+            option.value = weapon.nome;
+            option.textContent = `${weapon.nome} (${weapon.tipo} ${weapon.rarità}★)`;
+            weaponSelect.appendChild(option);
+          });
+        } else {
+          console.warn("Nessuna arma disponibile");
+        }
+      }
+
+      // Funzione per aggiornare le statistiche dell'arma
+      function updateWeaponStats() {
+        const weaponName = document.getElementById("detailCurrentWeapon").value;
+        const weaponLevel =
+          parseInt(document.getElementById("detailWeaponLevel").value) || 1;
+        const weaponRefinement =
+          parseInt(document.getElementById("detailWeaponRefinement").value) ||
+          1;
+
+        // Controlla se l'utente ha già inserito valori manualmente
+        const userBaseAtk = document.getElementById(
+          "detailWeaponBaseAtk"
+        ).value;
+        const userBonus = document.getElementById("detailWeaponBonus").value;
+
+        if (weaponName && window.allWeapons) {
+          // Trova l'arma nel database
+          const weapon = window.allWeapons.find((w) => w.nome === weaponName);
+
+          if (weapon) {
+            // Calcola ATK base in base al livello
+            let baseAtk = weapon.atk_base;
+            if (weaponLevel > 1) {
+              // Calcolo semplificato per l'ATK base al livello
+              const baseAtkLv1 = weapon.atk_base * 0.7; // Stima ATK livello 1
+              const atkPerLevel = (weapon.atk_base - baseAtkLv1) / 89; // Diffusione su 89 livelli
+              baseAtk = baseAtkLv1 + atkPerLevel * (weaponLevel - 1);
+            }
+
+            // Calcola bonus dalla stat secondaria
+            let bonus = 0;
+            if (weapon.stat_secondaria) {
+              bonus = weapon.stat_secondaria.valore;
+              // Aggiungi bonus dal raffinamento (semplificato)
+              if (weaponRefinement > 1) {
+                bonus = bonus * (1 + (weaponRefinement - 1) * 0.1); // +10% per raffinamento
+              }
+            }
+
+            // Aggiorna solo se l'utente non ha inserito valori manualmente
+            if (!userBaseAtk || userBaseAtk.trim() === "") {
+              document.getElementById("detailWeaponBaseAtk").value =
+                Math.round(baseAtk);
+            }
+            if (!userBonus || userBonus.trim() === "") {
+              document.getElementById("detailWeaponBonus").value =
+                bonus.toFixed(1);
+            }
+
+            console.log(
+              `Arma trovata: ${weapon.nome}, ATK: ${baseAtk}, Bonus: ${bonus}`
+            );
+          } else {
+            console.warn(`Arma non trovata: ${weaponName}`);
+          }
+        }
+      }
+
+      // Funzione per calcolare forzatamente le statistiche dell'arma
+      function calculateWeaponStats() {
+        const weaponName = document.getElementById("detailCurrentWeapon").value;
+        const weaponLevel =
+          parseInt(document.getElementById("detailWeaponLevel").value) || 1;
+        const weaponRefinement =
+          parseInt(document.getElementById("detailWeaponRefinement").value) ||
+          1;
+
+        if (weaponName && window.allWeapons) {
+          const weapon = window.allWeapons.find((w) => w.nome === weaponName);
+
+          if (weapon) {
+            // Calcola ATK base in base al livello
+            let baseAtk = weapon.atk_base;
+            if (weaponLevel > 1) {
+              const baseAtkLv1 = weapon.atk_base * 0.7;
+              const atkPerLevel = (weapon.atk_base - baseAtkLv1) / 89;
+              baseAtk = baseAtkLv1 + atkPerLevel * (weaponLevel - 1);
+            }
+
+            // Calcola bonus dalla stat secondaria
+            let bonus = 0;
+            if (weapon.stat_secondaria) {
+              bonus = weapon.stat_secondaria.valore;
+              if (weaponRefinement > 1) {
+                bonus = bonus * (1 + (weaponRefinement - 1) * 0.1);
+              }
+            }
+
+            // Forza l'aggiornamento dei valori
+            document.getElementById("detailWeaponBaseAtk").value =
+              Math.round(baseAtk);
+            document.getElementById("detailWeaponBonus").value =
+              bonus.toFixed(1);
+
+            showToast(
+              `✅ Statistiche arma calcolate automaticamente!`,
+              "success"
+            );
+            console.log(
+              `Arma calcolata: ${weapon.nome}, ATK: ${baseAtk}, Bonus: ${bonus}`
+            );
+          } else {
+            showToast("❌ Arma non trovata nel database!", "error");
+          }
+        } else {
+          showToast("❌ Seleziona prima un'arma!", "error");
+        }
+      }
+
+      // Funzione per salvare i dati del personaggio
+      function saveCharacterDetail(showToastNotification = true) {
+        console.log("Funzione saveCharacterDetail chiamata");
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const characterName = urlParams.get("character");
+
+        if (!characterName) {
+          console.error("Nome personaggio non trovato nell'URL");
+          if (showToastNotification) {
+            showToast("❌ Errore: Nome personaggio non trovato", "error");
+          }
+          return;
+        }
+
+        console.log("Salvando dati per:", characterName);
+
+        // Raccogli tutti i dati dei team dinamicamente
+        const teamsData = {};
+        const teamElements = document.querySelectorAll(".team-comp");
+
+        teamElements.forEach((teamElement, index) => {
+          const teamNumber = index + 1;
+          const teamId = `team${teamNumber}`;
+
+          teamsData[`${teamId}Name`] =
+            document.getElementById(
+              `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Name`
+            )?.value || "";
+          teamsData[`${teamId}Member1`] =
+            document.getElementById(
+              `detail${
+                teamId.charAt(0).toUpperCase() + teamId.slice(1)
+              }Member1_hidden`
+            )?.value || "";
+          teamsData[`${teamId}Member2`] =
+            document.getElementById(
+              `detail${
+                teamId.charAt(0).toUpperCase() + teamId.slice(1)
+              }Member2_hidden`
+            )?.value || "";
+          teamsData[`${teamId}Member3`] =
+            document.getElementById(
+              `detail${
+                teamId.charAt(0).toUpperCase() + teamId.slice(1)
+              }Member3_hidden`
+            )?.value || "";
+          teamsData[`${teamId}Member4`] =
+            document.getElementById(
+              `detail${
+                teamId.charAt(0).toUpperCase() + teamId.slice(1)
+              }Member4_hidden`
+            )?.value || "";
+          teamsData[`${teamId}Notes`] =
+            document.getElementById(
+              `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Notes`
+            )?.value || "";
+        });
+
+        const characterData = {
+          level: document.getElementById("detailLevel").value,
+          constellation: document.getElementById("detailConstellation").value,
+          baseAtk: document.getElementById("detailBaseAtk").value,
+          baseHP: document.getElementById("detailBaseHP").value,
+          baseDef: document.getElementById("detailBaseDef").value,
+          critRate: document.getElementById("detailCritRate").value,
+          critDMG: document.getElementById("detailCritDMG").value,
+          elementalDMG: document.getElementById("detailElementalDMG").value,
+          currentWeapon: document.getElementById("detailCurrentWeapon").value,
+          weaponLevel: document.getElementById("detailWeaponLevel").value,
+          weaponRefinement: document.getElementById("detailWeaponRefinement")
+            .value,
+          weaponBaseAtk: document.getElementById("detailWeaponBaseAtk").value,
+          weaponBonus: document.getElementById("detailWeaponBonus").value,
+          normalAttack: document.getElementById("detailNormalAttack").value,
+          elementalSkill: document.getElementById("detailElementalSkill").value,
+          elementalBurst: document.getElementById("detailElementalBurst").value,
+          mainSet: document.getElementById("detailMainSet").value,
+          mainSetNotes: document.getElementById("detailMainSetNotes").value,
+          subSet: document.getElementById("detailSubSet").value,
+          subSetNotes: document.getElementById("detailSubSetNotes").value,
+          sandsMain: document.getElementById("detailSandsMain").value,
+          gobletMain: document.getElementById("detailGobletMain").value,
+          circletMain: document.getElementById("detailCircletMain").value,
+          subStatsPriority: document.getElementById("detailSubStatsPriority")
+            .value,
+          personalNotes: document.getElementById("detailPersonalNotes").value,
+          // Aggiungi i dati dei team
+          ...teamsData,
+          // Salva anche il numero totale di team
+          totalTeams: teamElements.length,
+        };
+
+        // Debug specifico per i team member
+        console.log("Dati dei team:", teamsData);
+        console.log("Dati da salvare:", characterData);
+
+        localStorage.setItem(
+          `character_detail_${characterName}`,
+          JSON.stringify(characterData)
+        );
+
+        console.log("Dati salvati nel localStorage per:", characterName);
+
+        // Mostra feedback solo se richiesto
+        if (showToastNotification) {
+          showToast("✅ Dati salvati con successo!", "success");
+
+          // Effetto visivo sul pulsante
+          const saveBtn = document.querySelector(".btn");
+          if (saveBtn) {
+            saveBtn.classList.add("saved");
+            setTimeout(() => {
+              saveBtn.classList.remove("saved");
+            }, 2000);
+          }
+        }
+      }
+
+      // Funzione per mostrare toast notifications
+      function showToast(message, type = "info") {
+        // Rimuovi toast esistenti
+        const existingToasts = document.querySelectorAll(".toast");
+        existingToasts.forEach((toast) => toast.remove());
+
+        const toast = document.createElement("div");
+        toast.className = `toast toast-${type}`;
+        toast.innerHTML = `
+          <div class="toast-content">
+            <span class="toast-message">${message}</span>
+            <button class="toast-close" onclick="this.parentElement.parentElement.remove()">×</button>
+          </div>
+        `;
+
+        // Stili per il toast
+        toast.style.cssText = `
+          position: fixed;
+          top: 5rem;
+          right: 2rem;
+          background: ${
+            type === "success"
+              ? "linear-gradient(135deg, #4CAF50, #45a049)"
+              : type === "error"
+              ? "linear-gradient(135deg, #ff6f3c, #ff5252)"
+              : "linear-gradient(135deg, #64ffda, #4cd4b0)"
+          };
+          color: ${
+            type === "success"
+              ? "white"
+              : type === "error"
+              ? "white"
+              : "#16213e"
+          };
+          padding: 1rem 1.5rem;
+          border-radius: 12px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+          z-index: 10000;
+          transform: translateX(100%);
+          transition: all 0.3s ease;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          max-width: 400px;
+          font-weight: 600;
+        `;
+
+        document.body.appendChild(toast);
+
+        // Animazione di entrata
+        setTimeout(() => {
+          toast.style.transform = "translateX(0)";
+        }, 100);
+
+        // Auto-remove dopo 4 secondi
+        setTimeout(() => {
+          toast.style.transform = "translateX(100%)";
+          setTimeout(() => {
+            if (toast.parentElement) {
+              toast.remove();
+            }
+          }, 300);
+        }, 4000);
+      }
+
+      // Funzione per conferma migliorata
+      function showConfirmDialog(message, onConfirm, onCancel = null) {
+        // Rimuovi dialog esistenti
+        const existingDialog = document.querySelector(".confirm-dialog");
+        if (existingDialog) {
+          existingDialog.remove();
+        }
+
+        const dialog = document.createElement("div");
+        dialog.className = "confirm-dialog";
+        dialog.innerHTML = `
+          <div class="confirm-backdrop"></div>
+          <div class="confirm-content">
+            <div class="confirm-header">
+              <h3>⚠️ Conferma</h3>
+              <button class="confirm-close" onclick="this.closest('.confirm-dialog').remove()">×</button>
+            </div>
+            <div class="confirm-body">
+              <p>${message}</p>
+            </div>
+            <div class="confirm-actions">
+              <button class="btn btn-secondary confirm-cancel">❌ Annulla</button>
+              <button class="btn btn-danger confirm-ok">✅ Conferma</button>
+            </div>
+          </div>
+        `;
+
+        // Stili per il dialog
+        dialog.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: 10000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        `;
+
+        const backdrop = dialog.querySelector(".confirm-backdrop");
+        backdrop.style.cssText = `
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(5px);
+        `;
+
+        const content = dialog.querySelector(".confirm-content");
+        content.style.cssText = `
+          background: rgba(26, 26, 46, 0.98);
+          backdrop-filter: blur(15px);
+          border-radius: 20px;
+          padding: 2rem;
+          max-width: 500px;
+          width: 90%;
+          border: 2px solid rgba(100, 255, 218, 0.3);
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+          position: relative;
+          z-index: 1;
+          animation: dialogSlideIn 0.3s ease;
+        `;
+
+        const header = dialog.querySelector(".confirm-header");
+        header.style.cssText = `
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1.5rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+        `;
+
+        const headerTitle = dialog.querySelector(".confirm-header h3");
+        headerTitle.style.cssText = `
+          color: #64ffda;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin: 0;
+        `;
+
+        const closeBtn = dialog.querySelector(".confirm-close");
+        closeBtn.style.cssText = `
+          background: none;
+          border: none;
+          color: #64ffda;
+          font-size: 2rem;
+          cursor: pointer;
+          padding: 0.5rem;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        `;
+
+        closeBtn.onmouseover = () => {
+          closeBtn.style.background = "rgba(100, 255, 218, 0.2)";
+        };
+        closeBtn.onmouseout = () => {
+          closeBtn.style.background = "none";
+        };
+
+        const body = dialog.querySelector(".confirm-body");
+        body.style.cssText = `
+          margin-bottom: 2rem;
+        `;
+
+        const bodyText = dialog.querySelector(".confirm-body p");
+        bodyText.style.cssText = `
+          color: #e0e0e0;
+          font-size: 1.1rem;
+          line-height: 1.6;
+          margin: 0;
+          text-align: center;
+        `;
+
+        const actions = dialog.querySelector(".confirm-actions");
+        actions.style.cssText = `
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+        `;
+
+        document.body.appendChild(dialog);
+
+        // Event listeners
+        const cancelBtn = dialog.querySelector(".confirm-cancel");
+        const okBtn = dialog.querySelector(".confirm-ok");
+
+        cancelBtn.onclick = () => {
+          dialog.style.animation = "dialogSlideOut 0.3s ease";
+          setTimeout(() => {
+            dialog.remove();
+            if (onCancel) onCancel();
+          }, 300);
+        };
+
+        okBtn.onclick = () => {
+          dialog.style.animation = "dialogSlideOut 0.3s ease";
+          setTimeout(() => {
+            dialog.remove();
+            onConfirm();
+          }, 300);
+        };
+
+        // Chiudi con ESC
+        const handleEsc = (e) => {
+          if (e.key === "Escape") {
+            cancelBtn.click();
+            document.removeEventListener("keydown", handleEsc);
+          }
+        };
+        document.addEventListener("keydown", handleEsc);
+
+        // Chiudi cliccando sul backdrop
+        backdrop.onclick = () => {
+          cancelBtn.click();
+        };
+      }
+
+      // Funzione per esportare i dati del personaggio
+      function exportCharacterData() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const characterName = urlParams.get("character");
+
+        if (!characterName) {
+          showToast("❌ Errore: Nome personaggio non trovato", "error");
+          return;
+        }
+
+        const savedData = localStorage.getItem(
+          `character_detail_${characterName}`
+        );
+        if (!savedData) {
+          showToast(
+            "❌ Nessun dato da esportare per questo personaggio",
+            "error"
+          );
+          return;
+        }
+
+        try {
+          const dataStr = JSON.stringify(JSON.parse(savedData), null, 2);
+          const dataBlob = new Blob([dataStr], { type: "application/json" });
+          const url = URL.createObjectURL(dataBlob);
+
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = `${characterName}_dati.json`;
+          link.click();
+
+          URL.revokeObjectURL(url);
+          showToast("📤 Dati esportati con successo!", "success");
+        } catch (error) {
+          showToast("❌ Errore durante l'esportazione", "error");
+          console.error("Errore durante l'esportazione:", error);
+        }
+      }
+
+      // Funzione per resettare completamente i dati del personaggio
+      function resetCharacterDetail() {
+        showConfirmDialog(
+          "⚠️ ATTENZIONE: Sei sicuro di voler resettare TUTTI i dati di questo personaggio?\n\n" +
+            "Questa azione rimuoverà:\n" +
+            "• Tutte le statistiche inserite\n" +
+            "• Armi e livelli selezionati\n" +
+            "• Talenti configurati\n" +
+            "• Set di artefatti scelti\n" +
+            "• Tutti i team compilati\n" +
+            "• Note personali\n\n" +
+            "Questa azione non può essere annullata!",
+          () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const characterName = urlParams.get("character");
+
+            if (characterName) {
+              // Rimuovi i dati dal localStorage
+              localStorage.removeItem(`character_detail_${characterName}`);
+
+              // Reset completo dell'interfaccia
+              resetAllFormFields();
+              resetAllTeamSelections();
+              resetAllArtifactSelections();
+
+              // Feedback visivo
+              showToast("🔄 Reset completo eseguito con successo!", "success");
+
+              // Effetto visivo di reset
+              addResetAnimation();
+
+              console.log(`Reset completo eseguito per: ${characterName}`);
+            }
+          }
+        );
+      }
+
+      // Funzione per resettare tutti i campi del form
+      function resetAllFormFields() {
+        // Lista di tutti i campi da resettare
+        const fieldsToReset = [
+          "detailLevel",
+          "detailConstellation",
+          "detailBaseAtk",
+          "detailBaseHP",
+          "detailBaseDef",
+          "detailCritRate",
+          "detailCritDMG",
+          "detailElementalDMG",
+          "detailCurrentWeapon",
+          "detailWeaponLevel",
+          "detailWeaponRefinement",
+          "detailWeaponBaseAtk",
+          "detailWeaponBonus",
+          "detailNormalAttack",
+          "detailElementalSkill",
+          "detailElementalBurst",
+          "detailMainSet",
+          "detailMainSetNotes",
+          "detailSubSet",
+          "detailSubSetNotes",
+          "detailSandsMain",
+          "detailGobletMain",
+          "detailCircletMain",
+          "detailSubStatsPriority",
+          "detailPersonalNotes",
+        ];
+
+        // Reset di tutti i campi con animazione
+        fieldsToReset.forEach((fieldId) => {
+          const element = document.getElementById(fieldId);
+          if (element) {
+            element.value = "";
+
+            // Aggiungi classe per l'animazione di reset
+            element.classList.add("reset-field");
+
+            // Rimuovi la classe dopo l'animazione
+            setTimeout(() => {
+              element.classList.remove("reset-field");
+            }, 1000);
+          }
+        });
+
+        // Reset specifico per il select delle armi
+        const weaponSelect = document.getElementById("detailCurrentWeapon");
+        if (weaponSelect) {
+          weaponSelect.selectedIndex = 0;
+          weaponSelect.classList.add("reset-field");
+          setTimeout(() => {
+            weaponSelect.classList.remove("reset-field");
+          }, 1000);
+        }
+      }
+
+      // Funzione per resettare tutte le selezioni dei team
+      function resetAllTeamSelections() {
+        // Reset di tutti i team member
+        const teamMemberInputs =
+          document.querySelectorAll(".team-member-input");
+        teamMemberInputs.forEach((memberInput) => {
+          const avatar = memberInput.querySelector(".team-member-avatar");
+          const nameSpan = memberInput.querySelector(".team-member-name");
+          const hiddenInput = memberInput.querySelector("input[type='hidden']");
+
+          if (avatar && nameSpan && hiddenInput) {
+            // Reset del display
+            nameSpan.textContent = "Seleziona personaggio";
+            hiddenInput.value = "";
+
+            // Reset dell'avatar
+            avatar.style.backgroundImage = "none";
+            avatar.innerHTML = "👤";
+
+            // Aggiungi classe per l'animazione di reset
+            memberInput.classList.add("reset-team-member");
+
+            // Rimuovi la classe dopo l'animazione
+            setTimeout(() => {
+              memberInput.classList.remove("reset-team-member");
+            }, 800);
+          }
+        });
+
+        // Reset dei nomi e note dei team
+        const teamElements = document.querySelectorAll(".team-comp");
+        teamElements.forEach((teamElement, index) => {
+          const teamNumber = index + 1;
+
+          // Reset nome team
+          const teamNameInput = document.getElementById(
+            `detailTeam${teamNumber}Name`
+          );
+          if (teamNameInput) {
+            teamNameInput.value = "";
+            teamNameInput.classList.add("reset-field");
+            setTimeout(() => {
+              teamNameInput.classList.remove("reset-field");
+            }, 1000);
+          }
+
+          // Reset note team
+          const teamNotesInput = document.getElementById(
+            `detailTeam${teamNumber}Notes`
+          );
+          if (teamNotesInput) {
+            teamNotesInput.value = "";
+            teamNotesInput.classList.add("reset-field");
+            setTimeout(() => {
+              teamNotesInput.classList.remove("reset-field");
+            }, 1000);
+          }
+        });
+
+        console.log("Reset completato per tutti i team");
+      }
+
+      // Funzione per resettare le selezioni degli artefatti
+      function resetAllArtifactSelections() {
+        // Reset set principali e secondari
+        const mainSetInput = document.getElementById("detailMainSet");
+        const subSetInput = document.getElementById("detailSubSet");
+
+        if (mainSetInput) {
+          mainSetInput.value = "";
+          mainSetInput.classList.add("reset-field");
+          setTimeout(() => {
+            mainSetInput.classList.remove("reset-field");
+          }, 1000);
+        }
+
+        if (subSetInput) {
+          subSetInput.value = "";
+          subSetInput.classList.add("reset-field");
+          setTimeout(() => {
+            subSetInput.classList.remove("reset-field");
+          }, 1000);
+        }
+
+        console.log("Reset completato per gli artefatti");
+      }
+
+      // Funzione per aggiungere animazione di reset
+      function addResetAnimation() {
+        // Effetto di shake per tutta la pagina
+        const detailPage = document.querySelector(".character-detail-page");
+        if (detailPage) {
+          detailPage.style.animation = "resetShake 0.8s ease-in-out";
+          setTimeout(() => {
+            detailPage.style.animation = "";
+          }, 800);
+        }
+
+        // Effetto di fade per le sezioni
+        const sections = document.querySelectorAll(".detail-section");
+        sections.forEach((section, index) => {
+          setTimeout(() => {
+            section.classList.add("reset-section");
+            setTimeout(() => {
+              section.classList.remove("reset-section");
+            }, 1200);
+          }, index * 150);
+        });
+
+        // Effetto di reset per i team comp
+        const teamComps = document.querySelectorAll(".team-comp");
+        teamComps.forEach((teamComp, index) => {
+          setTimeout(() => {
+            teamComp.classList.add("reset-section");
+            setTimeout(() => {
+              teamComp.classList.remove("reset-section");
+            }, 1200);
+          }, index * 200);
+        });
+      }
+
+      // Carica i dati del personaggio quando la pagina si apre
+      document.addEventListener("DOMContentLoaded", async function () {
+        // Carica prima i personaggi, le armi e gli artefatti
+        await Promise.all([loadCharacters(), loadWeapons(), loadArtifacts()]);
+
+        // Ottieni il nome del personaggio dall'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const characterName = urlParams.get("character");
+
+        if (characterName) {
+          // Popola l'header con le informazioni del personaggio
+          const character = window.allCharacters.find(
+            (c) => c.name === characterName
+          );
+
+          if (character) {
+            document.getElementById("detailCharacterName").textContent =
+              character.name;
+            document.getElementById(
+              "detailElement"
+            ).textContent = `${getElementEmoji(character.element)} ${
+              character.element
+            }`;
+            document.getElementById(
+              "detailWeapon"
+            ).textContent = `${getWeaponEmoji(character.weapon)} ${
+              character.weapon
+            }`;
+            document.getElementById(
+              "detailRegion"
+            ).textContent = `${getRegionEmoji(character.region)} ${
+              character.region
+            }`;
+          }
+
+          // Popola il dropdown delle armi
+          populateWeaponDropdown();
+
+          // Inizializza i dropdown dei team member
+          initializeTeamMemberDropdowns();
+
+          // Aggiungi event listeners per il salvataggio automatico
+          addAutoSaveListeners();
+
+          // Carica i dati del personaggio DOPO aver inizializzato i dropdown
+          setTimeout(() => {
+            loadCharacterDetailData(characterName);
+          }, 300);
+
+          // Aggiungi event listener per salvare quando si chiude la pagina
+          window.addEventListener("beforeunload", function () {
+            console.log("Pagina in chiusura, salvando dati...");
+            saveCharacterDetail(false);
+          });
+
+          // Test per verificare che il salvataggio automatico funzioni
+          setTimeout(() => {
+            testAutoSave();
+          }, 2000);
+        }
+
+        // Inizializza le funzionalità dei team comp
+        setTimeout(() => {
+          initializeTeamCompFeatures();
+        }, 500);
+
+        // Inizializza gli event listeners del modal artefatti
+        initializeArtifactModalListeners();
+
+        // Inizializza le funzionalità utente
+        renderUserControls();
+
+        // Applica le ottimizzazioni per ridurre il flickering
+        optimizeHoverEffects();
+        optimizeScrollAndResize();
+        optimizeDropdownRendering();
+
+        // Inizializza il footer fisso
+        initializeFixedFooter();
+        optimizeFooterForMobile();
+      });
+
+      // Funzione debounce per evitare troppi salvataggi
+      function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
+
+      // Funzione per aggiungere event listeners per il salvataggio automatico
+      function addAutoSaveListeners() {
+        // Lista di tutti i campi base che devono essere salvati automaticamente
+        const baseAutoSaveFields = [
+          "detailLevel",
+          "detailConstellation",
+          "detailBaseAtk",
+          "detailBaseHP",
+          "detailBaseDef",
+          "detailCritRate",
+          "detailCritDMG",
+          "detailElementalDMG",
+          "detailCurrentWeapon",
+          "detailWeaponLevel",
+          "detailWeaponRefinement",
+          "detailWeaponBaseAtk",
+          "detailWeaponBonus",
+          "detailNormalAttack",
+          "detailElementalSkill",
+          "detailElementalBurst",
+          "detailMainSet",
+          "detailMainSetNotes",
+          "detailSubSet",
+          "detailSubSetNotes",
+          "detailSandsMain",
+          "detailGobletMain",
+          "detailCircletMain",
+          "detailSubStatsPriority",
+          "detailPersonalNotes",
+        ];
+
+        console.log(
+          "Aggiungendo event listeners per il salvataggio automatico..."
+        );
+
+        // Aggiungi event listeners per ogni campo base
+        baseAutoSaveFields.forEach((fieldId) => {
+          const element = document.getElementById(fieldId);
+          if (element) {
+            console.log(`Aggiungendo event listeners per: ${fieldId}`);
+
+            // Per input e textarea
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+              element.addEventListener(
+                "input",
+                debounce(() => {
+                  console.log(
+                    `Campo modificato: ${fieldId} = ${element.value}`
+                  );
+                  saveCharacterDetail(false);
+                }, 500)
+              );
+              element.addEventListener("change", () => {
+                console.log(`Campo cambiato: ${fieldId} = ${element.value}`);
+                saveCharacterDetail(false);
+              });
+            }
+            // Per select
+            else if (element.tagName === "SELECT") {
+              element.addEventListener("change", () => {
+                console.log(`Select cambiato: ${fieldId} = ${element.value}`);
+                saveCharacterDetail(false);
+              });
+            }
+          } else {
+            console.warn(`Elemento non trovato: ${fieldId}`);
+          }
+        });
+
+        // Aggiungi event listeners per tutti i campi dei team esistenti
+        addTeamAutoSaveListeners();
+
+        console.log(
+          "Event listeners per salvataggio automatico aggiunti con successo"
+        );
+      }
+
+      // Funzione per aggiungere event listeners ai campi dei team
+      function addTeamAutoSaveListeners() {
+        const teamElements = document.querySelectorAll(".team-comp");
+        teamElements.forEach((teamElement, index) => {
+          const teamNumber = index + 1;
+          const teamId = `team${teamNumber}`;
+
+          // Nome del team
+          const teamNameElement = document.getElementById(
+            `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Name`
+          );
+          if (teamNameElement) {
+            // Rimuovi event listeners esistenti per evitare duplicati
+            teamNameElement.removeEventListener(
+              "input",
+              teamNameElement.autoSaveHandler
+            );
+            teamNameElement.removeEventListener(
+              "change",
+              teamNameElement.autoSaveChangeHandler
+            );
+
+            // Aggiungi nuovi event listeners
+            teamNameElement.autoSaveHandler = debounce(() => {
+              console.log(
+                `Nome team ${teamNumber} modificato: ${teamNameElement.value}`
+              );
+              saveCharacterDetail(false);
+            }, 500);
+
+            teamNameElement.autoSaveChangeHandler = () => {
+              console.log(
+                `Nome team ${teamNumber} cambiato: ${teamNameElement.value}`
+              );
+              saveCharacterDetail(false);
+            };
+
+            teamNameElement.addEventListener(
+              "input",
+              teamNameElement.autoSaveHandler
+            );
+            teamNameElement.addEventListener(
+              "change",
+              teamNameElement.autoSaveChangeHandler
+            );
+          }
+
+          // Note del team
+          const teamNotesElement = document.getElementById(
+            `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Notes`
+          );
+          if (teamNotesElement) {
+            // Rimuovi event listeners esistenti per evitare duplicati
+            teamNotesElement.removeEventListener(
+              "input",
+              teamNotesElement.autoSaveHandler
+            );
+            teamNotesElement.removeEventListener(
+              "change",
+              teamNotesElement.autoSaveChangeHandler
+            );
+
+            // Aggiungi nuovi event listeners
+            teamNotesElement.autoSaveHandler = debounce(() => {
+              console.log(
+                `Note team ${teamNumber} modificate: ${teamNotesElement.value}`
+              );
+              saveCharacterDetail(false);
+            }, 500);
+
+            teamNotesElement.autoSaveChangeHandler = () => {
+              console.log(
+                `Note team ${teamNumber} cambiate: ${teamNotesElement.value}`
+              );
+              saveCharacterDetail(false);
+            };
+
+            teamNotesElement.addEventListener(
+              "input",
+              teamNotesElement.autoSaveHandler
+            );
+            teamNotesElement.addEventListener(
+              "change",
+              teamNotesElement.autoSaveChangeHandler
+            );
+          }
+        });
+      }
+
+      // Funzione per inizializzare i dropdown dei team member
+      function initializeTeamMemberDropdowns() {
+        document
+          .querySelectorAll(".team-member-input")
+          .forEach((memberInput) => {
+            memberInput.addEventListener("click", function (event) {
+              event.stopPropagation();
+              const memberId = this.getAttribute("data-member-id");
+              if (window.innerWidth <= 700) {
+                openCharacterSelectModal(memberId);
+                return;
+              }
+              // --- LOGICA DROPDOWN CLASSICA DESKTOP ---
+              // Chiudi tutti i dropdown prima di aprire quello nuovo
+              document.querySelectorAll(".character-dropdown").forEach((d) => {
+                if (d.id !== memberId + "_dropdown") {
+                  d.classList.remove("show", "dropdown-up");
+                  d.style.visibility = "hidden";
+                  d.style.opacity = "0";
+                }
+              });
+              // Apri il dropdown corrente
+              const dropdown = document.getElementById(memberId + "_dropdown");
+              if (dropdown) {
+                if (dropdown.classList.contains("show")) {
+                  // Se è già aperto, chiudilo
+                  dropdown.classList.remove("show", "dropdown-up");
+                  dropdown.style.visibility = "hidden";
+                  dropdown.style.opacity = "0";
+                } else {
+                  dropdown.style.visibility = "visible";
+                  dropdown.style.display = "block";
+                  // Forza il dropdown ad aprirsi sempre verso l'alto
+                  dropdown.classList.add("dropdown-up");
+                  // Popola il dropdown prima di mostrarlo
+                  populateCharacterDropdown(memberId);
+                  // Mostra il dropdown con animazione fluida
+                  requestAnimationFrame(() => {
+                    dropdown.classList.add("show");
+                    dropdown.style.opacity = "1";
+                  });
+                }
+              }
+            });
+          });
+        // Chiudi dropdown quando si clicca fuori (solo desktop)
+        document.addEventListener("click", function (event) {
+          if (
+            window.innerWidth > 700 &&
+            !event.target.closest(".team-member-select")
+          ) {
+            document
+              .querySelectorAll(".character-dropdown")
+              .forEach((dropdown) => {
+                dropdown.classList.remove("show", "dropdown-up");
+                dropdown.style.visibility = "hidden";
+                dropdown.style.opacity = "0";
+              });
+          }
+        });
+        // Chiudi dropdown con ESC (solo desktop)
+        document.addEventListener("keydown", function (event) {
+          if (window.innerWidth > 700 && event.key === "Escape") {
+            document
+              .querySelectorAll(".character-dropdown")
+              .forEach((dropdown) => {
+                dropdown.classList.remove("show", "dropdown-up");
+                dropdown.style.visibility = "hidden";
+                dropdown.style.opacity = "0";
+              });
+          }
+        });
+      }
+
+      // Funzione per popolare il dropdown dei personaggi
+      function populateCharacterDropdown(inputId) {
+        const dropdown = document.getElementById(inputId + "_dropdown");
+        if (!dropdown) {
+          console.log("Dropdown non trovato per:", inputId);
+          return;
+        }
+
+        console.log("Popolando dropdown per:", inputId);
+        dropdown.innerHTML = "";
+
+        // Aggiungi header con pulsante di chiusura
+        const header = document.createElement("div");
+        header.className = "dropdown-header";
+        header.style.cssText = `
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.5rem 1rem;
+          border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+          background: rgba(100, 255, 218, 0.05);
+        `;
+
+        const title = document.createElement("span");
+        title.textContent = "Seleziona personaggio";
+        title.style.cssText = `
+          color: #64ffda;
+          font-weight: 700;
+          font-size: 1.1rem;
+        `;
+
+        const closeBtn = document.createElement("button");
+        closeBtn.innerHTML = "✕";
+        closeBtn.style.cssText = `
+          background: none;
+          border: none;
+          color: #64ffda;
+          font-size: 1.5rem;
+          cursor: pointer;
+          padding: 0.5rem;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        `;
+        closeBtn.onmouseover = () => {
+          closeBtn.style.background = "rgba(100, 255, 218, 0.2)";
+        };
+        closeBtn.onmouseout = () => {
+          closeBtn.style.background = "none";
+        };
+        closeBtn.onclick = (e) => {
+          e.stopPropagation();
+          dropdown.classList.remove("show", "dropdown-up");
+          dropdown.style.visibility = "hidden";
+          dropdown.style.opacity = "0";
+        };
+
+        header.appendChild(title);
+        header.appendChild(closeBtn);
+        dropdown.appendChild(header);
+
+        // Aggiungi barra di ricerca
+        const searchContainer = document.createElement("div");
+        searchContainer.style.cssText = `
+          padding: 0.75rem 1rem;
+          border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+          background: rgba(100, 255, 218, 0.05);
+        `;
+
+        const searchInput = document.createElement("input");
+        searchInput.type = "text";
+        searchInput.placeholder =
+          "🔍 Cerca per nome, elemento, arma... (inizia con)";
+        searchInput.style.cssText = `
+          width: 100%;
+          padding: 0.5rem 0.75rem;
+          border: 2px solid rgba(100, 255, 218, 0.3);
+          border-radius: 8px;
+          background: rgba(255, 255, 255, 0.9);
+          color: #333;
+          font-size: 0.9rem;
+          outline: none;
+          transition: all 0.3s ease;
+        `;
+        searchInput.onfocus = () => {
+          searchInput.style.borderColor = "var(--fantasy-blue)";
+          searchInput.style.boxShadow = "0 0 10px rgba(100, 149, 237, 0.3)";
+        };
+        searchInput.onblur = () => {
+          searchInput.style.borderColor = "rgba(100, 255, 218, 0.3)";
+          searchInput.style.boxShadow = "none";
+        };
+
+        searchContainer.appendChild(searchInput);
+
+        // Aggiungi testo di aiuto per la ricerca
+        const helpText = document.createElement("div");
+        helpText.style.cssText = `
+          font-size: 0.75rem;
+          color: rgba(176, 234, 255, 0.7);
+          margin-top: 0.25rem;
+          font-style: italic;
+        `;
+        helpText.textContent =
+          "💡 Esempio: 'al' trova 'Albedo', 'al' trova 'Aloy', 'ba' trova 'Barbara'";
+        searchContainer.appendChild(helpText);
+
+        dropdown.appendChild(searchContainer);
+
+        // Container per le opzioni dei personaggi
+        const optionsContainer = document.createElement("div");
+        optionsContainer.className = "character-options-container";
+        optionsContainer.style.cssText = `
+          max-height: 300px;
+          overflow-y: auto;
+          padding: 0.5rem 0;
+        `;
+        dropdown.appendChild(optionsContainer);
+
+        // Aggiungi opzione "Nessuno"
+        const noneOption = document.createElement("div");
+        noneOption.className = "character-option";
+        noneOption.setAttribute("data-search", "nessuno rimuovi personaggio");
+        noneOption.setAttribute("data-character-name", "");
+        noneOption.onclick = () =>
+          selectTeamMember(inputId, "", "Nessuno", "👤");
+
+        const noneAvatar = document.createElement("div");
+        noneAvatar.className = "character-option-avatar";
+        noneAvatar.innerHTML = "👤";
+
+        const noneInfo = document.createElement("div");
+        noneInfo.className = "character-option-info";
+
+        const noneName = document.createElement("div");
+        noneName.className = "character-option-name";
+        noneName.textContent = "Nessuno";
+
+        const noneDetails = document.createElement("div");
+        noneDetails.className = "character-option-details";
+        noneDetails.textContent = "Rimuovi personaggio";
+
+        noneInfo.appendChild(noneName);
+        noneInfo.appendChild(noneDetails);
+        noneOption.appendChild(noneAvatar);
+        noneOption.appendChild(noneInfo);
+        optionsContainer.appendChild(noneOption);
+
+        // Ottieni i personaggi già selezionati nello stesso team
+        const selectedCharacters = getSelectedCharactersInTeam(inputId);
+        console.log("Personaggi già selezionati nel team:", selectedCharacters);
+
+        // Aggiungi tutti i personaggi da window.allCharacters
+        if (
+          typeof window.allCharacters !== "undefined" &&
+          window.allCharacters.length > 0
+        ) {
+          console.log(
+            "Aggiungendo",
+            window.allCharacters.length,
+            "personaggi al dropdown"
+          );
+          window.allCharacters.forEach((character) => {
+            // Salta se il personaggio è già selezionato in questo team
+            if (selectedCharacters.includes(character.name)) {
+              console.log(`Saltando ${character.name} - già selezionato`);
+              return;
+            }
+
+            const option = document.createElement("div");
+            option.className = "character-option";
+            option.setAttribute(
+              "data-search",
+              `${character.name.toLowerCase()} ${character.element.toLowerCase()} ${character.weapon.toLowerCase()} ${character.region.toLowerCase()}`
+            );
+            option.setAttribute("data-character-name", character.name);
+            option.onclick = () =>
+              selectTeamMember(
+                inputId,
+                character.name,
+                character.name,
+                getElementEmoji(character.element)
+              );
+
+            const avatar = document.createElement("div");
+            avatar.className = "character-option-avatar";
+
+            // Prima prova a caricare l'immagine personalizzata dal localStorage
+            const customImage = localStorage.getItem(
+              `character_image_${character.name}`
+            );
+            if (customImage) {
+              avatar.style.backgroundImage = `url(${customImage})`;
+              avatar.style.backgroundSize = "cover";
+              avatar.style.backgroundPosition = "center";
+              avatar.innerHTML = "";
+              avatar.style.display = "none";
+              setTimeout(() => {
+                avatar.style.display = "flex";
+              }, 10);
+            }
+            // Altrimenti usa l'immagine dal JSON
+            else if (character.image) {
+              avatar.style.backgroundImage = `url(${character.image})`;
+              avatar.style.backgroundSize = "cover";
+              avatar.style.backgroundPosition = "center";
+              avatar.innerHTML = "";
+              avatar.style.display = "none";
+              setTimeout(() => {
+                avatar.style.display = "flex";
+              }, 10);
+            }
+            // Fallback all'emoji dell'elemento
+            else {
+              avatar.style.backgroundImage = "none";
+              avatar.innerHTML = getElementEmoji(character.element);
+              avatar.style.display = "flex";
+            }
+
+            const info = document.createElement("div");
+            info.className = "character-option-info";
+
+            const name = document.createElement("div");
+            name.className = "character-option-name";
+            name.textContent = character.name;
+
+            const details = document.createElement("div");
+            details.className = "character-option-details";
+            details.textContent = `${character.element} • ${character.weapon} • ${character.rarity}★`;
+
+            info.appendChild(name);
+            info.appendChild(details);
+            option.appendChild(avatar);
+            option.appendChild(info);
+            optionsContainer.appendChild(option);
+          });
+        } else {
+          console.log("Nessun personaggio disponibile in window.allCharacters");
+        }
+
+        // Funzione di ricerca migliorata
+        searchInput.addEventListener("input", function () {
+          const searchTerm = this.value.toLowerCase().trim();
+          const options =
+            optionsContainer.querySelectorAll(".character-option");
+
+          console.log(`Ricerca per: "${searchTerm}"`);
+
+          options.forEach((option) => {
+            const searchData = option.getAttribute("data-search");
+            if (searchData && searchTerm) {
+              // Funzione per controllare se il termine corrisponde all'inizio di una parola
+              const matchesSearch = (text, term) => {
+                if (!term) return true;
+
+                const words = text.toLowerCase().split(/\s+/);
+                const matches = words.some((word) => word.startsWith(term));
+
+                if (matches) {
+                  console.log(`Match trovato: "${term}" in "${text}"`);
+                }
+
+                return matches;
+              };
+
+              if (matchesSearch(searchData, searchTerm)) {
+                option.style.display = "flex";
+                // Evidenzia il testo se c'è una corrispondenza
+                option.style.background = "rgba(100, 255, 218, 0.1)";
+                option.style.borderLeft = "3px solid var(--fantasy-blue)";
+              } else {
+                option.style.display = "none";
+              }
+            } else {
+              // Se non c'è termine di ricerca, mostra tutto
+              option.style.display = "flex";
+              option.style.background = "";
+              option.style.borderLeft = "";
+            }
+          });
+
+          // Mostra messaggio se nessun risultato
+          const visibleOptions = optionsContainer.querySelectorAll(
+            ".character-option[style*='flex']"
+          );
+          console.log(`Risultati trovati: ${visibleOptions.length}`);
+
+          if (visibleOptions.length === 0 && searchTerm) {
+            showNoResultsMessage(optionsContainer, searchTerm);
+          } else {
+            removeNoResultsMessage(optionsContainer);
+          }
+        });
+
+        // Focus sulla barra di ricerca quando si apre il dropdown
+        setTimeout(() => {
+          searchInput.focus();
+        }, 100);
+
+        console.log(
+          "Dropdown popolato con",
+          optionsContainer.children.length,
+          "opzioni"
+        );
+      }
+
+      // Funzione per mostrare messaggio "nessun risultato"
+      function showNoResultsMessage(container, searchTerm) {
+        removeNoResultsMessage(container);
+
+        const noResults = document.createElement("div");
+        noResults.className = "no-results-message";
+        noResults.style.cssText = `
+          padding: 1rem;
+          text-align: center;
+          color: #ffd700;
+          font-style: italic;
+          background: rgba(255, 215, 0, 0.05);
+          border-radius: 8px;
+          margin: 0.5rem;
+        `;
+        noResults.textContent = `Nessun personaggio trovato per "${searchTerm}"`;
+
+        container.appendChild(noResults);
+      }
+
+      // Funzione per rimuovere messaggio "nessun risultato"
+      function removeNoResultsMessage(container) {
+        const existingMessage = container.querySelector(".no-results-message");
+        if (existingMessage) {
+          existingMessage.remove();
+        }
+      }
+
+      // Funzione per ottenere i personaggi già selezionati nello stesso team
+      function getSelectedCharactersInTeam(inputId) {
+        const selectedCharacters = [];
+        // Estrai il numero del team dall'inputId (es: "detailTeam3Member2" -> "3")
+        const teamMatch = inputId.match(/detailTeam(\d+)Member/);
+        if (!teamMatch) {
+          console.log("Impossibile estrarre il numero del team da:", inputId);
+          return selectedCharacters;
+        }
+
+        const teamNumber = teamMatch[1];
+        const teamPrefix = `detailTeam${teamNumber}Member`;
+
+        // Controlla tutti i 4 membri del team
+        for (let i = 1; i <= 4; i++) {
+          const memberId = teamPrefix + i;
+          const hiddenInput = document.getElementById(memberId + "_hidden");
+
+          if (
+            hiddenInput &&
+            hiddenInput.value &&
+            hiddenInput.value.trim() !== ""
+          ) {
+            // Non includere il personaggio corrente se stiamo modificando il suo slot
+            if (memberId !== inputId) {
+              selectedCharacters.push(hiddenInput.value);
+            }
+          }
+        }
+
+        console.log(
+          `Personaggi già selezionati nel Team ${teamNumber}:`,
+          selectedCharacters
+        );
+        return selectedCharacters;
+      }
+
+      // Funzione per selezionare un membro del team
+      function selectTeamMember(inputId, characterName, displayName, emoji) {
+        const dropdown = document.getElementById(inputId + "_dropdown");
+        if (!dropdown) return; // Se l'elemento non esiste, esci
+
+        const memberInput = dropdown.previousElementSibling;
+        if (!memberInput) return; // Se l'elemento non esiste, esci
+
+        const avatar = memberInput.querySelector(".team-member-avatar");
+        const nameSpan = memberInput.querySelector(".team-member-name");
+        const hiddenInput = document.getElementById(inputId + "_hidden");
+
+        if (!avatar || !nameSpan || !hiddenInput) return; // Se gli elementi non esistono, esci
+
+        // Aggiorna il display
+        nameSpan.textContent = displayName;
+        hiddenInput.value = characterName;
+
+        // Aggiorna l'avatar
+        if (characterName && characterName !== "Nessuno") {
+          // Trova il personaggio nell'array allCharacters
+          const character = window.allCharacters.find(
+            (c) => c.name === characterName
+          );
+
+          if (character) {
+            // Prima prova a caricare l'immagine personalizzata dal localStorage
+            const customImage = localStorage.getItem(
+              `character_image_${characterName}`
+            );
+            if (customImage) {
+              avatar.style.backgroundImage = `url(${customImage})`;
+              avatar.style.backgroundSize = "cover";
+              avatar.style.backgroundPosition = "center";
+              avatar.innerHTML = "";
+              avatar.style.display = "none";
+              setTimeout(() => {
+                avatar.style.display = "flex";
+              }, 10);
+            }
+            // Altrimenti usa l'immagine dal JSON
+            else if (character.image) {
+              avatar.style.backgroundImage = `url(${character.image})`;
+              avatar.style.backgroundSize = "cover";
+              avatar.style.backgroundPosition = "center";
+              avatar.innerHTML = "";
+              avatar.style.display = "none";
+              setTimeout(() => {
+                avatar.style.display = "flex";
+              }, 10);
+            }
+            // Fallback all'emoji dell'elemento
+            else {
+              avatar.style.backgroundImage = "none";
+              avatar.innerHTML = emoji || "👤";
+              avatar.style.display = "flex";
+            }
+          } else {
+            // Se non trova il personaggio, usa l'emoji fornita
+            avatar.style.backgroundImage = "none";
+            avatar.innerHTML = emoji || "👤";
+            avatar.style.display = "flex";
+          }
+        } else {
+          avatar.style.backgroundImage = "none";
+          avatar.innerHTML = "👤";
+          avatar.style.display = "flex";
+        }
+
+        // Chiudi il dropdown dopo la selezione con animazione fluida
+        dropdown.classList.remove("show", "dropdown-up");
+        dropdown.style.visibility = "hidden";
+        dropdown.style.opacity = "0";
+
+        // Aggiorna solo i dropdown che sono effettivamente aperti
+        const openDropdowns = document.querySelectorAll(
+          ".character-dropdown.show"
+        );
+        if (openDropdowns.length > 0) {
+          // Aggiorna solo i dropdown aperti senza ripopolarli completamente
+          updateOpenDropdownsContent();
+        }
+
+        // Salva automaticamente i dati
+        setTimeout(() => {
+          saveCharacterDetail(false);
+        }, 100);
+      }
+
+      // Funzione per aggiornare tutti i dropdown aperti (DEPRECATA - sostituita da updateOpenDropdownsContent)
+      function updateAllOpenDropdowns() {
+        // Questa funzione è stata sostituita da updateOpenDropdownsContent per evitare flickering
+        console.warn(
+          "updateAllOpenDropdowns è deprecata, usa updateOpenDropdownsContent"
+        );
+        updateOpenDropdownsContent();
+      }
+
+      // Funzione per aggiungere un nuovo team
+      function addNewTeam() {
+        const teamsContainer = document.getElementById("teamsContainer");
+        const currentTeams = teamsContainer.querySelectorAll(".team-comp");
+        const newTeamNumber = currentTeams.length + 1;
+
+        // Limite massimo di team
+        if (newTeamNumber > 99) {
+          showToast("❌ Numero massimo di team raggiunto (99)", "error");
+          return;
+        }
+
+        const newTeamHTML = `
+          <div class="team-comp" data-team-id="${newTeamNumber}">
+            <h4>Team ${newTeamNumber}</h4>
+            <div class="detail-stats">
+              <div class="form-group">
+                <label for="detailTeam${newTeamNumber}Name">Nome Team</label>
+                <input
+                  type="text"
+                  id="detailTeam${newTeamNumber}Name"
+                  placeholder="Nome del team"
+                />
+              </div>
+              <div class="form-group">
+                <label for="detailTeam${newTeamNumber}Member1">Membro 1</label>
+                <div class="team-member-select">
+                  <div
+                    class="team-member-input"
+                    data-member-id="detailTeam${newTeamNumber}Member1"
+                  >
+                    <div class="team-member-avatar">👤</div>
+                    <span class="team-member-name">Seleziona personaggio</span>
+                    <input
+                      type="hidden"
+                      id="detailTeam${newTeamNumber}Member1_hidden"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="character-dropdown"
+                    id="detailTeam${newTeamNumber}Member1_dropdown"
+                  ></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="detailTeam${newTeamNumber}Member2">Membro 2</label>
+                <div class="team-member-select">
+                  <div
+                    class="team-member-input"
+                    data-member-id="detailTeam${newTeamNumber}Member2"
+                  >
+                    <div class="team-member-avatar">👤</div>
+                    <span class="team-member-name">Seleziona personaggio</span>
+                    <input
+                      type="hidden"
+                      id="detailTeam${newTeamNumber}Member2_hidden"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="character-dropdown"
+                    id="detailTeam${newTeamNumber}Member2_dropdown"
+                  ></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="detailTeam${newTeamNumber}Member3">Membro 3</label>
+                <div class="team-member-select">
+                  <div
+                    class="team-member-input"
+                    data-member-id="detailTeam${newTeamNumber}Member3"
+                  >
+                    <div class="team-member-avatar">👤</div>
+                    <span class="team-member-name">Seleziona personaggio</span>
+                    <input
+                      type="hidden"
+                      id="detailTeam${newTeamNumber}Member3_hidden"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="character-dropdown"
+                    id="detailTeam${newTeamNumber}Member3_dropdown"
+                  ></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="detailTeam${newTeamNumber}Member4">Membro 4</label>
+                <div class="team-member-select">
+                  <div
+                    class="team-member-input"
+                    data-member-id="detailTeam${newTeamNumber}Member4"
+                  >
+                    <div class="team-member-avatar">👤</div>
+                    <span class="team-member-name">Seleziona personaggio</span>
+                    <input
+                      type="hidden"
+                      id="detailTeam${newTeamNumber}Member4_hidden"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="character-dropdown"
+                    id="detailTeam${newTeamNumber}Member4_dropdown"
+                  ></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="detailTeam${newTeamNumber}Notes">Note Team</label>
+                <textarea
+                  id="detailTeam${newTeamNumber}Notes"
+                  rows="3"
+                  placeholder="Note sul team..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        `;
+
+        teamsContainer.insertAdjacentHTML("beforeend", newTeamHTML);
+
+        // Reinizializza i dropdown per il nuovo team
+        initializeTeamMemberDropdowns();
+
+        // Aggiungi event listeners per il salvataggio automatico del nuovo team
+        addTeamAutoSaveListeners();
+
+        // Salva automaticamente
+        saveCharacterDetail(false);
+
+        // Feedback visivo
+        const newTeamElement = teamsContainer.lastElementChild;
+        newTeamElement.style.animation = "fadeInUp 0.6s ease";
+        newTeamElement.style.borderColor = "rgba(100, 255, 218, 0.5)";
+        newTeamElement.style.boxShadow = "0 8px 25px rgba(100, 255, 218, 0.3)";
+
+        setTimeout(() => {
+          newTeamElement.style.borderColor = "";
+          newTeamElement.style.boxShadow = "";
+        }, 2000);
+
+        showToast(`✅ Team ${newTeamNumber} aggiunto con successo!`, "success");
+      }
+
+      // Funzione per rimuovere l'ultimo team
+      function removeLastTeam() {
+        const teamsContainer = document.getElementById("teamsContainer");
+        const currentTeams = teamsContainer.querySelectorAll(".team-comp");
+
+        if (currentTeams.length <= 1) {
+          showToast("❌ Deve rimanere almeno un team!", "error");
+          return;
+        }
+
+        const lastTeam = currentTeams[currentTeams.length - 1];
+        const teamNumber = currentTeams.length;
+
+        // Controlla se il team ha dati
+        const hasData = checkTeamHasData(lastTeam);
+
+        if (hasData) {
+          showConfirmDialog(
+            `Il Team ${teamNumber} contiene dati. Sei sicuro di volerlo rimuovere? Questa azione non può essere annullata.`,
+            () => {
+              removeTeamWithAnimation(lastTeam, teamNumber);
+            }
+          );
+        } else {
+          removeTeamWithAnimation(lastTeam, teamNumber);
+        }
+      }
+
+      // Funzione per controllare se un team ha dati
+      function checkTeamHasData(teamElement) {
+        const inputs = teamElement.querySelectorAll("input, textarea");
+        for (let input of inputs) {
+          if (input.value && input.value.trim() !== "") {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      // Funzione per rimuovere team con animazione
+      function removeTeamWithAnimation(teamElement, teamNumber) {
+        // Animazione di uscita
+        teamElement.style.animation = "fadeOut 0.3s ease forwards";
+        teamElement.style.transform = "translateX(100%)";
+        teamElement.style.opacity = "0";
+
+        setTimeout(() => {
+          teamElement.remove();
+          updateTeamNumbers();
+          saveCharacterDetail(false);
+          showToast(`🗑️ Team ${teamNumber} rimosso con successo!`, "success");
+        }, 300);
+      }
+
+      // Funzione per aggiornare i numeri dei team
+      function updateTeamNumbers() {
+        const teams = document.querySelectorAll(".team-comp");
+        teams.forEach((team, index) => {
+          const newNumber = index + 1;
+          team.setAttribute("data-team-id", newNumber);
+
+          // Aggiorna il titolo
+          const title = team.querySelector("h4");
+          if (title) {
+            title.textContent = `Team ${newNumber}`;
+          }
+
+          // Aggiorna tutti gli ID degli elementi
+          const inputs = team.querySelectorAll("input, textarea, label");
+          inputs.forEach((input) => {
+            if (input.id) {
+              const newId = input.id.replace(
+                /detailTeam\d+/,
+                `detailTeam${newNumber}`
+              );
+              input.id = newId;
+            }
+          });
+
+          // Aggiorna i data-member-id
+          const memberInputs = team.querySelectorAll(".team-member-input");
+          memberInputs.forEach((memberInput, memberIndex) => {
+            const newMemberId = `detailTeam${newNumber}Member${
+              memberIndex + 1
+            }`;
+            memberInput.setAttribute("data-member-id", newMemberId);
+          });
+
+          // Aggiorna gli ID dei dropdown
+          const dropdowns = team.querySelectorAll(".character-dropdown");
+          dropdowns.forEach((dropdown, memberIndex) => {
+            const newDropdownId = `detailTeam${newNumber}Member${
+              memberIndex + 1
+            }_dropdown`;
+            dropdown.id = newDropdownId;
+          });
+        });
+      }
+
+      // Funzione per ricreare i team se necessario
+      function recreateTeamsIfNeeded(totalTeams) {
+        const teamsContainer = document.getElementById("teamsContainer");
+        const currentTeams = teamsContainer.querySelectorAll(".team-comp");
+
+        console.log(
+          `Team attuali: ${currentTeams.length}, Team necessari: ${totalTeams}`
+        );
+
+        if (currentTeams.length === totalTeams) {
+          console.log(
+            "Numero di team corretto, nessuna ricreazione necessaria"
+          );
+          return;
+        }
+
+        // Rimuovi tutti i team esistenti
+        currentTeams.forEach((team) => team.remove());
+
+        // Ricrea i team necessari
+        for (let i = 1; i <= totalTeams; i++) {
+          const teamHTML = `
+            <div class="team-comp" data-team-id="${i}">
+              <h4>Team ${i}</h4>
+              <div class="detail-stats">
+                <div class="form-group">
+                  <label for="detailTeam${i}Name">Nome Team</label>
+                  <input
+                    type="text"
+                    id="detailTeam${i}Name"
+                    placeholder="Nome del team"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam${i}Member1">Membro 1</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam${i}Member1"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name">Seleziona personaggio</span>
+                      <input
+                        type="hidden"
+                        id="detailTeam${i}Member1_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam${i}Member1_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam${i}Member2">Membro 2</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam${i}Member2"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name">Seleziona personaggio</span>
+                      <input
+                        type="hidden"
+                        id="detailTeam${i}Member2_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam${i}Member2_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam${i}Member3">Membro 3</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam${i}Member3"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name">Seleziona personaggio</span>
+                      <input
+                        type="hidden"
+                        id="detailTeam${i}Member3_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam${i}Member3_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam${i}Member4">Membro 4</label>
+                  <div class="team-member-select">
+                    <div
+                      class="team-member-input"
+                      data-member-id="detailTeam${i}Member4"
+                    >
+                      <div class="team-member-avatar">👤</div>
+                      <span class="team-member-name">Seleziona personaggio</span>
+                      <input
+                        type="hidden"
+                        id="detailTeam${i}Member4_hidden"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="character-dropdown"
+                      id="detailTeam${i}Member4_dropdown"
+                    ></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="detailTeam${i}Notes">Note Team</label>
+                  <textarea
+                    id="detailTeam${i}Notes"
+                    rows="3"
+                    placeholder="Note sul team..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          `;
+
+          teamsContainer.insertAdjacentHTML("beforeend", teamHTML);
+        }
+
+        console.log(`Ricreati ${totalTeams} team`);
+
+        // Reinizializza i dropdown per tutti i team
+        initializeTeamMemberDropdowns();
+
+        // Aggiungi event listeners per il salvataggio automatico di tutti i team ricreati
+        for (let i = 1; i <= totalTeams; i++) {
+          addTeamAutoSaveListeners();
+        }
+      }
+
+      // Funzione per caricare i dati del personaggio
+      function loadCharacterDetailData(characterName) {
+        const savedData = localStorage.getItem(
+          `character_detail_${characterName}`
+        );
+        if (!savedData) {
+          console.log("Nessun dato salvato per:", characterName);
+          return;
+        }
+
+        try {
+          const data = JSON.parse(savedData);
+          console.log("Dati caricati per:", characterName, data);
+
+          // Mappa delle chiavi salvate ai campi HTML
+          const fieldMappings = {
+            level: "detailLevel",
+            constellation: "detailConstellation",
+            baseAtk: "detailBaseAtk",
+            baseHP: "detailBaseHP",
+            baseDef: "detailBaseDef",
+            critRate: "detailCritRate",
+            critDMG: "detailCritDMG",
+            elementalDMG: "detailElementalDMG",
+            currentWeapon: "detailCurrentWeapon",
+            weaponLevel: "detailWeaponLevel",
+            weaponRefinement: "detailWeaponRefinement",
+            weaponBaseAtk: "detailWeaponBaseAtk",
+            weaponBonus: "detailWeaponBonus",
+            normalAttack: "detailNormalAttack",
+            elementalSkill: "detailElementalSkill",
+            elementalBurst: "detailElementalBurst",
+            mainSet: "detailMainSet",
+            mainSetNotes: "detailMainSetNotes",
+            subSet: "detailSubSet",
+            subSetNotes: "detailSubSetNotes",
+            sandsMain: "detailSandsMain",
+            gobletMain: "detailGobletMain",
+            circletMain: "detailCircletMain",
+            subStatsPriority: "detailSubStatsPriority",
+            personalNotes: "detailPersonalNotes",
+          };
+
+          // Popola tutti i campi base usando la mappa corretta
+          Object.keys(fieldMappings).forEach((savedKey) => {
+            const htmlFieldId = fieldMappings[savedKey];
+            const element = document.getElementById(htmlFieldId);
+            if (
+              element &&
+              data[savedKey] !== undefined &&
+              data[savedKey] !== null
+            ) {
+              console.log(
+                `Caricando ${savedKey}: ${data[savedKey]} in ${htmlFieldId}`
+              );
+              element.value = data[savedKey];
+
+              // Gestione speciale per il campo arma
+              if (savedKey === "currentWeapon" && data[savedKey]) {
+                console.log(`Impostando arma selezionata: ${data[savedKey]}`);
+                // Forza l'aggiornamento del select
+                element.dispatchEvent(new Event("change"));
+              }
+            }
+          });
+
+          // Gestione dinamica dei team
+          const totalTeams = data.totalTeams || 2; // Default a 2 team se non specificato
+          console.log(`Caricando ${totalTeams} team...`);
+
+          // Ricrea i team se necessario
+          recreateTeamsIfNeeded(totalTeams);
+
+          // Popola i dati dei team dinamicamente
+          const teamElements = document.querySelectorAll(".team-comp");
+          teamElements.forEach((teamElement, index) => {
+            const teamNumber = index + 1;
+            const teamId = `team${teamNumber}`;
+
+            // Popola nome e note del team
+            const teamNameElement = document.getElementById(
+              `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Name`
+            );
+            const teamNotesElement = document.getElementById(
+              `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Notes`
+            );
+
+            if (teamNameElement && data[`${teamId}Name`] !== undefined) {
+              teamNameElement.value = data[`${teamId}Name`];
+            }
+            if (teamNotesElement && data[`${teamId}Notes`] !== undefined) {
+              teamNotesElement.value = data[`${teamId}Notes`];
+            }
+
+            // Popola i membri del team
+            for (let memberIndex = 1; memberIndex <= 4; memberIndex++) {
+              const memberId = `detail${
+                teamId.charAt(0).toUpperCase() + teamId.slice(1)
+              }Member${memberIndex}`;
+              const memberName = data[`${teamId}Member${memberIndex}`];
+
+              if (memberName && memberName.trim() !== "") {
+                console.log(
+                  `Caricando membro ${memberIndex} del team ${teamNumber}:`,
+                  memberName
+                );
+
+                // Trova il personaggio nell'array allCharacters
+                const character = window.allCharacters.find(
+                  (c) => c.name === memberName
+                );
+                if (character) {
+                  // Aggiorna il display del team member
+                  updateTeamMemberDisplay(
+                    memberId,
+                    character.name,
+                    character.name,
+                    getElementEmoji(character.element)
+                  );
+                }
+              }
+            }
+          });
+
+          // Aggiorna le statistiche dell'arma
+          if (typeof updateWeaponStats === "function") {
+            updateWeaponStats();
+          }
+
+          console.log("Dati caricati con successo per:", characterName);
+        } catch (error) {
+          console.error(
+            "Errore nel caricamento dei dati per",
+            characterName,
+            ":",
+            error
+          );
+        }
+      }
+
+      // Funzione per aggiornare il display di un team member
+      function updateTeamMemberDisplay(
+        inputId,
+        characterName,
+        displayName,
+        emoji
+      ) {
+        const memberInput = document.querySelector(
+          `[data-member-id="${inputId}"]`
+        );
+        if (!memberInput) {
+          console.log("Member input non trovato per:", inputId);
+          return;
+        }
+
+        const avatar = memberInput.querySelector(".team-member-avatar");
+        const nameSpan = memberInput.querySelector(".team-member-name");
+        const hiddenInput = document.getElementById(inputId + "_hidden");
+
+        if (!avatar || !nameSpan || !hiddenInput) {
+          console.log("Elementi del team member non trovati per:", inputId);
+          return;
+        }
+
+        // Aggiorna il display
+        nameSpan.textContent = displayName;
+        hiddenInput.value = characterName;
+
+        // Aggiorna l'avatar
+        if (characterName && characterName !== "Nessuno") {
+          // Trova il personaggio nell'array allCharacters
+          const character = window.allCharacters.find(
+            (c) => c.name === characterName
+          );
+
+          if (character) {
+            // Prima prova a caricare l'immagine personalizzata dal localStorage
+            const customImage = localStorage.getItem(
+              `character_image_${characterName}`
+            );
+            if (customImage) {
+              avatar.style.setProperty(
+                "background-image",
+                `url(${customImage})`,
+                "important"
+              );
+              avatar.style.setProperty("background-size", "cover", "important");
+              avatar.style.setProperty(
+                "background-position",
+                "center",
+                "important"
+              );
+              avatar.innerHTML = "";
+              avatar.style.display = "none";
+              setTimeout(() => {
+                avatar.style.display = "flex";
+              }, 10);
+            }
+            // Altrimenti usa l'immagine dal JSON
+            else if (character.image) {
+              avatar.style.setProperty(
+                "background-image",
+                `url(${character.image})`,
+                "important"
+              );
+              avatar.style.setProperty("background-size", "cover", "important");
+              avatar.style.setProperty(
+                "background-position",
+                "center",
+                "important"
+              );
+              avatar.innerHTML = "";
+              avatar.style.display = "none";
+              setTimeout(() => {
+                avatar.style.display = "flex";
+              }, 10);
+            }
+            // Fallback all'emoji dell'elemento
+            else {
+              avatar.style.backgroundImage = "none";
+              avatar.innerHTML = emoji || "👤";
+              avatar.style.display = "flex";
+            }
+          } else {
+            // Se non trova il personaggio, usa l'emoji fornita
+            avatar.style.backgroundImage = "none";
+            avatar.innerHTML = emoji || "👤";
+            avatar.style.display = "flex";
+          }
+        } else {
+          avatar.style.backgroundImage = "none";
+          avatar.innerHTML = "👤";
+          avatar.style.display = "flex";
+        }
+      }
+
+      // Funzione debounce per evitare troppi salvataggi
+      function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
+
+      // Funzione per aggiungere event listeners ai nuovi team
+      function addAutoSaveListenersToNewTeam(teamNumber) {
+        const teamId = `team${teamNumber}`;
+
+        // Nome del team
+        const teamNameElement = document.getElementById(
+          `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Name`
+        );
+        if (teamNameElement) {
+          teamNameElement.addEventListener(
+            "input",
+            debounce(() => {
+              console.log(
+                `Nome team ${teamNumber} modificato: ${teamNameElement.value}`
+              );
+              saveCharacterDetail(false);
+            }, 500)
+          );
+          teamNameElement.addEventListener("change", () => {
+            console.log(
+              `Nome team ${teamNumber} cambiato: ${teamNameElement.value}`
+            );
+            saveCharacterDetail(false);
+          });
+        }
+
+        // Note del team
+        const teamNotesElement = document.getElementById(
+          `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Notes`
+        );
+        if (teamNotesElement) {
+          teamNotesElement.addEventListener(
+            "input",
+            debounce(() => {
+              console.log(
+                `Note team ${teamNumber} modificate: ${teamNotesElement.value}`
+              );
+              saveCharacterDetail(false);
+            }, 500)
+          );
+          teamNotesElement.addEventListener("change", () => {
+            console.log(
+              `Note team ${teamNumber} cambiate: ${teamNotesElement.value}`
+            );
+            saveCharacterDetail(false);
+          });
+        }
+
+        console.log(`Event listeners aggiunti per il Team ${teamNumber}`);
+      }
+
+      // Funzione di test per verificare il salvataggio automatico
+      function testAutoSave() {
+        console.log("=== TEST SALVATAGGIO AUTOMATICO ===");
+
+        // Verifica che gli event listeners siano stati aggiunti
+        const testField = document.getElementById("detailLevel");
+        if (testField) {
+          console.log("Campo test trovato:", testField.id);
+          console.log(
+            "Event listeners sul campo test:",
+            testField.oninput,
+            testField.onchange
+          );
+
+          // Simula una modifica
+          const originalValue = testField.value;
+          testField.value = "90";
+          testField.dispatchEvent(new Event("change"));
+
+          console.log(
+            "Test completato. Controlla la console per i messaggi di salvataggio."
+          );
+        } else {
+          console.error("Campo test non trovato!");
+        }
+      }
+
+      // Funzioni per i popup dei Team Comp
+      function openTeamCompPopup(teamNumber) {
+        const popup = document.getElementById("teamCompPopup");
+        const title = document.getElementById("popupTeamTitle");
+        const membersContainer = document.getElementById("popupTeamMembers");
+        const notesField = document.getElementById("popupTeamNotes");
+
+        // Imposta il titolo
+        title.textContent = `Team ${teamNumber}`;
+
+        // Ottieni i dati del team
+        const teamName =
+          document.getElementById(`detailTeam${teamNumber}Name`)?.value ||
+          `Team ${teamNumber}`;
+        const teamNotes =
+          document.getElementById(`detailTeam${teamNumber}Notes`)?.value || "";
+
+        // Popola le note
+        notesField.value = teamNotes;
+
+        // Genera i membri del team
+        membersContainer.innerHTML = "";
+        for (let i = 1; i <= 4; i++) {
+          const memberId = `detailTeam${teamNumber}Member${i}`;
+          const hiddenInput = document.getElementById(memberId + "_hidden");
+          const memberName = hiddenInput?.value || "";
+
+          const memberCard = document.createElement("div");
+          memberCard.className = "team-member-card";
+
+          if (memberName && memberName.trim() !== "") {
+            // Trova il personaggio nell'array allCharacters
+            const character = window.allCharacters.find(
+              (c) => c.name === memberName
+            );
+            if (character) {
+              memberCard.innerHTML = `
+                <div class="team-member-card-avatar" style="background-image: url('${
+                  character.image || ""
+                }'); background-size: cover; background-position: center;">
+                  ${!character.image ? getElementEmoji(character.element) : ""}
+                </div>
+                <div class="team-member-card-name">${character.name}</div>
+                <div class="team-member-card-details">${character.element} • ${
+                character.weapon
+              } • ${character.rarity}★</div>
+              `;
+            } else {
+              memberCard.innerHTML = `
+                <div class="team-member-card-avatar">👤</div>
+                <div class="team-member-card-name">${memberName}</div>
+                <div class="team-member-card-details">Personaggio non trovato</div>
+              `;
+            }
+          } else {
+            memberCard.innerHTML = `
+              <div class="team-member-card-avatar">👤</div>
+              <div class="team-member-card-name">Slot Vuoto</div>
+              <div class="team-member-card-details">Nessun personaggio selezionato</div>
+            `;
+          }
+
+          membersContainer.appendChild(memberCard);
+        }
+
+        // Mostra il popup con animazione
+        popup.classList.add("show");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeTeamCompPopup() {
+        const popup = document.getElementById("teamCompPopup");
+        popup.classList.remove("show");
+        document.body.style.overflow = "";
+      }
+
+      // Aggiungi event listeners per aprire i popup dei team
+      function addTeamCompPopupListeners() {
+        const teamComps = document.querySelectorAll(".team-comp");
+        teamComps.forEach((teamComp, index) => {
+          const teamNumber = index + 1;
+
+          // Aggiungi click listener al titolo del team
+          const title = teamComp.querySelector("h4");
+          if (title) {
+            title.style.cursor = "pointer";
+            title.addEventListener("click", () =>
+              openTeamCompPopup(teamNumber)
+            );
+
+            // Aggiungi effetto hover al titolo
+            title.addEventListener("mouseenter", () => {
+              title.style.transform = "scale(1.05)";
+              title.style.textShadow = "0 4px 8px rgba(100, 255, 218, 0.4)";
+            });
+
+            title.addEventListener("mouseleave", () => {
+              title.style.transform = "scale(1)";
+              title.style.textShadow = "0 2px 4px rgba(0, 0, 0, 0.3)";
+            });
+          }
+        });
+      }
+
+      // Chiudi popup quando si clicca fuori
+      document.addEventListener("click", function (event) {
+        const popup = document.getElementById("teamCompPopup");
+        if (popup && event.target === popup) {
+          closeTeamCompPopup();
+        }
+      });
+
+      // Chiudi popup con ESC
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeTeamCompPopup();
+        }
+      });
+
+      // Funzione per aggiungere effetti di animazione ai team comp
+      function addTeamCompAnimations() {
+        const teamComps = document.querySelectorAll(".team-comp");
+
+        teamComps.forEach((teamComp, index) => {
+          // Aggiungi delay progressivo per l'animazione di entrata
+          teamComp.style.animationDelay = `${index * 0.1}s`;
+
+          // Aggiungi effetto di pulsazione quando si aggiunge un nuovo team
+          teamComp.addEventListener("animationend", () => {
+            teamComp.style.animation = "none";
+          });
+        });
+      }
+
+      // Funzione per migliorare l'effetto hover dei team member
+      function enhanceTeamMemberHover() {
+        const teamMemberInputs =
+          document.querySelectorAll(".team-member-input");
+
+        teamMemberInputs.forEach((input) => {
+          input.addEventListener("mouseenter", () => {
+            input.style.transform = "translateX(4px) scale(1.02)";
+          });
+
+          input.addEventListener("mouseleave", () => {
+            input.style.transform = "translateX(0) scale(1)";
+          });
+        });
+      }
+
+      // Inizializza tutte le funzionalità dei team comp
+      function initializeTeamCompFeatures() {
+        addTeamCompPopupListeners();
+        addTeamCompAnimations();
+        enhanceTeamMemberHover();
+      }
+
+      // Modifica la funzione addNewTeam per includere le nuove funzionalità
+      const originalAddNewTeam = addNewTeam;
+      addNewTeam = function () {
+        originalAddNewTeam();
+
+        // Reinizializza le funzionalità dopo aver aggiunto un nuovo team
+        setTimeout(() => {
+          addTeamCompPopupListeners();
+          addTeamCompAnimations();
+          enhanceTeamMemberHover();
+        }, 100);
+      };
+
+      // Modifica la funzione removeLastTeam per includere le nuove funzionalità
+      const originalRemoveLastTeam = removeLastTeam;
+      removeLastTeam = function () {
+        originalRemoveLastTeam();
+
+        // Reinizializza le funzionalità dopo aver rimosso un team
+        setTimeout(() => {
+          addTeamCompPopupListeners();
+          addTeamCompAnimations();
+          enhanceTeamMemberHover();
+        }, 100);
+      };
+
+      // Inizializza le funzionalità quando il DOM è caricato
+      document.addEventListener("DOMContentLoaded", function () {
+        // ... existing code ...
+
+        // Inizializza le funzionalità dei team comp
+        setTimeout(() => {
+          initializeTeamCompFeatures();
+        }, 500);
+      });
+
+      // FUNZIONI PER IL MODAL ARTEFATTI
+      let allArtifacts = [];
+      let currentArtifactType = "main"; // 'main' o 'sub'
+
+      // Funzione per caricare gli artefatti da artefatti.json
+      async function loadArtifacts() {
+        try {
+          const response = await fetch("artefatti.json");
+          const data = await response.json();
+          allArtifacts = data.artifacts || [];
+          console.log("Artefatti caricati:", allArtifacts.length);
+        } catch (error) {
+          console.error("Errore nel caricamento degli artefatti:", error);
+          allArtifacts = [];
+        }
+      }
+
+      // Funzione per aprire il modal degli artefatti
+      function openArtifactModal(type) {
+        currentArtifactType = type;
+        const modal = document.getElementById("artifactModal");
+        const title = document.getElementById("artifactModalTitle");
+
+        // Imposta il titolo in base al tipo
+        if (type === "main") {
+          title.textContent = "Seleziona Set Principale";
+        } else {
+          title.textContent = "Seleziona Set Secondario";
+        }
+
+        // Mostra il modal
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
+
+        // Popola la lista degli artefatti
+        populateArtifactList();
+
+        // Focus sulla barra di ricerca
+        setTimeout(() => {
+          const searchInput = document.getElementById("artifactSearchInput");
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }, 300);
+      }
+
+      // Funzione per chiudere il modal degli artefatti
+      function closeArtifactModal() {
+        const modal = document.getElementById("artifactModal");
+        modal.classList.remove("show");
+        document.body.style.overflow = "";
+
+        // Pulisci i filtri
+        document.getElementById("artifactSearchInput").value = "";
+        document.getElementById("artifactTypeFilter").value = "";
+        document.getElementById("artifactRarityFilter").value = "";
+      }
+
+      // Funzione per popolare la lista degli artefatti
+      function populateArtifactList(filteredArtifacts = null) {
+        const artifactList = document.getElementById("artifactList");
+        const artifacts = filteredArtifacts || allArtifacts;
+
+        artifactList.innerHTML = "";
+
+        if (artifacts.length === 0) {
+          artifactList.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: #b0eaff; font-style: italic;">
+              Nessun artefatto trovato con i filtri selezionati
+            </div>
+          `;
+          return;
+        }
+
+        artifacts.forEach((artifact) => {
+          const artifactItem = document.createElement("div");
+          artifactItem.className = "artifact-item";
+          artifactItem.onclick = () => selectArtifact(artifact);
+
+          // Crea l'icona dell'elemento
+          const elementEmoji = getElementEmoji(artifact.type);
+
+          // Formatta i bonus del set
+          const bonus2pc = artifact.setBonus["2pc"] || "N/A";
+          const bonus4pc = artifact.setBonus["4pc"] || "N/A";
+
+          // Formatta i personaggi consigliati
+          const bestFor = artifact.bestFor
+            ? artifact.bestFor.join(", ")
+            : "N/A";
+
+          artifactItem.innerHTML = `
+            <div class="artifact-item-header">
+              <div class="artifact-item-image">
+                ${
+                  artifact.image
+                    ? `<img src="${artifact.image}" alt="${artifact.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">`
+                    : elementEmoji
+                }
+              </div>
+              <div class="artifact-item-info">
+                <div class="artifact-item-name">${artifact.name}</div>
+                <div class="artifact-item-details">
+                  <span class="artifact-item-type">${artifact.type}</span>
+                  <span class="artifact-item-rarity">${artifact.rarity}★</span>
+                </div>
+              </div>
+            </div>
+            <div class="artifact-item-bonus">
+              <h5>Bonus Set</h5>
+              <p><strong>2 pezzi:</strong> ${bonus2pc}</p>
+              <p><strong>4 pezzi:</strong> ${bonus4pc}</p>
+            </div>
+            <div class="artifact-item-best-for">
+              <strong>Consigliato per:</strong> ${bestFor}
+            </div>
+          `;
+
+          artifactList.appendChild(artifactItem);
+        });
+      }
+
+      // Funzione per selezionare un artefatto
+      function selectArtifact(artifact) {
+        const inputField =
+          currentArtifactType === "main" ? "detailMainSet" : "detailSubSet";
+        const input = document.getElementById(inputField);
+
+        if (input) {
+          input.value = artifact.name;
+
+          // Salva automaticamente
+          saveCharacterDetail(false);
+
+          // Feedback visivo
+          input.style.borderColor = "rgba(100, 255, 218, 0.6)";
+          input.style.background = "rgba(100, 255, 218, 0.1)";
+
+          setTimeout(() => {
+            input.style.borderColor = "";
+            input.style.background = "";
+          }, 2000);
+        }
+
+        // Chiudi il modal
+        closeArtifactModal();
+
+        // Mostra toast di conferma
+        showToast(`✅ Set "${artifact.name}" selezionato!`, "success");
+      }
+
+      // Funzione per filtrare gli artefatti
+      function filterArtifacts() {
+        const searchTerm = document
+          .getElementById("artifactSearchInput")
+          .value.toLowerCase();
+        const typeFilter = document.getElementById("artifactTypeFilter").value;
+        const rarityFilter = document.getElementById(
+          "artifactRarityFilter"
+        ).value;
+
+        let filtered = allArtifacts.filter((artifact) => {
+          // Filtro per ricerca
+          const matchesSearch =
+            !searchTerm ||
+            artifact.name.toLowerCase().includes(searchTerm) ||
+            artifact.type.toLowerCase().includes(searchTerm) ||
+            (artifact.bestFor &&
+              artifact.bestFor.some((char) =>
+                char.toLowerCase().includes(searchTerm)
+              ));
+
+          // Filtro per tipo
+          const matchesType = !typeFilter || artifact.type === typeFilter;
+
+          // Filtro per rarità
+          const matchesRarity =
+            !rarityFilter || artifact.rarity.toString() === rarityFilter;
+
+          return matchesSearch && matchesType && matchesRarity;
+        });
+
+        populateArtifactList(filtered);
+      }
+
+      // Funzione per inizializzare gli event listeners del modal artefatti
+      function initializeArtifactModalListeners() {
+        // Event listener per la ricerca
+        const searchInput = document.getElementById("artifactSearchInput");
+        if (searchInput) {
+          searchInput.addEventListener("input", filterArtifacts);
+        }
+
+        // Event listeners per i filtri
+        const typeFilter = document.getElementById("artifactTypeFilter");
+        if (typeFilter) {
+          typeFilter.addEventListener("change", filterArtifacts);
+        }
+
+        const rarityFilter = document.getElementById("artifactRarityFilter");
+        if (rarityFilter) {
+          rarityFilter.addEventListener("change", filterArtifacts);
+        }
+
+        // Chiudi modal cliccando fuori
+        const modal = document.getElementById("artifactModal");
+        if (modal) {
+          modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+              closeArtifactModal();
+            }
+          });
+        }
+
+        // Chiudi modal con ESC
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeArtifactModal();
+          }
+        });
+      }
+
+      // Modifica la funzione DOMContentLoaded per includere il caricamento degli artefatti
+      const originalDOMContentLoaded = document.addEventListener;
+      document.addEventListener("DOMContentLoaded", async function () {
+        // Carica gli artefatti
+        await loadArtifacts();
+
+        // Inizializza gli event listeners del modal artefatti
+        initializeArtifactModalListeners();
+
+        // ... resto del codice esistente ...
+      });
+
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("userControls");
+        if (!el) return;
+        if (user) {
+          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em;'>Area Utente</a><button onclick='doLogout()'>Logout</button>`;
+        } else {
+          el.innerHTML = `<button onclick='openLoginModal()'>Login</button> <button onclick='openLoginModal()'>Registrati</button>`;
+        }
+      }
+      function openLoginModal() {
+        document.getElementById("loginModal").style.display = "block";
+      }
+      function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+      }
+      function doLogin() {
+        const u = document.getElementById("loginUsername").value;
+        const p = document.getElementById("loginPassword").value;
+        if (u === "k1ngadr1an" && p === "1234") {
+          localStorage.setItem("user", u);
+          closeLoginModal();
+          renderUserControls();
+          location.reload();
+        } else {
+          alert("Credenziali non valide");
+        }
+      }
+      function doLogout() {
+        localStorage.removeItem("user");
+        renderUserControls();
+        location.reload();
+      }
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+      // --- Utility per storage per-utente ---
+      function getCurrentUser() {
+        return localStorage.getItem("user") || "guest";
+      }
+      function getUserStorageKey(baseKey) {
+        return getCurrentUser() + "_" + baseKey;
+      }
+      // ... Aggiorna qui eventuali funzioni di storage ...
+
+      // Funzione per aggiornare il contenuto dei dropdown aperti senza ripopolarli completamente
+      function updateOpenDropdownsContent() {
+        const openDropdowns = document.querySelectorAll(
+          ".character-dropdown.show"
+        );
+
+        openDropdowns.forEach((dropdown) => {
+          // Trova l'inputId associato a questo dropdown
+          const dropdownId = dropdown.id;
+          const inputId = dropdownId.replace("_dropdown", "");
+
+          // Salva il valore della barra di ricerca se presente
+          const searchInput = dropdown.querySelector("input[type='text']");
+          const searchValue = searchInput ? searchInput.value : "";
+
+          // Aggiorna solo le opzioni dei personaggi senza ricreare tutto il dropdown
+          updateCharacterOptions(dropdown, inputId);
+
+          // Ripristina il valore della barra di ricerca se c'era
+          if (searchValue && searchInput) {
+            searchInput.value = searchValue;
+            // Trigger dell'evento input per filtrare di nuovo
+            searchInput.dispatchEvent(new Event("input"));
+          }
+        });
+      }
+
+      // Funzione per aggiornare solo le opzioni dei personaggi in un dropdown
+      function updateCharacterOptions(dropdown, inputId) {
+        const optionsContainer = dropdown.querySelector(
+          ".character-options-container"
+        );
+        if (!optionsContainer) return;
+
+        // Ottieni i personaggi già selezionati nello stesso team
+        const selectedCharacters = getSelectedCharactersInTeam(inputId);
+
+        // Aggiorna solo le opzioni dei personaggi, mantenendo header e search
+        const characterOptions =
+          optionsContainer.querySelectorAll(".character-option");
+
+        characterOptions.forEach((option) => {
+          const characterName = option.getAttribute("data-character-name");
+          if (characterName && selectedCharacters.includes(characterName)) {
+            // Nascondi le opzioni dei personaggi già selezionati
+            option.style.display = "none";
+            option.style.opacity = "0.5";
+          } else if (characterName) {
+            // Mostra le opzioni dei personaggi disponibili
+            option.style.display = "flex";
+            option.style.opacity = "1";
+          }
+        });
+      }
+
+      // Ottimizzazioni per ridurre il flickering e migliorare le performance
+      function optimizeHoverEffects() {
+        // Throttle per gli eventi hover
+        let hoverTimeout;
+
+        // Funzione per gestire gli eventi hover in modo ottimizzato
+        function handleHoverOptimized(element, enterCallback, leaveCallback) {
+          element.addEventListener("mouseenter", () => {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = setTimeout(() => {
+              if (enterCallback) enterCallback();
+            }, 10); // Piccolo delay per evitare flickering
+          });
+
+          element.addEventListener("mouseleave", () => {
+            clearTimeout(hoverTimeout);
+            if (leaveCallback) leaveCallback();
+          });
+        }
+
+        // Ottimizza gli effetti hover per i team comp
+        document.querySelectorAll(".team-comp").forEach((teamComp) => {
+          handleHoverOptimized(
+            teamComp,
+            () => {
+              teamComp.style.transform = "translateY(-2px)";
+              teamComp.style.borderColor = "rgba(100, 255, 218, 0.4)";
+              teamComp.style.boxShadow =
+                "0 12px 35px rgba(100, 255, 218, 0.15)";
+            },
+            () => {
+              teamComp.style.transform = "translateY(0)";
+              teamComp.style.borderColor = "rgba(100, 255, 218, 0.2)";
+              teamComp.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.2)";
+            }
+          );
+        });
+
+        // Ottimizza gli effetti hover per i team member input
+        document
+          .querySelectorAll(".team-member-input")
+          .forEach((memberInput) => {
+            handleHoverOptimized(
+              memberInput,
+              () => {
+                memberInput.style.borderColor = "#64ffda";
+                memberInput.style.background = "rgba(22, 33, 62, 0.9)";
+                memberInput.style.transform = "translateX(2px)";
+                memberInput.style.boxShadow =
+                  "0 4px 12px rgba(100, 255, 218, 0.2)";
+              },
+              () => {
+                memberInput.style.borderColor = "rgba(100, 255, 218, 0.3)";
+                memberInput.style.background = "rgba(22, 33, 62, 0.8)";
+                memberInput.style.transform = "translateX(0)";
+                memberInput.style.boxShadow = "none";
+              }
+            );
+          });
+
+        // Ottimizza gli effetti hover per i bottoni
+        document.querySelectorAll(".btn").forEach((btn) => {
+          handleHoverOptimized(
+            btn,
+            () => {
+              btn.style.transform = "translateY(-2px)";
+              btn.style.boxShadow = "0 6px 20px rgba(100, 255, 218, 0.4)";
+            },
+            () => {
+              btn.style.transform = "translateY(0)";
+              btn.style.boxShadow = "0 4px 15px rgba(100, 255, 218, 0.3)";
+            }
+          );
+        });
+
+        // Ottimizza gli effetti hover per i nav link
+        document.querySelectorAll(".nav-link").forEach((navLink) => {
+          handleHoverOptimized(
+            navLink,
+            () => {
+              navLink.style.background = "rgba(100, 255, 218, 0.15)";
+              navLink.style.color = "#64ffda";
+              navLink.style.boxShadow = "0 4px 15px rgba(100, 255, 218, 0.3)";
+              navLink.style.transform = "translateY(-1px)";
+            },
+            () => {
+              navLink.style.background = "transparent";
+              navLink.style.color = "#b0eaff";
+              navLink.style.boxShadow = "none";
+              navLink.style.transform = "translateY(0)";
+            }
+          );
+        });
+      }
+
+      // Funzione per debounce degli eventi di scroll e resize
+      function optimizeScrollAndResize() {
+        let scrollTimeout;
+        let resizeTimeout;
+
+        // Ottimizza gli eventi di scroll
+        window.addEventListener(
+          "scroll",
+          () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+              // Gestisci gli effetti di scroll in modo ottimizzato
+              const scrollButton = document.querySelector(".scroll-to-top");
+              if (scrollButton) {
+                if (window.pageYOffset > 300) {
+                  scrollButton.classList.add("show");
+                } else {
+                  scrollButton.classList.remove("show");
+                }
+              }
+            }, 16); // ~60fps
+          },
+          { passive: true }
+        );
+
+        // Ottimizza gli eventi di resize
+        window.addEventListener(
+          "resize",
+          () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+              // Gestisci il resize in modo ottimizzato
+              console.log("Window resized - optimizing layout");
+            }, 100);
+          },
+          { passive: true }
+        );
+      }
+
+      // Funzione per ottimizzare il rendering dei dropdown
+      function optimizeDropdownRendering() {
+        // Usa Intersection Observer per ottimizzare il rendering dei dropdown
+        const observerOptions = {
+          root: null,
+          rootMargin: "50px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Pre-carica i dropdown quando sono visibili
+              const teamMemberInputs =
+                entry.target.querySelectorAll(".team-member-input");
+              teamMemberInputs.forEach((input) => {
+                input.style.willChange = "transform";
+              });
+            } else {
+              // Riduci il carico quando non sono visibili
+              const teamMemberInputs =
+                entry.target.querySelectorAll(".team-member-input");
+              teamMemberInputs.forEach((input) => {
+                input.style.willChange = "auto";
+              });
+            }
+          });
+        }, observerOptions);
+
+        // Osserva i team comp
+        document.querySelectorAll(".team-comp").forEach((teamComp) => {
+          observer.observe(teamComp);
+        });
+      }
+
+      // Funzione per gestire il footer fisso con animazioni
+      function initializeFixedFooter() {
+        const footer = document.querySelector(".detail-actions");
+        if (!footer) return;
+
+        let lastScrollTop = 0;
+        let isFooterVisible = true;
+
+        // Gestisci la visibilità del footer durante lo scroll
+        window.addEventListener("scroll", () => {
+          const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
+
+          // Mostra sempre il footer se siamo vicini alla fine della pagina
+          if (scrollTop + windowHeight >= documentHeight - 100) {
+            if (!isFooterVisible) {
+              footer.style.transform = "translateY(0)";
+              footer.style.opacity = "1";
+              isFooterVisible = true;
+            }
+            return;
+          }
+
+          // Nascondi il footer se si scrolla verso il basso rapidamente
+          if (scrollTop > lastScrollTop && scrollTop > 200) {
+            if (isFooterVisible) {
+              footer.style.transform = "translateY(100%)";
+              footer.style.opacity = "0.8";
+              isFooterVisible = false;
+            }
+          }
+          // Mostra il footer se si scrolla verso l'alto
+          else if (scrollTop < lastScrollTop) {
+            if (!isFooterVisible) {
+              footer.style.transform = "translateY(0)";
+              footer.style.opacity = "1";
+              isFooterVisible = true;
+            }
+          }
+
+          lastScrollTop = scrollTop;
+        });
+
+        // Aggiungi effetti di feedback per i bottoni
+        const buttons = footer.querySelectorAll(".btn");
+        buttons.forEach((button) => {
+          // Effetto di pulsazione quando si clicca
+          button.addEventListener("click", function () {
+            this.style.transform = "translateY(0) scale(0.95)";
+            setTimeout(() => {
+              this.style.transform = "";
+            }, 150);
+          });
+
+          // Effetto di caricamento per il pulsante Salva
+          if (button.textContent.includes("Salva")) {
+            button.addEventListener("click", function () {
+              const originalText = this.textContent;
+              this.textContent = "💾 Salvando...";
+              this.disabled = true;
+
+              setTimeout(() => {
+                this.textContent = originalText;
+                this.disabled = false;
+              }, 1000);
+            });
+          }
+        });
+
+        // Mostra il footer all'inizio
+        footer.style.transform = "translateY(0)";
+        footer.style.opacity = "1";
+      }
+
+      // Funzione per ottimizzare il comportamento del footer su mobile
+      function optimizeFooterForMobile() {
+        const footer = document.querySelector(".detail-actions");
+        if (!footer) return;
+
+        // Su mobile, mantieni sempre visibile il footer
+        if (window.innerWidth <= 768) {
+          footer.style.transform = "translateY(0)";
+          footer.style.opacity = "1";
+        }
+
+        // Gestisci il resize della finestra
+        window.addEventListener("resize", () => {
+          if (window.innerWidth <= 768) {
+            footer.style.transform = "translateY(0)";
+            footer.style.opacity = "1";
+          }
+        });
+      }
+
+      // Hamburger e modal azioni mobile
+      var footerHamburger = document.getElementById("footerHamburger");
+      var footerActionsModal = document.getElementById("footerActionsModal");
+      var closeFooterActions = document.getElementById("closeFooterActions");
+      function openFooterActions() {
+        footerActionsModal.style.display = "flex";
+        setTimeout(function () {
+          footerActionsModal.classList.add("open");
+        }, 10);
+        document.body.classList.add("footer-actions-open");
+      }
+      function closeFooterActionsMenu() {
+        footerActionsModal.classList.remove("open");
+        setTimeout(function () {
+          footerActionsModal.style.display = "none";
+        }, 200);
+        document.body.classList.remove("footer-actions-open");
+      }
+      footerHamburger.addEventListener("click", openFooterActions);
+      closeFooterActions.addEventListener("click", closeFooterActionsMenu);
+      footerActionsModal.addEventListener("click", function (e) {
+        if (e.target === footerActionsModal) closeFooterActionsMenu();
+      });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <script>
+      // Funzione per inizializzare il pulsante Scroll to Top
+      function initScrollToTop() {
+        // Crea il pulsante Scroll to Top
+        const scrollButton = document.createElement("button");
+        scrollButton.className = "scroll-to-top";
+        scrollButton.setAttribute("aria-label", "Torna in cima");
+        scrollButton.onclick = scrollToTop;
+
+        // Aggiungi il pulsante al body
+        document.body.appendChild(scrollButton);
+
+        // Event listener per mostrare/nascondere il pulsante
+        window.addEventListener("scroll", function () {
+          const scrollButton = document.querySelector(".scroll-to-top");
+          if (scrollButton) {
+            if (window.pageYOffset > 300) {
+              scrollButton.classList.add("show");
+            } else {
+              scrollButton.classList.remove("show");
+            }
+          }
+        });
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+      // Inizializza il pulsante Scroll to Top quando il DOM è caricato
+      document.addEventListener("DOMContentLoaded", function () {
+        initScrollToTop();
+      });
+    </script>
+    <!-- Modal selezione personaggio mobile -->
+    <div id="characterSelectModal" class="character-select-modal">
+      <div class="character-select-modal-content">
+        <div class="character-select-modal-header">
+          <h3 id="characterSelectModalTitle">Seleziona personaggio</h3>
+          <button
+            class="character-select-modal-close"
+            onclick="closeCharacterSelectModal()"
+          >
+            ×
+          </button>
+        </div>
+        <div class="character-select-modal-body" id="characterSelectModalBody">
+          <!-- Lista personaggi generata dinamicamente -->
+        </div>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 700px) {
+        .character-select-modal {
+          display: none;
+          position: fixed;
+          z-index: 20000;
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(10, 14, 30, 0.95);
+          align-items: center;
+          justify-content: center;
+        }
+        .character-select-modal.show {
+          display: flex;
+        }
+        .character-select-modal-content {
+          background: #20283a;
+          border-radius: 18px;
+          width: 98vw;
+          max-width: 480px;
+          max-height: 92vh;
+          box-shadow: 0 8px 40px #000b;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+        .character-select-modal-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.2em 1.2em 0.5em 1.2em;
+          background: #23263a;
+        }
+        .character-select-modal-header h3 {
+          color: #64ffda;
+          font-size: 1.2em;
+          font-weight: 700;
+          margin: 0;
+        }
+        .character-select-modal-close {
+          background: none;
+          border: none;
+          color: #64ffda;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+        .character-select-modal-body {
+          overflow-y: auto;
+          padding: 1em 1.2em 1.2em 1.2em;
+          flex: 1;
+        }
+        .character-select-option {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+          padding: 0.7em 0.5em;
+          border-radius: 10px;
+          background: none;
+          border: none;
+          width: 100%;
+          color: #e0e0e0;
+          font-size: 1.08em;
+          margin-bottom: 0.2em;
+          cursor: pointer;
+          transition: background 0.15s;
+        }
+        .character-select-option:hover {
+          background: rgba(100, 255, 218, 0.08);
+        }
+        .character-select-avatar {
+          width: 38px;
+          height: 38px;
+          min-width: 38px;
+          min-height: 38px;
+          max-width: 38px;
+          max-height: 38px;
+          border-radius: 50%;
+          background: #23263a;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5em;
+          object-fit: cover;
+          background-size: cover;
+          background-position: center;
+          border: 2px solid #64ffda;
+          overflow: hidden;
+          position: relative;
+          transition: all 0.3s ease;
+        }
+        .character-select-info {
+          flex: 1;
+          min-width: 0;
+        }
+        .character-select-name {
+          font-weight: 600;
+          color: #64ffda;
+          font-size: 1.08em;
+          margin-bottom: 0.1em;
+          word-break: break-word;
+        }
+        .character-select-details {
+          font-size: 0.95em;
+          color: #b0eaff;
+        }
+        .team-member-select,
+        .team-member-input {
+          min-width: 80px !important;
+          min-height: 38px !important;
+          display: flex !important;
+          align-items: center !important;
+        }
+        .team-member-avatar {
+          width: 38px !important;
+          height: 38px !important;
+          min-width: 38px !important;
+          min-height: 38px !important;
+          max-width: 38px !important;
+          max-height: 38px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+      }
+    </style>
+    <script>
+      function openCharacterSelectModal(memberId) {
+        window.currentMobileMemberId = memberId;
+        const modal = document.getElementById("characterSelectModal");
+        const body = document.getElementById("characterSelectModalBody");
+        body.innerHTML = "";
+        // Ottieni i personaggi già selezionati nello stesso team
+        const selectedCharacters = getSelectedCharactersInTeam(memberId);
+        // Opzione "Nessuno"
+        const noneOption = document.createElement("button");
+        noneOption.className = "character-select-option";
+        noneOption.onclick = function () {
+          selectTeamMemberMobile(memberId, "", "Nessuno", "👤");
+        };
+        const noneAvatar = document.createElement("div");
+        noneAvatar.className = "character-select-avatar";
+        noneAvatar.innerHTML = "👤";
+        const noneInfo = document.createElement("div");
+        noneInfo.className = "character-select-info";
+        const noneName = document.createElement("div");
+        noneName.className = "character-select-name";
+        noneName.textContent = "Nessuno";
+        const noneDetails = document.createElement("div");
+        noneDetails.className = "character-select-details";
+        noneDetails.textContent = "Rimuovi personaggio";
+        noneInfo.appendChild(noneName);
+        noneInfo.appendChild(noneDetails);
+        noneOption.appendChild(noneAvatar);
+        noneOption.appendChild(noneInfo);
+        body.appendChild(noneOption);
+        // Personaggi
+        if (window.allCharacters && window.allCharacters.length > 0) {
+          window.allCharacters.forEach((character) => {
+            if (selectedCharacters.includes(character.name)) return;
+            const option = document.createElement("button");
+            option.className = "character-select-option";
+            option.onclick = function () {
+              selectTeamMemberMobile(
+                memberId,
+                character.name,
+                character.name,
+                getElementEmoji(character.element)
+              );
+            };
+            const avatar = document.createElement("div");
+            avatar.className = "character-select-avatar";
+            // Immagine custom o da JSON
+            const customImage = localStorage.getItem(
+              `character_image_${character.name}`
+            );
+            console.log("=== DEBUG AVATAR MOBILE ===");
+            console.log("Character:", character.name);
+            console.log("Character.image:", character.image);
+            console.log("Custom image from localStorage:", customImage);
+
+            if (customImage) {
+              console.log("✅ Usando immagine custom:", customImage);
+              avatar.style.backgroundImage = `url(${customImage})`;
+              avatar.style.backgroundSize = "cover";
+              avatar.style.backgroundPosition = "center";
+              avatar.innerHTML = "";
+              avatar.style.display = "none";
+              setTimeout(() => {
+                avatar.style.display = "flex";
+                console.log("🖼️ Avatar custom mostrato per:", character.name);
+              }, 10);
+            } else if (character.image) {
+              console.log("✅ Usando immagine dal JSON:", character.image);
+              avatar.style.backgroundImage = `url(${character.image})`;
+              avatar.style.backgroundSize = "cover";
+              avatar.style.backgroundPosition = "center";
+              avatar.innerHTML = "";
+              avatar.style.display = "none";
+              setTimeout(() => {
+                avatar.style.display = "flex";
+                console.log("🖼️ Avatar JSON mostrato per:", character.name);
+              }, 10);
+            } else {
+              console.log(
+                "❌ Nessuna immagine trovata, usando emoji per:",
+                character.name
+              );
+              avatar.style.backgroundImage = "none";
+              avatar.innerHTML = getElementEmoji(character.element);
+              avatar.style.display = "flex";
+            }
+            const info = document.createElement("div");
+            info.className = "character-select-info";
+            const name = document.createElement("div");
+            name.className = "character-select-name";
+            name.textContent = character.name;
+            const details = document.createElement("div");
+            details.className = "character-select-details";
+            details.textContent = `${character.element} • ${character.weapon} • ${character.rarity}★`;
+            info.appendChild(name);
+            info.appendChild(details);
+            option.appendChild(avatar);
+            option.appendChild(info);
+            body.appendChild(option);
+          });
+        }
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
+      }
+      function closeCharacterSelectModal() {
+        document
+          .getElementById("characterSelectModal")
+          .classList.remove("show");
+        document.body.style.overflow = "";
+        currentMobileMemberId = null;
+      }
+      function selectTeamMemberMobile(
+        inputId,
+        characterName,
+        displayName,
+        emoji
+      ) {
+        console.log("🚀 selectTeamMemberMobile chiamata!");
+        console.log("inputId:", inputId);
+        console.log("characterName:", characterName);
+        console.log("displayName:", displayName);
+        console.log("emoji:", emoji);
+
+        const memberInput = document.querySelector(
+          `[data-member-id="${inputId}"]`
+        );
+        console.log("memberInput trovato:", memberInput);
+        if (!memberInput) {
+          console.log("❌ memberInput non trovato!");
+          return;
+        }
+        const avatar = memberInput.querySelector(".team-member-avatar");
+        const nameSpan = memberInput.querySelector(".team-member-name");
+        const hiddenInput = document.getElementById(inputId + "_hidden");
+
+        console.log("avatar trovato:", avatar);
+        console.log("nameSpan trovato:", nameSpan);
+        console.log("hiddenInput trovato:", hiddenInput);
+
+        if (!avatar || !nameSpan || !hiddenInput) {
+          console.log("❌ Elementi avatar non trovati!");
+          return;
+        }
+        nameSpan.textContent = displayName;
+        hiddenInput.value = characterName;
+        if (characterName && characterName !== "Nessuno") {
+          const character = window.allCharacters.find(
+            (c) => c.name === characterName
+          );
+          console.log("=== DEBUG SELEZIONE MOBILE ===");
+          console.log("Character selezionato:", characterName);
+          console.log("Character trovato:", character);
+
+          if (character) {
+            console.log("Character.image:", character.image);
+            const customImage = localStorage.getItem(
+              `character_image_${characterName}`
+            );
+            console.log("Custom image:", customImage);
+
+            if (customImage) {
+              console.log("✅ Applicando immagine custom:", customImage);
+
+              // Test se l'immagine si carica
+              const testImg = new Image();
+              testImg.onload = function () {
+                console.log(
+                  "✅ Immagine custom caricata con successo:",
+                  customImage
+                );
+                avatar.style.setProperty(
+                  "background-image",
+                  `url(${customImage})`,
+                  "important"
+                );
+                avatar.style.setProperty(
+                  "background-size",
+                  "cover",
+                  "important"
+                );
+                avatar.style.setProperty(
+                  "background-position",
+                  "center",
+                  "important"
+                );
+                avatar.innerHTML = "";
+                avatar.style.display = "flex";
+
+                // Forza il refresh dell'avatar
+                avatar.style.transform = "scale(1)";
+                avatar.offsetHeight; // Force reflow
+                avatar.style.transform = "";
+
+                // Forza le dimensioni se sono 0
+                const rect = avatar.getBoundingClientRect();
+                if (rect.width === 0 || rect.height === 0) {
+                  console.log(
+                    "⚠️ Avatar ha dimensioni 0, forzando dimensioni..."
+                  );
+                  avatar.style.width = "38px";
+                  avatar.style.height = "38px";
+                  avatar.style.minWidth = "38px";
+                  avatar.style.minHeight = "38px";
+                }
+
+                console.log("🖼️ Avatar custom applicato per:", characterName);
+
+                // Verifica se l'immagine è effettivamente visibile
+                setTimeout(() => {
+                  const finalBackgroundImage =
+                    getComputedStyle(avatar).backgroundImage;
+                  console.log(
+                    "🔍 Background image finale:",
+                    finalBackgroundImage
+                  );
+                  console.log(
+                    "🔍 Avatar visibile:",
+                    avatar.offsetWidth > 0 && avatar.offsetHeight > 0
+                  );
+                  console.log(
+                    "🔍 Avatar rect finale:",
+                    avatar.getBoundingClientRect()
+                  );
+                }, 100);
+              };
+              testImg.onerror = function () {
+                console.log(
+                  "❌ ERRORE: Immagine custom non caricata:",
+                  customImage
+                );
+                avatar.style.backgroundImage = "none";
+                avatar.innerHTML = emoji || "👤";
+                avatar.style.display = "flex";
+              };
+              testImg.src = customImage;
+            }
+            // Altrimenti usa l'immagine dal JSON
+            else if (character.image) {
+              console.log("✅ Applicando immagine JSON:", character.image);
+
+              // Test se l'immagine si carica
+              const testImg = new Image();
+              testImg.onload = function () {
+                console.log(
+                  "✅ Immagine caricata con successo:",
+                  character.image
+                );
+                avatar.style.setProperty(
+                  "background-image",
+                  `url(${character.image})`,
+                  "important"
+                );
+                avatar.style.setProperty(
+                  "background-size",
+                  "cover",
+                  "important"
+                );
+                avatar.style.setProperty(
+                  "background-position",
+                  "center",
+                  "important"
+                );
+                avatar.innerHTML = "";
+                avatar.style.display = "flex";
+
+                // Forza il refresh dell'avatar
+                avatar.style.transform = "scale(1)";
+                avatar.offsetHeight; // Force reflow
+                avatar.style.transform = "";
+
+                // Forza le dimensioni se sono 0
+                const rect = avatar.getBoundingClientRect();
+                if (rect.width === 0 || rect.height === 0) {
+                  console.log(
+                    "⚠️ Avatar ha dimensioni 0, forzando dimensioni..."
+                  );
+                  avatar.style.width = "38px";
+                  avatar.style.height = "38px";
+                  avatar.style.minWidth = "38px";
+                  avatar.style.minHeight = "38px";
+                }
+
+                console.log("🖼️ Avatar JSON applicato per:", characterName);
+
+                // Verifica se l'immagine è effettivamente visibile
+                setTimeout(() => {
+                  const finalBackgroundImage =
+                    getComputedStyle(avatar).backgroundImage;
+                  console.log(
+                    "🔍 Background image finale:",
+                    finalBackgroundImage
+                  );
+                  console.log(
+                    "🔍 Avatar visibile:",
+                    avatar.offsetWidth > 0 && avatar.offsetHeight > 0
+                  );
+                  console.log(
+                    "🔍 Avatar rect finale:",
+                    avatar.getBoundingClientRect()
+                  );
+                }, 100);
+              };
+              testImg.onerror = function () {
+                console.log(
+                  "❌ ERRORE: Immagine non caricata:",
+                  character.image
+                );
+                avatar.style.backgroundImage = "none";
+                avatar.innerHTML = emoji || "👤";
+                avatar.style.display = "flex";
+              };
+              testImg.src = character.image;
+            }
+            // Fallback all'emoji dell'elemento
+            else {
+              console.log(
+                "❌ Nessuna immagine, usando emoji per:",
+                characterName
+              );
+              avatar.style.backgroundImage = "none";
+              avatar.innerHTML = emoji || "👤";
+              avatar.style.display = "flex";
+            }
+          } else {
+            avatar.style.backgroundImage = "none";
+            avatar.innerHTML = emoji || "👤";
+            avatar.style.display = "flex";
+          }
+        } else {
+          avatar.style.backgroundImage = "none";
+          avatar.innerHTML = "👤";
+          avatar.style.display = "flex";
+        }
+        // Debug finale dell'avatar
+        console.log("=== DEBUG FINALE AVATAR ===");
+        console.log("Avatar element:", avatar);
+        console.log("Avatar backgroundImage:", avatar.style.backgroundImage);
+        console.log("Avatar display:", avatar.style.display);
+        console.log("Avatar innerHTML:", avatar.innerHTML);
+
+        // Debug dimensioni e visibilità
+        const rect = avatar.getBoundingClientRect();
+        console.log("Avatar dimensions:", rect.width, "x", rect.height);
+        console.log("Avatar position:", rect.left, rect.top);
+        console.log("Avatar computed styles:");
+        console.log("- width:", getComputedStyle(avatar).width);
+        console.log("- height:", getComputedStyle(avatar).height);
+        console.log("- visibility:", getComputedStyle(avatar).visibility);
+        console.log("- opacity:", getComputedStyle(avatar).opacity);
+        console.log("- z-index:", getComputedStyle(avatar).zIndex);
+
+        // Chiudi il modal
+        closeCharacterSelectModal();
+        // Salva automaticamente
+        setTimeout(() => {
+          saveCharacterDetail(false);
+        }, 100);
+      }
+      // Chiudi modal cliccando fuori
+      window.addEventListener("click", function (event) {
+        const modal = document.getElementById("characterSelectModal");
+        if (
+          modal &&
+          modal.classList.contains("show") &&
+          event.target === modal
+        ) {
+          closeCharacterSelectModal();
+        }
+      });
+      // Espongo la funzione openArtifactModal globalmente
+      window.openArtifactModal = openArtifactModal;
+    </script>
+
+    <!-- Modal selezione personaggio mobile -->
+    <div id="characterSelectModal" class="character-select-modal">
+      <div class="character-select-modal-content">
+        <div class="character-select-modal-header">
+          <h3 id="characterSelectModalTitle">Seleziona personaggio</h3>
+          <button
+            class="character-select-modal-close"
+            onclick="closeCharacterSelectModal()"
+          >
+            ×
+          </button>
+        </div>
+        <div class="character-select-modal-body" id="characterSelectModalBody">
+          <!-- Lista personaggi generata dinamicamente -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

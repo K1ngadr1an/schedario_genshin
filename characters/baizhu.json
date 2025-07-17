@@ -1,0 +1,732 @@
+{
+  "baizhu": {
+    "displayName": "Baizhu",
+    "img": "images/characters/baizhu.png",
+    "tags": ["Catalyst", "Dendro", "Healer", "Liyue", "Bubu Pharmacy"],
+    "description": "The owner of Bubu Pharmacy, Baizhu is a gentle and knowledgeable doctor from Liyue who specializes in Dendro healing arts.",
+    "weapons": [
+      {
+        "name": "Jadefall's Splendor",
+        "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Prototype Amber",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Everlasting Moonglow",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Healing Bonus"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Deepwood Memories (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Ocean-Hued Clam (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "HP%" },
+      { "type": "Goblet", "value": "HP% / Dendro DMG Bonus" },
+      { "type": "Circlet", "value": "Healing Bonus / HP%" }
+    ],
+    "substats": [
+      "HP%",
+      "Energy Recharge",
+      "Healing Bonus",
+      "Elemental Mastery"
+    ],
+    "talents": [
+      "Normal Attack: The Classics of Acupuncture",
+      "Universal Diagnosis",
+      "Holistic Revivification"
+    ],
+    "info": "Baizhu is a Dendro healer who excels at providing continuous healing and Dendro application for his team.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Jadefall's Splendor",
+          "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+          "note": "HP%"
+        },
+        "artifacts": [
+          {
+            "name": "Deepwood Memories (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Baizhu" },
+        { "name": "Nahida" },
+        { "name": "Nilou" },
+        { "name": "Xingqiu" }
+      ],
+      [
+        { "name": "Baizhu" },
+        { "name": "Alhaitham" },
+        { "name": "Yelan" },
+        { "name": "Kuki Shinobu" }
+      ],
+      [
+        { "name": "Baizhu" },
+        { "name": "Tighnari" },
+        { "name": "Collei" },
+        { "name": "Fischl" }
+      ],
+      [
+        { "name": "Baizhu" },
+        { "name": "Raiden Shogun" },
+        { "name": "Yae Miko" },
+        { "name": "Kokomi" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: The Classics of Acupuncture",
+        "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+        "desc": "Performs up to 4 attacks that deal Dendro DMG.",
+        "icon": "https://sunderarmor.com/GENSHIN/Skill/UI_GachaTypeIcon_Catalyst.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 attacks that deal Dendro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash a stronger Dendro attack.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Dendro DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "37.5%",
+            "hit2": "36.2%",
+            "hit3": "45.8%",
+            "hit4": "56.7%",
+            "charged": "48.0% + 48.0%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "40.5%",
+            "hit2": "39.2%",
+            "hit3": "49.8%",
+            "hit4": "61.7%",
+            "charged": "52.0% + 52.0%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          },
+          {
+            "level": 3,
+            "hit1": "43.5%",
+            "hit2": "42.2%",
+            "hit3": "53.8%",
+            "hit4": "66.7%",
+            "charged": "56.0% + 56.0%",
+            "plunge": "74.3%",
+            "lowhigh": "148.6% / 185.7%"
+          },
+          {
+            "level": 4,
+            "hit1": "46.5%",
+            "hit2": "45.2%",
+            "hit3": "57.8%",
+            "hit4": "71.7%",
+            "charged": "60.0% + 60.0%",
+            "plunge": "79.5%",
+            "lowhigh": "159.0% / 198.7%"
+          },
+          {
+            "level": 5,
+            "hit1": "49.5%",
+            "hit2": "48.2%",
+            "hit3": "61.8%",
+            "hit4": "76.7%",
+            "charged": "64.0% + 64.0%",
+            "plunge": "84.7%",
+            "lowhigh": "169.4% / 211.7%"
+          },
+          {
+            "level": 6,
+            "hit1": "52.5%",
+            "hit2": "51.2%",
+            "hit3": "65.8%",
+            "hit4": "81.7%",
+            "charged": "68.0% + 68.0%",
+            "plunge": "89.9%",
+            "lowhigh": "179.8% / 224.7%"
+          },
+          {
+            "level": 7,
+            "hit1": "55.5%",
+            "hit2": "54.2%",
+            "hit3": "69.8%",
+            "hit4": "86.7%",
+            "charged": "72.0% + 72.0%",
+            "plunge": "95.1%",
+            "lowhigh": "190.2% / 237.7%"
+          },
+          {
+            "level": 8,
+            "hit1": "58.5%",
+            "hit2": "57.2%",
+            "hit3": "73.8%",
+            "hit4": "91.7%",
+            "charged": "76.0% + 76.0%",
+            "plunge": "100.3%",
+            "lowhigh": "200.6% / 250.7%"
+          },
+          {
+            "level": 9,
+            "hit1": "61.5%",
+            "hit2": "60.2%",
+            "hit3": "77.8%",
+            "hit4": "96.7%",
+            "charged": "80.0% + 80.0%",
+            "plunge": "105.5%",
+            "lowhigh": "211.0% / 263.7%"
+          },
+          {
+            "level": 10,
+            "hit1": "64.5%",
+            "hit2": "63.2%",
+            "hit3": "81.8%",
+            "hit4": "101.7%",
+            "charged": "84.0% + 84.0%",
+            "plunge": "110.7%",
+            "lowhigh": "221.4% / 276.7%"
+          },
+          {
+            "level": 11,
+            "hit1": "67.5%",
+            "hit2": "66.2%",
+            "hit3": "85.8%",
+            "hit4": "106.7%",
+            "charged": "88.0% + 88.0%",
+            "plunge": "115.9%",
+            "lowhigh": "231.8% / 289.7%"
+          },
+          {
+            "level": 12,
+            "hit1": "70.5%",
+            "hit2": "69.2%",
+            "hit3": "89.8%",
+            "hit4": "111.7%",
+            "charged": "92.0% + 92.0%",
+            "plunge": "121.1%",
+            "lowhigh": "242.2% / 302.7%"
+          },
+          {
+            "level": 13,
+            "hit1": "73.5%",
+            "hit2": "72.2%",
+            "hit3": "93.8%",
+            "hit4": "116.7%",
+            "charged": "96.0% + 96.0%",
+            "plunge": "126.3%",
+            "lowhigh": "252.6% / 315.7%"
+          },
+          {
+            "level": 14,
+            "hit1": "76.5%",
+            "hit2": "75.2%",
+            "hit3": "97.8%",
+            "hit4": "121.7%",
+            "charged": "100.0% + 100.0%",
+            "plunge": "131.5%",
+            "lowhigh": "263.0% / 328.7%"
+          },
+          {
+            "level": 15,
+            "hit1": "79.5%",
+            "hit2": "78.2%",
+            "hit3": "101.8%",
+            "hit4": "126.7%",
+            "charged": "104.0% + 104.0%",
+            "plunge": "136.7%",
+            "lowhigh": "273.4% / 341.7%"
+          }
+        ]
+      },
+      {
+        "name": "Universal Diagnosis",
+        "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+        "desc": "Controls a Gossamer Sprite that roams and attacks, healing the active character and dealing Dendro DMG.",
+        "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Baizhu/talent_2.png",
+        "details_html": "<div class='skill-section'><b>Universal Diagnosis</b><br>Controls a Gossamer Sprite that roams and attacks, healing the active character and dealing Dendro DMG. Healing scales with Baizhu's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "96% HP",
+            "healing": "10.2% HP + 970",
+            "cd": "10s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "103% HP",
+            "healing": "11.0% HP + 1050",
+            "cd": "10s"
+          },
+          {
+            "level": 3,
+            "skill_dmg": "110% HP",
+            "healing": "11.8% HP + 1130",
+            "cd": "10s"
+          },
+          {
+            "level": 4,
+            "skill_dmg": "117% HP",
+            "healing": "12.6% HP + 1210",
+            "cd": "10s"
+          },
+          {
+            "level": 5,
+            "skill_dmg": "124% HP",
+            "healing": "13.4% HP + 1290",
+            "cd": "10s"
+          },
+          {
+            "level": 6,
+            "skill_dmg": "131% HP",
+            "healing": "14.2% HP + 1370",
+            "cd": "10s"
+          },
+          {
+            "level": 7,
+            "skill_dmg": "138% HP",
+            "healing": "15.0% HP + 1450",
+            "cd": "10s"
+          },
+          {
+            "level": 8,
+            "skill_dmg": "145% HP",
+            "healing": "15.8% HP + 1530",
+            "cd": "10s"
+          },
+          {
+            "level": 9,
+            "skill_dmg": "152% HP",
+            "healing": "16.6% HP + 1610",
+            "cd": "10s"
+          },
+          {
+            "level": 10,
+            "skill_dmg": "159% HP",
+            "healing": "17.4% HP + 1690",
+            "cd": "10s"
+          },
+          {
+            "level": 11,
+            "skill_dmg": "166% HP",
+            "healing": "18.2% HP + 1770",
+            "cd": "10s"
+          },
+          {
+            "level": 12,
+            "skill_dmg": "173% HP",
+            "healing": "19.0% HP + 1850",
+            "cd": "10s"
+          },
+          {
+            "level": 13,
+            "skill_dmg": "180% HP",
+            "healing": "19.8% HP + 1930",
+            "cd": "10s"
+          },
+          {
+            "level": 14,
+            "skill_dmg": "187% HP",
+            "healing": "20.6% HP + 2010",
+            "cd": "10s"
+          },
+          {
+            "level": 15,
+            "skill_dmg": "194% HP",
+            "healing": "21.4% HP + 2090",
+            "cd": "10s"
+          }
+        ]
+      },
+      {
+        "name": "Holistic Revivification",
+        "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+        "desc": "Enters a state where Baizhu creates a Seamless Shield that heals and protects the team, dealing Dendro DMG to nearby enemies.",
+        "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Baizhu/talent_3.png",
+        "details_html": "<div class='skill-section'><b>Holistic Revivification</b><br>Enters a state where Baizhu creates a Seamless Shield that heals and protects the team, dealing Dendro DMG to nearby enemies. Healing and shield strength scale with Baizhu's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "5.2% Max HP + 501",
+            "spiritvein_dmg": "97.1%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 2,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "5.6% Max HP + 541",
+            "spiritvein_dmg": "104.7%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 3,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "6.0% Max HP + 581",
+            "spiritvein_dmg": "112.3%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 4,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "6.4% Max HP + 621",
+            "spiritvein_dmg": "119.9%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 5,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "6.8% Max HP + 661",
+            "spiritvein_dmg": "127.5%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 6,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "7.2% Max HP + 701",
+            "spiritvein_dmg": "135.1%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 7,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "7.6% Max HP + 741",
+            "spiritvein_dmg": "142.7%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 8,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "8.0% Max HP + 781",
+            "spiritvein_dmg": "150.3%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 9,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "8.4% Max HP + 821",
+            "spiritvein_dmg": "157.9%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 10,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "8.8% Max HP + 861",
+            "spiritvein_dmg": "165.5%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 11,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "9.2% Max HP + 901",
+            "spiritvein_dmg": "173.1%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 12,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "9.6% Max HP + 941",
+            "spiritvein_dmg": "180.7%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 13,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "10.0% Max HP + 981",
+            "spiritvein_dmg": "188.3%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 14,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "10.4% Max HP + 1021",
+            "spiritvein_dmg": "195.9%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 15,
+            "shield_absorption": "0.8% Max HP + 77",
+            "shield_duration": "2.5s",
+            "healing": "10.8% Max HP + 1061",
+            "spiritvein_dmg": "203.5%",
+            "pulsing_clarity_duration": "14s",
+            "cd": "20s",
+            "energy_cost": "80"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Five Fortunes Forever",
+        "phase": "Ascension Phase 1",
+        "desc": "Baizhu gains different effects depending on the HP of the active character."
+      },
+      {
+        "name": "All Things Are of the Earth",
+        "phase": "Ascension Phase 4",
+        "desc": "After Baizhu uses his Elemental Burst, all party members gain increased Healing Bonus."
+      },
+      {
+        "name": "Herbal Nourishment",
+        "phase": "Passive",
+        "desc": "When Baizhu is in the party, interacting with certain plants will heal the active character."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Attentive Observation",
+        "phase": "Constellation Lv. 1",
+        "desc": "Universal Diagnosis gains 1 additional charge."
+      },
+      {
+        "name": "Incisive Discernment",
+        "phase": "Constellation Lv. 2",
+        "desc": "When Baizhu's Seamless Shield heals, it also increases the target's Dendro RES."
+      },
+      {
+        "name": "Encyclopedic Understanding",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Universal Diagnosis by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Divine Attunement",
+        "phase": "Constellation Lv. 4",
+        "desc": "When a character is healed by Baizhu, they gain increased Elemental Mastery."
+      },
+      {
+        "name": "Transcendent Wisdom",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Holistic Revivification by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Elixir of Immortality",
+        "phase": "Constellation Lv. 6",
+        "desc": "Baizhu's healing effects are increased when the active character's HP is below 50%."
+      }
+    ],
+    "ascension_materials": [
+      { "level": 20, "materials": [{ "name": "Mora", "quantity": 20000 }] },
+      {
+        "level": 40,
+        "materials": [
+          { "name": "Nagadus Emerald Sliver", "quantity": 1 },
+          { "name": "Violetgrass", "quantity": 3 },
+          { "name": "Fungal Spores", "quantity": 3 },
+          { "name": "Evergloom Ring", "quantity": 3 },
+          { "name": "Mora", "quantity": 40000 }
+        ]
+      },
+      {
+        "level": 50,
+        "materials": [
+          { "name": "Nagadus Emerald Fragment", "quantity": 3 },
+          { "name": "Violetgrass", "quantity": 10 },
+          { "name": "Fungal Spores", "quantity": 15 },
+          { "name": "Evergloom Ring", "quantity": 8 },
+          { "name": "Mora", "quantity": 60000 }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          { "name": "Nagadus Emerald Fragment", "quantity": 6 },
+          { "name": "Violetgrass", "quantity": 20 },
+          { "name": "Luminescent Pollen", "quantity": 12 },
+          { "name": "Evergloom Ring", "quantity": 12 },
+          { "name": "Mora", "quantity": 80000 }
+        ]
+      },
+      {
+        "level": 70,
+        "materials": [
+          { "name": "Nagadus Emerald Chunk", "quantity": 3 },
+          { "name": "Violetgrass", "quantity": 30 },
+          { "name": "Luminescent Pollen", "quantity": 18 },
+          { "name": "Evergloom Ring", "quantity": 20 },
+          { "name": "Mora", "quantity": 100000 }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          { "name": "Nagadus Emerald Chunk", "quantity": 6 },
+          { "name": "Violetgrass", "quantity": 45 },
+          { "name": "Crystalline Cyst Dust", "quantity": 12 },
+          { "name": "Evergloom Ring", "quantity": 12 },
+          { "name": "Mora", "quantity": 120000 }
+        ]
+      },
+      {
+        "level": 90,
+        "materials": [
+          { "name": "Nagadus Emerald Gemstone", "quantity": 6 },
+          { "name": "Violetgrass", "quantity": 60 },
+          { "name": "Crystalline Cyst Dust", "quantity": 24 },
+          { "name": "Evergloom Ring", "quantity": 20 },
+          { "name": "Mora", "quantity": 160000 }
+        ]
+      },
+      {
+        "total": true,
+        "materials": [
+          { "name": "Nagadus Emerald Sliver", "quantity": 1 },
+          { "name": "Nagadus Emerald Fragment", "quantity": 9 },
+          { "name": "Nagadus Emerald Chunk", "quantity": 9 },
+          { "name": "Nagadus Emerald Gemstone", "quantity": 6 },
+          { "name": "Violetgrass", "quantity": 168 },
+          { "name": "Fungal Spores", "quantity": 18 },
+          { "name": "Luminescent Pollen", "quantity": 30 },
+          { "name": "Crystalline Cyst Dust", "quantity": 36 },
+          { "name": "Evergloom Ring", "quantity": 46 },
+          { "name": "Mora", "quantity": 420000 }
+        ]
+      }
+    ],
+    "talent_materials": [
+      {
+        "level": 2,
+        "materials": [
+          { "name": "Teachings of Gold", "quantity": 3 },
+          { "name": "Fungal Spores", "quantity": 6 },
+          { "name": "Mora", "quantity": 12500 }
+        ]
+      },
+      {
+        "level": 3,
+        "materials": [
+          { "name": "Guide to Gold", "quantity": 2 },
+          { "name": "Luminescent Pollen", "quantity": 3 },
+          { "name": "Mora", "quantity": 17500 }
+        ]
+      },
+      {
+        "level": 4,
+        "materials": [
+          { "name": "Guide to Gold", "quantity": 4 },
+          { "name": "Luminescent Pollen", "quantity": 4 },
+          { "name": "Mora", "quantity": 25000 }
+        ]
+      },
+      {
+        "level": 5,
+        "materials": [
+          { "name": "Guide to Gold", "quantity": 6 },
+          { "name": "Luminescent Pollen", "quantity": 6 },
+          { "name": "Mora", "quantity": 30000 }
+        ]
+      },
+      {
+        "level": 6,
+        "materials": [
+          { "name": "Guide to Gold", "quantity": 9 },
+          { "name": "Luminescent Pollen", "quantity": 9 },
+          { "name": "Mora", "quantity": 37500 }
+        ]
+      },
+      {
+        "level": 7,
+        "materials": [
+          { "name": "Philosophies of Gold", "quantity": 4 },
+          { "name": "Worldspan Fern", "quantity": 1 },
+          { "name": "Crystalline Cyst Dust", "quantity": 4 },
+          { "name": "Mora", "quantity": 120000 }
+        ]
+      },
+      {
+        "level": 8,
+        "materials": [
+          { "name": "Philosophies of Gold", "quantity": 6 },
+          { "name": "Worldspan Fern", "quantity": 1 },
+          { "name": "Crystalline Cyst Dust", "quantity": 6 },
+          { "name": "Mora", "quantity": 260000 }
+        ]
+      },
+      {
+        "level": 9,
+        "materials": [
+          { "name": "Philosophies of Gold", "quantity": 12 },
+          { "name": "Worldspan Fern", "quantity": 2 },
+          { "name": "Crystalline Cyst Dust", "quantity": 9 },
+          { "name": "Mora", "quantity": 450000 }
+        ]
+      },
+      {
+        "level": 10,
+        "materials": [
+          { "name": "Philosophies of Gold", "quantity": 16 },
+          { "name": "Worldspan Fern", "quantity": 2 },
+          { "name": "Crystalline Cyst Dust", "quantity": 12 },
+          { "name": "Crown of Insight", "quantity": 1 },
+          { "name": "Mora", "quantity": 700000 }
+        ]
+      },
+      {
+        "total": true,
+        "materials": [
+          { "name": "Teachings of Gold", "quantity": 3 },
+          { "name": "Guide to Gold", "quantity": 21 },
+          { "name": "Philosophies of Gold", "quantity": 38 },
+          { "name": "Fungal Spores", "quantity": 6 },
+          { "name": "Luminescent Pollen", "quantity": 22 },
+          { "name": "Crystalline Cyst Dust", "quantity": 31 },
+          { "name": "Worldspan Fern", "quantity": 7 },
+          { "name": "Crown of Insight", "quantity": 1 },
+          { "name": "Mora", "quantity": 1652500 }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "displayName": "Kujou Sara",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Bow", "Electro", "Inazuma", "Support", "4★", "Buffer"],
+  "description": "Kujou Sara è il generale della Commissione Tenryou di Inazuma. Specializzata nel fornire buff di ATK e applicazione Electro, è un supporto fondamentale per team Electro burst.",
+  "weapons": [
+    {
+      "name": "Elegy for the End",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Bow.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (2) + Emblem of Severed Fate (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Electro DMG Bonus / ATK%" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG / ATK%" }
+  ],
+  "substats": ["Energy Recharge", "ATK%", "CRIT Rate", "CRIT DMG"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Kujou Sara è un buffer Electro che fornisce un potente bonus ATK e applicazione Electro. Costruiscila con Energy Recharge e ATK% per massimizzare il suo supporto.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Elegy for the End",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kujou Sara" },
+      { "name": "Raiden Shogun" },
+      { "name": "Bennett" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Kujou Sara" },
+      { "name": "Yae Miko" },
+      { "name": "Fischl" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Kujou Sara" },
+      { "name": "Keqing" },
+      { "name": "Zhongli" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Tengu Bowmanship",
+      "desc": "Effettua fino a 5 colpi consecutivi con l'arco.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Tengu_Bowmanship.png",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.1%",
+          "hit2": "36.4%",
+          "hit3": "47.5%",
+          "hit4": "50.2%",
+          "hit5": "59.7%",
+          "charged": "43.9% + 52.1%",
+          "stamina": "20",
+          "plunge": "56.8%",
+          "lowhigh": "114% / 142%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 5 colpi consecutivi con l'arco.</div><div class='skill-section'><b>Charged Attack</b><br>Scocca una freccia mirata che infligge danni Electro se completamente caricata.</div><div class='skill-section'><b>Plunging Attack</b><br>Scocca una pioggia di frecce in aria che infliggono danni AoE all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Tengu Stormcall",
+      "desc": "Sara si teletrasporta all'indietro, entra in stato Crowfeather Cover e potenzia il suo prossimo attacco caricato. Lascia una piuma che esplode infliggendo danni Electro e conferendo un bonus ATK ai personaggi che raccolgono la piuma.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Tengu_Stormcall.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Tengu Stormcall</b><br>Si teletrasporta all'indietro, entra in stato Crowfeather Cover e potenzia il prossimo attacco caricato. Lascia una piuma che esplode infliggendo danni Electro e conferendo un bonus ATK ai personaggi che raccolgono la piuma.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "124.0% ATK",
+          "atk_bonus": "43.7% base ATK",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Subjugation: Koukou Sendou",
+      "desc": "Evoca la potenza dei Tengu, infliggendo danni AoE Electro e lasciando 4 piume che conferiscono bonus ATK ai personaggi che le raccolgono.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Subjugation_Koukou_Sendou.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Subjugation: Koukou Sendou</b><br>Evoca la potenza dei Tengu, infliggendo danni AoE Electro e lasciando 4 piume che conferiscono bonus ATK ai personaggi che le raccolgono.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "409.6% ATK",
+          "atk_bonus": "60.2% base ATK",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Immovable Will",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando è in stato Crowfeather Cover, il tempo di carica per l'attacco mirato è ridotto del 60%."
+    },
+    {
+      "name": "Decorum",
+      "phase": "Ascension Phase 4",
+      "desc": "Quando Kujou Sara ottiene una particella o sfera elementale, rigenera 1.2 energia per tutti i membri del party Electro."
+    },
+    {
+      "name": "Land Survey",
+      "phase": "Passive",
+      "desc": "Riduce del 25% il tempo delle spedizioni a Inazuma."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Crow's Eye",
+      "phase": "Constellation Lv. 1",
+      "desc": "Quando i personaggi attaccati da Crowfeather Cover infliggono danni Electro, il loro CRIT DMG aumenta del 60% per 6s."
+    },
+    {
+      "name": "C2: Dark Wings",
+      "phase": "Constellation Lv. 2",
+      "desc": "Usare Tengu Stormcall riduce il cooldown di Subjugation: Koukou Sendou di 1s."
+    },
+    {
+      "name": "C3: The War Within",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Subjugation: Koukou Sendou di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Conclusive Proof",
+      "phase": "Constellation Lv. 4",
+      "desc": "Aumenta il numero di piume generate da Subjugation: Koukou Sendou a 6."
+    },
+    {
+      "name": "C5: Spellsinger",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Tengu Stormcall di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Sin of Pride",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando un personaggio ottiene un bonus ATK da una piuma, ottiene anche un bonus Electro DMG del 60% per 6s."
+    }
+  ]
+}

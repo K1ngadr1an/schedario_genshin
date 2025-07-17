@@ -1,0 +1,184 @@
+{
+  "displayName": "Lyney",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Bow", "Pyro", "Fontaine", "DPS", "5★", "Magician"],
+  "description": "Lyney è un famoso illusionista di Fontaine, maestro dell'arco e delle arti magiche. Eccelle come DPS Pyro a distanza, infliggendo danni elevati con i suoi attacchi caricati e le sue illusioni.",
+  "weapons": [
+    {
+      "name": "The First Great Magic",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_First_Great_Magic.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Aqua Simulacra",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Aqua_Simulacra.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Polar Star",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Polar_Star.png",
+      "note": "CRIT Rate"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Marechaussee Hunter (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Shimenawa%27s_Reminiscence.png"
+    },
+    {
+      "name": "Marechaussee Hunter (2) + Shimenawa's Reminiscence (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Lyney è un DPS Pyro a distanza che infligge danni elevati con attacchi caricati e reazioni. Si consiglia di massimizzare la statistica di CRIT e la Maestria Elementale per reazioni potenti.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "The First Great Magic",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_First_Great_Magic.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Marechaussee Hunter (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Lyney" },
+      { "name": "Lynette" },
+      { "name": "Bennett" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Lyney" },
+      { "name": "Xiangling" },
+      { "name": "Yelan" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Lyney" },
+      { "name": "Ayato" },
+      { "name": "Fischl" },
+      { "name": "Jean" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Card Force Translocation",
+      "desc": "Effettua fino a 4 colpi consecutivi con l'arco. L'attacco caricato scaglia una freccia infuocata che infligge danni Pyro.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Card_Force_Translocation.png",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "43.1%",
+          "hit3": "54.1%",
+          "hit4": "67.7%",
+          "charged": "120% Pyro",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 4 colpi consecutivi con l'arco.</div><div class='skill-section'><b>Charged Attack</b><br>Scaglia una freccia infuocata che infligge danni Pyro.</div><div class='skill-section'><b>Plunging Attack</b><br>Scaglia una pioggia di frecce in aria che infliggono danni AoE all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Bewildering Lights",
+      "desc": "Lyney lancia una carta magica che infligge danni Pyro ad area e cura Lyney in base ai suoi HP max.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Bewildering_Lights.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Bewildering Lights</b><br>Lancia una carta magica che infligge danni Pyro ad area e cura Lyney in base ai suoi HP max.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "180% ATK",
+          "healing": "20% HP max",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Wondrous Trick: Miracle Parade",
+      "desc": "Lyney evoca una parata magica che infligge danni Pyro ad area e aumenta il CRIT Rate degli alleati.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Wondrous_Trick_Miracle_Parade.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Wondrous Trick: Miracle Parade</b><br>Evoca una parata magica che infligge danni Pyro ad area e aumenta il CRIT Rate degli alleati per 10s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "320% ATK",
+          "crit_bonus": "15%",
+          "duration": "10s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Conjuring Marvels",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando Lyney colpisce un nemico con un attacco caricato, il suo ATK aumenta del 20% per 8s."
+    },
+    {
+      "name": "Magician's Endurance",
+      "phase": "Ascension Phase 4",
+      "desc": "Quando Lyney usa Bewildering Lights, rigenera 5 energia."
+    },
+    {
+      "name": "Fontaine's Fame",
+      "phase": "Passive",
+      "desc": "Riduce il consumo di stamina durante la corsa per i membri del party del 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Opening Act",
+      "phase": "Constellation Lv. 1",
+      "desc": "Bewildering Lights ottiene una carica aggiuntiva."
+    },
+    {
+      "name": "C2: Encore Performance",
+      "phase": "Constellation Lv. 2",
+      "desc": "Quando Lyney colpisce un nemico con un attacco caricato, il suo CRIT DMG aumenta del 20% per 8s."
+    },
+    {
+      "name": "C3: Showstopper",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Bewildering Lights di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Grand Finale",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando Lyney attiva una reazione Pyro, rigenera 3 energia."
+    },
+    {
+      "name": "C5: Curtain Call",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Wondrous Trick: Miracle Parade di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Marvelous Mastery",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando Lyney entra in campo, la durata di Wondrous Trick: Miracle Parade aumenta di 4s."
+    }
+  ]
+}

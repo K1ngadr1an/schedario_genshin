@@ -1,0 +1,208 @@
+{
+  "displayName": "Xingqiu",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xingqiu_Icon.png",
+  "tags": ["Sword", "Hydro", "Liyue", "4★", "Sub-DPS", "Off-Field", "Support"],
+  "description": "Xingqiu è il giovane maestro della Guhua Clan di Liyue. Eccelle nel supporto Hydro off-field tramite il suo Elemental Burst, fornendo applicazione Hydro consistente e danno.",
+  "weapons": [
+    {
+      "name": "Sacrificial Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Skyward Blade",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Skyward_Blade.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Primordial_Jade_Cutter.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Mistsplitter_Reforged.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Harbinger_of_Dawn.png",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Heart of Depth (2) + Noblesse Oblige (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Heart of Depth (2) + Gladiator's Finale (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge / ATK%" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK%"],
+  "talents": [
+    "Normal Attack: Guhua Style",
+    "Fatal Rainscreen",
+    "Guhua Sword: Raincutter"
+  ],
+  "info": "Xingqiu è uno dei migliori sub-DPS Hydro del gioco. Il suo Elemental Burst fornisce applicazione Hydro consistente e danno off-field. Priorità a Energy Recharge per uptime costante.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Sacrificial Sword",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Sword.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Emblem of Severed Fate (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Emblem_of_Severed_Fate.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Xingqiu" },
+      { "name": "Hu Tao" },
+      { "name": "Zhongli" },
+      { "name": "Albedo" }
+    ],
+    [
+      { "name": "Xingqiu" },
+      { "name": "Raiden Shogun" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Xingqiu" },
+      { "name": "Diluc" },
+      { "name": "Sucrose" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Xingqiu" },
+      { "name": "Yoimiya" },
+      { "name": "Zhongli" },
+      { "name": "Bennett" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Guhua Style",
+      "desc": "Performs up to 5 consecutive strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xingqiu_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash 2 rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "46.6%",
+          "hit2": "47.6%",
+          "hit3": "28.6% + 28.6%",
+          "hit4": "47.3%",
+          "hit5": "59.5%",
+          "charged": "47.3% + 59.5%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        }
+      ]
+    },
+    {
+      "name": "Fatal Rainscreen",
+      "desc": "Xingqiu performs twin strikes with his sword, dealing Hydro DMG. At the same time, this ability creates the maximum number of Rain Swords, which will orbit your active character.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xingqiu_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Fatal Rainscreen</b><br>Xingqiu performs twin strikes with his sword, dealing Hydro DMG. At the same time, this ability creates the maximum number of Rain Swords, which will orbit your active character.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "168% + 191% ATK",
+          "rain_swords": 3,
+          "cd": "21s"
+        }
+      ]
+    },
+    {
+      "name": "Guhua Sword: Raincutter",
+      "desc": "Initiate Rainbow Bladework and fight using an illusory sword rain, while creating the maximum number of Rain Swords.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xingqiu_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Guhua Sword: Raincutter</b><br>Initiate Rainbow Bladework and fight using an illusory sword rain, while creating the maximum number of Rain Swords.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "97.7% ATK",
+          "duration": "15s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Flash of Genius",
+      "phase": "Ascension Phase 1",
+      "desc": "When Xingqiu crafts Character Talent Materials, he has a 25% chance to refund a portion of the crafting materials used."
+    },
+    {
+      "name": "Blades Amidst Raindrops",
+      "phase": "Ascension Phase 4",
+      "desc": "Xingqiu gains a 20% Hydro DMG Bonus."
+    },
+    {
+      "name": "Rainbow Upon the Azure Sky",
+      "phase": "Passive",
+      "desc": "When a Rain Sword is shattered or when its duration expires, it regenerates the current character's HP based on 6% of Xingqiu's Max HP."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "The Scent Remained",
+      "phase": "Constellation Lv. 1",
+      "desc": "Increases the maximum number of Rain Swords by 1."
+    },
+    {
+      "name": "Rainbow Upon the Azure Sky",
+      "phase": "Constellation Lv. 2",
+      "desc": "Extends the duration of Guhua Sword: Raincutter by 3s. Decreases the Hydro RES of enemies hit by sword rain attacks by 15% for 4s."
+    },
+    {
+      "name": "Weaver of Verses",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Guhua Sword: Raincutter by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Evilsoother",
+      "phase": "Constellation Lv. 4",
+      "desc": "Throughout the duration of Guhua Sword: Raincutter, the DMG dealt by Guhua Sword: Fatal Rainscreen is increased by 50%."
+    },
+    {
+      "name": "Embrace of Rain",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Fatal Rainscreen by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Hence, Call Them My Own Verses",
+      "phase": "Constellation Lv. 6",
+      "desc": "Activating 2 of Guhua Sword: Raincutter's sword rain attacks greatly enhances the third sword rain attack. On hit, the third sword rain attack also regenerates 3 Energy for Xingqiu."
+    }
+  ]
+}

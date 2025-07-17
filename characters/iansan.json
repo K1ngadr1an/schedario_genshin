@@ -1,0 +1,207 @@
+{
+  "displayName": "Iansan",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Pyro", "Catalyst", "Natlan", "5★", "DPS", "Unreleased"],
+  "description": "A mysterious young girl from Natlan, Iansan is rumored to wield Pyro powers and a catalyst, bringing fiery destruction to her foes.",
+  "weapons": [
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Solar Pearl",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Solar_Pearl.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mappa Mare",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mappa_Mare.png",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Lavawalker’s Salvation (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Lavawalkers_Salvation.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Gladiator’s Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": [
+    "Normal Attack: Ember Dance",
+    "Blazing Spirits",
+    "Inferno Manifest"
+  ],
+  "info": "Iansan is a speculative Pyro catalyst DPS from Natlan. Build her for Pyro DMG, CRIT, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Lost Prayer to the Sacred Winds",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Crimson Witch of Flames (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Iansan" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Iansan" },
+      { "name": "Yelan" },
+      { "name": "Zhongli" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Iansan" },
+      { "name": "Thoma" },
+      { "name": "Furina" },
+      { "name": "Nahida" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Ember Dance",
+      "desc": "Performs up to 4 consecutive Pyro attacks.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Whisper_of_Water.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive Pyro attacks.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a focused Pyro blast.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Pyro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "37.5%",
+          "hit2": "36.2%",
+          "hit3": "45.8%",
+          "hit4": "56.7%",
+          "charged": "48.0% + 48.0%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "41.5%",
+          "hit2": "39.2%",
+          "hit3": "49.8%",
+          "hit4": "61.7%",
+          "charged": "52.0% + 52.0%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Blazing Spirits",
+      "desc": "Iansan summons fiery spirits that deal AoE Pyro DMG and increase her ATK.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Let_the_Show_Begin.png",
+      "details_html": "<div class='skill-section'><b>Blazing Spirits</b><br>Summons fiery spirits that deal AoE Pyro DMG and increase Iansan's ATK for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "120% ATK",
+          "atk_bonus": "20%",
+          "cd": "12s"
+        },
+        { "level": 2, "skill_dmg": "130% ATK", "atk_bonus": "22%", "cd": "12s" }
+      ]
+    },
+    {
+      "name": "Inferno Manifest",
+      "desc": "Iansan unleashes a massive Pyro attack, dealing AoE Pyro DMG and granting all allies increased Pyro DMG Bonus.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Shining_Miracle.png",
+      "details_html": "<div class='skill-section'><b>Inferno Manifest</b><br>Unleashes a massive Pyro attack, dealing AoE Pyro DMG and granting all allies increased Pyro DMG Bonus for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "180% ATK",
+          "pyro_bonus": "20%",
+          "duration": "8s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "194% ATK",
+          "pyro_bonus": "22%",
+          "duration": "8s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Fiery Determination",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Blazing Spirits, Iansan's Pyro DMG is increased by 20% for 10s."
+    },
+    {
+      "name": "Spirit of Natlan",
+      "phase": "Ascension Phase 4",
+      "desc": "Allies affected by Inferno Manifest gain 20% increased ATK."
+    },
+    {
+      "name": "Child of Fire",
+      "phase": "Passive",
+      "desc": "When Iansan is in the party, gliding stamina consumption is reduced by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Ember’s Resolve",
+      "phase": "Constellation Lv. 1",
+      "desc": "Blazing Spirits gains 1 additional charge."
+    },
+    {
+      "name": "C2: Burning Zeal",
+      "phase": "Constellation Lv. 2",
+      "desc": "After using Inferno Manifest, Iansan's CRIT Rate is increased by 10% for 8s."
+    },
+    {
+      "name": "C3: Pyro Ascendant",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Blazing Spirits by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "C4: Spirit’s Blessing",
+      "phase": "Constellation Lv. 4",
+      "desc": "Allies affected by Inferno Manifest gain 20% increased Energy Recharge."
+    },
+    {
+      "name": "C5: Inferno’s Embrace",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Inferno Manifest by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "C6: Natlan’s Fury",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Iansan triggers a Pyro-related reaction, her ATK is increased by 20% for 10s."
+    }
+  ]
+}

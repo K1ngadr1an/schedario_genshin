@@ -1,0 +1,210 @@
+{
+  "displayName": "Kaedehara Kazuha",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Anemo", "Sword", "Inazuma", "5★", "Support", "Swirl"],
+  "description": "A wandering samurai from Inazuma, Kazuha is an Anemo sword user who excels at grouping enemies and boosting his team's Elemental DMG.",
+  "weapons": [
+    {
+      "name": "Freedom-Sworn",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Freedom-Sworn.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Iron_Sting.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Sacrificial Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Viridescent Venerer (2) + Noblesse Oblige (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Elemental Mastery / Energy Recharge" },
+    { "type": "Goblet", "value": "Elemental Mastery / Anemo DMG Bonus" },
+    { "type": "Circlet", "value": "Elemental Mastery / CRIT Rate" }
+  ],
+  "substats": ["Elemental Mastery", "Energy Recharge", "ATK%", "CRIT Rate"],
+  "talents": ["Normal Attack: Garyuu Bladework", "Chihayaburu", "Kazuha Slash"],
+  "info": "Kazuha is a top-tier Anemo support who excels at grouping enemies, triggering Swirl, and boosting Elemental DMG. Build him for Elemental Mastery and Energy Recharge.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Freedom-Sworn",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Freedom-Sworn.png",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Viridescent Venerer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kazuha" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Kazuha" },
+      { "name": "Ayaka" },
+      { "name": "Shenhe" },
+      { "name": "Kokomi" }
+    ],
+    [
+      { "name": "Kazuha" },
+      { "name": "Raiden Shogun" },
+      { "name": "Sara" },
+      { "name": "Jean" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Garyuu Bladework",
+      "desc": "Performs up to 5 rapid strikes with a sword.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Garyuu_Bladework.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes with a sword.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "42.6%",
+          "hit3": "56.2%",
+          "hit4": "59.2%",
+          "hit5": "71.0%",
+          "charged": "55.9% + 55.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "48.1%",
+          "hit2": "46.1%",
+          "hit3": "60.8%",
+          "hit4": "64.0%",
+          "hit5": "76.8%",
+          "charged": "60.5% + 60.5%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Chihayaburu",
+      "desc": "Kazuha pulls enemies and objects towards him, dealing Anemo DMG and launching himself into the air.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Chihayaburu.png",
+      "details_html": "<div class='skill-section'><b>Chihayaburu</b><br>Pulls enemies and objects towards Kazuha, dealing Anemo DMG and launching himself into the air. Hold to increase AoE and DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "press_dmg": "192% ATK",
+          "hold_dmg": "264% ATK",
+          "cd": "6s/9s"
+        },
+        {
+          "level": 2,
+          "press_dmg": "206% ATK",
+          "hold_dmg": "283% ATK",
+          "cd": "6s/9s"
+        }
+      ]
+    },
+    {
+      "name": "Kazuha Slash",
+      "desc": "Kazuha performs a single slash, creating a field that deals AoE Anemo DMG and boosts Elemental DMG for party members inside.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Kazuha_Slash.png",
+      "details_html": "<div class='skill-section'><b>Kazuha Slash</b><br>Performs a single slash, creating a field that deals AoE Anemo DMG and boosts Elemental DMG for party members inside. Lasts for 8s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "262% ATK",
+          "field_bonus": "40% Elemental DMG",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "281% ATK",
+          "field_bonus": "44% Elemental DMG",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Cloud Strider",
+      "phase": "Ascension Phase 1",
+      "desc": "Decreases sprinting Stamina consumption for your own party members by 20%."
+    },
+    {
+      "name": "Soumon Swordsmanship",
+      "phase": "Ascension Phase 4",
+      "desc": "If Chihayaburu comes into contact with Hydro/Pyro/Cryo/Electro, it will absorb that element and deal additional DMG of that type."
+    },
+    {
+      "name": "Poetics of Fuubutsu",
+      "phase": "Passive",
+      "desc": "Upon triggering a Swirl reaction, Kazuha grants teammates a 0.04% Elemental DMG Bonus to their corresponding element for every point of Elemental Mastery he has for 8s."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Scarlet Hills",
+      "phase": "Constellation Lv. 1",
+      "desc": "Decreases Chihayaburu's CD by 10%."
+    },
+    {
+      "name": "Yamaarashi Tailwind",
+      "phase": "Constellation Lv. 2",
+      "desc": "The field created by Kazuha Slash increases Elemental Mastery of characters inside by 200."
+    },
+    {
+      "name": "Maple Monogatari",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Chihayaburu by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Oozora Genpou",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Kazuha's Energy is below 45, he regenerates 3 Energy per second."
+    },
+    {
+      "name": "Wisdom of Bansei",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Kazuha Slash by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Crimson Momiji",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using Chihayaburu or Kazuha Slash, Kazuha's attacks deal an additional 0.2% of his Elemental Mastery as DMG for 5s."
+    }
+  ]
+}

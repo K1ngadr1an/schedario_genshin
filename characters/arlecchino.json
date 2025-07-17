@@ -1,0 +1,742 @@
+{
+  "displayName": "Arlecchino",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Arlecchino_Icon.png",
+  "tags": ["Pyro", "Polearm", "5★", "DPS", "Fatui", "Fontaine"],
+  "description": "The Knave, Fatui Harbinger. A relentless Pyro DPS who sacrifices her own HP to deal massive damage.",
+  "weapons": [
+    {
+      "name": "Crimson Moon's Semblance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Crimson_Moon%27s_Semblance.png",
+      "note": "Best in Slot"
+    },
+    {
+      "name": "The First Great Magic",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_First_Great_Magic.png",
+      "note": "5★ alternative"
+    },
+    {
+      "name": "The Catch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Catch.png",
+      "note": "F2P"
+    },
+    {
+      "name": "Blackcliff Pole",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Blackcliff_Pole.png",
+      "note": "4★ alternative"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Marechaussee Hunter (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Shimenawa%27s_Reminiscence.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Marechaussee Hunter (2) + Shimenawa's Reminiscence (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Arlecchino is a hypercarry Pyro DPS who excels in mono-Pyro and Vaporize teams. Focus on maximizing her Normal Attack and Skill damage. She consumes her own HP to boost her damage output, so bring a shielder or healer for comfort.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Crimson Moon's Semblance",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Crimson_Moon%27s_Semblance.png",
+        "note": "Best in Slot"
+      },
+      "artifacts": [
+        {
+          "name": "Marechaussee Hunter (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Arlecchino" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Arlecchino" },
+      { "name": "Yelan" },
+      { "name": "Bennett" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Arlecchino" },
+      { "name": "Fischl" },
+      { "name": "Beidou" },
+      { "name": "Bennett" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Invitation to a Beheading",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Performs up to 6 consecutive spear strikes.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/UI_GachaTypeIcon_Polearm.png",
+      "levels": [
+        {
+          "level": 1,
+          "masque": "120.4%",
+          "hit1": "47.5%",
+          "hit2": "52.1%",
+          "hit3": "65.4%",
+          "hit4": "37.1% + 37.1%",
+          "hit5": "70%",
+          "hit6": "85.4%",
+          "charged": "90.8%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "63.9%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 2,
+          "masque": "129.0%",
+          "hit1": "50.8%",
+          "hit2": "55.8%",
+          "hit3": "70.1%",
+          "hit4": "39.8% + 39.8%",
+          "hit5": "75%",
+          "hit6": "91.2%",
+          "charged": "97.0%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "68.1%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 3,
+          "masque": "137.6%",
+          "hit1": "54.1%",
+          "hit2": "59.5%",
+          "hit3": "74.8%",
+          "hit4": "42.5% + 42.5%",
+          "hit5": "80%",
+          "hit6": "97.0%",
+          "charged": "103.2%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "72.3%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 4,
+          "masque": "147.4%",
+          "hit1": "58.2%",
+          "hit2": "64.0%",
+          "hit3": "80.5%",
+          "hit4": "45.8% + 45.8%",
+          "hit5": "86%",
+          "hit6": "104.1%",
+          "charged": "110.8%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "77.8%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 5,
+          "masque": "155.0%",
+          "hit1": "61.3%",
+          "hit2": "67.4%",
+          "hit3": "84.8%",
+          "hit4": "48.5% + 48.5%",
+          "hit5": "91%",
+          "hit6": "110.1%",
+          "charged": "117.0%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "82.0%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 6,
+          "masque": "163.6%",
+          "hit1": "64.6%",
+          "hit2": "71.1%",
+          "hit3": "89.5%",
+          "hit4": "51.2% + 51.2%",
+          "hit5": "96%",
+          "hit6": "116.3%",
+          "charged": "123.2%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "86.2%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 7,
+          "masque": "172.2%",
+          "hit1": "67.9%",
+          "hit2": "74.8%",
+          "hit3": "94.2%",
+          "hit4": "53.9% + 53.9%",
+          "hit5": "101%",
+          "hit6": "122.5%",
+          "charged": "129.4%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "90.4%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 8,
+          "masque": "180.8%",
+          "hit1": "71.2%",
+          "hit2": "78.5%",
+          "hit3": "98.9%",
+          "hit4": "56.6% + 56.6%",
+          "hit5": "106%",
+          "hit6": "128.7%",
+          "charged": "135.6%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "94.6%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 9,
+          "masque": "189.4%",
+          "hit1": "74.5%",
+          "hit2": "82.2%",
+          "hit3": "103.6%",
+          "hit4": "59.3% + 59.3%",
+          "hit5": "111%",
+          "hit6": "134.9%",
+          "charged": "141.8%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "98.8%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 10,
+          "masque": "198.0%",
+          "hit1": "77.8%",
+          "hit2": "85.9%",
+          "hit3": "108.3%",
+          "hit4": "62.0% + 62.0%",
+          "hit5": "116%",
+          "hit6": "141.1%",
+          "charged": "148.0%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "103.0%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 11,
+          "masque": "206.6%",
+          "hit1": "81.1%",
+          "hit2": "89.6%",
+          "hit3": "113.0%",
+          "hit4": "64.7% + 64.7%",
+          "hit5": "121%",
+          "hit6": "147.3%",
+          "charged": "154.2%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "107.2%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 12,
+          "masque": "215.2%",
+          "hit1": "84.4%",
+          "hit2": "93.3%",
+          "hit3": "117.7%",
+          "hit4": "67.4% + 67.4%",
+          "hit5": "126%",
+          "hit6": "153.5%",
+          "charged": "160.4%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "111.4%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 13,
+          "masque": "223.8%",
+          "hit1": "87.7%",
+          "hit2": "97.0%",
+          "hit3": "122.4%",
+          "hit4": "70.1% + 70.1%",
+          "hit5": "131%",
+          "hit6": "159.7%",
+          "charged": "166.6%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "115.6%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 14,
+          "masque": "232.4%",
+          "hit1": "91.0%",
+          "hit2": "100.7%",
+          "hit3": "127.1%",
+          "hit4": "72.8% + 72.8%",
+          "hit5": "136%",
+          "hit6": "165.9%",
+          "charged": "172.8%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "119.8%",
+          "lowhigh": "-"
+        },
+        {
+          "level": 15,
+          "masque": "241.0%",
+          "hit1": "94.3%",
+          "hit2": "104.4%",
+          "hit3": "131.8%",
+          "hit4": "75.5% + 75.5%",
+          "hit5": "141%",
+          "hit6": "172.1%",
+          "charged": "179.0%",
+          "charged_stamina": "25",
+          "high_speed_stamina": "40/s",
+          "plunge": "124.0%",
+          "lowhigh": "-"
+        }
+      ],
+      "details_html": ""
+    },
+    {
+      "name": "Elemental Skill: All Is Ash",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Summons forth Balemoon Bloodfire, dealing Pyro DMG to multiple nearby opponents and performing a dash-cleave against one of them, dealing AoE Pyro DMG. Opponents hit by the aforementioned attack will have a Blood-Debt Directive applied to them.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Arlecchino/talent_2.png",
+      "details_html": "<div style='margin-bottom:12px;'><b>Summons forth Balemoon Bloodfire</b>, dealing <span style='color:#ff8888;font-weight:bold;'>Pyro DMG</span> to multiple nearby opponents and performing a dash-cleave against one of them, dealing <b>AoE <span style='color:#ff8888;'>Pyro DMG</span></b>.<br>Opponents hit by the aforementioned attack will have a Blood-Debt Directive applied to them.</div><div style='color:#ffe082;font-weight:700;margin-bottom:4px;'>Blood-Debt Directive</div><ul style='text-align:left;margin-bottom:12px;'><li>Lasts 30s. Every 5s, it will deal 1 instance of <span style='color:#ff8888;font-weight:bold;'>Pyro DMG</span> to the opponent. Max 2 instances. This DMG will be considered Elemental Skill DMG.</li><li>When Arlecchino uses a Charged Attack or her Elemental Burst, Balemoon Rising, she will absorb and clear nearby Blood-Debt Directives. Each Directive absorbed grants her a Bond of Life worth 65% of her Max HP.</li><li>The maximum value of the Bond of Life she can be granted through Blood-Debt Directives within 35s after using her Elemental Skill is 145% of her Max HP. Using the Elemental Skill again during this duration will restart the count on duration and the limit on the value of Bond of Life she may gain from Blood-Debt Directives.</li></ul>",
+      "levels": [
+        {
+          "level": 1,
+          "spike_dmg": "14.8%",
+          "cleave_dmg": "133.6%",
+          "blood_debt_dmg": "31.8%",
+          "cd": "30s"
+        },
+        {
+          "level": 2,
+          "spike_dmg": "15.9%",
+          "cleave_dmg": "143.0%",
+          "blood_debt_dmg": "34.2%",
+          "cd": "30s"
+        },
+        {
+          "level": 3,
+          "spike_dmg": "17.0%",
+          "cleave_dmg": "152.4%",
+          "blood_debt_dmg": "36.6%",
+          "cd": "30s"
+        },
+        {
+          "level": 4,
+          "spike_dmg": "18.5%",
+          "cleave_dmg": "162.8%",
+          "blood_debt_dmg": "39.0%",
+          "cd": "30s"
+        },
+        {
+          "level": 5,
+          "spike_dmg": "19.6%",
+          "cleave_dmg": "172.2%",
+          "blood_debt_dmg": "41.4%",
+          "cd": "30s"
+        },
+        {
+          "level": 6,
+          "spike_dmg": "20.7%",
+          "cleave_dmg": "181.6%",
+          "blood_debt_dmg": "43.8%",
+          "cd": "30s"
+        },
+        {
+          "level": 7,
+          "spike_dmg": "22.2%",
+          "cleave_dmg": "192.0%",
+          "blood_debt_dmg": "46.2%",
+          "cd": "30s"
+        },
+        {
+          "level": 8,
+          "spike_dmg": "23.7%",
+          "cleave_dmg": "202.4%",
+          "blood_debt_dmg": "48.6%",
+          "cd": "30s"
+        },
+        {
+          "level": 9,
+          "spike_dmg": "25.2%",
+          "cleave_dmg": "212.8%",
+          "blood_debt_dmg": "51.0%",
+          "cd": "30s"
+        },
+        {
+          "level": 10,
+          "spike_dmg": "26.7%",
+          "cleave_dmg": "223.2%",
+          "blood_debt_dmg": "53.4%",
+          "cd": "30s"
+        },
+        {
+          "level": 11,
+          "spike_dmg": "28.2%",
+          "cleave_dmg": "233.6%",
+          "blood_debt_dmg": "55.8%",
+          "cd": "30s"
+        },
+        {
+          "level": 12,
+          "spike_dmg": "29.7%",
+          "cleave_dmg": "244.0%",
+          "blood_debt_dmg": "58.2%",
+          "cd": "30s"
+        },
+        {
+          "level": 13,
+          "spike_dmg": "31.2%",
+          "cleave_dmg": "254.4%",
+          "blood_debt_dmg": "60.6%",
+          "cd": "30s"
+        },
+        {
+          "level": 14,
+          "spike_dmg": "32.7%",
+          "cleave_dmg": "264.8%",
+          "blood_debt_dmg": "63.0%",
+          "cd": "30s"
+        },
+        {
+          "level": 15,
+          "spike_dmg": "34.2%",
+          "cleave_dmg": "275.2%",
+          "blood_debt_dmg": "65.4%",
+          "cd": "30s"
+        }
+      ]
+    },
+    {
+      "name": "Balemoon Rising",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Arlecchino's great wing of Balemoon Bloodfire beats as she absorbs and clears Blood-Debt Directives around her. She deals AoE Pyro DMG before clearing the CD of All Is Ash and healing herself. The healing is based on her Bond of Life value and ATK.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Arlecchino/talent_3.png",
+      "details_html": "<div style='margin-bottom:12px;'>Arlecchino's great wing of Balemoon Bloodfire beats as she absorbs and clears Blood-Debt Directives around her. She deals <span style='color:#ff8888;font-weight:bold;'>AoE Pyro DMG</span> before clearing the CD of All Is Ash and healing herself. The healing is based on her Bond of Life value and ATK.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "370.4%",
+          "heal": "150% Bond of Life + 150% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "398.5%",
+          "heal": "161% Bond of Life + 161% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "426.6%",
+          "heal": "172% Bond of Life + 172% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "454.7%",
+          "heal": "183% Bond of Life + 183% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "482.8%",
+          "heal": "194% Bond of Life + 194% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 6,
+          "skill_dmg": "510.9%",
+          "heal": "205% Bond of Life + 205% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 7,
+          "skill_dmg": "539.0%",
+          "heal": "216% Bond of Life + 216% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 8,
+          "skill_dmg": "567.1%",
+          "heal": "227% Bond of Life + 227% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 9,
+          "skill_dmg": "595.2%",
+          "heal": "238% Bond of Life + 238% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 10,
+          "skill_dmg": "623.3%",
+          "heal": "249% Bond of Life + 249% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 11,
+          "skill_dmg": "651.4%",
+          "heal": "260% Bond of Life + 260% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 12,
+          "skill_dmg": "679.5%",
+          "heal": "271% Bond of Life + 271% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 13,
+          "skill_dmg": "707.6%",
+          "heal": "282% Bond of Life + 282% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 14,
+          "skill_dmg": "735.7%",
+          "heal": "293% Bond of Life + 293% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 15,
+          "skill_dmg": "763.8%",
+          "heal": "304% Bond of Life + 304% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Strength of Conviction",
+      "phase": "Ascension Phase 1",
+      "desc": "When Arlecchino's HP is less than 50%, her Pyro DMG is increased by 20%."
+    },
+    {
+      "name": "Unwavering Will",
+      "phase": "Ascension Phase 4",
+      "desc": "After using her Elemental Burst, Arlecchino's ATK is increased by 20% for 10s."
+    },
+    {
+      "name": "Fatui's Favor",
+      "phase": "Passive",
+      "desc": "Decreases sprinting Stamina consumption for your own party members by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Crimson Oath",
+      "phase": "Constellation Lv. 1",
+      "desc": "Increases the duration of All is Ash by 3s."
+    },
+    {
+      "name": "C2: Blood Price",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Arlecchino's HP is below 50%, her CRIT Rate is increased by 10%."
+    },
+    {
+      "name": "C3: Scarlet Command",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Normal Attack: Invitation to a Beheading by 3."
+    },
+    {
+      "name": "C4: Ruthless Redemption",
+      "phase": "Constellation Lv. 4",
+      "desc": "Using Balemoon Rising restores 20% of Arlecchino's HP."
+    },
+    {
+      "name": "C5: Fatui Finale",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Balemoon Rising by 3."
+    },
+    {
+      "name": "C6: The Knave's Triumph",
+      "phase": "Constellation Lv. 6",
+      "desc": "Arlecchino's attacks ignore 20% of enemy DEF when below 50% HP."
+    }
+  ],
+  "ascension_materials": [
+    {
+      "ascension": 1,
+      "materials": [
+        { "name": "Agnidus Agate Sliver", "quantity": 1 },
+        { "name": "Rainbow Rose", "quantity": 3 },
+        { "name": "Recruit's Insignia", "quantity": 3 },
+        { "name": "Mora", "quantity": 20000 }
+      ]
+    },
+    {
+      "ascension": 2,
+      "materials": [
+        { "name": "Agnidus Agate Fragment", "quantity": 3 },
+        { "name": "Fragment of a Golden Melody", "quantity": 2 },
+        { "name": "Rainbow Rose", "quantity": 10 },
+        { "name": "Recruit's Insignia", "quantity": 15 },
+        { "name": "Mora", "quantity": 40000 }
+      ]
+    },
+    {
+      "ascension": 3,
+      "materials": [
+        { "name": "Agnidus Agate Fragment", "quantity": 6 },
+        { "name": "Fragment of a Golden Melody", "quantity": 4 },
+        { "name": "Rainbow Rose", "quantity": 20 },
+        { "name": "Sergeant's Insignia", "quantity": 12 },
+        { "name": "Mora", "quantity": 60000 }
+      ]
+    },
+    {
+      "ascension": 4,
+      "materials": [
+        { "name": "Agnidus Agate Chunk", "quantity": 3 },
+        { "name": "Fragment of a Golden Melody", "quantity": 8 },
+        { "name": "Rainbow Rose", "quantity": 30 },
+        { "name": "Sergeant's Insignia", "quantity": 18 },
+        { "name": "Mora", "quantity": 80000 }
+      ]
+    },
+    {
+      "ascension": 5,
+      "materials": [
+        { "name": "Agnidus Agate Chunk", "quantity": 6 },
+        { "name": "Fragment of a Golden Melody", "quantity": 12 },
+        { "name": "Rainbow Rose", "quantity": 45 },
+        { "name": "Lieutenant's Insignia", "quantity": 12 },
+        { "name": "Mora", "quantity": 100000 }
+      ]
+    },
+    {
+      "ascension": 6,
+      "materials": [
+        { "name": "Agnidus Agate Gemstone", "quantity": 6 },
+        { "name": "Fragment of a Golden Melody", "quantity": 20 },
+        { "name": "Rainbow Rose", "quantity": 60 },
+        { "name": "Lieutenant's Insignia", "quantity": 24 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    }
+  ],
+  "talent_materials": [
+    {
+      "level": 2,
+      "materials": [
+        { "name": "Teachings of Order", "quantity": 3 },
+        { "name": "Recruit's Insignia", "quantity": 6 },
+        { "name": "Mora", "quantity": 12500 }
+      ]
+    },
+    {
+      "level": 3,
+      "materials": [
+        { "name": "Guide to Order", "quantity": 2 },
+        { "name": "Sergeant's Insignia", "quantity": 3 },
+        { "name": "Mora", "quantity": 17500 }
+      ]
+    },
+    {
+      "level": 4,
+      "materials": [
+        { "name": "Guide to Order", "quantity": 4 },
+        { "name": "Sergeant's Insignia", "quantity": 4 },
+        { "name": "Mora", "quantity": 25000 }
+      ]
+    },
+    {
+      "level": 5,
+      "materials": [
+        { "name": "Guide to Order", "quantity": 6 },
+        { "name": "Sergeant's Insignia", "quantity": 6 },
+        { "name": "Mora", "quantity": 30000 }
+      ]
+    },
+    {
+      "level": 6,
+      "materials": [
+        { "name": "Guide to Order", "quantity": 9 },
+        { "name": "Sergeant's Insignia", "quantity": 9 },
+        { "name": "Mora", "quantity": 37500 }
+      ]
+    },
+    {
+      "level": 7,
+      "materials": [
+        { "name": "Philosophies of Order", "quantity": 4 },
+        { "name": "Lieutenant's Insignia", "quantity": 4 },
+        { "name": "Fading Candle", "quantity": 1 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 8,
+      "materials": [
+        { "name": "Philosophies of Order", "quantity": 6 },
+        { "name": "Lieutenant's Insignia", "quantity": 6 },
+        { "name": "Fading Candle", "quantity": 1 },
+        { "name": "Mora", "quantity": 260000 }
+      ]
+    },
+    {
+      "level": 9,
+      "materials": [
+        { "name": "Philosophies of Order", "quantity": 12 },
+        { "name": "Lieutenant's Insignia", "quantity": 9 },
+        { "name": "Fading Candle", "quantity": 2 },
+        { "name": "Mora", "quantity": 450000 }
+      ]
+    },
+    {
+      "level": 10,
+      "materials": [
+        { "name": "Philosophies of Order", "quantity": 16 },
+        { "name": "Lieutenant's Insignia", "quantity": 12 },
+        { "name": "Fading Candle", "quantity": 2 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 700000 }
+      ]
+    }
+  ]
+}

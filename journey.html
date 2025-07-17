@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Journey Diary - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        padding-top: 3.5rem;
+      }
+
+      .journey-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        background: rgba(26, 26, 46, 0.9);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      /* Ottimizzazioni per schermi 2K */
+      @media (min-width: 1400px) {
+        .journey-container {
+          max-width: 1600px;
+          padding: 2.5rem;
+        }
+      }
+
+      @media (min-width: 1800px) {
+        .journey-container {
+          max-width: 1800px;
+          padding: 3rem;
+        }
+      }
+
+      @media (min-width: 2200px) {
+        .journey-container {
+          max-width: 2000px;
+          padding: 3.5rem;
+        }
+      }
+
+      .journey-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .journey-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #64ffda;
+        text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+      }
+
+      /* Stili per le sezioni */
+      .section {
+        background: rgba(15, 52, 96, 0.8);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .section h3 {
+        color: #64ffda;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        text-shadow: 0 0 8px rgba(100, 255, 218, 0.2);
+      }
+
+      /* Stili per le tabelle */
+      .search-bar {
+        margin-bottom: 1rem;
+      }
+
+      .search-bar input {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 8px;
+        font-size: 1rem;
+        background: rgba(26, 26, 46, 0.8);
+        color: #e0e0e0;
+        transition: all 0.3s ease;
+      }
+
+      .search-bar input:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        background: rgba(26, 26, 46, 0.95);
+      }
+
+      .search-bar input::placeholder {
+        color: rgba(224, 224, 224, 0.6);
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(22, 33, 62, 0.9);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .data-table th,
+      .data-table td {
+        padding: 0.8rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .data-table th {
+        background: linear-gradient(135deg, #64ffda, #00bcd4);
+        color: #1a1a2e;
+        font-weight: 600;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .data-table tr:hover {
+        background: rgba(100, 255, 218, 0.1);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .data-table tr.selected {
+        background: rgba(100, 255, 218, 0.2);
+        border-left: 4px solid #64ffda;
+      }
+
+      /* Stili per la selezione */
+      .selection-info {
+        background: rgba(100, 255, 218, 0.1);
+        border: 2px solid #64ffda;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+      }
+
+      .selection-info h4 {
+        margin: 0 0 0.5rem 0;
+        color: #64ffda;
+        font-weight: 600;
+      }
+
+      .selection-info p {
+        margin: 0;
+        color: #e0e0e0;
+      }
+
+      /* Stili per le note */
+      .notes-section {
+        background: rgba(15, 52, 96, 0.8);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      .notes-form {
+        margin-bottom: 1rem;
+      }
+
+      .notes-form input,
+      .notes-form textarea {
+        width: 100%;
+        border-radius: 8px;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        padding: 0.7rem;
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+        background: rgba(26, 26, 46, 0.8);
+        color: #e0e0e0;
+        transition: all 0.3s ease;
+      }
+
+      .notes-form input:focus,
+      .notes-form textarea:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        background: rgba(26, 26, 46, 0.95);
+      }
+
+      .notes-form input::placeholder,
+      .notes-form textarea::placeholder {
+        color: rgba(224, 224, 224, 0.6);
+      }
+
+      .notes-form textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+
+      .notes-form .btn {
+        background: linear-gradient(135deg, #64ffda, #00bcd4);
+        color: #1a1a2e;
+        border: none;
+        border-radius: 8px;
+        padding: 0.8rem 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+      }
+
+      .notes-form .btn:hover {
+        background: linear-gradient(135deg, #00bcd4, #64ffda);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4);
+      }
+
+      .form-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn-secondary {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
+        color: white !important;
+        border: none;
+        border-radius: 8px;
+        padding: 0.8rem 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+      }
+
+      .btn-secondary:hover {
+        background: linear-gradient(135deg, #ee5a24, #ff6b6b) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+      }
+
+      .save-feedback {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #64ffda, #00bcd4);
+        color: #1a1a2e;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(100, 255, 218, 0.4);
+        z-index: 1000;
+        transform: translateX(400px);
+        transition: transform 0.3s ease;
+      }
+
+      .save-feedback.show {
+        transform: translateX(0);
+      }
+
+      /* Stili per le voci salvate */
+      .saved-entries {
+        margin-top: 2rem;
+      }
+
+      .saved-entries h3 {
+        color: #64ffda;
+        text-shadow: 0 0 8px rgba(100, 255, 218, 0.2);
+      }
+
+      .entry {
+        background: rgba(22, 33, 62, 0.8);
+        border-radius: 12px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.2rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .entry:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        border-color: rgba(100, 255, 218, 0.2);
+      }
+
+      .entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .entry-date {
+        font-size: 0.9rem;
+        color: #64ffda;
+        font-weight: 600;
+      }
+
+      .entry-title {
+        font-weight: 600;
+        color: #e0e0e0;
+      }
+
+      .entry-content {
+        margin: 0.5rem 0;
+        white-space: pre-line;
+        color: #b0b0b0;
+      }
+
+      .entry-actions {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+      }
+
+      .entry-actions button {
+        background: none;
+        border: none;
+        color: #64ffda;
+        font-size: 1.1rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0.3rem;
+        border-radius: 4px;
+      }
+
+      .entry-actions button:hover {
+        background: rgba(100, 255, 218, 0.2);
+        transform: scale(1.1);
+      }
+
+      .empty-message {
+        text-align: center;
+        color: rgba(224, 224, 224, 0.6);
+        font-style: italic;
+        margin-top: 2rem;
+        padding: 2rem;
+        background: rgba(26, 26, 46, 0.5);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      /* Stili per i pulsanti generali */
+      .btn {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0.6rem 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+      }
+
+      .btn:hover {
+        background: linear-gradient(135deg, #ee5a24, #ff6b6b);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+      }
+
+      /* Scrollbar personalizzata */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(26, 26, 46, 0.5);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #64ffda, #00bcd4);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #00bcd4, #64ffda);
+      }
+
+      /* Scroll to Top Button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #64ffda, #4cd4b0);
+        border: none;
+        border-radius: 50%;
+        color: #16213e;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.4);
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .scroll-to-top.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scroll-to-top:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 8px 30px rgba(100, 255, 218, 0.6);
+      }
+
+      .scroll-to-top:active {
+        transform: translateY(-2px) scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .scroll-to-top {
+          bottom: 1rem;
+          right: 1rem;
+          width: 50px;
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(26, 26, 46, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 2px 16px #0005;
+        padding: 0.5rem 0 0.5rem 0;
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.13rem;
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.1);
+        color: #64ffda;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .nav-link.active {
+        background: #64ffda;
+        color: #16213e;
+        box-shadow: 0 2px 12px #64ffda55;
+        cursor: default;
+      }
+      @media (max-width: 700px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          font-size: 0.98rem;
+          padding: 0.3rem 0;
+        }
+        .nav-link {
+          padding: 0.5rem 0.7rem;
+          font-size: 1rem;
+        }
+      }
+
+      /* Pulsanti Login/Registrati Modal */
+      .btn-login,
+      .btn-register {
+        background: linear-gradient(135deg, #64ffda, #00d4aa) !important;
+        color: #16213e !important;
+        border: none;
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 6px 24px rgba(100, 255, 218, 0.25),
+          0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Fredoka", sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        outline: none;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn-login:hover,
+      .btn-register:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda) !important;
+        color: #fff !important;
+        box-shadow: 0 10px 32px rgba(100, 255, 218, 0.35),
+          0 4px 16px rgba(0, 0, 0, 0.13);
+        transform: translateY(-2px) scale(1.03);
+      }
+      .btn-login:active,
+      .btn-register:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.18);
+      }
+
+      /* Stili per i pulsanti nella navbar */
+      #userControls .btn-login,
+      #userControls .btn-register {
+        margin: 0 0.5rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        border-radius: 12px;
+      }
+
+      #userControls .btn-login:hover,
+      #userControls .btn-register:hover {
+        transform: translateY(-1px) scale(1.02);
+      }
+
+      /* Stili per il pulsante logout */
+      #userControls button {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
+        color: white !important;
+        border: none;
+        border-radius: 12px;
+        padding: 0.6rem 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        margin-left: 0.5rem;
+      }
+
+      #userControls button:hover {
+        background: linear-gradient(135deg, #ee5a24, #ff6b6b) !important;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="index.html#gestione" class="nav-link"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link active"><span>🗺️</span> Journey</a>
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls" style="margin-left: auto"></span>
+    </nav>
+
+    <div class="journey-container">
+      <div class="journey-header">
+        <span class="journey-title">📔 Journey Progress</span>
+        <button
+          class="btn"
+          onclick="clearAllEntries()"
+          style="background: #fff3cd; color: #bfa14a; border: 1px solid #e0c97f"
+        >
+          Svuota Diario
+        </button>
+      </div>
+
+      <!-- Sezione Selezione Personaggio -->
+      <div class="section">
+        <h3>👥 1. Seleziona Personaggio</h3>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="characterSearch"
+            placeholder="🔍 Cerca personaggio per nome, elemento, arma, regione..."
+            oninput="filterCharacters()"
+          />
+        </div>
+        <div
+          class="selection-info"
+          id="characterSelectionInfo"
+          style="display: none"
+        >
+          <h4>Personaggio Selezionato</h4>
+          <p id="selectedCharacterInfo"></p>
+        </div>
+        <table class="data-table" id="characterTable">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Elemento</th>
+              <th>Arma</th>
+              <th>Regione</th>
+              <th>Rarità</th>
+            </tr>
+          </thead>
+          <tbody id="characterTableBody">
+            <!-- Personaggi caricati dinamicamente -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sezione Selezione Artefatti -->
+      <div class="section" id="artifactsSection" style="display: none">
+        <h3>💎 2. Seleziona Artefatti</h3>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="artifactSearch"
+            placeholder="🔍 Cerca artefatti per nome, tipo, personaggi consigliati..."
+            oninput="filterArtifacts()"
+          />
+        </div>
+        <div
+          class="selection-info"
+          id="artifactSelectionInfo"
+          style="display: none"
+        >
+          <h4>Artefatti Selezionati</h4>
+          <p id="selectedArtifactInfo"></p>
+        </div>
+        <table class="data-table" id="artifactTable">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Tipo</th>
+              <th>Rarità</th>
+              <th>Bonus 2pc</th>
+              <th>Personaggi Consigliati</th>
+            </tr>
+          </thead>
+          <tbody id="artifactTableBody">
+            <!-- Artefatti caricati dinamicamente -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sezione Note -->
+      <div class="notes-section" id="notesSection" style="display: none">
+        <h3>📝 3. Appunta i tuoi Progressi</h3>
+        <form class="notes-form" id="notesForm" onsubmit="saveEntry(event)">
+          <input
+            type="text"
+            id="entryTitle"
+            placeholder="Titolo (es. Build Stabile, Nuovo Team, Progressi Artefatti...)"
+          />
+          <textarea
+            id="entryContent"
+            placeholder="Scrivi qui i tuoi progressi, build, team comp, note personali, danni, statistiche..."
+            required
+          ></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn">💾 Salva Voce</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="saveToFile()"
+            >
+              📁 Esporta Dati
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="loadFromFile()"
+            >
+              📂 Importa Dati
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sezione Voci Salvate -->
+      <div class="saved-entries" id="savedEntries">
+        <h3>📚 Voci Salvate</h3>
+        <div id="entriesList"></div>
+        <div class="empty-message" id="emptyMessage" style="display: none">
+          Nessuna voce ancora. Seleziona un personaggio e inizia ad appuntare i
+          tuoi progressi!
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal login/registrazione -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Login / Registrati</h2>
+        <input id="loginUsername" placeholder="Username" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button class="btn-login" onclick="doLogin()">Login</button>
+        <button class="btn-register" onclick="openLoginModal()">
+          Registrati
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal custom per auto-logout -->
+    <div id="autoLogoutModal" class="custom-modal" style="display: none">
+      <div class="custom-modal-content">
+        <h2>Sei stato disconnesso</h2>
+        <p>Sei stato disconnesso per inattività.</p>
+        <button onclick="redirectToLogin()" class="btn btn-secondary">
+          OK
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal per voci salvate del personaggio -->
+    <div id="characterEntriesModal" class="modal" style="display: none">
+      <div
+        class="modal-content"
+        style="max-width: 800px; max-height: 80vh; overflow-y: auto"
+      >
+        <span class="close" onclick="closeCharacterEntriesModal()"
+          >&times;</span
+        >
+        <h2 id="modalCharacterTitle">📚 Voci Salvate</h2>
+        <div id="modalCharacterEntries"></div>
+        <div
+          id="modalNoEntries"
+          style="
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            color: rgba(224, 224, 224, 0.6);
+          "
+        >
+          Nessuna voce trovata per questo personaggio.
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Stili per il modal di login */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+      }
+
+      .modal-content {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        margin: 15% auto;
+        padding: 2rem;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 20px;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        position: relative;
+        animation: modalSlideIn 0.3s ease;
+      }
+
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-50px) scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .modal h2 {
+        color: #64ffda;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+      }
+
+      .modal input {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 8px;
+        background: rgba(26, 26, 46, 0.8);
+        color: #e0e0e0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .modal input:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        background: rgba(26, 26, 46, 0.95);
+      }
+
+      .modal input::placeholder {
+        color: rgba(224, 224, 224, 0.6);
+      }
+
+      .close {
+        color: #64ffda;
+        float: right;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .close:hover {
+        color: #00d4aa;
+        transform: scale(1.1);
+      }
+
+      .modal .btn-login,
+      .modal .btn-register {
+        width: 100%;
+        margin: 0.5rem 0;
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      // Usa window.allCharacters per evitare conflitti con script.js
+      let allArtifacts = [];
+      let selectedCharacter = null;
+      let selectedArtifact = null;
+
+      // Carica i dati all'avvio
+      window.addEventListener("load", function () {
+        console.log("🚀 Caricamento pagina Journey...");
+        loadCharacters();
+        loadArtifacts();
+        renderEntries();
+        renderUserControls();
+
+        // Assicurati che la sezione artefatti sia visibile
+        setTimeout(() => {
+          const artifactsSection = document.getElementById("artifactsSection");
+          if (artifactsSection) {
+            artifactsSection.style.display = "block";
+            console.log("✅ Sezione artefatti resa visibile all'avvio");
+          }
+        }, 500);
+
+        // Controllo aggiuntivo per evitare conflitti
+        setTimeout(() => {
+          console.log("🔍 Controllo finale sezione artefatti...");
+          const artifactsSection = document.getElementById("artifactsSection");
+          if (artifactsSection) {
+            artifactsSection.style.display = "block";
+            console.log("✅ Sezione artefatti confermata visibile");
+          } else {
+            console.error(
+              "❌ Sezione artefatti non trovata nel controllo finale"
+            );
+          }
+        }, 1000);
+
+        // Event listener per chiudere il modal cliccando fuori
+        window.addEventListener("click", function (event) {
+          const modal = document.getElementById("characterEntriesModal");
+          if (event.target === modal) {
+            closeCharacterEntriesModal();
+          }
+        });
+      });
+
+      // Funzioni per i personaggi
+      function loadCharacters() {
+        fetch("character.json")
+          .then((response) => response.json())
+          .then((data) => {
+            window.allCharacters = data.characters || [];
+            renderCharacterTable();
+          })
+          .catch((error) => {
+            console.error("Errore nel caricamento dei personaggi:", error);
+            window.allCharacters = [];
+          });
+      }
+
+      function renderCharacterTable() {
+        const tbody = document.getElementById("characterTableBody");
+        tbody.innerHTML = "";
+
+        window.allCharacters.forEach((character) => {
+          const row = document.createElement("tr");
+          row.onclick = (event) => selectJourneyCharacter(character, event);
+          row.innerHTML = `
+            <td>${character.name}</td>
+            <td>${getElementEmoji(character.element)} ${character.element}</td>
+            <td>${getWeaponEmoji(character.weapon)} ${character.weapon}</td>
+            <td>${getRegionEmoji(character.region)} ${character.region}</td>
+            <td>${"⭐".repeat(character.rarity)}</td>
+          `;
+          tbody.appendChild(row);
+        });
+      }
+
+      function selectJourneyCharacter(character, event) {
+        console.log("👤 Personaggio selezionato:", character.name);
+        selectedCharacter = character;
+
+        // Aggiorna la selezione visiva
+        document.querySelectorAll("#characterTableBody tr").forEach((row) => {
+          row.classList.remove("selected");
+        });
+        if (event && event.target) {
+          event.target.closest("tr").classList.add("selected");
+        }
+
+        // Controlla se ci sono già voci salvate per questo personaggio
+        const entries = getEntries();
+        const existingEntries = entries.filter(
+          (entry) => entry.character === character.name
+        );
+
+        if (existingEntries.length > 0) {
+          // Mostra messaggio che ci sono già voci salvate
+          const message = `📝 <strong>${character.name}</strong> ha già ${
+            existingEntries.length
+          } voce${existingEntries.length > 1 ? "i" : ""} salvata${
+            existingEntries.length > 1 ? "e" : ""
+          } nel diario!`;
+
+          // Aggiorna info selezione con il messaggio
+          document.getElementById("characterSelectionInfo").style.display =
+            "block";
+          document.getElementById("selectedCharacterInfo").innerHTML = `
+            <strong>${character.name}</strong> - ${getElementEmoji(
+            character.element
+          )} ${character.element} | ${getWeaponEmoji(character.weapon)} ${
+            character.weapon
+          } | ${getRegionEmoji(character.region)} ${
+            character.region
+          } | ${"⭐".repeat(character.rarity)}<br>
+            <span style="color: #64ffda; font-size: 0.9rem; margin-top: 0.5rem; display: block;">
+              ${message}
+            </span>
+            <span style="
+              color: #64ffda;
+              font-size: 0.9rem;
+              margin-top: 0.5rem;
+              display: block;
+              font-style: italic;
+            ">
+              ⏳ Apertura automatica delle voci salvate...
+            </span>
+          `;
+
+          console.log(
+            `📝 Trovate ${existingEntries.length} voci esistenti per ${character.name}`
+          );
+        } else {
+          // Nessuna voce esistente
+          document.getElementById("characterSelectionInfo").style.display =
+            "block";
+          document.getElementById("selectedCharacterInfo").innerHTML = `
+            <strong>${character.name}</strong> - ${getElementEmoji(
+            character.element
+          )} ${character.element} | ${getWeaponEmoji(character.weapon)} ${
+            character.weapon
+          } | ${getRegionEmoji(character.region)} ${
+            character.region
+          } | ${"⭐".repeat(character.rarity)}<br>
+            <span style="color: #64ffda; font-size: 0.9rem; margin-top: 0.5rem; display: block;">
+              ✨ Prima volta per questo personaggio!
+            </span>
+          `;
+
+          console.log(`✨ Prima volta per ${character.name}`);
+        }
+
+        // Mostra la sezione artefatti
+        console.log("🔍 Mostrando sezione artefatti...");
+        const artifactsSection = document.getElementById("artifactsSection");
+        if (artifactsSection) {
+          artifactsSection.style.display = "block";
+          console.log("✅ Sezione artefatti mostrata");
+        } else {
+          console.error("❌ Elemento artifactsSection non trovato!");
+        }
+
+        // Scroll automatico migliorato con più tentativi
+        const scrollToArtifacts = () => {
+          console.log("🔄 Tentativo di scroll alla sezione artefatti...");
+          const section = document.getElementById("artifactsSection");
+          if (section) {
+            // Calcola la posizione esatta della sezione
+            const rect = section.getBoundingClientRect();
+            const offset = 100; // Offset per la navbar
+
+            window.scrollTo({
+              top: window.pageYOffset + rect.top - offset,
+              behavior: "smooth",
+            });
+
+            // Aggiungi un effetto visivo per evidenziare la sezione
+            section.style.border = "2px solid #64ffda";
+            section.style.boxShadow = "0 0 20px rgba(100, 255, 218, 0.3)";
+            section.style.transition = "all 0.3s ease";
+
+            // Rimuovi l'effetto dopo 2 secondi
+            setTimeout(() => {
+              section.style.border = "";
+              section.style.boxShadow = "";
+            }, 2000);
+
+            console.log("✅ Scroll completato");
+          } else {
+            console.error("❌ Sezione artefatti non trovata durante lo scroll");
+          }
+        };
+
+        // Primo tentativo immediato
+        scrollToArtifacts();
+
+        // Secondo tentativo dopo un breve delay per sicurezza
+        setTimeout(scrollToArtifacts, 200);
+
+        // Se ci sono voci esistenti, apri automaticamente il modal dopo lo scroll
+        if (existingEntries.length > 0) {
+          setTimeout(() => {
+            showCharacterEntriesModal(character.name);
+          }, 800); // Delay per permettere lo scroll di completarsi
+        }
+
+        // Aggiorna la tabella artefatti in base al personaggio selezionato
+        renderArtifactTable();
+      }
+
+      function filterCharacters() {
+        const searchTerm = document
+          .getElementById("characterSearch")
+          .value.toLowerCase();
+        const rows = document.querySelectorAll("#characterTableBody tr");
+
+        rows.forEach((row) => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(searchTerm) ? "" : "none";
+        });
+      }
+
+      // Funzioni per gli artefatti
+      function loadArtifacts() {
+        console.log("🔄 Caricamento artefatti...");
+        fetch("artefatti.json")
+          .then((response) => {
+            console.log("📡 Risposta fetch artefatti:", response.status);
+            return response.json();
+          })
+          .then((data) => {
+            console.log("📦 Dati artefatti caricati:", data);
+            allArtifacts = data.artifacts || [];
+            console.log("🎯 Numero artefatti caricati:", allArtifacts.length);
+            renderArtifactTable();
+            // Forza la visualizzazione della sezione artefatti
+            const artifactsSection =
+              document.getElementById("artifactsSection");
+            if (artifactsSection) {
+              artifactsSection.style.display = "block";
+              console.log("✅ Sezione artefatti forzata visibile");
+            } else {
+              console.error("❌ Elemento artifactsSection non trovato!");
+            }
+
+            // Assicurati che la sezione sia visibile anche dopo un breve delay
+            setTimeout(() => {
+              const section = document.getElementById("artifactsSection");
+              if (section) {
+                section.style.display = "block";
+                console.log("✅ Sezione artefatti confermata visibile");
+              }
+            }, 100);
+          })
+          .catch((error) => {
+            console.error("❌ Errore nel caricamento degli artefatti:", error);
+            allArtifacts = [];
+          });
+      }
+
+      function renderArtifactTable() {
+        console.log("🎨 Rendering tabella artefatti...");
+        const tbody = document.getElementById("artifactTableBody");
+        if (!tbody) {
+          console.error("❌ Elemento artifactTableBody non trovato!");
+          return;
+        }
+        tbody.innerHTML = "";
+
+        // Mostra sempre tutti gli artefatti
+        console.log("📋 Rendering", allArtifacts.length, "artefatti");
+        allArtifacts.forEach((artifact) => {
+          const row = document.createElement("tr");
+          row.onclick = (event) => selectJourneyArtifact(artifact, event);
+          row.innerHTML = `
+            <td>${artifact.name}</td>
+            <td>${getElementEmoji(artifact.type)} ${artifact.type}</td>
+            <td>${"⭐".repeat(artifact.rarity)}</td>
+            <td>${artifact.setBonus["2pc"]}</td>
+            <td>${artifact.bestFor ? artifact.bestFor.join(", ") : "N/A"}</td>
+          `;
+          tbody.appendChild(row);
+        });
+        console.log("✅ Tabella artefatti renderizzata");
+      }
+
+      function selectJourneyArtifact(artifact, event) {
+        selectedArtifact = artifact;
+
+        // Aggiorna la selezione visiva
+        document.querySelectorAll("#artifactTableBody tr").forEach((row) => {
+          row.classList.remove("selected");
+        });
+        if (event && event.target) {
+          event.target.closest("tr").classList.add("selected");
+        }
+
+        // Mostra info selezione
+        document.getElementById("artifactSelectionInfo").style.display =
+          "block";
+        document.getElementById("selectedArtifactInfo").innerHTML = `
+          <strong>${artifact.name}</strong> - ${getElementEmoji(
+          artifact.type
+        )} ${artifact.type} | ${"⭐".repeat(artifact.rarity)}<br>
+          <strong>2pc:</strong> ${artifact.setBonus["2pc"]}<br>
+          <strong>4pc:</strong> ${artifact.setBonus["4pc"]}<br>
+          <strong>Consigliato per:</strong> ${
+            artifact.bestFor ? artifact.bestFor.join(", ") : "N/A"
+          }
+        `;
+
+        // Mostra la sezione note
+        document.getElementById("notesSection").style.display = "block";
+      }
+
+      function filterArtifacts() {
+        const searchTerm = document
+          .getElementById("artifactSearch")
+          .value.toLowerCase();
+        const rows = document.querySelectorAll("#artifactTableBody tr");
+
+        rows.forEach((row) => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(searchTerm) ? "" : "none";
+        });
+      }
+
+      // Funzioni per salvare le voci
+      function getJourneyKey() {
+        const user = localStorage.getItem("user");
+        return user ? `${user}_journey_entries` : "journey_entries";
+      }
+      function getEntries() {
+        return JSON.parse(localStorage.getItem(getJourneyKey()) || "[]");
+      }
+      function saveEntries(entries) {
+        localStorage.setItem(getJourneyKey(), JSON.stringify(entries));
+      }
+
+      function saveEntry(e) {
+        e.preventDefault();
+
+        if (!selectedCharacter) {
+          alert("Seleziona prima un personaggio!");
+          return;
+        }
+
+        const title = document.getElementById("entryTitle").value.trim();
+        const content = document.getElementById("entryContent").value.trim();
+
+        if (!content) {
+          alert("Inserisci il contenuto della voce!");
+          return;
+        }
+
+        const date = new Date().toLocaleDateString("it-IT", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        const entry = {
+          date,
+          title,
+          content,
+          character: selectedCharacter.name,
+          artifact: selectedArtifact ? selectedArtifact.name : null,
+        };
+
+        const entries = getEntries();
+        entries.unshift(entry);
+        saveEntries(entries);
+
+        // Mostra feedback di salvataggio
+        showSaveFeedback("✅ Voce salvata con successo!");
+
+        // Reset form
+        document.getElementById("notesForm").reset();
+
+        // Reset selezioni
+        selectedCharacter = null;
+        selectedArtifact = null;
+        document.getElementById("characterSelectionInfo").style.display =
+          "none";
+        document.getElementById("artifactSelectionInfo").style.display = "none";
+        document.getElementById("artifactsSection").style.display = "none";
+        document.getElementById("notesSection").style.display = "none";
+
+        // Rimuovi selezione dalle tabelle
+        document.querySelectorAll(".data-table tr.selected").forEach((row) => {
+          row.classList.remove("selected");
+        });
+
+        renderEntries();
+      }
+
+      // Funzione per mostrare feedback di salvataggio
+      function showSaveFeedback(message) {
+        // Rimuovi feedback esistenti
+        const existingFeedback = document.querySelector(".save-feedback");
+        if (existingFeedback) {
+          existingFeedback.remove();
+        }
+
+        // Crea nuovo feedback
+        const feedback = document.createElement("div");
+        feedback.className = "save-feedback";
+        feedback.textContent = message;
+        document.body.appendChild(feedback);
+
+        // Mostra feedback
+        setTimeout(() => {
+          feedback.classList.add("show");
+        }, 100);
+
+        // Nascondi feedback dopo 3 secondi
+        setTimeout(() => {
+          feedback.classList.remove("show");
+          setTimeout(() => {
+            feedback.remove();
+          }, 300);
+        }, 3000);
+      }
+
+      // Funzione per esportare i dati
+      function saveToFile() {
+        const entries = getEntries();
+        if (entries.length === 0) {
+          alert("Nessun dato da esportare!");
+          return;
+        }
+
+        const dataStr = JSON.stringify(entries, null, 2);
+        const dataBlob = new Blob([dataStr], { type: "application/json" });
+        const url = URL.createObjectURL(dataBlob);
+
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `journey_data_${
+          new Date().toISOString().split("T")[0]
+        }.json`;
+        link.click();
+
+        URL.revokeObjectURL(url);
+        showSaveFeedback("📁 Dati esportati con successo!");
+      }
+
+      // Funzione per importare i dati
+      function loadFromFile() {
+        const input = document.createElement("input");
+        input.type = "file";
+        input.accept = ".json";
+        input.onchange = function (e) {
+          const file = e.target.files[0];
+          if (!file) return;
+
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            try {
+              const importedData = JSON.parse(e.target.result);
+              if (Array.isArray(importedData)) {
+                // Chiedi conferma prima di sovrascrivere
+                if (
+                  confirm(
+                    `Importare ${importedData.length} voci? I dati esistenti verranno sostituiti.`
+                  )
+                ) {
+                  saveEntries(importedData);
+                  renderEntries();
+                  showSaveFeedback(
+                    `📂 Importati ${importedData.length} elementi!`
+                  );
+                }
+              } else {
+                alert("Formato file non valido!");
+              }
+            } catch (error) {
+              alert("Errore nel caricamento del file: " + error.message);
+            }
+          };
+          reader.readAsText(file);
+        };
+        input.click();
+      }
+
+      function renderEntries() {
+        const entries = getEntries();
+        const entriesList = document.getElementById("entriesList");
+        const emptyMessage = document.getElementById("emptyMessage");
+
+        entriesList.innerHTML = "";
+
+        if (entries.length === 0) {
+          emptyMessage.style.display = "";
+          return;
+        }
+
+        emptyMessage.style.display = "none";
+
+        entries.forEach((entry, idx) => {
+          const div = document.createElement("div");
+          div.className = "entry";
+          div.innerHTML = `
+            <div class="entry-header">
+              <div>
+                <div class="entry-date">${entry.date}</div>
+                <div class="entry-title">${
+                  entry.title || "Voce senza titolo"
+                }</div>
+              </div>
+              <div class="entry-actions">
+                <button title="Modifica" onclick="editEntry(${idx})">✏️</button>
+                <button title="Elimina" onclick="deleteEntry(${idx})">🗑️</button>
+              </div>
+            </div>
+            <div class="entry-content">
+              <strong>Personaggio:</strong> ${entry.character}<br>
+              ${
+                entry.artifact
+                  ? `<strong>Artefatto:</strong> ${entry.artifact}<br>`
+                  : ""
+              }
+              <strong>Note:</strong><br>${entry.content.replace(/\n/g, "<br>")}
+            </div>
+          `;
+          entriesList.appendChild(div);
+        });
+      }
+
+      function deleteEntry(idx) {
+        if (!confirm("Eliminare questa voce dal diario?")) return;
+        const entries = getEntries();
+        entries.splice(idx, 1);
+        saveEntries(entries);
+        renderEntries();
+      }
+
+      function editEntry(idx) {
+        const entries = getEntries();
+        const entry = entries[idx];
+        const newContent = prompt("Modifica le note:", entry.content);
+        if (newContent !== null) {
+          entry.content = newContent;
+          saveEntries(entries);
+          renderEntries();
+        }
+      }
+
+      function clearAllEntries() {
+        if (!confirm("Sicuro di voler svuotare tutto il diario?")) return;
+        saveEntries([]);
+        renderEntries();
+      }
+
+      // Funzione per mostrare il modal con le voci salvate del personaggio
+      function showCharacterEntriesModal(characterName) {
+        console.log(`📚 Apertura modal per le voci di ${characterName}...`);
+
+        // Trova tutte le voci del personaggio
+        const entries = getEntries();
+        const characterEntries = entries.filter(
+          (entry) => entry.character === characterName
+        );
+
+        // Aggiorna il titolo del modal
+        document.getElementById(
+          "modalCharacterTitle"
+        ).innerHTML = `📚 Voci Salvate di <span style="color: #64ffda;">${characterName}</span>`;
+
+        const modalEntries = document.getElementById("modalCharacterEntries");
+        const modalNoEntries = document.getElementById("modalNoEntries");
+
+        if (characterEntries.length === 0) {
+          modalEntries.innerHTML = "";
+          modalNoEntries.style.display = "block";
+        } else {
+          modalNoEntries.style.display = "none";
+          modalEntries.innerHTML = "";
+
+          // Ordina le voci per data (più recenti prima)
+          characterEntries.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+          characterEntries.forEach((entry, index) => {
+            const entryDiv = document.createElement("div");
+            entryDiv.className = "entry";
+            entryDiv.style.cssText = `
+              background: rgba(22, 33, 62, 0.8);
+              border-radius: 12px;
+              padding: 1rem 1.5rem;
+              margin-bottom: 1.2rem;
+              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+              border: 1px solid rgba(255, 255, 255, 0.05);
+              transition: all 0.3s ease;
+            `;
+
+            entryDiv.innerHTML = `
+              <div class="entry-header">
+                <div>
+                  <div class="entry-date" style="font-size: 0.9rem; color: #64ffda; font-weight: 600;">${
+                    entry.date
+                  }</div>
+                  <div class="entry-title" style="font-weight: 600; color: #e0e0e0; margin-top: 0.3rem;">${
+                    entry.title || "Voce senza titolo"
+                  }</div>
+                </div>
+                <div class="entry-actions">
+                  <button title="Modifica" onclick="editModalEntry('${characterName}', ${index})" style="
+                    background: none;
+                    border: none;
+                    color: #64ffda;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    padding: 0.3rem;
+                    border-radius: 4px;
+                  " onmouseover="this.style.background='rgba(100, 255, 218, 0.2)'" onmouseout="this.style.background='none'">✏️</button>
+                  <button title="Elimina" onclick="deleteModalEntry('${characterName}', ${index})" style="
+                    background: none;
+                    border: none;
+                    color: #ff6b6b;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    padding: 0.3rem;
+                    border-radius: 4px;
+                    margin-left: 0.5rem;
+                  " onmouseover="this.style.background='rgba(255, 107, 107, 0.2)'" onmouseout="this.style.background='none'">🗑️</button>
+                </div>
+              </div>
+              <div class="entry-content" style="margin: 0.5rem; white-space: pre-line; color: #b0b0b0;">
+                ${
+                  entry.artifact
+                    ? `<strong>Artefatto:</strong> ${entry.artifact}<br>`
+                    : ""
+                }
+                <strong>Note:</strong><br>${entry.content.replace(
+                  /\n/g,
+                  "<br>"
+                )}
+              </div>
+            `;
+
+            modalEntries.appendChild(entryDiv);
+          });
+        }
+
+        // Mostra il modal con animazione
+        const modal = document.getElementById("characterEntriesModal");
+        modal.style.display = "block";
+        modal.style.opacity = "0";
+        modal.style.transform = "scale(0.9)";
+
+        // Anima l'apertura
+        setTimeout(() => {
+          modal.style.transition = "all 0.3s ease";
+          modal.style.opacity = "1";
+          modal.style.transform = "scale(1)";
+        }, 50);
+
+        console.log(
+          `✅ Modal aperto con ${characterEntries.length} voci di ${characterName}`
+        );
+      }
+
+      // Funzione per chiudere il modal delle voci del personaggio
+      function closeCharacterEntriesModal() {
+        const modal = document.getElementById("characterEntriesModal");
+        modal.style.transition = "all 0.3s ease";
+        modal.style.opacity = "0";
+        modal.style.transform = "scale(0.9)";
+
+        setTimeout(() => {
+          modal.style.display = "none";
+          modal.style.opacity = "";
+          modal.style.transform = "";
+        }, 300);
+      }
+
+      // Funzione per modificare una voce dal modal
+      function editModalEntry(characterName, entryIndex) {
+        const entries = getEntries();
+        const characterEntries = entries.filter(
+          (entry) => entry.character === characterName
+        );
+        const entry = characterEntries[entryIndex];
+
+        if (entry) {
+          const newContent = prompt("Modifica le note:", entry.content);
+          if (newContent !== null) {
+            entry.content = newContent;
+            saveEntries(entries);
+            renderEntries();
+            // Ricarica il modal con i dati aggiornati
+            showCharacterEntriesModal(characterName);
+          }
+        }
+      }
+
+      // Funzione per eliminare una voce dal modal
+      function deleteModalEntry(characterName, entryIndex) {
+        if (!confirm("Eliminare questa voce dal diario?")) return;
+
+        const entries = getEntries();
+        const characterEntries = entries.filter(
+          (entry) => entry.character === characterName
+        );
+        const entry = characterEntries[entryIndex];
+
+        if (entry) {
+          const entryIndexInAll = entries.indexOf(entry);
+          if (entryIndexInAll !== -1) {
+            entries.splice(entryIndexInAll, 1);
+            saveEntries(entries);
+            renderEntries();
+            // Ricarica il modal con i dati aggiornati
+            showCharacterEntriesModal(characterName);
+          }
+        }
+      }
+
+      // Funzioni helper per emoji
+      function getElementEmoji(element) {
+        const elementEmojis = {
+          Pyro: "🔥",
+          Hydro: "💧",
+          Electro: "⚡",
+          Cryo: "❄️",
+          Anemo: "💨",
+          Geo: "🪨",
+          Dendro: "🌱",
+        };
+        return elementEmojis[element] || "💨";
+      }
+
+      function getWeaponEmoji(weapon) {
+        const weaponEmojis = {
+          Sword: "⚔️",
+          Claymore: "🗡️",
+          Polearm: "🔱",
+          Bow: "🏹",
+          Catalyst: "📖",
+        };
+        return weaponEmojis[weapon] || "⚔️";
+      }
+
+      function getRegionEmoji(region) {
+        const regionEmojis = {
+          Mondstadt: "🏰",
+          Liyue: "🏮",
+          Inazuma: "⛩️",
+          Sumeru: "🏛️",
+          Fontaine: "🌊",
+          Natlan: "🌋",
+          Snezhnaya: "❄️",
+          "Khaenri'ah": "⚫",
+          Other: "🌍",
+        };
+        return regionEmojis[region] || "🏰";
+      }
+
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("userControls");
+        if (!el) return;
+        if (user) {
+          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><button onclick='doLogout()'>Logout</button>`;
+        } else {
+          el.innerHTML = `<a href='login.html' class='btn-login'>Login</a> <a href='registrazione.html' class='btn-register'>Registrati</a>`;
+        }
+      }
+      function openLoginModal() {
+        document.getElementById("loginModal").style.display = "block";
+      }
+      function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+      }
+      function doLogin() {
+        const u = document.getElementById("loginUsername").value;
+        const p = document.getElementById("loginPassword").value;
+        if (u === "k1ngadr1an" && p === "1234") {
+          localStorage.setItem("user", u);
+          closeLoginModal();
+          renderUserControls();
+          location.reload();
+        } else {
+          alert("Credenziali non valide");
+        }
+      }
+      function doLogout() {
+        localStorage.removeItem("user");
+        renderUserControls();
+        location.reload();
+      }
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      onclick="scrollToTop()"
+      aria-label="Torna in cima"
+    >
+      ↑
+    </button>
+
+    <script>
+      // Scroll to Top functionality
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // Show/hide scroll to top button based on scroll position
+      window.addEventListener("scroll", function () {
+        const scrollButton = document.getElementById("scrollToTop");
+        if (window.pageYOffset > 300) {
+          scrollButton.classList.add("show");
+        } else {
+          scrollButton.classList.remove("show");
+        }
+      });
+    </script>
+
+    <script>
+      // Previeni conflitti con script.js
+      window.isJourneyPage = true;
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

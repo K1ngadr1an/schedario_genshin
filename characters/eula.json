@@ -1,0 +1,150 @@
+{
+  "displayName": "Eula",
+  "img": "images/characters/eula.png",
+  "tags": [
+    "Claymore",
+    "Cryo",
+    "Mondstadt",
+    "5★",
+    "Physical DPS",
+    "Spindrift Knight"
+  ],
+  "description": "The Spindrift Knight, captain of the Knights of Favonius Reconnaissance Company. Eula is a powerful physical DPS who excels at dealing massive burst damage.",
+  "weapons": [
+    {
+      "name": "Song of Broken Pines",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Song_of_Broken_Pines.png",
+      "note": "Physical DMG Bonus"
+    },
+    {
+      "name": "Wolf's Gravestone",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Wolf's_Gravestone.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Serpent_Spine.png",
+      "note": "CRIT Rate"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Pale Flame (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+    },
+    {
+      "name": "Bloodstained Chivalry (2) + Pale Flame (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Bloodstained_Chivalry.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Physical DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Favonius Bladework - Edel",
+    "Icetide Vortex",
+    "Glacial Illumination"
+  ],
+  "info": "Eula is the premier physical DPS in Genshin Impact, capable of dealing massive burst damage with her Elemental Burst. Build her for Physical DMG Bonus, CRIT, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Song of Broken Pines",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Song_of_Broken_Pines.png",
+        "note": "Physical DMG Bonus"
+      },
+      "artifacts": [
+        {
+          "name": "Pale Flame (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Eula" },
+      { "name": "Raiden Shogun" },
+      { "name": "Rosaria" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Eula" },
+      { "name": "Mika" },
+      { "name": "Fischl" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Favonius Bladework - Edel",
+      "desc": "Performs up to 5 consecutive strikes with a claymore.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Favonius_Bladework_-_Edel.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive strikes with a claymore.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks against all nearby opponents. At the end of the sequence, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Icetide Vortex",
+      "desc": "Eula slashes swiftly, dealing Cryo DMG. Press: Deals Cryo DMG and gains a Grimheart stack. Hold: Consumes Grimheart stacks to deal AoE Cryo DMG and decrease opponents' Physical and Cryo RES.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Icetide_Vortex.png",
+      "details_html": "<div class='skill-section'><b>Press</b><br>Deals Cryo DMG and gains a Grimheart stack (max 2).<br><b>Hold</b><br>Consumes all Grimheart stacks, dealing AoE Cryo DMG and decreasing opponents' Physical and Cryo RES.</div>"
+    },
+    {
+      "name": "Glacial Illumination",
+      "desc": "Eula brandishes her greatsword, dealing AoE Cryo DMG and creating a Lightfall Sword that follows her around. The Lightfall Sword charges up and explodes at the end, dealing massive Physical DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Glacial_Illumination.png",
+      "details_html": "<div class='skill-section'><b>Glacial Illumination</b><br>Deals AoE Cryo DMG and creates a Lightfall Sword that follows Eula. The Lightfall Sword charges up and explodes at the end, dealing massive Physical DMG based on the number of stacks accumulated.</div>"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Roiling Rime",
+      "phase": "Ascension Phase 1",
+      "desc": "If 2 stacks of Grimheart are consumed upon unleashing the Hold mode of Icetide Vortex, a Shattered Lightfall Sword will be created that will explode immediately, dealing 50% of the basic Physical DMG dealt by a Lightfall Sword created by Glacial Illumination."
+    },
+    {
+      "name": "Wellspring of War-Lust",
+      "phase": "Ascension Phase 4",
+      "desc": "When Glacial Illumination is cast, Eula gains 1 stack of Grimheart."
+    },
+    {
+      "name": "Aristocratic Introspection",
+      "phase": "Passive",
+      "desc": "When Eula crafts Character Talent Materials, she has a 10% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Tidal Illusion",
+      "phase": "Constellation Lv. 1",
+      "desc": "Every time Grimheart stacks are consumed, Eula's Physical DMG is increased by 30% for 6s. Each stack consumed increases the duration by 6s up to a maximum of 18s."
+    },
+    {
+      "name": "Lady of Seafoam",
+      "phase": "Constellation Lv. 2",
+      "desc": "Decreases the CD of Icetide Vortex by 10% and allows it to be used while sprinting."
+    },
+    {
+      "name": "Lawrence Pedigree",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Glacial Illumination by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "The Obstinacy of One's Inferiors",
+      "phase": "Constellation Lv. 4",
+      "desc": "Lightfall Swords deal 25% increased DMG against opponents with less than 50% HP."
+    },
+    {
+      "name": "Chivalric Quality",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Icetide Vortex by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Noble Obligation",
+      "phase": "Constellation Lv. 6",
+      "desc": "Lightfall Swords created by Glacial Illumination start with 5 stacks of energy. Normal Attacks, Elemental Skills, and Elemental Bursts have a 50% chance to grant an additional stack of energy."
+    }
+  ]
+}

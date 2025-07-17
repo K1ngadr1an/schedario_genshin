@@ -1,0 +1,3061 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Migliori Team Teatro Immaginario - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 8.5rem; /* Adatta se serve in base all'altezza header */
+      }
+      #main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 3000;
+        background: rgba(26, 26, 46, 0.98);
+        box-shadow: 0 2px 16px #0005;
+        transition: opacity 0.4s;
+      }
+      #main-header.header-hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .main-title {
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+      #stage-nav {
+        margin-bottom: 0.5rem;
+        margin-top: 2.2rem;
+      }
+      body.logged-in #stage-nav {
+        margin-top: 3.5rem;
+      }
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(26, 26, 46, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 2px 16px #0005;
+        padding: 0.5rem 0 0.5rem 0;
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.13rem;
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.1);
+        color: #64ffda;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .nav-link.active {
+        background: #64ffda;
+        color: #16213e;
+        box-shadow: 0 2px 12px #64ffda55;
+        cursor: default;
+      }
+      @media (max-width: 700px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          font-size: 0.98rem;
+          padding: 0.3rem 0;
+        }
+        .nav-link {
+          padding: 0.5rem 0.7rem;
+          font-size: 1rem;
+        }
+      }
+      /* Stili per i bottoni dei filtri elemento */
+      .element-filter-btn {
+        padding: 0.6rem 1.2rem;
+        border-radius: 10px;
+        border: 1.5px solid rgba(100, 255, 218, 0.3);
+        background: rgba(15, 52, 96, 0.6);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+      }
+      .element-filter-btn:hover {
+        background: rgba(100, 255, 218, 0.15);
+        border-color: #64ffda;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+      }
+      .element-filter-btn.active {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border-color: #64ffda;
+        box-shadow: 0 4px 16px rgba(100, 255, 218, 0.4);
+        transform: translateY(-2px);
+      }
+      /* Stili per le opzioni personaggio nel modale */
+      .character-modal-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 110px;
+        min-height: 110px;
+        width: 110px;
+        height: 110px;
+        background: linear-gradient(
+          135deg,
+          rgba(22, 33, 62, 0.8),
+          rgba(15, 52, 96, 0.8)
+        );
+        border-radius: 18px;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      .character-modal-option img {
+        width: 90px;
+        height: 90px;
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: 1/1;
+        object-fit: contain !important;
+        background: #16213e;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px #000a;
+        padding: 6px;
+        display: block;
+        margin: 0 auto 4px auto;
+      }
+      .character-modal-option::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+      .character-modal-option:hover::before {
+        left: 100%;
+      }
+      .character-modal-option:hover:not(.disabled) {
+        background: linear-gradient(
+          135deg,
+          rgba(100, 255, 218, 0.15),
+          rgba(0, 212, 170, 0.1)
+        );
+        border-color: #64ffda;
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(100, 255, 218, 0.3);
+      }
+      .character-modal-option.selected {
+        background: linear-gradient(
+          135deg,
+          rgba(100, 255, 218, 0.2),
+          rgba(0, 212, 170, 0.15)
+        );
+        border-color: #64ffda;
+        box-shadow: 0 8px 24px rgba(100, 255, 218, 0.4);
+        transform: translateY(-2px);
+      }
+      .character-modal-option.hidden {
+        display: none;
+      }
+      .character-modal-option.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        filter: grayscale(50%);
+      }
+      /* Stili per team section e card */
+      .team-section {
+        max-width: 1100px;
+        margin: 2rem auto;
+        background: rgba(26, 26, 46, 0.92);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        padding: 2rem 1.5rem 2.5rem 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .team-title {
+        font-size: 1.5rem;
+        color: #64ffda;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      .team-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem 2rem;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+      }
+      .team-card {
+        background: rgba(22, 33, 62, 0.93);
+        border-radius: 14px;
+        box-shadow: 0 4px 18px #0007;
+        padding: 2rem 2rem 2.5rem 2rem;
+        min-width: 400px;
+        max-width: 460px;
+        flex: 1 1 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1.5px solid rgba(100, 255, 218, 0.08);
+        transition: box-shadow 0.2s, border 0.2s;
+      }
+      .team-card:hover {
+        box-shadow: 0 8px 32px #64ffda33;
+        border: 1.5px solid #64ffda;
+      }
+      .team-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #64ffda;
+        margin-bottom: 0.9rem;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+      .character-row {
+        display: flex;
+        gap: 1.1rem;
+        justify-content: center;
+        margin-bottom: 0.7rem;
+      }
+      .character-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 14px;
+        background: #222;
+        object-fit: cover;
+        border: 2.5px solid #16213e;
+        box-shadow: 0 2px 8px #000a;
+        transition: border 0.2s;
+        cursor: pointer;
+        position: relative;
+      }
+      .character-icon:hover {
+        border: 2px solid #64ffda;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+      }
+      .team-explanation {
+        background: rgba(15, 52, 96, 0.85);
+        border-radius: 10px;
+        padding: 1.1rem 1.2rem;
+        margin-top: 0.9rem;
+        margin-bottom: 0.4rem;
+        color: #b0eaff;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 8px #00bcd422;
+        border: 1px solid rgba(100, 255, 218, 0.07);
+        width: 100%;
+        text-align: center;
+        position: relative;
+        padding-right: 30px;
+      }
+      .team-rotation {
+        background: rgba(100, 255, 218, 0.08);
+        color: #e0e0e0;
+        font-size: 1.05rem;
+        margin-bottom: 0;
+        border-radius: 10px;
+        padding: 1.1rem 1.2rem;
+        margin-top: 0.9rem;
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.1);
+        border: 1px solid rgba(100, 255, 218, 0.07);
+        width: 100%;
+        text-align: center;
+        position: relative;
+        padding-right: 30px;
+      }
+      .edit-icon {
+        color: #64ffda;
+        transition: all 0.2s ease;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        background: rgba(100, 255, 218, 0.08);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        min-width: 32px;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        z-index: 2;
+        box-sizing: content-box;
+        padding: 4px;
+      }
+      .edit-icon:hover {
+        color: #00d4aa;
+        background: rgba(100, 255, 218, 0.2);
+        border-color: #64ffda;
+        transform: scale(1.1);
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.3);
+      }
+      /* Pulsanti Login/Registrati Navbar */
+      .btn-login,
+      .btn-register {
+        background: linear-gradient(135deg, #64ffda, #00d4aa) !important;
+        color: #16213e !important;
+        border: none;
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 6px 24px rgba(100, 255, 218, 0.25),
+          0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Fredoka", sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        outline: none;
+      }
+      .btn-login:hover,
+      .btn-register:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda) !important;
+        color: #fff !important;
+        box-shadow: 0 10px 32px rgba(100, 255, 218, 0.35),
+          0 4px 16px rgba(0, 0, 0, 0.13);
+        transform: translateY(-2px) scale(1.03);
+      }
+      .btn-login:active,
+      .btn-register:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.18);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-header">
+      <nav class="main-navbar">
+        <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+        <a href="gestione.html" class="nav-link"><span>🛠️</span> Gestione</a>
+        <a href="calendario.html" class="nav-link"
+          ><span>📅</span> Calendario</a
+        >
+        <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+        <a href="build-rating.html" class="nav-link"
+          ><span>⭐</span> Build Rating</a
+        >
+        <a href="migliori%20team%20abisso.html" class="nav-link"
+          ><span>👥</span> Migliori Team Abisso</a
+        >
+        <a href="best_comp_teatro.html" class="nav-link active"
+          ><span>🎭</span> Migliori Team Teatro Immaginario</a
+        >
+        <a href="calcolatore-danni.html" class="nav-link"
+          ><span>⚔️</span> Calcolatore Danni</a
+        >
+        <a href="Community Build.html" class="nav-link"
+          ><span>🏗️</span> Community Build</a
+        >
+        <div style="flex: 1"></div>
+        <span id="userControls" style="margin-left: auto"></span>
+      </nav>
+      <h1 class="main-title">🎭 Migliori Team Teatro Immaginario</h1>
+      <div id="stage-nav" style="text-align: center; margin-bottom: 1.5rem">
+        <button
+          id="btn-stage-1"
+          onclick="setActiveStage('Stage 1')"
+          style="
+            margin: 0 0.5rem;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: #64ffda;
+            color: #16213e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+          "
+        >
+          Stage 1
+        </button>
+        <button
+          id="btn-stage-2"
+          onclick="setActiveStage('Stage 2')"
+          style="
+            margin: 0 0.5rem;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: #64ffda;
+            color: #16213e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+          "
+        >
+          Stage 2
+        </button>
+        <button
+          id="btn-stage-3"
+          onclick="setActiveStage('Stage 3')"
+          style="
+            margin: 0 0.5rem;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: #64ffda;
+            color: #16213e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+          "
+        >
+          Stage 3
+        </button>
+        <button
+          id="btn-stage-4"
+          onclick="setActiveStage('Stage 4')"
+          style="
+            margin: 0 0.5rem;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: #64ffda;
+            color: #16213e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+          "
+        >
+          Stage 4
+        </button>
+      </div>
+    </div>
+    <div id="teatroTeamsContainer"></div>
+
+    <!-- Pulsante per creare nuovo team -->
+    <div style="text-align: center; margin: 2rem 0">
+      <button
+        id="createTeatroTeamBtn"
+        style="
+          padding: 1rem 2rem;
+          border-radius: 10px;
+          border: none;
+          background: linear-gradient(135deg, #64ffda, #00d4aa);
+          color: #16213e;
+          font-weight: 700;
+          cursor: pointer;
+          font-family: 'Fredoka', sans-serif;
+          font-size: 1.1rem;
+          box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+        "
+      >
+        ➕ Crea Nuovo Team
+      </button>
+    </div>
+
+    <!-- Modale creazione nuovo team -->
+    <div
+      id="createTeatroTeamModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.95);
+        backdrop-filter: blur(8px);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+        animation: modalFadeIn 0.3s ease;
+      "
+    >
+      <div
+        style="
+          background: linear-gradient(
+            135deg,
+            rgba(26, 26, 46, 0.98),
+            rgba(22, 33, 62, 0.98)
+          );
+          border-radius: 22px;
+          padding: 2.5rem 2rem;
+          max-width: 600px;
+          width: 96vw;
+          max-height: 90vh;
+          overflow-y: auto;
+          border: 2.5px solid #64ffda;
+          box-shadow: 0 20px 60px 0 rgba(100, 255, 218, 0.2),
+            0 8px 32px rgba(0, 0, 0, 0.4);
+          position: relative;
+          animation: modalSlideIn 0.3s ease;
+        "
+      >
+        <h2
+          style="
+            color: #64ffda;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, #64ffda, #00d4aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+        >
+          Crea Nuovo Team
+        </h2>
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Nome Team:</label
+          >
+          <input
+            type="text"
+            id="newTeatroTeamName"
+            style="
+              width: 100%;
+              padding: 1rem 1.2rem;
+              border-radius: 12px;
+              border: 2px solid rgba(100, 255, 218, 0.3);
+              background: rgba(15, 52, 96, 0.8);
+              color: #e0e0e0;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1rem;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(10px);
+            "
+          />
+        </div>
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Stage:</label
+          >
+          <select
+            id="newTeatroTeamStage"
+            style="
+              width: 100%;
+              padding: 1rem 1.2rem;
+              border-radius: 12px;
+              border: 2px solid rgba(100, 255, 218, 0.3);
+              background: rgba(15, 52, 96, 0.8);
+              color: #e0e0e0;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1rem;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(10px);
+            "
+          >
+            <option value="Stage 1">Stage 1</option>
+            <option value="Stage 2">Stage 2</option>
+            <option value="Stage 3">Stage 3</option>
+            <option value="Stage 4">Stage 4</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Personaggi:</label
+          >
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 1rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <div
+              class="new-teatro-character-slot"
+              data-position="0"
+              style="
+                width: 80px;
+                height: 80px;
+                border: 2.5px dashed #64ffda;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background: #222;
+              "
+            >
+              <span style="color: #64ffda; font-size: 1.5rem">+</span>
+            </div>
+            <div
+              class="new-teatro-character-slot"
+              data-position="1"
+              style="
+                width: 80px;
+                height: 80px;
+                border: 2.5px dashed #64ffda;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background: #222;
+              "
+            >
+              <span style="color: #64ffda; font-size: 1.5rem">+</span>
+            </div>
+            <div
+              class="new-teatro-character-slot"
+              data-position="2"
+              style="
+                width: 80px;
+                height: 80px;
+                border: 2.5px dashed #64ffda;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background: #222;
+              "
+            >
+              <span style="color: #64ffda; font-size: 1.5rem">+</span>
+            </div>
+            <div
+              class="new-teatro-character-slot"
+              data-position="3"
+              style="
+                width: 80px;
+                height: 80px;
+                border: 2.5px dashed #64ffda;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background: #222;
+              "
+            >
+              <span style="color: #64ffda; font-size: 1.5rem">+</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Spiegazione:</label
+          >
+          <textarea
+            id="newTeatroTeamExplanation"
+            rows="3"
+            style="
+              width: 100%;
+              padding: 1rem 1.2rem;
+              border-radius: 12px;
+              border: 2px solid rgba(100, 255, 218, 0.3);
+              background: rgba(15, 52, 96, 0.8);
+              color: #e0e0e0;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1rem;
+              resize: vertical;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(10px);
+            "
+          ></textarea>
+        </div>
+        <div style="margin-bottom: 1.5rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Rotazione:</label
+          >
+          <textarea
+            id="newTeatroTeamRotation"
+            rows="2"
+            style="
+              width: 100%;
+              padding: 1rem 1.2rem;
+              border-radius: 12px;
+              border: 2px solid rgba(100, 255, 218, 0.3);
+              background: rgba(15, 52, 96, 0.8);
+              color: #e0e0e0;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1rem;
+              resize: vertical;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(10px);
+            "
+          ></textarea>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <button
+            id="saveNewTeatroTeamBtn"
+            style="
+              padding: 1.2rem 2.5rem;
+              border-radius: 12px;
+              border: none;
+              background: linear-gradient(135deg, #64ffda, #00d4aa);
+              color: #16213e;
+              font-weight: 700;
+              cursor: pointer;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1.1rem;
+              transition: all 0.3s ease;
+              box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+            "
+          >
+            Salva Team
+          </button>
+          <button
+            id="cancelNewTeatroTeamBtn"
+            style="
+              padding: 1.2rem 2.5rem;
+              border-radius: 12px;
+              border: 1.5px solid rgba(255, 255, 255, 0.3);
+              background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.15),
+                rgba(255, 255, 255, 0.1)
+              );
+              color: #e0e0e0;
+              font-weight: 700;
+              cursor: pointer;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1.1rem;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(5px);
+            "
+          >
+            Annulla
+          </button>
+          <button
+            id="deleteTeatroTeamBtn"
+            style="
+              display: none;
+              padding: 1.2rem 2.5rem;
+              border-radius: 12px;
+              border: none;
+              background: linear-gradient(135deg, #ff1744, #ff616f);
+              color: #fff;
+              font-weight: 700;
+              cursor: pointer;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1.1rem;
+              transition: all 0.3s ease;
+              box-shadow: 0 4px 12px rgba(255, 23, 68, 0.2);
+            "
+          >
+            Elimina Team
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale selezione personaggi -->
+    <div
+      id="teatroCharacterModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.95);
+        backdrop-filter: blur(8px);
+        z-index: 4000;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        animation: modalFadeIn 0.3s ease;
+      "
+    >
+      <div
+        id="teatroCharacterModalContent"
+        style="
+          background: linear-gradient(
+            135deg,
+            rgba(26, 26, 46, 0.98),
+            rgba(22, 33, 62, 0.98)
+          );
+          border-radius: 22px;
+          padding: 2.5rem 2rem 2rem 2rem;
+          max-width: 700px;
+          width: 96vw;
+          max-height: 90vh;
+          overflow-y: auto;
+          border: 2.5px solid #64ffda;
+          box-shadow: 0 20px 60px 0 rgba(100, 255, 218, 0.2),
+            0 8px 32px rgba(0, 0, 0, 0.4);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          animation: modalSlideIn 0.3s ease;
+        "
+      >
+        <h2
+          id="teatroCharacterModalTitle"
+          style="
+            color: #64ffda;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #64ffda33;
+            background: linear-gradient(135deg, #64ffda, #00d4aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+        >
+          Seleziona Personaggio
+        </h2>
+        <p
+          id="teatroCharacterModalSubtitle"
+          style="
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            opacity: 0.85;
+            font-weight: 500;
+          "
+        >
+          Scegli un personaggio per il team
+        </p>
+        <input
+          type="text"
+          id="teatroCharacterSearchInput"
+          placeholder="Cerca personaggio..."
+          style="
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            border: 2px solid rgba(100, 255, 218, 0.3);
+            background: rgba(15, 52, 96, 0.8);
+            color: #e0e0e0;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+          "
+        />
+        <div
+          id="teatroCharacterFilters"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 0.8rem;
+            justify-content: center;
+          "
+        ></div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+          "
+        >
+          <span
+            id="teatroCharacterCount"
+            style="color: #64ffda; font-size: 1rem"
+          ></span>
+          <span
+            id="teatroFilterStatus"
+            style="color: #b0eaff; font-size: 1rem"
+          ></span>
+        </div>
+        <div
+          id="teatroCharacterModalGrid"
+          style="
+            display: flex;
+            flex-direction: row;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            overflow-x: auto;
+            padding: 0.8rem 0.4rem;
+            scrollbar-width: thin;
+            scrollbar-color: #64ffda rgba(100, 255, 218, 0.1);
+          "
+        ></div>
+        <div
+          style="
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+          "
+        >
+          <button
+            id="teatroCharacterModalSave"
+            disabled
+            style="
+              padding: 1.2rem 2.5rem;
+              border-radius: 12px;
+              border: none;
+              font-weight: 700;
+              cursor: pointer;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1.1rem;
+              transition: all 0.3s ease;
+              position: relative;
+              overflow: hidden;
+              background: linear-gradient(135deg, #64ffda, #00d4aa);
+              color: #16213e;
+              box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+            "
+          >
+            Seleziona Personaggio
+          </button>
+          <button
+            id="teatroCharacterModalCancel"
+            style="
+              padding: 1.2rem 2.5rem;
+              border-radius: 12px;
+              border: none;
+              font-weight: 700;
+              cursor: pointer;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1.1rem;
+              transition: all 0.3s ease;
+              position: relative;
+              overflow: hidden;
+              background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.15),
+                rgba(255, 255, 255, 0.1)
+              );
+              color: #e0e0e0;
+              border: 1.5px solid rgba(255, 255, 255, 0.3);
+              backdrop-filter: blur(5px);
+            "
+          >
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modali per modificare team esistenti -->
+    <!-- Modale modifica nome team -->
+    <div
+      id="editTeatroTeamNameModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.92);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: #222;
+          border-radius: 18px;
+          padding: 2rem;
+          min-width: 320px;
+          max-width: 90vw;
+          box-shadow: 0 8px 32px #64ffda33;
+        "
+      >
+        <h2 style="color: #64ffda; text-align: center; margin-bottom: 1rem">
+          Modifica Nome Team
+        </h2>
+        <input
+          id="editTeatroTeamNameInput"
+          style="
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid #64ffda;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+          "
+        />
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <button
+            id="saveEditTeatroTeamNameBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #64ffda;
+              color: #16213e;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Salva
+          </button>
+          <button
+            id="cancelEditTeatroTeamNameBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #333;
+              color: #fff;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale modifica descrizione -->
+    <div
+      id="editTeatroDescriptionModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.92);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: #222;
+          border-radius: 18px;
+          padding: 2rem;
+          min-width: 320px;
+          max-width: 90vw;
+          box-shadow: 0 8px 32px #64ffda33;
+        "
+      >
+        <h2 style="color: #64ffda; text-align: center; margin-bottom: 1rem">
+          Modifica Descrizione
+        </h2>
+        <textarea
+          id="editTeatroDescriptionInput"
+          rows="4"
+          style="
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid #64ffda;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+          "
+        ></textarea>
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <button
+            id="saveEditTeatroDescriptionBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #64ffda;
+              color: #16213e;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Salva
+          </button>
+          <button
+            id="cancelEditTeatroDescriptionBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #333;
+              color: #fff;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale modifica rotazione -->
+    <div
+      id="editTeatroRotationModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.92);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: #222;
+          border-radius: 18px;
+          padding: 2rem;
+          min-width: 320px;
+          max-width: 90vw;
+          box-shadow: 0 8px 32px #64ffda33;
+        "
+      >
+        <h2 style="color: #64ffda; text-align: center; margin-bottom: 1rem">
+          Modifica Rotazione
+        </h2>
+        <textarea
+          id="editTeatroRotationInput"
+          rows="3"
+          style="
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid #64ffda;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+          "
+        ></textarea>
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <button
+            id="saveEditTeatroRotationBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #64ffda;
+              color: #16213e;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Salva
+          </button>
+          <button
+            id="cancelEditTeatroRotationBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #333;
+              color: #fff;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal login/registrazione -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Login / Registrati</h2>
+        <input id="loginUsername" placeholder="Username" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button class="btn-login" onclick="doLogin()">Login</button>
+        <button class="btn-register" onclick="doLogin(true)">Registrati</button>
+      </div>
+    </div>
+
+    <!-- Calendario Teatri Immaginari -->
+    <div
+      id="teatroCalendarContainer"
+      style="
+        max-width: 900px;
+        margin: 2rem auto 1rem auto;
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        background: rgba(26, 26, 46, 0.97);
+        border-radius: 18px;
+        box-shadow: 0 4px 24px #0005;
+        text-align: center;
+      "
+    >
+      <h2
+        style="
+          color: #64ffda;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1.2rem;
+        "
+      >
+        📅 Calendario Teatri Immaginari
+      </h2>
+      <div
+        id="teatroCalendar"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          justify-content: center;
+        "
+      ></div>
+      <div style="color: #b0eaff; font-size: 1rem; margin-top: 0.7rem">
+        Clicca su una data per vedere i team di quel Teatro Immaginario
+      </div>
+    </div>
+
+    <script>
+      // --- 1. Caricamento personaggi da character.json (con fallback) ---
+      // Usa la variabile globale allCharacters da script.js
+      let characterDataLoaded = false;
+      // Variabile globale per filtro elemento consigliati
+      let currentConsigliatiElement = "all";
+      async function loadCharacterData() {
+        if (characterDataLoaded && allCharacters && allCharacters.length > 0)
+          return allCharacters;
+        try {
+          const response = await fetch("character.json");
+          const data = await response.json();
+          allCharacters = data.characters || [];
+          characterDataLoaded = true;
+          return allCharacters;
+        } catch (error) {
+          // Fallback statico (puoi aggiungere altri personaggi se vuoi)
+          allCharacters = [
+            {
+              name: "Xingqiu",
+              element: "Hydro",
+              image: "images/characters/xingqiu.png",
+            },
+            {
+              name: "Zhongli",
+              element: "Geo",
+              image: "images/characters/zhongli.png",
+            },
+            {
+              name: "Albedo",
+              element: "Geo",
+              image: "images/characters/albedo.png",
+            },
+            {
+              name: "Raiden Shogun",
+              element: "Electro",
+              image: "images/characters/raiden.png",
+            },
+            {
+              name: "Bennett",
+              element: "Pyro",
+              image: "images/characters/bennett.png",
+            },
+            {
+              name: "Xiangling",
+              element: "Pyro",
+              image: "images/characters/xiangling.png",
+            },
+            {
+              name: "Kazuha",
+              element: "Anemo",
+              image: "images/characters/kazuha.png",
+            },
+            {
+              name: "Ganyu",
+              element: "Cryo",
+              image: "images/characters/ganyu.png",
+            },
+            {
+              name: "Mona",
+              element: "Hydro",
+              image: "images/characters/mona.png",
+            },
+            {
+              name: "Venti",
+              element: "Anemo",
+              image: "images/characters/venti.png",
+            },
+            {
+              name: "Diona",
+              element: "Cryo",
+              image: "images/characters/diona.png",
+            },
+            {
+              name: "Ayaka",
+              element: "Cryo",
+              image: "images/characters/ayaka.png",
+            },
+            {
+              name: "Kokomi",
+              element: "Hydro",
+              image: "images/characters/kokomi.png",
+            },
+            {
+              name: "Shenhe",
+              element: "Cryo",
+              image: "images/characters/shenhe.png",
+            },
+            {
+              name: "Arataki Itto",
+              element: "Geo",
+              image: "images/characters/itto.png",
+            },
+            {
+              name: "Gorou",
+              element: "Geo",
+              image: "images/characters/gorou.png",
+            },
+            {
+              name: "Tartaglia",
+              element: "Hydro",
+              image: "images/characters/childe.png",
+            },
+            {
+              name: "Xiao",
+              element: "Anemo",
+              image: "images/characters/xiao.png",
+            },
+            {
+              name: "Jean",
+              element: "Anemo",
+              image: "images/characters/jean.png",
+            },
+            {
+              name: "Eula",
+              element: "Cryo",
+              image: "images/characters/eula.png",
+            },
+            {
+              name: "Rosaria",
+              element: "Cryo",
+              image: "images/characters/rosaria.png",
+            },
+            {
+              name: "Noelle",
+              element: "Geo",
+              image: "images/characters/noelle.png",
+            },
+            {
+              name: "Ningguang",
+              element: "Geo",
+              image: "images/characters/ningguang.png",
+            },
+            {
+              name: "Yanfei",
+              element: "Pyro",
+              image: "images/characters/yanfei.png",
+            },
+            {
+              name: "Razor",
+              element: "Electro",
+              image: "images/characters/razor.png",
+            },
+            {
+              name: "Diluc",
+              element: "Pyro",
+              image: "images/characters/diluc.png",
+            },
+            {
+              name: "Keqing",
+              element: "Electro",
+              image: "images/characters/keqing.png",
+            },
+            {
+              name: "Sucrose",
+              element: "Anemo",
+              image: "images/characters/sucrose.png",
+            },
+            {
+              name: "Fischl",
+              element: "Electro",
+              image: "images/characters/fischl.png",
+            },
+            {
+              name: "Traveler",
+              element: "Anemo",
+              image: "images/characters/traveler.png",
+            },
+          ];
+          return allCharacters;
+        }
+      }
+
+      // --- Variabile per la data attualmente selezionata dal calendario ---
+      let activeStageOnly = "Stage 1";
+      const teatroDates = [
+        { date: "1 Marzo 2024", label: "Marzo 2024", stage: "Stage 1" },
+        { date: "1 Aprile 2024", label: "Aprile 2024", stage: "Stage 2" },
+        { date: "1 Maggio 2024", label: "Maggio 2024", stage: "Stage 3" },
+        { date: "1 Giugno 2025", label: "Giugno 2025", stage: "Stage 4" },
+        { date: "1 Luglio 2025", label: "Luglio 2025", stage: "Stage 1" }, // Attuale
+        { date: "1 Agosto 2025", label: "Agosto 2025", stage: "Stage 2" },
+        { date: "1 Settembre 2024", label: "Settembre 2024", stage: "Stage 3" },
+        { date: "1 Ottobre 2024", label: "Ottobre 2024", stage: "Stage 4" },
+      ];
+      let currentTeatroDate =
+        teatroDates[teatroDates.length - 3]?.date || teatroDates[0].date; // default: penultima (attuale)
+
+      // --- Struttura dati: team per data ---
+      let teatroTeamsDataByDate = {};
+
+      // Carica i team dal localStorage per la data selezionata
+      function loadTeatroTeamsData() {
+        const saved = localStorage.getItem(
+          getUserStorageKey("customTeatroTeamsByDate")
+        );
+        if (saved) {
+          teatroTeamsDataByDate = JSON.parse(saved);
+        }
+        if (!teatroTeamsDataByDate[currentTeatroDate]) {
+          teatroTeamsDataByDate[currentTeatroDate] = {
+            "Stage 1": [],
+            "Stage 2": [],
+            "Stage 3": [],
+            "Stage 4": [],
+          };
+        }
+      }
+      // Salva i team su localStorage per la data selezionata
+      function saveTeatroTeamsData() {
+        localStorage.setItem(
+          getUserStorageKey("customTeatroTeamsByDate"),
+          JSON.stringify(teatroTeamsDataByDate)
+        );
+      }
+
+      // --- Renderizzazione dinamica dei team per data e stage ---
+      function renderTeatroTeams() {
+        loadTeatroTeamsData();
+        const container = document.getElementById("teatroTeamsContainer");
+        const fragment = document.createDocumentFragment();
+        const teatroTeamsData = teatroTeamsDataByDate[currentTeatroDate];
+        // Recupera la configurazione per la data selezionata
+        const config =
+          teatroConfigByDate[currentTeatroDate] || defaultTeatroConfig;
+        Object.keys(teatroTeamsData).forEach((stage) => {
+          if (stage !== activeStageOnly) return;
+          const stageSection = document.createElement("div");
+          stageSection.className = "team-section";
+          stageSection.id = "stage-" + stage.replace(/[^0-9]/g, "");
+
+          const stageTitle = document.createElement("h2");
+          stageTitle.className = "team-title";
+          stageTitle.textContent = stage;
+
+          // Aggiungi la data del prossimo Teatro Immaginario
+          const stageDate = document.createElement("div");
+          stageDate.style.cssText = `
+            text-align: center;
+            color: #b0eaff;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+         `;
+          stageDate.innerHTML = `
+            <span style="color: #64ffda; font-weight: 600;">📅 Prossimo Teatro Immaginario:</span>
+            <br>
+            <span style="font-size: 1.1rem; font-weight: 700;">1 Luglio 2024</span>
+          `;
+
+          // Aggiungi la sezione personaggi disponibili
+          const charactersSection = document.createElement("div");
+          charactersSection.style.cssText = `
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(15, 52, 96, 0.6);
+            border-radius: 12px;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+          `;
+
+          // Filtro elementi per 'I Consigliati da noi'
+          const consigliatiElementFilter = document.createElement("div");
+          consigliatiElementFilter.id = "consigliatiElementFilter";
+          consigliatiElementFilter.style.cssText =
+            "display: flex; gap: 0.6rem; justify-content: center; margin-bottom: 1rem;";
+          const consigliatiElementList = [
+            { value: "all", name: "Tutti", emoji: "🌈" },
+            { value: "Pyro", name: "Pyro", emoji: "🔥" },
+            { value: "Hydro", name: "Hydro", emoji: "💧" },
+            { value: "Electro", name: "Electro", emoji: "⚡" },
+            { value: "Cryo", name: "Cryo", emoji: "❄️" },
+            { value: "Anemo", name: "Anemo", emoji: "💨" },
+            { value: "Geo", name: "Geo", emoji: "🪨" },
+            { value: "Dendro", name: "Dendro", emoji: "🌱" },
+          ];
+
+          consigliatiElementList.forEach((el) => {
+            const btn = document.createElement("button");
+            btn.textContent = `${el.emoji} ${el.name}`;
+            btn.className =
+              "element-filter-btn" + (el.value === "all" ? " active" : "");
+            btn.dataset.element = el.value;
+            btn.onclick = function () {
+              document
+                .querySelectorAll(
+                  "#consigliatiElementFilter .element-filter-btn"
+                )
+                .forEach((b) => b.classList.remove("active"));
+              btn.classList.add("active");
+              currentConsigliatiElement = el.value;
+              renderConsigliatiTable(charactersSection);
+            };
+            consigliatiElementFilter.appendChild(btn);
+          });
+
+          const charactersTitle = document.createElement("h3");
+          charactersTitle.style.cssText = `
+            color: #64ffda;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+          `;
+          charactersTitle.textContent = "🎭 I Consigliati da noi:";
+
+          // Inserisci il filtro sopra la tabella
+          charactersSection.appendChild(consigliatiElementFilter);
+          charactersSection.appendChild(charactersTitle);
+          renderConsigliatiTable(charactersSection);
+
+          // --- RIMOSSA LA SECONDA TABELLA DEI PERSONAGGI (DUPLICATA) ---
+          // (Era qui la creazione di charactersTable e il ciclo su stageCharacterNames)
+
+          // Aggiungi la sezione Ospiti d'Onore
+          const guestsSection = document.createElement("div");
+          guestsSection.style.cssText = `
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+          `;
+
+          const guestsTitle = document.createElement("h3");
+          guestsTitle.style.cssText = `
+            color: #64ffda;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+          `;
+          guestsTitle.textContent = "👑 Ospiti d'Onore:";
+
+          // Tabella ospiti d'onore
+          const guestsTable = document.createElement("div");
+          guestsTable.style.cssText = `
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+          `;
+
+          (config.ospiti || []).forEach((guest) => {
+            const character =
+              allCharacters && allCharacters.find((c) => c.name === guest.name);
+            const guestCard = document.createElement("div");
+            guestCard.style.cssText = `
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              padding: 1.2rem;
+              background: rgba(100, 255, 218, 0.15);
+              border-radius: 10px;
+              border: 1px solid rgba(100, 255, 218, 0.4);
+              transition: all 0.2s ease;
+            `;
+            if (character) {
+              guestCard.innerHTML = `
+                <img src="${character.image}" alt="${character.name}" style="
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 10px;
+                  object-fit: cover;
+                  border: 2px solid rgba(100, 255, 218, 0.5);
+                  cursor: pointer;
+                " onclick="window.location.href='dettaglio.html?character=' + encodeURIComponent('${
+                  character.name
+                }')">
+                <div style="flex: 1;">
+                  <div style="color: #e0e0e0; font-weight: 600; font-size: 1.05rem;">
+                    ${character.name}
+                  </div>
+                  <div style="color: #64ffda; font-size: 0.9rem; font-weight: 600;">
+                    ${character.element || guest.element}
+                  </div>
+                </div>
+              `;
+            } else {
+              guestCard.innerHTML = `
+                <div style="
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 10px;
+                  background: #16213e;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 1.4rem;
+                  border: 2px solid rgba(100, 255, 218, 0.5);
+                ">
+                  ❓
+                </div>
+                <div style="flex: 1;">
+                  <div style="color: #e0e0e0; font-weight: 600; font-size: 1.05rem;">
+                    ${guest.name}
+                  </div>
+                  <div style="color: #64ffda; font-size: 0.9rem; font-weight: 600;">
+                    ${guest.element}
+                  </div>
+                </div>
+              `;
+            }
+
+            guestsTable.appendChild(guestCard);
+          });
+
+          guestsSection.appendChild(guestsTitle);
+          guestsSection.appendChild(guestsTable);
+
+          // --- SEZIONE PERSONAGGI D'APERTURA ---
+          const openingSection = document.createElement("div");
+          openingSection.style.cssText = `
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+          `;
+          const openingTitle = document.createElement("h3");
+          openingTitle.style.cssText = `
+            color: #64ffda;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+          `;
+          openingTitle.textContent = "🎬 Personaggi d'Apertura:";
+          const openingDesc = document.createElement("div");
+          openingDesc.style.cssText = `
+            color: #b0eaff;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+          `;
+          openingDesc.textContent = "Cast principale all'inizio di una sfida";
+          const openingTable = document.createElement("div");
+          openingTable.style.cssText = `
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+          `;
+          (config.apertura || []).forEach((char) => {
+            const character =
+              allCharacters && allCharacters.find((c) => c.name === char.name);
+            const charCard = document.createElement("div");
+            charCard.style.cssText = `
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              padding: 1.2rem;
+              background: rgba(100, 255, 218, 0.15);
+              border-radius: 10px;
+              border: 1px solid rgba(100, 255, 218, 0.4);
+              transition: all 0.2s ease;
+            `;
+            if (character) {
+              charCard.innerHTML = `
+                <img src="${character.image}" alt="${character.name}" style="
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 10px;
+                  object-fit: cover;
+                  border: 2px solid rgba(100, 255, 218, 0.5);
+                  cursor: pointer;
+                " onclick="window.location.href='dettaglio.html?character=' + encodeURIComponent('${
+                  character.name
+                }')">
+                <div style="flex: 1;">
+                  <div style="color: #e0e0e0; font-weight: 600; font-size: 1.05rem;">
+                    ${character.name}
+                  </div>
+                  <div style="color: #64ffda; font-size: 0.9rem; font-weight: 600;">
+                    ${character.element || char.element}
+                  </div>
+                </div>
+              `;
+            } else {
+              charCard.innerHTML = `
+                <div style="
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 10px;
+                  background: #16213e;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 1.4rem;
+                  border: 2px solid rgba(100, 255, 218, 0.5);
+                ">
+                  ?
+                </div>
+                <div style="flex: 1;">
+                  <div style="color: #e0e0e0; font-weight: 600; font-size: 1.05rem;">
+                    ${char.name}
+                  </div>
+                  <div style="color: #64ffda; font-size: 0.9rem; font-weight: 600;">
+                    ${char.element}
+                  </div>
+                </div>
+              `;
+            }
+            openingTable.appendChild(charCard);
+          });
+          openingSection.appendChild(openingTitle);
+          openingSection.appendChild(openingDesc);
+          openingSection.appendChild(openingTable);
+
+          // Inserisci la sezione dopo gli ospiti d'onore
+          stageSection.appendChild(guestsSection);
+          stageSection.appendChild(openingSection);
+
+          const teamGrid = document.createElement("div");
+          teamGrid.className = "team-grid";
+
+          const teams = teatroTeamsData[stage] || [];
+
+          teams.forEach((team, index) => {
+            const teamCard = document.createElement("div");
+            teamCard.className = "team-card";
+            teamCard.style.cursor = "pointer";
+
+            // Event listener per modifica team
+            teamCard.addEventListener("click", function (e) {
+              // Evita conflitto con icone di editing nome/descrizione/rotazione
+              if (
+                e.target.closest(".edit-icon") ||
+                e.target.closest(".edit-teamname-icon")
+              )
+                return;
+              openEditTeatroTeamModal(stage, index);
+            });
+
+            const teamName = document.createElement("h3");
+            teamName.className = "team-name";
+            teamName.innerHTML = `
+              <span class="team-name-text" data-team-index="${index}">${team.name}</span>
+              <span class="edit-teamname-icon" style="cursor:pointer; margin-left:8px; font-size:1.1rem;">✏️</span>
+            `;
+
+            // Personaggi
+            const characterRows = [];
+            for (let i = 0; i < team.characters.length; i += 2) {
+              const row = document.createElement("div");
+              row.className = "character-row";
+              for (
+                let j = i;
+                j < Math.min(i + 2, team.characters.length);
+                j++
+              ) {
+                const characterName = team.characters[j];
+                const character =
+                  allCharacters &&
+                  allCharacters.find((c) => c.name === characterName);
+                const img = document.createElement("img");
+                img.className = "character-icon";
+                img.dataset.character = characterName;
+                img.alt = characterName;
+                img.src = character
+                  ? character.image
+                  : "images/characters/placeholder.svg";
+                row.appendChild(img);
+              }
+              characterRows.push(row);
+            }
+
+            // Spiegazione con icona di editing
+            const teamExplanation = document.createElement("div");
+            teamExplanation.className = "team-explanation";
+            teamExplanation.innerHTML = `
+              <span class="explanation-text">${team.explanation}</span>
+              <span class="edit-icon">✏️</span>
+            `;
+            teamExplanation.setAttribute("data-team-index", index);
+
+            // Rotazione con icona di editing
+            const teamRotation = document.createElement("div");
+            teamRotation.className = "team-rotation";
+            teamRotation.innerHTML = `
+              <span class="rotation-text">${team.rotation}</span>
+              <span class="edit-icon">✏️</span>
+            `;
+            teamRotation.setAttribute("data-team-index", index);
+
+            teamCard.appendChild(teamName);
+            characterRows.forEach((row) => teamCard.appendChild(row));
+            teamCard.appendChild(teamExplanation);
+            teamCard.appendChild(teamRotation);
+            teamGrid.appendChild(teamCard);
+          });
+
+          stageSection.appendChild(stageTitle);
+          stageSection.appendChild(stageDate);
+          stageSection.appendChild(charactersSection);
+          stageSection.appendChild(teamGrid);
+          fragment.appendChild(stageSection);
+        });
+        container.innerHTML = "";
+        container.appendChild(fragment);
+      }
+
+      window.addEventListener("DOMContentLoaded", async () => {
+        await loadCharacterData();
+        loadTeatroTeamsData();
+        renderTeatroTeams();
+        setActiveStage(activeStageOnly);
+      });
+
+      // Variabili per nuovo team
+      let newTeatroTeamCharacters = ["", "", "", ""];
+      // Apri/chiudi modale
+      document.getElementById("createTeatroTeamBtn").onclick = function () {
+        document.getElementById("createTeatroTeamModal").style.display = "flex";
+        resetNewTeatroTeamForm();
+        // Imposta il campo Stage sullo stage attivo
+      };
+      document.getElementById("cancelNewTeatroTeamBtn").onclick = function () {
+        document.getElementById("createTeatroTeamModal").style.display = "none";
+        resetNewTeatroTeamForm();
+      };
+      function resetNewTeatroTeamForm() {
+        document.getElementById("newTeatroTeamName").value = "";
+        document.getElementById("newTeatroTeamStage").value = "Stage 1";
+        document.getElementById("newTeatroTeamExplanation").value = "";
+        document.getElementById("newTeatroTeamRotation").value = "";
+        newTeatroTeamCharacters = ["", "", "", ""];
+        document
+          .querySelectorAll(".new-teatro-character-slot")
+          .forEach((slot) => {
+            slot.innerHTML =
+              '<span style="color:#64ffda;font-size:1.5rem;">+</span>';
+            slot.style.background = "#222";
+            slot.style.border = "2.5px dashed #64ffda";
+          });
+      }
+
+      // Variabili per selezione personaggi
+      let selectedTeatroCharacter = null;
+      let currentTeatroEditingSlot = null;
+      let currentTeatroElementFilter = "all";
+      let currentTeatroSearchTerm = "";
+      let teatroElementList = [
+        { value: "all", name: "Tutti", emoji: "🌈" },
+        { value: "Pyro", name: "Pyro", emoji: "🔥" },
+        { value: "Hydro", name: "Hydro", emoji: "💧" },
+        { value: "Electro", name: "Electro", emoji: "⚡" },
+        { value: "Cryo", name: "Cryo", emoji: "❄️" },
+        { value: "Anemo", name: "Anemo", emoji: "💨" },
+        { value: "Geo", name: "Geo", emoji: "🪨" },
+        { value: "Dendro", name: "Dendro", emoji: "🌱" },
+      ];
+
+      // Event listener per aprire modale selezione personaggi (sia per slot vuoti che per personaggi già selezionati)
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".new-teatro-character-slot")) {
+          currentTeatroEditingSlot = e.target.closest(
+            ".new-teatro-character-slot"
+          );
+          openTeatroCharacterModal();
+        }
+      });
+
+      function openTeatroCharacterModal() {
+        selectedTeatroCharacter = null;
+        renderTeatroElementFilters();
+        renderTeatroCharacterModalGrid();
+        resetTeatroSearchAndFilters();
+        document.getElementById("teatroCharacterModal").style.display = "flex";
+        applyTeatroCharacterFilters();
+      }
+
+      function closeTeatroCharacterModal() {
+        document.getElementById("teatroCharacterModal").style.display = "none";
+        currentTeatroEditingSlot = null;
+        selectedTeatroCharacter = null;
+        resetTeatroSearchAndFilters();
+      }
+
+      function renderTeatroElementFilters() {
+        const container = document.getElementById("teatroCharacterFilters");
+        container.innerHTML = "";
+        teatroElementList.forEach((el) => {
+          const btn = document.createElement("button");
+          btn.textContent = `${el.emoji} ${el.name}`;
+          btn.className =
+            "element-filter-btn" + (el.value === "all" ? " active" : "");
+          btn.dataset.element = el.value;
+          btn.onclick = function () {
+            document
+              .querySelectorAll(".element-filter-btn")
+              .forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            currentTeatroElementFilter = el.value;
+            applyTeatroCharacterFilters();
+          };
+          container.appendChild(btn);
+        });
+      }
+
+      function renderTeatroCharacterModalGrid() {
+        const grid = document.getElementById("teatroCharacterModalGrid");
+        grid.innerHTML = "";
+        const selectedCharacters = newTeatroTeamCharacters.filter(
+          (char) => char !== ""
+        );
+        allCharacters &&
+          allCharacters.forEach((char) => {
+            const div = document.createElement("div");
+            div.className = "character-modal-option";
+            div.dataset.character = char.name;
+            div.dataset.element = char.element || "Unknown";
+            const isAlreadyUsed = selectedCharacters.includes(char.name);
+            if (isAlreadyUsed) {
+              div.classList.add("disabled");
+              div.title = `${char.name} - Già selezionato in questo team`;
+            } else {
+              div.title = char.name;
+            }
+            div.innerHTML = `
+            <img src="${char.image}" alt="${char.name}" style="width:70px;height:70px;border-radius:10px;object-fit:contain;display:block;margin:0 auto 4px auto;box-shadow:0 2px 8px #000a;padding:6px;background:#16213e;">
+            <div style="font-size:0.98rem;text-align:center;color:#e0e0e0;">${char.name}</div>
+          `;
+            grid.appendChild(div);
+          });
+        selectedTeatroCharacter = null;
+        document.getElementById("teatroCharacterModalSave").disabled = true;
+        document.getElementById("teatroCharacterModalSave").textContent =
+          "Seleziona Personaggio";
+        applyTeatroCharacterFilters();
+      }
+
+      function applyTeatroCharacterFilters() {
+        const characterOptions = document.querySelectorAll(
+          ".character-modal-option"
+        );
+        let visibleCount = 0;
+        requestAnimationFrame(() => {
+          characterOptions.forEach((option) => {
+            const characterName = option.dataset.character.toLowerCase().trim();
+            const characterElement = option.dataset.element;
+            const isDisabled = option.classList.contains("disabled");
+            const elementMatches =
+              currentTeatroElementFilter === "all" ||
+              characterElement === currentTeatroElementFilter;
+            const searchWords = currentTeatroSearchTerm
+              .split(" ")
+              .filter(Boolean);
+            const nameWords = characterName.split(" ");
+            const searchMatches =
+              currentTeatroSearchTerm === "" ||
+              searchWords.every((sw) =>
+                nameWords.some((nw) => nw.startsWith(sw))
+              );
+            if (elementMatches && searchMatches && !isDisabled) {
+              option.classList.remove("hidden");
+              visibleCount++;
+            } else {
+              option.classList.add("hidden");
+            }
+          });
+          updateTeatroSearchStats(visibleCount);
+        });
+      }
+
+      function updateTeatroSearchStats(visibleCount) {
+        const characterCount = document.getElementById("teatroCharacterCount");
+        const filterStatus = document.getElementById("teatroFilterStatus");
+        if (!characterCount || !filterStatus) return;
+        characterCount.textContent = `${visibleCount} personaggi trovati`;
+        if (currentTeatroElementFilter === "all") {
+          filterStatus.textContent = "Tutti gli elementi";
+        } else {
+          const elementEmojis = {
+            Pyro: "🔥",
+            Hydro: "💧",
+            Electro: "⚡",
+            Cryo: "❄️",
+            Anemo: "💨",
+            Geo: "🪨",
+            Dendro: "🌱",
+          };
+          const emoji = elementEmojis[currentTeatroElementFilter] || "";
+          filterStatus.textContent = `${emoji} ${currentTeatroElementFilter}`;
+        }
+      }
+
+      function resetTeatroSearchAndFilters() {
+        const searchInput = document.getElementById(
+          "teatroCharacterSearchInput"
+        );
+        searchInput.value = "";
+        currentTeatroSearchTerm = "";
+        document
+          .querySelectorAll(".element-filter-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document.querySelector('[data-element="all"]').classList.add("active");
+        currentTeatroElementFilter = "all";
+        updateTeatroSearchStats(allCharacters ? allCharacters.length : 0);
+      }
+
+      // Event listeners per modale
+      document.getElementById("teatroCharacterModalCancel").onclick =
+        closeTeatroCharacterModal;
+      document.getElementById("teatroCharacterModalSave").onclick =
+        function () {
+          if (selectedTeatroCharacter && currentTeatroEditingSlot) {
+            const character = allCharacters.find(
+              (c) => c.name === selectedTeatroCharacter
+            );
+            if (character) {
+              const position = parseInt(
+                currentTeatroEditingSlot.dataset.position
+              );
+              newTeatroTeamCharacters[position] = character.name;
+
+              // Aggiorna lo slot con l'immagine del personaggio e rendilo cliccabile
+              currentTeatroEditingSlot.innerHTML = `
+              <img src="${character.image}" alt="${character.name}" style="width:100%;height:100%;border-radius:12px;object-fit:cover;cursor:pointer;">
+            `;
+              currentTeatroEditingSlot.style.background = "none";
+              currentTeatroEditingSlot.style.border = "2.5px solid #64ffda";
+
+              // Aggiungi un overlay per indicare che è cliccabile
+              const overlay = document.createElement("div");
+              overlay.style.cssText = `
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(100, 255, 218, 0.1);
+              border-radius: 12px;
+              opacity: 0;
+              transition: opacity 0.2s ease;
+              pointer-events: none;
+            `;
+              currentTeatroEditingSlot.appendChild(overlay);
+
+              // Hover effect per indicare che è cliccabile
+              currentTeatroEditingSlot.addEventListener(
+                "mouseenter",
+                function () {
+                  overlay.style.opacity = "1";
+                  this.style.transform = "scale(1.05)";
+                }
+              );
+
+              currentTeatroEditingSlot.addEventListener(
+                "mouseleave",
+                function () {
+                  overlay.style.opacity = "0";
+                  this.style.transform = "scale(1)";
+                }
+              );
+            }
+          }
+          closeTeatroCharacterModal();
+        };
+
+      // Event listener per selezione personaggi nel modale
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".character-modal-option")) {
+          const option = e.target.closest(".character-modal-option");
+          if (option.classList.contains("disabled")) return;
+          document
+            .querySelectorAll(".character-modal-option")
+            .forEach((opt) => opt.classList.remove("selected"));
+          option.classList.add("selected");
+          selectedTeatroCharacter = option.dataset.character;
+          const saveButton = document.getElementById(
+            "teatroCharacterModalSave"
+          );
+          saveButton.disabled = false;
+          saveButton.textContent = `Seleziona ${selectedTeatroCharacter}`;
+        }
+      });
+
+      // Ricerca personaggi
+      let teatroSearchTimeout;
+      document
+        .getElementById("teatroCharacterSearchInput")
+        .addEventListener("input", function () {
+          clearTimeout(teatroSearchTimeout);
+          teatroSearchTimeout = setTimeout(() => {
+            currentTeatroSearchTerm = this.value.toLowerCase().trim();
+            applyTeatroCharacterFilters();
+          }, 150);
+        });
+
+      // Funzione per salvare il nuovo team
+      function saveNewTeatroTeam() {
+        const name = document.getElementById("newTeatroTeamName").value.trim();
+        const stage = document.getElementById("newTeatroTeamStage").value;
+        const explanation = document
+          .getElementById("newTeatroTeamExplanation")
+          .value.trim();
+        const rotation = document
+          .getElementById("newTeatroTeamRotation")
+          .value.trim();
+        if (
+          !name ||
+          newTeatroTeamCharacters.some((c) => !c) ||
+          !explanation ||
+          !rotation
+        ) {
+          alert("Compila tutti i campi e seleziona 4 personaggi!");
+          return;
+        }
+        // Salva il team per la data selezionata
+        loadTeatroTeamsData();
+        if (!teatroTeamsDataByDate[currentTeatroDate]) {
+          teatroTeamsDataByDate[currentTeatroDate] = {
+            "Stage 1": [],
+            "Stage 2": [],
+            "Stage 3": [],
+            "Stage 4": [],
+          };
+        }
+        if (
+          isEditingTeatroTeam &&
+          editingTeatroTeamStage !== null &&
+          editingTeatroTeamIndex !== null
+        ) {
+          // Aggiorna team esistente
+          teatroTeamsDataByDate[currentTeatroDate][editingTeatroTeamStage][
+            editingTeatroTeamIndex
+          ] = {
+            name,
+            characters: [...newTeatroTeamCharacters],
+            explanation,
+            rotation,
+          };
+          saveTeatroTeamsData();
+          showTeatroSaveNotification("Team aggiornato!");
+        } else {
+          // Crea nuovo team
+          if (!teatroTeamsDataByDate[currentTeatroDate][stage])
+            teatroTeamsDataByDate[currentTeatroDate][stage] = [];
+          teatroTeamsDataByDate[currentTeatroDate][stage].push({
+            name,
+            characters: [...newTeatroTeamCharacters],
+            explanation,
+            rotation,
+          });
+          saveTeatroTeamsData();
+          showTeatroSaveNotification("Team creato!");
+        }
+        document.getElementById("createTeatroTeamModal").style.display = "none";
+        resetNewTeatroTeamForm();
+        isEditingTeatroTeam = false;
+        editingTeatroTeamStage = null;
+        editingTeatroTeamIndex = null;
+        renderTeatroTeams();
+      }
+
+      // Funzione per mostrare notifiche di salvataggio
+      function showTeatroSaveNotification(message) {
+        const notification = document.createElement("div");
+        notification.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: linear-gradient(135deg, #64ffda, #00d4aa);
+          color: #16213e;
+          padding: 12px 20px;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 0.9rem;
+          z-index: 10000;
+          box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+        `;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        // Mostra la notifica
+        setTimeout(() => {
+          notification.style.transform = "translateX(0)";
+        }, 100);
+
+        // Nascondi la notifica dopo 2 secondi
+        setTimeout(() => {
+          notification.style.transform = "translateX(100%)";
+          setTimeout(() => {
+            document.body.removeChild(notification);
+          }, 300);
+        }, 2000);
+      }
+
+      // Event listener per salvare il nuovo team
+      document.getElementById("saveNewTeatroTeamBtn").onclick =
+        saveNewTeatroTeam;
+
+      // Event listener per chiudere i modali quando si clicca fuori
+      document.addEventListener("click", function (e) {
+        // Chiudi modale creazione team
+        const createTeatroTeamModal = document.getElementById(
+          "createTeatroTeamModal"
+        );
+        if (
+          createTeatroTeamModal &&
+          createTeatroTeamModal.style.display === "flex"
+        ) {
+          if (e.target === createTeatroTeamModal) {
+            document.getElementById("createTeatroTeamModal").style.display =
+              "none";
+            resetNewTeatroTeamForm();
+          }
+        }
+
+        // Chiudi modale selezione personaggi
+        const teatroCharacterModal = document.getElementById(
+          "teatroCharacterModal"
+        );
+        if (
+          teatroCharacterModal &&
+          teatroCharacterModal.style.display === "flex"
+        ) {
+          if (e.target === teatroCharacterModal) {
+            closeTeatroCharacterModal();
+          }
+        }
+      });
+
+      // Event listener per chiudere i modali con ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const createTeatroTeamModal = document.getElementById(
+            "createTeatroTeamModal"
+          );
+          const teatroCharacterModal = document.getElementById(
+            "teatroCharacterModal"
+          );
+
+          if (
+            createTeatroTeamModal &&
+            createTeatroTeamModal.style.display === "flex"
+          ) {
+            document.getElementById("createTeatroTeamModal").style.display =
+              "none";
+            resetNewTeatroTeamForm();
+          } else if (
+            teatroCharacterModal &&
+            teatroCharacterModal.style.display === "flex"
+          ) {
+            closeTeatroCharacterModal();
+          }
+        }
+      });
+
+      // Event listeners per modificare team esistenti
+      document.addEventListener("click", function (e) {
+        // Modifica nome team
+        const icon = e.target.closest(".edit-teamname-icon");
+        if (icon) {
+          const teamCard = icon.closest(".team-card");
+          const teamNameDiv = teamCard.querySelector(".team-name-text");
+          const currentText = teamNameDiv.textContent;
+          const stageSection = teamCard.closest(".team-section");
+          const stage = stageSection.querySelector(".team-title").textContent;
+          const teams = teatroTeamsDataByDate[currentTeatroDate][stage];
+          const teamIndex = teams.findIndex((t) => t.name === currentText);
+
+          if (teamIndex !== -1) {
+            document.getElementById("editTeatroTeamNameModal").style.display =
+              "flex";
+            document.getElementById("editTeatroTeamNameInput").value =
+              currentText;
+            currentEditTeatroTeamNameDiv = teamNameDiv;
+            currentEditTeatroTeamNameInfo = { stage, teamIndex };
+          }
+        }
+
+        // Modifica spiegazione
+        if (e.target.closest(".team-explanation .edit-icon")) {
+          const explanationDiv = e.target.closest(".team-explanation");
+          const teamIndex = explanationDiv.getAttribute("data-team-index");
+          const teamCard = explanationDiv.closest(".team-card");
+          const stageSection = teamCard.closest(".team-section");
+          const stage = stageSection.querySelector(".team-title").textContent;
+          const teams = teatroTeamsDataByDate[currentTeatroDate][stage];
+
+          if (teamIndex !== null && teams[teamIndex]) {
+            document.getElementById(
+              "editTeatroDescriptionModal"
+            ).style.display = "flex";
+            document.getElementById("editTeatroDescriptionInput").value =
+              explanationDiv.querySelector(".explanation-text").textContent;
+            currentEditTeatroDescriptionDiv = explanationDiv;
+            currentEditTeatroTeamInfo = {
+              stage,
+              teamIndex: parseInt(teamIndex),
+            };
+          }
+        }
+
+        // Modifica rotazione
+        if (e.target.closest(".team-rotation .edit-icon")) {
+          const rotationDiv = e.target.closest(".team-rotation");
+          const teamIndex = rotationDiv.getAttribute("data-team-index");
+          const teamCard = rotationDiv.closest(".team-card");
+          const stageSection = teamCard.closest(".team-section");
+          const stage = stageSection.querySelector(".team-title").textContent;
+          const teams = teatroTeamsDataByDate[currentTeatroDate][stage];
+
+          if (teamIndex !== null && teams[teamIndex]) {
+            document.getElementById("editTeatroRotationModal").style.display =
+              "flex";
+            document.getElementById("editTeatroRotationInput").value =
+              rotationDiv.querySelector(".rotation-text").textContent;
+            currentEditTeatroRotationDiv = rotationDiv;
+            currentEditTeatroRotationInfo = {
+              stage,
+              teamIndex: parseInt(teamIndex),
+            };
+          }
+        }
+      });
+
+      // Variabili per editing
+      let currentEditTeatroTeamNameDiv = null;
+      let currentEditTeatroTeamNameInfo = null;
+      let currentEditTeatroDescriptionDiv = null;
+      let currentEditTeatroTeamInfo = null;
+      let currentEditTeatroRotationDiv = null;
+      let currentEditTeatroRotationInfo = null;
+
+      // Event listeners per i modali di modifica
+      document.getElementById("saveEditTeatroTeamNameBtn").onclick =
+        function () {
+          const newText = document
+            .getElementById("editTeatroTeamNameInput")
+            .value.trim();
+          if (
+            newText &&
+            currentEditTeatroTeamNameDiv &&
+            currentEditTeatroTeamNameInfo
+          ) {
+            currentEditTeatroTeamNameDiv.textContent = newText;
+            teatroTeamsDataByDate[currentEditTeatroTeamNameInfo.stage][
+              currentEditTeatroTeamNameInfo.teamIndex
+            ].name = newText;
+            saveTeatroTeamsData();
+            showTeatroSaveNotification("Nome team aggiornato!");
+          }
+          document.getElementById("editTeatroTeamNameModal").style.display =
+            "none";
+          currentEditTeatroTeamNameDiv = null;
+          currentEditTeatroTeamNameInfo = null;
+        };
+
+      document.getElementById("cancelEditTeatroTeamNameBtn").onclick =
+        function () {
+          document.getElementById("editTeatroTeamNameModal").style.display =
+            "none";
+          currentEditTeatroTeamNameDiv = null;
+          currentEditTeatroTeamNameInfo = null;
+        };
+
+      document.getElementById("saveEditTeatroDescriptionBtn").onclick =
+        function () {
+          const newText = document
+            .getElementById("editTeatroDescriptionInput")
+            .value.trim();
+          if (
+            newText &&
+            currentEditTeatroDescriptionDiv &&
+            currentEditTeatroTeamInfo
+          ) {
+            currentEditTeatroDescriptionDiv.querySelector(
+              ".explanation-text"
+            ).textContent = newText;
+            const teams =
+              teatroTeamsDataByDate[currentTeatroDate][
+                currentEditTeatroTeamInfo.stage
+              ];
+            if (teams && teams[currentEditTeatroTeamInfo.teamIndex]) {
+              teams[currentEditTeatroTeamInfo.teamIndex].explanation = newText;
+            }
+            saveTeatroTeamsData();
+            showTeatroSaveNotification("Descrizione aggiornata!");
+          }
+          document.getElementById("editTeatroDescriptionModal").style.display =
+            "none";
+          currentEditTeatroDescriptionDiv = null;
+          currentEditTeatroTeamInfo = null;
+          renderTeatroTeams();
+        };
+
+      document.getElementById("cancelEditTeatroDescriptionBtn").onclick =
+        function () {
+          document.getElementById("editTeatroDescriptionModal").style.display =
+            "none";
+          currentEditTeatroDescriptionDiv = null;
+          currentEditTeatroTeamInfo = null;
+        };
+
+      document.getElementById("saveEditTeatroRotationBtn").onclick =
+        function () {
+          const newText = document
+            .getElementById("editTeatroRotationInput")
+            .value.trim();
+          if (
+            newText &&
+            currentEditTeatroRotationDiv &&
+            currentEditTeatroRotationInfo
+          ) {
+            currentEditTeatroRotationDiv.querySelector(
+              ".rotation-text"
+            ).textContent = newText;
+            teatroTeamsDataByDate[currentEditTeatroRotationInfo.stage][
+              currentEditTeatroRotationInfo.teamIndex
+            ].rotation = newText;
+            saveTeatroTeamsData();
+            showTeatroSaveNotification("Rotazione aggiornata!");
+          }
+          document.getElementById("editTeatroRotationModal").style.display =
+            "none";
+          currentEditTeatroRotationDiv = null;
+          currentEditTeatroRotationInfo = null;
+        };
+
+      document.getElementById("cancelEditTeatroRotationBtn").onclick =
+        function () {
+          document.getElementById("editTeatroRotationModal").style.display =
+            "none";
+          currentEditTeatroRotationDiv = null;
+          currentEditTeatroRotationInfo = null;
+        };
+
+      // Event listener per chiudere i modali di modifica quando si clicca fuori
+      document.addEventListener("click", function (e) {
+        const editTeatroTeamNameModal = document.getElementById(
+          "editTeatroTeamNameModal"
+        );
+        const editTeatroDescriptionModal = document.getElementById(
+          "editTeatroDescriptionModal"
+        );
+        const editTeatroRotationModal = document.getElementById(
+          "editTeatroRotationModal"
+        );
+
+        if (
+          editTeatroTeamNameModal &&
+          editTeatroTeamNameModal.style.display === "flex" &&
+          e.target === editTeatroTeamNameModal
+        ) {
+          document.getElementById("editTeatroTeamNameModal").style.display =
+            "none";
+          currentEditTeatroTeamNameDiv = null;
+          currentEditTeatroTeamNameInfo = null;
+        }
+
+        if (
+          editTeatroDescriptionModal &&
+          editTeatroDescriptionModal.style.display === "flex" &&
+          e.target === editTeatroDescriptionModal
+        ) {
+          document.getElementById("editTeatroDescriptionModal").style.display =
+            "none";
+          currentEditTeatroDescriptionDiv = null;
+          currentEditTeatroTeamInfo = null;
+        }
+
+        if (
+          editTeatroRotationModal &&
+          editTeatroRotationModal.style.display === "flex" &&
+          e.target === editTeatroRotationModal
+        ) {
+          document.getElementById("editTeatroRotationModal").style.display =
+            "none";
+          currentEditTeatroRotationDiv = null;
+          currentEditTeatroRotationInfo = null;
+        }
+      });
+
+      // Event listener per chiudere i modali di modifica con ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const editTeatroTeamNameModal = document.getElementById(
+            "editTeatroTeamNameModal"
+          );
+          const editTeatroDescriptionModal = document.getElementById(
+            "editTeatroDescriptionModal"
+          );
+          const editTeatroRotationModal = document.getElementById(
+            "editTeatroRotationModal"
+          );
+
+          if (
+            editTeatroTeamNameModal &&
+            editTeatroTeamNameModal.style.display === "flex"
+          ) {
+            document.getElementById("editTeatroTeamNameModal").style.display =
+              "none";
+            currentEditTeatroTeamNameDiv = null;
+            currentEditTeatroTeamNameInfo = null;
+          } else if (
+            editTeatroDescriptionModal &&
+            editTeatroDescriptionModal.style.display === "flex"
+          ) {
+            document.getElementById(
+              "editTeatroDescriptionModal"
+            ).style.display = "none";
+            currentEditTeatroDescriptionDiv = null;
+            currentEditTeatroTeamInfo = null;
+          } else if (
+            editTeatroRotationModal &&
+            editTeatroRotationModal.style.display === "flex"
+          ) {
+            document.getElementById("editTeatroRotationModal").style.display =
+              "none";
+            currentEditTeatroRotationDiv = null;
+            currentEditTeatroRotationInfo = null;
+          }
+        }
+      });
+
+      // --- Aggiungi queste funzioni JS dopo la definizione di resetNewTeatroTeamForm() ---
+
+      let isEditingTeatroTeam = false;
+      let editingTeatroTeamStage = null;
+      let editingTeatroTeamIndex = null;
+
+      function openEditTeatroTeamModal(stage, teamIndex) {
+        isEditingTeatroTeam = true;
+        editingTeatroTeamStage = stage;
+        editingTeatroTeamIndex = teamIndex;
+        const team = teatroTeamsDataByDate[currentTeatroDate][stage][teamIndex];
+        document.getElementById("createTeatroTeamModal").style.display = "flex";
+        // Precompila i dati
+        document.getElementById("newTeatroTeamName").value = team.name;
+        document.getElementById("newTeatroTeamStage").value = stage;
+        document.getElementById("newTeatroTeamExplanation").value =
+          team.explanation;
+        document.getElementById("newTeatroTeamRotation").value = team.rotation;
+        newTeatroTeamCharacters = [...team.characters];
+        // Aggiorna gli slot personaggi
+        document
+          .querySelectorAll(".new-teatro-character-slot")
+          .forEach((slot, i) => {
+            if (newTeatroTeamCharacters[i]) {
+              const char = allCharacters.find(
+                (c) => c.name === newTeatroTeamCharacters[i]
+              );
+              slot.innerHTML = `<img src="${
+                char ? char.image : "images/characters/placeholder.svg"
+              }" alt="${
+                newTeatroTeamCharacters[i]
+              }" style="width:100%;height:100%;border-radius:12px;object-fit:cover;">`;
+              slot.style.background = "none";
+              slot.style.border = "2.5px solid #64ffda";
+            } else {
+              slot.innerHTML =
+                '<span style="color:#64ffda;font-size:1.5rem;">+</span>';
+              slot.style.background = "#222";
+              slot.style.border = "2.5px dashed #64ffda";
+            }
+          });
+        document.getElementById("deleteTeatroTeamBtn").style.display =
+          "inline-block";
+      }
+
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("userControls");
+        if (!el) return;
+        if (user) {
+          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em;'>Area Utente</a><button class='btn btn-secondary' onclick='doLogout()'>Logout</button>`;
+          document.body.classList.add("logged-in");
+        } else {
+          el.innerHTML = `<a href='login.html' class='btn-login'>Login</a> <a href='registrazione.html' class='btn-register'>Registrati</a>`;
+          document.body.classList.remove("logged-in");
+        }
+      }
+      function openLoginModal() {
+        document.getElementById("loginModal").style.display = "block";
+      }
+      function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+      }
+      function doLogin() {
+        const u = document.getElementById("loginUsername").value;
+        const p = document.getElementById("loginPassword").value;
+        if (u === "k1ngadr1an" && p === "1234") {
+          localStorage.setItem("user", u);
+          closeLoginModal();
+          renderUserControls();
+          location.reload();
+        } else {
+          alert("Credenziali non valide");
+        }
+      }
+      function doLogout() {
+        localStorage.removeItem("user");
+        renderUserControls();
+        location.reload();
+      }
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+      // --- Utility per storage per-utente ---
+      function getCurrentUser() {
+        return localStorage.getItem("user") || "guest";
+      }
+      function getUserStorageKey(baseKey) {
+        const user = localStorage.getItem("user");
+        return user ? `${user}_${baseKey}` : baseKey;
+      }
+      // ... Aggiorna qui eventuali funzioni di storage ...
+
+      // Dopo la dichiarazione di renderTeatroTeams()
+
+      function renderConsigliatiTable(charactersSection) {
+        // Rimuovi la tabella precedente se esiste
+        const oldTable = charactersSection.querySelector(".consigliati-table");
+        if (oldTable) oldTable.remove();
+        const charactersTable = document.createElement("div");
+        charactersTable.className = "consigliati-table";
+        charactersTable.style.cssText = `
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1rem;
+          margin-top: 1rem;
+        `;
+        // Recupera la configurazione per la data selezionata
+        let config = teatroConfigByDate[currentTeatroDate];
+        // Se la data è presente, usa SOLO quella configurazione
+        if (!config) config = defaultTeatroConfig;
+        const stage = activeStageOnly;
+        const stageCharacterNames =
+          config.consigliati && config.consigliati[stage]
+            ? config.consigliati[stage]
+            : [];
+        // Filtra i nomi duplicati
+        const uniqueCharacterNames = [...new Set(stageCharacterNames)];
+        uniqueCharacterNames.forEach((charName) => {
+          const character = allCharacters.find((c) => c.name === charName);
+          // Applica il filtro elemento
+          if (
+            currentConsigliatiElement === "all" ||
+            (character && character.element === currentConsigliatiElement)
+          ) {
+            const charCard = document.createElement("div");
+            charCard.style.cssText = `
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              padding: 1.2rem;
+              background: rgba(22, 33, 62, 0.8);
+              border-radius: 10px;
+              border: 1px solid rgba(100, 255, 218, 0.1);
+              transition: all 0.2s ease;
+            `;
+            if (character) {
+              charCard.innerHTML = `
+                <img src="${character.image}" alt="${character.name}" style="
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 10px;
+                  object-fit: cover;
+                  border: 2px solid rgba(100, 255, 218, 0.5);
+                  cursor: pointer;
+                " onclick="window.location.href='dettaglio.html?character=' + encodeURIComponent('${
+                  character.name
+                }')">
+                <div style="flex: 1;">
+                  <div style="color: #e0e0e0; font-weight: 600; font-size: 1.05rem;">
+                    ${character.name}
+                  </div>
+                  <div style="color: #b0eaff; font-size: 0.9rem;">
+                    ${character.element || "Unknown"}
+                  </div>
+                </div>
+              `;
+            } else {
+              charCard.innerHTML = `
+                <div style="
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 10px;
+                  background: #16213e;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 1.4rem;
+                  border: 2px solid rgba(100, 255, 218, 0.3);
+                ">
+                  ❓
+                </div>
+                <div style="flex: 1;">
+                  <div style="color: #e0e0e0; font-weight: 600; font-size: 1.05rem;">
+                    ${charName}
+                  </div>
+                  <div style="color: #b0eaff; font-size: 0.9rem;">
+                    Non trovato
+                  </div>
+                </div>
+              `;
+            }
+            charactersTable.appendChild(charCard);
+          }
+        });
+        charactersSection.appendChild(charactersTable);
+      }
+
+      // --- Calendario Teatri Immaginari ---
+      function renderTeatroCalendar() {
+        const calendar = document.getElementById("teatroCalendar");
+        calendar.innerHTML = "";
+        teatroDates.forEach((item, idx) => {
+          const btn = document.createElement("button");
+          btn.textContent = item.label + " (" + item.date + ")";
+          btn.style.cssText = `
+            padding: 0.9rem 1.5rem;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, #64ffda, #00d4aa);
+            color: #16213e;
+            font-weight: 700;
+            font-size: 1.08rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #64ffda33;
+            transition: all 0.18s;
+          `;
+          btn.onclick = function () {
+            currentTeatroDate = item.date;
+            renderTeatroTeams();
+            if (item.stage) setActiveStage(item.stage);
+            setTimeout(() => {
+              const el = document.getElementById(
+                "stage-" + (item.stage ? item.stage.replace(/[^0-9]/g, "") : "")
+              );
+              if (el)
+                window.scrollTo({ top: el.offsetTop - 60, behavior: "smooth" });
+            }, 100);
+            renderTeatroCalendar(); // Aggiorna evidenziazione dopo il click
+          };
+          // Evidenzia la data attuale
+          if (item.date === currentTeatroDate) {
+            btn.style.background = "linear-gradient(135deg,#00d4aa,#64ffda)";
+            btn.style.color = "#fff";
+            btn.style.boxShadow = "0 4px 16px #64ffda55";
+          }
+          calendar.appendChild(btn);
+        });
+      }
+      window.addEventListener("DOMContentLoaded", renderTeatroCalendar);
+
+      // --- Dati dei personaggi per ogni stage del Teatro Immaginario corrente (solo nomi)
+      const teatroStageCharacterNames = {
+        "Stage 1": [
+          "Hu Tao",
+          "Xingqiu",
+          "Bennett",
+          "Yelan",
+          "Diona",
+          "Fischl",
+          "Neuvillette",
+          "Furina",
+          "Kuki Shinobu",
+          "Kamisato Ayato",
+          "Skirk",
+          "Escoffier",
+          "Citlali",
+          "Shenhe",
+          "Ganyu",
+          "Arlecchino",
+          "Yoimiya",
+          "Kamisato Ayaka",
+          "Mualani",
+          "Mavuika",
+          "Gaming",
+          "Barbara",
+        ],
+        "Stage 2": [
+          "Kamisato Ayaka",
+          "Mualani",
+          "Xiangling",
+          "Yanfei",
+          "Rosaria",
+          "Razor",
+        ],
+        "Stage 3": [
+          "Raiden Shogun",
+          "Zhongli",
+          "Albedo",
+          "Ningguang",
+          "Noelle",
+          "Gorou",
+        ],
+        "Stage 4": ["Ganyu", "Venti", "Mona", "Jean", "Diluc", "Keqing"],
+      };
+
+      // --- Configurazione personaggi per data ---
+      const teatroConfigByDate = {
+        "1 Giugno 2025": {
+          consigliati: {
+            "Stage 1": [
+              "Furina",
+              "Neuvillette",
+              "Arataki Itto",
+              "Citlali",
+              "Chiori",
+              "Ningguang",
+              "Navia",
+              "Albedo",
+              "Barbara",
+            ],
+            "Stage 2": [
+              "Neuvillette",
+              "Sangonomiya Kokomi",
+              "Furina",
+              "Xilonen",
+              "Navia",
+              "Kamisato Ayaka",
+              "Ganyu",
+              "Yelan",
+            ],
+            "Stage 3": [
+              "Zhongli",
+              "Albedo",
+              "Ganyu",
+              "Citlali",
+              "Kamisato Ayaka",
+              "Yelan",
+            ],
+            "Stage 4": [
+              "Citlali",
+              "Escoffier",
+              "Zhongli",
+              "Xilonen",
+              "Furina",
+              "Mualani",
+              "Navia",
+            ],
+          },
+          ospiti: [
+            { name: "Furina", element: "Hydro" },
+            { name: "Dehya", element: "Pyro" },
+            { name: "Xingqiu", element: "Hydro" },
+            { name: "Xiangling", element: "Pyro" },
+          ],
+          apertura: [
+            { name: "Cyno", element: "Electro" },
+            { name: "Fischl", element: "Electro" },
+            { name: "Mika", element: "Cryo" },
+            { name: "Nahida", element: "Dendro" },
+            { name: "Collei", element: "Dendro" },
+          ],
+        },
+        "1 Agosto 2025": {
+          consigliati: {
+            "Stage 1": ["Arlecchino", "Yoimiya"],
+            "Stage 2": ["Kamisato Ayaka", "Mualani"],
+            "Stage 3": ["Raiden Shogun", "Gorou"],
+            "Stage 4": ["Diluc", "Keqing"],
+          },
+          ospiti: [
+            { name: "Lan Yan", element: "Anemo" },
+            { name: "Noelle", element: "Geo" },
+          ],
+          apertura: [
+            { name: "Tartaglia", element: "Hydro" },
+            { name: "Dahlia", element: "Cryo" },
+          ],
+        },
+        // ...altre date...
+      };
+
+      // --- Configurazione di default per date non presenti ---
+      const defaultTeatroConfig = {
+        consigliati: teatroStageCharacterNames,
+        ospiti: [
+          { name: "Emilie", element: "Dendro" },
+          { name: "Kinich", element: "Dendro" },
+          { name: "Lan Yan", element: "Anemo" },
+          { name: "Noelle", element: "Geo" },
+        ],
+        apertura: [
+          { name: "Lyney", element: "Pyro" },
+          { name: "Wriothesley", element: "Cryo" },
+          { name: "Rosaria", element: "Cryo" },
+          { name: "Xiangling", element: "Pyro" },
+          { name: "Tartaglia", element: "Hydro" },
+          { name: "Dahlia", element: "Cryo" },
+        ],
+      };
+
+      // --- Funzione globale per cambiare stage attivo e renderizzare ---
+      function setActiveStage(stage) {
+        activeStageOnly = stage;
+        renderTeatroTeams();
+        // Aggiorna stile pulsanti
+        ["1", "2", "3", "4"].forEach((s) => {
+          const btn = document.getElementById("btn-stage-" + s);
+          if (!btn) return;
+          btn.style.background = stage === "Stage " + s ? "#00d4aa" : "#64ffda";
+          btn.style.color = stage === "Stage " + s ? "#fff" : "#16213e";
+        });
+        // Scroll immediato
+        var el = document.getElementById(
+          "stage-" + stage.replace(/[^0-9]/g, "")
+        );
+        if (el) window.scrollTo({ top: el.offsetTop - 60, behavior: "auto" });
+        // Imposta il valore del campo Stage nel modale di creazione team
+        const stageSelect = document.getElementById("newTeatroTeamStage");
+        if (stageSelect) stageSelect.value = stage;
+      }
+
+      // ... existing code ...
+      // Dopo la funzione openEditTeatroTeamModal, aggiungi questo event listener:
+      document.addEventListener("click", function (e) {
+        // Se siamo nel modale di modifica team e clicchiamo su uno slot personaggio
+        if (
+          document.getElementById("createTeatroTeamModal").style.display ===
+            "flex" &&
+          e.target.classList.contains("new-teatro-character-slot")
+        ) {
+          currentTeatroEditingSlot = e.target;
+          openTeatroCharacterModal();
+        }
+        // Se clicchiamo su un'immagine personaggio nello slot
+        if (
+          document.getElementById("createTeatroTeamModal").style.display ===
+            "flex" &&
+          e.target.tagName === "IMG" &&
+          e.target.parentElement.classList.contains("new-teatro-character-slot")
+        ) {
+          currentTeatroEditingSlot = e.target.parentElement;
+          openTeatroCharacterModal();
+        }
+      });
+      // ... existing code ...
+
+      document.getElementById("deleteTeatroTeamBtn").onclick = function () {
+        if (
+          !isEditingTeatroTeam ||
+          editingTeatroTeamStage === null ||
+          editingTeatroTeamIndex === null
+        )
+          return;
+        if (confirm("Vuoi eliminare questo team?")) {
+          const teams =
+            teatroTeamsDataByDate[currentTeatroDate][editingTeatroTeamStage];
+          teams.splice(editingTeatroTeamIndex, 1);
+          saveTeatroTeamsData();
+          document.getElementById("createTeatroTeamModal").style.display =
+            "none";
+          resetNewTeatroTeamForm();
+          isEditingTeatroTeam = false;
+          editingTeatroTeamStage = null;
+          editingTeatroTeamIndex = null;
+          renderTeatroTeams();
+          showTeatroSaveNotification("Team eliminato!");
+        }
+      };
+    </script>
+    <script>
+      let headerTimeout = null;
+      function showHeader() {
+        document
+          .getElementById("main-header")
+          .classList.remove("header-hidden");
+      }
+      function hideHeader() {
+        document.getElementById("main-header").classList.add("header-hidden");
+      }
+      function resetHeaderTimeout() {
+        showHeader();
+        if (headerTimeout) clearTimeout(headerTimeout);
+        headerTimeout = setTimeout(() => {
+          hideHeader();
+        }, 2000); // 2 secondi senza scroll
+      }
+      window.addEventListener("scroll", resetHeaderTimeout, { passive: true });
+      // Mostra header subito al caricamento
+      showHeader();
+      // Nascondi header dopo 2s se non si scrolla
+      resetHeaderTimeout();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

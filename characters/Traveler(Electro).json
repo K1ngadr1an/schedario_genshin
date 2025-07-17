@@ -1,0 +1,644 @@
+{
+  "displayName": "Traveler (Electro)",
+  "img": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/traveler_electro/image.png?strip=all&quality=100&w=160",
+  "tags": [
+    "Sword",
+    "Electro",
+    "Inazuma",
+    "7/9",
+    "Viatrix",
+    "Temple of the Lion"
+  ],
+  "description": "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven. In Inazuma, they gained the power of Electro.",
+  "weapons": [
+    {
+      "name": "Freedom-Sworn",
+      "img": "https://img.game8.co/3456283/700b83638b99dba8908463aa92f6b3d6.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Haran Geppaku Futsu",
+      "img": "https://img.game8.co/3511222/2310c3f7ed9c13a4249fccdc256199bb.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Skyward Blade",
+      "img": "https://img.game8.co/3311113/3b0e2ee76a9d421e3f7e4a640f7a9b99.png/show",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://img.game8.co/3314420/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Festering Desire",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Blackcliff Longsword",
+      "img": "https://img.game8.co/3314395/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Prototype Rancour",
+      "img": "https://img.game8.co/3314421/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "Physical DMG"
+    },
+    {
+      "name": "Cool Steel",
+      "img": "https://img.game8.co/3314434/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Silver Sword",
+      "img": "https://img.game8.co/3314396/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "ATK"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    },
+    {
+      "name": "Thundering Fury (4)",
+      "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3314242/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (2) + Thundering Fury (2)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (2) + Noblesse Oblige (2)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (2)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    },
+    {
+      "name": "Thundering Fury (2)",
+      "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (2)",
+      "img": "https://img.game8.co/3314242/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge / ATK%" },
+    { "type": "Goblet", "value": "Electro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "Energy Recharge",
+    "CRIT Rate",
+    "CRIT DMG",
+    "Elemental Mastery",
+    "ATK%"
+  ],
+  "talents": ["Skill", "Normal Attack", "Burst"],
+  "info": "Il Traveler Electro è un supporto che si specializza nella generazione di energia per il team. La sua abilità Elementale e Burst possono fornire particelle di energia e buff di Energy Recharge.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Freedom-Sworn",
+        "img": "https://img.game8.co/3456283/700b83638b99dba8908463aa92f6b3d6.png/show",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Emblem of Severed Fate (4)",
+          "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Traveler (Electro)", "img": "traveler_electro.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Kazuha", "img": "kazuha.png" }
+    ],
+    [
+      { "name": "Eula", "img": "eula.png" },
+      { "name": "Traveler (Electro)", "img": "traveler_electro.png" },
+      { "name": "Diona", "img": "diona.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ],
+    [
+      { "name": "Beidou", "img": "beidou.png" },
+      { "name": "Traveler (Electro)", "img": "traveler_electro.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ],
+    [
+      { "name": "Xiao", "img": "xiao.png" },
+      { "name": "Traveler (Electro)", "img": "traveler_electro.png" },
+      { "name": "Zhongli", "img": "zhongli.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ],
+    [
+      { "name": "Hu Tao", "img": "hu_tao.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Traveler (Electro)", "img": "traveler_electro.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Foreign Ironwind",
+      "desc": "",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Traveler-NA.webp",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Traveler_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.1%",
+          "hit2": "43.4%",
+          "hit3": "52.6%",
+          "hit4": "58.3%",
+          "hit5": "35.8% + 35.8%",
+          "charged": "55.9% + 55.9%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "47.7%",
+          "hit2": "46.9%",
+          "hit3": "56.9%",
+          "hit4": "63.1%",
+          "hit5": "38.7% + 38.7%",
+          "charged": "60.5% + 60.5%",
+          "stamina": "20",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "51.3%",
+          "hit2": "50.4%",
+          "hit3": "61.2%",
+          "hit4": "67.9%",
+          "hit5": "41.6% + 41.6%",
+          "charged": "65.1% + 65.1%",
+          "stamina": "20",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "56.4%",
+          "hit2": "55.4%",
+          "hit3": "67.3%",
+          "hit4": "74.7%",
+          "hit5": "45.8% + 45.8%",
+          "charged": "71.6% + 71.6%",
+          "stamina": "20",
+          "plunge": "81.8%",
+          "lowhigh": "163.5% / 204.2%"
+        },
+        {
+          "level": 5,
+          "hit1": "60%",
+          "hit2": "59%",
+          "hit3": "71.6%",
+          "hit4": "79.5%",
+          "hit5": "48.7% + 48.7%",
+          "charged": "76.2% + 76.2%",
+          "stamina": "20",
+          "plunge": "87%",
+          "lowhigh": "173.9% / 217.2%"
+        },
+        {
+          "level": 6,
+          "hit1": "63.6%",
+          "hit2": "62.6%",
+          "hit3": "75.9%",
+          "hit4": "84.3%",
+          "hit5": "51.6% + 51.6%",
+          "charged": "80.8% + 80.8%",
+          "stamina": "20",
+          "plunge": "92.3%",
+          "lowhigh": "184.3% / 229.7%"
+        },
+        {
+          "level": 7,
+          "hit1": "68.7%",
+          "hit2": "67.7%",
+          "hit3": "82.2%",
+          "hit4": "91.2%",
+          "hit5": "55.8% + 55.8%",
+          "charged": "87.4% + 87.4%",
+          "stamina": "20",
+          "plunge": "99.5%",
+          "lowhigh": "199.2% / 248.5%"
+        },
+        {
+          "level": 8,
+          "hit1": "73.8%",
+          "hit2": "72.8%",
+          "hit3": "88.5%",
+          "hit4": "98.1%",
+          "hit5": "60% + 60%",
+          "charged": "94% + 94%",
+          "stamina": "20",
+          "plunge": "106.7%",
+          "lowhigh": "214.1% / 267.3%"
+        },
+        {
+          "level": 9,
+          "hit1": "78.9%",
+          "hit2": "77.9%",
+          "hit3": "94.8%",
+          "hit4": "105%",
+          "hit5": "64.2% + 64.2%",
+          "charged": "100.6% + 100.6%",
+          "stamina": "20",
+          "plunge": "113.9%",
+          "lowhigh": "229% / 286.1%"
+        },
+        {
+          "level": 10,
+          "hit1": "84%",
+          "hit2": "83%",
+          "hit3": "101.1%",
+          "hit4": "111.9%",
+          "hit5": "68.4% + 68.4%",
+          "charged": "107.2% + 107.2%",
+          "stamina": "20",
+          "plunge": "121.1%",
+          "lowhigh": "243.9% / 304.9%"
+        },
+        {
+          "level": 11,
+          "hit1": "89.1%",
+          "hit2": "88.1%",
+          "hit3": "107.4%",
+          "hit4": "118.8%",
+          "hit5": "72.6% + 72.6%",
+          "charged": "113.8% + 113.8%",
+          "stamina": "20",
+          "plunge": "128.3%",
+          "lowhigh": "258.8% / 323.7%"
+        },
+        {
+          "level": 12,
+          "hit1": "94.2%",
+          "hit2": "93.2%",
+          "hit3": "113.7%",
+          "hit4": "125.7%",
+          "hit5": "76.8% + 76.8%",
+          "charged": "120.4% + 120.4%",
+          "stamina": "20",
+          "plunge": "135.5%",
+          "lowhigh": "273.7% / 342.5%"
+        },
+        {
+          "level": 13,
+          "hit1": "99.3%",
+          "hit2": "98.3%",
+          "hit3": "120%",
+          "hit4": "132.6%",
+          "hit5": "81% + 81%",
+          "charged": "127% + 127%",
+          "stamina": "20",
+          "plunge": "142.7%",
+          "lowhigh": "288.6% / 361.3%"
+        },
+        {
+          "level": 14,
+          "hit1": "104.4%",
+          "hit2": "103.4%",
+          "hit3": "126.3%",
+          "hit4": "139.5%",
+          "hit5": "85.2% + 85.2%",
+          "charged": "133.6% + 133.6%",
+          "stamina": "20",
+          "plunge": "149.9%",
+          "lowhigh": "303.5% / 380.1%"
+        },
+        {
+          "level": 15,
+          "hit1": "109.5%",
+          "hit2": "108.5%",
+          "hit3": "132.6%",
+          "hit4": "146.4%",
+          "hit5": "89.4% + 89.4%",
+          "charged": "140.2% + 140.2%",
+          "stamina": "20",
+          "plunge": "157.1%",
+          "lowhigh": "318.4% / 398.9%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash 2 rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Lightning Blade",
+      "desc": "Unleashes three swift thunder shadows that deal Electro DMG to opponents and leave an Abundance Amulet behind after hitting an opponent.",
+      "video": "https://youtu.be/example",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Traveler-Electro-Skill.webp",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Unleashes three swift thunder shadows that deal <span class='electro'>Electro DMG</span> to opponents and leave an <b>Abundance Amulet</b> behind after hitting an opponent.<br><span style='color:#b3e6b3;'>The Abundance Amulet will continuously restore your active character's Elemental Energy.</span></div><div class='skill-section'><b>Abundance Amulet</b><br>When characters are near the Abundance Amulet, they will obtain the following effect: After the Traveler picks up an Abundance Amulet, they will restore 2 Elemental Energy to all party members and nearby characters. This effect can be triggered once every 5s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "thunder_shadow_dmg": "75.6%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 2,
+          "thunder_shadow_dmg": "81.3%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 3,
+          "thunder_shadow_dmg": "87%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 4,
+          "thunder_shadow_dmg": "94.5%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 5,
+          "thunder_shadow_dmg": "100.2%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 6,
+          "thunder_shadow_dmg": "105.9%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 7,
+          "thunder_shadow_dmg": "113.4%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 8,
+          "thunder_shadow_dmg": "120.9%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 9,
+          "thunder_shadow_dmg": "128.4%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 10,
+          "thunder_shadow_dmg": "135.9%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 11,
+          "thunder_shadow_dmg": "143.4%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 12,
+          "thunder_shadow_dmg": "150.9%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 13,
+          "thunder_shadow_dmg": "158.4%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 14,
+          "thunder_shadow_dmg": "165.9%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        },
+        {
+          "level": 15,
+          "thunder_shadow_dmg": "173.4%",
+          "abundance_amulet_energy": "2",
+          "cd": "13.5s"
+        }
+      ]
+    },
+    {
+      "name": "Bellowing Thunder",
+      "desc": "You call upon the protection of lightning, knocking nearby opponents back and dealing Electro DMG.",
+      "video": "https://youtu.be/example",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Traveler-Electro-Burst.webp",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>You call upon the protection of lightning, knocking nearby opponents back and dealing <span class='electro'>Electro DMG</span>.<br><span style='color:#b3e6b3;'>The lightning will also leave a Thunderclap Shrine at the location where it is cast.</span></div><div class='skill-section'><b>Thunderclap Shrine</b><br>When other party members's Normal Attacks hit opponents on the field, they will trigger coordinated attacks from the Thunderclap Shrine, dealing <span class='aoe-electro'>AoE Electro DMG</span> at the opponent's location. 1 coordinated attack can be triggered every 0.5s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "119%",
+          "coordinated_attack_dmg": "14%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "128%",
+          "coordinated_attack_dmg": "15%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "137%",
+          "coordinated_attack_dmg": "16%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "149%",
+          "coordinated_attack_dmg": "17%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "158%",
+          "coordinated_attack_dmg": "18%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 6,
+          "skill_dmg": "167%",
+          "coordinated_attack_dmg": "19%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 7,
+          "skill_dmg": "179%",
+          "coordinated_attack_dmg": "20%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 8,
+          "skill_dmg": "188%",
+          "coordinated_attack_dmg": "21%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 9,
+          "skill_dmg": "197%",
+          "coordinated_attack_dmg": "22%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 10,
+          "skill_dmg": "206%",
+          "coordinated_attack_dmg": "23%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 11,
+          "skill_dmg": "215%",
+          "coordinated_attack_dmg": "24%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 12,
+          "skill_dmg": "224%",
+          "coordinated_attack_dmg": "25%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 13,
+          "skill_dmg": "233%",
+          "coordinated_attack_dmg": "26%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 14,
+          "skill_dmg": "242%",
+          "coordinated_attack_dmg": "27%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 15,
+          "skill_dmg": "251%",
+          "coordinated_attack_dmg": "28%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Thunderflash",
+      "phase": "Ascension Phase 1",
+      "desc": "When another nearby character in the party obtains an Abundance Amulet created by Lightning Blade, Lightning Blade's CD is decreased by 1.5s."
+    },
+    {
+      "name": "Resounding Roar",
+      "phase": "Ascension Phase 4",
+      "desc": "When the Normal Attacks of your active party members hit opponents who are affected by the Thunderclap Shrine's coordinated attacks, the Thunderclap Shrine will unleash a shockwave at that opponent's position that deals 30% of the original coordinated attack's DMG as AoE Electro DMG. This effect can be triggered once every 0.5s."
+    },
+    {
+      "name": "Vagabond's Wisdom",
+      "phase": "Passive",
+      "desc": "Decreases sprinting Stamina consumption for your own party members by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Thunderbird's Mercy",
+      "phase": "Constellation Lv. 1",
+      "desc": "When the Normal Attacks of your active party members hit opponents who are affected by the Thunderclap Shrine's coordinated attacks, the Thunderclap Shrine will unleash a shockwave at that opponent's position that deals 30% of the original coordinated attack's DMG as AoE Electro DMG. This effect can be triggered once every 0.5s."
+    },
+    {
+      "name": "Resounding Roar",
+      "phase": "Constellation Lv. 2",
+      "desc": "When the Normal Attacks of your active party members hit opponents who are affected by the Thunderclap Shrine's coordinated attacks, the Thunderclap Shrine will unleash a shockwave at that opponent's position that deals 30% of the original coordinated attack's DMG as AoE Electro DMG. This effect can be triggered once every 0.5s."
+    },
+    {
+      "name": "Fearsome Wrath",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Bellowing Thunder by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Shattered Dark",
+      "phase": "Constellation Lv. 4",
+      "desc": "For 10s after Lightning Blade hits an opponent, the Traveler's Energy Recharge is increased by 10%."
+    },
+    {
+      "name": "Violet Vehemence",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Lightning Blade by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "World-Shaker",
+      "phase": "Constellation Lv. 6",
+      "desc": "Every 2 Falling Thunder attacks triggered by Bellowing Thunder will significantly increase the DMG dealt by the next Falling Thunder, dealing 200% of its original DMG and will restore an additional 1 Energy to the current character."
+    }
+  ]
+}

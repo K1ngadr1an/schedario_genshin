@@ -1,0 +1,535 @@
+{
+  "displayName": "Yoimiya",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yoimiya_Icon.png",
+  "tags": [
+    "Bow",
+    "Pyro",
+    "Inazuma",
+    "Naganohara Fireworks",
+    "7/21",
+    "Carassius Auratus",
+    "Narukami"
+  ],
+  "description": "A talented pyrotechnician. The current owner of Naganohara Fireworks. She is known as \"Queen of the Summer Festival.\"",
+  "weapons": [
+    {
+      "name": "Thundering Pulse",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thundering_Pulse.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Aqua Simulacra",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Aqua_Simulacra.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Skyward Harp",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Skyward_Harp.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Rust",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Rust.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "The Stringless",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Stringless.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Slingshot",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Slingshot.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Blackcliff Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Blackcliff_Warbow.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Prototype Crescent",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Prototype_Crescent.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Hamayumi",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Hamayumi.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "King's Squire",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_King%27s_Squire.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Sharpshooter's Oath",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sharpshooter%27s_Oath.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Raven Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Raven_Bow.png",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Shimenawa's Reminiscence (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Shimenawa%27s_Reminiscence.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Echoes of an Offering (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Echoes_of_an_Offering.png"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (2) + Crimson Witch of Flames (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Shimenawa%27s_Reminiscence.png"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (2) + Gladiator's Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Shimenawa%27s_Reminiscence.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Gladiator's Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Gladiator's Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Gladiator%27s_Finale.png"
+    },
+    {
+      "name": "Wanderer's Troupe (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Wanderer%27s_Troupe.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "CRIT Rate",
+    "CRIT DMG",
+    "ATK%",
+    "Elemental Mastery",
+    "Energy Recharge"
+  ],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Yoimiya è una DPS Pyro specializzata negli attacchi normali. La sua abilità elementale aumenta il danno degli attacchi normali e li converte in danno Pyro. È eccellente per il Vaporize con Xingqiu o Yelan. Concentrati su CRIT Rate/DMG e ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Thundering Pulse",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thundering_Pulse.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Shimenawa's Reminiscence (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Shimenawa%27s_Reminiscence.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Yelan", "img": "yelan.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Kazuha", "img": "kazuha.png" }
+    ],
+    [
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Beidou", "img": "beidou.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ],
+    [
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Yelan", "img": "yelan.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ],
+    [
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Xiangling", "img": "xiangling.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Kazuha", "img": "kazuha.png" }
+    ],
+    [
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Albedo", "img": "albedo.png" },
+      { "name": "Zhongli", "img": "zhongli.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ],
+    [
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Gorou", "img": "gorou.png" },
+      { "name": "Albedo", "img": "albedo.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Firework Flare-Up",
+      "desc": "Performs up to 5 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Firework_Flare-Up.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yoimiya_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.1%",
+          "hit2": "36.1%",
+          "hit3": "46.8%",
+          "hit4": "46.8%",
+          "hit5": "61.5%",
+          "charged": "43.9%",
+          "stamina": "20",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "39.1%",
+          "hit2": "39.1%",
+          "hit3": "50.6%",
+          "hit4": "50.6%",
+          "hit5": "66.5%",
+          "charged": "47.4%",
+          "stamina": "20",
+          "plunge": "61.4%",
+          "lowhigh": "122.8% / 153.5%"
+        },
+        {
+          "level": 3,
+          "hit1": "42.0%",
+          "hit2": "42.0%",
+          "hit3": "54.4%",
+          "hit4": "54.4%",
+          "hit5": "71.5%",
+          "charged": "51.0%",
+          "stamina": "20",
+          "plunge": "66.0%",
+          "lowhigh": "132.0% / 165.0%"
+        },
+        {
+          "level": 4,
+          "hit1": "46.2%",
+          "hit2": "46.2%",
+          "hit3": "59.8%",
+          "hit4": "59.8%",
+          "hit5": "78.7%",
+          "charged": "56.1%",
+          "stamina": "20",
+          "plunge": "72.6%",
+          "lowhigh": "145.2% / 181.5%"
+        },
+        {
+          "level": 5,
+          "hit1": "49.1%",
+          "hit2": "49.1%",
+          "hit3": "63.6%",
+          "hit4": "63.6%",
+          "hit5": "83.7%",
+          "charged": "59.7%",
+          "stamina": "20",
+          "plunge": "77.2%",
+          "lowhigh": "154.4% / 193.0%"
+        },
+        {
+          "level": 6,
+          "hit1": "52.0%",
+          "hit2": "52.0%",
+          "hit3": "67.4%",
+          "hit4": "67.4%",
+          "hit5": "88.7%",
+          "charged": "63.3%",
+          "stamina": "20",
+          "plunge": "81.8%",
+          "lowhigh": "163.6% / 204.5%"
+        },
+        {
+          "level": 7,
+          "hit1": "55.7%",
+          "hit2": "55.7%",
+          "hit3": "72.2%",
+          "hit4": "72.2%",
+          "hit5": "95.0%",
+          "charged": "67.9%",
+          "stamina": "20",
+          "plunge": "87.7%",
+          "lowhigh": "175.4% / 219.2%"
+        },
+        {
+          "level": 8,
+          "hit1": "59.4%",
+          "hit2": "59.4%",
+          "hit3": "77.0%",
+          "hit4": "77.0%",
+          "hit5": "101.3%",
+          "charged": "72.5%",
+          "stamina": "20",
+          "plunge": "93.6%",
+          "lowhigh": "187.2% / 234.0%"
+        },
+        {
+          "level": 9,
+          "hit1": "63.1%",
+          "hit2": "63.1%",
+          "hit3": "81.8%",
+          "hit4": "81.8%",
+          "hit5": "107.6%",
+          "charged": "77.1%",
+          "stamina": "20",
+          "plunge": "99.5%",
+          "lowhigh": "199.0% / 248.8%"
+        },
+        {
+          "level": 10,
+          "hit1": "66.8%",
+          "hit2": "66.8%",
+          "hit3": "86.6%",
+          "hit4": "86.6%",
+          "hit5": "113.9%",
+          "charged": "81.7%",
+          "stamina": "20",
+          "plunge": "105.4%",
+          "lowhigh": "210.8% / 263.6%"
+        },
+        {
+          "level": 11,
+          "hit1": "70.5%",
+          "hit2": "70.5%",
+          "hit3": "91.4%",
+          "hit4": "91.4%",
+          "hit5": "120.2%",
+          "charged": "86.3%",
+          "stamina": "20",
+          "plunge": "111.3%",
+          "lowhigh": "222.6% / 278.4%"
+        },
+        {
+          "level": 12,
+          "hit1": "74.2%",
+          "hit2": "74.2%",
+          "hit3": "96.2%",
+          "hit4": "96.2%",
+          "hit5": "126.5%",
+          "charged": "90.9%",
+          "stamina": "20",
+          "plunge": "117.2%",
+          "lowhigh": "234.4% / 293.2%"
+        },
+        {
+          "level": 13,
+          "hit1": "77.9%",
+          "hit2": "77.9%",
+          "hit3": "101.0%",
+          "hit4": "101.0%",
+          "hit5": "132.8%",
+          "charged": "95.5%",
+          "stamina": "20",
+          "plunge": "123.1%",
+          "lowhigh": "246.2% / 308.0%"
+        },
+        {
+          "level": 14,
+          "hit1": "81.6%",
+          "hit2": "81.6%",
+          "hit3": "105.8%",
+          "hit4": "105.8%",
+          "hit5": "139.1%",
+          "charged": "100.1%",
+          "stamina": "20",
+          "plunge": "129.0%",
+          "lowhigh": "258.0% / 322.8%"
+        },
+        {
+          "level": 15,
+          "hit1": "85.3%",
+          "hit2": "85.3%",
+          "hit3": "110.6%",
+          "hit4": "110.6%",
+          "hit5": "145.4%",
+          "charged": "104.7%",
+          "stamina": "20",
+          "plunge": "134.9%",
+          "lowhigh": "269.8% / 337.6%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. While aiming, flames will accumulate on the arrowhead before the arrow is fired. Has different effects based on how long the energy has been charged.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Niwabi Fire-Dance",
+      "desc": "Yoimiya waves a sparkler and causes a ring of saltpeter to surround her.",
+      "video": "https://www.youtube.com/embed/example",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Niwabi_Fire-Dance.png",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Yoimiya waves a sparkler and causes a ring of saltpeter to surround her.<br><span style='color:#ff9999;'>Niwabi Enshou</span><br>During this time, arrows fired by Yoimiya's Normal Attack will be Blazing Arrows, and their DMG will be increased and converted to <span class='pyro'>Pyro DMG</span>. During this time, Normal Attack: Firework Flare-Up will not generate Kindling Arrows.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "blazing_arrow_dmg": "137.6%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 2,
+          "blazing_arrow_dmg": "147.2%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 3,
+          "blazing_arrow_dmg": "156.8%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 4,
+          "blazing_arrow_dmg": "168.0%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 5,
+          "blazing_arrow_dmg": "177.6%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 6,
+          "blazing_arrow_dmg": "187.2%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 7,
+          "blazing_arrow_dmg": "198.4%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 8,
+          "blazing_arrow_dmg": "209.6%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 9,
+          "blazing_arrow_dmg": "220.8%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 10,
+          "blazing_arrow_dmg": "232.0%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 11,
+          "blazing_arrow_dmg": "243.2%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 12,
+          "blazing_arrow_dmg": "254.4%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 13,
+          "blazing_arrow_dmg": "265.6%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 14,
+          "blazing_arrow_dmg": "276.8%",
+          "duration": "10s",
+          "cd": "18s"
+        },
+        {
+          "level": 15,
+          "blazing_arrow_dmg": "288.0%",
+          "duration": "10s",
+          "cd": "18s"
+        }
+      ]
+    },
+    {
+      "name": "Ryuukin Saxifrage",
+      "video": "https://www.youtube.com/embed/example",
+      "desc": "Yoimiya leaps into the air along with her original creation, the \"Ryuukin Saxifrage,\" and fires forth blazing rockets bursting with surprises that deal AoE Pyro DMG and mark one of the hit opponents with Aurous Blaze.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Ryuukin_Saxifrage.png"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Tricks of the Trouble-Maker",
+      "phase": "Ascension Phase 1",
+      "desc": "During Niwabi Fire-Dance, shots from Yoimiya's Normal Attack will increase her Pyro DMG Bonus by 2% on hit. This effect lasts for 3s and can have a maximum of 10 stacks."
+    },
+    {
+      "name": "Summer Night's Dawn",
+      "phase": "Ascension Phase 4",
+      "desc": "Using Ryuukin Saxifrage causes nearby party members (not including Yoimiya) to gain a 10% ATK increase for 15s. Additionally, a further ATK Bonus will be added on based on the number of \"Tricks of the Trouble-Maker\" stacks Yoimiya possesses when using Ryuukin Saxifrage. Each stack increases this ATK Bonus by 1%."
+    },
+    {
+      "name": "Blazing Match",
+      "phase": "Passive",
+      "desc": "Yoimiya's Pyro DMG is increased by 2% when she crafts a bow-type weapon."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Agate Ryuukin",
+      "phase": "Constellation Lv. 1",
+      "desc": "The Aurous Blaze created by Ryuukin Saxifrage lasts for an extra 4s. Additionally, when an opponent affected by Aurous Blaze is defeated within its duration, Yoimiya's ATK is increased by 20% for 20s."
+    },
+    {
+      "name": "A Procession of Bonfires",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Yoimiya's Pyro DMG scores a CRIT Hit, Yoimiya will gain a 25% Pyro DMG Bonus for 6s. This effect can be triggered even when Yoimiya is not the active character."
+    },
+    {
+      "name": "Trickster's Flare",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Niwabi Fire-Dance by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Pyrotechnic Professional",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Yoimiya's own Aurous Blaze triggers an explosion, Niwabi Fire-Dance's CD is decreased by 1.2s."
+    },
+    {
+      "name": "A Summer Festival's Eve",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Ryuukin Saxifrage by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Naganohara Meteor Swarm",
+      "phase": "Constellation Lv. 6",
+      "desc": "During Niwabi Fire-Dance, Yoimiya's Normal Attacks have a 50% chance of firing an extra Kindling Arrow that deals 60% of its original DMG. This DMG is considered Normal Attack DMG."
+    }
+  ]
+}

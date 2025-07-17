@@ -1,0 +1,205 @@
+{
+  "displayName": "Faruzan",
+  "img": "images/characters/faruzan.png",
+  "tags": ["Bow", "Anemo", "Sumeru", "4★", "Support", "Buffer"],
+  "description": "A renowned scholar from the Akademiya, Faruzan is an Anemo support who specializes in buffing Anemo DMG and debuffing enemy Anemo RES.",
+  "weapons": [
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Bow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Stringless",
+      "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge" },
+    { "type": "Goblet", "value": "Anemo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK%"],
+  "talents": [
+    "Normal Attack: Parthian Shot",
+    "Wind Realm of Nasamjnin",
+    "The Wind's Secret Ways"
+  ],
+  "info": "Faruzan is a top-tier Anemo support for characters like Wanderer, Xiao, and Heizou. Build her for Energy Recharge and Anemo DMG Bonus to maximize her buffs and debuffs.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Favonius Warbow",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Viridescent Venerer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Wanderer" },
+      { "name": "Faruzan" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" }
+    ],
+    [
+      { "name": "Xiao" },
+      { "name": "Faruzan" },
+      { "name": "Jean" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Heizou" },
+      { "name": "Faruzan" },
+      { "name": "Sucrose" },
+      { "name": "Bennett" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Parthian Shot",
+      "desc": "Performs up to 4 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Parthian_Shot.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Anemo DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.7%",
+          "hit2": "37.6%",
+          "hit3": "47.1%",
+          "hit4": "58.3%",
+          "charged": "47.3% + 47.3%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "39.7%",
+          "hit2": "40.7%",
+          "hit3": "51.0%",
+          "hit4": "63.2%",
+          "charged": "51.2% + 51.2%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Wind Realm of Nasamjnin",
+      "desc": "Faruzan deploys a polyhedron that deals AoE Anemo DMG and grants the Pressurized Collapse effect, pulling in enemies and reducing their Anemo RES.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Wind_Realm_of_Nasamjnin.png",
+      "details_html": "<div class='skill-section'><b>Wind Realm of Nasamjnin</b><br>Deploys a polyhedron that deals AoE Anemo DMG and grants the Pressurized Collapse effect, pulling in enemies and reducing their Anemo RES.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "148.8% ATK",
+          "collapse_dmg": "62.0% ATK",
+          "cd": "6s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "160.0% ATK",
+          "collapse_dmg": "66.7% ATK",
+          "cd": "6s"
+        }
+      ]
+    },
+    {
+      "name": "The Wind's Secret Ways",
+      "desc": "Faruzan creates a Dazzling Polyhedron that moves in a triangular path, dealing AoE Anemo DMG and granting the Prayerful Wind's Benefit to all nearby party members, increasing their Anemo DMG and reducing enemy Anemo RES.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_The_Winds_Secret_Ways.png",
+      "details_html": "<div class='skill-section'><b>The Wind's Secret Ways</b><br>Creates a Dazzling Polyhedron that moves in a triangular path, dealing AoE Anemo DMG and granting the Prayerful Wind's Benefit to all nearby party members, increasing their Anemo DMG and reducing enemy Anemo RES.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "304% ATK",
+          "anemo_bonus": "32%",
+          "res_reduction": "30%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "326% ATK",
+          "anemo_bonus": "34%",
+          "res_reduction": "32%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Impetuous Flow",
+      "phase": "Ascension Phase 1",
+      "desc": "When Faruzan is in the party, the cost of charged attacks is reduced by 20%."
+    },
+    {
+      "name": "Lost Wisdom of the Seven Caverns",
+      "phase": "Ascension Phase 4",
+      "desc": "Characters affected by Prayerful Wind's Benefit gain 40% increased Anemo DMG Bonus."
+    },
+    {
+      "name": "Tomes Light the Path",
+      "phase": "Passive",
+      "desc": "When Faruzan crafts Weapon Ascension Materials, she has a 10% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Truth by Any Means",
+      "phase": "Constellation Lv. 1",
+      "desc": "Faruzan can fire 1 additional Hurricane Arrow per charged attack."
+    },
+    {
+      "name": "Overzealous Intellect",
+      "phase": "Constellation Lv. 2",
+      "desc": "The duration of Prayerful Wind's Benefit is increased by 6s."
+    },
+    {
+      "name": "Spirit-Orchard Stroll",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of The Wind's Secret Ways by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Divine Comprehension",
+      "phase": "Constellation Lv. 4",
+      "desc": "When characters affected by Prayerful Wind's Benefit trigger a Swirl reaction, they restore 2 Energy. Can occur once every 2s."
+    },
+    {
+      "name": "Wonderland of Rumination",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Wind Realm of Nasamjnin by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "The Wondrous Path of Truth",
+      "phase": "Constellation Lv. 6",
+      "desc": "Characters affected by Prayerful Wind's Benefit gain 40% increased CRIT DMG."
+    }
+  ]
+}

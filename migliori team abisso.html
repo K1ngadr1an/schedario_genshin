@@ -1,0 +1,3791 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Migliori Team Abisso - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .main-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #64ffda;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 12px #64ffda44;
+      }
+      .switch-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem 0;
+        padding: 1rem;
+        background: rgba(26, 26, 46, 0.6);
+        border-radius: 12px;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+      }
+      .switch-label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #e0e0e0;
+      }
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #16213e;
+        transition: 0.4s;
+        border-radius: 34px;
+        border: 2px solid #64ffda;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 2px;
+        bottom: 2px;
+        background-color: #64ffda;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background-color: #64ffda;
+      }
+      input:checked + .slider:before {
+        transform: translateX(26px);
+        background-color: #16213e;
+      }
+      .switch-text {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #64ffda;
+        min-width: 80px;
+        text-align: center;
+      }
+      .floor-section {
+        max-width: 1100px;
+        margin: 2rem auto;
+        background: rgba(26, 26, 46, 0.92);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        padding: 2rem 1.5rem 2.5rem 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /* Ottimizzazioni per schermi 2K */
+      @media (min-width: 1400px) {
+        .floor-section {
+          max-width: 1400px;
+          padding: 2.5rem 2rem 3rem 2rem;
+        }
+
+        .team-grid {
+          gap: 3rem 2.5rem;
+        }
+      }
+
+      @media (min-width: 1800px) {
+        .floor-section {
+          max-width: 1600px;
+          padding: 3rem 2.5rem 3.5rem 2.5rem;
+        }
+
+        .team-grid {
+          gap: 3.5rem 3rem;
+        }
+
+        .team-card {
+          min-width: 450px;
+          max-width: 500px;
+        }
+      }
+
+      @media (min-width: 2200px) {
+        .floor-section {
+          max-width: 1800px;
+          padding: 3.5rem 3rem 4rem 3rem;
+        }
+
+        .team-grid {
+          gap: 4rem 3.5rem;
+        }
+
+        .team-card {
+          min-width: 500px;
+          max-width: 550px;
+        }
+      }
+      .floor-title {
+        font-size: 1.7rem;
+        color: #64ffda;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      .team-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem 2rem;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+      }
+      .team-card {
+        background: rgba(22, 33, 62, 0.93);
+        border-radius: 14px;
+        box-shadow: 0 4px 18px #0007;
+        padding: 2rem 2rem 2.5rem 2rem;
+        min-width: 400px;
+        max-width: 460px;
+        flex: 1 1 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1.5px solid rgba(100, 255, 218, 0.08);
+        transition: box-shadow 0.2s, border 0.2s;
+      }
+      .team-card:hover {
+        box-shadow: 0 8px 32px #64ffda33;
+        border: 1.5px solid #64ffda;
+      }
+      .team-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #64ffda;
+        margin-bottom: 0.9rem;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+      .character-row {
+        display: flex;
+        gap: 1.1rem;
+        justify-content: center;
+        margin-bottom: 0.7rem;
+      }
+      .character-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 14px;
+        background: #222;
+        object-fit: cover;
+        border: 2.5px solid #16213e;
+        box-shadow: 0 2px 8px #000a;
+        transition: border 0.2s;
+        cursor: pointer;
+        position: relative;
+      }
+      .character-icon:hover {
+        border: 2px solid #64ffda;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+      }
+      .character-icon::after {
+        content: "✏️";
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #64ffda;
+        color: #16213e;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        opacity: 0;
+        transition: opacity 0.2s;
+        pointer-events: none;
+      }
+      .character-icon:hover::after {
+        opacity: 1;
+      }
+      .team-explanation,
+      .team-rotation {
+        background: rgba(15, 52, 96, 0.85);
+        border-radius: 10px;
+        padding: 1.1rem 1.2rem;
+        margin-top: 0.9rem;
+        margin-bottom: 0.4rem;
+        color: #b0eaff;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 8px #00bcd422;
+        border: 1px solid rgba(100, 255, 218, 0.07);
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+      }
+      .team-explanation:hover,
+      .team-rotation:hover {
+        border-color: rgba(100, 255, 218, 0.3);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.15);
+        transform: translateY(-1px);
+      }
+      .team-explanation.editing,
+      .team-rotation.editing {
+        border-color: #64ffda;
+        box-shadow: 0 4px 16px rgba(100, 255, 218, 0.25);
+      }
+      .team-explanation::after,
+      .team-rotation::after {
+        content: "✏️";
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      .team-explanation:hover::after,
+      .team-rotation:hover::after {
+        opacity: 1;
+      }
+      .team-explanation.editing::after,
+      .team-rotation.editing::after {
+        content: "💾";
+        opacity: 1;
+      }
+      .team-explanation {
+        position: relative;
+        padding-right: 30px; /* spazio per l'icona */
+      }
+      .edit-icon {
+        color: #64ffda;
+        transition: all 0.2s ease;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        background: rgba(100, 255, 218, 0.08);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        min-width: 32px;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        z-index: 2;
+        box-sizing: content-box;
+        padding: 4px;
+      }
+      .edit-icon:hover {
+        color: #00d4aa;
+        background: rgba(100, 255, 218, 0.2);
+        border-color: #64ffda;
+        transform: scale(1.1);
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.3);
+      }
+      .explanation-text {
+        display: block;
+        line-height: 1.5;
+        word-wrap: break-word;
+      }
+      .team-rotation {
+        background: rgba(100, 255, 218, 0.08);
+        color: #e0e0e0;
+        font-size: 1.05rem;
+        margin-bottom: 0;
+      }
+      .team-half {
+        display: none;
+      }
+      .team-half.active {
+        display: block;
+      }
+      .half-indicator {
+        background: rgba(100, 255, 218, 0.15);
+        color: #64ffda;
+        padding: 0.3rem 0.8rem;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        border: 1px solid rgba(100, 255, 218, 0.3);
+      }
+      /* Modal Styles */
+      #characterModal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.95);
+        backdrop-filter: blur(8px);
+        z-index: 4001; /* aumentato per stare sopra a #createTeamModal */
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        animation: modalFadeIn 0.3s ease;
+      }
+      @keyframes modalFadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      #characterModalContent {
+        background: linear-gradient(
+          135deg,
+          rgba(26, 26, 46, 0.98),
+          rgba(22, 33, 62, 0.98)
+        );
+        border-radius: 22px;
+        padding: 2.5rem 2rem 2rem 2rem;
+        max-width: 700px;
+        width: 96vw;
+        max-height: 90vh;
+        overflow-y: auto;
+        border: 2.5px solid #64ffda;
+        box-shadow: 0 20px 60px 0 rgba(100, 255, 218, 0.2),
+          0 8px 32px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        animation: modalSlideIn 0.3s ease;
+      }
+      @keyframes modalSlideIn {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      #characterModalContent::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #64ffda, #00d4aa, #64ffda);
+        border-radius: 24px;
+        z-index: -1;
+        opacity: 0.3;
+        animation: borderGlow 3s ease-in-out infinite alternate;
+      }
+      @keyframes borderGlow {
+        from {
+          opacity: 0.3;
+        }
+        to {
+          opacity: 0.6;
+        }
+      }
+      #characterModalTitle {
+        color: #64ffda;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 12px #64ffda33;
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      #characterModalSubtitle {
+        color: #e0e0e0;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        opacity: 0.85;
+        font-weight: 500;
+      }
+      #characterSearchInput {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        border-radius: 12px;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        background: rgba(15, 52, 96, 0.8);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+      #characterSearchInput:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.1),
+          0 4px 12px rgba(100, 255, 218, 0.2);
+        transform: translateY(-1px);
+      }
+      #characterSearchInput::placeholder {
+        color: rgba(224, 224, 224, 0.6);
+      }
+      #characterFilters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 0.8rem;
+        justify-content: center;
+      }
+      .element-filter-btn {
+        padding: 0.6rem 1.2rem;
+        border-radius: 10px;
+        border: 1.5px solid rgba(100, 255, 218, 0.3);
+        background: rgba(15, 52, 96, 0.6);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+      }
+      .element-filter-btn:hover {
+        background: rgba(100, 255, 218, 0.15);
+        border-color: #64ffda;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+      }
+      .element-filter-btn.active {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border-color: #64ffda;
+        box-shadow: 0 4px 16px rgba(100, 255, 218, 0.4);
+        transform: translateY(-2px);
+      }
+      #characterModalGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        max-height: 48vh;
+        overflow-y: auto;
+        padding: 0.8rem 0.4rem;
+        scrollbar-width: thin;
+        scrollbar-color: #64ffda rgba(100, 255, 218, 0.1);
+      }
+      #characterModalGrid::-webkit-scrollbar {
+        width: 8px;
+      }
+      #characterModalGrid::-webkit-scrollbar-track {
+        background: rgba(100, 255, 218, 0.1);
+        border-radius: 4px;
+      }
+      #characterModalGrid::-webkit-scrollbar-thumb {
+        background: #64ffda;
+        border-radius: 4px;
+      }
+      #characterModalGrid::-webkit-scrollbar-thumb:hover {
+        background: #00d4aa;
+      }
+      .character-modal-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 110px;
+        min-height: 110px;
+        width: 110px;
+        height: 110px;
+        background: linear-gradient(
+          135deg,
+          rgba(22, 33, 62, 0.8),
+          rgba(15, 52, 96, 0.8)
+        );
+        border-radius: 18px;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+      }
+      .character-modal-option img {
+        width: 90px;
+        height: 90px;
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: 1/1;
+        object-fit: contain !important;
+        background: #16213e;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px #000a;
+        padding: 6px;
+        display: block;
+        margin: 0 auto 4px auto;
+      }
+      .character-modal-option::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+      .character-modal-option:hover::before {
+        left: 100%;
+      }
+      .character-modal-option:hover:not(.disabled) {
+        background: linear-gradient(
+          135deg,
+          rgba(100, 255, 218, 0.15),
+          rgba(0, 212, 170, 0.1)
+        );
+        border-color: #64ffda;
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(100, 255, 218, 0.3);
+      }
+      .character-modal-option.selected {
+        background: linear-gradient(
+          135deg,
+          rgba(100, 255, 218, 0.2),
+          rgba(0, 212, 170, 0.15)
+        );
+        border-color: #64ffda;
+        box-shadow: 0 8px 24px rgba(100, 255, 218, 0.4);
+        transform: translateY(-2px);
+      }
+      .character-modal-option.hidden {
+        display: none;
+      }
+      .character-modal-option.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        filter: grayscale(50%);
+      }
+      #characterModalSave,
+      #characterModalCancel {
+        padding: 1.2rem 2.5rem;
+        border-radius: 12px;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        font-family: "Fredoka", sans-serif;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      #characterModalSave {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+      }
+      #characterModalSave:hover:not(:disabled) {
+        background: linear-gradient(135deg, #00d4aa, #64ffda);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(100, 255, 218, 0.4);
+      }
+      #characterModalSave:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+      #characterModalCancel {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.1)
+        );
+        color: #e0e0e0;
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
+      }
+      #characterModalCancel:hover {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.25),
+          rgba(255, 255, 255, 0.15)
+        );
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+      }
+      /* Loading indicator */
+      .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(26, 26, 46, 0.95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease;
+      }
+      .loading-content {
+        text-align: center;
+        color: #64ffda;
+      }
+      .loading-spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid rgba(100, 255, 218, 0.3);
+        border-top: 4px solid #64ffda;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1rem auto;
+      }
+      .loading-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .loading-subtext {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .main-title {
+          font-size: 2rem;
+        }
+        .team-grid {
+          gap: 1.5rem;
+        }
+        .team-card {
+          min-width: 320px;
+          padding: 1.5rem;
+        }
+        .character-row {
+          gap: 0.8rem;
+        }
+        .character-icon {
+          width: 60px;
+          height: 60px;
+        }
+        #characterModalContent {
+          padding: 2rem 1.5rem;
+        }
+        #characterModalGrid {
+          grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+          gap: 0.8rem;
+        }
+      }
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(26, 26, 46, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 2px 16px #0005;
+        padding: 0.5rem 0 0.5rem 0;
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.13rem;
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.1);
+        color: #64ffda;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .nav-link.active {
+        background: #64ffda;
+        color: #16213e;
+        box-shadow: 0 2px 12px #64ffda55;
+        cursor: default;
+      }
+      body {
+        padding-top: 3.5rem;
+      }
+      @media (max-width: 700px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          font-size: 0.98rem;
+          padding: 0.3rem 0;
+        }
+        .nav-link {
+          padding: 0.5rem 0.7rem;
+          font-size: 1rem;
+        }
+      }
+      .team-rotation {
+        position: relative;
+        padding-right: 30px; /* spazio per l'icona */
+      }
+
+      .team-rotation .edit-icon {
+        color: #64ffda;
+        transition: all 0.2s ease;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        background: rgba(100, 255, 218, 0.08);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        min-width: 32px;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        z-index: 2;
+        box-sizing: content-box;
+        padding: 4px;
+      }
+
+      .team-rotation .edit-icon:hover {
+        color: #00d4aa;
+        background: rgba(100, 255, 218, 0.2);
+        border-color: #64ffda;
+        transform: scale(1.1);
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="index.html#gestione" class="nav-link"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link active"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls" style="margin-left: auto"></span>
+    </nav>
+
+    <h1 class="main-title">🏆 Migliori Team Abisso</h1>
+
+    <!-- Barra di navigazione rapida ai floor (modificata per selezione attiva) -->
+    <div id="floor-nav" style="text-align: center; margin-bottom: 1.5rem">
+      <button
+        id="btn-floor-9"
+        onclick="setActiveFloor('Floor 9')"
+        style="
+          margin: 0 0.5rem;
+          padding: 0.7rem 1.5rem;
+          font-size: 1.1rem;
+          font-weight: 700;
+          background: #64ffda;
+          color: #16213e;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+        "
+      >
+        Floor 9
+      </button>
+      <button
+        id="btn-floor-10"
+        onclick="setActiveFloor('Floor 10')"
+        style="
+          margin: 0 0.5rem;
+          padding: 0.7rem 1.5rem;
+          font-size: 1.1rem;
+          font-weight: 700;
+          background: #64ffda;
+          color: #16213e;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+        "
+      >
+        Floor 10
+      </button>
+      <button
+        id="btn-floor-11"
+        onclick="setActiveFloor('Floor 11')"
+        style="
+          margin: 0 0.5rem;
+          padding: 0.7rem 1.5rem;
+          font-size: 1.1rem;
+          font-weight: 700;
+          background: #64ffda;
+          color: #16213e;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+        "
+      >
+        Floor 11
+      </button>
+      <button
+        id="btn-floor-12"
+        onclick="setActiveFloor('Floor 12')"
+        style="
+          margin: 0 0.5rem;
+          padding: 0.7rem 1.5rem;
+          font-size: 1.1rem;
+          font-weight: 700;
+          background: #64ffda;
+          color: #16213e;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+        "
+      >
+        Floor 12
+      </button>
+    </div>
+
+    <script>
+      let activeFloorOnly = "Floor 12"; // Floor attivo di default
+      function setActiveFloor(floor) {
+        activeFloorOnly = floor;
+        renderTeams(); // Renderizza sempre con dati aggiornati
+        // Aggiorna stile pulsanti
+        ["9", "10", "11", "12"].forEach((f) => {
+          document.getElementById("btn-floor-" + f).style.background =
+            floor === "Floor " + f ? "#00d4aa" : "#64ffda";
+          document.getElementById("btn-floor-" + f).style.color =
+            floor === "Floor " + f ? "#fff" : "#16213e";
+        });
+        // Scroll immediato
+        var el = document.getElementById(
+          "floor-" + floor.replace(/[^0-9]/g, "")
+        );
+        if (el) window.scrollTo({ top: el.offsetTop - 60, behavior: "auto" });
+      }
+
+      function renderTeams() {
+        // Ricarica sempre i dati aggiornati da localStorage
+        const savedTeams = localStorage.getItem(
+          getUserStorageKey("customTeams")
+        );
+        if (savedTeams) {
+          Object.assign(teamsData, JSON.parse(savedTeams));
+        }
+        const container = document.getElementById("teamsContainer");
+        const fragment = document.createDocumentFragment();
+        Object.keys(teamsData).forEach((floor) => {
+          if (floor !== activeFloorOnly) return; // Mostra solo il floor attivo
+          const floorSection = document.createElement("div");
+          floorSection.className = "floor-section";
+          floorSection.id = "floor-" + floor.replace(/[^0-9]/g, "");
+
+          const floorTitle = document.createElement("h2");
+          floorTitle.className = "floor-title";
+          floorTitle.textContent = floor;
+
+          const switchContainer = document.createElement("div");
+          switchContainer.className = "switch-container";
+
+          const switchLabel = document.createElement("span");
+          switchLabel.className = "switch-label";
+          switchLabel.textContent = "Prima Metà";
+
+          const switchElement = document.createElement("label");
+          switchElement.className = "switch";
+          switchElement.innerHTML = `
+                  <input type="checkbox" id="switch-${floor}" ${
+            activeHalf === "Seconda Metà" ? "checked" : ""
+          }>
+                  <span class="slider"></span>
+                `;
+
+          const switchText = document.createElement("span");
+          switchText.className = "switch-text";
+          switchText.textContent = "Seconda Metà";
+
+          switchContainer.appendChild(switchLabel);
+          switchContainer.appendChild(switchElement);
+          switchContainer.appendChild(switchText);
+
+          const teamGrid = document.createElement("div");
+          teamGrid.className = "team-grid";
+
+          const half = activeHalf;
+          const teams = teamsData[floor][half] || [];
+
+          teams.forEach((team, index) => {
+            const teamCard = document.createElement("div");
+            teamCard.className = "team-card";
+
+            const teamName = document.createElement("h3");
+            teamName.className = "team-name";
+            teamName.innerHTML = `
+              <span class="team-name-text" data-team-index="${index}">${team.name}</span>
+              <span class="edit-teamname-icon" style="cursor:pointer; margin-left:8px; font-size:1.1rem;">✏️</span>
+            `;
+
+            const halfIndicator = document.createElement("div");
+            halfIndicator.className = "half-indicator";
+            halfIndicator.textContent = half;
+
+            const characterRows = [];
+            for (let i = 0; i < team.characters.length; i += 2) {
+              const row = document.createElement("div");
+              row.className = "character-row";
+
+              for (
+                let j = i;
+                j < Math.min(i + 2, team.characters.length);
+                j++
+              ) {
+                const characterName = team.characters[j];
+                const character = allCharacters.find(
+                  (c) => c.name === characterName
+                );
+
+                const img = document.createElement("img");
+                img.className = "character-icon";
+                img.dataset.character = characterName;
+                img.alt = characterName;
+
+                // Carica l'immagine salvata se esiste, altrimenti usa quella di default
+                const savedImages = JSON.parse(
+                  localStorage.getItem("teamImages") || "{}"
+                );
+                if (savedImages[characterName]) {
+                  img.src = savedImages[characterName];
+                } else {
+                  img.src = character
+                    ? character.image
+                    : "images/characters/placeholder.svg";
+                  // Salva automaticamente l'immagine di default per uso futuro
+                  if (character && character.image) {
+                    saveCharacterSelection(characterName, character.image);
+                  }
+                }
+
+                img.onclick = () => openCharacterModal(img);
+
+                row.appendChild(img);
+              }
+
+              characterRows.push(row);
+            }
+
+            const teamExplanation = document.createElement("div");
+            teamExplanation.className = "team-explanation";
+            teamExplanation.innerHTML = `
+              <span class="explanation-text">${team.explanation}</span>
+              <span class="edit-icon">✏️</span>
+            `;
+            teamExplanation.setAttribute("data-team-index", index);
+
+            const teamRotation = document.createElement("div");
+            teamRotation.className = "team-rotation";
+            teamRotation.innerHTML = `
+  <span class="rotation-text">${team.rotation}</span>
+  <span class="edit-icon">✏️</span>
+`;
+            teamRotation.setAttribute("data-team-index", index);
+
+            teamCard.appendChild(teamName);
+            teamCard.appendChild(halfIndicator);
+            characterRows.forEach((row) => teamCard.appendChild(row));
+            teamCard.appendChild(teamExplanation);
+            teamCard.appendChild(teamRotation);
+
+            teamGrid.appendChild(teamCard);
+          });
+
+          floorSection.appendChild(floorTitle);
+          floorSection.appendChild(switchContainer);
+          floorSection.appendChild(teamGrid);
+          fragment.appendChild(floorSection);
+
+          // Event listener per lo switch - spostato qui per assicurarsi che l'elemento esista
+          const switchInput = switchElement.querySelector(
+            'input[type="checkbox"]'
+          );
+          if (switchInput) {
+            switchInput.addEventListener("change", function () {
+              activeHalf = this.checked ? "Seconda Metà" : "Prima Metà";
+              renderTeams();
+            });
+          }
+        });
+
+        // Aggiorna il DOM una sola volta
+        container.innerHTML = "";
+        container.appendChild(fragment);
+      }
+
+      // --- JS avanzato per gestione team abisso ---
+
+      // Variabili globali per filtri e ricerca
+      let elementList = [
+        { value: "all", name: "Tutti", emoji: "🌈" },
+        { value: "Pyro", name: "Pyro", emoji: "🔥" },
+        { value: "Hydro", name: "Hydro", emoji: "💧" },
+        { value: "Electro", name: "Electro", emoji: "⚡" },
+        { value: "Cryo", name: "Cryo", emoji: "❄️" },
+        { value: "Anemo", name: "Anemo", emoji: "💨" },
+        { value: "Geo", name: "Geo", emoji: "🪨" },
+        { value: "Dendro", name: "Dendro", emoji: "🌱" },
+      ];
+      let currentElementFilter = "all";
+      let currentSearchTerm = "";
+
+      const teamsData = {
+        "Floor 9": {
+          "Prima Metà": [
+            {
+              name: "Team Noelle",
+              characters: ["Noelle", "Albedo", "Bennett", "Fischl"],
+              explanation:
+                "Team Geo con Noelle. Albedo bonus Geo, Bennett buff, Fischl batteria.",
+              rotation: "Albedo E → Bennett Q → Fischl E → Noelle Q + AA",
+            },
+          ],
+          "Seconda Metà": [
+            {
+              name: "Team Ningguang",
+              characters: ["Ningguang", "Zhongli", "Bennett", "Xiangling"],
+              explanation:
+                "Team Geo con Ningguang. Zhongli scudo, Bennett buff, Xiangling Pyro applicazione.",
+              rotation: "Zhongli E → Bennett Q → Xiangling Q → Ningguang E + Q",
+            },
+          ],
+        },
+        "Floor 10": {
+          "Prima Metà": [
+            {
+              name: "Team Yanfei",
+              characters: ["Yanfei", "Xingqiu", "Bennett", "Sucrose"],
+              explanation:
+                "Team Vaporize con Yanfei. Xingqiu Hydro applicazione, Bennett buff, Sucrose crowd control.",
+              rotation: "Bennett Q → Sucrose E/Q → Xingqiu Q → Yanfei E + CA",
+            },
+          ],
+          "Seconda Metà": [
+            {
+              name: "Team Razor",
+              characters: ["Razor", "Diona", "Fischl", "Bennett"],
+              explanation:
+                "Team Physical con Razor. Diona scudo e Superconduct, Fischl batteria, Bennett buff.",
+              rotation: "Diona E → Fischl E → Bennett Q → Razor Q + AA",
+            },
+          ],
+        },
+        "Floor 11": {
+          "Prima Metà": [
+            {
+              name: "Team Xiao",
+              characters: ["Xiao", "Zhongli", "Jean", "Albedo"],
+              explanation:
+                "Team Anemo con Xiao come DPS. Zhongli scudo, Jean healing e batteria, Albedo bonus Geo.",
+              rotation: "Zhongli E → Albedo E → Jean E/Q → Xiao Q + Plunge",
+            },
+            {
+              name: "Team Diluc",
+              characters: ["Diluc", "Xingqiu", "Bennett", "Sucrose"],
+              explanation:
+                "Team Vaporize con Diluc. Xingqiu Hydro applicazione, Bennett buff, Sucrose crowd control.",
+              rotation: "Bennett Q → Sucrose E/Q → Xingqiu Q → Diluc E + AA",
+            },
+          ],
+          "Seconda Metà": [
+            {
+              name: "Team Eula",
+              characters: ["Eula", "Raiden Shogun", "Diona", "Rosaria"],
+              explanation:
+                "Team Physical con Eula. Raiden batteria e Superconduct, Diona scudo e healing, Rosaria crit rate buff.",
+              rotation: "Diona E → Rosaria E/Q → Raiden E → Eula Q + AA",
+            },
+            {
+              name: "Team Keqing",
+              characters: ["Keqing", "Fischl", "Bennett", "Kazuha"],
+              explanation:
+                "Team Electro con Keqing. Fischl batteria, Bennett buff, Kazuha crowd control e buff.",
+              rotation: "Bennett Q → Kazuha E/Q → Fischl E → Keqing E + AA",
+            },
+          ],
+        },
+        "Floor 12": {
+          "Prima Metà": [
+            {
+              name: "Team Hu Tao",
+              characters: ["Hu Tao", "Xingqiu", "Zhongli", "Albedo"],
+              explanation:
+                "Team Vaporize con Hu Tao come DPS principale. Xingqiu fornisce Hydro per le reazioni, Zhongli scudo e resistenza, Albedo bonus Geo.",
+              rotation: "Zhongli E → Albedo E → Xingqiu Q → Hu Tao E + AA",
+            },
+            {
+              name: "Team Raiden",
+              characters: ["Raiden Shogun", "Bennett", "Xiangling", "Kazuha"],
+              explanation:
+                "Team National con Raiden come driver. Bennett buff ATK, Xiangling Pyro applicazione, Kazuha crowd control e buff.",
+              rotation: "Bennett Q → Kazuha E/Q → Xiangling Q → Raiden Q",
+            },
+            {
+              name: "Team Ganyu",
+              characters: ["Ganyu", "Mona", "Venti", "Diona"],
+              explanation:
+                "Team Freeze con Ganyu. Mona applica Hydro e buff, Venti crowd control, Diona scudo e Cryo resonance.",
+              rotation: "Diona E → Venti Q → Mona Q → Ganyu Q + CA",
+            },
+          ],
+          "Seconda Metà": [
+            {
+              name: "Team Ayaka",
+              characters: ["Ayaka", "Kokomi", "Kazuha", "Shenhe"],
+              explanation:
+                "Team Freeze premium con Ayaka. Kokomi applica Hydro e healing, Kazuha crowd control, Shenhe buff Cryo.",
+              rotation: "Shenhe E/Q → Kazuha E/Q → Kokomi E → Ayaka Q",
+            },
+            {
+              name: "Team Itto",
+              characters: ["Arataki Itto", "Gorou", "Zhongli", "Albedo"],
+              explanation:
+                "Team Geo con Itto come DPS. Gorou buff DEF e Geo DMG, Zhongli scudo, Albedo bonus Geo resonance.",
+              rotation: "Zhongli E → Albedo E → Gorou E/Q → Itto Q + CA",
+            },
+            {
+              name: "Team Childe",
+              characters: ["Tartaglia", "Xiangling", "Bennett", "Kazuha"],
+              explanation:
+                "Team International con Childe. Xiangling Pyro applicazione, Bennett buff, Kazuha crowd control e buff.",
+              rotation: "Bennett Q → Kazuha E/Q → Xiangling Q → Childe E + AA",
+            },
+          ],
+        },
+      };
+      let allCharacters = [];
+
+      // Variabili globali
+      let selectedCharacter = null;
+      let currentEditingImage = null;
+      let isCreatingNewTeam = false;
+      let currentNewTeamSlot = null;
+      let newTeamCharacters = ["", "", "", ""];
+      let activeHalf = "Prima Metà";
+
+      // Variabili per la rotazione
+      let currentEditRotationDiv = null;
+      let currentEditRotationInfo = null;
+
+      // Funzione per caricare i dati dei team
+      function loadTeamsData() {
+        const saved = localStorage.getItem(getUserStorageKey("customTeams"));
+        if (saved) {
+          Object.assign(teamsData, JSON.parse(saved));
+        }
+      }
+
+      // Funzione per salvare le immagini (aggiorna sempre teamImages)
+      function saveImages() {
+        try {
+          const imagesToSave = JSON.parse(
+            localStorage.getItem("teamImages") || "{}"
+          );
+          let hasChanges = false;
+
+          // Aggiorna solo se ci sono modifiche effettive
+          document.querySelectorAll(".character-icon").forEach((img) => {
+            const characterName = img.dataset.character;
+            if (
+              characterName &&
+              img.src &&
+              imagesToSave[characterName] !== img.src
+            ) {
+              imagesToSave[characterName] = img.src;
+              hasChanges = true;
+            }
+          });
+
+          if (hasChanges) {
+            localStorage.setItem("teamImages", JSON.stringify(imagesToSave));
+            localStorage.setItem("lastSaveTime", Date.now().toString());
+          }
+          return true;
+        } catch (error) {
+          console.error("❌ Errore nel salvataggio delle immagini:", error);
+          return false;
+        }
+      }
+
+      // Funzione per renderizzare i team
+      function renderTeams() {
+        // Ricarica sempre i dati aggiornati da localStorage
+        const savedTeams = localStorage.getItem(
+          getUserStorageKey("customTeams")
+        );
+        if (savedTeams) {
+          Object.assign(teamsData, JSON.parse(savedTeams));
+        }
+        const container = document.getElementById("teamsContainer");
+        const fragment = document.createDocumentFragment();
+        Object.keys(teamsData).forEach((floor) => {
+          if (floor !== activeFloorOnly) return; // Mostra solo il floor attivo
+          const floorSection = document.createElement("div");
+          floorSection.className = "floor-section";
+          floorSection.id = "floor-" + floor.replace(/[^0-9]/g, "");
+
+          const floorTitle = document.createElement("h2");
+          floorTitle.className = "floor-title";
+          floorTitle.textContent = floor;
+
+          const switchContainer = document.createElement("div");
+          switchContainer.className = "switch-container";
+
+          const switchLabel = document.createElement("span");
+          switchLabel.className = "switch-label";
+          switchLabel.textContent = "Prima Metà";
+
+          const switchElement = document.createElement("label");
+          switchElement.className = "switch";
+          switchElement.innerHTML = `
+                  <input type="checkbox" id="switch-${floor}" ${
+            activeHalf === "Seconda Metà" ? "checked" : ""
+          }>
+                  <span class="slider"></span>
+                `;
+
+          const switchText = document.createElement("span");
+          switchText.className = "switch-text";
+          switchText.textContent = "Seconda Metà";
+
+          switchContainer.appendChild(switchLabel);
+          switchContainer.appendChild(switchElement);
+          switchContainer.appendChild(switchText);
+
+          const teamGrid = document.createElement("div");
+          teamGrid.className = "team-grid";
+
+          const half = activeHalf;
+          const teams = teamsData[floor][half] || [];
+
+          teams.forEach((team, index) => {
+            const teamCard = document.createElement("div");
+            teamCard.className = "team-card";
+
+            const teamName = document.createElement("h3");
+            teamName.className = "team-name";
+            teamName.innerHTML = `
+              <span class="team-name-text" data-team-index="${index}">${team.name}</span>
+              <span class="edit-teamname-icon" style="cursor:pointer; margin-left:8px; font-size:1.1rem;">✏️</span>
+            `;
+
+            const halfIndicator = document.createElement("div");
+            halfIndicator.className = "half-indicator";
+            halfIndicator.textContent = half;
+
+            const characterRows = [];
+            for (let i = 0; i < team.characters.length; i += 2) {
+              const row = document.createElement("div");
+              row.className = "character-row";
+
+              for (
+                let j = i;
+                j < Math.min(i + 2, team.characters.length);
+                j++
+              ) {
+                const characterName = team.characters[j];
+                const character = allCharacters.find(
+                  (c) => c.name === characterName
+                );
+
+                const img = document.createElement("img");
+                img.className = "character-icon";
+                img.dataset.character = characterName;
+                img.alt = characterName;
+
+                // Carica l'immagine salvata se esiste, altrimenti usa quella di default
+                const savedImages = JSON.parse(
+                  localStorage.getItem("teamImages") || "{}"
+                );
+                if (savedImages[characterName]) {
+                  img.src = savedImages[characterName];
+                } else {
+                  img.src = character
+                    ? character.image
+                    : "images/characters/placeholder.svg";
+                  // Salva automaticamente l'immagine di default per uso futuro
+                  if (character && character.image) {
+                    saveCharacterSelection(characterName, character.image);
+                  }
+                }
+
+                img.onclick = () => openCharacterModal(img);
+
+                row.appendChild(img);
+              }
+
+              characterRows.push(row);
+            }
+
+            const teamExplanation = document.createElement("div");
+            teamExplanation.className = "team-explanation";
+            teamExplanation.innerHTML = `
+              <span class="explanation-text">${team.explanation}</span>
+              <span class="edit-icon">✏️</span>
+            `;
+            teamExplanation.setAttribute("data-team-index", index);
+
+            const teamRotation = document.createElement("div");
+            teamRotation.className = "team-rotation";
+            teamRotation.innerHTML = `
+  <span class="rotation-text">${team.rotation}</span>
+  <span class="edit-icon">✏️</span>
+`;
+            teamRotation.setAttribute("data-team-index", index);
+
+            teamCard.appendChild(teamName);
+            teamCard.appendChild(halfIndicator);
+            characterRows.forEach((row) => teamCard.appendChild(row));
+            teamCard.appendChild(teamExplanation);
+            teamCard.appendChild(teamRotation);
+
+            teamGrid.appendChild(teamCard);
+          });
+
+          floorSection.appendChild(floorTitle);
+          floorSection.appendChild(switchContainer);
+          floorSection.appendChild(teamGrid);
+          fragment.appendChild(floorSection);
+
+          // Event listener per lo switch - spostato qui per assicurarsi che l'elemento esista
+          const switchInput = switchElement.querySelector(
+            'input[type="checkbox"]'
+          );
+          if (switchInput) {
+            switchInput.addEventListener("change", function () {
+              activeHalf = this.checked ? "Seconda Metà" : "Prima Metà";
+              renderTeams();
+            });
+          }
+        });
+
+        // Aggiorna il DOM una sola volta
+        container.innerHTML = "";
+        container.appendChild(fragment);
+      }
+
+      // Funzione per mostrare una notifica di salvataggio
+      function showSaveNotification() {
+        // Crea una notifica temporanea
+        const notification = document.createElement("div");
+        notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #64ffda, #00d4aa);
+                color: #16213e;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 0.9rem;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+              `;
+        notification.textContent = "💾 Modifiche salvate!";
+        document.body.appendChild(notification);
+
+        // Mostra la notifica
+        setTimeout(() => {
+          notification.style.transform = "translateX(0)";
+        }, 100);
+
+        // Nascondi la notifica dopo 2 secondi
+        setTimeout(() => {
+          notification.style.transform = "translateX(100%)";
+          setTimeout(() => {
+            document.body.removeChild(notification);
+          }, 300);
+        }, 2000);
+      }
+
+      // Funzione per selezione e salvataggio di una nuova immagine
+      function saveCharacterSelection(characterName, imageSrc) {
+        try {
+          const savedImages = JSON.parse(
+            localStorage.getItem("teamImages") || "{}"
+          );
+          savedImages[characterName] = imageSrc;
+          localStorage.setItem("teamImages", JSON.stringify(savedImages));
+          localStorage.setItem("lastSaveTime", Date.now().toString());
+          return true;
+        } catch (error) {
+          console.error("❌ Errore durante il salvataggio:", error);
+          return false;
+        }
+      }
+
+      // Funzione per caricare l'immagine di un personaggio
+      function loadCharacterImage(img, characterName) {
+        const savedImages = JSON.parse(
+          localStorage.getItem("teamImages") || "{}"
+        );
+        if (savedImages[characterName]) {
+          img.src = savedImages[characterName];
+          img.alt = characterName;
+        } else {
+          // Fallback: cerca l'immagine nel database personaggi
+          const character = allCharacters.find((c) => c.name === characterName);
+          if (character && character.image) {
+            img.src = character.image;
+            img.alt = characterName;
+            // Salva automaticamente per uso futuro
+            saveCharacterSelection(characterName, character.image);
+          }
+        }
+      }
+
+      // Funzione per caricare le immagini salvate
+      function loadSavedImages() {
+        const savedImages = JSON.parse(
+          localStorage.getItem("teamImages") || "{}"
+        );
+        let loadedCount = 0;
+
+        document.querySelectorAll(".character-icon").forEach((img) => {
+          const characterName = img.dataset.character;
+          if (
+            characterName &&
+            savedImages[characterName] &&
+            img.src !== savedImages[characterName]
+          ) {
+            img.src = savedImages[characterName];
+            img.alt = characterName;
+            loadedCount++;
+          }
+        });
+
+        if (loadedCount > 0) {
+          console.log(`✅ Caricate ${loadedCount} immagini salvate`);
+        }
+      }
+
+      // Cache per i dati dei personaggi
+      let characterDataLoaded = false;
+
+      // Funzione per caricare i dati dei personaggi
+      async function loadCharacterData() {
+        // Se i dati sono già caricati, restituisci direttamente
+        if (characterDataLoaded && allCharacters.length > 0) {
+          return allCharacters;
+        }
+
+        try {
+          const response = await fetch("character.json");
+          const data = await response.json();
+          allCharacters = data.characters || [];
+          characterDataLoaded = true;
+          return allCharacters;
+        } catch (error) {
+          console.log("Using fallback character data");
+          allCharacters = [
+            {
+              name: "Hu Tao",
+              element: "Pyro",
+              image: "images/characters/hutao.png",
+            },
+            {
+              name: "Xingqiu",
+              element: "Hydro",
+              image: "images/characters/xingqiu.png",
+            },
+            {
+              name: "Zhongli",
+              element: "Geo",
+              image: "images/characters/zhongli.png",
+            },
+            {
+              name: "Albedo",
+              element: "Geo",
+              image: "images/characters/albedo.png",
+            },
+            {
+              name: "Raiden Shogun",
+              element: "Electro",
+              image: "images/characters/raiden.png",
+            },
+            {
+              name: "Bennett",
+              element: "Pyro",
+              image: "images/characters/bennett.png",
+            },
+            {
+              name: "Xiangling",
+              element: "Pyro",
+              image: "images/characters/xiangling.png",
+            },
+            {
+              name: "Kazuha",
+              element: "Anemo",
+              image: "images/characters/kazuha.png",
+            },
+            {
+              name: "Ganyu",
+              element: "Cryo",
+              image: "images/characters/ganyu.png",
+            },
+            {
+              name: "Mona",
+              element: "Hydro",
+              image: "images/characters/mona.png",
+            },
+            {
+              name: "Venti",
+              element: "Anemo",
+              image: "images/characters/venti.png",
+            },
+            {
+              name: "Diona",
+              element: "Cryo",
+              image: "images/characters/diona.png",
+            },
+            {
+              name: "Ayaka",
+              element: "Cryo",
+              image: "images/characters/ayaka.png",
+            },
+            {
+              name: "Kokomi",
+              element: "Hydro",
+              image: "images/characters/kokomi.png",
+            },
+            {
+              name: "Shenhe",
+              element: "Cryo",
+              image: "images/characters/shenhe.png",
+            },
+            {
+              name: "Arataki Itto",
+              element: "Geo",
+              image: "images/characters/itto.png",
+            },
+            {
+              name: "Gorou",
+              element: "Geo",
+              image: "images/characters/gorou.png",
+            },
+            {
+              name: "Tartaglia",
+              element: "Hydro",
+              image: "images/characters/childe.png",
+            },
+            {
+              name: "Xiao",
+              element: "Anemo",
+              image: "images/characters/xiao.png",
+            },
+            {
+              name: "Jean",
+              element: "Anemo",
+              image: "images/characters/jean.png",
+            },
+            {
+              name: "Eula",
+              element: "Cryo",
+              image: "images/characters/eula.png",
+            },
+            {
+              name: "Rosaria",
+              element: "Cryo",
+              image: "images/characters/rosaria.png",
+            },
+            {
+              name: "Noelle",
+              element: "Geo",
+              image: "images/characters/noelle.png",
+            },
+            {
+              name: "Ningguang",
+              element: "Geo",
+              image: "images/characters/ningguang.png",
+            },
+            {
+              name: "Yanfei",
+              element: "Pyro",
+              image: "images/characters/yanfei.png",
+            },
+            {
+              name: "Razor",
+              element: "Electro",
+              image: "images/characters/razor.png",
+            },
+            {
+              name: "Diluc",
+              element: "Pyro",
+              image: "images/characters/diluc.png",
+            },
+            {
+              name: "Keqing",
+              element: "Electro",
+              image: "images/characters/keqing.png",
+            },
+            {
+              name: "Sucrose",
+              element: "Anemo",
+              image: "images/characters/sucrose.png",
+            },
+            {
+              name: "Fischl",
+              element: "Electro",
+              image: "images/characters/fischl.png",
+            },
+            {
+              name: "Traveler",
+              element: "Anemo",
+              image: "images/characters/traveler.png",
+            },
+          ];
+          return allCharacters;
+        }
+      }
+      function renderElementFilters() {
+        const container = document.getElementById("characterFilters");
+        container.innerHTML = "";
+        elementList.forEach((el) => {
+          const btn = document.createElement("button");
+          btn.textContent = `${el.emoji} ${el.name}`;
+          btn.className =
+            "element-filter-btn" + (el.value === "all" ? " active" : "");
+          btn.dataset.element = el.value;
+          btn.onclick = function () {
+            document
+              .querySelectorAll(".element-filter-btn")
+              .forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            currentElementFilter = el.value;
+            applyCharacterFilters();
+          };
+          container.appendChild(btn);
+        });
+      }
+      function renderCharacterModalGrid(selectedName = null) {
+        const grid = document.getElementById("characterModalGrid");
+        grid.innerHTML = "";
+        const currentTeamCharacters = [];
+
+        if (currentEditingImage) {
+          // Trova tutti i personaggi del team (non solo quelli nella stessa riga)
+          const teamCard = currentEditingImage.closest(".team-card");
+          if (teamCard) {
+            const allTeamImgs = teamCard.querySelectorAll(".character-icon");
+            allTeamImgs.forEach((img) => {
+              if (
+                img.alt &&
+                img.alt.trim() !== "" &&
+                img.alt !== "placeholder" &&
+                img !== currentEditingImage
+              ) {
+                currentTeamCharacters.push(img.alt.trim());
+              }
+            });
+          }
+        }
+
+        allCharacters.forEach((char) => {
+          const div = document.createElement("div");
+          div.className = "character-modal-option";
+          div.dataset.character = char.name;
+          div.dataset.element = char.element || "Unknown";
+          const isAlreadyUsed = currentTeamCharacters.includes(char.name);
+          if (isAlreadyUsed) {
+            div.classList.add("disabled");
+            div.title = `${char.name} - Già utilizzato in questo team`;
+          } else {
+            div.title = char.name;
+          }
+          if (char.name === selectedName) div.classList.add("selected");
+          div.innerHTML = `
+                  <img src="${char.image}" alt="${char.name}" style="width:70px;height:70px;border-radius:10px;object-fit:contain;display:block;margin:0 auto 4px auto;box-shadow:0 2px 8px #000a;padding:6px;background:#16213e;">
+                  <div style="font-size:0.98rem;text-align:center;color:#e0e0e0;">${char.name}</div>
+                `;
+          grid.appendChild(div);
+        });
+        selectedCharacter = null;
+        document.getElementById("characterModalSave").disabled = true;
+        document.getElementById("characterModalSave").textContent =
+          "Seleziona Personaggio";
+        applyCharacterFilters();
+      }
+      function applyCharacterFilters() {
+        const characterOptions = document.querySelectorAll(
+          ".character-modal-option"
+        );
+        let visibleCount = 0;
+
+        // Usa requestAnimationFrame per ottimizzare le performance
+        requestAnimationFrame(() => {
+          characterOptions.forEach((option) => {
+            const characterName = option.dataset.character.toLowerCase().trim();
+            const characterElement = option.dataset.element;
+            const isDisabled = option.classList.contains("disabled");
+            const elementMatches =
+              currentElementFilter === "all" ||
+              characterElement === currentElementFilter;
+            // Ricerca come index.html: ogni parola digitata deve essere l'inizio di una qualsiasi parola del nome
+            const searchWords = currentSearchTerm.split(" ").filter(Boolean);
+            const nameWords = characterName.split(" ");
+            const searchMatches =
+              currentSearchTerm === "" ||
+              searchWords.every((sw) =>
+                nameWords.some((nw) => nw.startsWith(sw))
+              );
+            // DEBUG: mostra cosa succede
+            // console.log({characterName, searchWords, nameWords, searchMatches});
+            if (elementMatches && searchMatches && !isDisabled) {
+              option.classList.remove("hidden");
+              visibleCount++;
+            } else {
+              option.classList.add("hidden");
+            }
+          });
+          updateSearchStats(visibleCount);
+        });
+      }
+      function updateSearchStats(visibleCount) {
+        const characterCount = document.getElementById("characterCount");
+        const filterStatus = document.getElementById("filterStatus");
+        if (!characterCount || !filterStatus) return;
+        characterCount.textContent = `${visibleCount} personaggi trovati`;
+        if (currentElementFilter === "all") {
+          filterStatus.textContent = "Tutti gli elementi";
+        } else {
+          const elementEmojis = {
+            Pyro: "🔥",
+            Hydro: "💧",
+            Electro: "⚡",
+            Cryo: "❄️",
+            Anemo: "💨",
+            Geo: "🪨",
+            Dendro: "🌱",
+          };
+          const emoji = elementEmojis[currentElementFilter] || "";
+          filterStatus.textContent = `${emoji} ${currentElementFilter}`;
+        }
+      }
+      function resetSearchAndFilters() {
+        const searchInput = document.getElementById("characterSearchInput");
+        searchInput.value = "";
+        currentSearchTerm = "";
+        document
+          .querySelectorAll(".element-filter-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document.querySelector('[data-element="all"]').classList.add("active");
+        currentElementFilter = "all";
+        updateSearchStats(allCharacters.length);
+      }
+      // Debouncing per la ricerca
+      let searchTimeout;
+      const searchInput = document.getElementById("characterSearchInput");
+      if (searchInput) {
+        searchInput.addEventListener("input", function () {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            currentSearchTerm = this.value.toLowerCase().trim();
+            applyCharacterFilters();
+          }, 150); // Ritardo di 150ms
+        });
+      }
+      function openCharacterModal(imgElement) {
+        currentEditingImage = imgElement;
+        selectedCharacter = null;
+        renderElementFilters();
+        loadCharacterData().then(() => {
+          renderCharacterModalGrid(imgElement.alt);
+          resetSearchAndFilters();
+          document.getElementById("characterModal").style.display = "flex";
+          // Aggiorna subito la ricerca
+          applyCharacterFilters();
+          // Rimuovi vecchi event listener per evitare duplicati
+          const searchInput = document.getElementById("characterSearchInput");
+          const newInput = searchInput.cloneNode(true);
+          searchInput.parentNode.replaceChild(newInput, searchInput);
+          newInput.addEventListener("input", function () {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+              currentSearchTerm = this.value.toLowerCase().trim();
+              applyCharacterFilters();
+            }, 150);
+          });
+        });
+      }
+      function closeCharacterModal() {
+        document.getElementById("characterModal").style.display = "none";
+        currentEditingImage = null;
+        selectedCharacter = null;
+        resetSearchAndFilters();
+        document.querySelectorAll(".character-icon").forEach((img) => {
+          img.style.border = "2px solid #16213e";
+          img.style.transform = "";
+          img.style.boxShadow = "0 2px 8px #000a";
+        });
+        const saveButton = document.getElementById("characterModalSave");
+        saveButton.textContent = "Seleziona Personaggio";
+        saveButton.style.backgroundColor = "";
+        saveButton.style.color = "";
+        saveButton.disabled = true;
+        document
+          .querySelectorAll(".character-modal-option")
+          .forEach((option) => {
+            option.classList.remove("selected");
+          });
+      }
+      // DICHIARA UNA SOLA VOLTA ALL'INIZIO
+      // (RIMOSSO) const btnCharacterModalCancel = document.getElementById(
+      //   "characterModalCancel"
+      // );
+      // if (btnCharacterModalCancel)
+      //   btnCharacterModalCancel.addEventListener("click", closeCharacterModal);
+
+      // (RIMOSSO) const btnCharacterModalSave =
+      //   document.getElementById("characterModalSave");
+      // if (btnCharacterModalSave)
+      //   btnCharacterModalSave.addEventListener("click", function () { ... });
+
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".edit-icon")) {
+          const explanationDiv = e.target.closest(".team-explanation");
+          const teamIndex = explanationDiv.getAttribute("data-team-index");
+          const teamCard = explanationDiv.closest(".team-card");
+          const floorSection = teamCard.closest(".floor-section");
+          const floor = floorSection.querySelector(".floor-title").textContent;
+          const half = floorSection.querySelector(".switch input").checked
+            ? "Seconda Metà"
+            : "Prima Metà";
+          const teams = teamsData[floor][half];
+
+          if (teamIndex !== null && teams[teamIndex]) {
+            document.getElementById("editDescriptionModal").style.display =
+              "flex";
+            document.getElementById("editDescriptionInput").value =
+              explanationDiv.querySelector(".explanation-text").textContent;
+            currentEditDescriptionDiv = explanationDiv;
+            currentEditTeamInfo = {
+              floor,
+              half,
+              teamIndex: parseInt(teamIndex),
+            };
+          }
+        }
+      });
+      // Funzioni per creazione nuovi team
+      function openCreateTeamModal() {
+        document.getElementById("createTeamModal").style.display = "flex";
+        resetNewTeamForm();
+      }
+      function closeCreateTeamModal() {
+        document.getElementById("createTeamModal").style.display = "none";
+        resetNewTeamForm();
+      }
+      function resetNewTeamForm() {
+        document.getElementById("newTeamName").value = "";
+        document.getElementById("newTeamFloor").value = "Floor 12";
+        document.querySelector(
+          'input[name="newTeamHalf"][value="Prima Metà"]'
+        ).checked = true;
+        document.getElementById("newTeamExplanation").value = "";
+        document.getElementById("newTeamRotation").value = "";
+
+        // Reset character slots
+        newTeamCharacters = ["", "", "", ""];
+        document
+          .querySelectorAll(".new-character-slot")
+          .forEach((slot, index) => {
+            slot.innerHTML =
+              '<span style="color:#64ffda;font-size:1.5rem;">+</span>';
+            slot.style.background = "#222";
+            slot.style.border = "2.5px dashed #64ffda";
+          });
+      }
+      function openCharacterModalForNewTeam(slotElement) {
+        isCreatingNewTeam = true;
+        currentNewTeamSlot = slotElement;
+        selectedCharacter = null;
+
+        renderElementFilters();
+        loadCharacterData().then(() => {
+          renderCharacterModalGridForNewTeam();
+          resetSearchAndFilters();
+          document.getElementById("characterModal").style.display = "flex";
+          // Aggiorna subito la ricerca
+          applyCharacterFilters();
+          // Rimuovi vecchi event listener per evitare duplicati
+          const searchInput = document.getElementById("characterSearchInput");
+          const newInput = searchInput.cloneNode(true);
+          searchInput.parentNode.replaceChild(newInput, searchInput);
+          newInput.addEventListener("input", function () {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+              currentSearchTerm = this.value.toLowerCase().trim();
+              applyCharacterFilters();
+            }, 150);
+          });
+        });
+      }
+      function renderCharacterModalGridForNewTeam() {
+        const grid = document.getElementById("characterModalGrid");
+        grid.innerHTML = "";
+
+        // Controlla i personaggi già selezionati nel nuovo team
+        const selectedCharacters = newTeamCharacters.filter(
+          (char) => char !== ""
+        );
+
+        allCharacters.forEach((char) => {
+          const div = document.createElement("div");
+          div.className = "character-modal-option";
+          div.dataset.character = char.name;
+          div.dataset.element = char.element || "Unknown";
+
+          const isAlreadyUsed = selectedCharacters.includes(char.name);
+          if (isAlreadyUsed) {
+            div.classList.add("disabled");
+            div.title = `${char.name} - Già selezionato in questo team`;
+          } else {
+            div.title = char.name;
+          }
+
+          div.innerHTML = `
+                  <img src="${char.image}" alt="${char.name}" style="width:70px;height:70px;border-radius:10px;object-fit:contain;display:block;margin:0 auto 4px auto;box-shadow:0 2px 8px #000a;padding:6px;background:#16213e;">
+                  <div style="font-size:0.98rem;text-align:center;color:#e0e0e0;">${char.name}</div>
+                `;
+
+          grid.appendChild(div);
+        });
+
+        selectedCharacter = null;
+        document.getElementById("characterModalSave").disabled = true;
+        document.getElementById("characterModalSave").textContent =
+          "Seleziona Personaggio";
+        applyCharacterFilters();
+      }
+      function saveNewTeam() {
+        const teamName = document.getElementById("newTeamName").value.trim();
+        const floor = document.getElementById("newTeamFloor").value;
+        const half = document.querySelector(
+          'input[name="newTeamHalf"]:checked'
+        ).value;
+        const explanation = document
+          .getElementById("newTeamExplanation")
+          .value.trim();
+        const rotation = document
+          .getElementById("newTeamRotation")
+          .value.trim();
+
+        // Validazione
+        if (!teamName) {
+          alert("Inserisci un nome per il team");
+          return;
+        }
+
+        if (newTeamCharacters.some((char) => !char)) {
+          alert("Seleziona tutti e 4 i personaggi");
+          return;
+        }
+
+        if (!explanation) {
+          alert("Inserisci una spiegazione del team");
+          return;
+        }
+
+        if (!rotation) {
+          alert("Inserisci la rotazione del team");
+          return;
+        }
+
+        // Crea il nuovo team
+        const newTeam = {
+          name: teamName,
+          characters: newTeamCharacters,
+          explanation: explanation,
+          rotation: rotation,
+        };
+
+        // Aggiungi il team ai dati
+        if (!teamsData[floor]) {
+          teamsData[floor] = { "Prima Metà": [], "Seconda Metà": [] };
+        }
+
+        teamsData[floor][half].push(newTeam);
+        // Salva in localStorage
+        saveCustomTeams();
+
+        // Salva automaticamente le immagini dei personaggi
+        newTeamCharacters.forEach((characterName) => {
+          const character = allCharacters.find((c) => c.name === characterName);
+          if (character) {
+            saveCharacterSelection(characterName, character.image);
+          }
+        });
+
+        // Ricarica la pagina
+        renderTeams();
+        closeCreateTeamModal();
+
+        // Mostra conferma
+        alert("Team creato con successo!");
+      }
+
+      // Carica team personalizzati dal localStorage
+      function loadCustomTeams() {
+        const savedTeams = localStorage.getItem(
+          getUserStorageKey("customTeams")
+        );
+        if (savedTeams) {
+          const customTeams = JSON.parse(savedTeams);
+          Object.keys(customTeams).forEach((floor) => {
+            if (!teamsData[floor]) {
+              teamsData[floor] = { "Prima Metà": [], "Seconda Metà": [] };
+            }
+            teamsData[floor]["Prima Metà"] = [
+              ...teamsData[floor]["Prima Metà"],
+              ...customTeams[floor]["Prima Metà"],
+            ];
+            teamsData[floor]["Seconda Metà"] = [
+              ...teamsData[floor]["Seconda Metà"],
+              ...customTeams[floor]["Seconda Metà"],
+            ];
+          });
+        }
+      }
+
+      // Event listeners per creazione team
+      const btnCreateTeam = document.getElementById("createTeamBtn");
+      if (btnCreateTeam) {
+        btnCreateTeam.addEventListener("click", openCreateTeamModal);
+      }
+
+      const btnCancelNewTeam = document.getElementById("cancelNewTeamBtn");
+      if (btnCancelNewTeam) {
+        btnCancelNewTeam.addEventListener("click", closeCreateTeamModal);
+      }
+
+      const btnSaveNewTeam = document.getElementById("saveNewTeamBtn");
+      if (btnSaveNewTeam) {
+        btnSaveNewTeam.addEventListener("click", saveNewTeam);
+      }
+
+      // Aggiungi effetti hover per i pulsanti del modal
+      const saveNewTeamBtn = document.getElementById("saveNewTeamBtn");
+      const cancelNewTeamBtn = document.getElementById("cancelNewTeamBtn");
+
+      if (saveNewTeamBtn) {
+        saveNewTeamBtn.addEventListener("mouseenter", function () {
+          this.style.background = "linear-gradient(135deg, #00d4aa, #64ffda)";
+          this.style.transform = "translateY(-3px)";
+          this.style.boxShadow = "0 8px 20px rgba(100, 255, 218, 0.4)";
+        });
+        saveNewTeamBtn.addEventListener("mouseleave", function () {
+          this.style.background = "linear-gradient(135deg, #64ffda, #00d4aa)";
+          this.style.transform = "translateY(0)";
+          this.style.boxShadow = "0 4px 12px rgba(100, 255, 218, 0.3)";
+        });
+      }
+
+      if (cancelNewTeamBtn) {
+        cancelNewTeamBtn.addEventListener("mouseenter", function () {
+          this.style.background =
+            "linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15))";
+          this.style.transform = "translateY(-3px)";
+          this.style.boxShadow = "0 8px 20px rgba(255, 255, 255, 0.2)";
+        });
+        cancelNewTeamBtn.addEventListener("mouseleave", function () {
+          this.style.background =
+            "linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1))";
+          this.style.transform = "translateY(0)";
+          this.style.boxShadow = "none";
+        });
+      }
+
+      // Event listener per chiudere i modal quando si clicca fuori
+      document.addEventListener("click", function (e) {
+        // Chiudi modal creazione team
+        const createTeamModal = document.getElementById("createTeamModal");
+        if (createTeamModal && createTeamModal.style.display === "flex") {
+          if (e.target === createTeamModal) {
+            closeCreateTeamModal();
+          }
+        }
+
+        // Chiudi modal selezione personaggi
+        const characterModal = document.getElementById("characterModal");
+        if (characterModal && characterModal.style.display === "flex") {
+          if (e.target === characterModal) {
+            closeCharacterModal();
+          }
+        }
+      });
+
+      // Event listener per chiudere i modal con ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const createTeamModal = document.getElementById("createTeamModal");
+          const characterModal = document.getElementById("characterModal");
+
+          if (createTeamModal && createTeamModal.style.display === "flex") {
+            closeCreateTeamModal();
+          } else if (
+            characterModal &&
+            characterModal.style.display === "flex"
+          ) {
+            closeCharacterModal();
+          }
+        }
+      });
+
+      // Modifica la funzione di salvataggio del personaggio per gestire i nuovi team
+      // REMOVED: This was causing the error - event listener will be set up in DOMContentLoaded
+
+      // Event listener per annullare selezione personaggio
+      // REMOVED: This was also causing the error - event listener will be set up in DOMContentLoaded
+
+      // Modifica l'inizializzazione per caricare i team personalizzati
+      window.addEventListener("DOMContentLoaded", async () => {
+        console.log("🚀 Inizializzazione pagina...");
+
+        // Carica i dati dei personaggi PRIMA di tutto
+        await loadCharacterData();
+        console.log(
+          `✅ Caricati ${allCharacters.length} personaggi da character.json`
+        );
+
+        // Carica i dati
+        loadTeamsData();
+        loadCustomTeams();
+        restoreBackup();
+
+        // Verifica e ripara i dati
+        verifyAndRepairData();
+
+        // Renderizza i team
+        renderTeams();
+
+        // Carica le immagini salvate una sola volta
+        // loadSavedImages(); // RIMOSSO - ora le immagini vengono caricate durante il rendering
+
+        // Setup event listeners per i modal
+        const btnCharacterModalCancel = document.getElementById(
+          "characterModalCancel"
+        );
+        if (btnCharacterModalCancel) {
+          btnCharacterModalCancel.addEventListener(
+            "click",
+            closeCharacterModal
+          );
+        }
+
+        const btnCharacterModalSave =
+          document.getElementById("characterModalSave");
+        if (btnCharacterModalSave) {
+          btnCharacterModalSave.addEventListener("click", function () {
+            if (selectedCharacter && isCreatingNewTeam && currentNewTeamSlot) {
+              const character = allCharacters.find(
+                (c) => c.name === selectedCharacter
+              );
+              if (character) {
+                const position = parseInt(currentNewTeamSlot.dataset.position);
+                newTeamCharacters[position] = character.name;
+
+                // Aggiorna lo slot
+                currentNewTeamSlot.innerHTML = `
+                        <img src="${character.image}" alt="${character.name}" style="width:100%;height:100%;border-radius:12px;object-fit:cover;">
+                      `;
+                currentNewTeamSlot.style.background = "none";
+                currentNewTeamSlot.style.border = "2.5px solid #64ffda";
+
+                // Salvataggio semplice e diretto
+                saveCharacterSelection(character.name, character.image);
+                console.log(
+                  "✅ Personaggio salvato per nuovo team:",
+                  character.name
+                );
+              }
+            } else if (selectedCharacter && currentEditingImage) {
+              const character = allCharacters.find(
+                (c) => c.name === selectedCharacter
+              );
+              if (character) {
+                // Aggiorna l'immagine
+                currentEditingImage.src = character.image;
+                currentEditingImage.alt = character.name;
+
+                // AGGIORNA LA STRUTTURA DATI DEL TEAM (PERSISTENZA)
+                if (currentEditingImage && !isCreatingNewTeam) {
+                  // Trova il team-card e i suoi dati
+                  const teamCard = currentEditingImage.closest(".team-card");
+                  if (teamCard) {
+                    // Recupera il floor e la metà
+                    const floorSection = teamCard.closest(".floor-section");
+                    const floor =
+                      floorSection?.querySelector(".floor-title")?.textContent;
+                    const half = floorSection?.querySelector(".switch input")
+                      ?.checked
+                      ? "Seconda Metà"
+                      : "Prima Metà";
+
+                    // Trova la posizione del personaggio nel team
+                    const characterRows = Array.from(
+                      teamCard.querySelectorAll(".character-row")
+                    );
+                    let charIndex = -1;
+                    characterRows.forEach((row, rowIdx) => {
+                      const imgs = Array.from(
+                        row.querySelectorAll(".character-icon")
+                      );
+                      imgs.forEach((img, imgIdx) => {
+                        if (img === currentEditingImage) {
+                          charIndex = rowIdx * 2 + imgIdx;
+                        }
+                      });
+                    });
+
+                    if (charIndex !== -1) {
+                      // Trova l'indice del team usando data-team-index
+                      const teamExplanation =
+                        teamCard.querySelector(".team-explanation");
+                      const teamIndex =
+                        teamExplanation?.getAttribute("data-team-index");
+
+                      if (
+                        teamIndex !== null &&
+                        teamsData[floor]?.[half]?.[teamIndex]
+                      ) {
+                        // Aggiorna la struttura dati
+                        teamsData[floor][half][teamIndex].characters[
+                          charIndex
+                        ] = selectedCharacter;
+
+                        // Salva su localStorage
+                        saveCustomTeams();
+                        console.log(
+                          `✅ Team aggiornato: ${floor} ${half} team ${teamIndex} char ${charIndex} = ${selectedCharacter}`
+                        );
+                      }
+                    }
+                  }
+                }
+
+                // Salvataggio dell'immagine
+                saveCharacterSelection(character.name, character.image);
+                showSaveNotification();
+                console.log(
+                  "✅ Personaggio selezionato e salvato:",
+                  character.name
+                );
+              }
+            }
+            closeCharacterModal();
+          });
+        }
+
+        // Event listener per selezione personaggi nel modal
+        document.addEventListener("click", function (e) {
+          if (e.target.closest(".character-modal-option")) {
+            const option = e.target.closest(".character-modal-option");
+            if (option.classList.contains("disabled")) return;
+            document
+              .querySelectorAll(".character-modal-option")
+              .forEach((opt) => {
+                opt.classList.remove("selected");
+              });
+            option.classList.add("selected");
+            selectedCharacter = option.dataset.character;
+            const saveButton = document.getElementById("characterModalSave");
+            saveButton.disabled = false;
+            saveButton.textContent = `Seleziona ${selectedCharacter}`;
+          }
+        });
+
+        // Event listeners per creazione team
+        const btnCreateTeam = document.getElementById("createTeamBtn");
+        if (btnCreateTeam) {
+          btnCreateTeam.addEventListener("click", openCreateTeamModal);
+        }
+
+        const btnCancelNewTeam = document.getElementById("cancelNewTeamBtn");
+        if (btnCancelNewTeam) {
+          btnCancelNewTeam.addEventListener("click", closeCreateTeamModal);
+        }
+
+        const btnSaveNewTeam = document.getElementById("saveNewTeamBtn");
+        if (btnSaveNewTeam) {
+          btnSaveNewTeam.addEventListener("click", saveNewTeam);
+        }
+
+        // Event listener per chiudere i modal quando si clicca fuori
+        document.addEventListener("click", function (e) {
+          // Chiudi modal creazione team
+          const createTeamModal = document.getElementById("createTeamModal");
+          if (createTeamModal && createTeamModal.style.display === "flex") {
+            if (e.target === createTeamModal) {
+              closeCreateTeamModal();
+            }
+          }
+
+          // Chiudi modal selezione personaggi
+          const characterModal = document.getElementById("characterModal");
+          if (characterModal && characterModal.style.display === "flex") {
+            if (e.target === characterModal) {
+              closeCharacterModal();
+            }
+          }
+        });
+
+        // Event listener per chiudere i modal con ESC
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            const createTeamModal = document.getElementById("createTeamModal");
+            const characterModal = document.getElementById("characterModal");
+
+            if (createTeamModal && createTeamModal.style.display === "flex") {
+              closeCreateTeamModal();
+            } else if (
+              characterModal &&
+              characterModal.style.display === "flex"
+            ) {
+              closeCharacterModal();
+            }
+          }
+        });
+
+        // Salvataggio automatico ogni 60 secondi
+        setInterval(() => {
+          saveImages();
+          createBackup();
+        }, 60000);
+
+        console.log("✅ Inizializzazione completata");
+        setActiveFloor(activeFloorOnly);
+
+        // Event listeners per il modal rotazione - AGGIUNGI QUI
+        const saveEditRotationBtn = document.getElementById(
+          "saveEditRotationBtn"
+        );
+        const cancelEditRotationBtn = document.getElementById(
+          "cancelEditRotationBtn"
+        );
+
+        if (saveEditRotationBtn) {
+          saveEditRotationBtn.addEventListener("click", function () {
+            const newText = document
+              .getElementById("editRotationInput")
+              .value.trim();
+            if (newText && currentEditRotationDiv && currentEditRotationInfo) {
+              currentEditRotationDiv.querySelector(
+                ".rotation-text"
+              ).textContent = newText;
+              teamsData[currentEditRotationInfo.floor][
+                currentEditRotationInfo.half
+              ][currentEditRotationInfo.teamIndex].rotation = newText;
+              saveCustomTeams();
+              localStorage.setItem("customTeams", JSON.stringify(teamsData));
+              if (typeof showSaveNotification === "function")
+                showSaveNotification();
+            }
+            document.getElementById("editRotationModal").style.display = "none";
+            currentEditRotationDiv = null;
+            currentEditRotationInfo = null;
+          });
+        }
+
+        if (cancelEditRotationBtn) {
+          cancelEditRotationBtn.addEventListener("click", function () {
+            document.getElementById("editRotationModal").style.display = "none";
+            currentEditRotationDiv = null;
+            currentEditRotationInfo = null;
+          });
+        }
+
+        // Event listener per cancelEditRotationBtn (alternativo)
+        const cancelEditRotationBtnAlt = document.getElementById(
+          "cancelEditRotationBtn"
+        );
+        if (cancelEditRotationBtnAlt) {
+          cancelEditRotationBtnAlt.onclick = function () {
+            document.getElementById("editRotationModal").style.display = "none";
+            currentEditRotationDiv = null;
+            currentEditRotationInfo = null;
+          };
+        }
+      });
+
+      // Funzione per forzare il salvataggio immediato
+      function forceSave() {
+        saveImages();
+        console.log("💾 Salvataggio forzato completato");
+      }
+
+      // Sistema di backup per garantire la persistenza
+      function createBackup() {
+        try {
+          const currentData = localStorage.getItem("teamImages");
+          if (currentData) {
+            localStorage.setItem("teamImages_backup", currentData);
+            localStorage.setItem("backupTime", Date.now().toString());
+          }
+        } catch (error) {
+          console.error("❌ Errore nella creazione del backup:", error);
+        }
+      }
+
+      // Ripristina da backup se necessario
+      function restoreBackup() {
+        try {
+          const backupData = localStorage.getItem("teamImages_backup");
+          const currentData = localStorage.getItem("teamImages");
+          if (backupData && (!currentData || currentData === "{}")) {
+            localStorage.setItem("teamImages", backupData);
+            return true;
+          }
+          return false;
+        } catch (error) {
+          console.error("❌ Errore nel ripristino da backup:", error);
+          return false;
+        }
+      }
+
+      // Funzione per testare il salvataggio e caricamento
+      function testSaveAndLoad() {
+        console.log("🧪 Test del sistema di salvataggio...");
+
+        // Forza il salvataggio
+        saveImages();
+
+        // Verifica che il salvataggio sia avvenuto
+        const savedImages = JSON.parse(
+          localStorage.getItem("teamImages") || "{}"
+        );
+        const lastSaveTime = localStorage.getItem("lastSaveTime");
+
+        console.log("✅ Test completato:");
+        console.log("- Immagini salvate:", Object.keys(savedImages).length);
+        console.log(
+          "- Timestamp salvataggio:",
+          lastSaveTime
+            ? new Date(parseInt(lastSaveTime)).toLocaleString()
+            : "Nessuno"
+        );
+
+        // Mostra notifica
+        const notification = document.createElement("div");
+        notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #64ffda, #00d4aa);
+                color: #16213e;
+                padding: 15px 25px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 1rem;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+              `;
+        notification.innerHTML = `
+                <div>🧪 Test Completato!</div>
+                <div style="font-size: 0.8rem; margin-top: 5px;">
+                  ${Object.keys(savedImages).length} immagini salvate
+                </div>
+              `;
+        document.body.appendChild(notification);
+
+        // Mostra la notifica
+        setTimeout(() => {
+          notification.style.transform = "translateX(0)";
+        }, 100);
+
+        // Nascondi la notifica dopo 3 secondi
+        setTimeout(() => {
+          notification.style.transform = "translateX(100%)";
+          setTimeout(() => {
+            document.body.removeChild(notification);
+          }, 300);
+        }, 3000);
+      }
+
+      // Event listener per annullare selezione personaggio
+      // (RIMOSSO) if (btnCharacterModalCancel)
+      //   btnCharacterModalCancel.addEventListener("click", closeCharacterModal);
+
+      // (RIMOSSO) if (btnCharacterModalSave)
+      //   btnCharacterModalSave.addEventListener("click", function () { ... });
+
+      // Carica team personalizzati dal localStorage
+      function loadCustomTeams() {
+        const savedTeams = localStorage.getItem(
+          getUserStorageKey("customTeams")
+        );
+        if (savedTeams) {
+          const customTeams = JSON.parse(savedTeams);
+          Object.keys(customTeams).forEach((floor) => {
+            if (!teamsData[floor]) {
+              teamsData[floor] = { "Prima Metà": [], "Seconda Metà": [] };
+            }
+            teamsData[floor]["Prima Metà"] = [
+              ...teamsData[floor]["Prima Metà"],
+              ...customTeams[floor]["Prima Metà"],
+            ];
+            teamsData[floor]["Seconda Metà"] = [
+              ...teamsData[floor]["Seconda Metà"],
+              ...customTeams[floor]["Seconda Metà"],
+            ];
+          });
+        }
+      }
+
+      // Trova la funzione che gestisce la selezione di un personaggio dal modal per un team esistente (dove c'è currentEditingImage)
+      // Dopo aver aggiornato l'immagine, aggiungi questo blocco:
+
+      // ...dopo aver aggiornato currentEditingImage.src e currentEditingImage.alt...
+
+      // --- INIZIO BLOCCO DA AGGIUNGERE ---
+      // Aggiorna la struttura dati del team se si tratta di un team esistente
+      if (currentEditingImage) {
+        // Trova il team-card e i suoi dati
+        const teamCard = currentEditingImage.closest(".team-card");
+        if (teamCard) {
+          // Recupera il nome del team
+          const teamName = teamCard.querySelector(".team-name")?.textContent;
+          // Recupera il floor e la metà
+          const floorSection = teamCard.closest(".floor-section");
+          const floor =
+            floorSection?.querySelector(".floor-title")?.textContent;
+          const half = floorSection?.querySelector(".switch input")?.checked
+            ? "Seconda Metà"
+            : "Prima Metà";
+          // Trova l'indice del team
+          const teams = teamsData[floor]?.[half] || [];
+          const teamIndex = teams.findIndex((t) => t.name === teamName);
+          if (teamIndex !== -1) {
+            // Trova la posizione del personaggio nel team
+            const characterRows = Array.from(
+              teamCard.querySelectorAll(".character-row")
+            );
+            let charIndex = -1;
+            characterRows.forEach((row, rowIdx) => {
+              const imgs = Array.from(row.querySelectorAll(".character-icon"));
+              imgs.forEach((img, imgIdx) => {
+                if (img === currentEditingImage) {
+                  charIndex = rowIdx * 2 + imgIdx;
+                }
+              });
+            });
+            if (charIndex !== -1) {
+              teamsData[floor][half][teamIndex].characters[charIndex] =
+                selectedCharacter;
+              // Salva su localStorage
+              saveCustomTeams();
+            }
+          }
+        }
+      }
+      // --- FINE BLOCCO DA AGGIUNGERE ---
+
+      // 1. Al caricamento pagina, carica SEMPRE i dati da localStorage (sia teamsData che immagini)
+      window.addEventListener("DOMContentLoaded", async () => {
+        // Carica i dati dei team personalizzati
+        const savedTeams = localStorage.getItem(
+          getUserStorageKey("customTeams")
+        );
+        if (savedTeams) {
+          Object.assign(teamsData, JSON.parse(savedTeams));
+        }
+        // Carica immagini salvate
+        const savedImages = JSON.parse(
+          localStorage.getItem("teamImages") || "{}"
+        );
+        // Renderizza i team
+        renderTeams();
+        // Applica immagini salvate
+        setTimeout(() => {
+          document.querySelectorAll(".character-icon").forEach((img) => {
+            const characterName = img.dataset.character;
+            if (savedImages[characterName]) {
+              img.src = savedImages[characterName];
+            }
+          });
+        }, 100);
+      });
+
+      // 2. Dopo ogni selezione personaggio aggiorno e salvo sia teamsData che teamImages su localStorage
+      function updateTeamAndSave(
+        floor,
+        half,
+        teamIndex,
+        charIndex,
+        characterName,
+        characterImage
+      ) {
+        // Aggiorna struttura dati
+        teamsData[floor][half][teamIndex].characters[charIndex] = characterName;
+        // Salva su localStorage
+        saveCustomTeams();
+        // Salva immagine aggiornata
+        const savedImages = JSON.parse(
+          localStorage.getItem("teamImages") || "{}"
+        );
+        savedImages[characterName] = characterImage;
+        localStorage.setItem("teamImages", JSON.stringify(savedImages));
+      }
+
+      // 3. Modifica la logica di selezione personaggio nel modal:
+      // Dopo aver aggiornato currentEditingImage.src e currentEditingImage.alt...
+      if (currentEditingImage && !isCreatingNewTeam) {
+        // Trova il team-card e i suoi dati
+        const teamCard = currentEditingImage.closest(".team-card");
+        if (teamCard) {
+          // Recupera il nome del team
+          const teamName = teamCard.querySelector(".team-name")?.textContent;
+          // Recupera il floor e la metà
+          const floorSection = teamCard.closest(".floor-section");
+          const floor =
+            floorSection?.querySelector(".floor-title")?.textContent;
+          const half = floorSection?.querySelector(".switch input")?.checked
+            ? "Seconda Metà"
+            : "Prima Metà";
+          // Trova l'indice del team
+          const teams = teamsData[floor]?.[half] || [];
+          const teamIndex = teams.findIndex((t) => t.name === teamName);
+          if (teamIndex !== -1) {
+            // Trova la posizione del personaggio nel team
+            const characterRows = Array.from(
+              teamCard.querySelectorAll(".character-row")
+            );
+            let charIndex = -1;
+            characterRows.forEach((row, rowIdx) => {
+              const imgs = Array.from(row.querySelectorAll(".character-icon"));
+              imgs.forEach((img, imgIdx) => {
+                if (img === currentEditingImage) {
+                  charIndex = rowIdx * 2 + imgIdx;
+                }
+              });
+            });
+            if (charIndex !== -1) {
+              updateTeamAndSave(
+                floor,
+                half,
+                teamIndex,
+                charIndex,
+                selectedCharacter,
+                currentEditingImage.src
+              );
+            }
+          }
+        }
+      }
+
+      // Funzione per verificare e riparare i dati salvati
+      function verifyAndRepairSavedData() {
+        const savedImages = JSON.parse(
+          localStorage.getItem("teamImages") || "{}"
+        );
+        let hasChanges = false;
+
+        // Verifica che tutte le immagini salvate siano valide
+        Object.keys(savedImages).forEach((characterName) => {
+          const character = allCharacters.find((c) => c.name === characterName);
+          if (
+            character &&
+            character.image &&
+            savedImages[characterName] !== character.image
+          ) {
+            // Aggiorna l'immagine se è cambiata nel database
+            savedImages[characterName] = character.image;
+            hasChanges = true;
+            console.log("Immagine aggiornata per:", characterName);
+          }
+        });
+
+        // Salva le modifiche se ce ne sono state
+        if (hasChanges) {
+          localStorage.setItem("teamImages", JSON.stringify(savedImages));
+          console.log("Dati salvati riparati e aggiornati");
+        }
+      }
+
+      // Verifica e ripara i dati
+      function verifyAndRepairData() {
+        try {
+          const savedImages = JSON.parse(
+            localStorage.getItem("teamImages") || "{}"
+          );
+          const backupData = localStorage.getItem("teamImages_backup");
+
+          if (Object.keys(savedImages).length === 0 && backupData) {
+            localStorage.setItem("teamImages", backupData);
+          }
+        } catch (error) {
+          console.error("❌ Errore nella verifica dei dati:", error);
+        }
+      }
+
+      // Event listener per modificare la rotazione
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".team-rotation .edit-icon")) {
+          const rotationDiv = e.target.closest(".team-rotation");
+          const teamIndex = rotationDiv.getAttribute("data-team-index");
+          const teamCard = rotationDiv.closest(".team-card");
+          const floorSection = teamCard.closest(".floor-section");
+          const floor = floorSection.querySelector(".floor-title").textContent;
+          const half = floorSection.querySelector(".switch input").checked
+            ? "Seconda Metà"
+            : "Prima Metà";
+          const teams = teamsData[floor][half];
+
+          if (teamIndex !== null && teams[teamIndex]) {
+            document.getElementById("editRotationModal").style.display = "flex";
+            document.getElementById("editRotationInput").value =
+              rotationDiv.querySelector(".rotation-text").textContent;
+            currentEditRotationDiv = rotationDiv;
+            currentEditRotationInfo = {
+              floor,
+              half,
+              teamIndex: parseInt(teamIndex),
+            };
+          }
+        }
+      });
+
+      // Event listener per cancelEditRotationBtn spostato nel DOMContentLoaded
+
+      function saveCustomTeams() {
+        localStorage.setItem(
+          getUserStorageKey("customTeams"),
+          JSON.stringify(teamsData)
+        );
+      }
+
+      // Utility per storage per-utente
+      function getCurrentUser() {
+        return localStorage.getItem("user") || "guest";
+      }
+      function getUserStorageKey(baseKey) {
+        const user = localStorage.getItem("user");
+        return user ? `${user}_${baseKey}` : baseKey;
+      }
+    </script>
+
+    <!-- Character Selection Modal -->
+    <div id="characterModal">
+      <div id="characterModalContent">
+        <h2 id="characterModalTitle">Seleziona Personaggio</h2>
+        <p id="characterModalSubtitle">Scegli un personaggio per il team</p>
+
+        <input
+          type="text"
+          id="characterSearchInput"
+          placeholder="Cerca personaggio..."
+        />
+
+        <div id="characterFilters"></div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+          "
+        >
+          <span
+            id="characterCount"
+            style="color: #64ffda; font-size: 1rem"
+          ></span>
+          <span
+            id="filterStatus"
+            style="color: #b0eaff; font-size: 1rem"
+          ></span>
+        </div>
+        <div id="characterModalGrid"></div>
+
+        <div
+          style="
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+          "
+        >
+          <button id="characterModalSave" disabled>
+            Seleziona Personaggio
+          </button>
+          <button id="characterModalCancel">Annulla</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create Team Modal -->
+    <div
+      id="createTeamModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.95);
+        backdrop-filter: blur(8px);
+        z-index: 4000; /* inferiore a #characterModal */
+        justify-content: center;
+        align-items: center;
+        animation: modalFadeIn 0.3s ease;
+      "
+    >
+      <div
+        style="
+          background: linear-gradient(
+            135deg,
+            rgba(26, 26, 46, 0.98),
+            rgba(22, 33, 62, 0.98)
+          );
+          border-radius: 22px;
+          padding: 2.5rem 2rem;
+          max-width: 600px;
+          width: 96vw;
+          max-height: 90vh;
+          overflow-y: auto;
+          border: 2.5px solid #64ffda;
+          box-shadow: 0 20px 60px 0 rgba(100, 255, 218, 0.2),
+            0 8px 32px rgba(0, 0, 0, 0.4);
+          position: relative;
+          animation: modalSlideIn 0.3s ease;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #64ffda, #00d4aa, #64ffda);
+            border-radius: 24px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+          "
+        ></div>
+        <h2
+          style="
+            color: #64ffda;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, #64ffda, #00d4aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+        >
+          Crea Nuovo Team
+        </h2>
+
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Nome Team:</label
+          >
+          <input
+            type="text"
+            id="newTeamName"
+            style="
+              width: 100%;
+              padding: 1rem 1.2rem;
+              border-radius: 12px;
+              border: 2px solid rgba(100, 255, 218, 0.3);
+              background: rgba(15, 52, 96, 0.8);
+              color: #e0e0e0;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1rem;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(10px);
+            "
+          />
+        </div>
+
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Floor:</label
+          >
+          <select
+            id="newTeamFloor"
+            style="
+              width: 100%;
+              padding: 1rem 1.2rem;
+              border-radius: 12px;
+              border: 2px solid rgba(100, 255, 218, 0.3);
+              background: rgba(15, 52, 96, 0.8);
+              color: #e0e0e0;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1rem;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(10px);
+            "
+          >
+            <option value="Floor 9">Floor 9</option>
+            <option value="Floor 10">Floor 10</option>
+            <option value="Floor 11">Floor 11</option>
+            <option value="Floor 12" selected>Floor 12</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Metà:</label
+          >
+          <div style="display: flex; gap: 1rem">
+            <label
+              style="
+                color: #e0e0e0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+              "
+            >
+              <input
+                type="radio"
+                name="newTeamHalf"
+                value="Prima Metà"
+                checked
+              />
+              Prima Metà
+            </label>
+            <label
+              style="
+                color: #e0e0e0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+              "
+            >
+              <input type="radio" name="newTeamHalf" value="Seconda Metà" />
+              Seconda Metà
+            </label>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Personaggi:</label
+          >
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 1rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <div
+              class="new-character-slot"
+              data-position="0"
+              style="
+                width: 80px;
+                height: 80px;
+                border: 2.5px dashed #64ffda;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background: #222;
+              "
+              onclick="openCharacterModalForNewTeam(this)"
+            >
+              <span style="color: #64ffda; font-size: 1.5rem">+</span>
+            </div>
+            <div
+              class="new-character-slot"
+              data-position="1"
+              style="
+                width: 80px;
+                height: 80px;
+                border: 2.5px dashed #64ffda;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background: #222;
+              "
+              onclick="openCharacterModalForNewTeam(this)"
+            >
+              <span style="color: #64ffda; font-size: 1.5rem">+</span>
+            </div>
+            <div
+              class="new-character-slot"
+              data-position="2"
+              style="
+                width: 80px;
+                height: 80px;
+                border: 2.5px dashed #64ffda;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background: #222;
+              "
+              onclick="openCharacterModalForNewTeam(this)"
+            >
+              <span style="color: #64ffda; font-size: 1.5rem">+</span>
+            </div>
+            <div
+              class="new-character-slot"
+              data-position="3"
+              style="
+                width: 80px;
+                height: 80px;
+                border: 2.5px dashed #64ffda;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background: #222;
+              "
+              onclick="openCharacterModalForNewTeam(this)"
+            >
+              <span style="color: #64ffda; font-size: 1.5rem">+</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Spiegazione:</label
+          >
+          <textarea
+            id="newTeamExplanation"
+            rows="3"
+            style="
+              width: 100%;
+              padding: 1rem 1.2rem;
+              border-radius: 12px;
+              border: 2px solid rgba(100, 255, 218, 0.3);
+              background: rgba(15, 52, 96, 0.8);
+              color: #e0e0e0;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1rem;
+              resize: vertical;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(10px);
+            "
+          ></textarea>
+        </div>
+
+        <div style="margin-bottom: 1.5rem">
+          <label
+            style="
+              display: block;
+              color: #e0e0e0;
+              margin-bottom: 0.5rem;
+              font-weight: 600;
+            "
+            >Rotazione:</label
+          >
+          <textarea
+            id="newTeamRotation"
+            rows="2"
+            style="
+              width: 100%;
+              padding: 1rem 1.2rem;
+              border-radius: 12px;
+              border: 2px solid rgba(100, 255, 218, 0.3);
+              background: rgba(15, 52, 96, 0.8);
+              color: #e0e0e0;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1rem;
+              resize: vertical;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(10px);
+            "
+          ></textarea>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <button
+            id="saveNewTeamBtn"
+            style="
+              padding: 1.2rem 2.5rem;
+              border-radius: 12px;
+              border: none;
+              background: linear-gradient(135deg, #64ffda, #00d4aa);
+              color: #16213e;
+              font-weight: 700;
+              cursor: pointer;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1.1rem;
+              transition: all 0.3s ease;
+              box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+            "
+          >
+            Salva Team
+          </button>
+          <button
+            id="cancelNewTeamBtn"
+            style="
+              padding: 1.2rem 2.5rem;
+              border-radius: 12px;
+              border: 1.5px solid rgba(255, 255, 255, 0.3);
+              background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.15),
+                rgba(255, 255, 255, 0.1)
+              );
+              color: #e0e0e0;
+              font-weight: 700;
+              cursor: pointer;
+              font-family: 'Fredoka', sans-serif;
+              font-size: 1.1rem;
+              transition: all 0.3s ease;
+              backdrop-filter: blur(5px);
+            "
+          >
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create Team Button -->
+    <div style="text-align: center; margin: 2rem 0">
+      <button
+        id="createTeamBtn"
+        style="
+          padding: 1rem 2rem;
+          border-radius: 10px;
+          border: none;
+          background: linear-gradient(135deg, #64ffda, #00d4aa);
+          color: #16213e;
+          font-weight: 700;
+          cursor: pointer;
+          font-family: 'Fredoka', sans-serif;
+          font-size: 1.1rem;
+          box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+        "
+      >
+        ➕ Crea Nuovo Team
+      </button>
+    </div>
+
+    <!-- Teams Container -->
+    <div id="teamsContainer"></div>
+
+    <!-- Modal modifica descrizione -->
+    <div
+      id="editDescriptionModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.92);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: #222;
+          border-radius: 18px;
+          padding: 2rem;
+          min-width: 320px;
+          max-width: 90vw;
+          box-shadow: 0 8px 32px #64ffda33;
+        "
+      >
+        <h2 style="color: #64ffda; text-align: center; margin-bottom: 1rem">
+          Modifica Descrizione
+        </h2>
+        <textarea
+          id="editDescriptionInput"
+          rows="4"
+          style="
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid #64ffda;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+          "
+        ></textarea>
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <button
+            id="saveEditDescriptionBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #64ffda;
+              color: #16213e;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Salva
+          </button>
+          <button
+            id="cancelEditDescriptionBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #333;
+              color: #fff;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        let currentEditDescriptionDiv = null;
+        let currentEditTeamInfo = null;
+
+        document.addEventListener("click", function (e) {
+          if (e.target.closest(".edit-icon")) {
+            const explanationDiv = e.target.closest(".team-explanation");
+            const teamIndex = explanationDiv.getAttribute("data-team-index");
+            const teamCard = explanationDiv.closest(".team-card");
+            const floorSection = teamCard.closest(".floor-section");
+            const floor =
+              floorSection.querySelector(".floor-title").textContent;
+            const half = floorSection.querySelector(".switch input").checked
+              ? "Seconda Metà"
+              : "Prima Metà";
+            const teams = teamsData[floor][half];
+
+            if (teamIndex !== null && teams[teamIndex]) {
+              document.getElementById("editDescriptionModal").style.display =
+                "flex";
+              document.getElementById("editDescriptionInput").value =
+                explanationDiv.querySelector(".explanation-text").textContent;
+              currentEditDescriptionDiv = explanationDiv;
+              currentEditTeamInfo = {
+                floor,
+                half,
+                teamIndex: parseInt(teamIndex),
+              };
+            }
+          }
+        });
+
+        document.getElementById("saveEditDescriptionBtn").onclick =
+          function () {
+            const newText = document
+              .getElementById("editDescriptionInput")
+              .value.trim();
+            if (newText && currentEditDescriptionDiv && currentEditTeamInfo) {
+              currentEditDescriptionDiv.querySelector(
+                ".explanation-text"
+              ).textContent = newText;
+              teamsData[currentEditTeamInfo.floor][currentEditTeamInfo.half][
+                currentEditTeamInfo.teamIndex
+              ].explanation = newText;
+              saveCustomTeams();
+              localStorage.setItem("customTeams", JSON.stringify(teamsData));
+              if (typeof showSaveNotification === "function")
+                showSaveNotification();
+            }
+            document.getElementById("editDescriptionModal").style.display =
+              "none";
+            currentEditDescriptionDiv = null;
+            currentEditTeamInfo = null;
+          };
+        document.getElementById("cancelEditDescriptionBtn").onclick =
+          function () {
+            document.getElementById("editDescriptionModal").style.display =
+              "none";
+            currentEditDescriptionDiv = null;
+            currentEditTeamInfo = null;
+          };
+      });
+    </script>
+
+    <!-- Edit Team Name Modal -->
+    <div
+      id="editTeamNameModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.92);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: #222;
+          border-radius: 18px;
+          padding: 2rem;
+          min-width: 320px;
+          max-width: 90vw;
+          box-shadow: 0 8px 32px #64ffda33;
+        "
+      >
+        <h2 style="color: #64ffda; text-align: center; margin-bottom: 1rem">
+          Modifica Nome Team
+        </h2>
+        <input
+          id="editTeamNameInput"
+          style="
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid #64ffda;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+          "
+        />
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <button
+            id="saveEditTeamNameBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #64ffda;
+              color: #16213e;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Salva
+          </button>
+          <button
+            id="cancelEditTeamNameBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #333;
+              color: #fff;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        // ...esistente...
+        let currentEditTeamNameDiv = null;
+        let currentEditTeamNameInfo = null;
+
+        document.addEventListener("click", function (e) {
+          const icon = e.target.closest(".edit-teamname-icon");
+          if (icon) {
+            const teamCard = icon.closest(".team-card");
+            const teamNameDiv = teamCard.querySelector(".team-name-text");
+            const currentText = teamNameDiv.textContent;
+            const floorSection = teamCard.closest(".floor-section");
+            const floor =
+              floorSection.querySelector(".floor-title").textContent;
+            const half = floorSection.querySelector(".switch input").checked
+              ? "Seconda Metà"
+              : "Prima Metà";
+            const teams = teamsData[floor][half];
+            const teamIndex = teams.findIndex((t) => t.name === currentText);
+
+            if (teamIndex !== -1) {
+              document.getElementById("editTeamNameModal").style.display =
+                "flex";
+              document.getElementById("editTeamNameInput").value = currentText;
+              currentEditTeamNameDiv = teamNameDiv;
+              currentEditTeamNameInfo = { floor, half, teamIndex };
+            }
+          }
+        });
+
+        document.getElementById("saveEditTeamNameBtn").onclick = function () {
+          const newText = document
+            .getElementById("editTeamNameInput")
+            .value.trim();
+          if (newText && currentEditTeamNameDiv && currentEditTeamNameInfo) {
+            currentEditTeamNameDiv.textContent = newText;
+            teamsData[currentEditTeamNameInfo.floor][
+              currentEditTeamNameInfo.half
+            ][currentEditTeamNameInfo.teamIndex].name = newText;
+            saveCustomTeams();
+            if (typeof showSaveNotification === "function")
+              showSaveNotification();
+          }
+          document.getElementById("editTeamNameModal").style.display = "none";
+          currentEditTeamNameDiv = null;
+          currentEditTeamNameInfo = null;
+        };
+        document.getElementById("cancelEditTeamNameBtn").onclick = function () {
+          document.getElementById("editTeamNameModal").style.display = "none";
+          currentEditTeamNameDiv = null;
+          currentEditTeamNameInfo = null;
+        };
+      });
+    </script>
+
+    <!-- Modal modifica rotazione -->
+    <div
+      id="editRotationModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 18, 30, 0.92);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: #222;
+          border-radius: 18px;
+          padding: 2rem;
+          min-width: 320px;
+          max-width: 90vw;
+          box-shadow: 0 8px 32px #64ffda33;
+        "
+      >
+        <h2 style="color: #64ffda; text-align: center; margin-bottom: 1rem">
+          Modifica Rotazione
+        </h2>
+        <textarea
+          id="editRotationInput"
+          rows="3"
+          style="
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid #64ffda;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+          "
+        ></textarea>
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <button
+            id="saveEditRotationBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #64ffda;
+              color: #16213e;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Salva
+          </button>
+          <button
+            id="cancelEditRotationBtn"
+            style="
+              padding: 0.7rem 2rem;
+              border-radius: 10px;
+              background: #333;
+              color: #fff;
+              font-weight: 700;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal login/registrazione -->
+    <div
+      id="loginModal"
+      class="modal"
+      style="
+        display: none;
+        z-index: 4000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: rgba(10, 18, 30, 0.92);
+      "
+    >
+      <div
+        class="modal-content"
+        style="
+          background: linear-gradient(135deg, #1a1a2e, #16213e);
+          border-radius: 18px;
+          padding: 2.5rem 2rem;
+          max-width: 350px;
+          width: 90vw;
+          text-align: center;
+          box-shadow: 0 8px 32px #64ffda55;
+          position: relative;
+        "
+      >
+        <span
+          class="close"
+          onclick="closeLoginModal()"
+          style="
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+          "
+          >&times;</span
+        >
+        <h2 id="loginModalTitle">Login / Registrati</h2>
+        <input
+          id="loginUsername"
+          placeholder="Username"
+          style="
+            width: 90%;
+            margin-bottom: 1em;
+            padding: 0.7em;
+            border-radius: 8px;
+            border: 1.5px solid #64ffda44;
+            background: #16213e;
+            color: #e0e0e0;
+            font-size: 1em;
+          "
+        />
+        <input
+          id="loginPassword"
+          type="password"
+          placeholder="Password"
+          style="
+            width: 90%;
+            margin-bottom: 1em;
+            padding: 0.7em;
+            border-radius: 8px;
+            border: 1.5px solid #64ffda44;
+            background: #16213e;
+            color: #e0e0e0;
+            font-size: 1em;
+          "
+        />
+        <div
+          id="loginError"
+          style="color: #ff6b6b; margin-bottom: 1em; display: none"
+        ></div>
+        <button
+          onclick="doLogin()"
+          style="
+            padding: 0.7em 2em;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #64ffda, #00d4aa);
+            color: #16213e;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 0.5em;
+          "
+        >
+          Login
+        </button>
+        <button
+          onclick="doLogin(true)"
+          style="
+            padding: 0.7em 2em;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #b0eaff, #64ffda);
+            color: #16213e;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+          "
+        >
+          Registrati
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // ... existing code ...
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("userControls");
+        if (!el) return;
+        if (user) {
+          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><button onclick='doLogout()' style='padding:0.5em 1.2em;border-radius:8px;font-weight:700;font-size:1em;border:none;cursor:pointer;background:linear-gradient(135deg,#b0eaff,#64ffda);color:#16213e;'>Logout</button>`;
+        } else {
+          el.innerHTML = `<button onclick='openLoginModal()' style='padding:0.5em 1.2em;border-radius:8px;font-weight:700;font-size:1em;border:none;cursor:pointer;background:linear-gradient(135deg,#64ffda,#00d4aa);color:#16213e;margin-right:0.5em;'>Login</button> <button onclick='openLoginModal(true)' style='padding:0.5em 1.2em;border-radius:8px;font-weight:700;font-size:1em;border:none;cursor:pointer;background:linear-gradient(135deg,#b0eaff,#64ffda);color:#16213e;'>Registrati</button>`;
+        }
+      }
+      function openLoginModal(isRegister) {
+        document.getElementById("loginModal").style.display = "flex";
+        document.getElementById("loginModalTitle").textContent = isRegister
+          ? "Registrati"
+          : "Login";
+        document.getElementById("loginError").style.display = "none";
+        document.getElementById("loginUsername").value = "";
+        document.getElementById("loginPassword").value = "";
+      }
+      function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+      }
+      function doLogin(isRegister) {
+        const u = document.getElementById("loginUsername").value.trim();
+        const p = document.getElementById("loginPassword").value;
+        if (!u || !p) {
+          document.getElementById("loginError").textContent =
+            "Compila tutti i campi";
+          document.getElementById("loginError").style.display = "block";
+          return;
+        }
+        let regData = {};
+        try {
+          regData = JSON.parse(localStorage.getItem("registeredUsers") || "{}");
+        } catch (e) {}
+        if (isRegister) {
+          regData[u] = p;
+          localStorage.setItem("registeredUsers", JSON.stringify(regData));
+          localStorage.setItem("user", u);
+          closeLoginModal();
+          renderUserControls();
+          location.reload();
+          return;
+        }
+        if (regData[u] && regData[u] === p) {
+          localStorage.setItem("user", u);
+          closeLoginModal();
+          renderUserControls();
+          location.reload();
+        } else {
+          document.getElementById("loginError").textContent =
+            "Credenziali non valide";
+          document.getElementById("loginError").style.display = "block";
+        }
+      }
+      function doLogout() {
+        localStorage.removeItem("user");
+        renderUserControls();
+        location.reload();
+      }
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+      // ... existing code ...
+    </script>
+  </body>
+</html>

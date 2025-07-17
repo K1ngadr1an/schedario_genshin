@@ -1,0 +1,2882 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valutazione Build - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        padding-top: 3.5rem;
+      }
+
+      .build-rating-container {
+        max-width: 950px;
+        margin: 2rem auto;
+        background: rgba(26, 26, 46, 0.9);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      /* Ottimizzazioni per schermi 2K */
+      @media (min-width: 1400px) {
+        .build-rating-container {
+          max-width: 1200px;
+          padding: 2.5rem;
+        }
+      }
+
+      @media (min-width: 1800px) {
+        .build-rating-container {
+          max-width: 1400px;
+          padding: 3rem;
+        }
+      }
+
+      @media (min-width: 2200px) {
+        .build-rating-container {
+          max-width: 1600px;
+          padding: 3.5rem;
+        }
+      }
+
+      .build-rating-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .build-rating-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #64ffda;
+        text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+      }
+
+      .build-form {
+        background: rgba(15, 52, 96, 0.8);
+        border-radius: 12px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .build-form select,
+      .build-form input,
+      .build-form textarea {
+        width: 100%;
+        border-radius: 8px;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        padding: 0.7rem;
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+        background: rgba(26, 26, 46, 0.8);
+        color: #e0e0e0;
+        transition: all 0.3s ease;
+      }
+
+      .build-form select:focus,
+      .build-form input:focus,
+      .build-form textarea:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        background: rgba(26, 26, 46, 0.95);
+      }
+
+      .build-form select::placeholder,
+      .build-form input::placeholder,
+      .build-form textarea::placeholder {
+        color: rgba(224, 224, 224, 0.6);
+      }
+
+      .build-form .btn {
+        background: linear-gradient(135deg, #64ffda, #00bcd4);
+        color: #1a1a2e;
+        border: none;
+        border-radius: 8px;
+        padding: 0.8rem 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+      }
+
+      .build-form .btn:hover {
+        background: linear-gradient(135deg, #00bcd4, #64ffda);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4);
+      }
+
+      .build-list {
+        margin-top: 2rem;
+      }
+
+      .build-entry {
+        background: rgba(22, 33, 62, 0.8);
+        border-radius: 12px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.2rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .build-entry:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        border-color: rgba(100, 255, 218, 0.2);
+      }
+
+      .build-entry-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .build-entry-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #64ffda;
+        text-shadow: 0 0 8px rgba(100, 255, 218, 0.2);
+      }
+
+      .build-entry-rating {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        color: #e0e0e0;
+      }
+
+      .build-entry-desc {
+        margin: 0.5rem 0 0.7rem 0;
+        white-space: pre-line;
+        color: #b0b0b0;
+      }
+
+      .build-entry-actions {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+      }
+
+      .build-entry-actions button {
+        background: none;
+        border: none;
+        color: #64ffda;
+        font-size: 1.1rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0.3rem;
+        border-radius: 4px;
+      }
+
+      .build-entry-actions button:hover {
+        background: rgba(100, 255, 218, 0.2);
+        transform: scale(1.1);
+      }
+
+      .empty-message {
+        text-align: center;
+        color: rgba(224, 224, 224, 0.6);
+        font-style: italic;
+        margin-top: 2rem;
+        padding: 2rem;
+        background: rgba(26, 26, 46, 0.5);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .rating-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .rating-input {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .rating-input input {
+        width: 80px;
+      }
+
+      .emoji-select {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .emoji-select label {
+        margin-right: 0.7rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .emoji-select label:hover {
+        background: rgba(100, 255, 218, 0.1);
+        border-color: rgba(100, 255, 218, 0.3);
+      }
+
+      .emoji-select input[type="radio"] {
+        display: none;
+      }
+
+      .emoji-select input[type="radio"]:checked + label {
+        background: rgba(100, 255, 218, 0.2);
+        border-color: #64ffda;
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+      }
+
+      /* Scrollbar personalizzata */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(26, 26, 46, 0.5);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #64ffda, #00bcd4);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #00bcd4, #64ffda);
+      }
+
+      .save-feedback {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #64ffda, #00bcd4);
+        color: #1a1a2e;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(100, 255, 218, 0.4);
+        z-index: 1000;
+        transform: translateX(400px);
+        transition: transform 0.3s ease;
+        font-weight: 600;
+      }
+
+      .save-feedback.show {
+        display: block;
+        transform: translateX(0);
+      }
+
+      .build-form .btn:disabled {
+        background: rgba(100, 255, 218, 0.3);
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .emoji-rating {
+        display: flex;
+        align-items: center;
+      }
+
+      .emoji-label {
+        margin-right: 0.5rem;
+      }
+
+      .emoji-buttons {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .emoji-btn {
+        background: rgba(100, 255, 218, 0.1);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 8px;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1.2rem;
+      }
+
+      .emoji-btn:hover,
+      .emoji-btn.active {
+        background: rgba(100, 255, 218, 0.2);
+        border-color: #64ffda;
+        transform: scale(1.1);
+      }
+
+      .character-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        background: rgba(26, 26, 46, 0.7);
+        padding: 1rem;
+        border-radius: 12px;
+        max-height: 340px;
+        overflow-y: auto;
+      }
+      .character-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(40, 40, 60, 0.8);
+        border-radius: 10px;
+        padding: 0.5rem 0.2rem 0.3rem 0.2rem;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      }
+      .character-card.selected {
+        border: 2px solid #00bcd4;
+        box-shadow: 0 0 0 0 #0000;
+        z-index: 2;
+      }
+      .character-card.selected::after {
+        display: none;
+      }
+      .character-card:hover {
+        border: 2px solid #00bcd4;
+      }
+      .character-img {
+        width: 90px;
+        height: 90px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-bottom: 0.3rem;
+        background: #222;
+      }
+      .character-name {
+        font-size: 0.95rem;
+        color: #fff;
+        text-align: center;
+        margin-top: 0.1rem;
+        text-shadow: 0 2px 8px #000a;
+        word-break: break-word;
+      }
+
+      .stats-indicator {
+        position: absolute;
+        top: 0.3rem;
+        right: 0.3rem;
+        background: rgba(100, 255, 218, 0.9);
+        color: #16213e;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .element-filter-bar {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .element-filter-btn {
+        background: rgba(40, 40, 60, 0.8);
+        border: 2px solid transparent;
+        border-radius: 8px;
+        padding: 0.3rem 0.8rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: border 0.2s, background 0.2s, color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        outline: none;
+      }
+      .element-filter-btn.active {
+        border: 2px solid #64ffda;
+        background: rgba(100, 255, 218, 0.08);
+        color: #64ffda !important;
+      }
+      .element-filter-btn:hover {
+        border: 2px solid #00bcd4;
+        background: rgba(0, 188, 212, 0.08);
+      }
+      .element-icon {
+        font-size: 1.2em;
+      }
+
+      .search-filter-bar {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.7rem;
+      }
+      .character-search-input {
+        width: 260px;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: none;
+        background: rgba(40, 40, 60, 0.8);
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.2s;
+      }
+      .character-search-input:focus {
+        box-shadow: 0 0 0 2px #64ffda;
+      }
+      .weapon-filter-bar {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .weapon-filter-btn {
+        background: rgba(40, 40, 60, 0.8);
+        border: 2px solid transparent;
+        border-radius: 8px;
+        padding: 0.3rem 0.8rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: border 0.2s, background 0.2s, color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        outline: none;
+      }
+      .weapon-filter-btn.active {
+        border: 2px solid #64ffda;
+        background: rgba(100, 255, 218, 0.08);
+        color: #64ffda !important;
+      }
+      .weapon-filter-btn:hover {
+        border: 2px solid #00bcd4;
+        background: rgba(0, 188, 212, 0.08);
+      }
+      .weapon-icon {
+        font-size: 1.2em;
+      }
+
+      .artifact-gallery-label {
+        margin: 1.5rem 0 0.5rem 0;
+        color: #64ffda;
+        font-size: 1.1rem;
+        text-align: left;
+      }
+      .artifact-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+        background: rgba(26, 26, 46, 0.7);
+        padding: 1rem;
+        border-radius: 12px;
+        max-height: 220px;
+        overflow-y: auto;
+        align-items: start;
+      }
+      .artifact-card {
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid transparent;
+        border-radius: 12px;
+        padding: 0.8rem;
+        margin: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        width: 100%;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+      }
+      .artifact-card.selected {
+        border: 2px solid #64ffda;
+        box-shadow: 0 0 12px #64ffda55;
+      }
+      .artifact-card:hover {
+        border: 2px solid #00bcd4;
+      }
+      .artifact-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+        background: #222;
+        flex-shrink: 0;
+        display: block;
+      }
+      .artifact-name {
+        font-size: 0.92rem;
+        color: #fff;
+        text-align: center;
+        margin-top: 0.1rem;
+        text-shadow: 0 2px 8px #000a;
+        word-break: keep-all;
+        white-space: normal;
+        line-height: 1.2;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        padding: 0 0.2rem;
+      }
+
+      /* Gestione specifica per nomi lunghi */
+      .artifact-card .artifact-name {
+        font-size: 0.85rem;
+        line-height: 1.1;
+        word-spacing: 0.1em;
+      }
+
+      /* Classe per nomi molto lunghi */
+      .artifact-name.long-name {
+        font-size: 0.8rem;
+        line-height: 1;
+      }
+
+      /* Per nomi molto lunghi, riduci ulteriormente la dimensione */
+      .artifact-card .artifact-name:contains("Reminiscence"),
+      .artifact-card .artifact-name:contains("Thundershooter"),
+      .artifact-card .artifact-name:contains("Bloodstained") {
+        font-size: 0.8rem;
+        line-height: 1;
+      }
+
+      .selected-character-box {
+        position: sticky;
+        top: 10px;
+        right: 0;
+        left: 0;
+        margin: 0 auto 1rem auto;
+        background: rgba(26, 26, 46, 0.95);
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+        max-width: 420px;
+        display: none;
+      }
+
+      .selected-character-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .selected-character-img {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .selected-character-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #64ffda;
+        text-shadow: 0 0 8px rgba(100, 255, 218, 0.2);
+      }
+
+      .stats-saved-badge {
+        background: linear-gradient(135deg, #64ffda, #4cd4b0);
+        color: #16213e;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-left: 0.5rem;
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.3);
+        animation: pulse 2s infinite;
+      }
+
+      .save-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 20, 40, 0.65);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+      }
+      .save-modal-overlay.show {
+        display: flex;
+      }
+      .save-modal {
+        background: linear-gradient(135deg, #64ffda, #00bcd4);
+        color: #1a1a2e;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px 0 rgba(100, 255, 218, 0.35), 0 2px 16px #00bcd4aa;
+        padding: 2.2rem 2.5rem 1.7rem 2.5rem;
+        min-width: 320px;
+        max-width: 90vw;
+        text-align: center;
+        position: relative;
+        animation: modal-pop 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      .save-modal .modal-icon {
+        font-size: 3rem;
+        margin-bottom: 0.7rem;
+        display: block;
+        animation: pop-bounce 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      .save-modal .modal-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+        color: #1a1a2e;
+      }
+      .save-modal .modal-close {
+        background: #1a1a2e;
+        color: #64ffda;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 0.6rem 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 2px 8px #00bcd433;
+        transition: background 0.2s, color 0.2s;
+      }
+      .save-modal .modal-close:hover {
+        background: #00bcd4;
+        color: #fff;
+      }
+      @keyframes modal-pop {
+        0% {
+          transform: scale(0.7);
+          opacity: 0;
+        }
+        80% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(26, 26, 46, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 2px 16px #0005;
+        padding: 0.5rem 0 0.5rem 0;
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.13rem;
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.1);
+        color: #64ffda;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .nav-link.active {
+        background: #64ffda;
+        color: #16213e;
+        box-shadow: 0 2px 12px #64ffda55;
+        cursor: default;
+      }
+      @media (max-width: 700px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          font-size: 0.98rem;
+          padding: 0.3rem 0;
+        }
+        .nav-link {
+          padding: 0.5rem 0.7rem;
+          font-size: 1rem;
+        }
+      }
+
+      /* Scroll to Top Button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #64ffda, #4cd4b0);
+        border: none;
+        border-radius: 50%;
+        color: #16213e;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.4);
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .scroll-to-top.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scroll-to-top:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 8px 30px rgba(100, 255, 218, 0.6);
+      }
+
+      .scroll-to-top:active {
+        transform: translateY(-2px) scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .scroll-to-top {
+          bottom: 1rem;
+          right: 1rem;
+          width: 50px;
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+
+      /* Stili per il modal delle statistiche */
+      .stats-modal {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #e0e0e0;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        max-width: 900px;
+        width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
+        animation: modal-pop 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        position: relative;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+      }
+
+      .stats-modal-header {
+        background: linear-gradient(135deg, #4b0ac4 0%, #4cd4b0 100%);
+        color: #16213e;
+        padding: 1.5rem 2rem;
+        border-radius: 18px 18px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .stats-modal-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .stats-modal-content {
+        padding: 2rem;
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+
+      .stats-section {
+        margin-bottom: 2rem;
+        background: rgba(22, 33, 62, 0.3);
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 1px solid rgba(100, 255, 218, 0.1);
+      }
+
+      .stats-section h4 {
+        color: #64ffda;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .stat-input-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .stat-input-group label {
+        font-weight: 600;
+        color: #b0eaff;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .stat-input-group input,
+      .stat-input-group textarea {
+        padding: 0.8rem 1rem;
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 8px;
+        color: #e0e0e0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        font-family: inherit;
+      }
+
+      .stat-input-group input:focus,
+      .stat-input-group textarea:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+        background: rgba(22, 33, 62, 0.9);
+      }
+
+      .stat-input-group input::placeholder,
+      .stat-input-group textarea::placeholder {
+        color: #888;
+        opacity: 0.7;
+      }
+
+      .stat-input-group textarea {
+        resize: vertical;
+        min-height: 80px;
+        line-height: 1.5;
+        grid-column: 1 / -1;
+      }
+
+      .stats-modal-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        padding: 1.5rem 2rem;
+        border-top: 1px solid rgba(100, 255, 218, 0.2);
+        background: rgba(22, 33, 62, 0.2);
+        border-radius: 0 0 18px 18px;
+      }
+
+      .stats-modal-actions .btn {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        min-width: 120px;
+      }
+
+      .stats-modal-actions .btn:first-child {
+        background: linear-gradient(135deg, #64ffda 0%, #4cd4b0 100%);
+        color: #16213e;
+        box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+      }
+
+      .stats-modal-actions .btn:first-child:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4);
+      }
+
+      .stats-modal-actions .btn.btn-secondary {
+        background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        color: white;
+        box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+      }
+
+      .stats-modal-actions .btn.btn-secondary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+      }
+
+      /* Responsive design per il modal statistiche */
+      @media (max-width: 768px) {
+        .stats-modal {
+          width: 95%;
+          margin: 1rem;
+        }
+
+        .stats-modal-header {
+          padding: 1rem 1.5rem;
+        }
+
+        .stats-modal-header h3 {
+          font-size: 1.3rem;
+        }
+
+        .stats-modal-content {
+          padding: 1.5rem;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+        }
+
+        .stats-modal-actions {
+          flex-direction: column;
+          padding: 1rem 1.5rem;
+        }
+
+        .stats-modal-actions .btn {
+          width: 100%;
+          min-width: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .stats-modal-header {
+          padding: 1rem;
+        }
+
+        .stats-modal-content {
+          padding: 1rem;
+        }
+
+        .stats-section {
+          padding: 1rem;
+        }
+
+        .stat-input-group input,
+        .stat-input-group textarea {
+          padding: 0.7rem 0.8rem;
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Modal Statistiche Consigliate */
+      .recommended-stats-modal {
+        background: rgba(26, 26, 46, 0.9);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      .character-recommendation-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .recommended-char-img {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-right: 1rem;
+      }
+
+      .recommended-char-info {
+        flex: 1;
+      }
+
+      .recommended-char-info h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #64ffda;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .recommended-char-info p {
+        font-size: 0.9rem;
+        color: #b0b0b0;
+      }
+
+      .priority-stats {
+        margin-bottom: 1.5rem;
+      }
+
+      .stat-target {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #64ffda;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .build-tips {
+        margin-bottom: 1.5rem;
+      }
+
+      .recommended-artifacts {
+        margin-bottom: 1.5rem;
+      }
+
+      .priority-stat {
+        background: rgba(100, 255, 218, 0.1);
+        border: 1px solid rgba(100, 255, 218, 0.3);
+        border-radius: 8px;
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+        color: #64ffda;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .build-tip {
+        background: rgba(255, 193, 7, 0.1);
+        border: 1px solid rgba(255, 193, 7, 0.3);
+        border-radius: 8px;
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+        color: #ffc107;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+
+      .recommended-artifact {
+        background: rgba(156, 39, 176, 0.1);
+        border: 1px solid rgba(156, 39, 176, 0.3);
+        border-radius: 8px;
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+        color: #9c27b0;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .character-recommendation-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: rgba(100, 255, 218, 0.1);
+        border: 1px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .recommended-char-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 2px solid rgba(100, 255, 218, 0.4);
+        background: #222;
+      }
+
+      .recommended-char-info h4 {
+        color: #64ffda;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .recommended-char-info p {
+        color: #b0eaff;
+        font-size: 0.95rem;
+        margin: 0.2rem 0;
+        opacity: 0.9;
+      }
+
+      /* Pulsanti Login/Registrati Modal */
+      .btn-login,
+      .btn-register {
+        background: linear-gradient(135deg, #64ffda, #00d4aa) !important;
+        color: #16213e !important;
+        border: none;
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 6px 24px rgba(100, 255, 218, 0.25),
+          0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Fredoka", sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        outline: none;
+      }
+      .btn-login:hover,
+      .btn-register:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda) !important;
+        color: #fff !important;
+        box-shadow: 0 10px 32px rgba(100, 255, 218, 0.35),
+          0 4px 16px rgba(0, 0, 0, 0.13);
+        transform: translateY(-2px) scale(1.03);
+      }
+      .btn-login:active,
+      .btn-register:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.18);
+      }
+
+      /* Stili per il pulsante logout */
+      .btn-logout {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a52) !important;
+        color: #fff !important;
+        border: none;
+        border-radius: 12px;
+        padding: 0.6rem 1.2rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 16px rgba(255, 107, 107, 0.25),
+          0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Fredoka", sans-serif;
+        letter-spacing: 0.5px;
+        outline: none;
+        margin-right: 4.5rem;
+      }
+
+      .btn-logout:hover {
+        background: linear-gradient(135deg, #ee5a52, #ff6b6b) !important;
+        color: #fff !important;
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.35),
+          0 3px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px) scale(1.02);
+      }
+
+      .btn-logout:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
+      }
+
+      /* Stili per il nome utente */
+      .user-name {
+        color: #64ffda;
+        font-weight: 600;
+        margin-right: 1rem;
+        text-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="index.html#gestione" class="nav-link"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link active"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls" style="margin-left: auto"></span>
+    </nav>
+    <!-- Modal login/registrazione -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">×</span>
+        <h2>Login / Registrati</h2>
+        <input id="loginUsername" placeholder="Username" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button class="btn-login" onclick="doLogin()">Login</button>
+      </div>
+    </div>
+    <div class="build-rating-container">
+      <div class="build-rating-header">
+        <span class="build-rating-title">⭐ Valutazione Build</span>
+      </div>
+      <div id="saveFeedback" class="save-feedback">
+        ✅ Build salvata con successo!
+      </div>
+      <div class="search-filter-bar">
+        <input
+          type="text"
+          id="characterSearchInput"
+          class="character-search-input"
+          placeholder="Cerca personaggio..."
+        />
+      </div>
+      <div class="element-filter-bar" id="elementFilterBar"></div>
+      <div class="weapon-filter-bar" id="weaponFilterBar"></div>
+      <div class="character-gallery" id="characterGallery"></div>
+      <div id="selectedCharacterPreview" style="margin-bottom: 1rem"></div>
+      <div class="artifact-search-bar" style="margin-bottom: 0.7rem">
+        <input
+          type="text"
+          id="artifactSearchInput"
+          class="character-search-input"
+          placeholder="Cerca artefatto..."
+        />
+      </div>
+      <div class="artifact-gallery-label">
+        <strong>Seleziona Artefatto</strong>
+      </div>
+      <div class="artifact-gallery" id="artifactGallery"></div>
+      <input type="hidden" id="artifactSelect" required />
+      <div id="selectedArtifactPreview" style="margin-bottom: 1rem"></div>
+      <div class="export-bar" style="text-align: right; margin-bottom: 1rem">
+        <button id="exportBuildsBtn" class="btn" type="button">
+          💾 Esporta Build
+        </button>
+      </div>
+      <form class="build-form" id="buildForm" onsubmit="return false;">
+        <input type="hidden" id="characterSelect" required />
+        <div id="selectedCharacterPreview" style="margin-bottom: 1rem"></div>
+
+        <label for="buildDescription">Descrizione Build</label>
+        <textarea
+          id="buildDescription"
+          placeholder="Descrivi la tua build..."
+          required
+        ></textarea>
+
+        <label for="rating">Valutazione (1-10)</label>
+        <div class="rating-container">
+          <div class="rating-input">
+            <input
+              type="number"
+              id="rating"
+              min="1"
+              max="10"
+              value="5"
+              required
+            />
+          </div>
+          <div class="emoji-rating">
+            <span class="emoji-label">Valutazione rapida:</span>
+            <div class="emoji-buttons">
+              <button
+                type="button"
+                class="emoji-btn"
+                data-rating="10"
+                title="Perfetto! (10/10)"
+              >
+                ❤️
+              </button>
+              <button
+                type="button"
+                class="emoji-btn"
+                data-rating="8"
+                title="Molto buono (8/10)"
+              >
+                😊
+              </button>
+              <button
+                type="button"
+                class="emoji-btn"
+                data-rating="6"
+                title="Buono (6/10)"
+              >
+                😐
+              </button>
+              <button
+                type="button"
+                class="emoji-btn"
+                data-rating="4"
+                title="Discreto (4/10)"
+              >
+                😕
+              </button>
+              <button
+                type="button"
+                class="emoji-btn"
+                data-rating="2"
+                title="Scarso (2/10)"
+              >
+                💔
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div
+        id="selectedCharacterBox"
+        class="selected-character-box"
+        style="display: none"
+      ></div>
+      <div
+        id="saveBuildBar"
+        style="display: none; text-align: center; margin-bottom: 1rem"
+      >
+        <button id="saveBuildBtn" class="btn" type="button">💾 Salva</button>
+        <button
+          id="openStatsBtn"
+          class="btn"
+          type="button"
+          style="margin-left: 1rem"
+        >
+          📊 Statistiche
+        </button>
+        <button
+          id="openRecommendedBtn"
+          class="btn"
+          type="button"
+          style="margin-left: 1rem"
+        >
+          🎯 Consigli
+        </button>
+      </div>
+      <div id="saveModalOverlay" class="save-modal-overlay">
+        <div class="save-modal">
+          <span class="modal-icon">✅</span>
+          <div class="modal-text">Build salvata con successo!</div>
+          <button class="modal-close" onclick="closeSaveModal()">OK</button>
+        </div>
+      </div>
+
+      <!-- Modal Statistiche Personaggio -->
+      <div id="statsModalOverlay" class="save-modal-overlay">
+        <div class="stats-modal">
+          <div class="stats-modal-header">
+            <h3>📊 Statistiche Personaggio</h3>
+            <button class="modal-close" onclick="closeStatsModal()">×</button>
+          </div>
+          <div class="stats-modal-content">
+            <div class="stats-section">
+              <h4>⚔️ Statistiche Base</h4>
+              <div class="stats-grid">
+                <div class="stat-input-group">
+                  <label for="baseAtk">ATK Base</label>
+                  <input
+                    type="number"
+                    id="baseAtk"
+                    min="0"
+                    placeholder="Es: 234"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="baseHp">HP Base</label>
+                  <input
+                    type="number"
+                    id="baseHp"
+                    min="0"
+                    placeholder="Es: 12345"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="baseDef">DEF Base</label>
+                  <input
+                    type="number"
+                    id="baseDef"
+                    min="0"
+                    placeholder="Es: 789"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="level">Livello</label>
+                  <input
+                    type="number"
+                    id="level"
+                    min="1"
+                    max="90"
+                    value="90"
+                    placeholder="90"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h4>🎯 Statistiche Avanzate</h4>
+              <div class="stats-grid">
+                <div class="stat-input-group">
+                  <label for="elementalMastery">Maestria Elementale</label>
+                  <input
+                    type="number"
+                    id="elementalMastery"
+                    min="0"
+                    placeholder="Es: 150"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="energyRecharge">Ricarica Energia (%)</label>
+                  <input
+                    type="number"
+                    id="energyRecharge"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 120.5"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="critRate">Tasso Critico (%)</label>
+                  <input
+                    type="number"
+                    id="critRate"
+                    min="0"
+                    max="100"
+                    step="0.1"
+                    placeholder="Es: 65.2"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="critDmg">Danno Critico (%)</label>
+                  <input
+                    type="number"
+                    id="critDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 180.5"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h4>💪 Bonus Danno</h4>
+              <div class="stats-grid">
+                <div class="stat-input-group">
+                  <label for="pyroDmg">Danno Pyro (%)</label>
+                  <input
+                    type="number"
+                    id="pyroDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 46.6"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="hydroDmg">Danno Hydro (%)</label>
+                  <input
+                    type="number"
+                    id="hydroDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 46.6"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="electroDmg">Danno Electro (%)</label>
+                  <input
+                    type="number"
+                    id="electroDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 46.6"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="cryoDmg">Danno Cryo (%)</label>
+                  <input
+                    type="number"
+                    id="cryoDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 46.6"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="dendroDmg">Danno Dendro (%)</label>
+                  <input
+                    type="number"
+                    id="dendroDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 46.6"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="anemoDmg">Danno Anemo (%)</label>
+                  <input
+                    type="number"
+                    id="anemoDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 46.6"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="geoDmg">Danno Geo (%)</label>
+                  <input
+                    type="number"
+                    id="geoDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 46.6"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="physicalDmg">Danno Fisico (%)</label>
+                  <input
+                    type="number"
+                    id="physicalDmg"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 25.0"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h4>🛡️ Statistiche Difensive</h4>
+              <div class="stats-grid">
+                <div class="stat-input-group">
+                  <label for="healingBonus">Bonus Guarigione (%)</label>
+                  <input
+                    type="number"
+                    id="healingBonus"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 35.9"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="shieldStrength">Forza Scudo (%)</label>
+                  <input
+                    type="number"
+                    id="shieldStrength"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 30.0"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label for="incomingHealing">Guarigione Ricevuta (%)</label>
+                  <input
+                    type="number"
+                    id="incomingHealing"
+                    min="0"
+                    step="0.1"
+                    placeholder="Es: 20.0"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h4>📝 Note Aggiuntive</h4>
+              <textarea
+                id="statsNotes"
+                placeholder="Aggiungi note specifiche sulle statistiche, build consigliate, o osservazioni particolari..."
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+          <div class="stats-modal-actions">
+            <button class="btn btn-secondary" onclick="closeStatsModal()">
+              ❌ Annulla
+            </button>
+            <button class="btn" onclick="saveCharacterStats()">
+              💾 Salva Statistiche
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Statistiche Consigliate -->
+      <div id="recommendedStatsModalOverlay" class="save-modal-overlay">
+        <div class="recommended-stats-modal">
+          <div class="stats-modal-header">
+            <h3>📊 Statistiche Consigliate</h3>
+            <button class="modal-close" onclick="closeRecommendedStatsModal()">
+              ×
+            </button>
+          </div>
+          <div class="stats-modal-content">
+            <div class="character-recommendation-header">
+              <img
+                id="recommendedCharImg"
+                src=""
+                alt=""
+                class="recommended-char-img"
+              />
+              <div class="recommended-char-info">
+                <h4 id="recommendedCharName">Nome Personaggio</h4>
+                <p id="recommendedCharRole">Ruolo: DPS/Support/Healer</p>
+                <p id="recommendedCharElement">Elemento: Pyro</p>
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h4>🎯 Statistiche Prioritarie</h4>
+              <div class="priority-stats" id="priorityStats">
+                <!-- Statistiche prioritarie generate dinamicamente -->
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h4>📈 Statistiche Target</h4>
+              <div class="stats-grid">
+                <div class="stat-input-group">
+                  <label>ATK Base</label>
+                  <input
+                    type="number"
+                    id="targetBaseAtk"
+                    placeholder="Es: 335"
+                    min="0"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label>HP Base</label>
+                  <input
+                    type="number"
+                    id="targetBaseHp"
+                    placeholder="Es: 12345"
+                    min="0"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label>DEF Base</label>
+                  <input
+                    type="number"
+                    id="targetBaseDef"
+                    placeholder="Es: 789"
+                    min="0"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label>Maestria Elementale</label>
+                  <input
+                    type="number"
+                    id="targetElementalMastery"
+                    placeholder="Es: 150"
+                    min="0"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label>Ricarica Energia (%)</label>
+                  <input
+                    type="number"
+                    id="targetEnergyRecharge"
+                    placeholder="Es: 120.5"
+                    min="0"
+                    step="0.1"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label>Tasso Critico (%)</label>
+                  <input
+                    type="number"
+                    id="targetCritRate"
+                    placeholder="Es: 65.2"
+                    min="0"
+                    max="100"
+                    step="0.1"
+                  />
+                </div>
+                <div class="stat-input-group">
+                  <label>Danno Critico (%)</label>
+                  <input
+                    type="number"
+                    id="targetCritDmg"
+                    placeholder="Es: 180.5"
+                    min="0"
+                    step="0.1"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h4>💡 Consigli Build</h4>
+              <div class="build-tips" id="buildTips">
+                <!-- Consigli generati dinamicamente -->
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h4>🎨 Artefatti Consigliati</h4>
+              <div class="recommended-artifacts" id="recommendedArtifacts">
+                <!-- Artefatti consigliati generati dinamicamente -->
+              </div>
+            </div>
+          </div>
+          <div class="stats-modal-actions">
+            <button
+              class="btn btn-secondary"
+              onclick="closeRecommendedStatsModal()"
+            >
+              ❌ Chiudi
+            </button>
+            <button class="btn" onclick="applyRecommendedStats()">
+              📋 Applica Statistiche
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        Promise.all([
+          fetch("character.json").then((r) => r.json()),
+          fetch("artefatti.json").then((r) => r.json()),
+        ])
+          .then(([charData, artData]) => {
+            allCharactersData = charData.characters;
+            console.log("artData:", artData);
+            console.log("artData.artifacts:", artData.artifacts);
+            ARTIFACTS = artData.artifacts;
+            renderElementFilterBar();
+            renderWeaponFilterBar();
+            filterAndRenderGallery();
+            renderArtifactGallery();
+            setupEmojiButtons();
+            // Gestione barra di ricerca
+            const searchInput = document.getElementById("characterSearchInput");
+            if (searchInput) {
+              searchInput.addEventListener("input", function () {
+                currentSearch = this.value;
+                filterAndRenderGallery();
+              });
+            }
+            // Gestione salvataggio rating e note
+            document
+              .getElementById("rating")
+              .addEventListener("input", saveCurrentBuild);
+            document
+              .getElementById("buildDescription")
+              .addEventListener("input", saveCurrentBuild);
+            // Se c'è già un personaggio selezionato, carica la build e lo evidenzia
+            setTimeout(() => {
+              const selectedChar = localStorage.getItem("selectedCharacter");
+              if (selectedChar) {
+                const char = allCharactersData.find(
+                  (c) => c.name === selectedChar
+                );
+                if (char) {
+                  onCharacterSelected(char);
+                  // Carica anche le statistiche se esistono
+                  const builds = getBuildsByCharacter();
+                  const build = builds[selectedChar];
+                  if (build && build.stats) {
+                    loadCharacterStats(selectedChar);
+                  }
+                }
+              }
+            }, 200);
+            // Gestione esportazione build
+            document
+              .getElementById("exportBuildsBtn")
+              .addEventListener("click", function () {
+                const builds = getBuildsByCharacter();
+                const dataStr =
+                  "data:text/json;charset=utf-8," +
+                  encodeURIComponent(JSON.stringify(builds, null, 2));
+                const dlAnchor = document.createElement("a");
+                dlAnchor.setAttribute("href", dataStr);
+                dlAnchor.setAttribute("download", "builds_genshin.json");
+                document.body.appendChild(dlAnchor);
+                dlAnchor.click();
+                dlAnchor.remove();
+              });
+          })
+          .catch((error) => {
+            console.error("Errore nel caricamento dati:", error);
+          });
+      });
+
+      function getBuildsByCharacter() {
+        return JSON.parse(
+          localStorage.getItem(getUserStorageKey("buildsByCharacter")) || "{}"
+        );
+      }
+      function saveBuildsByCharacter(data) {
+        localStorage.setItem(
+          getUserStorageKey("buildsByCharacter"),
+          JSON.stringify(data)
+        );
+      }
+
+      function saveCurrentBuild() {
+        const charName = document.getElementById("characterSelect").value;
+        if (!charName) return;
+
+        const builds = getBuildsByCharacter();
+        builds[charName] = {
+          rating: document.getElementById("rating").value,
+          artifact: document.getElementById("artifactSelect").value,
+          description: document.getElementById("buildDescription").value,
+          date: new Date().toLocaleDateString("it-IT"),
+        };
+        saveBuildsByCharacter(builds);
+      }
+
+      function loadBuildForSelectedCharacter() {
+        const charName = document.getElementById("characterSelect").value;
+        if (!charName) return;
+        const builds = getBuildsByCharacter();
+        const build = builds[charName] || {};
+        // Valutazione
+        document.getElementById("rating").value = build.rating || 5;
+        // Emoji attiva
+        document.querySelectorAll(".emoji-btn").forEach((btn) => {
+          btn.classList.remove("active");
+          if (
+            parseInt(btn.getAttribute("data-rating")) === parseInt(build.rating)
+          ) {
+            btn.classList.add("active");
+          }
+        });
+        // Artefatto
+        document.getElementById("artifactSelect").value = build.artifact || "";
+        // Aggiorna selezione visiva artefatto
+        document.querySelectorAll(".artifact-card").forEach((card) => {
+          if (build.artifact && card.title === build.artifact) {
+            card.classList.add("selected");
+            // Mostra preview
+            const art = ARTIFACTS.find((a) => a.name === build.artifact);
+            if (art) updateSelectedArtifactPreview(art);
+          } else {
+            card.classList.remove("selected");
+          }
+        });
+        if (!build.artifact) {
+          document.getElementById("selectedArtifactPreview").innerHTML = "";
+        }
+        // Note
+        document.getElementById("buildDescription").value =
+          build.description || "";
+
+        // Carica anche le statistiche se esistono
+        if (build.stats) {
+          loadCharacterStats(charName);
+        }
+      }
+
+      function onCharacterSelected(char) {
+        const currentSelected = localStorage.getItem("selectedCharacter");
+        if (currentSelected === char.name) {
+          // Deseleziona
+          document.getElementById("characterSelect").value = "";
+          localStorage.removeItem("selectedCharacter");
+          document
+            .querySelectorAll(".character-card")
+            .forEach((c) => c.classList.remove("selected"));
+          updateSelectedCharacterPreview(null);
+          // Svuota i campi
+          document.getElementById("buildDescription").value = "";
+          document.getElementById("rating").value = 5;
+          document.getElementById("artifactSelect").value = "";
+          document.getElementById("selectedArtifactPreview").innerHTML = "";
+          document
+            .querySelectorAll(".emoji-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          return;
+        }
+        document.getElementById("characterSelect").value = char.name;
+        updateSelectedCharacterPreview(char);
+        document
+          .querySelectorAll(".character-card")
+          .forEach((c) => c.classList.remove("selected"));
+        // Evidenzia la selezione
+        const cards = document.querySelectorAll(".character-card");
+        cards.forEach((card) => {
+          if (card.title === char.name) card.classList.add("selected");
+        });
+        // Salva la selezione in localStorage
+        localStorage.setItem("selectedCharacter", char.name);
+        loadBuildForSelectedCharacter();
+
+        // Carica automaticamente le statistiche se esistono
+        const builds = getBuildsByCharacter();
+        const build = builds[char.name];
+        if (build && build.stats) {
+          loadCharacterStats(char.name);
+        }
+      }
+
+      function renderCharacterGallery(characters) {
+        const gallery = document.getElementById("characterGallery");
+        gallery.innerHTML = "";
+        const selectedChar = localStorage.getItem("selectedCharacter");
+        const builds = getBuildsByCharacter();
+
+        characters.forEach((char) => {
+          const hasStats = builds[char.name] && builds[char.name].stats;
+          const card = document.createElement("div");
+          card.className = "character-card";
+          card.title = char.name;
+          card.innerHTML = `
+            <img src="${char.image}" alt="${char.name}" class="character-img" />
+            <div class="character-name">${char.name}</div>
+            ${
+              hasStats
+                ? '<div class="stats-indicator" title="Statistiche salvate">📊</div>'
+                : ""
+            }
+          `;
+          if (selectedChar && char.name === selectedChar) {
+            card.classList.add("selected");
+          }
+          card.addEventListener("click", function () {
+            onCharacterSelected(char);
+          });
+          gallery.appendChild(card);
+        });
+      }
+
+      let currentArtifactSearch = "";
+
+      function renderArtifactGallery() {
+        const gallery = document.getElementById("artifactGallery");
+        gallery.innerHTML = "";
+        const selectedArtifact =
+          document.getElementById("artifactSelect").value;
+        let filteredArtifacts = ARTIFACTS;
+        if (currentArtifactSearch.trim() !== "") {
+          const searchLower = currentArtifactSearch.trim().toLowerCase();
+          filteredArtifacts = ARTIFACTS.filter(
+            (a) => a.name && a.name.toLowerCase().startsWith(searchLower)
+          );
+        }
+        if (!filteredArtifacts || filteredArtifacts.length === 0) {
+          gallery.innerHTML =
+            '<div style="color:#ff6f3c;text-align:center;">Nessun artefatto trovato.</div>';
+          return;
+        }
+        filteredArtifacts.forEach((art) => {
+          const card = document.createElement("div");
+          card.className = "artifact-card";
+          card.title = art.name || "Artefatto";
+
+          // Determina se il nome è lungo
+          const isLongName =
+            art.name &&
+            (art.name.length > 20 ||
+              art.name.includes("Reminiscence") ||
+              art.name.includes("Thundershooter") ||
+              art.name.includes("Bloodstained"));
+
+          card.innerHTML = `
+            <img src="${
+              art.image ? art.image : "images/characters/placeholder.svg"
+            }" alt="${art.name || ""}" class="artifact-img" />
+            <div class="artifact-name${isLongName ? " long-name" : ""}">${
+            art.name || "Artefatto senza nome"
+          }</div>
+          `;
+          if (selectedArtifact && art.name === selectedArtifact) {
+            card.classList.add("selected");
+          }
+          card.addEventListener("click", function () {
+            const currentSelected =
+              document.getElementById("artifactSelect").value;
+            if (currentSelected === art.name) {
+              document.getElementById("artifactSelect").value = "";
+              document.getElementById("selectedArtifactPreview").innerHTML = "";
+              document
+                .querySelectorAll(".artifact-card")
+                .forEach((c) => c.classList.remove("selected"));
+              saveCurrentBuild();
+              return;
+            }
+            document.getElementById("artifactSelect").value = art.name;
+            updateSelectedArtifactPreview(art);
+            document
+              .querySelectorAll(".artifact-card")
+              .forEach((c) => c.classList.remove("selected"));
+            card.classList.add("selected");
+            saveCurrentBuild();
+          });
+          gallery.appendChild(card);
+        });
+      }
+
+      // Gestione barra di ricerca artefatti
+      document.addEventListener("DOMContentLoaded", function () {
+        const artifactSearchInput = document.getElementById(
+          "artifactSearchInput"
+        );
+        if (artifactSearchInput) {
+          artifactSearchInput.addEventListener("input", function () {
+            currentArtifactSearch = this.value;
+            renderArtifactGallery();
+          });
+        }
+      });
+
+      function setupEmojiButtons() {
+        const emojiButtons = document.querySelectorAll(".emoji-btn");
+        const ratingInput = document.getElementById("rating");
+
+        emojiButtons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const rating = this.getAttribute("data-rating");
+            ratingInput.value = rating;
+            // Rimuovi classe active da tutti i bottoni
+            emojiButtons.forEach((b) => b.classList.remove("active"));
+            // Aggiungi classe active al bottone cliccato
+            this.classList.add("active");
+            saveCurrentBuild();
+          });
+        });
+        // Aggiorna emoji attiva quando si cambia il valore manualmente
+        ratingInput.addEventListener("input", function () {
+          const value = parseInt(this.value);
+          emojiButtons.forEach((btn) => {
+            btn.classList.remove("active");
+            if (parseInt(btn.getAttribute("data-rating")) === value) {
+              btn.classList.add("active");
+            }
+          });
+        });
+      }
+
+      // Elementi Genshin Impact e colori
+      const ELEMENTS = [
+        { key: "all", label: "Tutti", color: "#fff", icon: "🌈" },
+        { key: "Pyro", label: "Pyro", color: "#ff6f3c", icon: "🔥" },
+        { key: "Hydro", label: "Hydro", color: "#00bcd4", icon: "💧" },
+        { key: "Electro", label: "Electro", color: "#b388ff", icon: "⚡" },
+        { key: "Cryo", label: "Cryo", color: "#80d8ff", icon: "❄️" },
+        { key: "Dendro", label: "Dendro", color: "#aeea00", icon: "🌿" },
+        { key: "Anemo", label: "Anemo", color: "#64ffda", icon: "🌪️" },
+        { key: "Geo", label: "Geo", color: "#ffd600", icon: "⛰️" },
+      ];
+      let allCharactersData = [];
+      let currentElementFilter = "all";
+
+      function renderElementFilterBar() {
+        const bar = document.getElementById("elementFilterBar");
+        bar.innerHTML = "";
+        ELEMENTS.forEach((el) => {
+          const btn = document.createElement("button");
+          btn.className = "element-filter-btn";
+          btn.innerHTML = `<span class="element-icon">${el.icon}</span> <span class="element-label">${el.label}</span>`;
+          btn.style.color = el.color;
+          if (currentElementFilter === el.key) btn.classList.add("active");
+          btn.addEventListener("click", () => {
+            currentElementFilter = el.key;
+            renderElementFilterBar();
+            filterAndRenderGallery();
+          });
+          bar.appendChild(btn);
+        });
+      }
+
+      // Tipi di armi Genshin Impact e icone
+      const WEAPONS = [
+        { key: "all", label: "Tutte", icon: "🗡️" },
+        { key: "Sword", label: "Spada", icon: "⚔️" },
+        { key: "Bow", label: "Arco", icon: "🏹" },
+        { key: "Claymore", label: "Claymore", icon: "🪓" },
+        { key: "Polearm", label: "Lancia", icon: "🔱" },
+        { key: "Catalyst", label: "Catalyst", icon: "��" },
+      ];
+      let currentWeaponFilter = "all";
+      let currentSearch = "";
+
+      function renderWeaponFilterBar() {
+        const bar = document.getElementById("weaponFilterBar");
+        bar.innerHTML = "";
+        WEAPONS.forEach((w) => {
+          const btn = document.createElement("button");
+          btn.className = "weapon-filter-btn";
+          btn.innerHTML = `<span class="weapon-icon">${w.icon}</span> <span class="weapon-label">${w.label}</span>`;
+          if (currentWeaponFilter === w.key) btn.classList.add("active");
+          btn.addEventListener("click", () => {
+            currentWeaponFilter = w.key;
+            renderWeaponFilterBar();
+            filterAndRenderGallery();
+          });
+          bar.appendChild(btn);
+        });
+      }
+
+      function filterAndRenderGallery() {
+        let filtered = allCharactersData;
+        if (currentElementFilter !== "all") {
+          filtered = filtered.filter((c) => c.element === currentElementFilter);
+        }
+        if (currentWeaponFilter !== "all") {
+          filtered = filtered.filter((c) => c.weapon === currentWeaponFilter);
+        }
+        if (currentSearch.trim() !== "") {
+          const searchLower = currentSearch.trim().toLowerCase();
+          filtered = filtered.filter((c) =>
+            c.name.toLowerCase().startsWith(searchLower)
+          );
+        }
+        renderCharacterGallery(filtered);
+      }
+
+      function updateSelectedArtifactPreview(art) {
+        const preview = document.getElementById("selectedArtifactPreview");
+        preview.innerHTML = `<strong>Artefatto selezionato:</strong> <img src="${art.image}" alt="${art.name}" style="width:32px;vertical-align:middle;"> ${art.name}`;
+      }
+
+      function updateSelectedCharacterPreview(char) {
+        const box = document.getElementById("selectedCharacterBox");
+        const saveBar = document.getElementById("saveBuildBar");
+        if (char) {
+          const builds = getBuildsByCharacter();
+          const hasStats = builds[char.name] && builds[char.name].stats;
+
+          box.style.display = "block";
+          box.innerHTML = `
+            <div class='selected-character-info'>
+              <strong>Hai selezionato:</strong> 
+              <img src="${char.image}" alt="${
+            char.name
+          }" class="selected-character-img"> 
+              <span class="selected-character-name">${char.name}</span>
+              ${
+                hasStats
+                  ? '<span class="stats-saved-badge">📊 Statistiche salvate</span>'
+                  : ""
+              }
+            </div>
+          `;
+          saveBar.style.display = "block";
+        } else {
+          box.style.display = "none";
+          box.innerHTML = "";
+          saveBar.style.display = "none";
+        }
+      }
+
+      // Gestione click sul pulsante Salva
+      document.addEventListener("DOMContentLoaded", function () {
+        const saveBtn = document.getElementById("saveBuildBtn");
+        if (saveBtn) {
+          saveBtn.addEventListener("click", function () {
+            saveCurrentBuild();
+            showSaveModal();
+          });
+        }
+
+        // Gestione click sul pulsante Statistiche
+        const statsBtn = document.getElementById("openStatsBtn");
+        if (statsBtn) {
+          statsBtn.addEventListener("click", function () {
+            showStatsModal();
+          });
+        }
+
+        // Gestione click sul pulsante Statistiche Consigliate
+        const recommendedBtn = document.getElementById("openRecommendedBtn");
+        if (recommendedBtn) {
+          recommendedBtn.addEventListener("click", function () {
+            showRecommendedStatsModal();
+          });
+        }
+      });
+
+      function showSaveModal() {
+        document.getElementById("saveModalOverlay").classList.add("show");
+      }
+      function closeSaveModal() {
+        document.getElementById("saveModalOverlay").classList.remove("show");
+      }
+
+      // Funzioni per il modal delle statistiche
+      function showStatsModal() {
+        const charName = document.getElementById("characterSelect").value;
+
+        if (!charName) {
+          alert("Seleziona prima un personaggio!");
+          return;
+        }
+
+        // Carica sempre le statistiche dal localStorage
+        loadCharacterStats(charName);
+        document.getElementById("statsModalOverlay").classList.add("show");
+      }
+
+      function closeStatsModal() {
+        document.getElementById("statsModalOverlay").classList.remove("show");
+      }
+
+      function saveCharacterStats() {
+        const charName = document.getElementById("characterSelect").value;
+        if (!charName) return;
+
+        const stats = {
+          // Statistiche Base
+          baseAtk: document.getElementById("baseAtk").value || 0,
+          baseHp: document.getElementById("baseHp").value || 0,
+          baseDef: document.getElementById("baseDef").value || 0,
+          level: document.getElementById("level").value || 90,
+
+          // Statistiche Avanzate
+          elementalMastery:
+            document.getElementById("elementalMastery").value || 0,
+          energyRecharge: document.getElementById("energyRecharge").value || 0,
+          critRate: document.getElementById("critRate").value || 0,
+          critDmg: document.getElementById("critDmg").value || 0,
+
+          // Bonus Danno
+          pyroDmg: document.getElementById("pyroDmg").value || 0,
+          hydroDmg: document.getElementById("hydroDmg").value || 0,
+          electroDmg: document.getElementById("electroDmg").value || 0,
+          cryoDmg: document.getElementById("cryoDmg").value || 0,
+          dendroDmg: document.getElementById("dendroDmg").value || 0,
+          anemoDmg: document.getElementById("anemoDmg").value || 0,
+          geoDmg: document.getElementById("geoDmg").value || 0,
+          physicalDmg: document.getElementById("physicalDmg").value || 0,
+
+          // Statistiche Difensive
+          healingBonus: document.getElementById("healingBonus").value || 0,
+          shieldStrength: document.getElementById("shieldStrength").value || 0,
+          incomingHealing:
+            document.getElementById("incomingHealing").value || 0,
+
+          // Note
+          notes: document.getElementById("statsNotes").value || "",
+
+          // Metadata
+          date: new Date().toLocaleDateString("it-IT"),
+          timestamp: new Date().toISOString(),
+        };
+
+        // Salva nel localStorage
+        const builds = getBuildsByCharacter();
+        if (!builds[charName]) {
+          builds[charName] = {};
+        }
+        builds[charName].stats = stats;
+        saveBuildsByCharacter(builds);
+
+        // Verifica che il salvataggio sia avvenuto correttamente
+        const savedBuilds = getBuildsByCharacter();
+        if (savedBuilds[charName] && savedBuilds[charName].stats) {
+          console.log(
+            `✅ Statistiche di ${charName} salvate con successo nel localStorage`
+          );
+        } else {
+          console.error(
+            `❌ Errore nel salvataggio delle statistiche di ${charName}`
+          );
+        }
+
+        // Aggiorna la galleria per mostrare l'indicatore delle statistiche
+        filterAndRenderGallery();
+
+        // Mostra feedback personalizzato
+        const saveModal = document.getElementById("saveModalOverlay");
+        const modalText = saveModal.querySelector(".modal-text");
+        modalText.textContent = `Statistiche di ${charName} salvate con successo! Le statistiche saranno disponibili anche dopo aver chiuso e riaperto il browser.`;
+
+        showSaveModal();
+        closeStatsModal();
+      }
+
+      function loadCharacterStats(charName) {
+        const builds = getBuildsByCharacter();
+        const build = builds[charName] || {};
+        const stats = build.stats || {};
+
+        console.log(`📊 Caricamento statistiche per ${charName}:`, stats);
+
+        // Carica statistiche base
+        document.getElementById("baseAtk").value = stats.baseAtk || "";
+        document.getElementById("baseHp").value = stats.baseHp || "";
+        document.getElementById("baseDef").value = stats.baseDef || "";
+        document.getElementById("level").value = stats.level || 90;
+
+        // Carica statistiche avanzate
+        document.getElementById("elementalMastery").value =
+          stats.elementalMastery || "";
+        document.getElementById("energyRecharge").value =
+          stats.energyRecharge || "";
+        document.getElementById("critRate").value = stats.critRate || "";
+        document.getElementById("critDmg").value = stats.critDmg || "";
+
+        // Carica bonus danno
+        document.getElementById("pyroDmg").value = stats.pyroDmg || "";
+        document.getElementById("hydroDmg").value = stats.hydroDmg || "";
+        document.getElementById("electroDmg").value = stats.electroDmg || "";
+        document.getElementById("cryoDmg").value = stats.cryoDmg || "";
+        document.getElementById("dendroDmg").value = stats.dendroDmg || "";
+        document.getElementById("anemoDmg").value = stats.anemoDmg || "";
+        document.getElementById("geoDmg").value = stats.geoDmg || "";
+        document.getElementById("physicalDmg").value = stats.physicalDmg || "";
+
+        // Carica statistiche difensive
+        document.getElementById("healingBonus").value =
+          stats.healingBonus || "";
+        document.getElementById("shieldStrength").value =
+          stats.shieldStrength || "";
+        document.getElementById("incomingHealing").value =
+          stats.incomingHealing || "";
+
+        // Carica note
+        document.getElementById("statsNotes").value = stats.notes || "";
+
+        console.log(`✅ Statistiche caricate per ${charName}`);
+      }
+
+      // Funzioni per il modal delle statistiche consigliate
+      function showRecommendedStatsModal() {
+        const charName = document.getElementById("characterSelect").value;
+
+        if (!charName) {
+          alert("Seleziona prima un personaggio!");
+          return;
+        }
+
+        loadRecommendedStats(charName);
+        document
+          .getElementById("recommendedStatsModalOverlay")
+          .classList.add("show");
+      }
+
+      function closeRecommendedStatsModal() {
+        document
+          .getElementById("recommendedStatsModalOverlay")
+          .classList.remove("show");
+      }
+
+      function loadRecommendedStats(charName) {
+        const char = allCharactersData.find((c) => c.name === charName);
+        if (!char) return;
+
+        // Carica informazioni del personaggio
+        document.getElementById("recommendedCharImg").src = char.image;
+        document.getElementById("recommendedCharName").textContent = char.name;
+        document.getElementById(
+          "recommendedCharRole"
+        ).textContent = `Ruolo: ${getCharacterRole(char)}`;
+        document.getElementById(
+          "recommendedCharElement"
+        ).textContent = `Elemento: ${char.element}`;
+
+        // Carica statistiche consigliate
+        const recommendedStats = getRecommendedStats(char);
+
+        // Statistiche prioritarie
+        document.getElementById("priorityStats").innerHTML =
+          recommendedStats.priority
+            .map((stat) => `<div class="priority-stat">🎯 ${stat}</div>`)
+            .join("");
+
+        // Statistiche target
+        document.getElementById("targetBaseAtk").value =
+          recommendedStats.targets.baseAtk || "";
+        document.getElementById("targetBaseHp").value =
+          recommendedStats.targets.baseHp || "";
+        document.getElementById("targetBaseDef").value =
+          recommendedStats.targets.baseDef || "";
+        document.getElementById("targetElementalMastery").value =
+          recommendedStats.targets.elementalMastery || "";
+        document.getElementById("targetEnergyRecharge").value =
+          recommendedStats.targets.energyRecharge || "";
+        document.getElementById("targetCritRate").value =
+          recommendedStats.targets.critRate || "";
+        document.getElementById("targetCritDmg").value =
+          recommendedStats.targets.critDmg || "";
+
+        // Consigli build
+        document.getElementById("buildTips").innerHTML = recommendedStats.tips
+          .map((tip) => `<div class="build-tip">💡 ${tip}</div>`)
+          .join("");
+
+        // Artefatti consigliati
+        document.getElementById("recommendedArtifacts").innerHTML =
+          recommendedStats.artifacts
+            .map(
+              (artifact) =>
+                `<div class="recommended-artifact">🎨 ${artifact}</div>`
+            )
+            .join("");
+      }
+
+      function getCharacterRole(char) {
+        // Logica per determinare il ruolo del personaggio
+        const dpsChars = [
+          "Diluc",
+          "Klee",
+          "Hu Tao",
+          "Xiangling",
+          "Yanfei",
+          "Yoimiya",
+          "Lyney",
+          "Arlecchino",
+        ];
+        const supportChars = [
+          "Bennett",
+          "Xingqiu",
+          "Sucrose",
+          "Kazuha",
+          "Venti",
+          "Zhongli",
+          "Albedo",
+          "Yun Jin",
+        ];
+        const healerChars = [
+          "Barbara",
+          "Qiqi",
+          "Diona",
+          "Sayu",
+          "Kokomi",
+          "Yaoyao",
+          "Baizhu",
+          "Charlotte",
+        ];
+
+        if (dpsChars.includes(char.name)) return "DPS";
+        if (supportChars.includes(char.name)) return "Support";
+        if (healerChars.includes(char.name)) return "Healer";
+        return "DPS/Support";
+      }
+
+      function getRecommendedStats(char) {
+        // Database delle statistiche consigliate per ogni personaggio
+        const recommendations = {
+          Diluc: {
+            priority: [
+              "Tasso Critico > Danno Critico",
+              "Danno Pyro",
+              "ATK Base",
+            ],
+            targets: {
+              baseAtk: 335,
+              baseHp: 12981,
+              baseDef: 784,
+              elementalMastery: 150,
+              energyRecharge: 125,
+              critRate: 65,
+              critDmg: 160,
+            },
+            tips: [
+              "Focus su CRIT Rate e CRIT DMG per massimizzare il danno",
+              "Elemental Mastery per reazioni Vaporize/Melt",
+              "Energy Recharge per burst frequenti",
+            ],
+            artifacts: [
+              "Crimson Witch of Flames (4pc)",
+              "Lavawalker (4pc)",
+              "Gladiator + Crimson Witch (2+2)",
+            ],
+          },
+          Zhongli: {
+            priority: ["HP Base", "Forza Scudo", "Danno Geo"],
+            targets: {
+              baseAtk: 251,
+              baseHp: 45000,
+              baseDef: 738,
+              elementalMastery: 0,
+              energyRecharge: 130,
+              critRate: 55,
+              critDmg: 130,
+            },
+            tips: [
+              "HP per scudi più resistenti",
+              "Geo DMG per danno del burst",
+              "Shield Strength per protezione extra",
+            ],
+            artifacts: [
+              "Tenacity of the Millelith (4pc)",
+              "Archaic Petra (4pc)",
+              "Noblesse Oblige (4pc)",
+            ],
+          },
+          Bennett: {
+            priority: ["HP Base", "Bonus Guarigione", "Ricarica Energia"],
+            targets: {
+              baseAtk: 191,
+              baseHp: 30000,
+              baseDef: 771,
+              elementalMastery: 0,
+              energyRecharge: 220,
+              critRate: 50,
+              critDmg: 120,
+            },
+            tips: [
+              "HP per guarigione più efficace",
+              "Energy Recharge per burst costante",
+              "Healing Bonus per guarigione extra",
+            ],
+            artifacts: [
+              "Noblesse Oblige (4pc)",
+              "Instructor (4pc)",
+              "Maiden Beloved (4pc)",
+            ],
+          },
+          Xingqiu: {
+            priority: ["Ricarica Energia", "Danno Hydro", "Tasso Critico"],
+            targets: {
+              baseAtk: 202,
+              baseHp: 10222,
+              baseDef: 758,
+              elementalMastery: 0,
+              energyRecharge: 200,
+              critRate: 55,
+              critDmg: 130,
+            },
+            tips: [
+              "Energy Recharge per burst costante",
+              "Hydro DMG per danno delle spade",
+              "CRIT per danno consistente",
+            ],
+            artifacts: [
+              "Emblem of Severed Fate (4pc)",
+              "Heart of Depth (4pc)",
+              "Noblesse Oblige (4pc)",
+            ],
+          },
+          "Hu Tao": {
+            priority: ["HP Base", "Tasso Critico", "Danno Critico"],
+            targets: {
+              baseAtk: 106,
+              baseHp: 15552,
+              baseDef: 876,
+              elementalMastery: 100,
+              energyRecharge: 120,
+              critRate: 70,
+              critDmg: 180,
+            },
+            tips: [
+              "HP per abilità elementale più potente",
+              "CRIT per massimizzare il danno",
+              "Elemental Mastery per reazioni Vaporize",
+            ],
+            artifacts: [
+              "Crimson Witch of Flames (4pc)",
+              "Shimenawa's Reminiscence (4pc)",
+              "Wanderer's Troupe (4pc)",
+            ],
+          },
+          Ganyu: {
+            priority: ["Tasso Critico", "Danno Critico", "Danno Cryo"],
+            targets: {
+              baseAtk: 335,
+              baseHp: 9797,
+              baseDef: 630,
+              elementalMastery: 0,
+              energyRecharge: 120,
+              critRate: 60,
+              critDmg: 200,
+            },
+            tips: [
+              "CRIT per danno consistente con cariche",
+              "Cryo DMG per massimizzare il danno",
+              "ATK per danno base elevato",
+            ],
+            artifacts: [
+              "Wanderer's Troupe (4pc)",
+              "Blizzard Strayer (4pc)",
+              "Shimenawa's Reminiscence (4pc)",
+            ],
+          },
+          Venti: {
+            priority: [
+              "Ricarica Energia",
+              "Maestria Elementale",
+              "Danno Anemo",
+            ],
+            targets: {
+              baseAtk: 263,
+              baseHp: 10531,
+              baseDef: 669,
+              elementalMastery: 800,
+              energyRecharge: 180,
+              critRate: 50,
+              critDmg: 120,
+            },
+            tips: [
+              "Energy Recharge per burst costante",
+              "Elemental Mastery per swirl potenti",
+              "Anemo DMG per danno del burst",
+            ],
+            artifacts: [
+              "Viridescent Venerer (4pc)",
+              "Instructor (4pc)",
+              "Wanderer's Troupe (4pc)",
+            ],
+          },
+          Kazuha: {
+            priority: [
+              "Maestria Elementale",
+              "Ricarica Energia",
+              "Danno Anemo",
+            ],
+            targets: {
+              baseAtk: 297,
+              baseHp: 13348,
+              baseDef: 807,
+              elementalMastery: 1000,
+              energyRecharge: 160,
+              critRate: 40,
+              critDmg: 100,
+            },
+            tips: [
+              "Elemental Mastery per buff di squadra",
+              "Energy Recharge per burst frequenti",
+              "Anemo DMG per danno personale",
+            ],
+            artifacts: [
+              "Viridescent Venerer (4pc)",
+              "Instructor (4pc)",
+              "Wanderer's Troupe (4pc)",
+            ],
+          },
+          "Raiden Shogun": {
+            priority: ["Ricarica Energia", "Tasso Critico", "Danno Critico"],
+            targets: {
+              baseAtk: 337,
+              baseHp: 12907,
+              baseDef: 789,
+              elementalMastery: 0,
+              energyRecharge: 250,
+              critRate: 60,
+              critDmg: 150,
+            },
+            tips: [
+              "Energy Recharge per danno del burst",
+              "CRIT per massimizzare il danno",
+              "Electro DMG per danno elementale",
+            ],
+            artifacts: [
+              "Emblem of Severed Fate (4pc)",
+              "Thundering Fury (4pc)",
+              "Noblesse Oblige (4pc)",
+            ],
+          },
+          Ayaka: {
+            priority: ["Tasso Critico", "Danno Critico", "Danno Cryo"],
+            targets: {
+              baseAtk: 342,
+              baseHp: 12858,
+              baseDef: 784,
+              elementalMastery: 0,
+              energyRecharge: 130,
+              critRate: 45,
+              critDmg: 200,
+            },
+            tips: [
+              "CRIT per danno consistente",
+              "Cryo DMG per massimizzare il danno",
+              "Energy Recharge per burst frequenti",
+            ],
+            artifacts: [
+              "Blizzard Strayer (4pc)",
+              "Shimenawa's Reminiscence (4pc)",
+              "Gladiator + Blizzard (2+2)",
+            ],
+          },
+          Albedo: {
+            priority: ["DEF > Tasso Critico", "Danno Geo", "ER 140%"],
+            targets: {
+              baseAtk: 335,
+              baseHp: 12981,
+              baseDef: 1800,
+              elementalMastery: 150,
+              energyRecharge: 135,
+              critRate: 50,
+              critDmg: 130,
+            },
+            tips: [
+              "Focus su CRIT Rate  per massimizzare il crit",
+              "Energy recharge quanto basta per avere una burst costante",
+              "def 1800-2000 per far molti danni",
+            ],
+            artifacts: [
+              "Husk of Opulent Dreams (4pc)",
+              "Golden Troupe (4cp)",
+              "Husk of Opulent Dreams+ Golden Troupe (2+2)",
+            ],
+          },
+        };
+
+        return (
+          recommendations[char.name] || {
+            priority: [
+              "Tasso Critico > Danno Critico",
+              "ATK Base",
+              "Ricarica Energia",
+            ],
+            targets: {
+              baseAtk: 300,
+              baseHp: 12000,
+              baseDef: 750,
+              elementalMastery: 100,
+              energyRecharge: 130,
+              critRate: 55,
+              critDmg: 140,
+            },
+            tips: [
+              "Focus su CRIT Rate e CRIT DMG",
+              "Energy Recharge per burst frequenti",
+              "ATK per danno base",
+            ],
+            artifacts: [
+              "Artefatti appropriati per elemento",
+              "Noblesse Oblige (4pc)",
+              "Gladiator (2pc)",
+            ],
+          }
+        );
+      }
+
+      function applyRecommendedStats() {
+        const charName = document.getElementById("characterSelect").value;
+        if (!charName) return;
+
+        // Applica le statistiche consigliate ai campi del modal statistiche
+        const recommendedStats = getRecommendedStats(
+          allCharactersData.find((c) => c.name === charName)
+        );
+
+        // Applica ai campi del modal statistiche usando i valori dai campi input
+        document.getElementById("baseAtk").value =
+          document.getElementById("targetBaseAtk").value || "0";
+        document.getElementById("baseHp").value =
+          document.getElementById("targetBaseHp").value || "0";
+        document.getElementById("baseDef").value =
+          document.getElementById("targetBaseDef").value || "0";
+        document.getElementById("elementalMastery").value =
+          document.getElementById("targetElementalMastery").value || "0";
+        document.getElementById("energyRecharge").value =
+          document.getElementById("targetEnergyRecharge").value || "0";
+        document.getElementById("critRate").value =
+          document.getElementById("targetCritRate").value || "0";
+        document.getElementById("critDmg").value =
+          document.getElementById("targetCritDmg").value || "0";
+
+        // Chiudi il modal consigliati e apri quello delle statistiche
+        closeRecommendedStatsModal();
+        showStatsModal();
+      }
+
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("userControls");
+        if (!el) return;
+        if (user) {
+          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em;'>Area Utente</a><button class='btn btn-secondary' onclick='doLogout()'>Logout</button>`;
+        } else {
+          el.innerHTML = `<button class='btn-login' onclick='openLoginModal()'>Login</button> <button class='btn-register' onclick='openLoginModal()'>Registrati</button>`;
+        }
+      }
+      function openLoginModal() {
+        document.getElementById("loginModal").style.display = "block";
+      }
+      function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+      }
+      function doLogin() {
+        const u = document.getElementById("loginUsername").value;
+        const p = document.getElementById("loginPassword").value;
+        if (u === "k1ngadr1an" && p === "1234") {
+          localStorage.setItem("user", u);
+          closeLoginModal();
+          renderUserControls();
+          location.reload();
+        } else {
+          alert("Credenziali non valide");
+        }
+      }
+      function doLogout() {
+        localStorage.removeItem("user");
+        renderUserControls();
+        location.reload();
+      }
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+      // --- Utility per storage per-utente ---
+      function getCurrentUser() {
+        return localStorage.getItem("user") || "guest";
+      }
+      function getUserStorageKey(baseKey) {
+        const user = localStorage.getItem("user");
+        return user ? `${user}_${baseKey}` : baseKey;
+      }
+      // ... Aggiorna qui eventuali funzioni di storage ...
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      onclick="scrollToTop()"
+      aria-label="Torna in cima"
+    >
+      ↑
+    </button>
+
+    <script>
+      // Scroll to Top functionality
+      function scrollToTop() {
+        // Imposta immediatamente la posizione di scroll a 0
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+
+        // Forza il reflow per renderlo istantaneo
+        document.body.offsetHeight;
+      }
+
+      // Show/hide scroll to top button based on scroll position
+      window.addEventListener("scroll", function () {
+        const scrollButton = document.getElementById("scrollToTop");
+        if (window.pageYOffset > 300) {
+          scrollButton.classList.add("show");
+        } else {
+          scrollButton.classList.remove("show");
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+{
+  "displayName": "Lisa",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Catalyst", "Electro", "Mondstadt", "Support", "4★", "Sub-DPS"],
+  "description": "Lisa è la bibliotecaria dei Cavalieri di Favonius, esperta di Electro e catalizzatore. Eccelle come supporto e sub-DPS grazie alle sue abilità di riduzione difesa e applicazione Electro.",
+  "weapons": [
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Hakushin Ring",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Hakushin_Ring.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Thrilling Tales of Dragon Slayers",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thrilling_Tales_of_Dragon_Slayers.png",
+      "note": "HP%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Thundering Fury (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Electro DMG Bonus / ATK%" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG / ATK%" }
+  ],
+  "substats": ["Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK%"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Lisa è un supporto/sub-DPS che fornisce riduzione difesa e applicazione Electro. Costruiscila con Energy Recharge e CRIT per massimizzare il suo impatto.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "The Widsith",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Emblem of Severed Fate (4)",
+          "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Lisa" },
+      { "name": "Raiden Shogun" },
+      { "name": "Kazuha" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Lisa" },
+      { "name": "Fischl" },
+      { "name": "Sucrose" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Lisa" },
+      { "name": "Yae Miko" },
+      { "name": "Jean" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Lightning Touch",
+      "desc": "Effettua fino a 4 attacchi con fulmini che infliggono danni Electro.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Lightning_Touch.png",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "39.6%",
+          "hit2": "35.9%",
+          "hit3": "42.8%",
+          "hit4": "55.0%",
+          "charged": "177%",
+          "stamina": "50",
+          "plunge": "56.8%",
+          "lowhigh": "114% / 142%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 4 attacchi con fulmini che infliggono danni Electro.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per infliggere danni AoE Electro dopo un breve caricamento.</div><div class='skill-section'><b>Plunging Attack</b><br>Scaglia un fulmine dal cielo che infligge danni AoE Electro all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Violet Arc",
+      "desc": "Lisa scatena un fulmine che infligge danni Electro e applica la conduttività ai nemici. Tenendo premuto, infligge danni AoE maggiori in base al numero di stack di conduttività.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Violet_Arc.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Violet Arc</b><br>Scatena un fulmine che infligge danni Electro e applica la conduttività ai nemici. Tenendo premuto, infligge danni AoE maggiori in base al numero di stack di conduttività.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "tap_dmg": "80.0%",
+          "hold_dmg": "320% (3 stack)",
+          "cd": "16s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Lightning Rose",
+      "desc": "Lisa evoca una rosa elettrica che infligge danni AoE Electro ripetuti ai nemici vicini.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Lightning_Rose.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Lightning Rose</b><br>Evoca una rosa elettrica che infligge danni AoE Electro ripetuti ai nemici vicini per 15s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "36.6% per colpo",
+          "duration": "15s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Induced Aftershock",
+      "phase": "Ascension Phase 1",
+      "desc": "Gli attacchi caricati di Lisa applicano una stack aggiuntiva di conduttività."
+    },
+    {
+      "name": "Static Electricity Field",
+      "phase": "Ascension Phase 4",
+      "desc": "Lightning Rose riduce la difesa dei nemici colpiti del 15% per 10s."
+    },
+    {
+      "name": "General Pharmaceutics",
+      "phase": "Passive",
+      "desc": "Quando Lisa crea una pozione, ha il 20% di probabilità di raddoppiare il prodotto."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Infinite Circuit",
+      "phase": "Constellation Lv. 1",
+      "desc": "Lisa rigenera 2 energia per ogni nemico colpito da Violet Arc (max 10 per uso)."
+    },
+    {
+      "name": "C2: Electromagnetic Field",
+      "phase": "Constellation Lv. 2",
+      "desc": "La difesa dei nemici colpiti da Lightning Rose è ridotta del 15% per 10s."
+    },
+    {
+      "name": "C3: Resonant Thunder",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Violet Arc di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Plasma Eruption",
+      "phase": "Constellation Lv. 4",
+      "desc": "Lightning Rose colpisce 1-3 volte in più ad ogni attivazione."
+    },
+    {
+      "name": "C5: Electrocute",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Lightning Rose di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Pulsating Witch",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando Lisa entra in campo, ottiene un bonus Electro DMG del 30% per 10s."
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "displayName": "Yelan",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yelan_Icon.png",
+  "tags": ["Bow", "Hydro", "Liyue", "5★", "Sub-DPS", "Off-Field"],
+  "description": "Yelan è un personaggio Hydro di Liyue che eccelle nel danno off-field e nell'applicazione Hydro. Il suo Elemental Burst fornisce danno consistente e applicazione Hydro.",
+  "weapons": [
+    {
+      "name": "Aqua Simulacra",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Aqua_Simulacra.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Elegy for the End",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Elegy_for_the_End.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Stringless",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_Stringless.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Bow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Recurve Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Recurve_Bow.png",
+      "note": "HP%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Heart of Depth (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (2) + Heart of Depth (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Noblesse Oblige (2) + Heart of Depth (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "HP%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Stealthy Bowshot",
+    "Lingering Lifeline",
+    "Depth-Clarion Dice"
+  ],
+  "info": "Yelan si concentra su HP% e CRIT per massimizzare il danno. Energy Recharge è importante per uptime costante del Burst.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Aqua Simulacra",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Aqua_Simulacra.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Emblem of Severed Fate (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Emblem_of_Severed_Fate.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Yelan" },
+      { "name": "Hu Tao" },
+      { "name": "Xingqiu" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Yelan" },
+      { "name": "Raiden Shogun" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Yelan" },
+      { "name": "Yoimiya" },
+      { "name": "Zhongli" },
+      { "name": "Bennett" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Stealthy Bowshot",
+      "desc": "Performs up to 4 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yelan_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Hydro DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "40.5%",
+          "hit2": "40.5%",
+          "hit3": "54.0%",
+          "hit4": "67.5%",
+          "charged": "124%",
+          "plunge": "60%",
+          "lowhigh": "120% / 150%"
+        }
+      ]
+    },
+    {
+      "name": "Lingering Lifeline",
+      "desc": "Yelan creates a lifeline that allows her to move rapidly, dealing Hydro DMG to enemies along the path.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yelan_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Lingering Lifeline</b><br>Yelan creates a lifeline that allows her to move rapidly, dealing Hydro DMG to enemies along the path.</div>",
+      "levels": [{ "level": 1, "skill_dmg": "250% ATK", "cd": "10s" }]
+    },
+    {
+      "name": "Depth-Clarion Dice",
+      "desc": "Yelan creates a field that deals Hydro DMG to nearby enemies and provides Hydro application.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yelan_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Depth-Clarion Dice</b><br>Yelan creates a field that deals Hydro DMG to nearby enemies and provides Hydro application.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "350% ATK",
+          "duration": "15s",
+          "cd": "18s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Turn Control",
+      "phase": "Ascension Phase 1",
+      "desc": "When the party has 1/2/3/4 Elemental Types, Yelan's Max HP is increased by 6%/12%/18%/30%."
+    },
+    {
+      "name": "Adapt With Ease",
+      "phase": "Ascension Phase 4",
+      "desc": "So long as an Exquisite Throw is in play, your own active character deals 1% more DMG. This increases by a further 3.5% DMG every second. The maximum increase to DMG dealt is 50%."
+    },
+    {
+      "name": "Necessary Calculation",
+      "phase": "Passive",
+      "desc": "Gains 25% more rewards when dispatched on a Liyue Expedition for 20 hours."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Enter the Plotters",
+      "phase": "Constellation Lv. 1",
+      "desc": "Lingering Lifeline gains 1 additional charge."
+    },
+    {
+      "name": "Taking All Comers",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Exquisite Throw conducts a coordinated attack, it will fire an additional water arrow that will deal 14% of Yelan's Max HP as Hydro DMG."
+    },
+    {
+      "name": "Beware the Trickster's Dice",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Depth-Clarion Dice by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Bait-and-Switch",
+      "phase": "Constellation Lv. 4",
+      "desc": "Increases all party members' Max HP by 10% for 25s for every opponent marked by Lifeline when the Lifeline explodes. A maximum increase of 40% Max HP can be achieved in this manner."
+    },
+    {
+      "name": "Dealer's Sleight",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Lingering Lifeline by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Winner Takes All",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using Depth-Clarion Dice, Yelan will enter the Mastermind state. In this state, all of Yelan's Normal Attacks will be special Breakthrough Barbs. These Breakthrough Barbs will have similar abilities to normal ones and the DMG dealt will be considered Charged Attack DMG, dealing 156% of a normal Breakthrough Barb's DMG."
+    }
+  ]
+}

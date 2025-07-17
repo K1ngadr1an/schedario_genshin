@@ -1,0 +1,310 @@
+{
+  "displayName": "Zhongli",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Zhongli_Icon.png",
+  "tags": [
+    "Polearm",
+    "Geo",
+    "Liyue",
+    "Archon",
+    "12/31",
+    "Wangsheng Funeral Parlor",
+    "Rex Lapis"
+  ],
+  "description": "A mysterious consultant of the Wangsheng Funeral Parlor. Possesses unparalleled knowledge and wisdom. Revered as the Geo Archon, Rex Lapis.",
+  "weapons": [
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_Homa.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Vortex Vanquisher",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Vortex_Vanquisher.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Primordial Jade Winged-Spear",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Winged-Spear.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Black Tassel",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Black_Tassel.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Favonius Lance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Lance.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Catch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Catch.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Deathmatch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Deathmatch.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Wavebreaker's Fin",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Wavebreakers_Fin.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Tenacity of the Millelith (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Tenacity_of_the_Millelith.png"
+    },
+    {
+      "name": "Archaic Petra (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Archaic_Petra.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Tenacity of the Millelith (2) + Archaic Petra (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Tenacity_of_the_Millelith.png"
+    },
+    {
+      "name": "Tenacity of the Millelith (2) + Noblesse Oblige (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Tenacity_of_the_Millelith.png"
+    },
+    {
+      "name": "Archaic Petra (2) + Noblesse Oblige (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Archaic_Petra.png"
+    },
+    {
+      "name": "Retracing Bolide (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Retracing_Bolide.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Emblem_of_Severed_Fate.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / ATK%" },
+    { "type": "Goblet", "value": "Geo DMG Bonus / HP%" },
+    { "type": "Circlet", "value": "HP% / CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["HP%", "CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Zhongli è il miglior shielder del gioco e può essere buildato sia full HP per scudo e supporto, sia Geo DPS. La sua burst infligge danni AoE e pietrifica i nemici.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Black Tassel",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Black_Tassel.png",
+        "note": "HP%"
+      },
+      "artifacts": [
+        {
+          "name": "Tenacity of the Millelith (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Tenacity_of_the_Millelith.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Zhongli", "img": "zhongli.png" },
+      { "name": "Hu Tao", "img": "hu_tao.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Albedo", "img": "albedo.png" }
+    ],
+    [
+      { "name": "Zhongli", "img": "zhongli.png" },
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Xiangling", "img": "xiangling.png" }
+    ],
+    [
+      { "name": "Zhongli", "img": "zhongli.png" },
+      { "name": "Childe", "img": "tartaglia.png" },
+      { "name": "Xiangling", "img": "xiangling.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ],
+    [
+      { "name": "Zhongli", "img": "zhongli.png" },
+      { "name": "Noelle", "img": "noelle.png" },
+      { "name": "Albedo", "img": "albedo.png" },
+      { "name": "Gorou", "img": "gorou.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Rain of Stone",
+      "desc": "Performs up to 6 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Rain_of_Stone.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Zhongli_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "30.8%",
+          "hit2": "31.7%",
+          "hit3": "38.6%",
+          "hit4": "43.3%",
+          "hit5": "51.6%",
+          "hit6": "56.1%",
+          "charged": "112.6%",
+          "stamina": "25",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "33.3%",
+          "hit2": "34.3%",
+          "hit3": "41.8%",
+          "hit4": "46.9%",
+          "hit5": "55.9%",
+          "hit6": "60.8%",
+          "charged": "122.1%",
+          "stamina": "25",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "35.8%",
+          "hit2": "36.9%",
+          "hit3": "45.0%",
+          "hit4": "50.5%",
+          "hit5": "60.2%",
+          "hit6": "65.5%",
+          "charged": "131.6%",
+          "stamina": "25",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "39.0%",
+          "hit2": "40.2%",
+          "hit3": "49.0%",
+          "hit4": "55.0%",
+          "hit5": "65.6%",
+          "hit6": "71.4%",
+          "charged": "143.0%",
+          "stamina": "25",
+          "plunge": "81.8%",
+          "lowhigh": "163.5% / 204.2%"
+        },
+        {
+          "level": 5,
+          "hit1": "41.5%",
+          "hit2": "42.8%",
+          "hit3": "52.2%",
+          "hit4": "58.6%",
+          "hit5": "69.9%",
+          "hit6": "76.1%",
+          "charged": "152.5%",
+          "stamina": "25",
+          "plunge": "87.0%",
+          "lowhigh": "173.9% / 217.2%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 6 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Dominus Lapidis",
+      "desc": "Commands the power of earth to solidify into a Stone Stele, creating a shield of jade. The shield scales with Zhongli's max HP.",
+      "video": "https://www.youtube.com/embed/example",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Dominus_Lapidis.png",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Commands the power of earth to solidify into a Stone Stele, creating a shield of jade. The shield scales with Zhongli's max HP and has 150% effectiveness against all Elemental and Physical DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "stele_dmg": "16.0% HP",
+          "shield": "20.0% HP + 1938",
+          "cd": "12s"
+        },
+        {
+          "level": 2,
+          "stele_dmg": "17.2% HP",
+          "shield": "21.5% HP + 2132",
+          "cd": "12s"
+        },
+        {
+          "level": 3,
+          "stele_dmg": "18.4% HP",
+          "shield": "23.0% HP + 2326",
+          "cd": "12s"
+        },
+        {
+          "level": 4,
+          "stele_dmg": "20.0% HP",
+          "shield": "25.0% HP + 2560",
+          "cd": "12s"
+        },
+        {
+          "level": 5,
+          "stele_dmg": "21.2% HP",
+          "shield": "26.5% HP + 2754",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Planet Befall",
+      "video": "https://www.youtube.com/embed/example",
+      "desc": "Brings a falling meteor, dealing massive AoE Geo DMG and petrifying enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Planet_Befall.png"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Resonant Waves",
+      "phase": "Ascension Phase 1",
+      "desc": "When the Jade Shield takes DMG, it will Fortify: Fortified characters have 5% increased Shield Strength. Can stack up to 5 times."
+    },
+    {
+      "name": "Dominance of Earth",
+      "phase": "Ascension Phase 4",
+      "desc": "Zhongli deals bonus DMG based on his Max HP: Normal Attack, Charged Attack, and Plunging Attack DMG is increased by 1.39% of Max HP. Dominus Lapidis Stone Stele, resonance, and hold DMG is increased by 1.9% of Max HP. Planet Befall DMG is increased by 33% of Max HP."
+    },
+    {
+      "name": "Arcanum of Crystal",
+      "phase": "Passive",
+      "desc": "Refunds 15% of the ores used when crafting Polearm-type weapons."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Rock, the Backbone of Earth",
+      "phase": "Constellation Lv. 1",
+      "desc": "Increases the maximum number of Stone Steles created by Dominus Lapidis that may exist simultaneously to 2."
+    },
+    {
+      "name": "Stone, the Cradle of Jade",
+      "phase": "Constellation Lv. 2",
+      "desc": "Planet Befall grants nearby characters on the field a Jade Shield when it descends."
+    },
+    {
+      "name": "Jade, Shimmering through Darkness",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Dominus Lapidis by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Topaz, Unbreakable and Fearless",
+      "phase": "Constellation Lv. 4",
+      "desc": "Increases Planet Befall's AoE by 20% and increases the duration of Petrification by 2s."
+    },
+    {
+      "name": "Lazuli, Herald of the Order",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Planet Befall by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Chrysos, Bounty of Dominator",
+      "phase": "Constellation Lv. 6",
+      "desc": "When the Jade Shield takes DMG, 40% of that incoming DMG is converted to HP for the current character. A single instance of regeneration cannot exceed 8% of that character's Max HP."
+    }
+  ]
+}

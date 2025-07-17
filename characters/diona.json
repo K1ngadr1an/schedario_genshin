@@ -1,0 +1,149 @@
+{
+  "displayName": "Diona",
+  "img": "images/characters/diona.png",
+  "tags": ["Bow", "Cryo", "Mondstadt", "4★", "Healer", "Support"],
+  "description": "A popular bartender at the Cat's Tail tavern, Diona is known for her unique drinks and her ability to shield and heal her allies.",
+  "weapons": [
+    {
+      "name": "Sacrificial Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Bow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Recurve Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Recurve_Bow.png",
+      "note": "HP%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Maiden Beloved (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Maiden_Beloved.png"
+    },
+    {
+      "name": "Tenacity of the Millelith (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP%" },
+    { "type": "Circlet", "value": "Healing Bonus / HP%" }
+  ],
+  "substats": ["HP%", "Energy Recharge", "Healing Bonus", "Elemental Mastery"],
+  "talents": ["Normal Attack: Kätzlein Style", "Icy Paws", "Signature Mix"],
+  "info": "Diona is a top-tier shielder and healer for Freeze and Melt teams. Build her for HP% and Energy Recharge.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Sacrificial Bow",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Bow.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Diona" },
+      { "name": "Ganyu" },
+      { "name": "Mona" },
+      { "name": "Venti" }
+    ],
+    [
+      { "name": "Diona" },
+      { "name": "Ayaka" },
+      { "name": "Shenhe" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Diona" },
+      { "name": "Hu Tao" },
+      { "name": "Xingqiu" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Kätzlein Style",
+      "desc": "Performs up to 5 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Kätzlein_Style.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot will deal Cryo DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Icy Paws",
+      "desc": "Fires an Icy Paw that deals Cryo DMG and creates a shield on hit. Shield strength scales with Diona's Max HP.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Icy_Paws.png",
+      "details_html": "<div class='skill-section'><b>Icy Paws</b><br>Fires an Icy Paw that deals Cryo DMG and creates a shield. Shield strength scales with Diona's Max HP. Holding the skill increases shield strength and duration.</div>"
+    },
+    {
+      "name": "Signature Mix",
+      "desc": "Tosses out a special cold brew that creates a Drunken Mist, dealing AoE Cryo DMG and continuously healing characters inside.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Signature_Mix.png",
+      "details_html": "<div class='skill-section'><b>Signature Mix</b><br>Tosses out a special cold brew that creates a Drunken Mist, dealing AoE Cryo DMG and continuously healing characters inside. Healing scales with Diona's Max HP.</div>"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Cat's Tail Secret Menu",
+      "phase": "Ascension Phase 1",
+      "desc": "Characters shielded by Icy Paws have their Movement SPD increased by 10% and their Stamina Consumption decreased by 10%."
+    },
+    {
+      "name": "Drunkards' Farce",
+      "phase": "Ascension Phase 4",
+      "desc": "Opponents who enter the AoE of Signature Mix have their ATK decreased by 10% for 15s."
+    },
+    {
+      "name": "Complimentary Bar Food",
+      "phase": "Passive",
+      "desc": "When a Perfect Cooking is achieved on a dish with restorative effects, Diona has a 12% chance to obtain double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "A Lingering Flavor",
+      "phase": "Constellation Lv. 1",
+      "desc": "Regenerates 15 Energy for Diona after Signature Mix's effects end."
+    },
+    {
+      "name": "Shaken, Not Purred",
+      "phase": "Constellation Lv. 2",
+      "desc": "Increases Icy Paws' DMG by 15%, and increases shield duration by 6s."
+    },
+    {
+      "name": "A-Another Round?",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Signature Mix by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Wine Industry Slayer",
+      "phase": "Constellation Lv. 4",
+      "desc": "Within the radius of Signature Mix, Diona's charge time for aimed shots is reduced by 60%."
+    },
+    {
+      "name": "Double Shot, On The Rocks",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Icy Paws by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Cat's Tail Closing Time",
+      "phase": "Constellation Lv. 6",
+      "desc": "Characters within Signature Mix's radius will gain 30% Incoming Healing Bonus when their HP falls below or is equal to 50%."
+    }
+  ]
+}

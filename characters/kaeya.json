@@ -1,0 +1,202 @@
+{
+  "displayName": "Kaeya",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Cryo", "Sword", "Mondstadt", "4★", "Support", "Sub-DPS"],
+  "description": "The Cavalry Captain of the Knights of Favonius, Kaeya is a Cryo sword user who excels at applying Cryo and enabling powerful reactions.",
+  "weapons": [
+    {
+      "name": "Sacrificial Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Iron_Sting.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Harbinger_of_Dawn.png",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Blizzard Strayer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Emblem_of_Severed_Fate.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Cryo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Ceremonial Bladework",
+    "Frostgnaw",
+    "Glacial Waltz"
+  ],
+  "info": "Kaeya is a flexible Cryo support and sub-DPS who can apply Cryo frequently and enable Freeze or Melt teams. Build him for Energy Recharge, CRIT, and Cryo DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Sacrificial Sword",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Sword.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Blizzard Strayer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kaeya" },
+      { "name": "Xingqiu" },
+      { "name": "Chongyun" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Kaeya" },
+      { "name": "Rosaria" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" }
+    ],
+    [
+      { "name": "Kaeya" },
+      { "name": "Diona" },
+      { "name": "Mona" },
+      { "name": "Ayaka" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Ceremonial Bladework",
+      "desc": "Performs up to 5 rapid strikes with a sword.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Ceremonial_Bladework.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes with a sword.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "53.8%",
+          "hit2": "51.7%",
+          "hit3": "65.3%",
+          "hit4": "70.9%",
+          "hit5": "88.3%",
+          "charged": "55.0% + 66.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "58.2%",
+          "hit2": "55.9%",
+          "hit3": "70.7%",
+          "hit4": "76.8%",
+          "hit5": "95.6%",
+          "charged": "60.0% + 72.9%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Frostgnaw",
+      "desc": "Kaeya unleashes a frigid blast, dealing Cryo DMG to enemies in front of him.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Frostgnaw.png",
+      "details_html": "<div class='skill-section'><b>Frostgnaw</b><br>Unleashes a frigid blast, dealing Cryo DMG to enemies in front of Kaeya.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "191% ATK", "cd": "6s" },
+        { "level": 2, "skill_dmg": "205% ATK", "cd": "6s" }
+      ]
+    },
+    {
+      "name": "Glacial Waltz",
+      "desc": "Kaeya summons three icicles that revolve around him, dealing Cryo DMG to enemies they touch.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Glacial_Waltz.png",
+      "details_html": "<div class='skill-section'><b>Glacial Waltz</b><br>Summons three icicles that revolve around Kaeya, dealing Cryo DMG to enemies they touch. Lasts for 8s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "77.6% per icicle",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "83.3% per icicle",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Cold-Blooded Strike",
+      "phase": "Ascension Phase 1",
+      "desc": "Every hit with Frostgnaw regenerates HP for Kaeya equal to 15% of his ATK."
+    },
+    {
+      "name": "Glacial Heart",
+      "phase": "Ascension Phase 4",
+      "desc": "Enemies frozen by Frostgnaw will drop additional Elemental Particles."
+    },
+    {
+      "name": "Hidden Strength",
+      "phase": "Passive",
+      "desc": "Decreases sprinting Stamina consumption for your own party members by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Excellent Blood",
+      "phase": "Constellation Lv. 1",
+      "desc": "The CRIT Rate of Kaeya's Normal and Charge Attacks against enemies affected by Cryo is increased by 15%."
+    },
+    {
+      "name": "Never-Ending Performance",
+      "phase": "Constellation Lv. 2",
+      "desc": "Every time Glacial Waltz defeats an enemy during its duration, its duration is increased by 2.5s, up to a maximum of 15s."
+    },
+    {
+      "name": "Dance of Frost",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Frostgnaw by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Frozen Kiss",
+      "phase": "Constellation Lv. 4",
+      "desc": "Triggers automatically when Kaeya's HP falls below 20%: Creates a shield that absorbs damage equal to 30% of his Max HP for 20s. Can only occur once every 60s."
+    },
+    {
+      "name": "Frostbiting Embrace",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Glacial Waltz by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Glacial Whirlwind",
+      "phase": "Constellation Lv. 6",
+      "desc": "Glacial Waltz will generate 1 additional icicle and will regenerate 15 Energy when cast."
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestione Personaggio - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #0f1419, #1a1f2e, #2d3748);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 3.5rem;
+        min-height: 100vh;
+        position: relative;
+      }
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(15, 20, 25, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        padding: 0.8rem 0;
+        backdrop-filter: blur(20px);
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem;
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        letter-spacing: 0.8px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(100, 255, 218, 0.05);
+        border: 1px solid transparent;
+      }
+      .nav-link.active {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4),
+          0 2px 12px rgba(100, 255, 218, 0.2);
+        cursor: default;
+        font-weight: 800;
+        border-color: rgba(100, 255, 218, 0.5);
+      }
+      .character-selection {
+        background: linear-gradient(
+          135deg,
+          rgba(15, 20, 25, 0.9),
+          rgba(26, 32, 44, 0.9)
+        );
+        border-radius: 25px;
+        padding: 3rem;
+        margin-top: 3rem;
+        border: 2px solid rgba(100, 255, 218, 0.2);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4),
+          0 6px 25px rgba(100, 255, 218, 0.1);
+        backdrop-filter: blur(20px);
+        position: relative;
+        overflow: hidden;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /* Altri stili specifici possono essere aggiunti qui se necessario */
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a
+        href="gestione_perosnaggio.html"
+        class="nav-link active"
+        id="nav-gestione"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <a href="community_top_build.html" class="nav-link"
+        ><span>🏆</span> Top Build</a
+      >
+      <div style="flex: 1"></div>
+      <div
+        id="user-controls"
+        style="
+          margin-left: auto;
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+        "
+      ></div>
+    </nav>
+    <div class="container">
+      <!-- Gestione Personaggi -->
+      <section
+        class="character-selection"
+        id="character-selection"
+        tabindex="-1"
+        data-anchor
+      >
+        <a id="gestione"></a>
+        <h2>⚔️ Gestione Personaggio</h2>
+        <!-- Selezione Personaggio -->
+        <div class="form-group">
+          <label for="characterSelect">Seleziona Personaggio</label>
+          <select id="characterSelect" onchange="selectCharacter(this.value)">
+            <option value="" disabled selected>Seleziona personaggio</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="newCharacterName">Aggiungi Nuovo</label>
+          <input
+            type="text"
+            id="newCharacterName"
+            placeholder="Nome personaggio"
+          />
+          <button class="btn" onclick="addNewCharacter()">➕ Aggiungi</button>
+        </div>
+        <!-- Informazioni Personaggio -->
+        <div class="character-info">
+          <h3>📋 Informazioni Base</h3>
+          <div class="artifact-grid">
+            <div class="form-group">
+              <label for="charName">Nome</label>
+              <input type="text" id="charName" placeholder="Nome personaggio" />
+            </div>
+            <div class="form-group">
+              <label for="weapon">Arma</label>
+              <input type="text" id="weapon" placeholder="Tipo arma" />
+            </div>
+            <div class="form-group">
+              <label for="level">Livello</label>
+              <input
+                type="number"
+                id="level"
+                placeholder="Livello"
+                min="1"
+                max="90"
+              />
+            </div>
+            <div class="form-group">
+              <label for="constellation">Costellazione</label>
+              <input
+                type="number"
+                id="constellation"
+                placeholder="Costellazione"
+                min="0"
+                max="6"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Talenti -->
+        <div class="talents">
+          <h3>🎯 Talenti</h3>
+          <div class="artifact-grid">
+            <div class="form-group">
+              <label for="normalAttack">Attacco Normale</label>
+              <input
+                type="number"
+                id="normalAttack"
+                placeholder="Livello"
+                min="1"
+                max="15"
+              />
+            </div>
+            <div class="form-group">
+              <label for="elementalSkill">Abilità Elementale</label>
+              <input
+                type="number"
+                id="elementalSkill"
+                placeholder="Livello"
+                min="1"
+                max="15"
+              />
+            </div>
+            <div class="form-group">
+              <label for="burst">Burst</label>
+              <input
+                type="number"
+                id="burst"
+                placeholder="Livello"
+                min="1"
+                max="15"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Artefatti -->
+        <div class="artifacts">
+          <h3>💎 Artefatti</h3>
+          <!-- Controlli Artefatti -->
+          <div class="artifact-controls">
+            <div class="filter-controls">
+              <label for="slotFilter">Filtra per Slot:</label>
+              <input
+                type="text"
+                id="slotFilter"
+                placeholder="Slot..."
+                oninput="filterArtifacts()"
+              />
+              <label for="setFilter">Filtra per Set:</label>
+              <input
+                type="text"
+                id="setFilter"
+                placeholder="Set..."
+                oninput="filterArtifacts()"
+              />
+              <label for="sortArtifacts">Ordina:</label>
+              <select id="sortArtifacts" onchange="sortArtifacts()">
+                <option value="">Nessun ordine</option>
+                <option value="slot">Slot</option>
+                <option value="set">Set</option>
+                <option value="level">Livello</option>
+              </select>
+            </div>
+            <div class="view-controls">
+              <button
+                id="toggleViewBtn"
+                class="btn btn-secondary"
+                onclick="toggleArtifactView()"
+              >
+                📊 Vista Tabella
+              </button>
+              <button class="btn" onclick="addArtifact()">
+                ➕ Aggiungi Artefatto
+              </button>
+            </div>
+          </div>
+          <!-- Lista Artefatti (Vista Form) -->
+          <div id="artifactList"></div>
+          <!-- Tabella Artefatti (Vista Tabella) -->
+          <div id="artifactTable" class="artifact-table" style="display: none">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Slot</th>
+                  <th>Set</th>
+                  <th>Main Stat</th>
+                  <th>Sub Stat 1</th>
+                  <th>Sub Stat 2</th>
+                  <th>Sub Stat 3</th>
+                  <th>Sub Stat 4</th>
+                  <th>Livello</th>
+                  <th>Azioni</th>
+                </tr>
+              </thead>
+              <tbody id="artifactTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Team Comps Salvati -->
+        <div class="saved-teams">
+          <h3>👥 Team Comps Salvati</h3>
+          <div class="team-controls" style="margin-bottom: 1rem">
+            <button class="btn btn-secondary" onclick="refreshSavedTeams()">
+              🔄 Aggiorna Team Comps
+            </button>
+            <button class="btn" onclick="openCharacterDetail(currentCharacter)">
+              📝 Modifica Team Comps
+            </button>
+          </div>
+          <div id="savedTeamsContainer">
+            <div class="no-teams-message">
+              <p>Nessun team comp salvato per questo personaggio.</p>
+              <p>Clicca su "Dettagli" per configurare i team comps.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Azioni -->
+        <div class="actions">
+          <button class="btn" onclick="saveData()">💾 Salva</button>
+          <button class="btn btn-secondary" onclick="loadData()">
+            📂 Carica
+          </button>
+          <button class="btn btn-danger" onclick="resetData()">🔄 Reset</button>
+          <button class="btn btn-success" onclick="exportCharacterData()">
+            📤 Esporta
+          </button>
+        </div>
+        <!-- Output JSON -->
+        <div class="output">
+          <h3>📄 Dati JSON</h3>
+          <pre id="output"></pre>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // Carica i personaggi da character.json e popola la select
+      document.addEventListener("DOMContentLoaded", function () {
+        if (document.getElementById("characterSelect")) {
+          fetch("character.json")
+            .then((res) => res.json())
+            .then((data) => {
+              window.allCharacters = data.characters || [];
+              if (typeof populateCharacterList === "function") {
+                populateCharacterList();
+              }
+            });
+        }
+      });
+      // Attiva il tab Gestione
+      document.addEventListener("DOMContentLoaded", function () {
+        setActiveNav(document.getElementById("nav-gestione"));
+      });
+      // --- Login/Logout UI come in calendario.html ---
+      function isLoggedIn() {
+        return !!localStorage.getItem("user");
+      }
+      function getCurrentUser() {
+        return localStorage.getItem("user");
+      }
+      function renderUserControls() {
+        const controls = document.getElementById("user-controls");
+        controls.innerHTML = "";
+        if (isLoggedIn()) {
+          controls.innerHTML = `<span style="color:#64ffda;font-weight:600;">👤 ${getCurrentUser()}</span><button class="btn" onclick="logoutUser()">Logout</button>`;
+        } else {
+          controls.innerHTML = `<a href="login.html" class="btn">Login</a><a href="registrazione.html" class="btn btn-secondary">Registrati</a>`;
+        }
+      }
+      function logoutUser() {
+        localStorage.removeItem("user");
+        renderUserControls();
+        location.reload();
+      }
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+    </script>
+  </body>
+</html>

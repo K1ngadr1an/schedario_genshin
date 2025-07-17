@@ -1,0 +1,224 @@
+{
+  "displayName": "Tartaglia",
+  "img": "images/characters/tartaglia.png",
+  "tags": ["Bow", "Hydro", "Snezhnaya", "5★", "DPS", "Fatui", "Childe"],
+  "description": "The Eleventh Harbinger of the Fatui, Tartaglia (Childe) is a Hydro bow user who excels at both ranged and melee combat, enabling powerful Hydro reactions.",
+  "weapons": [
+    {
+      "name": "Polar Star",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Polar_Star.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Thundering Pulse",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thundering_Pulse.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Skyward Harp",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Skyward_Harp.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Stringless",
+      "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Heart of Depth (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Shimenawa%27s_Reminiscence.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": [
+    "Normal Attack: Cutting Torrent",
+    "Foul Legacy: Raging Tide",
+    "Havoc: Obliteration"
+  ],
+  "info": "Tartaglia is a 5★ Hydro DPS who excels at both ranged and melee combat, enabling powerful Hydro reactions. Build him for CRIT, ATK%, and Hydro DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Polar Star",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Polar_Star.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Heart of Depth (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Tartaglia" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Tartaglia" },
+      { "name": "Yelan" },
+      { "name": "Xingqiu" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Tartaglia" },
+      { "name": "Fischl" },
+      { "name": "Beidou" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Tartaglia" },
+      { "name": "Ayato" },
+      { "name": "Mona" },
+      { "name": "Barbara" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Cutting Torrent",
+      "desc": "Performs up to 6 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Cutting_Torrent.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 6 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Hydro DMG and applies Riptide.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "46.6%",
+          "hit2": "50.5%",
+          "hit3": "60.3%",
+          "hit4": "71.0%",
+          "hit5": "35.5% + 35.5%",
+          "hit6": "71.0%",
+          "charged": "124%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "50.4%",
+          "hit2": "54.7%",
+          "hit3": "65.3%",
+          "hit4": "76.9%",
+          "hit5": "38.5% + 38.5%",
+          "hit6": "76.9%",
+          "charged": "136%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Foul Legacy: Raging Tide",
+      "desc": "Tartaglia switches to melee stance, unleashing Hydro blades that deal AoE Hydro DMG. Normal and Charged Attacks in this stance apply Riptide.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Foul_Legacy_Raging_Tide.png",
+      "details_html": "<div class='skill-section'><b>Foul Legacy: Raging Tide</b><br>Switches to melee stance, unleashing Hydro blades that deal AoE Hydro DMG. Normal and Charged Attacks in this stance apply Riptide and deal increased Hydro DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "melee_hit": "52.0%",
+          "melee_charged": "62.0%",
+          "riptide_slash": "60.0%",
+          "duration": "30s max",
+          "cd": "6-36s"
+        },
+        {
+          "level": 2,
+          "melee_hit": "56.2%",
+          "melee_charged": "67.0%",
+          "riptide_slash": "65.0%",
+          "duration": "30s max",
+          "cd": "6-36s"
+        }
+      ]
+    },
+    {
+      "name": "Havoc: Obliteration",
+      "desc": "Tartaglia unleashes a powerful Hydro attack. Ranged: Fires a Hydro-imbued magic arrow. Melee: Performs a large AoE slash. Both forms deal massive Hydro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Havoc_Obliteration.png",
+      "details_html": "<div class='skill-section'><b>Havoc: Obliteration</b><br>Ranged: Fires a Hydro-imbued magic arrow. Melee: Performs a large AoE slash. Both forms deal massive Hydro DMG and apply Riptide.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "ranged": "378%",
+          "melee": "464%",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "ranged": "407%",
+          "melee": "500%",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Never Ending",
+      "phase": "Ascension Phase 1",
+      "desc": "Extends Riptide duration by 8s."
+    },
+    {
+      "name": "Sword of Torrents",
+      "phase": "Ascension Phase 4",
+      "desc": "When Tartaglia is in melee stance, CRIT Rate of Normal and Charged Attacks is increased by 15%."
+    },
+    {
+      "name": "Master of Weaponry",
+      "phase": "Passive",
+      "desc": "Increases Normal Attack level of all party members by 1."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Foul Legacy: Tide Withholder",
+      "phase": "Constellation Lv. 1",
+      "desc": "Decreases Foul Legacy: Raging Tide's cooldown by 20%."
+    },
+    {
+      "name": "Foul Legacy: Understream",
+      "phase": "Constellation Lv. 2",
+      "desc": "Riptide-triggered attacks deal 30% more DMG to enemies with less than 50% HP."
+    },
+    {
+      "name": "Abyssal Mayhem: Vortex of Turmoil",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Foul Legacy: Raging Tide by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Abyssal Mayhem: Hydrospout",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Riptide is triggered, Tartaglia regenerates 4 Energy."
+    },
+    {
+      "name": "Havoc: Formless Blade",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Havoc: Obliteration by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Havoc: Annihilation",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Tartaglia is in melee stance, his attacks deal 30% increased DMG and convert all DMG to Hydro."
+    }
+  ]
+}

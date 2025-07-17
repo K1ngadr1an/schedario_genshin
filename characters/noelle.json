@@ -1,0 +1,207 @@
+{
+  "displayName": "Noelle",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Noelle_Icon.png",
+  "tags": ["Claymore", "Geo", "Mondstadt", "4★", "Healer", "DPS", "Maid"],
+  "description": "A dutiful maid of the Knights of Favonius, Noelle is a Geo claymore user who can heal, shield, and deal significant damage when built as a main DPS.",
+  "weapons": [
+    {
+      "name": "Whiteblind",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Whiteblind.png",
+      "note": "DEF%"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Unforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Unforged.png",
+      "note": "Shielded ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Husk of Opulent Dreams (4)",
+      "img": "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+    },
+    {
+      "name": "Retracing Bolide (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Retracing_Bolide.png"
+    },
+    {
+      "name": "Husk of Opulent Dreams (2) + Retracing Bolide (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "DEF% / ATK%" },
+    { "type": "Goblet", "value": "Geo DMG Bonus / DEF%" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG / DEF%" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ATK%"],
+  "talents": [
+    "Normal Attack: Favonius Bladework - Maid",
+    "Breastplate",
+    "Sweeping Time"
+  ],
+  "info": "Noelle is a versatile Geo character who can serve as a healer, shielder, or main DPS. Build her for DEF%, CRIT, and Geo DMG Bonus for best results.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Whiteblind",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Whiteblind.png",
+        "note": "DEF%"
+      },
+      "artifacts": [
+        {
+          "name": "Husk of Opulent Dreams (4)",
+          "img": "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Noelle" },
+      { "name": "Albedo" },
+      { "name": "Gorou" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Noelle" },
+      { "name": "Ningguang" },
+      { "name": "Bennett" },
+      { "name": "Fischl" }
+    ],
+    [
+      { "name": "Noelle" },
+      { "name": "Yun Jin" },
+      { "name": "Barbara" },
+      { "name": "Xingqiu" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Favonius Bladework - Maid",
+      "desc": "Performs up to 4 consecutive claymore strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Favonius_Bladework_Maid.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks. At the end, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "79.1%",
+          "hit2": "73.7%",
+          "hit3": "95.6%",
+          "hit4": "115.9%",
+          "charged": "60.7% + 74.6%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 2,
+          "hit1": "85.5%",
+          "hit2": "79.6%",
+          "hit3": "103.3%",
+          "hit4": "125.4%",
+          "charged": "65.5% + 80.5%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        }
+      ]
+    },
+    {
+      "name": "Breastplate",
+      "desc": "Noelle creates a shield that scales with her DEF and heals the active character when they are hit. The healing and shield strength scale with Noelle's DEF.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Breastplate.png",
+      "details_html": "<div class='skill-section'><b>Breastplate</b><br>Creates a shield that scales with DEF and heals the active character when they are hit. Healing and shield strength scale with Noelle's DEF.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "shield": "120% DEF",
+          "healing": "20% DEF",
+          "duration": "12s",
+          "cd": "24s"
+        },
+        {
+          "level": 2,
+          "shield": "129.6% DEF",
+          "healing": "21.6% DEF",
+          "duration": "12s",
+          "cd": "24s"
+        }
+      ]
+    },
+    {
+      "name": "Sweeping Time",
+      "desc": "Noelle swings her claymore, dealing AoE Geo DMG. Her ATK is converted to scale with DEF for the duration.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Sweeping_Time.png",
+      "details_html": "<div class='skill-section'><b>Sweeping Time</b><br>Swings her claymore, dealing AoE Geo DMG. ATK is converted to scale with DEF for the duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "67.2% DEF",
+          "duration": "15s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "72.2% DEF",
+          "duration": "15s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Devotion",
+      "phase": "Ascension Phase 1",
+      "desc": "When Noelle is in the party but not on the field, the active character's DEF is increased by 20%."
+    },
+    {
+      "name": "Nice and Clean",
+      "phase": "Ascension Phase 4",
+      "desc": "Breastplate's healing is increased by 10% of Noelle's DEF."
+    },
+    {
+      "name": "Maid's Knighthood",
+      "phase": "Passive",
+      "desc": "When a Perfect Cooking is achieved on a DEF-boosting dish, Noelle has a 12% chance to obtain double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "I Got Your Back",
+      "phase": "Constellation Lv. 1",
+      "desc": "Breastplate's shield also heals all characters when it expires or is destroyed."
+    },
+    {
+      "name": "Combat Maid",
+      "phase": "Constellation Lv. 2",
+      "desc": "Decreases the stamina consumption of Noelle's Charged Attacks by 20%, and increases their DMG by 15%."
+    },
+    {
+      "name": "Invulnerable Maid",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Breastplate by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "To Be Cleaned",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Sweeping Time and Breastplate are both active, Noelle's ATK is increased by 50% of her DEF."
+    },
+    {
+      "name": "Favonius Sweeper Master",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Sweeping Time by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Must Be Spotless",
+      "phase": "Constellation Lv. 6",
+      "desc": "Sweeping Time's ATK conversion is increased to 50% of Noelle's DEF, and every opponent defeated during its duration adds 1s to its duration, up to 10s."
+    }
+  ]
+}

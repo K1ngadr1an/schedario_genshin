@@ -1,0 +1,194 @@
+{
+  "displayName": "Yae Miko",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yae_Miko_Icon.png",
+  "tags": ["Catalyst", "Electro", "Inazuma", "5★", "Sub-DPS", "Off-Field"],
+  "description": "Yae Miko è la Guuji del Grand Narukami Shrine di Inazuma. Eccelle nel danno Electro off-field tramite i suoi totem, fornendo danno consistente e applicazione Electro.",
+  "weapons": [
+    {
+      "name": "Kagura's Verity",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Kaguras_Verity.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Solar Pearl",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Solar_Pearl.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Skyward Atlas",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Skyward_Atlas.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Oathsworn Eye",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Oathsworn_Eye.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gilded_Dreams.png"
+    },
+    {
+      "name": "Thundering Fury (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+    },
+    {
+      "name": "Gilded Dreams (2) + Thundering Fury (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Wanderer's Troupe (2) + Thundering Fury (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Electro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": [
+    "Normal Attack: Spiritfox Sin-Eater",
+    "Yakan Evocation: Sesshou Sakura",
+    "Great Secret Art: Tenko Kenshin"
+  ],
+  "info": "Yae Miko si concentra su danno Electro off-field tramite i totem. Priorità a CRIT, ATK% e Elemental Mastery per massimizzare i danni.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Kagura's Verity",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Kaguras_Verity.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Gilded Dreams (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gilded_Dreams.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Yae Miko" },
+      { "name": "Raiden Shogun" },
+      { "name": "Kazuha" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Yae Miko" },
+      { "name": "Alhaitham" },
+      { "name": "Nahida" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Yae Miko" },
+      { "name": "Tighnari" },
+      { "name": "Nahida" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Spiritfox Sin-Eater",
+      "desc": "Performs up to 3 attacks using fox spirits, dealing Electro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yae_Miko_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 3 attacks using fox spirits, dealing Electro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to deal AoE Electro DMG after a short casting time.</div><div class='skill-section'><b>Plunging Attack</b><br>Gathering the might of Electro, plunges toward the ground from mid-air, damaging all enemies in her path and dealing AoE Electro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "39.6%",
+          "hit2": "35.2%",
+          "hit3": "50.6%",
+          "charged": "142%",
+          "plunge": "60%",
+          "lowhigh": "120% / 150%"
+        }
+      ]
+    },
+    {
+      "name": "Yakan Evocation: Sesshou Sakura",
+      "desc": "Yae Miko creates a Sesshou Sakura that periodically strikes nearby enemies with lightning.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yae_Miko_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Yakan Evocation: Sesshou Sakura</b><br>Yae Miko creates a Sesshou Sakura that periodically strikes nearby enemies with lightning.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "170% ATK", "duration": "14s", "cd": "4s" }
+      ]
+    },
+    {
+      "name": "Great Secret Art: Tenko Kenshin",
+      "desc": "Yae Miko unleashes a lightning storm, dealing massive Electro DMG to all nearby enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yae_Miko_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Great Secret Art: Tenko Kenshin</b><br>Yae Miko unleashes a lightning storm, dealing massive Electro DMG to all nearby enemies.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "425% ATK",
+          "cd": "22s",
+          "energy_cost": "90"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "The Shrine's Sacred Shade",
+      "phase": "Ascension Phase 1",
+      "desc": "When Yae Miko creates a Sesshou Sakura, each existing Sesshou Sakura will increase the DMG of the new one by 20%."
+    },
+    {
+      "name": "Enlightened Blessing",
+      "phase": "Ascension Phase 4",
+      "desc": "Every point of Elemental Mastery Yae Miko possesses will increase Sesshou Sakura DMG by 0.15%."
+    },
+    {
+      "name": "Meditations of a Yako",
+      "phase": "Passive",
+      "desc": "Has a 25% chance to get 1 regional Character Talent Material (base material excluded) when crafting. The rarity is that of the base material."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Yakan Offering",
+      "phase": "Constellation Lv. 1",
+      "desc": "Each time Great Secret Art: Tenko Kenshin activates a Tenko Thunderbolt, Yae Miko will restore 8 Elemental Energy for herself."
+    },
+    {
+      "name": "Fox's Mooncall",
+      "phase": "Constellation Lv. 2",
+      "desc": "Sesshou Sakura start at Level 2 when created, their max level is increased to 4, and their attack range is increased by 60%."
+    },
+    {
+      "name": "The Seven Glamours",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Yakan Evocation: Sesshou Sakura by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Sakura Channeling",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Sesshou Sakura lightning hits opponents, the Electro DMG Bonus of all nearby party members is increased by 20% for 5s."
+    },
+    {
+      "name": "Mischievous Teasing",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Great Secret Art: Tenko Kenshin by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Forbidden Art: Daisesshou",
+      "phase": "Constellation Lv. 6",
+      "desc": "The Sesshou Sakura's attacks will ignore 60% of the opponent's DEF."
+    }
+  ]
+}

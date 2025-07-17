@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcolatore Danni - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #64ffda;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 12px #64ffda44;
+      }
+
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(26, 26, 46, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 2px 16px #0005;
+        padding: 0.5rem 0;
+      }
+
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.13rem;
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.1);
+        color: #64ffda;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+
+      .nav-link.active {
+        background: #64ffda;
+        color: #16213e;
+        box-shadow: 0 2px 12px #64ffda55;
+        cursor: default;
+      }
+
+      body {
+        padding-top: 3.5rem;
+      }
+
+      .calculator-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .calculator-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .input-section {
+        background: rgba(26, 26, 46, 0.92);
+        border-radius: 18px;
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      .section-title {
+        color: #64ffda;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .input-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .input-label {
+        display: block;
+        color: #e0e0e0;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      .input-field {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        background: rgba(15, 52, 96, 0.8);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .input-field:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+      }
+
+      .select-field {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        background: rgba(15, 52, 96, 0.8);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .calculate-btn {
+        width: 100%;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        border: none;
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        font-weight: 700;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+      }
+
+      .calculate-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(100, 255, 218, 0.4);
+      }
+
+      .results-section {
+        background: rgba(26, 26, 46, 0.92);
+        border-radius: 18px;
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        grid-column: 1 / -1;
+      }
+
+      .damage-result {
+        background: rgba(100, 255, 218, 0.1);
+        border: 2px solid #64ffda;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .damage-value {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #64ffda;
+        margin-bottom: 0.5rem;
+      }
+
+      .damage-label {
+        color: #b0eaff;
+        font-size: 1rem;
+      }
+
+      .formula-display {
+        background: rgba(15, 52, 96, 0.8);
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        color: #64ffda;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .weapon-effects {
+        background: rgba(22, 33, 62, 0.8);
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 1rem;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .weapon-effect {
+        margin-bottom: 0.5rem;
+        color: #b0eaff;
+      }
+
+      @media (max-width: 768px) {
+        .calculator-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .main-title {
+          font-size: 2rem;
+        }
+
+        .calculator-container {
+          padding: 1rem;
+        }
+      }
+
+      /* Ottimizzazioni per schermi 2K */
+      @media (min-width: 1400px) {
+        .calculator-container {
+          max-width: 1600px;
+          padding: 2.5rem;
+        }
+
+        .calculator-grid {
+          gap: 3rem;
+        }
+      }
+
+      @media (min-width: 1800px) {
+        .calculator-container {
+          max-width: 1800px;
+          padding: 3rem;
+        }
+
+        .calculator-grid {
+          gap: 3.5rem;
+        }
+      }
+
+      @media (min-width: 2200px) {
+        .calculator-container {
+          max-width: 2000px;
+          padding: 3.5rem;
+        }
+
+        .calculator-grid {
+          gap: 4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="index.html#gestione" class="nav-link"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link active"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls" style="margin-left: auto"></span>
+    </nav>
+
+    <h1 class="main-title">⚔️ Calcolatore Danni</h1>
+
+    <div class="calculator-container">
+      <div class="calculator-grid">
+        <!-- Statistiche Personaggio -->
+        <div class="input-section">
+          <h2 class="section-title">🎭 Statistiche Personaggio</h2>
+
+          <div class="input-group">
+            <label class="input-label">Personaggio:</label>
+            <select id="characterSelect" class="select-field">
+              <option value="">Seleziona personaggio...</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Livello Personaggio:</label>
+            <input
+              type="number"
+              id="charLevel"
+              class="input-field"
+              value="90"
+              min="1"
+              max="90"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">ATK Base:</label>
+            <input
+              type="number"
+              id="baseATK"
+              class="input-field"
+              value="0"
+              min="0"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">ATK Bonus (Arma + Artefatti):</label>
+            <input
+              type="number"
+              id="bonusATK"
+              class="input-field"
+              value="0"
+              min="0"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">CRIT Rate (%):</label>
+            <input
+              type="number"
+              id="critRate"
+              class="input-field"
+              value="5"
+              min="0"
+              max="100"
+              step="0.1"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">CRIT DMG (%):</label>
+            <input
+              type="number"
+              id="critDMG"
+              class="input-field"
+              value="50"
+              min="0"
+              step="0.1"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Bonus DMG Elementale (%):</label>
+            <input
+              type="number"
+              id="elementalDMG"
+              class="input-field"
+              value="0"
+              min="0"
+              step="0.1"
+            />
+          </div>
+        </div>
+
+        <!-- Arma e Talenti -->
+        <div class="input-section">
+          <h2 class="section-title">🗡️ Arma e Talenti</h2>
+
+          <div class="input-group">
+            <label class="input-label">Arma:</label>
+            <select id="weaponSelect" class="select-field">
+              <option value="">Seleziona arma...</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Livello Arma:</label>
+            <input
+              type="number"
+              id="weaponLevel"
+              class="input-field"
+              value="90"
+              min="1"
+              max="90"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Raffinamento Arma:</label>
+            <select id="weaponRefinement" class="select-field">
+              <option value="1">R1</option>
+              <option value="2">R2</option>
+              <option value="3">R3</option>
+              <option value="4">R4</option>
+              <option value="5">R5</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Talent Type:</label>
+            <select id="talentType" class="select-field">
+              <option value="normal">Normal Attack</option>
+              <option value="skill">Elemental Skill</option>
+              <option value="burst">Elemental Burst</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Livello Talento:</label>
+            <input
+              type="number"
+              id="talentLevel"
+              class="input-field"
+              value="10"
+              min="1"
+              max="15"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Moltiplicatore Talento (%):</label>
+            <input
+              type="number"
+              id="talentMultiplier"
+              class="input-field"
+              value="100"
+              min="0"
+              step="0.1"
+            />
+          </div>
+        </div>
+
+        <!-- Reazioni e Nemici -->
+        <div class="input-section">
+          <h2 class="section-title">🔥 Reazioni Elementali</h2>
+
+          <div class="input-group">
+            <label class="input-label">Reazione Elementale:</label>
+            <select id="elementalReaction" class="select-field">
+              <option value="none">Nessuna</option>
+              <option value="vaporize">Vaporize (Pyro → Hydro)</option>
+              <option value="melt">Melt (Pyro → Cryo)</option>
+              <option value="freeze">Freeze</option>
+              <option value="electrocharged">Electro-Charged</option>
+              <option value="superconduct">Superconduct</option>
+              <option value="overloaded">Overloaded</option>
+              <option value="shattered">Shattered</option>
+              <option value="crystallize">Crystallize</option>
+              <option value="swirl">Swirl</option>
+              <option value="burning">Burning</option>
+              <option value="bloom">Bloom</option>
+              <option value="hyperbloom">Hyperbloom</option>
+              <option value="burgeon">Burgeon</option>
+              <option value="quicken">Quicken</option>
+              <option value="spread">Spread</option>
+              <option value="aggravate">Aggravate</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">EM (Elemental Mastery):</label>
+            <input
+              type="number"
+              id="elementalMastery"
+              class="input-field"
+              value="0"
+              min="0"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Bonus Reazione (%):</label>
+            <input
+              type="number"
+              id="reactionBonus"
+              class="input-field"
+              value="0"
+              min="0"
+              step="0.1"
+            />
+          </div>
+        </div>
+
+        <!-- Resistenza e Difesa -->
+        <div class="input-section">
+          <h2 class="section-title">🛡️ Resistenza e Difesa</h2>
+
+          <div class="input-group">
+            <label class="input-label">Livello Nemico:</label>
+            <input
+              type="number"
+              id="enemyLevel"
+              class="input-field"
+              value="90"
+              min="1"
+              max="100"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Resistenza Elementale (%):</label>
+            <input
+              type="number"
+              id="elementalResistance"
+              class="input-field"
+              value="10"
+              min="-100"
+              max="100"
+              step="0.1"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Riduzione Resistenza (%):</label>
+            <input
+              type="number"
+              id="resistanceShred"
+              class="input-field"
+              value="0"
+              min="0"
+              max="100"
+              step="0.1"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Difesa Nemico:</label>
+            <input
+              type="number"
+              id="enemyDefense"
+              class="input-field"
+              value="0"
+              min="0"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Riduzione Difesa (%):</label>
+            <input
+              type="number"
+              id="defenseShred"
+              class="input-field"
+              value="0"
+              min="0"
+              max="100"
+              step="0.1"
+            />
+          </div>
+        </div>
+      </div>
+
+      <button class="calculate-btn" onclick="calculateDamage()">
+        ⚔️ Calcola Danni
+      </button>
+
+      <div class="results-section">
+        <h2 class="section-title">📊 Risultati Calcolo</h2>
+
+        <div class="damage-result">
+          <div class="damage-value" id="finalDamage">0</div>
+          <div class="damage-label">Danno Finale</div>
+        </div>
+
+        <div class="damage-result">
+          <div class="damage-value" id="critDamage">0</div>
+          <div class="damage-label">Danno Critico</div>
+        </div>
+
+        <div class="damage-result">
+          <div class="damage-value" id="avgDamage">0</div>
+          <div class="damage-label">Danno Medio (con CRIT)</div>
+        </div>
+
+        <div class="formula-display" id="formulaDisplay">
+          Formula: Danno = [(ATK × Moltiplicatore) × Bonus DMG] × CRIT ×
+          Reazioni × Modificatori
+        </div>
+
+        <div class="weapon-effects" id="weaponEffects">
+          <h3>Effetti Arma:</h3>
+          <div id="weaponEffectsList">Nessun effetto arma attivo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal login/registrazione -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">×</span>
+        <h2 id="loginModalTitle">Login</h2>
+        <form id="loginForm" onsubmit="return doLogin(event)">
+          <div class="form-group">
+            <label for="loginUsername">Username</label>
+            <input
+              id="loginUsername"
+              type="text"
+              required
+              autocomplete="username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input
+              id="loginPassword"
+              type="password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+          <button class="btn" type="submit">Login</button>
+          <button
+            class="btn btn-secondary"
+            type="button"
+            onclick="switchToRegister()"
+          >
+            Registrati
+          </button>
+        </form>
+        <div
+          id="loginError"
+          style="color: #ff6b6b; margin-top: 1rem; display: none"
+        ></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

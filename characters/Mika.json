@@ -1,0 +1,209 @@
+{
+  "displayName": "Mika",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Mika_Icon.png",
+  "tags": ["Polearm", "Cryo", "Mondstadt", "Support", "4★", "Healer", "Buffer"],
+  "description": "A young Front-Line Surveyor of the Knights of Favonius, Mika is a dedicated support who provides healing and ATK SPD buffs to his team.",
+  "weapons": [
+    {
+      "name": "Favonius Lance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Lance.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Black Tassel",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Black_Tassel.png",
+      "note": "HP%"
+    },
+    {
+      "name": "The Catch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Catch.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Ocean-Hued Clam (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP%" },
+    { "type": "Circlet", "value": "Healing Bonus / HP%" }
+  ],
+  "substats": ["HP%", "Energy Recharge", "Healing Bonus", "ATK%"],
+  "talents": [
+    "Normal Attack: Spear of Favonius - Arrow's Passage",
+    "Starfrost Swirl",
+    "Skyfeather Song"
+  ],
+  "info": "Mika is a Cryo support who excels at healing and increasing ATK SPD for his team. Build him for HP%, Energy Recharge, and Healing Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Favonius Lance",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Lance.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Mika" },
+      { "name": "Eula" },
+      { "name": "Raiden Shogun" },
+      { "name": "Rosaria" }
+    ],
+    [
+      { "name": "Mika" },
+      { "name": "Eula" },
+      { "name": "Yelan" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Mika" },
+      { "name": "Ayaka" },
+      { "name": "Shenhe" },
+      { "name": "Kokomi" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Spear of Favonius - Arrow's Passage",
+      "desc": "Performs up to 5 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Spear_of_Favonius_Arrows_Passage.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.0%",
+          "hit2": "42.3%",
+          "hit3": "53.6%",
+          "hit4": "56.1%",
+          "hit5": "67.9%",
+          "charged": "110%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "47.6%",
+          "hit2": "45.7%",
+          "hit3": "57.9%",
+          "hit4": "60.7%",
+          "hit5": "73.5%",
+          "charged": "120%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Starfrost Swirl",
+      "desc": "Mika uses his crossbow to fire a Flowfrost Arrow that deals Cryo DMG and grants Soulwind to nearby active characters, increasing their ATK SPD. Hold: Fires a Rimestar Flare that can hit multiple enemies, granting Soulwind and additional healing.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Starfrost_Swirl.png",
+      "details_html": "<div class='skill-section'><b>Press</b><br>Fires a Flowfrost Arrow that deals Cryo DMG and grants Soulwind, increasing ATK SPD.</div><div class='skill-section'><b>Hold</b><br>Fires a Rimestar Flare that splits into up to 3 Rimestar Shards, each dealing Cryo DMG and granting Soulwind and healing to hit characters.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "arrow_dmg": "66.7% ATK",
+          "flare_dmg": "87.2% ATK",
+          "shard_dmg": "25.0% ATK",
+          "atkspd_bonus": "8%",
+          "cd": "15s"
+        },
+        {
+          "level": 2,
+          "arrow_dmg": "71.8% ATK",
+          "flare_dmg": "94.0% ATK",
+          "shard_dmg": "27.0% ATK",
+          "atkspd_bonus": "8.6%",
+          "cd": "15s"
+        }
+      ]
+    },
+    {
+      "name": "Skyfeather Song",
+      "desc": "Mika regenerates HP for all nearby party members based on his Max HP and grants the Eagleplume effect, which triggers healing when Normal Attacks hit enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Skyfeather_Song.png",
+      "details_html": "<div class='skill-section'><b>Skyfeather Song</b><br>Regenerates HP for all nearby party members based on Mika's Max HP and grants Eagleplume, which triggers healing when Normal Attacks hit enemies.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_heal": "10.44% Max HP + 1011",
+          "eagleplume_heal": "2.5% Max HP + 243",
+          "duration": "15s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 2,
+          "burst_heal": "11.22% Max HP + 1112",
+          "eagleplume_heal": "2.7% Max HP + 267",
+          "duration": "15s",
+          "cd": "18s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Suppressive Barrage",
+      "phase": "Ascension Phase 1",
+      "desc": "When characters affected by Soulwind from Starfrost Swirl score a CRIT Hit, they gain a stack of Detector, increasing Physical DMG."
+    },
+    {
+      "name": "Topographical Mapping",
+      "phase": "Ascension Phase 4",
+      "desc": "Each stack of Detector increases the Physical DMG Bonus of the active character by 10%. Max 3 stacks."
+    },
+    {
+      "name": "Demarcation",
+      "phase": "Passive",
+      "desc": "Displays the location of nearby resources unique to Mondstadt on the mini-map."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Factor Confluence",
+      "phase": "Constellation Lv. 1",
+      "desc": "The Soulwind effect from Starfrost Swirl grants 1 additional stack of Detector."
+    },
+    {
+      "name": "Companion's Ingress",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Mika's own Skyfeather Song's Eagleplume state heals a character, Mika regenerates 3 Energy."
+    },
+    {
+      "name": "Reconnaissance Experience",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Skyfeather Song by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Sunfrost Encomium",
+      "phase": "Constellation Lv. 4",
+      "desc": "When characters affected by Soulwind from Starfrost Swirl score a CRIT Hit, Mika's own ATK SPD is increased by 10% for 8s."
+    },
+    {
+      "name": "Signal Arrow",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Starfrost Swirl by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Companion's Counsel",
+      "phase": "Constellation Lv. 6",
+      "desc": "The maximum number of Detector stacks from Soulwind is increased to 4."
+    }
+  ]
+}

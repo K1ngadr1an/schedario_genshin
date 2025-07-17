@@ -1,0 +1,190 @@
+{
+  "displayName": "Yanfei",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yanfei_Icon.png",
+  "tags": ["Catalyst", "Pyro", "Liyue", "4★", "DPS", "Charged Attack"],
+  "description": "Yanfei è un avvocato di Liyue che utilizza il potere del Pyro. Eccelle negli attacchi caricati e nel danno Pyro, specialmente con le sue Seal of Approval.",
+  "weapons": [
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Solar Pearl",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Solar_Pearl.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Skyward Atlas",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Skyward_Atlas.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Dodoco Tales",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Dodoco_Tales.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Mappa Mare",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Mappa_Mare.png",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Wanderer's Troupe (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Wanderers_Troupe.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Wanderer's Troupe (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (2) + Crimson Witch of Flames (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": ["Normal Attack: Seal of Approval", "Signed Edict", "Done Deal"],
+  "info": "Yanfei si concentra su attacchi caricati e danno Pyro. Priorità a CRIT, ATK% e Elemental Mastery per massimizzare i danni da Vaporize/Melt.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Lost Prayer to the Sacred Winds",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Crimson Witch of Flames (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Yanfei" },
+      { "name": "Xingqiu" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Yanfei" },
+      { "name": "Xingqiu" },
+      { "name": "Zhongli" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Yanfei" },
+      { "name": "Yelan" },
+      { "name": "Bennett" },
+      { "name": "Kazuha" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Seal of Approval",
+      "desc": "Performs up to 3 attacks using fire, dealing Pyro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yanfei_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 3 attacks using fire, dealing Pyro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes Stamina and all Seal of Approval stacks to dive towards the ground from mid-air, damaging all enemies in her path and dealing AoE Pyro DMG upon impact.</div><div class='skill-section'><b>Plunging Attack</b><br>Gathering the power of Pyro, plunges toward the ground from mid-air, damaging all enemies in her path and dealing AoE Pyro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "58.3%",
+          "hit2": "52.1%",
+          "hit3": "76.8%",
+          "charged": "157%",
+          "plunge": "60%",
+          "lowhigh": "120% / 150%"
+        }
+      ]
+    },
+    {
+      "name": "Signed Edict",
+      "desc": "Yanfei creates a Scarlet Seal that deals AoE Pyro DMG and grants her the maximum number of Seal of Approval stacks.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yanfei_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Signed Edict</b><br>Yanfei creates a Scarlet Seal that deals AoE Pyro DMG and grants her the maximum number of Seal of Approval stacks.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "169% ATK", "seals_granted": 3, "cd": "9s" }
+      ]
+    },
+    {
+      "name": "Done Deal",
+      "desc": "Yanfei creates a firestorm that deals massive Pyro DMG to all nearby enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yanfei_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Done Deal</b><br>Yanfei creates a firestorm that deals massive Pyro DMG to all nearby enemies.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "425% ATK",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Encyclopedic Expertise",
+      "phase": "Ascension Phase 1",
+      "desc": "Displays the location of nearby resources unique to Liyue on the mini-map."
+    },
+    {
+      "name": "Blazing Eye",
+      "phase": "Ascension Phase 4",
+      "desc": "When Yanfei's Charged Attack deals a CRIT Hit to opponents, she will deal an additional instance of AoE Pyro DMG equal to 80% of her ATK. This DMG counts as Charged Attack DMG."
+    },
+    {
+      "name": "Proviso",
+      "phase": "Passive",
+      "desc": "When Yanfei consumes Seal of Approval, each Seal consumed will increase Yanfei's Pyro DMG Bonus by 5%. This effect lasts for 6s. When a Seal of Approval is consumed, the effect will be calculated based on the number of Seals consumed."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "The Law Knows No Kindness",
+      "phase": "Constellation Lv. 1",
+      "desc": "When Yanfei uses her Charged Attack, each existing Seal of Approval additionally reduces the Stamina cost of this Charged Attack by 10% and increases resistance against interruption during release."
+    },
+    {
+      "name": "Right of Final Interpretation",
+      "phase": "Constellation Lv. 2",
+      "desc": "Increases Yanfei's Charged Attack CRIT Rate by 20% against enemies below 50% HP."
+    },
+    {
+      "name": "Samadhi Fire-Forged",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Done Deal by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Supreme Amnesty",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Done Deal is used: Creates a shield that absorbs up to 45% of Yanfei's Max HP for 15s. This shield absorbs Pyro DMG 250% more effectively."
+    },
+    {
+      "name": "Abiding Affidavit",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Signed Edict by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Extra Clause",
+      "phase": "Constellation Lv. 6",
+      "desc": "Increases the maximum number of Seal of Approval by 1."
+    }
+  ]
+}

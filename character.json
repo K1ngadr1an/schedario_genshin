@@ -1,0 +1,880 @@
+{
+  "characters": [
+    {
+      "name": "Albedo",
+      "element": "Geo",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/albedo/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Alhaitham",
+      "element": "Dendro",
+      "weapon": "Sword",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/alhaitham/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Aloy",
+      "element": "Cryo",
+      "weapon": "Bow",
+      "region": "Other",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/aloy/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Amber",
+      "element": "Pyro",
+      "weapon": "Bow",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/amber/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Arataki Itto",
+      "element": "Geo",
+      "weapon": "Claymore",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/arataki_itto/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Arlecchino",
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "region": "Fontaine",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/arlecchino/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Baizhu",
+      "element": "Dendro",
+      "weapon": "Catalyst",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/baizhu/image.png?strip=all&quality=100&w=160"
+    },
+
+    {
+      "name": "Barbara",
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/barbara/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Beidou",
+      "element": "Electro",
+      "weapon": "Claymore",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/beidou/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Bennett",
+      "element": "Pyro",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/bennett/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Candace",
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "region": "Snezhnaya",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/candace/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Charlotte",
+      "element": "Cryo",
+      "weapon": "Catalyst",
+      "region": "Fontaine",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/charlotte/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Chasca",
+      "element": "Anemo",
+      "weapon": "Bow",
+      "region": "Natlan",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/chasca/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Chevreuse",
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "region": "Fontaine",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/chevreuse/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Chiori",
+      "element": "Geo",
+      "weapon": "Sword",
+      "region": "Fontaine",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/chiori/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Chongyun",
+      "element": "Cryo",
+      "weapon": "Claymore",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/chongyun/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Citlali",
+      "element": "Cryo",
+      "weapon": "Catalyst",
+      "region": "Natlan",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/citlali/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Clorinde",
+      "element": "Electro",
+      "weapon": "Sword",
+      "region": "Fontaine",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/clorinde/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Collei",
+      "element": "Dendro",
+      "weapon": "Bow",
+      "region": "Sumeru",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/collei/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Cyno",
+      "element": "Electro",
+      "weapon": "Polearm",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/cyno/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Dahlia",
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/dahlia/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Dehya",
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/dehya/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Diluc",
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/diluc/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Diona",
+      "element": "Cryo",
+      "weapon": "Bow",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/diona/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Dori",
+      "element": "Electro",
+      "weapon": "Claymore",
+      "region": "Sumeru",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/dori/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Emilie",
+      "element": "Dendro",
+      "weapon": "Catalyst",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/emilie/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Escoffier",
+      "element": "Cryo",
+      "weapon": "Polearm",
+      "region": "Fontaine",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/escoffier/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Eula",
+      "element": "Cryo",
+      "weapon": "Claymore",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/eula/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Faruzan",
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/faruzan/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Fischl",
+      "element": "Electro",
+      "weapon": "Bow",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/fischl/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Freminet",
+      "element": "Cryo",
+      "weapon": "Claymore",
+      "region": "Fontaine",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/freminet/image.png?strip=all&quality=100&w=160"
+    },
+
+    {
+      "name": "Furina",
+      "element": "Hydro",
+      "weapon": "Sword",
+      "region": "Fontaine",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/furina/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Gaming",
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "region": "Sumeru",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/gaming/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Ganyu",
+      "element": "Cryo",
+      "weapon": "Bow",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/ganyu/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Gorou",
+      "element": "Geo",
+      "weapon": "Bow",
+      "region": "Inazuma",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/gorou/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Hu Tao",
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/hu_tao/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Iansan",
+      "element": "Electro",
+      "weapon": "Polearm",
+      "region": "Natlan",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/iansan/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Ifa",
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "region": "Natlan",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/ifa/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Jean",
+      "element": "Anemo",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/jean/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kachina",
+      "element": "Geo",
+      "weapon": "Polearm",
+      "region": "Natlan",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kachina/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kaeya",
+      "element": "Cryo",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kaeya/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kamisato Ayaka",
+      "element": "Cryo",
+      "weapon": "Sword",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kamisato_ayaka/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kamisato Ayato",
+      "element": "Hydro",
+      "weapon": "Sword",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kamisato_ayato/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kaveh",
+      "element": "Dendro",
+      "weapon": "Claymore",
+      "region": "Sumeru",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kaveh/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kazuha",
+      "element": "Anemo",
+      "weapon": "Sword",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kaedehara_kazuha/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Keqing",
+      "element": "Electro",
+      "weapon": "Sword",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/keqing/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kinich",
+      "element": "Dendro",
+      "weapon": "Claymore",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kinich/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kirara",
+      "element": "Dendro",
+      "weapon": "Sword",
+      "region": "Inazuma",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kirara/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Klee",
+      "element": "Pyro",
+      "weapon": "Catalyst",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/klee/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kujou sara",
+      "element": "Electro",
+      "weapon": "Bow",
+      "region": "Inazuma",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kujou_sara/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Kuki Shinobu",
+      "element": "Electro",
+      "weapon": "Sword",
+      "region": "Inazuma",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/kuki_shinobu/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Lan Yan",
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/lan_yan/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Layla",
+      "element": "Cryo",
+      "weapon": "Sword",
+      "region": "Sumeru",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/layla/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Lisa",
+      "element": "Electro",
+      "weapon": "Catalyst",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/lisa/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Lynette",
+      "element": "Anemo",
+      "weapon": "Sword",
+      "region": "Fontaine",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/lynette/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Lyney",
+      "element": "Pyro",
+      "weapon": "Bow",
+      "region": "Fontaine",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/lyney/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Mavuika",
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "region": "Natlan",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/mavuika/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Mika",
+      "element": "Dendro",
+      "weapon": "Catalyst",
+      "region": "Sumeru",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/mika/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Mona",
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/mona/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Mualani",
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "region": "Natlan",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/mualani/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Nahida",
+      "element": "Dendro",
+      "weapon": "Catalyst",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/nahida/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Navia",
+      "element": "Geo",
+      "weapon": "Claymore",
+      "region": "Fontaine",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/navia/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Neuvillette",
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "region": "Fontaine",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/neuvillette/image.png?strip=all&quality=100&w=160"
+    },
+
+    {
+      "name": "Nilou",
+      "element": "Hydro",
+      "weapon": "Sword",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/nilou/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Ningguang",
+      "element": "Geo",
+      "weapon": "Catalyst",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/ningguang/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Noelle",
+      "element": "Geo",
+      "weapon": "Claymore",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/noelle/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Ororon",
+      "element": "Electro",
+      "weapon": "Bow",
+      "region": "Natlan",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/ororon/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Qiqi",
+      "element": "Cryo",
+      "weapon": "Sword",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/qiqi/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Raiden Shogun",
+      "element": "Electro",
+      "weapon": "Polearm",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/raiden_shogun/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Razor",
+      "element": "Electro",
+      "weapon": "Claymore",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/razor/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Rosaria",
+      "element": "Cryo",
+      "weapon": "Polearm",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/rosaria/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Sangonomiya Kokomi",
+      "element": "Hydro",
+      "weapon": "Catalyst",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/sangonomiya_kokomi/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Sayu",
+      "element": "Anemo",
+      "weapon": "Claymore",
+      "region": "Inazuma",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/sayu/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Sethos",
+      "element": "Electro",
+      "weapon": "Bow",
+      "region": "Sumeru",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/sethos/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Shenhe",
+      "element": "Cryo",
+      "weapon": "Polearm",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/shenhe/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Shikanoin Heizou",
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "region": "Inazuma",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/shikanoin_heizou/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Sigewinne",
+      "element": "Hydro",
+      "weapon": "Bow",
+      "region": "Fontaine",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/sigewinne/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Skirk",
+      "element": "Cryo",
+      "weapon": "Sword",
+      "region": "Snezhnaya",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/skirk/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Sucrose",
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "region": "Mondstadt",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/sucrose/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Tartaglia",
+      "element": "Hydro",
+      "weapon": "Bow",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/tartaglia/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Thoma",
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "region": "Inazuma",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/thoma/image.png?strip=all&quality=100&w=160g"
+    },
+    {
+      "name": "Tighnari",
+      "element": "Dendro",
+      "weapon": "Bow",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/tighnari/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Traveler (Anemo)",
+      "element": "Anemo",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://img.game8.co/3951444/77bf0f9b4d7add4544b2842571dafff0.png/show"
+    },
+    {
+      "name": "Traveler (Dendro)",
+      "element": "Dendro",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://img.game8.co/3951446/8cfd19bccc70f8dad32356ea7b58d52a.png/show"
+    },
+    {
+      "name": "Traveler (Electro)",
+      "element": "Electro",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://img.game8.co/3951447/5e47ae06ab6b01c67e15f2cff36a3cb8.png/show"
+    },
+    {
+      "name": "Traveler (Geo)",
+      "element": "Geo",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://img.game8.co/3951449/f7f5a49dada5bb84175e0373f737ea56.png/show"
+    },
+    {
+      "name": "Traveler (Hydro)",
+      "element": "Hydro",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://img.game8.co/3951451/171b616bab2df3f8a6e4189dc98362e5.png/show"
+    },
+    {
+      "name": "Traveler (Pyro)",
+      "element": "Pyro",
+      "weapon": "Sword",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://img.game8.co/3972370/a7e9dfe5dc74d8ce9f7fba757681b090.png/show"
+    },
+    {
+      "name": "Varesa",
+      "element": "Electro",
+      "weapon": "Catalyst",
+      "region": "Natlan",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/varesa/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Venti",
+      "element": "Anemo",
+      "weapon": "Bow",
+      "region": "Mondstadt",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/venti/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Wanderer",
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "region": "Sumeru",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/wanderer/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Wriothesley",
+      "element": "Cryo",
+      "weapon": "Catalyst",
+      "region": "Fontaine",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/wriothesley/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Xiangling",
+      "element": "Pyro",
+      "weapon": "Polearm",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/xiangling/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Xianyun",
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/xianyun/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Xiao",
+      "element": "Anemo",
+      "weapon": "Polearm",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/xiao/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Xilonen",
+      "element": "geo",
+      "weapon": "Sword",
+      "region": "Natlan",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/xilonen/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Xingqiu",
+      "element": "Hydro",
+      "weapon": "Sword",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/xingqiu/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Xinyan",
+      "element": "Pyro",
+      "weapon": "Claymore",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/xinyan/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Yae Miko",
+      "element": "Electro",
+      "weapon": "Catalyst",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/yae_miko/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "YaoYao",
+      "element": "Dendro",
+      "weapon": "Polearm",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/yaoyao/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Yanfei",
+      "element": "Pyro",
+      "weapon": "Catalyst",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/yanfei/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Yelan",
+      "element": "Hydro",
+      "weapon": "Bow",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/yelan/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Yoimiya",
+      "element": "Pyro",
+      "weapon": "Bow",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/yoimiya/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Yumemizuki Mizuki",
+      "element": "Anemo",
+      "weapon": "Catalyst",
+      "region": "Inazuma",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/yumemizuki_mizuki/image.png?strip=all&quality=100&w=160"
+    },
+    {
+      "name": "Yun Jin",
+      "element": "Geo",
+      "weapon": "Polearm",
+      "region": "Liyue",
+      "rarity": 4,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/yun_jin/image.png?strip=all&quality=100&w=160"
+    },
+
+    {
+      "name": "Zhongli",
+      "element": "Geo",
+      "weapon": "Polearm",
+      "region": "Liyue",
+      "rarity": 5,
+      "image": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/zhongli/image.png?strip=all&quality=100&w=160"
+    }
+  ],
+  "elements": {
+    "Anemo": "💨",
+    "Geo": "🌱",
+    "Electro": "⚡",
+    "Dendro": "🌿",
+    "Hydro": "💧",
+    "Pyro": "🔥",
+    "Cryo": "❄️"
+  },
+  "weapons": {
+    "Sword": "⚔️",
+    "Claymore": "🗡️",
+    "Polearm": "🔱",
+    "Bow": "🏹",
+    "Catalyst": "📖"
+  },
+  "regions": {
+    "Mondstadt": "🏰",
+    "Liyue": "🏮",
+    "Inazuma": "⚡",
+    "Sumeru": "🌿",
+    "Snezhnaya": "❄️",
+    "Other": "🌍"
+  }
+}

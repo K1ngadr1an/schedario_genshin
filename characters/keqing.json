@@ -1,0 +1,212 @@
+{
+  "displayName": "Keqing",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Electro", "Sword", "Liyue", "5★", "DPS", "Crit"],
+  "description": "The Yuheng of the Liyue Qixing, Keqing is an Electro sword user who excels at fast attacks and high single-target damage.",
+  "weapons": [
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mistsplitter_Reforged.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Cutter.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Black_Sword.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Lion's Roar",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lion's_Roar.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Thundering Fury (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+    },
+    {
+      "name": "Gladiator’s Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    },
+    {
+      "name": "Thundering Fury (2) + Gladiator’s Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Electro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Yunlai Swordsmanship",
+    "Stellar Restoration",
+    "Starward Sword"
+  ],
+  "info": "Keqing is a fast Electro DPS who excels at single-target damage and quick Electro application. Build her for CRIT, Electro DMG, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Mistsplitter Reforged",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mistsplitter_Reforged.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Thundering Fury (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Keqing" },
+      { "name": "Fischl" },
+      { "name": "Bennett" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Keqing" },
+      { "name": "Xingqiu" },
+      { "name": "Beidou" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Keqing" },
+      { "name": "Diona" },
+      { "name": "Mona" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Yunlai Swordsmanship",
+      "desc": "Performs up to 5 rapid strikes with a sword.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Yunlai_Swordsmanship.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes with a sword.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "41.0%",
+          "hit2": "41.0%",
+          "hit3": "54.4%",
+          "hit4": "58.3%",
+          "hit5": "70.1%",
+          "charged": "55.0% + 66.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "44.3%",
+          "hit2": "44.3%",
+          "hit3": "58.8%",
+          "hit4": "63.2%",
+          "hit5": "76.0%",
+          "charged": "60.0% + 72.9%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Stellar Restoration",
+      "desc": "Keqing hurls a Lightning Stiletto, dealing Electro DMG and allowing her to teleport to its location for a follow-up slash.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Stellar_Restoration.png",
+      "details_html": "<div class='skill-section'><b>Stellar Restoration</b><br>Hurls a Lightning Stiletto, dealing Electro DMG and allowing Keqing to teleport to its location for a follow-up slash. Hold to adjust the direction of the Stiletto.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "stiletto_dmg": "50.4% ATK",
+          "slash_dmg": "168% ATK",
+          "cd": "7.5s"
+        },
+        {
+          "level": 2,
+          "stiletto_dmg": "54.2% ATK",
+          "slash_dmg": "181% ATK",
+          "cd": "7.5s"
+        }
+      ]
+    },
+    {
+      "name": "Starward Sword",
+      "desc": "Keqing unleashes a series of swift slashes, dealing massive AoE Electro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Starward_Sword.png",
+      "details_html": "<div class='skill-section'><b>Starward Sword</b><br>Unleashes a series of swift slashes, dealing massive AoE Electro DMG. Lasts for 2s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "88.0% x 8 + 189%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "94.6% x 8 + 203%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Thundering Penance",
+      "phase": "Ascension Phase 1",
+      "desc": "After recasting Stellar Restoration, Keqing's Normal and Charged Attacks deal 50% increased Electro DMG for 5s."
+    },
+    {
+      "name": "Aristocratic Dignity",
+      "phase": "Ascension Phase 4",
+      "desc": "Using Starward Sword increases Keqing's CRIT Rate by 15% and Energy Recharge by 15% for 8s."
+    },
+    {
+      "name": "Land's Overseer",
+      "phase": "Passive",
+      "desc": "When dispatched on an expedition in Liyue, time consumed is reduced by 25%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Thundering Might",
+      "phase": "Constellation Lv. 1",
+      "desc": "Recasting Stellar Restoration while a Lightning Stiletto is present causes Keqing to deal 50% of her ATK as AoE Electro DMG at the start and end of her teleport."
+    },
+    {
+      "name": "Keen Extraction",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Keqing's Normal and Charged Attacks hit enemies affected by Electro, they have a 50% chance to produce an Elemental Particle. Can only occur once every 5s."
+    },
+    {
+      "name": "Foreseen Reformation",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Stellar Restoration by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Attunement",
+      "phase": "Constellation Lv. 4",
+      "desc": "For 10s after triggering an Electro-related Elemental Reaction, Keqing's ATK is increased by 25%."
+    },
+    {
+      "name": "Beckoning Stars",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Starward Sword by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Tenacious Star",
+      "phase": "Constellation Lv. 6",
+      "desc": "Keqing's CRIT DMG is increased by 30% and her Normal and Charged Attacks unleash a Lightning Stiletto on hit."
+    }
+  ]
+}

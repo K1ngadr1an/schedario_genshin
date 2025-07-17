@@ -1,0 +1,205 @@
+{
+  "displayName": "Mona",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Mona_Icon.png",
+  "tags": [
+    "Catalyst",
+    "Hydro",
+    "Mondstadt",
+    "5★",
+    "Support",
+    "Burst DPS",
+    "Astrologer"
+  ],
+  "description": "A mysterious astrologer from Mondstadt, Mona is a powerful Hydro catalyst user who excels at supporting her team with strong buffs and devastating Burst damage.",
+  "weapons": [
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Favonius Codex",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Codex.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (2) + Emblem of Severed Fate (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge / ATK%" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK%"],
+  "talents": [
+    "Normal Attack: Ripple of Fate",
+    "Mirror Reflection of Doom",
+    "Stellaris Phantasm"
+  ],
+  "info": "Mona is a Hydro support and Burst DPS who excels at enabling powerful Elemental Reactions and boosting team damage with her Burst. Build her for Energy Recharge, Hydro DMG Bonus, and CRIT stats.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "The Widsith",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Mona" },
+      { "name": "Ayaka" },
+      { "name": "Shenhe" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Mona" },
+      { "name": "Ganyu" },
+      { "name": "Venti" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Mona" },
+      { "name": "Tartaglia" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Ripple of Fate",
+      "desc": "Performs up to 4 water splash attacks that deal Hydro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Ripple_of_Fate.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 water splash attacks that deal Hydro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to deal AoE Hydro DMG after a short casting time.</div><div class='skill-section'><b>Plunging Attack</b><br>Gathering the might of Hydro, Mona plunges towards the ground from mid-air, damaging all enemies in her path and dealing AoE Hydro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "37.6%",
+          "hit2": "36.0%",
+          "hit3": "44.8%",
+          "hit4": "56.2%",
+          "charged": "150.5%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "40.6%",
+          "hit2": "38.9%",
+          "hit3": "48.5%",
+          "hit4": "60.8%",
+          "charged": "162.5%",
+          "plunge": "61.0%",
+          "lowhigh": "122.1% / 152.6%"
+        }
+      ]
+    },
+    {
+      "name": "Mirror Reflection of Doom",
+      "desc": "Creates an illusory Phantom of fate that taunts nearby enemies and deals continuous Hydro DMG. The Phantom explodes at the end of its duration, dealing AoE Hydro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Mirror_Reflection_of_Doom.png",
+      "details_html": "<div class='skill-section'><b>Mirror Reflection of Doom</b><br>Creates a Phantom that taunts enemies and deals continuous Hydro DMG. Explodes at the end, dealing AoE Hydro DMG.</div>",
+      "levels": [
+        { "level": 1, "dot": "32.0%", "explosion": "132%", "cd": "12s" },
+        { "level": 2, "dot": "34.4%", "explosion": "142%", "cd": "12s" }
+      ]
+    },
+    {
+      "name": "Stellaris Phantasm",
+      "desc": "Mona summons the sparkling waves and creates an illusory bubble that imprisons enemies, applies the Omen debuff (increasing DMG taken), and deals massive Hydro DMG when the bubble bursts.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Stellaris_Phantasm.png",
+      "details_html": "<div class='skill-section'><b>Stellaris Phantasm</b><br>Applies an Omen to enemies, increasing the DMG they take, and deals massive Hydro DMG when the bubble bursts.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "442%",
+          "omen_bonus": "42%",
+          "duration": "5s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "475%",
+          "omen_bonus": "45%",
+          "duration": "5s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Come 'n' Get Me, Hag!",
+      "phase": "Ascension Phase 1",
+      "desc": "After she sprints using the Illusory Torrent, Mona gains a 15% Hydro DMG Bonus for 8s."
+    },
+    {
+      "name": "Waterborne Destiny",
+      "phase": "Ascension Phase 4",
+      "desc": "Increases Mona's Hydro DMG Bonus by a degree equivalent to 20% of her Energy Recharge rate."
+    },
+    {
+      "name": "Principium of Astrology",
+      "phase": "Passive",
+      "desc": "Refunds 25% of the materials used when crafting Weapon Ascension Materials."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Prophecy of Submersion",
+      "phase": "Constellation Lv. 1",
+      "desc": "The effects of Hydro-related Elemental Reactions are enhanced for party members under the effect of Omen."
+    },
+    {
+      "name": "Lunar Chain",
+      "phase": "Constellation Lv. 2",
+      "desc": "When a Normal Attack hits, Mona has a 20% chance to automatically perform a Charged Attack."
+    },
+    {
+      "name": "Restless Revolution",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Stellaris Phantasm by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Prophecy of Oblivion",
+      "phase": "Constellation Lv. 4",
+      "desc": "When any party member attacks an enemy affected by an Omen, their CRIT Rate is increased by 15%."
+    },
+    {
+      "name": "Mockery of Fortuna",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Mirror Reflection of Doom by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Rhetorics of Calamitas",
+      "phase": "Constellation Lv. 6",
+      "desc": "Upon entering Illusory Torrent, Mona gains a 60% increase to the DMG of her next Charged Attack per second of movement, up to 180%."
+    }
+  ]
+}

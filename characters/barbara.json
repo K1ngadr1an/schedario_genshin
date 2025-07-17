@@ -1,0 +1,684 @@
+{
+  "barbara": {
+    "displayName": "Barbara",
+    "description": "La idol di Mondstadt, guaritrice Hydro.",
+    "tags": ["Hydro", "Catalyst", "4★", "Healer"],
+    "weapons": [
+      {
+        "name": "Thrilling Tales of Dragon Slayers",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thrilling_Tales_of_Dragon_Slayers.png"
+      },
+      {
+        "name": "Prototype Amber",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Prototype_Amber.png"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Maiden Beloved",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Maiden_Beloved.png"
+      },
+      {
+        "name": "Ocean-Hued Clam",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Ocean-Hued_Clam.png"
+      }
+    ],
+    "stats": [
+      { "type": "Base HP", "value": "9787" },
+      { "type": "Base ATK", "value": "159" },
+      { "type": "Base DEF", "value": "669" }
+    ],
+    "substats": ["HP%", "Healing Bonus", "Energy Recharge"],
+    "talents": [
+      "Normal Attack: Whisper of Water",
+      "Let the Show Begin",
+      "Shining Miracle!"
+    ],
+    "info": "Barbara è una delle migliori healer a 4★, ottima per team Hydro e per la sopravvivenza.",
+    "community_build": [],
+    "best_teams": [
+      [
+        { "name": "Barbara" },
+        { "name": "Xingqiu" },
+        { "name": "Sucrose" },
+        { "name": "Bennett" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Whisper of Water",
+        "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+        "desc": "Performs up to 4 water splash attacks that deal Hydro DMG.",
+        "icon": "https://sunderarmor.com/GENSHIN/Skill/UI_GachaTypeIcon_Catalyst.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 water splash attacks that deal <span style='color:#4fc3f7;font-weight:bold;'>Hydro DMG</span>.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to deal <span style='color:#4fc3f7;font-weight:bold;'>AoE Hydro DMG</span> after a short casting time.</div><div class='skill-section'><b>Plunging Attack</b><br>Gathering the might of Hydro, Barbara plunges towards the ground from mid-air, damaging all opponents in her path. Deals <span style='color:#4fc3f7;font-weight:bold;'>AoE Hydro DMG</span> upon impact with the ground.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "30.8%",
+            "hit2": "35.5%",
+            "hit3": "41%",
+            "hit4": "55.2%",
+            "charged": "166.2%",
+            "stamina": "50",
+            "plunge": "56.8%",
+            "lowhigh": "113.6% / 141.9%"
+          },
+          {
+            "level": 2,
+            "hit1": "40.8%",
+            "hit2": "38.3%",
+            "hit3": "44.3%",
+            "hit4": "59.6%",
+            "charged": "179.1%",
+            "stamina": "50",
+            "plunge": "61.0%",
+            "lowhigh": "122.0% / 152.4%"
+          },
+          {
+            "level": 3,
+            "hit1": "43.8%",
+            "hit2": "41.1%",
+            "hit3": "47.6%",
+            "hit4": "64.0%",
+            "charged": "192.0%",
+            "stamina": "50",
+            "plunge": "65.2%",
+            "lowhigh": "130.4% / 162.9%"
+          },
+          {
+            "level": 4,
+            "hit1": "47.2%",
+            "hit2": "44.3%",
+            "hit3": "51.3%",
+            "hit4": "68.9%",
+            "charged": "206.4%",
+            "stamina": "50",
+            "plunge": "70.1%",
+            "lowhigh": "140.1% / 174.9%"
+          },
+          {
+            "level": 5,
+            "hit1": "50.2%",
+            "hit2": "47.1%",
+            "hit3": "54.6%",
+            "hit4": "73.3%",
+            "charged": "219.3%",
+            "stamina": "50",
+            "plunge": "74.3%",
+            "lowhigh": "148.5% / 185.4%"
+          },
+          {
+            "level": 6,
+            "hit1": "53.2%",
+            "hit2": "49.9%",
+            "hit3": "57.9%",
+            "hit4": "77.7%",
+            "charged": "232.2%",
+            "stamina": "50",
+            "plunge": "78.5%",
+            "lowhigh": "156.9% / 195.9%"
+          },
+          {
+            "level": 7,
+            "hit1": "56.6%",
+            "hit2": "53.1%",
+            "hit3": "61.6%",
+            "hit4": "82.6%",
+            "charged": "246.6%",
+            "stamina": "50",
+            "plunge": "83.4%",
+            "lowhigh": "166.7% / 207.9%"
+          },
+          {
+            "level": 8,
+            "hit1": "60.0%",
+            "hit2": "56.3%",
+            "hit3": "65.3%",
+            "hit4": "87.5%",
+            "charged": "261.0%",
+            "stamina": "50",
+            "plunge": "88.3%",
+            "lowhigh": "176.5% / 219.9%"
+          },
+          {
+            "level": 9,
+            "hit1": "63.4%",
+            "hit2": "59.5%",
+            "hit3": "69.0%",
+            "hit4": "92.4%",
+            "charged": "275.4%",
+            "stamina": "50",
+            "plunge": "93.2%",
+            "lowhigh": "186.3% / 231.9%"
+          },
+          {
+            "level": 10,
+            "hit1": "66.8%",
+            "hit2": "62.7%",
+            "hit3": "72.7%",
+            "hit4": "97.3%",
+            "charged": "289.8%",
+            "stamina": "50",
+            "plunge": "98.1%",
+            "lowhigh": "196.1% / 243.9%"
+          },
+          {
+            "level": 11,
+            "hit1": "70.2%",
+            "hit2": "65.9%",
+            "hit3": "76.4%",
+            "hit4": "102.2%",
+            "charged": "304.2%",
+            "stamina": "50",
+            "plunge": "103.0%",
+            "lowhigh": "205.9% / 255.9%"
+          },
+          {
+            "level": 12,
+            "hit1": "73.6%",
+            "hit2": "69.1%",
+            "hit3": "80.1%",
+            "hit4": "107.1%",
+            "charged": "318.6%",
+            "stamina": "50",
+            "plunge": "107.9%",
+            "lowhigh": "215.7% / 267.9%"
+          },
+          {
+            "level": 13,
+            "hit1": "77.0%",
+            "hit2": "72.3%",
+            "hit3": "83.8%",
+            "hit4": "112.0%",
+            "charged": "333.0%",
+            "stamina": "50",
+            "plunge": "112.8%",
+            "lowhigh": "225.5% / 279.9%"
+          },
+          {
+            "level": 14,
+            "hit1": "80.4%",
+            "hit2": "75.5%",
+            "hit3": "87.5%",
+            "hit4": "116.9%",
+            "charged": "347.4%",
+            "stamina": "50",
+            "plunge": "117.7%",
+            "lowhigh": "235.3% / 291.9%"
+          },
+          {
+            "level": 15,
+            "hit1": "83.8%",
+            "hit2": "78.7%",
+            "hit3": "91.2%",
+            "hit4": "121.8%",
+            "charged": "361.8%",
+            "stamina": "50",
+            "plunge": "122.6%",
+            "lowhigh": "245.1% / 303.9%"
+          }
+        ]
+      },
+      {
+        "name": "Let the Show Begin",
+        "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+        "desc": "Crea un anello d'acqua che cura i membri del party.",
+        "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Barbara/talent_2.png",
+        "levels": [
+          {
+            "level": 1,
+            "hp_regen_per_hit": "0.95% Max HP + 72",
+            "continuous_regen": "4% Max HP + 385",
+            "droplet_dmg": "58.4%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 2,
+            "hp_regen_per_hit": "0.81% Max HP + 79",
+            "continuous_regen": "4.3% Max HP + 424",
+            "droplet_dmg": "62.7%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 3,
+            "hp_regen_per_hit": "0.87% Max HP + 86",
+            "continuous_regen": "4.6% Max HP + 464",
+            "droplet_dmg": "67.0%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 4,
+            "hp_regen_per_hit": "0.93% Max HP + 94",
+            "continuous_regen": "4.9% Max HP + 508",
+            "droplet_dmg": "71.3%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 5,
+            "hp_regen_per_hit": "0.99% Max HP + 101",
+            "continuous_regen": "5.2% Max HP + 554",
+            "droplet_dmg": "75.6%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 6,
+            "hp_regen_per_hit": "1.05% Max HP + 109",
+            "continuous_regen": "5.5% Max HP + 602",
+            "droplet_dmg": "79.9%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 7,
+            "hp_regen_per_hit": "1.11% Max HP + 117",
+            "continuous_regen": "5.8% Max HP + 653",
+            "droplet_dmg": "84.2%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 8,
+            "hp_regen_per_hit": "1.17% Max HP + 125",
+            "continuous_regen": "6.1% Max HP + 706",
+            "droplet_dmg": "88.5%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 9,
+            "hp_regen_per_hit": "1.23% Max HP + 133",
+            "continuous_regen": "6.4% Max HP + 762",
+            "droplet_dmg": "92.8%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 10,
+            "hp_regen_per_hit": "1.29% Max HP + 141",
+            "continuous_regen": "6.7% Max HP + 820",
+            "droplet_dmg": "97.1%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 11,
+            "hp_regen_per_hit": "1.35% Max HP + 149",
+            "continuous_regen": "7.0% Max HP + 881",
+            "droplet_dmg": "101.4%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 12,
+            "hp_regen_per_hit": "1.41% Max HP + 157",
+            "continuous_regen": "7.3% Max HP + 944",
+            "droplet_dmg": "105.7%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 13,
+            "hp_regen_per_hit": "1.47% Max HP + 165",
+            "continuous_regen": "7.6% Max HP + 1010",
+            "droplet_dmg": "110.0%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 14,
+            "hp_regen_per_hit": "1.53% Max HP + 173",
+            "continuous_regen": "7.9% Max HP + 1078",
+            "droplet_dmg": "114.3%",
+            "duration": "15s",
+            "cd": "32s"
+          },
+          {
+            "level": 15,
+            "hp_regen_per_hit": "1.59% Max HP + 181",
+            "continuous_regen": "8.2% Max HP + 1149",
+            "droplet_dmg": "118.6%",
+            "duration": "15s",
+            "cd": "32s"
+          }
+        ]
+      },
+      {
+        "name": "Shining Miracle♪",
+        "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+        "desc": "Heals your own party members and nearby teammates for a large amount of HP that scales with Barbara's Max HP.",
+        "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Barbara/talent_3.png",
+        "levels": [
+          {
+            "level": 1,
+            "regeneration": "17.6% Max HP + 1694",
+            "cd": "90s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 2,
+            "regeneration": "18.9% Max HP + 1863",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 3,
+            "regeneration": "20.2% Max HP + 2042",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 4,
+            "regeneration": "21.8% Max HP + 2240",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 5,
+            "regeneration": "23.1% Max HP + 2450",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 6,
+            "regeneration": "24.4% Max HP + 2671",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 7,
+            "regeneration": "26.0% Max HP + 2903",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 8,
+            "regeneration": "27.6% Max HP + 3147",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 9,
+            "regeneration": "29.2% Max HP + 3403",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 10,
+            "regeneration": "30.8% Max HP + 3671",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 11,
+            "regeneration": "32.4% Max HP + 3951",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 12,
+            "regeneration": "34.0% Max HP + 4243",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 13,
+            "regeneration": "35.6% Max HP + 4547",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 14,
+            "regeneration": "37.2% Max HP + 4863",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 15,
+            "regeneration": "38.8% Max HP + 5191",
+            "cd": "20s",
+            "energy_cost": "80"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Glorious Season",
+        "phase": "Ascension Phase 1",
+        "desc": "Riduce il consumo di stamina durante la corsa per i membri del party."
+      },
+      {
+        "name": "Encore",
+        "phase": "Ascension Phase 4",
+        "desc": "Quando Barbara guarisce un personaggio, la sua ricarica di energia aumenta."
+      },
+      {
+        "name": "With My Whole Heart",
+        "phase": "Passive",
+        "desc": "Cucinando un piatto perfetto, c'è una probabilità di ottenere il doppio."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Gleeful Songs",
+        "desc": "Barbara regenerates 1 Energy every 10s.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_Gleeful_Songs.png",
+        "phase": "Constellation Lv. 1"
+      },
+      {
+        "name": "Vitality Burst",
+        "desc": "Decreases the Stamina Consumption of characters within Let the Show Begin's Melody Loop by 12%.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_Vitality_Burst.png",
+        "phase": "Constellation Lv. 2"
+      },
+      {
+        "name": "Star of Tomorrow",
+        "desc": "Increases the Level of Shining Miracle♪ by 3. Maximum upgrade level is 15.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_Star_of_Tomorrow.png",
+        "phase": "Constellation Lv. 3"
+      },
+      {
+        "name": "Attentiveness be My Power",
+        "desc": "Every opponent Barbara hits with her Charged Attack regenerates 1 Energy for her. A maximum of 5 energy can be regenerated in this manner with any one Charged Attack.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_Attentiveness_be_My_Power.png",
+        "phase": "Constellation Lv. 4"
+      },
+      {
+        "name": "The Purest Companionship",
+        "desc": "Increases the Level of Let the Show Begin by 3. Maximum upgrade level is 15.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_The_Purest_Companionship.png",
+        "phase": "Constellation Lv. 5"
+      },
+      {
+        "name": "Dedicating Everything to You",
+        "desc": "When Barbara is in the party but not on the field, and one of your own party members falls: Revives the fallen character to 100% HP. This effect can only occur once every 15 mins.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_Dedicating_Everything_to_You.png",
+        "phase": "Constellation Lv. 6"
+      }
+    ],
+    "ascension_materials": [
+      {
+        "level": 20,
+        "materials": [
+          { "name": "Mora", "quantity": 20000 },
+          { "name": "Varunada Lazurite Sliver", "quantity": 1 },
+          { "name": "Philanemo Mushroom", "quantity": 3 },
+          { "name": "Divining Scroll", "quantity": 3 }
+        ]
+      },
+      {
+        "level": 40,
+        "materials": [
+          { "name": "Mora", "quantity": 40000 },
+          { "name": "Varunada Lazurite Fragment", "quantity": 3 },
+          { "name": "Cleansing Heart", "quantity": 2 },
+          { "name": "Philanemo Mushroom", "quantity": 10 },
+          { "name": "Divining Scroll", "quantity": 15 }
+        ]
+      },
+      {
+        "level": 50,
+        "materials": [
+          { "name": "Mora", "quantity": 60000 },
+          { "name": "Varunada Lazurite Fragment", "quantity": 6 },
+          { "name": "Cleansing Heart", "quantity": 4 },
+          { "name": "Philanemo Mushroom", "quantity": 20 },
+          { "name": "Sealed Scroll", "quantity": 12 }
+        ]
+      },
+      {
+        "level": 60,
+        "materials": [
+          { "name": "Mora", "quantity": 80000 },
+          { "name": "Varunada Lazurite Chunk", "quantity": 3 },
+          { "name": "Cleansing Heart", "quantity": 8 },
+          { "name": "Philanemo Mushroom", "quantity": 30 },
+          { "name": "Sealed Scroll", "quantity": 18 }
+        ]
+      },
+      {
+        "level": 70,
+        "materials": [
+          { "name": "Mora", "quantity": 100000 },
+          { "name": "Varunada Lazurite Chunk", "quantity": 6 },
+          { "name": "Cleansing Heart", "quantity": 12 },
+          { "name": "Philanemo Mushroom", "quantity": 45 },
+          { "name": "Forbidden Curse Scroll", "quantity": 12 }
+        ]
+      },
+      {
+        "level": 80,
+        "materials": [
+          { "name": "Mora", "quantity": 120000 },
+          { "name": "Varunada Lazurite Gemstone", "quantity": 6 },
+          { "name": "Cleansing Heart", "quantity": 20 },
+          { "name": "Philanemo Mushroom", "quantity": 60 },
+          { "name": "Forbidden Curse Scroll", "quantity": 24 }
+        ]
+      },
+      {
+        "level": 90,
+        "materials": [
+          { "name": "Mora", "quantity": 0 },
+          { "name": "Varunada Lazurite Gemstone", "quantity": 0 },
+          { "name": "Cleansing Heart", "quantity": 0 },
+          { "name": "Philanemo Mushroom", "quantity": 0 },
+          { "name": "Forbidden Curse Scroll", "quantity": 0 }
+        ]
+      },
+      {
+        "total": true,
+        "materials": [
+          { "name": "Mora", "quantity": 420000 },
+          { "name": "Varunada Lazurite Sliver", "quantity": 1 },
+          { "name": "Varunada Lazurite Fragment", "quantity": 9 },
+          { "name": "Varunada Lazurite Chunk", "quantity": 9 },
+          { "name": "Varunada Lazurite Gemstone", "quantity": 6 },
+          { "name": "Cleansing Heart", "quantity": 46 },
+          { "name": "Philanemo Mushroom", "quantity": 168 },
+          { "name": "Divining Scroll", "quantity": 18 },
+          { "name": "Sealed Scroll", "quantity": 30 },
+          { "name": "Forbidden Curse Scroll", "quantity": 36 }
+        ]
+      }
+    ],
+    "talent_materials": [
+      {
+        "level": 2,
+        "materials": [
+          { "name": "Mora", "quantity": 12500 },
+          { "name": "Teachings of Freedom", "quantity": 3 },
+          { "name": "Divining Scroll", "quantity": 6 }
+        ]
+      },
+      {
+        "level": 3,
+        "materials": [
+          { "name": "Mora", "quantity": 17500 },
+          { "name": "Guide to Freedom", "quantity": 2 },
+          { "name": "Sealed Scroll", "quantity": 3 }
+        ]
+      },
+      {
+        "level": 4,
+        "materials": [
+          { "name": "Mora", "quantity": 25000 },
+          { "name": "Guide to Freedom", "quantity": 4 },
+          { "name": "Sealed Scroll", "quantity": 4 }
+        ]
+      },
+      {
+        "level": 5,
+        "materials": [
+          { "name": "Mora", "quantity": 30000 },
+          { "name": "Guide to Freedom", "quantity": 6 },
+          { "name": "Sealed Scroll", "quantity": 6 }
+        ]
+      },
+      {
+        "level": 6,
+        "materials": [
+          { "name": "Mora", "quantity": 37500 },
+          { "name": "Guide to Freedom", "quantity": 9 },
+          { "name": "Sealed Scroll", "quantity": 9 }
+        ]
+      },
+      {
+        "level": 7,
+        "materials": [
+          { "name": "Mora", "quantity": 120000 },
+          { "name": "Philosophies of Freedom", "quantity": 4 },
+          { "name": "Forbidden Curse Scroll", "quantity": 4 },
+          { "name": "Ring of Boreas", "quantity": 1 }
+        ]
+      },
+      {
+        "level": 8,
+        "materials": [
+          { "name": "Mora", "quantity": 260000 },
+          { "name": "Philosophies of Freedom", "quantity": 6 },
+          { "name": "Forbidden Curse Scroll", "quantity": 6 },
+          { "name": "Ring of Boreas", "quantity": 1 }
+        ]
+      },
+      {
+        "level": 9,
+        "materials": [
+          { "name": "Mora", "quantity": 450000 },
+          { "name": "Philosophies of Freedom", "quantity": 12 },
+          { "name": "Forbidden Curse Scroll", "quantity": 9 },
+          { "name": "Ring of Boreas", "quantity": 2 }
+        ]
+      },
+      {
+        "level": 10,
+        "materials": [
+          { "name": "Mora", "quantity": 700000 },
+          { "name": "Philosophies of Freedom", "quantity": 16 },
+          { "name": "Forbidden Curse Scroll", "quantity": 12 },
+          { "name": "Ring of Boreas", "quantity": 2 },
+          { "name": "Crown of Insight", "quantity": 1 }
+        ]
+      },
+      {
+        "total": true,
+        "materials": [
+          { "name": "Mora", "quantity": 1652500 },
+          { "name": "Teachings of Freedom", "quantity": 3 },
+          { "name": "Guide to Freedom", "quantity": 21 },
+          { "name": "Philosophies of Freedom", "quantity": 38 },
+          { "name": "Divining Scroll", "quantity": 6 },
+          { "name": "Sealed Scroll", "quantity": 13 },
+          { "name": "Forbidden Curse Scroll", "quantity": 31 },
+          { "name": "Ring of Boreas", "quantity": 6 },
+          { "name": "Crown of Insight", "quantity": 1 }
+        ]
+      }
+    ]
+  }
+}

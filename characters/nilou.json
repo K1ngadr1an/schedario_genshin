@@ -1,0 +1,207 @@
+{
+  "displayName": "Nilou",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Nilou_Icon.png",
+  "tags": ["Sword", "Hydro", "Sumeru", "5★", "DPS", "Bloom", "Performer"],
+  "description": "A celebrated dancer from Sumeru, Nilou is a Hydro sword user who excels at enabling Bloom reactions and supporting Dendro teams.",
+  "weapons": [
+    {
+      "name": "Key of Khaj-Nisut",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Key_of_Khaj-Nisut.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Sacrificial Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Vourukasha's Glow (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Vourukasha's_Glow.png"
+    },
+    {
+      "name": "Tenacity of the Millelith (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+    },
+    {
+      "name": "Vourukasha's Glow (2) + Tenacity of the Millelith (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP%" },
+    { "type": "Goblet", "value": "HP%" },
+    { "type": "Circlet", "value": "HP%" }
+  ],
+  "substats": ["HP%", "Elemental Mastery", "Energy Recharge", "Flat HP"],
+  "talents": [
+    "Normal Attack: Dance of Samser",
+    "Dance of Haftkarsvar",
+    "Dance of Abzendegi: Distant Dreams, Listening Spring"
+  ],
+  "info": "Nilou is a Hydro DPS/support who specializes in enabling powerful Bloom reactions in Dendro teams. Build her for HP% and Elemental Mastery.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Key of Khaj-Nisut",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Key_of_Khaj-Nisut.png",
+        "note": "HP%"
+      },
+      "artifacts": [
+        {
+          "name": "Vourukasha's Glow (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Vourukasha's_Glow.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Nilou" },
+      { "name": "Nahida" },
+      { "name": "Yelan" },
+      { "name": "Kokomi" }
+    ],
+    [
+      { "name": "Nilou" },
+      { "name": "Baizhu" },
+      { "name": "Dendro Traveler" },
+      { "name": "Barbara" }
+    ],
+    [
+      { "name": "Nilou" },
+      { "name": "Collei" },
+      { "name": "Kuki Shinobu" },
+      { "name": "Xingqiu" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Dance of Samser",
+      "desc": "Performs up to 3 consecutive sword strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Dance_of_Samser.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 3 consecutive sword strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to perform a spinning attack, dealing AoE DMG to nearby enemies.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "50.0%",
+          "hit2": "60.0%",
+          "hit3": "80.0%",
+          "charged": "120%",
+          "plunge": "70.0%",
+          "lowhigh": "140.0% / 180.0%"
+        },
+        {
+          "level": 2,
+          "hit1": "54.0%",
+          "hit2": "64.8%",
+          "hit3": "86.4%",
+          "charged": "129.6%",
+          "plunge": "75.6%",
+          "lowhigh": "151.2% / 194.4%"
+        }
+      ]
+    },
+    {
+      "name": "Dance of Haftkarsvar",
+      "desc": "Nilou enters the Pirouette state, dealing Hydro DMG and enabling her to perform Sword Dance or Whirling Steps, which deal AoE Hydro DMG and apply the Lingering Aeon effect.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Dance_of_Haftkarsvar.png",
+      "details_html": "<div class='skill-section'><b>Dance of Haftkarsvar</b><br>Enters Pirouette state, dealing Hydro DMG and enabling Sword Dance or Whirling Steps, which deal AoE Hydro DMG and apply Lingering Aeon.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "pirouette_dmg": "120% ATK",
+          "sword_dance": "180% ATK",
+          "whirling_steps": "150% ATK",
+          "cd": "18s"
+        },
+        {
+          "level": 2,
+          "pirouette_dmg": "129.6% ATK",
+          "sword_dance": "194.4% ATK",
+          "whirling_steps": "162% ATK",
+          "cd": "18s"
+        }
+      ]
+    },
+    {
+      "name": "Dance of Abzendegi: Distant Dreams, Listening Spring",
+      "desc": "Nilou creates a Lotus of Distant Waters, dealing AoE Hydro DMG and granting the Golden Chalice's Bounty effect, which enhances Bloom reactions.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Dance_of_Abzendegi_Distant_Dreams_Listening_Spring.png",
+      "details_html": "<div class='skill-section'><b>Dance of Abzendegi: Distant Dreams, Listening Spring</b><br>Creates a Lotus of Distant Waters, dealing AoE Hydro DMG and granting Golden Chalice's Bounty, enhancing Bloom reactions.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "320% ATK",
+          "bloom_bonus": "65%",
+          "duration": "12s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "345% ATK",
+          "bloom_bonus": "70%",
+          "duration": "12s",
+          "cd": "18s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Court of Dancing Petals",
+      "phase": "Ascension Phase 1",
+      "desc": "If the entire party is all Dendro and Hydro, Nilou's skills grant the Golden Chalice's Bounty, enhancing Bloom reactions."
+    },
+    {
+      "name": "Dreamy Dance of Aeons",
+      "phase": "Ascension Phase 4",
+      "desc": "Each 1,000 points of Max HP above 30,000 increases the DMG of Bountiful Cores by 9%. Max 400% increase."
+    },
+    {
+      "name": "White Jade Lotus",
+      "phase": "Passive",
+      "desc": "When Nilou cooks a Perfect dish, she has a 12% chance to obtain double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Dance of the Waning Moon",
+      "phase": "Constellation Lv. 1",
+      "desc": "Dance of Haftkarsvar's third step deals 65% increased DMG and its AoE is increased by 50%."
+    },
+    {
+      "name": "The Starry Skies Their Flowers Rain",
+      "phase": "Constellation Lv. 2",
+      "desc": "Golden Chalice's Bounty duration is increased by 6s."
+    },
+    {
+      "name": "Beguiling Shadowstep",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Dance of Haftkarsvar by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Fricative Pulse",
+      "phase": "Constellation Lv. 4",
+      "desc": "After a character triggers a Bloom reaction, all party members gain 15% Elemental Mastery for 8s."
+    },
+    {
+      "name": "Twirling Light",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Dance of Abzendegi: Distant Dreams, Listening Spring by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Frostbreaker's Melody",
+      "phase": "Constellation Lv. 6",
+      "desc": "After triggering a Bloom reaction, Nilou's ATK is increased by 30% for 20s."
+    }
+  ]
+}

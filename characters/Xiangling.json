@@ -1,0 +1,205 @@
+{
+  "displayName": "Xiangling",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xiangling_Icon.png",
+  "tags": ["Polearm", "Pyro", "Liyue", "4★", "DPS", "Sub-DPS", "Off-Field"],
+  "description": "Xiangling è la chef del Wanmin Restaurant di Liyue. È famosa per la sua abilità culinaria e per il suo compagno Guoba. Eccelle nel danno Pyro off-field tramite il suo Elemental Burst.",
+  "weapons": [
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Staff_of_Homa.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Engulfing Lightning",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Engulfing_Lightning.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Catch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_Catch.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Dragon's Bane",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Dragons_Bane.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Favonius Lance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Lance.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Prototype Starglitter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Prototype_Starglitter.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (2) + Crimson Witch of Flames (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Wanderer's Troupe (2) + Crimson Witch of Flames (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge / ATK%" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "Energy Recharge",
+    "CRIT Rate",
+    "CRIT DMG",
+    "Elemental Mastery",
+    "ATK%"
+  ],
+  "talents": ["Normal Attack: Dough-Fu", "Guoba Attack", "Pyronado"],
+  "info": "Xiangling è uno dei migliori sub-DPS Pyro del gioco. Il suo Elemental Burst Pyronado fornisce danno consistente off-field. Priorità a Energy Recharge per uptime costante del Burst.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "The Catch",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_Catch.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Emblem of Severed Fate (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Emblem_of_Severed_Fate.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Xingqiu" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Childe" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Raiden Shogun" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Ganyu" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Dough-Fu",
+      "desc": "Performs up to 5 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xiangling_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to lunge forward, causing stone spears to fall along her path.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "40.5%",
+          "hit2": "40.5%",
+          "hit3": "26.0% + 26.0%",
+          "hit4": "54.0%",
+          "hit5": "27.6% + 27.6%",
+          "charged": "112%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        }
+      ]
+    },
+    {
+      "name": "Guoba Attack",
+      "desc": "Summons Guoba the Panda. Guoba continuously breathes fire at enemies, dealing AoE Pyro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xiangling_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Guoba Attack</b><br>Summons Guoba the Panda. Guoba continuously breathes fire at enemies, dealing AoE Pyro DMG.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "111% ATK", "duration": "7s", "cd": "12s" }
+      ]
+    },
+    {
+      "name": "Pyronado",
+      "desc": "Displaying her mastery over both fire and polearms, Xiangling sends a Pyronado whirling around her.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xiangling_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Pyronado</b><br>Displaying her mastery over both fire and polearms, Xiangling sends a Pyronado whirling around her. The Pyronado will move with your character for the ability's duration, dealing Pyro DMG to all enemies in its path.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "112% ATK",
+          "duration": "10s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Crossfire",
+      "phase": "Ascension Phase 1",
+      "desc": "Increases the flame range of Guoba by 20%."
+    },
+    {
+      "name": "Beware, It's Super Hot!",
+      "phase": "Ascension Phase 4",
+      "desc": "When Guoba Attack's effect ends, Guoba will leave a chili pepper on the spot where it disappeared. Picking up a chili pepper increases ATK by 10% for 10s."
+    },
+    {
+      "name": "Chef de Cuisine",
+      "phase": "Passive",
+      "desc": "When Xiangling cooks an ATK-boosting dish perfectly, she has a 12% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Crispy Outside, Tender Inside",
+      "phase": "Constellation Lv. 1",
+      "desc": "Enemies hit by Guoba's attacks have their Pyro RES reduced by 15% for 6s."
+    },
+    {
+      "name": "Oil Meets Fire",
+      "phase": "Constellation Lv. 2",
+      "desc": "The last attack in a Normal Attack sequence sends the opponent flying and deals an additional 75% of ATK as AoE Pyro DMG."
+    },
+    {
+      "name": "Deepfry",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Pyronado by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Slowbake",
+      "phase": "Constellation Lv. 4",
+      "desc": "Pyronado's duration is increased by 40%."
+    },
+    {
+      "name": "Guoba Mad",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Guoba Attack by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Condensed Pyronado",
+      "phase": "Constellation Lv. 6",
+      "desc": "For the entire duration of Pyronado, all party members receive a 15% Pyro DMG Bonus."
+    }
+  ]
+}

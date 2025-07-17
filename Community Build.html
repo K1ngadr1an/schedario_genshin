@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Build - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        padding-top: 3.5rem;
+      }
+      .main-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #64ffda;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 12px #64ffda44;
+      }
+      .community-container {
+        max-width: 1100px;
+        margin: 2rem auto;
+        background: rgba(26, 26, 46, 0.92);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        padding: 2rem 1.5rem 2.5rem 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .filter-bar {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 2rem;
+        justify-content: center;
+      }
+      .build-list {
+        margin-bottom: 2.5rem;
+      }
+      .build-card {
+        background: rgba(22, 33, 62, 0.93);
+        border-radius: 14px;
+        box-shadow: 0 4px 18px #0007;
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        border: 1.5px solid rgba(100, 255, 218, 0.08);
+        transition: box-shadow 0.2s, border 0.2s;
+      }
+      .build-card:hover {
+        box-shadow: 0 8px 32px #64ffda33;
+        border: 1.5px solid #64ffda;
+      }
+      .build-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+      }
+      .build-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #64ffda;
+      }
+      .build-meta {
+        font-size: 1rem;
+        color: #b0eaff;
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .build-votes {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+      }
+      .vote-btn {
+        background: none;
+        border: none;
+        color: #64ffda;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .vote-btn:hover {
+        color: #00d4aa;
+      }
+      .build-description {
+        color: #e0e0e0;
+        font-size: 1.05rem;
+        margin-top: 0.5rem;
+      }
+      .build-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+      .btn-view-details {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 10px;
+        padding: 0.6rem 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .btn-view-details:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda);
+        color: #fff;
+      }
+      .comment-section {
+        margin-top: 1.2rem;
+        background: rgba(15, 52, 96, 0.85);
+        border-radius: 10px;
+        padding: 1rem 1.2rem;
+        color: #b0eaff;
+        font-size: 1.05rem;
+        box-shadow: 0 2px 8px #00bcd422;
+        border: 1px solid rgba(100, 255, 218, 0.07);
+      }
+      .comment-list {
+        margin-bottom: 1rem;
+      }
+      .comment {
+        margin-bottom: 0.7rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(100, 255, 218, 0.08);
+      }
+      .comment-user {
+        color: #64ffda;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+      .comment-form {
+        display: flex;
+        gap: 0.7rem;
+        margin-top: 0.5rem;
+      }
+      .comment-form input {
+        flex: 1;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: 1.5px solid #64ffda44;
+        background: #16213e;
+        color: #e0e0e0;
+        font-size: 1rem;
+      }
+      .comment-form button {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.2s, color 0.2s;
+      }
+      .comment-form button:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda);
+        color: #fff;
+      }
+      .new-build-form {
+        background: rgba(15, 52, 96, 0.85);
+        border-radius: 12px;
+        padding: 1.5rem 1.2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 8px #00bcd422;
+        border: 1px solid rgba(100, 255, 218, 0.07);
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .new-build-form label {
+        color: #64ffda;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        display: block;
+      }
+      .new-build-form input,
+      .new-build-form select,
+      .new-build-form textarea {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+        border: 1.5px solid #64ffda44;
+        background: #16213e;
+        color: #e0e0e0;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-family: "Fredoka", sans-serif;
+      }
+      .new-build-form textarea {
+        resize: vertical;
+      }
+      .new-build-form button {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 10px;
+        padding: 0.7rem 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background 0.2s, color 0.2s;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .new-build-form button:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda);
+        color: #fff;
+      }
+      #buildDetailModal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 20, 40, 0.65);
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      #buildDetailModal.active {
+        display: flex !important;
+        animation: fadeInOverlay 0.2s;
+      }
+      @keyframes fadeInOverlay {
+        from {
+          background: rgba(10, 20, 40, 0);
+        }
+        to {
+          background: rgba(10, 20, 40, 0.65);
+        }
+      }
+      #buildDetailModal .modal-content {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #e0e0e0;
+        padding: 2.5rem 2rem 2rem 2rem;
+        max-width: 600px;
+        width: 96vw;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 22px;
+        box-shadow: 0 20px 60px 0 rgba(100, 255, 218, 0.2),
+          0 8px 32px rgba(0, 0, 0, 0.4);
+        position: relative;
+        animation: popIn 0.22s cubic-bezier(0.4, 1.6, 0.6, 1);
+      }
+      @keyframes popIn {
+        from {
+          transform: scale(0.85);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      #artifactModal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 20, 40, 0.65);
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      #artifactModal.active {
+        display: flex !important;
+        animation: fadeInOverlay 0.2s;
+      }
+      #artifactModal .modal-content {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        color: #e0e0e0;
+        padding: 2.5rem 2rem 2rem 2rem;
+        max-width: 700px;
+        width: 96vw;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 22px;
+        box-shadow: 0 20px 60px 0 rgba(100, 255, 218, 0.2),
+          0 8px 32px rgba(0, 0, 0, 0.4);
+        position: relative;
+        animation: popIn 0.22s cubic-bezier(0.4, 1.6, 0.6, 1);
+      }
+      .artifact-card {
+        background: #16213e;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px #0005;
+        padding: 1em 1.2em;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 120px;
+        max-width: 160px;
+        transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+        border: 2.5px solid transparent;
+      }
+      .artifact-card.selected {
+        border: 2.5px solid #64ffda;
+        background: #22334d;
+        box-shadow: 0 4px 18px #64ffda55;
+      }
+      .artifact-card:hover {
+        border: 2.5px solid #64ffda;
+        background: #22334d;
+        box-shadow: 0 4px 18px #64ffda55;
+      }
+      .btn-edit-build {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-right: 0.5em;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px #64ffda33;
+        display: flex;
+        align-items: center;
+        gap: 0.4em;
+      }
+      .btn-edit-build:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda);
+        color: #fff;
+      }
+      .btn-delete-build {
+        background: linear-gradient(135deg, #ff6b6b, #ffb199);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px #ff6b6b33;
+        display: flex;
+        align-items: center;
+        gap: 0.4em;
+      }
+      .btn-delete-build:hover {
+        background: linear-gradient(135deg, #ffb199, #ff6b6b);
+        color: #fff;
+      }
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 100;
+        background: rgba(22, 33, 62, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 2px solid #64ffda33;
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        padding: 0.5em 2vw;
+        box-shadow: 0 2px 12px #0003;
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.08em;
+        padding: 0.6em 1.2em;
+        border-radius: 8px;
+        transition: background 0.18s, color 0.18s;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+      }
+      .nav-link:hover {
+        background: linear-gradient(90deg, #64ffda22, #00d4aa22);
+        color: #64ffda;
+      }
+      .nav-link.active,
+      .nav-link:active {
+        background: linear-gradient(90deg, #64ffda, #00d4aa);
+        color: #16213e !important;
+        font-weight: 700;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .btn,
+      .btn-secondary {
+        display: inline-block;
+        padding: 0.5em 1.2em;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        margin-left: 0.5em;
+        margin-right: 0.2em;
+      }
+      .btn-secondary {
+        background: linear-gradient(135deg, #b0eaff, #64ffda);
+        color: #16213e;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .btn-secondary:hover {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #fff;
+      }
+      @media (max-width: 700px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          padding: 0.5em 1vw;
+          font-size: 0.98em;
+        }
+        .nav-link {
+          padding: 0.5em 0.7em;
+          font-size: 0.98em;
+        }
+        .btn,
+        .btn-secondary {
+          padding: 0.45em 0.8em;
+          font-size: 0.98em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="gestione.html" class="nav-link"><span>🛠️</span> Gestione</a>
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link active"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls"></span>
+    </nav>
+    <h1 class="main-title">🌐 Community Builds</h1>
+    <div class="community-container">
+      <div class="filter-bar">
+        <label for="characterFilter">Filtra per personaggio:</label>
+        <select id="characterFilter">
+          <option value="all">Tutti</option>
+        </select>
+        <input type="text" id="searchBuild" placeholder="Cerca build..." />
+        <select id="sortBuilds" style="margin-left: 1rem">
+          <option value="recent">Più recenti</option>
+          <option value="votes">Più votate</option>
+        </select>
+      </div>
+      <div id="userBox" style="text-align: center; margin-bottom: 1.2rem"></div>
+      <form class="new-build-form" id="newBuildForm">
+        <div id="formErrorModal" style="display: none"></div>
+        <h2 style="color: #64ffda; text-align: center; margin-bottom: 1rem">
+          Crea una nuova Build
+        </h2>
+        <label for="buildTitle">Nome Build</label>
+        <input type="text" id="buildTitle" required maxlength="40" />
+        <label for="characterName">Personaggio</label>
+        <select id="characterName" required>
+          <option value="">Seleziona...</option>
+        </select>
+        <label for="weapon">Armi</label>
+        <select id="weapon" required>
+          <option value="">Seleziona...</option>
+        </select>
+        <div id="weaponInfo" style="margin-bottom: 1em"></div>
+        <label for="artifactSet">Set Artefatti</label>
+        <input
+          type="text"
+          id="artifactSet"
+          required
+          maxlength="40"
+          readonly
+          style="cursor: pointer; background: #16213e"
+          placeholder="Clicca per scegliere"
+        />
+        <div id="artifactModal" style="display: none"></div>
+        <label for="mainStats"
+          >Statistiche Principali (es: Sabbia/Calice/Corona)</label
+        >
+        <input type="text" id="mainStats" required maxlength="60" />
+        <label for="subStats">Sub Stat (es: CR, CD, ER, ATK%, ...)</label>
+        <input type="text" id="subStats" required maxlength="60" />
+        <label for="talents">Talenti (es: 6/9/9)</label>
+        <input type="text" id="talents" required maxlength="10" />
+        <label for="constellation">Costellazione</label>
+        <input type="number" id="constellation" min="0" max="6" required />
+        <label for="description">Descrizione/Note</label>
+        <textarea id="description" rows="3" required maxlength="300"></textarea>
+        <button type="submit">Condividi Build</button>
+      </form>
+      <div class="build-list" id="buildList"></div>
+    </div>
+    <div id="buildDetailModal" style="display: none"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

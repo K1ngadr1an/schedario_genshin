@@ -1,0 +1,684 @@
+{
+  "displayName": "Amber",
+  "description": "L'unica Outrider dei Cavalieri di Favonius!",
+  "tags": ["Pyro", "Bow", "4★", "Support"],
+  "weapons": [
+    {
+      "name": "Elegy for the End",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png"
+    },
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Emblem of Severed Fate",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Emblem_of_Severed_Fate.png"
+    }
+  ],
+  "stats": [
+    { "type": "Base HP", "value": "9461" },
+    { "type": "Base ATK", "value": "185" },
+    { "type": "Base DEF", "value": "601" }
+  ],
+  "substats": ["Energy Recharge", "ATK%", "CRIT Rate", "CRIT DMG"],
+  "talents": ["Normal Attack: Sharpshooter", "Explosive Puppet", "Fiery Rain"],
+  "info": "Amber è una support versatile che può attivare Pyro e fornire utility con la sua bambola Baron Bunny.",
+  "community_build": [],
+  "best_teams": [
+    [
+      { "name": "Amber" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Sharpshooter",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Effettua fino a 5 colpi consecutivi con l'arco.\n\n<b>Normal Attack</b>\nPerforms up to 5 consecutive shots with a bow.\n\n<b>Charged Attack</b>\nPerforms a more precise <b>Aimed Shot</b> with increased DMG. While aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal <span style='color:#ffb366;font-weight:bold;'>Pyro DMG</span>.\n\n<b>Plunging Attack</b>\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/UI_GachaTypeIcon_Bow.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Sharpshooter.png",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.1%",
+          "hit2": "36.1%",
+          "hit3": "46.4%",
+          "hit4": "47.3%",
+          "hit5": "59.3%",
+          "aimed": "43.9%",
+          "fully_charged": "124%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "39.0%",
+          "hit2": "39.0%",
+          "hit3": "50.2%",
+          "hit4": "51.2%",
+          "hit5": "64.2%",
+          "aimed": "47.5%",
+          "fully_charged": "134%",
+          "plunge": "61.2%",
+          "lowhigh": "122.4% / 153.0%"
+        },
+        {
+          "level": 3,
+          "hit1": "41.9%",
+          "hit2": "41.9%",
+          "hit3": "54.0%",
+          "hit4": "55.1%",
+          "hit5": "69.1%",
+          "aimed": "51.1%",
+          "fully_charged": "144%",
+          "plunge": "65.6%",
+          "lowhigh": "131.2% / 164.1%"
+        },
+        {
+          "level": 4,
+          "hit1": "45.1%",
+          "hit2": "45.1%",
+          "hit3": "58.2%",
+          "hit4": "59.5%",
+          "hit5": "74.7%",
+          "aimed": "55.2%",
+          "fully_charged": "155%",
+          "plunge": "70.4%",
+          "lowhigh": "140.7% / 176.0%"
+        },
+        {
+          "level": 5,
+          "hit1": "48.0%",
+          "hit2": "48.0%",
+          "hit3": "62.0%",
+          "hit4": "63.4%",
+          "hit5": "79.6%",
+          "aimed": "58.8%",
+          "fully_charged": "165%",
+          "plunge": "74.8%",
+          "lowhigh": "149.5% / 187.1%"
+        },
+        {
+          "level": 6,
+          "hit1": "51.0%",
+          "hit2": "51.0%",
+          "hit3": "65.8%",
+          "hit4": "67.3%",
+          "hit5": "84.5%",
+          "aimed": "62.4%",
+          "fully_charged": "175%",
+          "plunge": "79.2%",
+          "lowhigh": "158.3% / 198.2%"
+        },
+        {
+          "level": 7,
+          "hit1": "54.5%",
+          "hit2": "54.5%",
+          "hit3": "70.3%",
+          "hit4": "71.9%",
+          "hit5": "90.3%",
+          "aimed": "66.7%",
+          "fully_charged": "187%",
+          "plunge": "84.2%",
+          "lowhigh": "168.4% / 211.0%"
+        },
+        {
+          "level": 8,
+          "hit1": "58.0%",
+          "hit2": "58.0%",
+          "hit3": "74.8%",
+          "hit4": "76.5%",
+          "hit5": "96.1%",
+          "aimed": "71.0%",
+          "fully_charged": "199%",
+          "plunge": "89.2%",
+          "lowhigh": "178.5% / 223.8%"
+        },
+        {
+          "level": 9,
+          "hit1": "61.5%",
+          "hit2": "61.5%",
+          "hit3": "79.3%",
+          "hit4": "81.1%",
+          "hit5": "101.9%",
+          "aimed": "75.3%",
+          "fully_charged": "211%",
+          "plunge": "94.2%",
+          "lowhigh": "188.6% / 236.6%"
+        },
+        {
+          "level": 10,
+          "hit1": "65.0%",
+          "hit2": "65.0%",
+          "hit3": "83.8%",
+          "hit4": "85.7%",
+          "hit5": "107.7%",
+          "aimed": "79.6%",
+          "fully_charged": "223%",
+          "plunge": "99.2%",
+          "lowhigh": "198.7% / 249.4%"
+        },
+        {
+          "level": 11,
+          "hit1": "68.5%",
+          "hit2": "68.5%",
+          "hit3": "88.3%",
+          "hit4": "90.3%",
+          "hit5": "113.5%",
+          "aimed": "83.9%",
+          "fully_charged": "235%",
+          "plunge": "104.2%",
+          "lowhigh": "208.8% / 262.2%"
+        },
+        {
+          "level": 12,
+          "hit1": "72.0%",
+          "hit2": "72.0%",
+          "hit3": "92.8%",
+          "hit4": "94.9%",
+          "hit5": "119.3%",
+          "aimed": "88.2%",
+          "fully_charged": "247%",
+          "plunge": "109.2%",
+          "lowhigh": "218.9% / 275.0%"
+        },
+        {
+          "level": 13,
+          "hit1": "75.5%",
+          "hit2": "75.5%",
+          "hit3": "97.3%",
+          "hit4": "99.5%",
+          "hit5": "125.1%",
+          "aimed": "92.5%",
+          "fully_charged": "259%",
+          "plunge": "114.2%",
+          "lowhigh": "229.0% / 287.8%"
+        },
+        {
+          "level": 14,
+          "hit1": "79.0%",
+          "hit2": "79.0%",
+          "hit3": "101.8%",
+          "hit4": "104.1%",
+          "hit5": "130.9%",
+          "aimed": "96.8%",
+          "fully_charged": "271%",
+          "plunge": "119.2%",
+          "lowhigh": "239.1% / 300.6%"
+        },
+        {
+          "level": 15,
+          "hit1": "82.5%",
+          "hit2": "82.5%",
+          "hit3": "106.3%",
+          "hit4": "108.7%",
+          "hit5": "136.7%",
+          "aimed": "101.1%",
+          "fully_charged": "283%",
+          "plunge": "124.2%",
+          "lowhigh": "249.2% / 313.4%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise <b>Aimed Shot</b> with increased DMG.<br>While aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal <span style='color:#ffb366;font-weight:bold;'>Pyro DMG</span>.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Explosive Puppet",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Evoca Baron Bunny che attira i nemici e poi esplode infliggendo Pyro DMG.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Amber/talent_2.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Explosive_Puppet.png",
+      "levels": [
+        {
+          "level": 1,
+          "inherited_hp": "45.4%",
+          "explosion_dmg": "123.2%",
+          "cd": "15s"
+        },
+        {
+          "level": 2,
+          "inherited_hp": "44.0%",
+          "explosion_dmg": "132.4%",
+          "cd": "15s"
+        },
+        {
+          "level": 3,
+          "inherited_hp": "46.6%",
+          "explosion_dmg": "141.6%",
+          "cd": "15s"
+        },
+        {
+          "level": 4,
+          "inherited_hp": "49.7%",
+          "explosion_dmg": "151.8%",
+          "cd": "15s"
+        },
+        {
+          "level": 5,
+          "inherited_hp": "52.3%",
+          "explosion_dmg": "161.0%",
+          "cd": "15s"
+        },
+        {
+          "level": 6,
+          "inherited_hp": "54.9%",
+          "explosion_dmg": "170.2%",
+          "cd": "15s"
+        },
+        {
+          "level": 7,
+          "inherited_hp": "58.0%",
+          "explosion_dmg": "180.4%",
+          "cd": "15s"
+        },
+        {
+          "level": 8,
+          "inherited_hp": "61.1%",
+          "explosion_dmg": "190.6%",
+          "cd": "15s"
+        },
+        {
+          "level": 9,
+          "inherited_hp": "64.2%",
+          "explosion_dmg": "200.8%",
+          "cd": "15s"
+        },
+        {
+          "level": 10,
+          "inherited_hp": "67.3%",
+          "explosion_dmg": "211.0%",
+          "cd": "15s"
+        },
+        {
+          "level": 11,
+          "inherited_hp": "70.4%",
+          "explosion_dmg": "221.2%",
+          "cd": "15s"
+        },
+        {
+          "level": 12,
+          "inherited_hp": "73.5%",
+          "explosion_dmg": "231.4%",
+          "cd": "15s"
+        },
+        {
+          "level": 13,
+          "inherited_hp": "76.6%",
+          "explosion_dmg": "241.6%",
+          "cd": "15s"
+        },
+        {
+          "level": 14,
+          "inherited_hp": "79.7%",
+          "explosion_dmg": "251.8%",
+          "cd": "15s"
+        },
+        {
+          "level": 15,
+          "inherited_hp": "82.8%",
+          "explosion_dmg": "262.0%",
+          "cd": "15s"
+        }
+      ],
+      "details_html": "<div class='skill-section'>The ever-reliable Baron Bunny takes the stage.</div><div class='skill-section'><b style='color:#ffe082;'>Baron Bunny</b><br>- Continuously taunts the enemy, drawing their fire.<br>- Baron Bunny's HP scales with Amber's Max HP.<br>- When destroyed or when its timer expires, Baron Bunny explodes, dealing <span style='color:#ffb366;font-weight:bold;'>AoE Pyro DMG</span>.</div><div class='skill-section'><b>Hold</b><br>Adjusts the throwing direction of Baron Bunny.<br>The longer the button is held, the further the throw.</div>"
+    },
+    {
+      "name": "Fiery Rain",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Scaglia una pioggia di frecce infuocate che infliggono Pyro DMG ad area.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Amber/talent_3.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Fiery_Rain.png",
+      "levels": [
+        {
+          "level": 1,
+          "rain_dmg_per_wave": "28.1%",
+          "total_rain_dmg": "505.4%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 2,
+          "rain_dmg_per_wave": "30.2%",
+          "total_rain_dmg": "542.8%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 3,
+          "rain_dmg_per_wave": "32.3%",
+          "total_rain_dmg": "580.2%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 4,
+          "rain_dmg_per_wave": "34.6%",
+          "total_rain_dmg": "621.0%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 5,
+          "rain_dmg_per_wave": "36.7%",
+          "total_rain_dmg": "658.4%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 6,
+          "rain_dmg_per_wave": "38.8%",
+          "total_rain_dmg": "695.8%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 7,
+          "rain_dmg_per_wave": "41.1%",
+          "total_rain_dmg": "736.6%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 8,
+          "rain_dmg_per_wave": "43.4%",
+          "total_rain_dmg": "777.4%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 9,
+          "rain_dmg_per_wave": "45.7%",
+          "total_rain_dmg": "818.2%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 10,
+          "rain_dmg_per_wave": "48.0%",
+          "total_rain_dmg": "859.0%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 11,
+          "rain_dmg_per_wave": "50.3%",
+          "total_rain_dmg": "899.8%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 12,
+          "rain_dmg_per_wave": "52.6%",
+          "total_rain_dmg": "940.6%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 13,
+          "rain_dmg_per_wave": "55.0%",
+          "total_rain_dmg": "987.2%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 14,
+          "rain_dmg_per_wave": "57.4%",
+          "total_rain_dmg": "1033.8%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 15,
+          "rain_dmg_per_wave": "59.8%",
+          "total_rain_dmg": "1080.4%",
+          "duration": "2s",
+          "cd": "12s",
+          "energy_cost": "40"
+        }
+      ],
+      "details_html": "<div class='skill-section'>Fires off a shower of arrows, dealing continuous <span style='color:#ffb366;font-weight:bold;'>AoE Pyro DMG</span>.</div>"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Every Arrow Finds Its Target",
+      "phase": "Ascension Phase 1",
+      "desc": "Aumenta il CRIT Rate degli attacchi di Amber contro i nemici colpiti da Baron Bunny."
+    },
+    {
+      "name": "Precise Shot",
+      "phase": "Ascension Phase 4",
+      "desc": "Aumenta il danno di Fiery Rain del 10%."
+    },
+    {
+      "name": "Gliding Champion",
+      "phase": "Passive",
+      "desc": "Diminuisce il consumo di stamina durante il volo per i membri del party."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "One Arrow to Rule Them All",
+      "phase": "Constellation Lv. 1",
+      "desc": "Baron Bunny ora può essere lanciato più lontano. Aumenta il numero massimo di Baron Bunny a 2 e riduce il cooldown di 20%."
+    },
+    {
+      "name": "Bunny Triggered",
+      "phase": "Constellation Lv. 2",
+      "desc": "Baron Bunny, Manual Detonation: Tenere premuto il tasto per mirare permette di detonare Baron Bunny manualmente con una freccia. L'esplosione infligge il 200% di ATK come Pyro DMG."
+    },
+    {
+      "name": "It Burns!",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Fiery Rain di 3. Massimo livello 15."
+    },
+    {
+      "name": "It's Not Just Any Doll...",
+      "phase": "Constellation Lv. 4",
+      "desc": "Aumenta il danno di Baron Bunny del 200% in base all'ATK di Amber."
+    },
+    {
+      "name": "It's Baron Bunny!",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Explosive Puppet di 3. Massimo livello 15."
+    },
+    {
+      "name": "Wildfire",
+      "phase": "Constellation Lv. 6",
+      "desc": "Fiery Rain aumenta l'ATK dei membri del party del 15% e la loro velocità di movimento del 15% per 10s."
+    }
+  ],
+  "ascension_materials": [
+    { "level": 20, "materials": [{ "name": "Mora", "quantity": 20000 }] },
+    {
+      "level": 40,
+      "materials": [
+        { "name": "Agnidus Agate Sliver", "quantity": 1 },
+        { "name": "Small Lamp Grass", "quantity": 3 },
+        { "name": "Firm Arrowhead", "quantity": 3 },
+        { "name": "Everflame Seed", "quantity": 2 },
+        { "name": "Mora", "quantity": 40000 }
+      ]
+    },
+    {
+      "level": 50,
+      "materials": [
+        { "name": "Agnidus Agate Fragment", "quantity": 3 },
+        { "name": "Small Lamp Grass", "quantity": 10 },
+        { "name": "Firm Arrowhead", "quantity": 15 },
+        { "name": "Everflame Seed", "quantity": 4 },
+        { "name": "Mora", "quantity": 60000 }
+      ]
+    },
+    {
+      "level": 60,
+      "materials": [
+        { "name": "Agnidus Agate Fragment", "quantity": 6 },
+        { "name": "Small Lamp Grass", "quantity": 20 },
+        { "name": "Sharp Arrowhead", "quantity": 12 },
+        { "name": "Everflame Seed", "quantity": 8 },
+        { "name": "Mora", "quantity": 80000 }
+      ]
+    },
+    {
+      "level": 70,
+      "materials": [
+        { "name": "Agnidus Agate Chunk", "quantity": 3 },
+        { "name": "Small Lamp Grass", "quantity": 30 },
+        { "name": "Sharp Arrowhead", "quantity": 18 },
+        { "name": "Everflame Seed", "quantity": 12 },
+        { "name": "Mora", "quantity": 100000 }
+      ]
+    },
+    {
+      "level": 80,
+      "materials": [
+        { "name": "Agnidus Agate Chunk", "quantity": 6 },
+        { "name": "Small Lamp Grass", "quantity": 45 },
+        { "name": "Weathered Arrowhead", "quantity": 12 },
+        { "name": "Everflame Seed", "quantity": 20 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 90,
+      "materials": [
+        { "name": "Agnidus Agate Gemstone", "quantity": 6 },
+        { "name": "Small Lamp Grass", "quantity": 60 },
+        { "name": "Weathered Arrowhead", "quantity": 24 },
+        { "name": "Everflame Seed", "quantity": 24 },
+        { "name": "Mora", "quantity": 160000 }
+      ]
+    },
+    {
+      "total": true,
+      "materials": [
+        { "name": "Agnidus Agate Sliver", "quantity": 1 },
+        { "name": "Agnidus Agate Fragment", "quantity": 9 },
+        { "name": "Agnidus Agate Chunk", "quantity": 9 },
+        { "name": "Agnidus Agate Gemstone", "quantity": 6 },
+        { "name": "Small Lamp Grass", "quantity": 168 },
+        { "name": "Firm Arrowhead", "quantity": 18 },
+        { "name": "Sharp Arrowhead", "quantity": 30 },
+        { "name": "Weathered Arrowhead", "quantity": 36 },
+        { "name": "Everflame Seed", "quantity": 46 },
+        { "name": "Mora", "quantity": 420000 }
+      ]
+    }
+  ],
+  "talent_materials": [
+    {
+      "level": 2,
+      "materials": [
+        { "name": "Teachings of Freedom", "quantity": 3 },
+        { "name": "Firm Arrowhead", "quantity": 6 },
+        { "name": "Mora", "quantity": 12500 }
+      ]
+    },
+    {
+      "level": 3,
+      "materials": [
+        { "name": "Guide to Freedom", "quantity": 2 },
+        { "name": "Sharp Arrowhead", "quantity": 3 },
+        { "name": "Mora", "quantity": 17500 }
+      ]
+    },
+    {
+      "level": 4,
+      "materials": [
+        { "name": "Guide to Freedom", "quantity": 4 },
+        { "name": "Sharp Arrowhead", "quantity": 4 },
+        { "name": "Mora", "quantity": 25000 }
+      ]
+    },
+    {
+      "level": 5,
+      "materials": [
+        { "name": "Guide to Freedom", "quantity": 6 },
+        { "name": "Sharp Arrowhead", "quantity": 6 },
+        { "name": "Mora", "quantity": 30000 }
+      ]
+    },
+    {
+      "level": 6,
+      "materials": [
+        { "name": "Guide to Freedom", "quantity": 9 },
+        { "name": "Sharp Arrowhead", "quantity": 9 },
+        { "name": "Mora", "quantity": 37500 }
+      ]
+    },
+    {
+      "level": 7,
+      "materials": [
+        { "name": "Philosophies of Freedom", "quantity": 4 },
+        { "name": "Weathered Arrowhead", "quantity": 4 },
+        { "name": "Dvalin's Sigh", "quantity": 1 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 8,
+      "materials": [
+        { "name": "Philosophies of Freedom", "quantity": 6 },
+        { "name": "Weathered Arrowhead", "quantity": 6 },
+        { "name": "Dvalin's Sigh", "quantity": 1 },
+        { "name": "Mora", "quantity": 260000 }
+      ]
+    },
+    {
+      "level": 9,
+      "materials": [
+        { "name": "Philosophies of Freedom", "quantity": 12 },
+        { "name": "Weathered Arrowhead", "quantity": 9 },
+        { "name": "Dvalin's Sigh", "quantity": 2 },
+        { "name": "Mora", "quantity": 450000 }
+      ]
+    },
+    {
+      "level": 10,
+      "materials": [
+        { "name": "Philosophies of Freedom", "quantity": 16 },
+        { "name": "Weathered Arrowhead", "quantity": 12 },
+        { "name": "Dvalin's Sigh", "quantity": 2 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 700000 }
+      ]
+    },
+    {
+      "total": true,
+      "materials": [
+        { "name": "Teachings of Freedom", "quantity": 3 },
+        { "name": "Guide to Freedom", "quantity": 21 },
+        { "name": "Philosophies of Freedom", "quantity": 38 },
+        { "name": "Firm Arrowhead", "quantity": 6 },
+        { "name": "Sharp Arrowhead", "quantity": 22 },
+        { "name": "Weathered Arrowhead", "quantity": 31 },
+        { "name": "Dvalin's Sigh", "quantity": 6 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 1652500 }
+      ]
+    }
+  ]
+}

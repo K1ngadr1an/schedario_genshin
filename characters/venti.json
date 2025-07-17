@@ -1,0 +1,225 @@
+{
+  "displayName": "Venti",
+  "img": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/venti/image.png?strip=all&quality=100&w=160",
+  "tags": [
+    "Bow",
+    "Anemo",
+    "Mondstadt",
+    "5★",
+    "Support",
+    "Crowd Control",
+    "Archon"
+  ],
+  "description": "Venti è il bardo di Mondstadt e la forma mortale di Barbatos, l'Anemo Archon. Eccelle nel controllo dei nemici e nel supporto tramite il suo potente Elemental Burst.",
+  "weapons": [
+    {
+      "name": "Elegy for the End",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Stringless",
+      "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (2) + Viridescent Venerer (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge / Elemental Mastery" },
+    { "type": "Goblet", "value": "Anemo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["Energy Recharge", "Elemental Mastery", "CRIT Rate", "CRIT DMG"],
+  "talents": [
+    "Normal Attack: Divine Marksmanship",
+    "Skyward Sonnet",
+    "Wind's Grand Ode"
+  ],
+  "info": "Venti è uno dei migliori crowd control del gioco. Costruiscilo con Maestria Elementale per massimizzare i danni da Swirl e Ricarica Energia per un Burst costante.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Elegy for the End",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Viridescent Venerer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Venti" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Venti" },
+      { "name": "Xingqiu" },
+      { "name": "Fischl" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Venti" },
+      { "name": "Ayato" },
+      { "name": "Yelan" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Venti" },
+      { "name": "Ganyu" },
+      { "name": "Mona" },
+      { "name": "Venti" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Divine Marksmanship",
+      "desc": "Performs up to 6 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Divine_Marksmanship.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 6 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Anemo DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "20.7%",
+          "hit2": "22.6%",
+          "hit3": "28.3%",
+          "hit4": "28.3%",
+          "hit5": "34.6%",
+          "hit6": "41.6%",
+          "charged": "43.9% + 48.6%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "22.4%",
+          "hit2": "24.5%",
+          "hit3": "30.7%",
+          "hit4": "30.7%",
+          "hit5": "37.6%",
+          "hit6": "45.2%",
+          "charged": "47.7% + 52.8%",
+          "plunge": "61.2%",
+          "lowhigh": "122.4% / 153.0%"
+        }
+      ]
+    },
+    {
+      "name": "Skyward Sonnet",
+      "desc": "Venti summons a Wind Domain at the enemy's location, dealing AoE Anemo DMG and launching enemies into the air.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Skyward_Sonnet.png",
+      "details_html": "<div class='skill-section'><b>Press</b><br>Summons a Wind Domain at the enemy's location, dealing AoE Anemo DMG and launching enemies into the air.</div><div class='skill-section'><b>Hold</b><br>Summons an even larger Wind Domain with Venti as the epicenter, dealing greater AoE Anemo DMG and launching enemies into the air.",
+      "levels": [
+        {
+          "level": 1,
+          "press_dmg": "276% ATK",
+          "hold_dmg": "380% ATK",
+          "cd": "6s/15s"
+        },
+        {
+          "level": 2,
+          "press_dmg": "296% ATK",
+          "hold_dmg": "408% ATK",
+          "cd": "6s/15s"
+        }
+      ]
+    },
+    {
+      "name": "Wind's Grand Ode",
+      "desc": "Fires off an arrow made of countless coalesced winds, creating a huge Stormeye that sucks in objects and enemies, dealing continuous Anemo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Winds_Grand_Ode.png",
+      "details_html": "<div class='skill-section'><b>Wind's Grand Ode</b><br>Fires off an arrow made of countless coalesced winds, creating a huge Stormeye that sucks in objects and enemies, dealing continuous Anemo DMG. Elemental Absorption: If the Stormeye comes into contact with Hydro/Pyro/Cryo/Electro, it will deal additional elemental DMG of that type.",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "37.6% ATK",
+          "absorption_dmg": "18.8% ATK",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "40.4% ATK",
+          "absorption_dmg": "20.2% ATK",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Embrace of Winds",
+      "phase": "Ascension Phase 1",
+      "desc": "Holding Skyward Sonnet creates an upcurrent that lasts for 20s."
+    },
+    {
+      "name": "Stormeye",
+      "phase": "Ascension Phase 4",
+      "desc": "Regenerates 15 Energy for Venti after the effects of Wind's Grand Ode end. If an Elemental Absorption occurred, also restores 15 Energy to all characters of that corresponding element."
+    },
+    {
+      "name": "Windrider",
+      "phase": "Passive",
+      "desc": "Decreases gliding Stamina consumption for your own party members by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Splitting Gales",
+      "phase": "Constellation Lv. 1",
+      "desc": "Fires 2 additional arrows per Aimed Shot, each dealing 33% of the original arrow's DMG."
+    },
+    {
+      "name": "Breeze of Reminiscence",
+      "phase": "Constellation Lv. 2",
+      "desc": "Skyward Sonnet decreases enemies' Anemo RES and Physical RES by 12% for 10s."
+    },
+    {
+      "name": "Ode to Thousand Winds",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Wind's Grand Ode by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Hurricane of Freedom",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Venti picks up an Elemental Orb or Particle, he receives a 25% Anemo DMG Bonus for 10s."
+    },
+    {
+      "name": "Concerto dal Cielo",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Skyward Sonnet by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Storm of Defiance",
+      "phase": "Constellation Lv. 6",
+      "desc": "Targets who take DMG from Wind's Grand Ode have their Anemo RES decreased by 20%. If an Elemental Absorption occurred, their RES towards the corresponding element is also decreased by 20%."
+    }
+  ]
+}

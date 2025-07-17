@@ -1,0 +1,183 @@
+{
+  "displayName": "Kirara",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Sword", "Dendro", "Inazuma", "Shielder", "4★", "Support"],
+  "description": "Kirara è una corriere nekomata di Inazuma, abile nel fornire scudi e applicare Dendro ai nemici. Eccelle come supporto difensivo e per l'esplorazione.",
+  "weapons": [
+    {
+      "name": "Key of Khaj-Nisut",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Key_of_Khaj-Nisut.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Sword.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Tenacity of the Millelith (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+    },
+    {
+      "name": "Deepwood Memories (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Tenacity of the Millelith (2) + Deepwood Memories (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP% / Dendro DMG Bonus" },
+    { "type": "Circlet", "value": "HP% / Healing Bonus" }
+  ],
+  "substats": ["HP%", "Energy Recharge", "Elemental Mastery", "Flat HP"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Kirara è un supporto Dendro che fornisce scudi forti e applicazione Dendro costante. Costruiscila con HP% e ricarica energia per massimizzare la durata e la forza dei suoi scudi.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Key of Khaj-Nisut",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Key_of_Khaj-Nisut.png",
+        "note": "HP%"
+      },
+      "artifacts": [
+        {
+          "name": "Tenacity of the Millelith (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kirara" },
+      { "name": "Nahida" },
+      { "name": "Nilou" },
+      { "name": "Yelan" }
+    ],
+    [
+      { "name": "Kirara" },
+      { "name": "Alhaitham" },
+      { "name": "Kuki Shinobu" },
+      { "name": "Yae Miko" }
+    ],
+    [
+      { "name": "Kirara" },
+      { "name": "Tighnari" },
+      { "name": "Collei" },
+      { "name": "Fischl" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Boxcutter",
+      "desc": "Effettua fino a 4 attacchi rapidi con la spada.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Boxcutter.png",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.7%",
+          "hit2": "43.1%",
+          "hit3": "54.1%",
+          "hit4": "67.7%",
+          "charged": "55.0% + 55.0%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 4 attacchi rapidi con la spada.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per sferrare due colpi rapidi.</div><div class='skill-section'><b>Plunging Attack</b><br>Si lancia dall'alto, infliggendo danni Dendro all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Meow-teor Kick",
+      "desc": "Kirara si trasforma in una scatola da consegna, rotolando e infliggendo danni Dendro ai nemici. Crea uno scudo che scala con HP max.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Meow-teor_Kick.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Meow-teor Kick</b><br>Kirara si trasforma in una scatola da consegna, rotolando e infliggendo danni Dendro ai nemici. Crea uno scudo che scala con HP max e può essere potenziato tenendo premuto il tasto della skill.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "shield": "13.5% HP + 1298",
+          "skill_dmg": "184.8% ATK",
+          "cd": "8s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Secret Art: Surprise Dispatch",
+      "desc": "Kirara lancia un enorme pacco esplosivo che infligge danni Dendro ad area e genera piccoli pacchi che esplodono a loro volta.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Secret_Art_Surprise_Dispatch.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Secret Art: Surprise Dispatch</b><br>Lancia un pacco gigante che esplode infliggendo danni Dendro ad area e genera piccoli pacchi che esplodono a loro volta.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "262.4% ATK",
+          "mini_packs": "52.5% ATK ciascuno",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Bewitching, Betwitching Tails",
+      "phase": "Ascension Phase 1",
+      "desc": "Dopo aver ottenuto uno scudo, la velocità di movimento di Kirara aumenta del 10% per 10s."
+    },
+    {
+      "name": "Purrfectly Packaged",
+      "phase": "Ascension Phase 4",
+      "desc": "Quando Kirara colpisce un nemico con la sua Elemental Skill, la durata dello scudo aumenta di 2s."
+    },
+    {
+      "name": "Cat's Delivery Service",
+      "phase": "Passive",
+      "desc": "Mostra la posizione di animali e risorse di Inazuma sulla minimappa."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Material Circulation",
+      "phase": "Constellation Lv. 1",
+      "desc": "La durata dello scudo di Meow-teor Kick aumenta del 20%."
+    },
+    {
+      "name": "C2: Perfectly Packaged",
+      "phase": "Constellation Lv. 2",
+      "desc": "Quando un personaggio protetto dallo scudo di Kirara subisce danni, ottiene un bonus Dendro DMG del 20% per 8s."
+    },
+    {
+      "name": "C3: Universal Recognition",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Meow-teor Kick di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Steed of Skanda",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando Kirara ottiene uno scudo, la sua velocità di movimento aumenta del 20% per 15s."
+    },
+    {
+      "name": "C5: A Thousand Miles in a Day",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Secret Art: Surprise Dispatch di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Countless Sights to See",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando un personaggio protetto dallo scudo di Kirara attiva una reazione Dendro, la durata dello scudo si rinnova e guadagna un bonus di 12% HP per 10s."
+    }
+  ]
+}

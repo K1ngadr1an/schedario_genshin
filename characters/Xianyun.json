@@ -1,0 +1,187 @@
+{
+  "displayName": "Xianyun",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xianyun_Icon.png",
+  "tags": ["Catalyst", "Anemo", "Liyue", "5★", "Support", "Healer"],
+  "description": "Xianyun, nota anche come Cloud Retainer, è un personaggio di supporto Anemo e healer, specializzata nel potenziare la mobilità e la guarigione del team.",
+  "weapons": [
+    {
+      "name": "Jadefall's Splendor",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Jadefall_Splendor.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Prototype Amber",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Prototype_Amber.png",
+      "note": "HP% / Healing Bonus"
+    },
+    {
+      "name": "Favonius Codex",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Codex.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Vourukasha's Glow (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Vourukashas_Glow.png"
+    },
+    {
+      "name": "Ocean-Hued Clam (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Ocean-Hued_Clam.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Vourukasha's Glow (2) + Ocean-Hued Clam (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP%" },
+    { "type": "Circlet", "value": "Healing Bonus / HP%" }
+  ],
+  "substats": ["HP%", "Energy Recharge", "Healing Bonus", "ATK%"],
+  "talents": [
+    "Normal Attack: Cloudfall Jade",
+    "White Clouds at Dawn",
+    "Stars Gather at Dusk"
+  ],
+  "info": "Xianyun si concentra su HP% e Healing Bonus per massimizzare la guarigione. Energy Recharge è utile per uptime costante del Burst.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Jadefall's Splendor",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Jadefall_Splendor.png",
+        "note": "HP%"
+      },
+      "artifacts": [
+        {
+          "name": "Vourukasha's Glow (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Vourukashas_Glow.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Xianyun" },
+      { "name": "Xiao" },
+      { "name": "Faruzan" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Xianyun" },
+      { "name": "Navia" },
+      { "name": "Furina" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Xianyun" },
+      { "name": "Itto" },
+      { "name": "Gorou" },
+      { "name": "Albedo" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Cloudfall Jade",
+      "desc": "Performs up to 4 consecutive attacks with her catalyst.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xianyun_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive attacks with her catalyst.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to deal AoE Anemo DMG after a short casting time.</div><div class='skill-section'><b>Plunging Attack</b><br>Gathering the power of Anemo, plunges towards the ground from mid-air, damaging all enemies along the path and dealing AoE Anemo DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "37.5%",
+          "hit2": "36.2%",
+          "hit3": "45.3%",
+          "hit4": "56.7%",
+          "charged": "120%",
+          "plunge": "60%",
+          "lowhigh": "120% / 150%"
+        }
+      ]
+    },
+    {
+      "name": "White Clouds at Dawn",
+      "desc": "Xianyun creates a field that heals allies and deals Anemo DMG to enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xianyun_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>White Clouds at Dawn</b><br>Xianyun creates a field that heals allies and deals Anemo DMG to enemies.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "200% ATK",
+          "healing": "10% Max HP + 1200",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Stars Gather at Dusk",
+      "desc": "Xianyun summons the power of the clouds, granting all party members increased jump height and healing over time.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xianyun_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Stars Gather at Dusk</b><br>Xianyun summons the power of the clouds, granting all party members increased jump height and healing over time.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "300% ATK",
+          "healing": "15% Max HP + 2000",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Aloft on Cloud Nine",
+      "phase": "Ascension Phase 1",
+      "desc": "Increases the healing bonus of all party members by 10% when inside the field created by White Clouds at Dawn."
+    },
+    {
+      "name": "Cloud Transcendence",
+      "phase": "Ascension Phase 4",
+      "desc": "Characters affected by Stars Gather at Dusk gain 15% increased jump height and 10% increased healing received."
+    },
+    {
+      "name": "Cloud Retainer's Blessing",
+      "phase": "Passive",
+      "desc": "When Xianyun crafts Character Ascension Materials, she has a 25% chance to refund a portion of the materials used."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Crane Soars Skyward",
+      "phase": "Constellation Lv. 1",
+      "desc": "White Clouds at Dawn's healing is increased by 20%."
+    },
+    {
+      "name": "Clouds Gather, Rain Falls",
+      "phase": "Constellation Lv. 2",
+      "desc": "Stars Gather at Dusk grants an additional 10% Anemo DMG Bonus to all party members."
+    },
+    {
+      "name": "Wings Unfurled",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Stars Gather at Dusk by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Heavenly Guidance",
+      "phase": "Constellation Lv. 4",
+      "desc": "Characters affected by Stars Gather at Dusk gain 15% increased Movement SPD."
+    },
+    {
+      "name": "Clouds Part, Sun Shines",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of White Clouds at Dawn by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Cloud Retainer's Legacy",
+      "phase": "Constellation Lv. 6",
+      "desc": "Characters affected by Stars Gather at Dusk gain 20% increased ATK."
+    }
+  ]
+}

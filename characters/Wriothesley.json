@@ -1,0 +1,175 @@
+{
+  "displayName": "Wriothesley",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Wriothesley_Icon.png",
+  "tags": ["Catalyst", "Cryo", "Fontaine", "5★", "DPS", "Melee Catalyst"],
+  "description": "Wriothesley è il Duca di Meropide, noto per la sua forza e il suo controllo sul ghiaccio. Utilizza un catalizzatore per infliggere danni Cryo ravvicinati.",
+  "weapons": [
+    {
+      "name": "Cashflow Supervision",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Cashflow_Supervision.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Tulaytullah's Remembrance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Tulaytullahs_Remembrance.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Marechaussee Hunter (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+    },
+    {
+      "name": "Blizzard Strayer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    },
+    {
+      "name": "Marechaussee Hunter (2) + Blizzard Strayer (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / HP%" },
+    { "type": "Goblet", "value": "Cryo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "HP%"],
+  "talents": [
+    "Normal Attack: Forceful Fists of Frost",
+    "Icefang Rush",
+    "Darkgold Wolfbite"
+  ],
+  "info": "Wriothesley si basa su attacchi normali potenziati e danni Cryo. Priorità a CRIT, ATK% e HP% per massimizzare il danno.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Cashflow Supervision",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Cashflow_Supervision.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Marechaussee Hunter (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Wriothesley" },
+      { "name": "Shenhe" },
+      { "name": "Kokomi" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Wriothesley" },
+      { "name": "Layla" },
+      { "name": "Furina" },
+      { "name": "Baizhu" }
+    ],
+    [
+      { "name": "Wriothesley" },
+      { "name": "Charlotte" },
+      { "name": "Mona" },
+      { "name": "Diona" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Forceful Fists of Frost",
+      "desc": "Performs up to 5 consecutive attacks using frost-infused fists.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Wriothesley_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive attacks using frost-infused fists.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to perform a chain of quick attacks.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground, damaging enemies along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "50%",
+          "hit2": "52%",
+          "hit3": "60%",
+          "hit4": "65%",
+          "hit5": "80%",
+          "charged": "120%",
+          "plunge": "60%",
+          "lowhigh": "120% / 150%"
+        }
+      ]
+    },
+    {
+      "name": "Icefang Rush",
+      "desc": "Wriothesley dashes forward, dealing AoE Cryo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Wriothesley_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Icefang Rush</b><br>Wriothesley dashes forward, dealing AoE Cryo DMG and enhancing his normal attacks for a short duration.</div>",
+      "levels": [{ "level": 1, "skill_dmg": "200% ATK", "cd": "10s" }]
+    },
+    {
+      "name": "Darkgold Wolfbite",
+      "desc": "Unleashes a powerful strike, dealing massive Cryo DMG to all nearby enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Wriothesley_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Darkgold Wolfbite</b><br>Unleashes a powerful strike, dealing massive Cryo DMG to all nearby enemies.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "400% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "There Shall Be a Plea for Justice",
+      "phase": "Ascension Phase 1",
+      "desc": "When Wriothesley crafts Weapon Ascension Materials, he has a 10% chance to receive double the product."
+    },
+    {
+      "name": "There Shall Be a Reckoning for Sin",
+      "phase": "Ascension Phase 4",
+      "desc": "Increases the CRIT Rate of Wriothesley's Normal Attacks by 10% during Icefang Rush."
+    },
+    {
+      "name": "The Duke's Grace",
+      "phase": "Passive",
+      "desc": "Decreases sprinting Stamina consumption for your own party members by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Terror for the Evildoers",
+      "phase": "Constellation Lv. 1",
+      "desc": "Increases the level of Darkgold Wolfbite by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Shackles for the Unjust",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Wriothesley uses Icefang Rush, his ATK is increased by 20% for 10s."
+    },
+    {
+      "name": "Judgment for the Guilty",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Icefang Rush by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Mercy for the Innocent",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Wriothesley picks up an Elemental Orb or Particle, he regenerates 10 Energy."
+    },
+    {
+      "name": "Retribution for the Condemned",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Normal Attack: Forceful Fists of Frost by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Deliverance for the Redeemed",
+      "phase": "Constellation Lv. 6",
+      "desc": "During Icefang Rush, Wriothesley's CRIT DMG is increased by 40%."
+    }
+  ]
+}

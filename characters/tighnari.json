@@ -1,0 +1,659 @@
+{
+  "displayName": "Tighnari",
+  "img": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/tighnari/image.png?strip=all&quality=100&w=160",
+  "tags": [
+    "Bow",
+    "Dendro",
+    "Sumeru",
+    "24/8",
+    "Vulpes Zerda",
+    "Spire of Solitary Enlightenment"
+  ],
+  "description": "A young researcher well-versed in botany who currently serves as a Forest Watcher in Avidya Forest. He is a straight shooter with a warm heart and a cool head.",
+  "weapons": [
+    {
+      "name": "Hunter's Path",
+      "img": "https://img.game8.co/3635988/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Aqua Simulacra",
+      "img": "https://img.game8.co/3511223/2310c3f7ed9c13a4249fccdc256199bb.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Polar Star",
+      "img": "https://img.game8.co/3456284/700b83638b99dba8908463aa92f6b3d6.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Thundering Pulse",
+      "img": "https://img.game8.co/3385778/e37e18f22714bbafe297e8a4beb96749.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Skyward Harp",
+      "img": "https://img.game8.co/3311114/3b0e2ee76a9d421e3f7e4a640f7a9b99.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Amos' Bow",
+      "img": "https://img.game8.co/3314421/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "The Viridescent Hunt",
+      "img": "https://img.game8.co/3314434/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Prototype Crescent",
+      "img": "https://img.game8.co/3314396/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Blackcliff Warbow",
+      "img": "https://img.game8.co/3314333/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Windblume Ode",
+      "img": "https://img.game8.co/3314242/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Rust",
+      "img": "https://img.game8.co/3314422/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Stringless",
+      "img": "https://img.game8.co/3314435/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Sharpshooter's Oath",
+      "img": "https://img.game8.co/3314397/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Deepwood Memories (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Wanderer's Troupe (4)",
+      "img": "https://img.game8.co/3314241/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Deepwood Memories (2) + Wanderer's Troupe (2)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Deepwood Memories (2) + Gilded Dreams (2)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Wanderer's Troupe (2)",
+      "img": "https://img.game8.co/3314241/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Gilded Dreams (2)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (2)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Elemental Mastery / ATK%" },
+    { "type": "Goblet", "value": "Dendro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "Energy Recharge",
+    "CRIT Rate",
+    "CRIT DMG",
+    "Elemental Mastery",
+    "ATK%"
+  ],
+  "talents": ["Normal Attack", "Skill", "Burst"],
+  "info": "Tighnari è un DPS Dendro che si basa sui Charged Attack per infliggere danni. La sua abilità Elementale aumenta la velocità di caricamento e riduce il tempo di caricamento dei Charged Attack.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Hunter's Path",
+        "img": "https://img.game8.co/3635988/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Deepwood Memories (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Tighnari", "img": "tighnari.png" },
+      { "name": "Yae Miko", "img": "yae_miko.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Tighnari", "img": "tighnari.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "Kuki Shinobu", "img": "kuki_shinobu.png" }
+    ],
+    [
+      { "name": "Tighnari", "img": "tighnari.png" },
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Tighnari", "img": "tighnari.png" },
+      { "name": "Lisa", "img": "lisa.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "YaoYao", "img": "yaoyao.png" }
+    ],
+    [
+      { "name": "Tighnari", "img": "tighnari.png" },
+      { "name": "Beidou", "img": "beidou.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "Kuki Shinobu", "img": "kuki_shinobu.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Khawaran Bane",
+      "desc": "",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Tighnari-NA.webp",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Tighnari_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.1%",
+          "hit2": "46.8%",
+          "hit3": "58.1%",
+          "hit4": "57.5%",
+          "hit5": "72.6%",
+          "charged": "43.9%",
+          "stamina": "20",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "47.7%",
+          "hit2": "50.6%",
+          "hit3": "62.8%",
+          "hit4": "62.2%",
+          "hit5": "78.5%",
+          "charged": "47.5%",
+          "stamina": "20",
+          "plunge": "61.4%",
+          "lowhigh": "122.8% / 153.5%"
+        },
+        {
+          "level": 3,
+          "hit1": "51.3%",
+          "hit2": "54.4%",
+          "hit3": "67.5%",
+          "hit4": "66.9%",
+          "hit5": "84.4%",
+          "charged": "51.1%",
+          "stamina": "20",
+          "plunge": "66.0%",
+          "lowhigh": "132.0% / 165.0%"
+        },
+        {
+          "level": 4,
+          "hit1": "56.4%",
+          "hit2": "59.8%",
+          "hit3": "74.3%",
+          "hit4": "73.6%",
+          "hit5": "92.8%",
+          "charged": "56.2%",
+          "stamina": "20",
+          "plunge": "72.6%",
+          "lowhigh": "145.2% / 181.5%"
+        },
+        {
+          "level": 5,
+          "hit1": "60.0%",
+          "hit2": "63.6%",
+          "hit3": "79.0%",
+          "hit4": "78.2%",
+          "hit5": "98.7%",
+          "charged": "59.8%",
+          "stamina": "20",
+          "plunge": "77.2%",
+          "lowhigh": "154.4% / 193.0%"
+        },
+        {
+          "level": 6,
+          "hit1": "63.6%",
+          "hit2": "67.4%",
+          "hit3": "83.7%",
+          "hit4": "82.8%",
+          "hit5": "104.6%",
+          "charged": "63.4%",
+          "stamina": "20",
+          "plunge": "81.8%",
+          "lowhigh": "163.6% / 204.5%"
+        },
+        {
+          "level": 7,
+          "hit1": "68.7%",
+          "hit2": "72.8%",
+          "hit3": "90.4%",
+          "hit4": "89.4%",
+          "hit5": "112.9%",
+          "charged": "68.5%",
+          "stamina": "20",
+          "plunge": "88.4%",
+          "lowhigh": "176.8% / 221.0%"
+        },
+        {
+          "level": 8,
+          "hit1": "73.8%",
+          "hit2": "78.2%",
+          "hit3": "97.1%",
+          "hit4": "96.0%",
+          "hit5": "121.2%",
+          "charged": "73.6%",
+          "stamina": "20",
+          "plunge": "95.0%",
+          "lowhigh": "190.0% / 237.5%"
+        },
+        {
+          "level": 9,
+          "hit1": "78.9%",
+          "hit2": "83.6%",
+          "hit3": "103.8%",
+          "hit4": "102.6%",
+          "hit5": "129.5%",
+          "charged": "78.7%",
+          "stamina": "20",
+          "plunge": "101.6%",
+          "lowhigh": "203.2% / 254.0%"
+        },
+        {
+          "level": 10,
+          "hit1": "84.0%",
+          "hit2": "89.0%",
+          "hit3": "110.5%",
+          "hit4": "109.2%",
+          "hit5": "137.8%",
+          "charged": "83.8%",
+          "stamina": "20",
+          "plunge": "108.2%",
+          "lowhigh": "216.4% / 270.5%"
+        },
+        {
+          "level": 11,
+          "hit1": "89.1%",
+          "hit2": "94.4%",
+          "hit3": "117.2%",
+          "hit4": "115.8%",
+          "hit5": "146.1%",
+          "charged": "88.9%",
+          "stamina": "20",
+          "plunge": "114.8%",
+          "lowhigh": "229.6% / 287.0%"
+        },
+        {
+          "level": 12,
+          "hit1": "94.2%",
+          "hit2": "99.8%",
+          "hit3": "123.9%",
+          "hit4": "122.4%",
+          "hit5": "154.4%",
+          "charged": "94.0%",
+          "stamina": "20",
+          "plunge": "121.4%",
+          "lowhigh": "242.8% / 303.5%"
+        },
+        {
+          "level": 13,
+          "hit1": "99.3%",
+          "hit2": "105.2%",
+          "hit3": "130.6%",
+          "hit4": "129.0%",
+          "hit5": "162.7%",
+          "charged": "99.1%",
+          "stamina": "20",
+          "plunge": "128.0%",
+          "lowhigh": "256.0% / 320.0%"
+        },
+        {
+          "level": 14,
+          "hit1": "104.4%",
+          "hit2": "110.6%",
+          "hit3": "137.3%",
+          "hit4": "135.6%",
+          "hit5": "171.0%",
+          "charged": "104.2%",
+          "stamina": "20",
+          "plunge": "134.6%",
+          "lowhigh": "269.2% / 336.5%"
+        },
+        {
+          "level": 15,
+          "hit1": "109.5%",
+          "hit2": "116.0%",
+          "hit3": "144.0%",
+          "hit4": "142.2%",
+          "hit5": "179.3%",
+          "charged": "109.3%",
+          "stamina": "20",
+          "plunge": "141.2%",
+          "lowhigh": "282.4% / 353.0%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. While aiming, the power of Dendro will accumulate on the arrowhead. A fully charged arrow will deal Dendro DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Vijnana-Phala Mine",
+      "desc": "Tighnari throws a Vijnana Stormheart that deals Dendro DMG to opponents it hits, creating a Vijnana-Khanda Field that taunts nearby opponents and deals Dendro DMG to them within the field's AoE.",
+      "video": "https://youtu.be/example",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Tighnari-Skill.webp",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Tighnari throws a <b>Vijnana Stormheart</b> that deals <span class='dendro'>Dendro DMG</span> to opponents it hits, creating a <b>Vijnana-Khanda Field</b> that taunts nearby opponents and deals <span class='dendro'>Dendro DMG</span> to them within the field's AoE.</div><div class='skill-section'><b>Vijnana-Khanda Field</b><br>When opponents within the Vijnana-Khanda Field are hit by Tighnari's Charged Attacks, the Charged Attack will create additional Clusterbloom Arrows that will track and deal <span class='dendro'>Dendro DMG</span> to them.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "148.8%",
+          "field_dmg": "60.8%",
+          "clusterbloom_dmg": "60.8%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "160.0%",
+          "field_dmg": "65.4%",
+          "clusterbloom_dmg": "65.4%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "171.2%",
+          "field_dmg": "70.0%",
+          "clusterbloom_dmg": "70.0%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "186.0%",
+          "field_dmg": "76.0%",
+          "clusterbloom_dmg": "76.0%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "197.2%",
+          "field_dmg": "80.6%",
+          "clusterbloom_dmg": "80.6%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 6,
+          "skill_dmg": "208.4%",
+          "field_dmg": "85.2%",
+          "clusterbloom_dmg": "85.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 7,
+          "skill_dmg": "223.2%",
+          "field_dmg": "91.2%",
+          "clusterbloom_dmg": "91.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 8,
+          "skill_dmg": "238.0%",
+          "field_dmg": "97.2%",
+          "clusterbloom_dmg": "97.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 9,
+          "skill_dmg": "252.8%",
+          "field_dmg": "103.2%",
+          "clusterbloom_dmg": "103.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 10,
+          "skill_dmg": "267.6%",
+          "field_dmg": "109.2%",
+          "clusterbloom_dmg": "109.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 11,
+          "skill_dmg": "282.4%",
+          "field_dmg": "115.2%",
+          "clusterbloom_dmg": "115.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 12,
+          "skill_dmg": "297.2%",
+          "field_dmg": "121.2%",
+          "clusterbloom_dmg": "121.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 13,
+          "skill_dmg": "312.0%",
+          "field_dmg": "127.2%",
+          "clusterbloom_dmg": "127.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 14,
+          "skill_dmg": "326.8%",
+          "field_dmg": "133.2%",
+          "clusterbloom_dmg": "133.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        },
+        {
+          "level": 15,
+          "skill_dmg": "341.6%",
+          "field_dmg": "139.2%",
+          "clusterbloom_dmg": "139.2%",
+          "field_duration": "12s",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Fashioner's Tanglevine Shaft",
+      "video": "https://youtu.be/example",
+      "desc": "Combines the power of all seeds to fire 6 Tanglevine Shafts that can track opponents and deal Dendro DMG.",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Tighnari-Burst.webp",
+      "details_html": "<div class='skill-section'>Combines the power of all seeds to fire 6 <b>Tanglevine Shafts</b> that can track opponents and deal <span class='dendro'>Dendro DMG</span>.</div><div class='skill-section'>For each opponent hit by the Tanglevine Shafts, 1 additional Tanglevine Shaft will be fired.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "tanglevine_dmg": "115.2%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 2,
+          "tanglevine_dmg": "123.8%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 3,
+          "tanglevine_dmg": "132.5%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 4,
+          "tanglevine_dmg": "144.0%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 5,
+          "tanglevine_dmg": "152.6%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 6,
+          "tanglevine_dmg": "161.3%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 7,
+          "tanglevine_dmg": "172.8%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 8,
+          "tanglevine_dmg": "184.3%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 9,
+          "tanglevine_dmg": "195.8%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 10,
+          "tanglevine_dmg": "207.4%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 11,
+          "tanglevine_dmg": "218.9%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 12,
+          "tanglevine_dmg": "230.4%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 13,
+          "tanglevine_dmg": "244.8%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 14,
+          "tanglevine_dmg": "259.2%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        },
+        {
+          "level": 15,
+          "tanglevine_dmg": "273.6%",
+          "additional_shafts": "1",
+          "cd": "12s",
+          "energy": "40"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Encyclopedic Knowledge",
+      "phase": "Ascension Phase 1",
+      "desc": "Tighnari's Charged Attack CRIT Rate is increased by 15%."
+    },
+    {
+      "name": "Scholarly Blade",
+      "phase": "Ascension Phase 4",
+      "desc": "For every point of Elemental Mastery Tighnari possesses, his Charged Attack and Fashioner's Tanglevine Shaft DMG are increased by 0.06%. The maximum DMG Bonus obtainable this way is 60%."
+    },
+    {
+      "name": "Keen Sight",
+      "phase": "Passive",
+      "desc": "When Tighnari crafts Character and Weapon Enhancement Materials, he has a 10% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Beginnings Determined at the Roots",
+      "phase": "Constellation Lv. 1",
+      "desc": "Tighnari's Charged Attack CRIT Rate is increased by 15%."
+    },
+    {
+      "name": "Origins Known From the Stem",
+      "phase": "Constellation Lv. 2",
+      "desc": "When there are opponents within the Vijnana-Khanda Field created by Vijnana-Phala Mine, Tighnari gains 20% Dendro DMG Bonus. The effect will last up to 6s or until the field disappears."
+    },
+    {
+      "name": "Fortunes Read Amongst the Branches",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Vijnana-Phala Mine by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Withering Glimpsed in the Leaves",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Fashioner's Tanglevine Shaft is unleashed, all party members gain 60 Elemental Mastery for 8s. If the Fashioner's Tanglevine Shaft triggers a Burning, Bloom, Quicken, or Spread reaction, their Elemental Mastery will be further increased by 60. This latter case will also refresh the duration of the Elemental Mastery increase."
+    },
+    {
+      "name": "Comprehension Amidst the Flowers",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Fashioner's Tanglevine Shaft by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Karma Adjudged From the Leaden Fruit",
+      "phase": "Constellation Lv. 6",
+      "desc": "Tighnari's Charged Attack will create 1 additional Clusterbloom Arrow. This arrow deals 150% of Tighnari's ATK as Dendro DMG."
+    }
+  ]
+}

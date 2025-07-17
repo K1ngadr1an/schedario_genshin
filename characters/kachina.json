@@ -1,0 +1,209 @@
+{
+  "displayName": "Kachina",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Cryo", "Polearm", "Snezhnaya", "5★", "DPS", "Unreleased"],
+  "description": "A mysterious warrior from Snezhnaya, Kachina is rumored to wield Cryo powers and a polearm, freezing her enemies with swift and elegant attacks.",
+  "weapons": [
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_Homa.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Primordial Jade Winged-Spear",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Winged-Spear.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Deathmatch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Deathmatch.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Blackcliff Pole",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Blackcliff_Pole.png",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Blizzard Strayer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    },
+    {
+      "name": "Gladiator’s Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    },
+    {
+      "name": "Blizzard Strayer (2) + Gladiator’s Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Cryo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Frosted Dance",
+    "Glacial Spear",
+    "Winter's Embrace"
+  ],
+  "info": "Kachina is a speculative Cryo polearm DPS from Snezhnaya. Build her for Cryo DMG, CRIT, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Staff of Homa",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_Homa.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Blizzard Strayer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kachina" },
+      { "name": "Shenhe" },
+      { "name": "Kazuha" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Kachina" },
+      { "name": "Ayaka" },
+      { "name": "Mona" },
+      { "name": "Venti" }
+    ],
+    [
+      { "name": "Kachina" },
+      { "name": "Rosaria" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Frosted Dance",
+      "desc": "Performs up to 5 consecutive Cryo polearm strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Polearm_Attack.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive Cryo polearm strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a spinning Cryo attack.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Cryo DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "42.6%",
+          "hit3": "56.2%",
+          "hit4": "59.2%",
+          "hit5": "71.0%",
+          "charged": "55.9% + 55.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "48.1%",
+          "hit2": "46.1%",
+          "hit3": "60.8%",
+          "hit4": "64.0%",
+          "hit5": "76.8%",
+          "charged": "60.5% + 60.5%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Glacial Spear",
+      "desc": "Kachina thrusts her spear forward, dealing AoE Cryo DMG and increasing her ATK.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Glacial_Spear.png",
+      "details_html": "<div class='skill-section'><b>Glacial Spear</b><br>Thrusts her spear forward, dealing AoE Cryo DMG and increasing Kachina's ATK for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "120% ATK",
+          "atk_bonus": "20%",
+          "cd": "12s"
+        },
+        { "level": 2, "skill_dmg": "130% ATK", "atk_bonus": "22%", "cd": "12s" }
+      ]
+    },
+    {
+      "name": "Winter's Embrace",
+      "desc": "Kachina summons a blizzard, dealing massive AoE Cryo DMG and granting all allies increased Cryo DMG Bonus.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Blizzard.png",
+      "details_html": "<div class='skill-section'><b>Winter's Embrace</b><br>Summons a blizzard, dealing massive AoE Cryo DMG and granting all allies increased Cryo DMG Bonus for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "180% ATK",
+          "cryo_bonus": "20%",
+          "duration": "8s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "194% ATK",
+          "cryo_bonus": "22%",
+          "duration": "8s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Frozen Precision",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Glacial Spear, Kachina's Cryo DMG is increased by 20% for 10s."
+    },
+    {
+      "name": "Snezhnayan Spirit",
+      "phase": "Ascension Phase 4",
+      "desc": "Allies affected by Winter's Embrace gain 20% increased ATK."
+    },
+    {
+      "name": "Icy Step",
+      "phase": "Passive",
+      "desc": "When Kachina is in the party, sprinting stamina consumption is reduced by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Blizzard's Resolve",
+      "phase": "Constellation Lv. 1",
+      "desc": "Glacial Spear gains 1 additional charge."
+    },
+    {
+      "name": "C2: Frosted Zeal",
+      "phase": "Constellation Lv. 2",
+      "desc": "After using Winter's Embrace, Kachina's CRIT Rate is increased by 10% for 8s."
+    },
+    {
+      "name": "C3: Cryo Ascendant",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Glacial Spear by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "C4: Winter's Blessing",
+      "phase": "Constellation Lv. 4",
+      "desc": "Allies affected by Winter's Embrace gain 20% increased Energy Recharge."
+    },
+    {
+      "name": "C5: Embrace of the North",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Winter's Embrace by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "C6: Snezhnaya's Fury",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Kachina triggers a Cryo-related reaction, her ATK is increased by 20% for 10s."
+    }
+  ]
+}

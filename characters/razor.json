@@ -1,0 +1,227 @@
+{
+  "displayName": "Razor",
+  "img": "images/characters/razor.png",
+  "tags": ["Claymore", "Electro", "Mondstadt", "DPS", "4★", "Wolf Boy"],
+  "description": "A boy who lives among the wolves of Wolvendom in Mondstadt. Razor is a physical DPS who excels at fast claymore attacks and Electro bursts.",
+  "weapons": [
+    {
+      "name": "Wolf's Gravestone",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Snow-Tombed Starsilver",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Snow-Tombed_Starsilver.png",
+      "note": "Physical DMG"
+    },
+    {
+      "name": "Prototype Archaic",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Prototype_Archaic.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Skyrider Greatsword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Skyrider_Greatsword.png",
+      "note": "Physical DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Pale Flame (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+    },
+    {
+      "name": "Gladiator's Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    },
+    {
+      "name": "Pale Flame (2) + Bloodstained Chivalry (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Physical DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Steel Fang",
+    "Claw and Thunder",
+    "Lightning Fang"
+  ],
+  "info": "Razor is a 4★ physical DPS who excels at fast claymore attacks and Electro bursts. Focus on Physical DMG, CRIT, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Wolf's Gravestone",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "ATK%"
+      },
+      "artifacts": [
+        {
+          "name": "Pale Flame (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Razor" },
+      { "name": "Bennett" },
+      { "name": "Diona" },
+      { "name": "Fischl" }
+    ],
+    [
+      { "name": "Razor" },
+      { "name": "Xingqiu" },
+      { "name": "Kaeya" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Razor" },
+      { "name": "Rosaria" },
+      { "name": "Diona" },
+      { "name": "Fischl" }
+    ],
+    [
+      { "name": "Razor" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Steel Fang",
+      "desc": "Performs up to 4 consecutive claymore strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Steel_Fang.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks against all nearby opponents. At the end of the sequence, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "95.9%",
+          "hit2": "82.6%",
+          "hit3": "103.6%",
+          "hit4": "136%",
+          "charged": "62.5% + 113%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 2,
+          "hit1": "103.6%",
+          "hit2": "89.3%",
+          "hit3": "112.1%",
+          "hit4": "147.1%",
+          "charged": "67.5% + 122%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        }
+      ]
+    },
+    {
+      "name": "Claw and Thunder",
+      "desc": "Razor swipes with the power of Electro, dealing Electro DMG. Press: Swipes quickly. Hold: Swipes twice, generating more Electro Sigils and dealing AoE Electro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Claw_and_Thunder.png",
+      "details_html": "<div class='skill-section'><b>Claw and Thunder</b><br>Press: Swipes with Electro, dealing Electro DMG and generating an Electro Sigil. Hold: Swipes twice, dealing AoE Electro DMG and generating up to 3 Electro Sigils. Electro Sigils increase Razor's Energy Recharge and can be consumed to restore Energy.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "press_dmg": "199.2%",
+          "hold_dmg": "295.2%",
+          "energy_gen": "20/30",
+          "cd": "6/10s"
+        },
+        {
+          "level": 2,
+          "press_dmg": "214.6%",
+          "hold_dmg": "318.0%",
+          "energy_gen": "20/30",
+          "cd": "6/10s"
+        }
+      ]
+    },
+    {
+      "name": "Lightning Fang",
+      "desc": "Razor summons the Wolf Within, dealing AoE Electro DMG to all nearby enemies. For the duration, Razor's attacks are infused with Electro, his ATK SPD and Electro RES are increased, and he is immune to Electro-Charged status.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Lightning_Fang.png",
+      "details_html": "<div class='skill-section'><b>Lightning Fang</b><br>Summons the Wolf Within, dealing AoE Electro DMG. For the duration, Razor's attacks are infused with Electro, his ATK SPD and Electro RES are increased, and he is immune to Electro-Charged status. The Wolf Within attacks alongside Razor, dealing Electro DMG.",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "160%",
+          "wolf_dmg": "24% per hit",
+          "atk_spd": "+20%",
+          "duration": "15s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "172%",
+          "wolf_dmg": "25.8% per hit",
+          "atk_spd": "+20%",
+          "duration": "15s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Awakening",
+      "phase": "Ascension Phase 1",
+      "desc": "Decreases Claw and Thunder's CD by 18%. Using Lightning Fang resets the CD of Claw and Thunder."
+    },
+    {
+      "name": "Hunger",
+      "phase": "Ascension Phase 4",
+      "desc": "When Razor's Energy is below 50%, increases Energy Recharge by 30%."
+    },
+    {
+      "name": "Wolvensprint",
+      "phase": "Passive",
+      "desc": "Decreases sprinting Stamina consumption for your own party members by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Wolf's Instinct",
+      "phase": "Constellation Lv. 1",
+      "desc": "Picking up an Elemental Orb or Particle increases Razor's DMG by 10% for 8s."
+    },
+    {
+      "name": "Suppression",
+      "phase": "Constellation Lv. 2",
+      "desc": "Increases CRIT Rate against enemies with less than 30% HP by 10%."
+    },
+    {
+      "name": "Soul Companion",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Claw and Thunder by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Bite",
+      "phase": "Constellation Lv. 4",
+      "desc": "When casting Claw and Thunder (Press), enemies hit have their DEF decreased by 15% for 7s."
+    },
+    {
+      "name": "Sharpened Claws",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Lightning Fang by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Lupus Fulguris",
+      "phase": "Constellation Lv. 6",
+      "desc": "Every 10s, Razor's sword charges up, causing the next Normal Attack to release lightning that deals 100% of Razor's ATK as Electro DMG. When under the effect of Lightning Fang, this will summon a lightning strike that deals 20% of Razor's ATK as Electro DMG to all nearby enemies."
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "displayName": "Gaming",
+  "img": "images/characters/gaming.png",
+  "tags": ["Claymore", "Pyro", "Liyue", "4★", "DPS", "Lion Dancer"],
+  "description": "A passionate lion dancer from Liyue, Gaming is a Pyro claymore user who excels at fast-paced attacks and Pyro DPS.",
+  "weapons": [
+    {
+      "name": "Serpent Spine",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Wolf's Gravestone",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "The Unforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Unforged.png",
+      "note": "Shielded ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Shimenawa's Reminiscence (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Shimenawa's_Reminiscence.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (2) + Crimson Witch of Flames (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Stellar Rend",
+    "Bestial Ascent",
+    "Suanni's Spirit Soars"
+  ],
+  "info": "Gaming is a Pyro DPS who excels at fast-paced attacks and Pyro application. Build him for CRIT, ATK%, and Pyro DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Serpent Spine",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Shimenawa's Reminiscence (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Shimenawa's_Reminiscence.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Gaming" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" },
+      { "name": "Yelan" }
+    ],
+    [
+      { "name": "Gaming" },
+      { "name": "Xingqiu" },
+      { "name": "Furina" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Gaming" },
+      { "name": "Kazuha" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Stellar Rend",
+      "desc": "Performs up to 4 consecutive strikes with a claymore.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Stellar_Rend.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive strikes with a claymore.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks against all nearby opponents. At the end of the sequence, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "72.2%",
+          "hit2": "69.1%",
+          "hit3": "89.7%",
+          "hit4": "112.3%",
+          "charged": "60.7% + 74.6%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 2,
+          "hit1": "78.6%",
+          "hit2": "75.2%",
+          "hit3": "97.6%",
+          "hit4": "122.1%",
+          "charged": "65.5% + 80.5%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        }
+      ]
+    },
+    {
+      "name": "Bestial Ascent",
+      "desc": "Gaming dashes forward, dealing Pyro DMG and entering the Lion Dancer state, increasing his resistance to interruption and enabling special attacks.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Bestial_Ascent.png",
+      "details_html": "<div class='skill-section'><b>Bestial Ascent</b><br>Dashes forward, dealing Pyro DMG and entering the Lion Dancer state, increasing resistance to interruption and enabling special attacks. Consecutive attacks increase Lion Dancer stacks, enhancing damage.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "120% ATK",
+          "lion_dancer_bonus": "+20% DMG per stack",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "130% ATK",
+          "lion_dancer_bonus": "+22% DMG per stack",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Suanni's Spirit Soars",
+      "desc": "Gaming unleashes a powerful attack, dealing AoE Pyro DMG and ending the Lion Dancer state.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Suannis_Spirit_Soars.png",
+      "details_html": "<div class='skill-section'><b>Suanni's Spirit Soars</b><br>Unleashes a powerful attack, dealing AoE Pyro DMG and ending the Lion Dancer state. Damage scales with the number of Lion Dancer stacks consumed.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "220% ATK",
+          "stack_bonus": "+40% DMG per stack",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "238% ATK",
+          "stack_bonus": "+44% DMG per stack",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Lion's Agility",
+      "phase": "Ascension Phase 1",
+      "desc": "Increases movement speed for all party members by 10% during Lion Dancer state."
+    },
+    {
+      "name": "Pyro Mastery",
+      "phase": "Ascension Phase 4",
+      "desc": "When Gaming triggers an Overloaded reaction, his ATK is increased by 20% for 10s."
+    },
+    {
+      "name": "Festival Performer",
+      "phase": "Passive",
+      "desc": "When dispatched on an expedition in Liyue, the time consumed is reduced by 25%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Roaring Entrance",
+      "phase": "Constellation Lv. 1",
+      "desc": "Bestial Ascent gains 1 additional charge."
+    },
+    {
+      "name": "Blazing Steps",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Gaming triggers an Overloaded reaction, his CRIT Rate is increased by 15% for 10s."
+    },
+    {
+      "name": "Lion's Pride",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Bestial Ascent by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Dancer's Spirit",
+      "phase": "Constellation Lv. 4",
+      "desc": "Suanni's Spirit Soars deals 30% more DMG to enemies affected by Pyro."
+    },
+    {
+      "name": "Festival's Peak",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Suanni's Spirit Soars by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Unstoppable Lion",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Gaming's HP falls below 50%, his Pyro DMG Bonus is increased by 20%."
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "displayName": "Xinyan",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xinyan_Icon.png",
+  "tags": ["Claymore", "Pyro", "Liyue", "4★", "DPS", "Shield", "Physical"],
+  "description": "Xinyan è una rockstar di Liyue che suona la chitarra elettrica. Eccelle nel danno fisico e Pyro, fornendo anche scudi protettivi al team.",
+  "weapons": [
+    {
+      "name": "Redhorn Stonethresher",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Redhorn_Stonethresher.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Wolf's Gravestone",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Wolfs_Gravestone.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Serpent_Spine.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Prototype Archaic",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Prototype_Archaic.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Blackcliff Slasher",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Blackcliff_Slasher.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Whiteblind",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Whiteblind.png",
+      "note": "DEF%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Pale Flame (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+    },
+    {
+      "name": "Bloodstained Chivalry (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Bloodstained_Chivalry.png"
+    },
+    {
+      "name": "Pale Flame (2) + Bloodstained Chivalry (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Gladiator's Finale (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / DEF%" },
+    { "type": "Goblet", "value": "Physical DMG Bonus / Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "DEF%"],
+  "talents": [
+    "Normal Attack: Dance on Fire",
+    "Sweeping Fervor",
+    "Riff Revolution"
+  ],
+  "info": "Xinyan può essere costruita sia per danno fisico che Pyro. Priorità a CRIT, ATK% e DEF% per scudi più resistenti.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Redhorn Stonethresher",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Redhorn_Stonethresher.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Pale Flame (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Xinyan" },
+      { "name": "Bennett" },
+      { "name": "Fischl" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Xinyan" },
+      { "name": "Bennett" },
+      { "name": "Xingqiu" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Xinyan" },
+      { "name": "Bennett" },
+      { "name": "Rosaria" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Dance on Fire",
+      "desc": "Performs up to 4 consecutive strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xinyan_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains Stamina over time to perform continuous spinning attacks against all nearby enemies.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "79.2%",
+          "hit2": "73.4%",
+          "hit3": "86.1%",
+          "hit4": "113%",
+          "charged": "45.6%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.4%"
+        }
+      ]
+    },
+    {
+      "name": "Sweeping Fervor",
+      "desc": "Xinyan brandishes her instrument, dealing Pyro DMG on nearby enemies, forming a shield made out of her audience's passion.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xinyan_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Sweeping Fervor</b><br>Xinyan brandishes her instrument, dealing Pyro DMG on nearby enemies, forming a shield made out of her audience's passion.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "169% ATK",
+          "shield_strength": "12% Max HP + 1155",
+          "cd": "18s"
+        }
+      ]
+    },
+    {
+      "name": "Riff Revolution",
+      "desc": "Xinyan launches nearby enemies and deals Physical DMG to them, hyping up the crowd.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xinyan_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Riff Revolution</b><br>Xinyan launches nearby enemies and deals Physical DMG to them, hyping up the crowd.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "340% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "The Show Goes On, Even Without an Audience...",
+      "phase": "Ascension Phase 1",
+      "desc": "Decreases the number of opponents Sweeping Fervor must hit to trigger each level of shielding."
+    },
+    {
+      "name": "...Now That's Rock 'N' Roll!",
+      "phase": "Ascension Phase 4",
+      "desc": "Characters shielded by Sweeping Fervor deal 15% increased Physical DMG."
+    },
+    {
+      "name": "A Rad Recipe",
+      "phase": "Passive",
+      "desc": "When a Perfect Cooking is achieved on a DEF-boosting dish, Xinyan has a 12% chance to obtain double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Fatal Acceleration",
+      "phase": "Constellation Lv. 1",
+      "desc": "Sweeping Fervor's swing DMG is increased by 3% for each opponent hit (up to a maximum of 24%)."
+    },
+    {
+      "name": "Impromptu Opening",
+      "phase": "Constellation Lv. 2",
+      "desc": "Riff Revolution's Physical DMG has its CRIT Rate increased by 100%, and will form a shield at Shield Level 3: Rave when cast."
+    },
+    {
+      "name": "Double-Stop",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Sweeping Fervor by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Wildfire Rhythm",
+      "phase": "Constellation Lv. 4",
+      "desc": "Sweeping Fervor's swing DMG decreases opponent's Physical RES by 15% for 12s."
+    },
+    {
+      "name": "Screamin' for an Encore",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Riff Revolution by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Rockin' in a Flaming World",
+      "phase": "Constellation Lv. 6",
+      "desc": "Decreases the Stamina consumption of Xinyan's Charged Attacks by 30%. Additionally, Xinyan's Charged Attacks gain an ATK bonus equal to 50% of her DEF."
+    }
+  ]
+}

@@ -1,0 +1,1034 @@
+[
+  {
+    "nome": "Aquila Favonia",
+    "tipo": "Spada",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK Fisico",
+      "valore": 41.3
+    },
+    "bonus_passiva": "Aumenta l'ATK del 20%. Quando si subisce un colpo critico, rigenera HP pari al 100% dell'ATK e infligge 200% di danno ATK ai nemici circostanti.",
+    "image": "images/weapons/aquila-favonia.png"
+  },
+  {
+    "nome": "desiderio purulento",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 510,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 45.9
+    },
+    "bonus_passiva": "Aumenta l'ATK del 3.2% per ogni punto di HP massimo. Quando l'HP è superiore al 90%, aumenta la Crit Rate del 14%.",
+    "image": "images/weapons/desiderio-purulento.png"
+  },
+  {
+    "nome": "Spada del Falco",
+    "tipo": "Spada",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "Crit DMG",
+      "valore": 44.1
+    },
+    "bonus_passiva": "Aumenta il danno degli attacchi normali e delle abilità elementali del 20%. Inoltre, quando si usa un'abilità elementale, aumenta l'ATK del 20% per 12 secondi.",
+    "image": "images/weapons/spada-del-falco.png"
+  },
+  {
+    "nome": "Spada di Pietra Nera",
+    "tipo": "Spada",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spada-di-pietra-nera.png"
+  },
+  {
+    "nome": "Lama Splendente di Rebellia",
+    "tipo": "Spada",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/lama-splendente-di-rebellia.png"
+  },
+  {
+    "nome": "Millelame della Nebbia Riflessa",
+    "tipo": "Spada",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/millelame-della-nebbia-riflessa.png"
+  },
+  {
+    "nome": "Chiave di Khaj-Nisut",
+    "tipo": "Spada",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/chiave-di-khaj-nisut.png"
+  },
+  {
+    "nome": "Lama di Haran Geppaku Futsu",
+    "tipo": "Spada",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/lama-di-haran-geppaku-futsu.png"
+  },
+  {
+    "nome": "Spadone del Lupo",
+    "tipo": "Spadone",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-del-lupo.png"
+  },
+  {
+    "nome": "Orgoglio Celeste",
+    "tipo": "Spadone",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/orgoglio-celeste.png"
+  },
+  {
+    "nome": "Ombra Bianca",
+    "tipo": "Spadone",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/ombra-bianca.png"
+  },
+  {
+    "nome": "Spadone di Pietra Nera",
+    "tipo": "Spadone",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-di-pietra-nera.png"
+  },
+  {
+    "nome": "Spadone di Pietra Antica",
+    "tipo": "Spadone",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-di-pietra-antica.png"
+  },
+  {
+    "nome": "Lancia di Homa",
+    "tipo": "Lancia",
+    "rarità": 5,
+    "atk_base": 608,
+    "stat_secondaria": {
+      "tipo": "Crit DMG",
+      "valore": 66.2
+    },
+    "bonus_passiva": "Aumenta l'HP del 20%. Fornisce un bonus ATK basato sullo 0.8% dell'HP massimo. Quando l'HP è inferiore al 50%, questo bonus ATK aumenta di un ulteriore 1% dell'HP massimo.",
+    "image": "images/weapons/lancia-di-homa.png"
+  },
+  {
+    "nome": "Lancia Alata di Jade Primordiale",
+    "tipo": "Lancia",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/lancia-alata-di-jade-primordiale.png"
+  },
+  {
+    "nome": "Bastone delle Sabbie Rosse",
+    "tipo": "Lancia",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/bastone-delle-sabbie-rosse.png"
+  },
+  {
+    "nome": "Lancia di Engulfing Lightning",
+    "tipo": "Lancia",
+    "rarità": 5,
+    "atk_base": 608,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 55.1
+    },
+    "bonus_passiva": "L'ATK aumenta del 28% della Ricarica Energia oltre il 100% base. Puoi ottenere un massimo di 80% bonus ATK. Ottieni 30% di Ricarica Energia per 12 secondi dopo aver usato un'abilità elementale.",
+    "image": "images/weapons/lancia-di-engulfing-lightning.png"
+  },
+  {
+    "nome": "Arco di Amos",
+    "tipo": "Arco",
+    "rarità": 5,
+    "atk_base": 608,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta il danno degli attacchi normali e mirati del 12%. Dopo aver scoccato un attacco normale o mirato, il danno inflitto aumenta di un ulteriore 8% ogni 0.1 secondi che la freccia rimane in aria, fino a 5 volte.",
+    "image": "images/weapons/arco-di-amos.png"
+  },
+  {
+    "nome": "Arco di Elegia per la Fine",
+    "tipo": "Arco",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-elegia-per-la-fine.png"
+  },
+  {
+    "nome": "Arco di Thundering Pulse",
+    "tipo": "Arco",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-throbbing-pulse.png"
+  },
+  {
+    "nome": "Arco di Aqua Simulacra",
+    "tipo": "Arco",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-aqua-simulacra.png"
+  },
+  {
+    "nome": "Arco di Polar Star",
+    "tipo": "Arco",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-polar-star.png"
+  },
+  {
+    "nome": "Memorie della Polvere",
+    "tipo": "Catalizzatore",
+    "rarità": 5,
+    "atk_base": 608,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/memorie-della-polvere.png"
+  },
+  {
+    "nome": "Atlas di Celestia",
+    "tipo": "Catalizzatore",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/atlas-di-celestia.png"
+  },
+  {
+    "nome": "Preghiera Perduta ai Venti Sacri",
+    "tipo": "Catalizzatore",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/preghiera-perduta-ai-venti-sacri.png"
+  },
+  {
+    "nome": "Sogno di Mille Notti",
+    "tipo": "Catalizzatore",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/sogno-di-mille-notti.png"
+  },
+  {
+    "nome": "Verità di Kagura",
+    "tipo": "Catalizzatore",
+    "rarità": 5,
+    "atk_base": 674,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 49.6
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/verita-di-kagura.png"
+  },
+  {
+    "nome": "Spada Cerimoniale",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/spada-cerimoniale.png"
+  },
+  {
+    "nome": "Spada di Ferro",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/spada-di-ferro.png"
+  },
+  {
+    "nome": "Spada di Sacrificio",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Dopo aver usato un'abilità elementale, ha una probabilità del 40% di resettare il tempo di recupero di quell'abilità. Può verificarsi una volta ogni 30 secondi.",
+    "image": "images/weapons/spada-di-sacrificio.png"
+  },
+  {
+    "nome": "Spada di Ferro Oscuro",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/spada-di-ferro-oscur.png"
+  },
+  {
+    "nome": "Spada di Ruggine",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/spada-di-ruggine.png"
+  },
+  {
+    "nome": "Spada di Lione",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/spada-di-lione.png"
+  },
+  {
+    "nome": "Spada di Amenoma Kageuchi",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/spada-di-amenoma-kageuchi.png"
+  },
+  {
+    "nome": "Spada di Toukabou Shigure",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/spada-di-toukabou-shigure.png"
+  },
+  {
+    "nome": "Spadone di Favonius",
+    "tipo": "Spadone",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-di-favonius.png"
+  },
+  {
+    "nome": "Spadone di Sacrificio",
+    "tipo": "Spadone",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-di-sacrificio.png"
+  },
+  {
+    "nome": "Spadone di Ruggine",
+    "tipo": "Spadone",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-di-ruggine.png"
+  },
+  {
+    "nome": "Spadone di Serpente delle Nevi",
+    "tipo": "Spadone",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-di-serpente-delle-nevi.png"
+  },
+  {
+    "nome": "Spadone di Lithic Blade",
+    "tipo": "Spadone",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-di-lithic-blade.png"
+  },
+  {
+    "nome": "Spadone di Akuoumaru",
+    "tipo": "Spadone",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/spadone-di-akuoumaru.png"
+  },
+  {
+    "nome": "Lancia di Favonius",
+    "tipo": "Lancia",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/lancia-di-favonius.png"
+  },
+  {
+    "nome": "Lancia di Kitain",
+    "tipo": "Lancia",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/lancia-di-kitain.png"
+  },
+  {
+    "nome": "Lancia di Dragonspine",
+    "tipo": "Lancia",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/lancia-di-dragonspine.png"
+  },
+  {
+    "nome": "Lancia di Lithic Spear",
+    "tipo": "Lancia",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/lancia-di-lithic-spear.png"
+  },
+  {
+    "nome": "Lancia di The Catch",
+    "tipo": "Lancia",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/lancia-di-the-catch.png"
+  },
+  {
+    "nome": "Arco di Favonius",
+    "tipo": "Arco",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/arco-di-favonius.png"
+  },
+  {
+    "nome": "Arco di Sacrificio",
+    "tipo": "Arco",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-sacrificio.png"
+  },
+  {
+    "nome": "Arco di Ruggine",
+    "tipo": "Arco",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-ruggine.png"
+  },
+  {
+    "nome": "Arco di Compound Bow",
+    "tipo": "Arco",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-compound-bow.png"
+  },
+  {
+    "nome": "Arco di Alley Hunter",
+    "tipo": "Arco",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-alley-hunter.png"
+  },
+  {
+    "nome": "Arco di Mitternachts Waltz",
+    "tipo": "Arco",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-mitternachts-waltz.png"
+  },
+  {
+    "nome": "Arco di Mouun's Moon",
+    "tipo": "Arco",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/arco-di-mouuns-moon.png"
+  },
+  {
+    "nome": "Catalizzatore di Favonius",
+    "tipo": "Catalizzatore",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 61.3
+    },
+    "bonus_passiva": "I colpi critici hanno una probabilità del 60% di generare una piccola quantità di particelle elementali, che rigenerano 6 di energia per il personaggio.",
+    "image": "images/weapons/catalizzatore-di-favonius.png"
+  },
+  {
+    "nome": "Catalizzatore di Sacrificio",
+    "tipo": "Catalizzatore",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/catalizzatore-di-sacrificio.png"
+  },
+  {
+    "nome": "Catalizzatore di Mappa Mare",
+    "tipo": "Catalizzatore",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/catalizzatore-di-mappa-mare.png"
+  },
+  {
+    "nome": "Catalizzatore di Widsith",
+    "tipo": "Catalizzatore",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/catalizzatore-di-widsith.png"
+  },
+  {
+    "nome": "Catalizzatore di Dodoco Tales",
+    "tipo": "Catalizzatore",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/catalizzatore-di-dodoco-tales.png"
+  },
+  {
+    "nome": "Catalizzatore di Frostbearer",
+    "tipo": "Catalizzatore",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/catalizzatore-di-frostbearer.png"
+  },
+  {
+    "nome": "Zanna di lupo",
+    "tipo": "Spada",
+    "rarità": 4,
+    "atk_base": 109,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/catalizzatore-di-frostbearer.png"
+  },
+  {
+    "nome": "Catalizzatore di Oathsworn Eye",
+    "tipo": "Catalizzatore",
+    "rarità": 4,
+    "atk_base": 454,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 61.3
+    },
+    "bonus_passiva": "Aumenta la forza dello scudo del 20%. Gli attacchi contro nemici protetti da scudi aumentano il danno del 40% per 10 secondi.",
+    "image": "images/weapons/catalizzatore-di-oathsworn-eye.png"
+  },
+  {
+    "nome": "Light of Foliar Incision",
+    "tipo": "Spada",
+    "rarità": 5,
+    "atk_base": 44,
+    "stat_secondaria": {
+      "tipo": "CRIT DMG",
+      "valore": 17.9
+    },
+    "bonus_passiva": "CRIT Rate is increased by 4%. After Normal Attacks deal Elemental DMG, the Foliar Incision effect will be obtained, increasing DMG dealt by Normal Attacks and Elemental Skills by 120% of Elemental Mastery. This effect will disappear after 28 DMG instances or 12s. You can obtain Foliar Incision once every 12s.",
+    "image": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show"
+  },
+  {
+    "nome": "Spada di Ferro Freddo",
+    "tipo": "Spada",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "Ricarica Energia",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spada-di-ferro-freddo.png"
+  },
+  {
+    "nome": "Spada di Bronzo",
+    "tipo": "Spada",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spada-di-bronzo.png"
+  },
+  {
+    "nome": "Spada di Fil di Ferro",
+    "tipo": "Spada",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spada-di-fil-di-ferro.png"
+  },
+  {
+    "nome": "Spada di Harbinger of Dawn",
+    "tipo": "Spada",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spada-di-harbinger-of-dawn.png"
+  },
+  {
+    "nome": "Spadone del Viaggiatore",
+    "tipo": "Spadone",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spadone-del-viaggiatore.png"
+  },
+  {
+    "nome": "Spadone di Ferro Freddo",
+    "tipo": "Spadone",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spadone-di-ferro-freddo.png"
+  },
+  {
+    "nome": "Spadone di Bronzo",
+    "tipo": "Spadone",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spadone-di-bronzo.png"
+  },
+  {
+    "nome": "Spadone di Fil di Ferro",
+    "tipo": "Spadone",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spadone-di-fil-di-ferro.png"
+  },
+  {
+    "nome": "Spadone di Bloodtainted Greatsword",
+    "tipo": "Spadone",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/spadone-di-bloodtainted-greatsword.png"
+  },
+  {
+    "nome": "Lancia del Viaggiatore",
+    "tipo": "Lancia",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/lancia-del-viaggiatore.png"
+  },
+  {
+    "nome": "Lancia di Ferro Freddo",
+    "tipo": "Lancia",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/lancia-di-ferro-freddo.png"
+  },
+  {
+    "nome": "Lancia di Bronzo",
+    "tipo": "Lancia",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/lancia-di-bronzo.png"
+  },
+  {
+    "nome": "Lancia di Fil di Ferro",
+    "tipo": "Lancia",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/lancia-di-fil-di-ferro.png"
+  },
+  {
+    "nome": "Lancia di Black Tassel",
+    "tipo": "Lancia",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/lancia-di-black-tassel.png"
+  },
+  {
+    "nome": "Arco del Viaggiatore",
+    "tipo": "Arco",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/arco-del-viaggiatore.png"
+  },
+  {
+    "nome": "Arco di Ferro Freddo",
+    "tipo": "Arco",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/arco-di-ferro-freddo.png"
+  },
+  {
+    "nome": "Arco di Bronzo",
+    "tipo": "Arco",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/arco-di-bronzo.png"
+  },
+  {
+    "nome": "Arco di Fil di Ferro",
+    "tipo": "Arco",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/arco-di-fil-di-ferro.png"
+  },
+  {
+    "nome": "Arco di Raven Bow",
+    "tipo": "Arco",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/arco-di-raven-bow.png"
+  },
+  {
+    "nome": "Catalizzatore del Viaggiatore",
+    "tipo": "Catalizzatore",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/catalizzatore-del-viaggiatore.png"
+  },
+  {
+    "nome": "Catalizzatore di Ferro Freddo",
+    "tipo": "Catalizzatore",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/catalizzatore-di-ferro-freddo.png"
+  },
+  {
+    "nome": "Catalizzatore di Bronzo",
+    "tipo": "Catalizzatore",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/catalizzatore-di-bronzo.png"
+  },
+  {
+    "nome": "Catalizzatore di Fil di Ferro",
+    "tipo": "Catalizzatore",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/catalizzatore-di-fil-di-ferro.png"
+  },
+  {
+    "nome": "Catalizzatore di Emerald Orb",
+    "tipo": "Catalizzatore",
+    "rarità": 3,
+    "atk_base": 401,
+    "stat_secondaria": {
+      "tipo": "ATK",
+      "valore": 23.4
+    },
+    "bonus_passiva": "Ogni 4 secondi, aumenta il danno degli attacchi normali del 6% per 8 secondi. Massimo 5 stack.",
+    "image": "images/weapons/catalizzatore-di-emerald-orb.png"
+  }
+]

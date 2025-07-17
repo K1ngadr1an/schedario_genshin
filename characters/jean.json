@@ -1,0 +1,204 @@
+{
+  "displayName": "Jean",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Anemo", "Sword", "Mondstadt", "5★", "Healer", "Support"],
+  "description": "The Acting Grand Master of the Knights of Favonius, Jean is a versatile Anemo sword user who excels at healing and supporting her team.",
+  "weapons": [
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Aquila Favonia",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Aquila_Favonia.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Skyward Blade",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Skyward_Blade.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Maiden Beloved (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Maiden_Beloved.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "ATK% / Anemo DMG Bonus" },
+    { "type": "Circlet", "value": "Healing Bonus / ATK%" }
+  ],
+  "substats": ["ATK%", "Energy Recharge", "Healing Bonus", "CRIT Rate"],
+  "talents": [
+    "Normal Attack: Favonius Bladework",
+    "Gale Blade",
+    "Dandelion Breeze"
+  ],
+  "info": "Jean is a flexible healer and support who can cleanse, heal, and group enemies. Build her for ATK%, Energy Recharge, and Healing Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Favonius Sword",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Viridescent Venerer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Jean" },
+      { "name": "Xiao" },
+      { "name": "Albedo" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Jean" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" },
+      { "name": "Fischl" }
+    ],
+    [
+      { "name": "Jean" },
+      { "name": "Diluc" },
+      { "name": "Xingqiu" },
+      { "name": "Kazuha" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Favonius Bladework",
+      "desc": "Performs up to 5 consecutive sword strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Favonius_Bladework.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive sword strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to launch enemies using the power of wind.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "48.3%",
+          "hit2": "45.6%",
+          "hit3": "60.2%",
+          "hit4": "65.3%",
+          "hit5": "77.7%",
+          "charged": "55.0% + 66.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "52.2%",
+          "hit2": "49.3%",
+          "hit3": "65.1%",
+          "hit4": "70.7%",
+          "hit5": "84.1%",
+          "charged": "60.0% + 72.9%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Gale Blade",
+      "desc": "Jean releases a miniature storm, launching enemies in the direction she aims, dealing Anemo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Gale_Blade.png",
+      "details_html": "<div class='skill-section'><b>Gale Blade</b><br>Jean releases a miniature storm, launching enemies in the direction she aims, dealing Anemo DMG. Holding the skill increases its power and launch distance.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "292% ATK", "cd": "6s" },
+        { "level": 2, "skill_dmg": "314% ATK", "cd": "6s" }
+      ]
+    },
+    {
+      "name": "Dandelion Breeze",
+      "desc": "Jean calls upon the wind to launch surrounding enemies and heal all party members. Healing scales with Jean's ATK.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Dandelion_Breeze.png",
+      "details_html": "<div class='skill-section'><b>Dandelion Breeze</b><br>Jean calls upon the wind to launch surrounding enemies and heal all party members. Healing scales with Jean's ATK.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "425% ATK",
+          "healing": "251% ATK + 1540",
+          "duration": "10s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "457% ATK",
+          "healing": "270% ATK + 1694",
+          "duration": "10s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Wind Companion",
+      "phase": "Ascension Phase 1",
+      "desc": "Hits by Normal Attacks have a 50% chance to regenerate HP equal to 15% of Jean's ATK for all party members."
+    },
+    {
+      "name": "Let the Wind Lead",
+      "phase": "Ascension Phase 4",
+      "desc": "Using Dandelion Breeze regenerates 20% of its Energy."
+    },
+    {
+      "name": "Guiding Breeze",
+      "phase": "Passive",
+      "desc": "When a Perfect Cooking is achieved on a dish with restorative effects, Jean has a 12% chance to obtain double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Spiraling Tempest",
+      "phase": "Constellation Lv. 1",
+      "desc": "Increases the pulling speed of Gale Blade after holding for more than 1s by 40%."
+    },
+    {
+      "name": "People's Aegis",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Jean picks up an Elemental Orb/Particle, all party members have their Movement SPD and ATK SPD increased by 15% for 15s."
+    },
+    {
+      "name": "When the West Wind Arises",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Dandelion Breeze by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Lands of Dandelion",
+      "phase": "Constellation Lv. 4",
+      "desc": "Within the Field created by Dandelion Breeze, all opponents have their Anemo RES decreased by 40%."
+    },
+    {
+      "name": "Outbursting Gust",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Gale Blade by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Lion's Fang, Fair Protector of Mondstadt",
+      "phase": "Constellation Lv. 6",
+      "desc": "Incoming DMG is decreased by 35% within the Field created by Dandelion Breeze. Upon leaving the Field, this effect lasts for 3 attacks or 10s."
+    }
+  ]
+}

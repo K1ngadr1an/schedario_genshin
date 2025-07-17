@@ -1,0 +1,217 @@
+{
+  "displayName": "Navia",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Navia_Icon.png",
+  "tags": [
+    "Claymore",
+    "Geo",
+    "Fontaine",
+    "5★",
+    "DPS",
+    "President",
+    "Spina di Rosula"
+  ],
+  "description": "The president of Spina di Rosula, Navia is a powerful Geo claymore user from Fontaine who excels at dealing AoE Geo damage and supporting her team with Crystallize reactions.",
+  "weapons": [
+    {
+      "name": "Verdict",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Verdict.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Unforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Unforged.png",
+      "note": "Shielded ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Nighttime Whispers in the Echoing Woods (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Nighttime_Whispers_in_the_Echoing_Woods.png"
+    },
+    {
+      "name": "Archaic Petra (4)",
+      "img": "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show"
+    },
+    {
+      "name": "Nighttime Whispers (2) + Archaic Petra (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / CRIT Rate" },
+    { "type": "Goblet", "value": "Geo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Blunt Refusal",
+    "Ceremonial Crystalshot",
+    "As the Sunlit Sky's Singing Salute"
+  ],
+  "info": "Navia is a Geo DPS who excels at AoE damage and benefits from Crystallize reactions. Build her for CRIT, ATK%, and Geo DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Verdict",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Verdict.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Nighttime Whispers in the Echoing Woods (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Nighttime_Whispers_in_the_Echoing_Woods.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Navia" },
+      { "name": "Zhongli" },
+      { "name": "Furina" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Navia" },
+      { "name": "Albedo" },
+      { "name": "Yelan" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Navia" },
+      { "name": "Jean" },
+      { "name": "Yun Jin" },
+      { "name": "Charlotte" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Blunt Refusal",
+      "desc": "Performs up to 4 consecutive claymore strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Blunt_Refusal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks. At the end, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "82.1%",
+          "hit2": "77.6%",
+          "hit3": "98.2%",
+          "hit4": "124.6%",
+          "charged": "62.0% + 82.0%",
+          "plunge": "72.0%",
+          "lowhigh": "144.0% / 186.0%"
+        },
+        {
+          "level": 2,
+          "hit1": "88.6%",
+          "hit2": "83.7%",
+          "hit3": "106.0%",
+          "hit4": "134.6%",
+          "charged": "66.8% + 88.4%",
+          "plunge": "77.8%",
+          "lowhigh": "155.6% / 201.2%"
+        }
+      ]
+    },
+    {
+      "name": "Ceremonial Crystalshot",
+      "desc": "Navia fires a powerful Geo shell, dealing AoE Geo DMG. The skill's power increases with the number of Crystal Shrapnel stacks consumed.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Ceremonial_Crystalshot.png",
+      "details_html": "<div class='skill-section'><b>Ceremonial Crystalshot</b><br>Fires a Geo shell, dealing AoE Geo DMG. Consumes Crystal Shrapnel stacks to increase damage.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "base_dmg": "120% ATK",
+          "per_shrapnel": "+40% ATK",
+          "max_stacks": 6,
+          "cd": "9s"
+        },
+        {
+          "level": 2,
+          "base_dmg": "129% ATK",
+          "per_shrapnel": "+43% ATK",
+          "max_stacks": 6,
+          "cd": "9s"
+        }
+      ]
+    },
+    {
+      "name": "As the Sunlit Sky's Singing Salute",
+      "desc": "Navia launches a barrage of Geo shells, dealing massive AoE Geo DMG and granting herself and nearby allies increased CRIT Rate.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_As_the_Sunlit_Skys_Singing_Salute.png",
+      "details_html": "<div class='skill-section'><b>As the Sunlit Sky's Singing Salute</b><br>Launches a barrage of Geo shells, dealing massive AoE Geo DMG and increasing CRIT Rate for Navia and nearby allies.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "320% ATK",
+          "crit_bonus": "15%",
+          "duration": "10s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "345% ATK",
+          "crit_bonus": "17%",
+          "duration": "10s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Rosula's Command",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Ceremonial Crystalshot, Navia's ATK is increased by 20% for 10s."
+    },
+    {
+      "name": "Geo's Embrace",
+      "phase": "Ascension Phase 4",
+      "desc": "When Navia picks up a Crystallize shard, her Geo DMG Bonus is increased by 15% for 10s."
+    },
+    {
+      "name": "Fontaine's Finest",
+      "phase": "Passive",
+      "desc": "When Navia is in the party, the chance to obtain double weapon ascension materials is increased by 10%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "First Salvo",
+      "phase": "Constellation Lv. 1",
+      "desc": "Ceremonial Crystalshot gains 1 additional charge."
+    },
+    {
+      "name": "Second Salvo",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Navia uses her Burst, she instantly gains 3 Crystal Shrapnel stacks."
+    },
+    {
+      "name": "Third Salvo",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Ceremonial Crystalshot by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Fourth Salvo",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Navia picks up a Crystallize shard, her CRIT Rate is increased by 10% for 10s."
+    },
+    {
+      "name": "Fifth Salvo",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of As the Sunlit Sky's Singing Salute by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Final Salvo",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using Ceremonial Crystalshot, Navia's next Normal Attack deals an additional 50% Geo DMG."
+    }
+  ]
+}

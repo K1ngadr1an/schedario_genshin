@@ -1,0 +1,212 @@
+{
+  "displayName": "Rosaria",
+  "img": "images/characters/rosaria.png",
+  "tags": ["Polearm", "Cryo", "Mondstadt", "4★", "Support", "Sub-DPS", "Nun"],
+  "description": "A nun of the Church of Favonius in Mondstadt, Rosaria is a Cryo polearm user who excels at off-field Cryo application and CRIT support.",
+  "weapons": [
+    {
+      "name": "Staff of Homa",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Deathmatch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Deathmatch.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Dragon's Bane",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Dragons_Bane.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Favonius Lance",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Blizzard Strayer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Cryo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Spear of the Church",
+    "Ravaging Confession",
+    "Rites of Termination"
+  ],
+  "info": "Rosaria is a 4★ Cryo support/sub-DPS who excels at off-field Cryo application and boosting party CRIT Rate. Build her for CRIT, ATK%, and Energy Recharge.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Staff of Homa",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Rosaria" },
+      { "name": "Eula" },
+      { "name": "Raiden Shogun" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Rosaria" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Rosaria" },
+      { "name": "Kaeya" },
+      { "name": "Chongyun" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Rosaria" },
+      { "name": "Xingqiu" },
+      { "name": "Fischl" },
+      { "name": "Barbara" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Spear of the Church",
+      "desc": "Performs up to 5 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Spear_of_the_Church.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "49.5%",
+          "hit2": "50.7%",
+          "hit3": "63.9%",
+          "hit4": "74.3%",
+          "hit5": "89.9%",
+          "charged": "120%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "53.6%",
+          "hit2": "54.9%",
+          "hit3": "69.1%",
+          "hit4": "80.5%",
+          "hit5": "97.5%",
+          "charged": "130%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Ravaging Confession",
+      "desc": "Rosaria swiftly shifts behind her target, then pierces and slashes, dealing Cryo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Ravaging_Confession.png",
+      "details_html": "<div class='skill-section'><b>Ravaging Confession</b><br>Rosaria swiftly shifts behind her target (if possible), then pierces and slashes, dealing Cryo DMG. Cannot be used on larger enemies.",
+      "levels": [
+        { "level": 1, "skill_dmg": "58.4% + 136%", "cd": "6s" },
+        { "level": 2, "skill_dmg": "62.9% + 146.4%", "cd": "6s" }
+      ]
+    },
+    {
+      "name": "Rites of Termination",
+      "desc": "Rosaria swings her weapon to slash surrounding enemies, then summons an ice lance that strikes the ground, dealing AoE Cryo DMG over time.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Rites_of_Termination.png",
+      "details_html": "<div class='skill-section'><b>Rites of Termination</b><br>Slashes surrounding enemies, then summons an ice lance that strikes the ground, dealing AoE Cryo DMG over time. The ice lance periodically pulses Cryo DMG.",
+      "levels": [
+        {
+          "level": 1,
+          "slash_dmg": "104%",
+          "lance_dmg": "152%",
+          "dot": "132%",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "slash_dmg": "112%",
+          "lance_dmg": "164%",
+          "dot": "143%",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Regina Probationum",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Ravaging Confession, Rosaria's CRIT Rate is increased by 12% for 5s."
+    },
+    {
+      "name": "Shadow Samaritan",
+      "phase": "Ascension Phase 4",
+      "desc": "Casting Rites of Termination increases CRIT Rate of all nearby party members (except Rosaria) by 15% of Rosaria's CRIT Rate for 10s (max 15%)."
+    },
+    {
+      "name": "Night Walk",
+      "phase": "Passive",
+      "desc": "At night (18:00–6:00), increases movement SPD of your own party members by 10%. Not applicable in Domains, Trounce Domains, or Spiral Abyss."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Unholy Revelation",
+      "phase": "Constellation Lv. 1",
+      "desc": "When Rosaria lands a CRIT hit, her ATK SPD increases by 10% and she regenerates 10% Energy. Lasts 4s."
+    },
+    {
+      "name": "Land Without Promise",
+      "phase": "Constellation Lv. 2",
+      "desc": "Ravaging Confession's CRIT hits regenerate 5 Energy for Rosaria."
+    },
+    {
+      "name": "The Wages of Sin",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Ravaging Confession by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Painful Grace",
+      "phase": "Constellation Lv. 4",
+      "desc": "Rites of Termination's attacks generate 5 Energy if they score a CRIT hit."
+    },
+    {
+      "name": "Last Rites",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Rites of Termination by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Divine Retribution",
+      "phase": "Constellation Lv. 6",
+      "desc": "Rites of Termination's ice lance attack decreases enemies' Physical RES by 20% for 10s."
+    }
+  ]
+}

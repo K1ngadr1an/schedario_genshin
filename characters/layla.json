@@ -1,0 +1,183 @@
+{
+  "displayName": "Layla",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Sword", "Cryo", "Sumeru", "Shielder", "4★", "Support"],
+  "description": "Layla è una studentessa di Sumeru specializzata nella creazione di scudi e nell'applicazione Cryo. Eccelle come supporto difensivo e per la generazione di particelle.",
+  "weapons": [
+    {
+      "name": "Key of Khaj-Nisut",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Key_of_Khaj-Nisut.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Sword.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Tenacity of the Millelith (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Tenacity of the Millelith (2) + Noblesse Oblige (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP% / Cryo DMG Bonus" },
+    { "type": "Circlet", "value": "HP% / CRIT Rate" }
+  ],
+  "substats": ["HP%", "Energy Recharge", "CRIT Rate", "Flat HP"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Layla è un supporto Cryo che fornisce scudi forti, applicazione Cryo e generazione di particelle. Costruiscila con HP% e ricarica energia per massimizzare la durata e la forza dei suoi scudi.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Key of Khaj-Nisut",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Key_of_Khaj-Nisut.png",
+        "note": "HP%"
+      },
+      "artifacts": [
+        {
+          "name": "Tenacity of the Millelith (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Layla" },
+      { "name": "Ayaka" },
+      { "name": "Shenhe" },
+      { "name": "Kokomi" }
+    ],
+    [
+      { "name": "Layla" },
+      { "name": "Ganyu" },
+      { "name": "Mona" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Layla" },
+      { "name": "Hu Tao" },
+      { "name": "Yelan" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Sword of the Radiant Path",
+      "desc": "Effettua fino a 3 colpi consecutivi con la spada.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Sword_of_the_Radiant_Path.png",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "50.2%",
+          "hit2": "49.7%",
+          "hit3": "72.1%",
+          "charged": "47.6% + 47.6%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 3 colpi consecutivi con la spada.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per sferrare due colpi rapidi.</div><div class='skill-section'><b>Plunging Attack</b><br>Si lancia dall'alto, infliggendo danni Cryo all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Nights of Formal Focus",
+      "desc": "Layla crea uno scudo che scala con i suoi HP max e infligge danni Cryo periodici ai nemici vicini.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Nights_of_Formal_Focus.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Nights of Formal Focus</b><br>Crea uno scudo che scala con i suoi HP max e infligge danni Cryo periodici ai nemici vicini. Lo scudo dura 12s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "shield": "12.8% HP + 1232",
+          "skill_dmg": "42.6% ATK",
+          "duration": "12s",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Dream of the Star-Stream Shaker",
+      "desc": "Layla evoca una pioggia di stelle che infligge danni Cryo ad area e genera stelle che colpiscono i nemici.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Dream_of_the_Star-Stream_Shaker.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Dream of the Star-Stream Shaker</b><br>Evoca una pioggia di stelle che infligge danni Cryo ad area e genera stelle che colpiscono i nemici per 12s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "105.6% ATK per stella",
+          "duration": "12s",
+          "cd": "15s",
+          "energy_cost": "40"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Like Nascent Light",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando lo scudo di Layla viene creato o rinnovato, la sua resistenza aumenta del 20% per 8s."
+    },
+    {
+      "name": "Sweet Slumber Undisturbed",
+      "phase": "Ascension Phase 4",
+      "desc": "Quando Layla ottiene una particella elementale, la sua ricarica energia aumenta del 10% per 8s."
+    },
+    {
+      "name": "Shadowy Dream-Signs",
+      "phase": "Passive",
+      "desc": "Mostra la posizione delle risorse di Sumeru sulla minimappa."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Fortress of Fantasy",
+      "phase": "Constellation Lv. 1",
+      "desc": "Lo scudo di Nights of Formal Focus assorbe il 20% di danni in più."
+    },
+    {
+      "name": "C2: Light's Remit",
+      "phase": "Constellation Lv. 2",
+      "desc": "Dream of the Star-Stream Shaker genera una stella aggiuntiva ogni 2s."
+    },
+    {
+      "name": "C3: Secrets of the Night",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Nights of Formal Focus di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Starry Illumination",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando uno scudo di Layla viene distrutto, rilascia una piccola esplosione Cryo che infligge danni ai nemici vicini."
+    },
+    {
+      "name": "C5: Stream of Consciousness",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Dream of the Star-Stream Shaker di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Radiant Soulfire",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando Layla ottiene una particella elementale, la durata dello scudo aumenta di 4s (max 1 volta per attivazione)."
+    }
+  ]
+}

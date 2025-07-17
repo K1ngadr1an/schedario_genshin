@@ -1,0 +1,204 @@
+{
+  "displayName": "Xiao",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xiao_Icon.png",
+  "tags": ["Polearm", "Anemo", "Liyue", "5★", "DPS", "Plunge Attack"],
+  "description": "Xiao è il Vigilante Yaksha di Liyue, un adepto che combatte i demoni da millenni. Eccelle negli attacchi plunge durante il suo Elemental Burst.",
+  "weapons": [
+    {
+      "name": "Primordial Jade Winged-Spear",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Primordial_Jade_Winged-Spear.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Staff_of_Homa.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Vortex Vanquisher",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Vortex_Vanquisher.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Deathmatch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Deathmatch.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Blackcliff Pole",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Blackcliff_Pole.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Lithic Spear",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Lithic_Spear.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Vermillion Hereafter (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Vermillion_Hereafter.png"
+    },
+    {
+      "name": "Viridescent Venerer (2) + Gladiator's Finale (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Viridescent Venerer (2) + Shimenawa's Reminiscence (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Gladiator's Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Anemo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Whirlwind Thrust",
+    "Lemniscatic Wind Cycling",
+    "Bane of All Evil"
+  ],
+  "info": "Xiao si basa su attacchi plunge durante il Burst. Priorità a CRIT, ATK% e Energy Recharge per uptime costante del Burst.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Primordial Jade Winged-Spear",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Primordial_Jade_Winged-Spear.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Vermillion Hereafter (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Vermillion_Hereafter.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Xiao" },
+      { "name": "Zhongli" },
+      { "name": "Albedo" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Xiao" },
+      { "name": "Zhongli" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Xiao" },
+      { "name": "Zhongli" },
+      { "name": "Faruzan" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Xiao" },
+      { "name": "Zhongli" },
+      { "name": "Xianyun" },
+      { "name": "Faruzan" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Whirlwind Thrust",
+      "desc": "Performs up to 6 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xiao_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 6 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to perform an upward thrust.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "27.1%",
+          "hit2": "27.1%",
+          "hit3": "35.2%",
+          "hit4": "35.2%",
+          "hit5": "44.2%",
+          "hit6": "44.2%",
+          "charged": "121%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        }
+      ]
+    },
+    {
+      "name": "Lemniscatic Wind Cycling",
+      "desc": "Xiao lunges forward, dealing Anemo DMG to enemies in his path.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xiao_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Lemniscatic Wind Cycling</b><br>Xiao lunges forward, dealing Anemo DMG to enemies in his path. Can be used in mid-air. Starts with 2 charges.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "252% ATK", "cd": "10s", "charges": 2 }
+      ]
+    },
+    {
+      "name": "Bane of All Evil",
+      "desc": "Xiao dons the Yaksha Mask that set gods and demons trembling millennia ago.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xiao_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Bane of All Evil</b><br>Xiao dons the Yaksha Mask that set gods and demons trembling millennia ago. Greatly increases Xiao's jumping ability, increases his attack AoE and attack DMG, and converts attack DMG into Anemo DMG, which cannot be overridden by any other elemental infusion.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg_bonus": "58.4%",
+          "duration": "15s",
+          "cd": "18s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Transcension: Gravity Defier",
+      "phase": "Ascension Phase 1",
+      "desc": "Decreases climbing Stamina consumption for your own party members by 20%."
+    },
+    {
+      "name": "Dissolution Eon: Heaven Fall",
+      "phase": "Ascension Phase 4",
+      "desc": "While under the effects of Bane of All Evil, all DMG dealt by Xiao increases by 5%. DMG increases by a further 5% for every 3s the ability persists. The maximum DMG Bonus is 25%."
+    },
+    {
+      "name": "Evil Conqueror: Tamer of Demons",
+      "phase": "Passive",
+      "desc": "Increases all party members' Movement SPD by 10% during Bane of All Evil."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Dissolution Eon: Destroyer of Worlds",
+      "phase": "Constellation Lv. 1",
+      "desc": "Increases Lemniscatic Wind Cycling's charges by 1."
+    },
+    {
+      "name": "Annihilation Eon: Blossom of Kaleidos",
+      "phase": "Constellation Lv. 2",
+      "desc": "When in the party and not on the field, Xiao's Energy Recharge is increased by 25%."
+    },
+    {
+      "name": "Conqueror of Evil: Wrath Deity",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Lemniscatic Wind Cycling by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Transcension: Extinction of Suffering",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Xiao's HP falls below 50%, he gains a 100% DEF Bonus."
+    },
+    {
+      "name": "Evolution Eon: Origin of Ignorance",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Bane of All Evil by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Evil Conqueror: Vigilant Yaksha",
+      "phase": "Constellation Lv. 6",
+      "desc": "While under the effects of Bane of All Evil, hitting at least 2 opponents with Xiao's Plunging Attack will immediately grant him 1 charge of Lemniscatic Wind Cycling, and for the next 1s, he may use Lemniscatic Wind Cycling while ignoring its CD."
+    }
+  ]
+}

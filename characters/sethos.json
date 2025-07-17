@@ -1,0 +1,226 @@
+{
+  "displayName": "Sethos",
+  "img": "images/characters/sethos.png",
+  "tags": ["Bow", "Electro", "Sumeru", "4★", "DPS", "Sub-DPS", "Desert"],
+  "description": "A mysterious archer from the deserts of Sumeru, Sethos is an Electro bow user who excels at quick Electro application and charged attacks.",
+  "weapons": [
+    {
+      "name": "The Stringless",
+      "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Thundering Pulse",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thundering_Pulse.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Polar Star",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Polar_Star.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Thundering Fury (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery / Energy Recharge" },
+    { "type": "Goblet", "value": "Electro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "CRIT Rate",
+    "CRIT DMG",
+    "ATK%",
+    "Elemental Mastery",
+    "Energy Recharge"
+  ],
+  "talents": [
+    "Normal Attack: Desert Bow",
+    "Secret Rite: Twilight Arrow",
+    "Sacred Rite: Storm's Judgment"
+  ],
+  "info": "Sethos is a 4★ Electro bow DPS/sub-DPS who excels at quick Electro application and charged attacks. Build him for CRIT, ATK%, and Elemental Mastery.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "The Stringless",
+        "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Thundering Fury (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Sethos" },
+      { "name": "Fischl" },
+      { "name": "Kazuha" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Sethos" },
+      { "name": "Yae Miko" },
+      { "name": "Xingqiu" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Sethos" },
+      { "name": "Raiden Shogun" },
+      { "name": "Beidou" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Sethos" },
+      { "name": "Collei" },
+      { "name": "Nahida" },
+      { "name": "Barbara" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Desert Bow",
+      "desc": "Performs up to 5 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Sharpshooter.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Electro DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.7%",
+          "hit2": "37.6%",
+          "hit3": "47.1%",
+          "hit4": "49.1%",
+          "hit5": "58.3%",
+          "charged": "47.3% + 47.3%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "39.7%",
+          "hit2": "40.7%",
+          "hit3": "51.0%",
+          "hit4": "53.2%",
+          "hit5": "63.2%",
+          "charged": "51.2% + 51.2%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Secret Rite: Twilight Arrow",
+      "desc": "Sethos fires a Twilight Arrow that deals AoE Electro DMG and marks enemies. Marked enemies take increased damage from Electro attacks.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Anemo_Trap.png",
+      "details_html": "<div class='skill-section'><b>Secret Rite: Twilight Arrow</b><br>Fires a Twilight Arrow that deals AoE Electro DMG and marks enemies. Marked enemies take increased damage from Electro attacks for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "180% ATK",
+          "mark_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "194% ATK",
+          "mark_duration": "6s",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Sacred Rite: Storm's Judgment",
+      "desc": "Sethos unleashes a storm of arrows, dealing continuous AoE Electro DMG and increasing his CRIT Rate for a short time.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Cyclone_Arrow.png",
+      "details_html": "<div class='skill-section'><b>Sacred Rite: Storm's Judgment</b><br>Unleashes a storm of arrows, dealing continuous AoE Electro DMG and increasing CRIT Rate for a short time.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "220% ATK",
+          "crit_bonus": "15%",
+          "duration": "6s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "238% ATK",
+          "crit_bonus": "17%",
+          "duration": "6s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Desert's Precision",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Secret Rite: Twilight Arrow, Sethos's ATK is increased by 20% for 10s."
+    },
+    {
+      "name": "Electro Mastery",
+      "phase": "Ascension Phase 4",
+      "desc": "Sacred Rite: Storm's Judgment increases all party members' Electro DMG Bonus by 20% for 10s."
+    },
+    {
+      "name": "Desert Walker",
+      "phase": "Passive",
+      "desc": "When Sethos is in the party, sprinting stamina consumption is reduced by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "First Arrow",
+      "phase": "Constellation Lv. 1",
+      "desc": "Secret Rite: Twilight Arrow gains 1 additional charge."
+    },
+    {
+      "name": "Desert's Agility",
+      "phase": "Constellation Lv. 2",
+      "desc": "After using Sacred Rite: Storm's Judgment, Sethos's Movement SPD is increased by 15% for 10s."
+    },
+    {
+      "name": "Storm's Verdict",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Sacred Rite: Storm's Judgment by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Electro Supremacy",
+      "phase": "Constellation Lv. 4",
+      "desc": "Electro reactions triggered by Sethos restore 3 Energy to him. Can occur once every 2s."
+    },
+    {
+      "name": "Twilight Master",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Secret Rite: Twilight Arrow by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Desert's Triumph",
+      "phase": "Constellation Lv. 6",
+      "desc": "Allies within Sacred Rite: Storm's Judgment's area gain 20% increased CRIT Rate."
+    }
+  ]
+}

@@ -1,0 +1,829 @@
+{
+  "displayName": "Albedo",
+  "img": "images/characters/albedo.png",
+  "tags": [
+    "Sword",
+    "Geo",
+    "Knights of Favonius",
+    "13/9",
+    "Princeps Cretaceus",
+    "Forsaken Rift"
+  ],
+  "description": "A genius known as the Kreideprinz, he is the Chief Alchemist and Captain of the Investigation Team of the Knights of Favonius.",
+  "weapons": [
+    {
+      "name": "Peak Patrol Song",
+      "img": "https://img.game8.co/4024765/be15053411a1e193ae2811120318c14a.png/show",
+      "note": "DEF%"
+    },
+    {
+      "name": "Uraku Misugiri",
+      "img": "https://img.game8.co/3855357/0f1bee0c48888db48a19113a1a682e1f.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Cinnabar Spindle",
+      "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+      "note": "DEF%"
+    },
+    {
+      "name": "Harbinger of Dawn (R5)",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Light of Foliar Incision",
+      "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Haran Geppaku Futsu",
+      "img": "https://img.game8.co/3511222/2310c3f7ed9c13a4249fccdc256199bb.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Wolf-Fang",
+      "img": "https://img.game8.co/3754179/5c3f27fc2074430d14a5c95dd869df2f.png/show",
+      "note": "CRIT Rate"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Husk of Opulent Dreams (4)",
+      "img": "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+    },
+    {
+      "name": "Golden Troupe (4)",
+      "img": "https://img.game8.co/3754715/7c53b47fa60134656d6c656292a7e00f.png/show"
+    },
+    {
+      "name": "Husk of Opulent Dreams (2) + Archaic Petra (2)",
+      "img": [
+        "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show",
+        "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show"
+      ]
+    },
+    {
+      "name": " Archaic Petra (2) + Golden Troupe (2)",
+      "img": [
+        "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show",
+        "https://img.game8.co/3754715/7c53b47fa60134656d6c656292a7e00f.png/show"
+      ]
+    },
+    {
+      "name": "Husk of Opulent Dreams (2) + Golden Troupe (2)",
+      "img": [
+        "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show",
+        "https://img.game8.co/3754715/7c53b47fa60134656d6c656292a7e00f.png/show"
+      ]
+    },
+    {
+      "name": "Golden Troupe (2)",
+      "img": "https://img.game8.co/3754715/7c53b47fa60134656d6c656292a7e00f.png/show"
+    },
+    {
+      "name": " Archaic Petra (4)",
+      "img": "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show"
+    },
+    {
+      "name": " Tenacity of Millelith (4)",
+      "img": "https://img.game8.co/3346877/5838da412d43bcacfc0dda873ca64a54.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "DEF%" },
+    { "type": "Goblet", "value": "Geo DMG Bonus / DEF%" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG / DEF%" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ATK%", "Energy Recharge"],
+  "talents": ["Skill", "Burst", "Normal Attack"],
+  "info": "Albedo's Elemental Skill particle generation is based on RNG, but with good odds. He is a reliable EM battery for his teammates.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Cinnabar Spindle",
+        "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+        "note": "DEF%"
+      },
+      "artifacts": [
+        {
+          "name": "Husk of Opulent Dreams (4)",
+          "img": "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+        }
+      ]
+    },
+    {
+      "weapon": {
+        "name": "Harbinger of Dawn (R5)",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": " Archaic Petra (2) + Golden Troupe (2)",
+          "img": [
+            "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show",
+            "https://img.game8.co/3754715/7c53b47fa60134656d6c656292a7e00f.png/show"
+          ]
+        }
+      ]
+    },
+    {
+      "weapon": {
+        "name": "Uraku Misugiri",
+        "img": "https://img.game8.co/3855357/0f1bee0c48888db48a19113a1a682e1f.png/show",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Golden Troupe (4)",
+          "img": "https://img.game8.co/3754715/7c53b47fa60134656d6c656292a7e00f.png/show"
+        }
+      ]
+    },
+    {
+      "weapon": {
+        "name": "Flute of Ezpitzal",
+        "img": "https://img.game8.co/3977890/0a96f48d547722f8d99f7daf7296ff60.png/show",
+        "note": "ATK%"
+      },
+      "artifacts": [
+        {
+          "name": " Archaic Petra (2) + Noblesse Oblige(2)",
+          "img": [
+            "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show",
+            "https://img.game8.co/3314246/e12f040eab0c5264174ddbc3307b0a3e.png/show"
+          ]
+        }
+      ]
+    },
+    {
+      "weapon": {
+        "name": "Dull Blade",
+        "img": "https://img.game8.co/3314758/b334858161ffc7d48d2f02d326a3e5ba.png/show",
+        "note": "Base"
+      },
+      "artifacts": [
+        {
+          "name": " Gladiator Finale (2) + Husk of Opulent Dreams (2)",
+          "img": [
+            "https://img.game8.co/3314252/86ae00a13c2d377072732882bcd8e9fe.png/show",
+            "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+          ]
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Albedo" },
+      { "name": "Zhongli" },
+      { "name": "Arataki Itto" },
+      { "name": "Gorou" }
+    ],
+    [
+      { "name": "Albedo" },
+      { "name": "Xiao" },
+      { "name": "Jean" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Albedo" },
+      { "name": "Hu tao" },
+      { "name": "Xingqiu" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Albedo" },
+      { "name": "Eula" },
+      { "name": "Zhongli" },
+      { "name": "Beidou" }
+    ],
+    [
+      { "name": "Albedo" },
+      { "name": "Yanfei" },
+      { "name": "Zhongli" },
+      { "name": "Xingqiu" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Favonius Bladework - Weiss",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Performs up to 5 rapid strikes.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/UI_GachaTypeIcon_Sword.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash 2 rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.7%",
+          "hit2": "37.6%",
+          "hit3": "47.1%",
+          "hit4": "49.1%",
+          "hit5": "58.3%",
+          "charged": "47.3% + 47.3%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "39.7%",
+          "hit2": "40.7%",
+          "hit3": "51.0%",
+          "hit4": "53.2%",
+          "hit5": "63.2%",
+          "charged": "51.2% + 51.2%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "42.7%",
+          "hit2": "43.7%",
+          "hit3": "54.9%",
+          "hit4": "57.3%",
+          "hit5": "68.1%",
+          "charged": "55.1% + 55.1%",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "45.7%",
+          "hit2": "46.7%",
+          "hit3": "58.8%",
+          "hit4": "61.4%",
+          "hit5": "73.0%",
+          "charged": "59.0% + 59.0%",
+          "plunge": "79.5%",
+          "lowhigh": "159.0% / 198.7%"
+        },
+        {
+          "level": 5,
+          "hit1": "48.7%",
+          "hit2": "49.7%",
+          "hit3": "62.7%",
+          "hit4": "65.5%",
+          "hit5": "77.9%",
+          "charged": "62.9% + 62.9%",
+          "plunge": "84.7%",
+          "lowhigh": "169.4% / 211.7%"
+        },
+        {
+          "level": 6,
+          "hit1": "51.7%",
+          "hit2": "52.7%",
+          "hit3": "66.6%",
+          "hit4": "69.6%",
+          "hit5": "82.8%",
+          "charged": "66.8% + 66.8%",
+          "plunge": "89.9%",
+          "lowhigh": "179.8% / 224.7%"
+        },
+        {
+          "level": 7,
+          "hit1": "54.7%",
+          "hit2": "55.7%",
+          "hit3": "70.5%",
+          "hit4": "73.7%",
+          "hit5": "87.7%",
+          "charged": "70.7% + 70.7%",
+          "plunge": "95.1%",
+          "lowhigh": "190.2% / 237.7%"
+        },
+        {
+          "level": 8,
+          "hit1": "57.7%",
+          "hit2": "58.7%",
+          "hit3": "74.4%",
+          "hit4": "77.8%",
+          "hit5": "92.6%",
+          "charged": "74.6% + 74.6%",
+          "plunge": "100.3%",
+          "lowhigh": "200.6% / 250.7%"
+        },
+        {
+          "level": 9,
+          "hit1": "60.7%",
+          "hit2": "61.7%",
+          "hit3": "78.3%",
+          "hit4": "81.9%",
+          "hit5": "97.5%",
+          "charged": "78.5% + 78.5%",
+          "plunge": "105.5%",
+          "lowhigh": "211.0% / 263.7%"
+        },
+        {
+          "level": 10,
+          "hit1": "63.7%",
+          "hit2": "64.7%",
+          "hit3": "82.2%",
+          "hit4": "86.0%",
+          "hit5": "102.4%",
+          "charged": "82.4% + 82.4%",
+          "plunge": "110.7%",
+          "lowhigh": "221.4% / 276.7%"
+        },
+        {
+          "level": 11,
+          "hit1": "66.7%",
+          "hit2": "67.7%",
+          "hit3": "86.1%",
+          "hit4": "90.1%",
+          "hit5": "107.3%",
+          "charged": "86.3% + 86.3%",
+          "plunge": "115.9%",
+          "lowhigh": "231.8% / 289.7%"
+        },
+        {
+          "level": 12,
+          "hit1": "69.7%",
+          "hit2": "70.7%",
+          "hit3": "90.0%",
+          "hit4": "94.2%",
+          "hit5": "112.2%",
+          "charged": "90.2% + 90.2%",
+          "plunge": "121.1%",
+          "lowhigh": "242.2% / 302.7%"
+        },
+        {
+          "level": 13,
+          "hit1": "72.7%",
+          "hit2": "73.7%",
+          "hit3": "93.9%",
+          "hit4": "98.3%",
+          "hit5": "117.1%",
+          "charged": "94.1% + 94.1%",
+          "plunge": "126.3%",
+          "lowhigh": "252.6% / 315.7%"
+        },
+        {
+          "level": 14,
+          "hit1": "75.7%",
+          "hit2": "76.7%",
+          "hit3": "97.8%",
+          "hit4": "102.4%",
+          "hit5": "122.0%",
+          "charged": "98.0% + 98.0%",
+          "plunge": "131.5%",
+          "lowhigh": "263.0% / 328.7%"
+        },
+        {
+          "level": 15,
+          "hit1": "78.7%",
+          "hit2": "79.7%",
+          "hit3": "101.7%",
+          "hit4": "106.5%",
+          "hit5": "126.9%",
+          "charged": "101.9% + 101.9%",
+          "plunge": "136.7%",
+          "lowhigh": "273.4% / 341.7%"
+        }
+      ]
+    },
+    {
+      "name": "Abiogenesis: Solar Isotoma",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Creates a Solar Isotoma using alchemy, dealing AoE Geo DMG on appearance.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Albedo/talent_2.png",
+      "details_html": "<div class='skill-section'><b>Abiogenesis: Solar Isotoma</b><br>Creates a Solar Isotoma using alchemy, dealing AoE Geo DMG on appearance. When opponents within the Solar Isotoma field take DMG, the Solar Isotoma will generate Transient Blossoms that deal AoE Geo DMG. DMG scales off Albedo's DEF.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "130% DEF",
+          "transient_blossom": "168% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "140% DEF",
+          "transient_blossom": "182% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "150% DEF",
+          "transient_blossom": "196% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "160% DEF",
+          "transient_blossom": "210% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "170% DEF",
+          "transient_blossom": "224% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 6,
+          "skill_dmg": "180% DEF",
+          "transient_blossom": "238% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 7,
+          "skill_dmg": "190% DEF",
+          "transient_blossom": "252% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 8,
+          "skill_dmg": "200% DEF",
+          "transient_blossom": "266% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 9,
+          "skill_dmg": "210% DEF",
+          "transient_blossom": "280% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 10,
+          "skill_dmg": "220% DEF",
+          "transient_blossom": "294% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 11,
+          "skill_dmg": "230% DEF",
+          "transient_blossom": "308% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 12,
+          "skill_dmg": "240% DEF",
+          "transient_blossom": "322% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 13,
+          "skill_dmg": "250% DEF",
+          "transient_blossom": "336% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 14,
+          "skill_dmg": "260% DEF",
+          "transient_blossom": "350% DEF",
+          "cd": "4s"
+        },
+        {
+          "level": 15,
+          "skill_dmg": "270% DEF",
+          "transient_blossom": "364% DEF",
+          "cd": "4s"
+        }
+      ]
+    },
+    {
+      "name": "Rite of Progeniture: Tectonic Tide",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Under Albedo's command, Geo crystals surge and burst forth, dealing AoE Geo DMG in front of him.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Albedo/talent_3.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Tectonic_Tide.png",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "367.2%",
+          "fatal_blossom": "72% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "395.0%",
+          "fatal_blossom": "78% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 3,
+          "burst_dmg": "422.8%",
+          "fatal_blossom": "84% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 4,
+          "burst_dmg": "454.0%",
+          "fatal_blossom": "91% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 5,
+          "burst_dmg": "481.8%",
+          "fatal_blossom": "97% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 6,
+          "burst_dmg": "509.6%",
+          "fatal_blossom": "104% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 7,
+          "burst_dmg": "540.8%",
+          "fatal_blossom": "111% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 8,
+          "burst_dmg": "572.0%",
+          "fatal_blossom": "118% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 9,
+          "burst_dmg": "603.2%",
+          "fatal_blossom": "125% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 10,
+          "burst_dmg": "634.4%",
+          "fatal_blossom": "132% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 11,
+          "burst_dmg": "665.6%",
+          "fatal_blossom": "139% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 12,
+          "burst_dmg": "696.8%",
+          "fatal_blossom": "146% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 13,
+          "burst_dmg": "732.2%",
+          "fatal_blossom": "154% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 14,
+          "burst_dmg": "767.6%",
+          "fatal_blossom": "162% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 15,
+          "burst_dmg": "803.0%",
+          "fatal_blossom": "170% each",
+          "cd": "12s",
+          "energy_cost": "40"
+        }
+      ],
+      "details_html": "<div class='skill-section'>Under Albedo's command, Geo crystals surge and burst forth, dealing <span style='color:#ffe082;font-weight:bold;'>AoE Geo DMG</span> in front of him.<br>If a Solar Isotoma created by Albedo himself is on the field, 7 Fatal Blossoms will be generated in the Solar Isotoma field, bursting violently into bloom and dealing <span style='color:#ffe082;font-weight:bold;'>AoE Geo DMG</span>.<br><br>Tectonic Tide DMG and Fatal Blossom DMG will not generate Transient Blossoms.</div>"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Calcite Might",
+      "phase": "Ascension Phase 1",
+      "desc": "Transient Blossoms generated by Abiogenesis: Solar Isotoma deal 25% more DMG to opponents whose HP is below 50%."
+    },
+    {
+      "name": "Homuncular Nature",
+      "phase": "Ascension Phase 4",
+      "desc": "Using Rite of Progeniture: Tectonic Tide increases Elemental Mastery of all nearby party members by 125 for 10s."
+    },
+    {
+      "name": "Flash of Genius",
+      "phase": "Passive",
+      "desc": "When Albedo crafts Weapon Ascension Materials, he has a 10% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Flower of Eden",
+      "phase": "Constellation Lv. 1",
+      "desc": "Transient Blossoms generate 1.2 Energy for Albedo."
+    },
+    {
+      "name": "Opening of Phanerozoic",
+      "phase": "Constellation Lv. 2",
+      "desc": "Abiogenesis: Solar Isotoma increases Albedo's Elemental Mastery by 10 for 8s each time a Transient Blossom is generated (max 4 stacks)."
+    },
+    {
+      "name": "Grace of Helios",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Abiogenesis: Solar Isotoma by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Descent of Divinity",
+      "phase": "Constellation Lv. 4",
+      "desc": "Active party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%."
+    },
+    {
+      "name": "Tide of Hadean",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Rite of Progeniture: Tectonic Tide by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Dust of Purification",
+      "phase": "Constellation Lv. 6",
+      "desc": "If active party members within the Solar Isotoma field are protected by a shield, Solar Isotoma increases their DMG by 17%."
+    }
+  ],
+  "ascension_materials": [
+    { "level": 20, "materials": [{ "name": "Mora", "quantity": 20000 }] },
+    {
+      "level": 40,
+      "materials": [
+        { "name": "Prithiva Topaz Sliver", "quantity": 1 },
+        { "name": "Cecilia", "quantity": 3 },
+        { "name": "Divining Scroll", "quantity": 3 },
+        { "name": "Basalt Pillar", "quantity": 2 },
+        { "name": "Mora", "quantity": 40000 }
+      ]
+    },
+    {
+      "level": 50,
+      "materials": [
+        { "name": "Prithiva Topaz Fragment", "quantity": 3 },
+        { "name": "Cecilia", "quantity": 10 },
+        { "name": "Sealed Scroll", "quantity": 15 },
+        { "name": "Basalt Pillar", "quantity": 4 },
+        { "name": "Mora", "quantity": 60000 }
+      ]
+    },
+    {
+      "level": 60,
+      "materials": [
+        { "name": "Prithiva Topaz Fragment", "quantity": 6 },
+        { "name": "Cecilia", "quantity": 20 },
+        { "name": "Sealed Scroll", "quantity": 12 },
+        { "name": "Basalt Pillar", "quantity": 8 },
+        { "name": "Mora", "quantity": 80000 }
+      ]
+    },
+    {
+      "level": 70,
+      "materials": [
+        { "name": "Prithiva Topaz Chunk", "quantity": 3 },
+        { "name": "Cecilia", "quantity": 30 },
+        { "name": "Forbidden Curse Scroll", "quantity": 18 },
+        { "name": "Basalt Pillar", "quantity": 12 },
+        { "name": "Mora", "quantity": 100000 }
+      ]
+    },
+    {
+      "level": 80,
+      "materials": [
+        { "name": "Prithiva Topaz Chunk", "quantity": 6 },
+        { "name": "Cecilia", "quantity": 45 },
+        { "name": "Forbidden Curse Scroll", "quantity": 12 },
+        { "name": "Basalt Pillar", "quantity": 20 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 90,
+      "materials": [
+        { "name": "Prithiva Topaz Gemstone", "quantity": 6 },
+        { "name": "Cecilia", "quantity": 60 },
+        { "name": "Forbidden Curse Scroll", "quantity": 24 },
+        { "name": "Basalt Pillar", "quantity": 24 },
+        { "name": "Mora", "quantity": 160000 }
+      ]
+    },
+    {
+      "total": true,
+      "materials": [
+        { "name": "Prithiva Topaz Sliver", "quantity": 1 },
+        { "name": "Prithiva Topaz Fragment", "quantity": 9 },
+        { "name": "Prithiva Topaz Chunk", "quantity": 9 },
+        { "name": "Prithiva Topaz Gemstone", "quantity": 6 },
+        { "name": "Cecilia", "quantity": 168 },
+        { "name": "Divining Scroll", "quantity": 3 },
+        { "name": "Sealed Scroll", "quantity": 27 },
+        { "name": "Forbidden Curse Scroll", "quantity": 18 },
+        { "name": "Basalt Pillar", "quantity": 46 },
+        { "name": "Mora", "quantity": 420000 }
+      ]
+    }
+  ],
+  "talent_materials": [
+    {
+      "level": 2,
+      "materials": [
+        { "name": "Teachings of Ballad", "quantity": 3 },
+        { "name": "Divining Scroll", "quantity": 6 },
+        { "name": "Mora", "quantity": 12500 }
+      ]
+    },
+    {
+      "level": 3,
+      "materials": [
+        { "name": "Guide to Ballad", "quantity": 2 },
+        { "name": "Sealed Scroll", "quantity": 3 },
+        { "name": "Mora", "quantity": 17500 }
+      ]
+    },
+    {
+      "level": 4,
+      "materials": [
+        { "name": "Guide to Ballad", "quantity": 4 },
+        { "name": "Sealed Scroll", "quantity": 4 },
+        { "name": "Mora", "quantity": 25000 }
+      ]
+    },
+    {
+      "level": 5,
+      "materials": [
+        { "name": "Guide to Ballad", "quantity": 6 },
+        { "name": "Sealed Scroll", "quantity": 6 },
+        { "name": "Mora", "quantity": 30000 }
+      ]
+    },
+    {
+      "level": 6,
+      "materials": [
+        { "name": "Guide to Ballad", "quantity": 9 },
+        { "name": "Sealed Scroll", "quantity": 9 },
+        { "name": "Mora", "quantity": 37500 }
+      ]
+    },
+    {
+      "level": 7,
+      "materials": [
+        { "name": "Philosophies of Ballad", "quantity": 4 },
+        { "name": "Forbidden Curse Scroll", "quantity": 4 },
+        { "name": "Tusk of Monoceros Caeli", "quantity": 1 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 8,
+      "materials": [
+        { "name": "Philosophies of Ballad", "quantity": 6 },
+        { "name": "Forbidden Curse Scroll", "quantity": 6 },
+        { "name": "Tusk of Monoceros Caeli", "quantity": 1 },
+        { "name": "Mora", "quantity": 260000 }
+      ]
+    },
+    {
+      "level": 9,
+      "materials": [
+        { "name": "Philosophies of Ballad", "quantity": 12 },
+        { "name": "Forbidden Curse Scroll", "quantity": 9 },
+        { "name": "Tusk of Monoceros Caeli", "quantity": 2 },
+        { "name": "Mora", "quantity": 450000 }
+      ]
+    },
+    {
+      "level": 10,
+      "materials": [
+        { "name": "Philosophies of Ballad", "quantity": 16 },
+        { "name": "Forbidden Curse Scroll", "quantity": 12 },
+        { "name": "Tusk of Monoceros Caeli", "quantity": 2 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 700000 }
+      ]
+    },
+    {
+      "total": true,
+      "materials": [
+        { "name": "Teachings of Ballad", "quantity": 3 },
+        { "name": "Guide to Ballad", "quantity": 21 },
+        { "name": "Philosophies of Ballad", "quantity": 38 },
+        { "name": "Divining Scroll", "quantity": 6 },
+        { "name": "Sealed Scroll", "quantity": 22 },
+        { "name": "Forbidden Curse Scroll", "quantity": 31 },
+        { "name": "Tusk of Monoceros Caeli", "quantity": 6 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 1652500 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "displayName": "Dori",
+  "img": "images/characters/dori.png",
+  "tags": ["Claymore", "Electro", "Sumeru", "4★", "Healer", "Support"],
+  "description": "A traveling merchant from Sumeru, Dori provides healing and energy recharge to her allies with her magical lamp.",
+  "weapons": [
+    {
+      "name": "Favonius Greatsword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Greatsword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Greatsword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Greatsword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Forest Regalia",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Forest_Regalia.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Maiden Beloved (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Maiden_Beloved.png"
+    },
+    {
+      "name": "Tenacity of the Millelith (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP%" },
+    { "type": "Circlet", "value": "Healing Bonus / HP%" }
+  ],
+  "substats": ["HP%", "Energy Recharge", "Healing Bonus", "Elemental Mastery"],
+  "talents": [
+    "Normal Attack: Marvelous Sword-Dance",
+    "Spirit-Warding Lamp: Troubleshooter Cannon",
+    "Alcazarzaray's Exactitude"
+  ],
+  "info": "Dori is a healer and battery for Electro and Dendro teams. Build her for HP% and Energy Recharge.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Favonius Greatsword",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Greatsword.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Dori" },
+      { "name": "Tighnari" },
+      { "name": "Collei" },
+      { "name": "Fischl" }
+    ],
+    [
+      { "name": "Dori" },
+      { "name": "Keqing" },
+      { "name": "Fischl" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Dori" },
+      { "name": "Cyno" },
+      { "name": "Nahida" },
+      { "name": "Yelan" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Marvelous Sword-Dance",
+      "desc": "Performs up to 3 consecutive claymore strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Marvelous_Sword-Dance.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 3 consecutive claymore strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks against all nearby opponents. At the end of the sequence, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Spirit-Warding Lamp: Troubleshooter Cannon",
+      "desc": "Fires a Troubleshooter Shot that deals Electro DMG. After the shot hits, it will create 2 After-Sales Service Rounds that will automatically track nearby opponents and deal Electro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Spirit-Warding_Lamp_Troubleshooter_Cannon.png",
+      "details_html": "<div class='skill-section'><b>Troubleshooter Cannon</b><br>Fires a Troubleshooter Shot that deals Electro DMG. After the shot hits, it will create 2 After-Sales Service Rounds that will automatically track nearby opponents and deal Electro DMG.</div>"
+    },
+    {
+      "name": "Alcazarzaray's Exactitude",
+      "desc": "Summons the Jinni within the lamp to provide healing and energy to the active character. The Jinni will continuously restore HP and regenerate Energy for the character in its field.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Alcazarzarays_Exactitude.png",
+      "details_html": "<div class='skill-section'><b>Alcazarzaray's Exactitude</b><br>Summons the Jinni within the lamp to provide healing and energy to the active character. The Jinni will continuously restore HP and regenerate Energy for the character in its field. Healing and energy regeneration scale with Dori's Max HP.</div>"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "An Eye for Gold",
+      "phase": "Ascension Phase 1",
+      "desc": "After a character connected to the Jinni triggers an Electro-related reaction, the cooldown of Spirit-Warding Lamp: Troubleshooter Cannon is decreased by 1s."
+    },
+    {
+      "name": "Compound Interest",
+      "phase": "Ascension Phase 4",
+      "desc": "When the Troubleshooter Shots or After-Sales Service Rounds from Spirit-Warding Lamp: Troubleshooter Cannon hit opponents, Dori will restore 5 Elemental Energy for every 100% Energy Recharge she has."
+    },
+    {
+      "name": "Unexpected Order",
+      "phase": "Passive",
+      "desc": "Has a 25% chance to recover some of the materials used when crafting Character and Weapon Materials."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Additional Investment",
+      "phase": "Constellation Lv. 1",
+      "desc": "The number of After-Sales Service Rounds created by Troubleshooter Shots is increased by 1."
+    },
+    {
+      "name": "Special Franchise",
+      "phase": "Constellation Lv. 2",
+      "desc": "When in the Jinni state, the character will gain increased Elemental Mastery based on 20% of Dori's Max HP."
+    },
+    {
+      "name": "Wonders Never Cease",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Alcazarzaray's Exactitude by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Discretionary Supplement",
+      "phase": "Constellation Lv. 4",
+      "desc": "The character connected to the Jinni will restore 4 Elemental Energy when they trigger an Electro-related reaction."
+    },
+    {
+      "name": "Value for Mora",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Spirit-Warding Lamp: Troubleshooter Cannon by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Sprinkling Weight",
+      "phase": "Constellation Lv. 6",
+      "desc": "Dori gains the following effects for 3s after using Spirit-Warding Lamp: Troubleshooter Cannon: Electro Infusion, and when Normal Attacks hit opponents, all nearby party members will be healed for 4% of Dori's Max HP."
+    }
+  ]
+}

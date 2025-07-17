@@ -1,0 +1,19 @@
+Eccezione durante la chiamata di "Start" con "0" argomento/i: "Accesso negato"
+In riga:1 car:106
++ ... .Prefixes.Add('http://192.168.1.12:8080/'); $listener.Start(); Write- ...
++                                                 ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : HttpListenerException
+ 
+Server avviato su http://192.168.1.12:8080
+Premi Ctrl+C per fermare
+Eccezione durante la chiamata di "Stop" con "0" argomento/i: "Impossibile accedere a un 
+oggetto eliminato.
+Nome oggetto: 'System.Net.HttpListener'."
+In riga:1 car:967
++ ... olor Red; } $response.Close(); } } finally { $listener.Stop(); Write- ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ObjectDisposedException
+ 
+Server fermato

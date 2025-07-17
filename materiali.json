@@ -1,0 +1,3391 @@
+{
+  "materiali": {
+    "materiali_ascensione_personaggi": {
+      "elementi": {
+        "Pyro": {
+          "Agnidus Agate Sliver": {
+            "rarita": 2,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fuoco",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316490/d59527c47c7f3b3c34f09b39107f647a.png/show"
+          },
+          "Agnidus Agate Fragment": {
+            "rarita": 3,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fuoco",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316516/fd516a1f7a6b94a96d07ac4e8ed2d3d8.png/show"
+          },
+          "Agnidus Agate Chunk": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fuoco",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316522/9a9ad808bf0c02c081134dfe08bc935a.png/show"
+          },
+          "Agnidus Agate Gemstone": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fuoco",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316491/7e737494932563fa74dd4f550ecd783f.png/show"
+          },
+          "Everflame Seed": {
+            "rarita": 4,
+            "descrizione": "Seme che brucia eternamente",
+            "livelli": ["Seed", "Seed", "Seed", "Seed"],
+            "immagine": "https://img.game8.co/3316503/46ae491cbfb62efd7b75ed6df0040869.png/show"
+          },
+          "Smoldering Pearl": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fuoco",
+            "livelli": ["Pearl", "Pearl", "Pearl", "Pearl"],
+            "immagine": "https://img.game8.co/3390436/118a1b6e68d003ccf46fe9cf0bdafdb0.png/show"
+          },
+          "Emperor's Resolution": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fuoco",
+            "livelli": ["Resolution", "Resolution", "Resolution", "Resolution"],
+            "immagine": "https://img.game8.co/3750773/055b37f8c655a4fbd22c8ba9f495ff84.png/show"
+          }
+        },
+        "Hydro": {
+          "Varunada Lazurite Sliver": {
+            "rarita": 2,
+            "descrizione": "Pietra preziosa che contiene l'essenza dell'acqua",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316838/c038c045f0dfb7c9291e4c95268d9d9b.png/show"
+          },
+          "Varunada Lazurite Fragment": {
+            "rarita": 3,
+            "descrizione": "Pietra preziosa che contiene l'essenza dell'acqua",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316844/910ab3e7cdf9faa7403bf943a376c4a0.png/show"
+          },
+          "Varunada Lazurite Chunk": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza dell'acqua",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316848/3eb33bc3f5cee6143f42860ed39479af.png/show"
+          },
+          "Varunada Lazurite Gemstone": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza dell'acqua",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316845/92d2a5cde62a34ec37fcebd431315bf2.png/show"
+          },
+          "Dew of Repudiation": {
+            "rarita": 4,
+            "descrizione": "Goccia di rugiada che respinge",
+            "livelli": ["Dew", "Dew", "Dew", "Dew"],
+            "immagine": "https://img.game8.co/3411656/18d9fa7bfa3b491fa552ef34a8bddc3d.png/show"
+          },
+          "Cleansing Heart": {
+            "rarita": 4,
+            "descrizione": "Materiale da oceanid",
+            "livelli": ["Heart", "Heart", "Heart", "Heart"],
+            "immagine": "https://img.game8.co/3316509/fe0cec0c4d550c0fc376a62abaa74599.png/show"
+          },
+          "Water That Failed to Transcend": {
+            "rarita": 4,
+            "descrizione": "Materiale da oceanid",
+            "livelli": ["Water", "Water", "Water", "Water"],
+            "immagine": "https://img.game8.co/3791636/add9a72e4430fc09747ea2b44495b32a.png/show"
+          }
+        },
+        "Electro": {
+          "Vajrada Amethyst Sliver": {
+            "rarita": 2,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fulmine",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316849/6a66fe14df88a1625335e5abd7d09991.png/show"
+          },
+          "Vajrada Amethyst Fragment": {
+            "rarita": 3,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fulmine",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316853/566cc9f1756f344ccdfc5ec75fbd6bd1.png/show"
+          },
+          "Vajrada Amethyst Chunk": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fulmine",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316857/57c586cc63841522f8c519d2a84fd3ab.png/show"
+          },
+          "Vajrada Amethyst Gemstone": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza del fulmine",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316855/7a8907422282ba60d8e3477a23381829.png/show"
+          },
+          "Lightning Prism": {
+            "rarita": 4,
+            "descrizione": "Prisma che contiene l'energia del fulmine",
+            "livelli": ["Prism", "Prism", "Prism", "Prism"],
+            "immagine": "https://img.game8.co/3316519/97cdb85ecf16eeb6dd10994ce748f352.png/show"
+          },
+          "Storm Beads": {
+            "rarita": 4,
+            "descrizione": "Bocchelle che contengono l'energia del fulmine",
+            "livelli": ["Beads", "Beads", "Beads", "Beads"],
+            "immagine": "https://img.game8.co/3411655/6cca4b7cf0f725a5d75b5d7404d8134e.png/show"
+          },
+          "Thunderclap Fruitcore": {
+            "rarita": 4,
+            "descrizione": "Frutto che contiene l'energia del fulmine",
+            "livelli": [
+              "Thunderclap",
+              "Thunderclap",
+              "Thunderclap",
+              "Thunderclap"
+            ],
+            "immagine": "https://img.game8.co/3567823/9fae2e30507edfeac2b4921e17a7b896.png/show"
+          }
+        },
+        "Cryo": {
+          "Shivada Jade Sliver": {
+            "rarita": 2,
+            "descrizione": "Pietra preziosa che contiene l'essenza del ghiaccio",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316836/3b6ceb094c0d1d26a5369a6a103d67b6.png/show"
+          },
+          "Shivada Jade Fragment": {
+            "rarita": 3,
+            "descrizione": "Pietra preziosa che contiene l'essenza del ghiaccio",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316827/7e2d72b5fe5e65908b18ba64166dbe77.png/show"
+          },
+          "Shivada Jade Chunk": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza del ghiaccio",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316832/4bc2e99e6c01d184f993d2520f7b57a5.png/show"
+          },
+          "Shivada Jade Gemstone": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza del ghiaccio",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316835/c62b597755af63470bbb54dbda0a3fd7.png/show"
+          },
+          "Hoarfrost Core": {
+            "rarita": 4,
+            "descrizione": "Nucleo di brina gelida",
+            "livelli": ["Core", "Core", "Core", "Core"],
+            "immagine": "https://img.game8.co/3316514/3129c1ea73647f6074337191445aed9e.png/show"
+          },
+          "Crystalline Bloom": {
+            "rarita": 4,
+            "descrizione": "Fiori di cristallo",
+            "livelli": [
+              "Crystalline Bloom",
+              "Crystalline Bloom",
+              "Crystalline Bloom",
+              "Crystalline Bloom"
+            ],
+            "immagine": "https://img.game8.co/3350461/2ea3d0e4ee1de09598810c619902e736.png/show"
+          },
+          "Tourbillon Device": {
+            "rarita": 4,
+            "descrizione": "Nucleo di brina gelida",
+            "livelli": ["Device", "Device", "Device", "Device"],
+            "immagine": "https://img.game8.co/3770932/ff74d36269b426ad35e6ae5473907da8.png/show"
+          }
+        },
+        "Anemo": {
+          "Vayuda Turquoise Sliver": {
+            "rarita": 2,
+            "descrizione": "Pietra preziosa che contiene l'essenza del vento",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316851/7ac59c4d68c05e19cd92ef6d954038e9.png/show"
+          },
+          "Vayuda Turquoise Fragment": {
+            "rarita": 3,
+            "descrizione": "Pietra preziosa che contiene l'essenza del vento",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316852/4fb03fb2b2f45e5d9be50c482ee1a6ae.png/show"
+          },
+          "Vayuda Turquoise Chunk": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza del vento",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316856/225b2526b770e25f5e445d63c2c3db1e.png/show"
+          },
+          "Vayuda Turquoise Gemstone": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza del vento",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316858/f109b40588c4d3e2044c410805c1880c.png/show"
+          },
+          "Hurricane Seed": {
+            "rarita": 4,
+            "descrizione": "Seme di uragano",
+            "livelli": ["Seed", "Seed", "Seed", "Seed"],
+            "immagine": "https://img.game8.co/3316520/360c31bf5ebf19a6fa74df493e177b55.png/show"
+          },
+          "Marionette Core": {
+            "rarita": 4,
+            "descrizione": "Materiale da Magu Kenki",
+            "livelli": ["Marionette", "Marionette", "Marionette", "Marionette"],
+            "immagine": "https://img.game8.co/3374505/bb80e8128163155fa7e1b7af4cc17e6a.png/show"
+          }
+        },
+        "Geo": {
+          "Prithiva Topaz Sliver": {
+            "rarita": 2,
+            "descrizione": "Pietra preziosa che contiene l'essenza della terra",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316823/25e92ebf8f96e86fee86c1ba5c145482.png/show"
+          },
+          "prithiva topaz sliver": {
+            "rarita": 2,
+            "descrizione": "Pietra preziosa che contiene l'essenza della terra",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316823/25e92ebf8f96e86fee86c1ba5c145482.png/show"
+          },
+          "Prithiva Topaz Fragment": {
+            "rarita": 3,
+            "descrizione": "Pietra preziosa che contiene l'essenza della terra",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316824/9dbddf4dbd61bf362ea051a6fe0ca9f8.png/show"
+          },
+          "prithiva topaz fragment": {
+            "rarita": 3,
+            "descrizione": "Pietra preziosa che contiene l'essenza della terra",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316824/9dbddf4dbd61bf362ea051a6fe0ca9f8.png/show"
+          },
+          "Prithiva Topaz Chunk": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza della terra",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316825/a759599311e1e06409ee60f1c00043e3.png/show"
+          },
+          "prithiva topaz chunk": {
+            "rarita": 4,
+            "descrizione": "Pietra preziosa che contiene l'essenza della terra",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316825/a759599311e1e06409ee60f1c00043e3.png/show"
+          },
+          "Prithiva Topaz Gemstone": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza della terra",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316822/0079054f54b329ff2a50b16f6c42dc1d.png/show"
+          },
+          "prithiva topaz gemstone": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza della terra",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3316822/0079054f54b329ff2a50b16f6c42dc1d.png/show"
+          },
+          "Basalt Pillar": {
+            "rarita": 4,
+            "descrizione": "Pilastro di basalto",
+            "livelli": ["Pillar", "Pillar", "Pillar", "Pillar"],
+            "immagine": "https://img.game8.co/3316494/b7c295a3fc9b4c2c4f45a46a7e6e8a0c.png/show"
+          },
+          "basalt pillar": {
+            "rarita": 4,
+            "descrizione": "Pilastro di basalto",
+            "livelli": ["Pillar", "Pillar", "Pillar", "Pillar"],
+            "immagine": "https://img.game8.co/3316494/b7c295a3fc9b4c2c4f45a46a7e6e8a0c.png/show"
+          },
+          "Riftborn Regalia": {
+            "rarita": 4,
+            "descrizione": "Materiale condiviso da Wanderer",
+            "livelli": ["Regalia", "Regalia", "Regalia", "Regalia"],
+            "immagine": "https://img.game8.co/3453217/365e1d9dbf65434dfb770576ce65b388.png/show"
+          }
+        },
+        "Dendro": {
+          "Nagadus Emerald Sliver": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza della vita",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3570751/9d7e3580e5c95df553fe24acb7ead4a3.png/show"
+          },
+          "Nagadus Emerald Fragment": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza della vita",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3883988/084dbdc8786d5ad5dde1d8a12afc1589.png/show"
+          },
+          "Nagadus Emerald Chunk": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza della vita",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3883989/1a4c582fb6f7e303db5355c240853ca7.png/show"
+          },
+          "Nagadus Emerald Gemstone": {
+            "rarita": 5,
+            "descrizione": "Pietra preziosa che contiene l'essenza della vita",
+            "livelli": ["Sliver", "Fragment", "Chunk", "Gemstone"],
+            "immagine": "https://img.game8.co/3883990/69b6088b42f664c279e8675b95bcecdf.png/show"
+          },
+          "Quelled Creeper": {
+            "rarita": 4,
+            "descrizione": "Rampicante domato",
+            "livelli": ["Creeper", "Creeper", "Creeper", "Creeper"],
+            "immagine": "https://img.game8.co/3604181/2d77208e45562e066d48ab7ff27f1162.png/show"
+          },
+          "Majestic Hooked Beak": {
+            "rarita": 4,
+            "descrizione": "Becco magico",
+            "livelli": ["Beak", "Beak", "Beak", "Beak"],
+            "immagine": "https://img.game8.co/3566764/6506bfe82660ae8542dbfcab847e961f.png/show"
+          },
+          "Evergloom Ring": {
+            "rarita": 4,
+            "descrizione": "Materiale condiviso per Wanderer Nilou e Layla",
+            "livelli": ["Ring", "Ring", "Ring", "Ring"],
+            "immagine": "https://img.game8.co/3674925/9e4eec9e9815144686bd02bdd7424cd3.png/show"
+          }
+        }
+      },
+      "materiali_condivisi": {
+        "Juvenile Jade": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso da Xiao e Yannfei",
+          "livelli": [
+            "Juvenile Jade",
+            "Juvenile Jade",
+            "Juvenile Jade",
+            "Juvenile Jade"
+          ],
+          "immagine": "https://img.game8.co/3324576/b50671aef8232691f9783c6877e36996.png/show",
+          "elementi": ["Anemo", "Pyro"]
+        },
+        "Perpetual Heart": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Ayaka e Gorou",
+          "livelli": ["Heart", "Heart", "Heart", "Heart"],
+          "immagine": "https://img.game8.co/3390208/a0225bea9db6510df314f9d8b3664abe.png/show",
+          "elementi": ["Cryo", "Geo"]
+        },
+        "Dragonheir's False Fin": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso Per Shenhe e Yae Miko",
+          "livelli": ["Fin", "Fin", "Fin", "Fin"],
+          "immagine": "https://img.game8.co/3464704/d2355b27c5d943111f281b3b8afe8f44.png/show",
+          "elementi": ["Cryo", "Electro"]
+        },
+        "Runic Fang": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Kuki Shinobu Yelan e Heizou",
+          "livelli": ["Fang", "Fang", "Fang", "Fang"],
+          "immagine": "https://img.game8.co/3511481/a41c487c8e1ba5a51aa63c42b24bda7a.png/show",
+          "elementi": ["Hydro", "Anemo", "Electro"]
+        },
+        "Light Guiding Tetrahedron": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Candace Faruzan e Dehya",
+          "livelli": [
+            "Tetrahedron",
+            "Tetrahedron",
+            "Tetrahedron",
+            "Tetrahedron"
+          ],
+          "immagine": "https://img.game8.co/3587545/77b054db67339a49bc72ac61a4b0bdb1.png/show",
+          "elementi": ["Hydro", "Anemo", "Pyro"]
+        },
+        "Perpetual Caliber": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Wanderer Nilou e Layla",
+          "livelli": ["Caliber", "Caliber", "Caliber", "Caliber"],
+          "immagine": "https://img.game8.co/3587878/1886f25e7c6c1da07afa0b5a87d490e8.png/show",
+          "elementi": ["Hydro", "Anemo", "Cryo"]
+        },
+        "Pseudo-Stamens": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Alhaitham e Mika",
+          "livelli": ["Stamens", "Stamens", "Stamens", "Stamens"],
+          "immagine": "https://img.game8.co/3632403/06ad2746e000c9e0f17dd28e9dec15e8.png/show",
+          "elementi": ["Dendro", "Cryo"]
+        },
+        "Artificed Spare Clockwork Component - Coppelius": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Navia e Freminet",
+          "livelli": ["component", "component", "component", "component"],
+          "immagine": "https://img.game8.co/3750656/fc413c4400914e4e17b8fc2b3235052a.png/show",
+          "elementi": ["Geo", "Cryo"]
+        },
+        "Artificed Spare Clockwork Component - Coppelia": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Lynette e Chiori",
+          "livelli": ["component", "component", "component", "component"],
+          "immagine": "https://img.game8.co/3750655/7ffa98f95513388896b136761cfb5d5f.png/show",
+          "elementi": ["Anemo", "Geo"]
+        },
+        "Fontemer Unihorn": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Neuvillette Chevreuse e Clorinde",
+          "livelli": ["Unicorn", "Unicorn", "Unicorn", "Unicorn"],
+          "immagine": "https://img.game8.co/3770933/23f72f6fea00329673d744defca8b79a.png/show",
+          "elementi": ["Electro", "Hydro", "Pyro"]
+        },
+        "Cloudseam Scale": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Xianqiu e Sethos",
+          "livelli": ["Scale", "Scale", "Scale", "Scale"],
+          "immagine": "https://img.game8.co/3830447/7572610eb3552bd83d5e8ba13b7351f0.png/show",
+          "elementi": ["Anemo", "Electro"]
+        },
+        "Fragment of a Golden Melody": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Arlechcino Emilie",
+          "livelli": ["Melody", "Melody", "Melody", "Melody"],
+          "immagine": "https://img.game8.co/3872682/f62910ac8ef622b407f58225dfbbe920.png/show",
+          "elementi": ["Pyro", "Dendro"]
+        },
+        "Overripe Flamegranate": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Kachina e Kinich",
+          "livelli": [
+            "Flamegranate",
+            "Flamegranate",
+            "Flamegranate",
+            "Flamegranate"
+          ],
+          "immagine": "https://img.game8.co/3971910/de7d4d8b676d87ebe4e82525b1aa8267.png/show",
+          "elementi": ["Pyro", "Dendro", "Hydro"]
+        },
+        "Gold-Inscribed Secret Source Core": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Mavuika, Xilonen e Lan Yan",
+          "livelli": ["Core", "Core", "Core", "Core"],
+          "immagine": "https://img.game8.co/4012026/866e2c865f556ee41eafaa1e496d434e.png/show",
+          "elementi": ["Pyro", "Geo", "Anemo"]
+        },
+        "Ensnaring Gaze": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Skirk, Iansan e Chasca",
+          "livelli": ["Core", "Core", "Core", "Core"],
+          "immagine": "https://img.game8.co/4045966/a0dc4bb47e7abd1cbd8083377ce38a02.png/show",
+          "elementi": ["Cryo", "Electro", "Anemo"]
+        },
+        "Talisman of the Enigmatic Land": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Citlali e Mizuki",
+          "livelli": ["Land", "Land", "Land", "Land"],
+          "immagine": "https://img.game8.co/4074873/6644ff0af0757d4eefc4e1467b796289.png/show",
+          "elementi": ["Cryo", "Anemo"]
+        },
+        "Sparkless Statue Core": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Ifa e Varesa",
+          "livelli": ["Statue", "Statue", "Statue", "Statue"],
+          "immagine": "https://img.game8.co/4138597/b56a75de7ec9e2765c6ae48956d95db3.png/show",
+          "elementi": ["Anemo", "Electro"]
+        },
+        "Secret Source Airflow Accumulator": {
+          "rarita": 4,
+          "descrizione": "Materiale condiviso per Escoffier e Dahlia",
+          "livelli": ["Source", "Source", "Source", "Source"],
+          "immagine": "https://img.game8.co/4166308/5a018f7e1d1214b7057acd53c758e54f.png/show",
+          "elementi": ["Cryo", "Hydro"]
+        }
+      },
+      "materiali_epici": {
+        "Illusory Leafcoil": {
+          "rarita": 4,
+          "descrizione": "Materiale epico per ascensione personaggi",
+          "livelli": ["Leafcoil", "Leafcoil", "Leafcoil", "Leafcoil"],
+          "immagine": "https://img.game8.co/4047535/a6eb669fba38fcc54f88a832e5c87c9d.png/show"
+        }
+      },
+      "materiali_comuni": {
+        "Slime Condensate": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Slime",
+          "livelli": [
+            "Slime Condensate",
+            "Slime Secretions",
+            "Slime Concentrate"
+          ],
+          "immagine": "https://img.game8.co/3316834/00c462635f15303ae11a16f8332e27af.png/show"
+        },
+        "Damaged Mask": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Hilichurl",
+          "livelli": ["Damaged Mask", "Stained Mask", "Ominous Mask"],
+          "immagine": "https://img.game8.co/3316502/acf95b057133a0d24363263f78b6edf5.png/show"
+        },
+        "Treasure Hoarder Insignia": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Treasure Hoarder",
+          "livelli": [
+            "Treasure Hoarder Insignia",
+            "Silver Raven Insignia",
+            "Golden Raven Insignia"
+          ],
+          "immagine": "https://img.game8.co/3316842/84a9bd0e0fdf4ff83bf2e1506013ade8.png/show"
+        },
+        "Spectral Husk": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Specter",
+          "livelli": ["Spectral Husk", "Spectral Heart", "Spectral Nucleus"],
+          "immagine": "https://img.game8.co/3411652/acf4d62e75594d844e5e5706e6424aa3.png/show"
+        },
+        "Firm Arrowhead": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Hilichurl Archer",
+          "livelli": [
+            "Firm Arrowhead",
+            "Sharp Arrowhead",
+            "Weathered Arrowhead"
+          ],
+          "immagine": "https://img.game8.co/3316517/fcf4de9df0238f37e4503e13ec604f19.png/show"
+        },
+        "Divining Scroll": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Samachurl",
+          "livelli": [
+            "Divining Scroll",
+            "Sealed Scroll",
+            "Forbidden Curse Scroll"
+          ],
+          "immagine": "https://img.game8.co/3316518/9da1173a9c53cff062936998b406af5f.png/show"
+        },
+        "divining scroll": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Samachurl",
+          "livelli": [
+            "Divining Scroll",
+            "Sealed Scroll",
+            "Forbidden Curse Scroll"
+          ],
+          "immagine": "https://img.game8.co/3316518/9da1173a9c53cff062936998b406af5f.png/show"
+        },
+        "Recruit's Insignia": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Fatui",
+          "livelli": [
+            "Recruit's Insignia",
+            "Sergeant's Insignia",
+            "Lieutenant's Insignia"
+          ],
+          "immagine": "https://img.game8.co/3316826/8821e1ad83dd8ae5fb9b850d722b61df.png/show"
+        },
+        "Whopperflower Nectar": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Whopperflower",
+          "livelli": [
+            "Whopperflower Nectar",
+            "Shimmering Nectar",
+            "Energy Nectar"
+          ],
+          "immagine": "https://img.game8.co/3316840/0707b12eddf496e17ecb36266075f711.png/show"
+        },
+        "Old Handguard": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Nobushi/Kairagi",
+          "livelli": ["Old Handguard", "Kageuchi Handguard", "Famed Handguard"],
+          "immagine": "https://img.game8.co/3390207/ce6da9469b9e6d207e97e68dd60ab12a.png/show"
+        },
+
+        "Meshing Gear": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Ruin Guard",
+          "livelli": [
+            "Meshing Gear",
+            "Mechanical Spur Gear",
+            "Artificed Spare Clockwork Component"
+          ],
+          "immagine": "https://img.game8.co/3750667/0a0c82a09bb5c44dbea600af7ac65b3e.png/show"
+        },
+        "Transoceanic Pearl": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Oceanid",
+          "livelli": [
+            "Transoceanic Pearl",
+            "Transoceanic Chunk",
+            "Xenochromatic Crystal"
+          ],
+          "immagine": "https://img.game8.co/3750681/72f61a3744962f16d765d73cb9cd1534.png/show"
+        },
+        "Sentry's Wooden Whistle": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Treasure Hoarder",
+          "livelli": [
+            "Sentry's Wooden Whistle",
+            "Silver Raven Insignia",
+            "Golden Raven Insignia"
+          ],
+          "immagine": "https://img.game8.co/3971402/0fc4befa193d3f760dcd1caab5e199ee.png/show"
+        },
+        "Juvenile Fang": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Geovishap",
+          "livelli": [
+            "Juvenile Fang",
+            "Dragon Lord's Crown",
+            "Bloodjade Branch"
+          ],
+          "immagine": "https://img.game8.co/3971763/8eabe80e955a8de129bc9f00d401405c.png/show"
+        },
+        "Fungal Spores": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Geovishap",
+          "livelli": [
+            "Fungal Spores",
+            "Luminescent Pollen",
+            "Crystalline Cyst Dust"
+          ],
+          "immagine": "https://img.game8.co/3512349/6c3b4bbd359bded40bfd961a21bf579e.png/show"
+        },
+        "Faded Red Satin": {
+          "rarita": 1,
+          "descrizione": "Materiale comune di Eremite",
+          "livelli": [
+            "Faded Red Satin",
+            "Trimmed Red Silk",
+            "Rich Red Brocade"
+          ],
+          "immagine": "https://img.game8.co/3567307/080df9ec037462d643be02ef02040999.png/show"
+        }
+      },
+      "materiali_non_comuni": {
+        "Sharp Arrowhead": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Hilichurl Archer",
+          "livelli": [
+            "Firm Arrowhead",
+            "Sharp Arrowhead",
+            "Weathered Arrowhead"
+          ],
+          "immagine": "https://img.game8.co/3316829/4efa2f47172a217f1470d362acb039b4.png/show"
+        },
+        "Sealed Scroll": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Samachurl",
+          "livelli": [
+            "Divining Scroll",
+            "Sealed Scroll",
+            "Forbidden Curse Scroll"
+          ],
+          "immagine": "https://img.game8.co/3316828/37d4c28a1e879ab9daf9c95d6d50888a.png/show"
+        },
+        "sealed scroll": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Samachurl",
+          "livelli": [
+            "Divining Scroll",
+            "Sealed Scroll",
+            "Forbidden Curse Scroll"
+          ],
+          "immagine": "https://img.game8.co/3316828/37d4c28a1e879ab9daf9c95d6d50888a.png/show"
+        },
+        "Sergeant's Insignia": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Fatui",
+          "livelli": [
+            "Recruit's Insignia",
+            "Sergeant's Insignia",
+            "Lieutenant's Insignia"
+          ],
+          "immagine": "https://img.game8.co/3316831/a5206ee231d46e59c39258396df8294f.png/show"
+        },
+        "Shimmering Nectar": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Whopperflower",
+          "livelli": [
+            "Whopperflower Nectar",
+            "Shimmering Nectar",
+            "Energy Nectar"
+          ],
+          "immagine": "https://img.game8.co/3316830/c59523f6b52799e9ece7b56c33f444e9.png/show"
+        },
+
+        "Kageuchi Handguard": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Nobushi/Kairagi",
+          "livelli": ["Old Handguard", "Kageuchi Handguard", "Famed Handguard"],
+          "immagine": "https://img.game8.co/3390209/3890796041cc25a89b6a10d87e929374.png/show"
+        },
+        "Trimmed Red Silk": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Eremite",
+          "livelli": [
+            "Faded Red Satin",
+            "Trimmed Red Silk",
+            "Rich Red Brocade"
+          ],
+          "immagine": "https://img.game8.co/3567308/9b205c3817302bb62e05331370a1cac8.png/show"
+        },
+        "Mechanical Spur Gear": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Ruin Guard",
+          "livelli": [
+            "Meshing Gear",
+            "Mechanical Spur Gear",
+            "Artificed Spare Clockwork Component"
+          ],
+          "immagine": "https://img.game8.co/3750668/e604a922a3daf56b87ae94b65c44d713.png/show"
+        },
+        "Transoceanic Chunk": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Oceanid",
+          "livelli": [
+            "Transoceanic Pearl",
+            "Transoceanic Chunk",
+            "Xenochromatic Crystal"
+          ],
+          "immagine": "https://img.game8.co/3750682/f0b1d67c47c0a1faaba10525b173fa28.png/show"
+        },
+        "Silver Raven Insignia": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Treasure Hoarder",
+          "livelli": [
+            "Sentry's Wooden Whistle",
+            "Silver Raven Insignia",
+            "Golden Raven Insignia"
+          ],
+          "immagine": "https://img.game8.co/3316847/35f303303665af103578f218dea96e4d.png/show"
+        },
+        "Stained Mask": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Hilichurl",
+          "livelli": ["Damaged Mask", "Stained Mask", "Ominous Mask"],
+          "immagine": "https://img.game8.co/3316841/719becb9c445a9572a1824a0c9cfe655.png/show"
+        },
+        "Spectral Heart": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Specter",
+          "livelli": ["Spectral Husk", "Spectral Heart", "Spectral Nucleus"],
+          "immagine": "https://img.game8.co/3411653/1277203f9555643e9e12a4d7599aca98.png/show"
+        },
+        "Luminescent Pollen": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Fungus",
+          "livelli": [
+            "Fungal Spores",
+            "Luminescent Pollen",
+            "Crystalline Cyst Dust"
+          ],
+          "immagine": "https://img.game8.co/3512347/9cc878fbeea7a73c59e647f4c4a70bea.png/show"
+        },
+        "Slime Secretions": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Slime",
+          "livelli": [
+            "Slime Condensate",
+            "Slime Secretions",
+            "Slime Concentrate"
+          ],
+          "immagine": "https://img.game8.co/3316833/ee0b775975286aab44e5c981f588d3a3.png/show"
+        },
+        "Warrior's Metal Whistle": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Treasure Hoarder",
+          "livelli": [
+            "Sentry's Wooden Whistle",
+            "Warrior's Metal Whistle",
+            "Golden Raven Insignia"
+          ],
+          "immagine": "https://img.game8.co/3971400/5599eb77c14f172b247e79808f718b2e.png/show"
+        },
+        "Seasoned Fang": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Geovishap",
+          "livelli": ["Juvenile Fang", "Seasoned Fang", "Bloodjade Branch"],
+          "immagine": "https://img.game8.co/3971764/b5f4df65610ae7307975b7689cbfa8b3.png/show"
+        },
+        "Refractive Bud": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Whopperflower",
+          "livelli": [
+            "Whopperflower Nectar",
+            "Shimmering Nectar",
+            "Energy Nectar"
+          ],
+          "immagine": "https://img.game8.co/4047534/bc1d4591b1394f71007c0ba220260464.png/show"
+        },
+        "Inactivated Fungal Nucleus": {
+          "rarita": 2,
+          "descrizione": "Materiale non comune di Fungus",
+          "livelli": [
+            "Fungal Spores",
+            "Luminescent Pollen",
+            "Crystalline Cyst Dust"
+          ],
+          "immagine": "https://img.game8.co/3568487/d9069518d6402cb50fc589d1e1c1cdc6.png/show"
+        }
+      },
+      "materiali_rari": {
+        "Ominous Mask": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Hilichurl",
+          "livelli": ["Damaged Mask", "Stained Mask", "Ominous Mask"],
+          "immagine": "https://img.game8.co/3316820/71bbd467dcb2040f1fbe48a79487c3e8.png/show"
+        },
+        "Golden Raven Insignia": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Treasure Hoarder",
+          "livelli": [
+            "Sentry's Wooden Whistle",
+            "Warrior's Metal Whistle",
+            "Golden Raven Insignia"
+          ],
+          "immagine": "https://img.game8.co/3316515/6d8e978a692a3970e9bda11358dbcea1.png/show"
+        },
+        "Weathered Arrowhead": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Hilichurl Archer",
+          "livelli": [
+            "Firm Arrowhead",
+            "Sharp Arrowhead",
+            "Weathered Arrowhead"
+          ],
+          "immagine": "https://img.game8.co/3316846/5bbd6615ed955344296dd6e5e1ce9040.png/show"
+        },
+        "Forbidden Curse Scroll": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Samachurl",
+          "livelli": [
+            "Divining Scroll",
+            "Sealed Scroll",
+            "Forbidden Curse Scroll"
+          ],
+          "immagine": "https://img.game8.co/3316510/e437de3614db119b231cf2f104f060d4.png/show"
+        },
+        "forbidden curse scroll": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Samachurl",
+          "livelli": [
+            "Divining Scroll",
+            "Sealed Scroll",
+            "Forbidden Curse Scroll"
+          ],
+          "immagine": "https://img.game8.co/3316510/e437de3614db119b231cf2f104f060d4.png/show"
+        },
+        "Slime Concentrate": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Slime",
+          "livelli": [
+            "Slime Condensate",
+            "Slime Secretions",
+            "Slime Concentrate"
+          ],
+          "immagine": "https://img.game8.co/3316843/5411baf2cdbb58392cb27e12f61682db.png/show"
+        },
+        "Lieutenant's Insignia": {
+          "rarita": 3,
+          "descrizione": "https://img.game8.co/3316525/15f1540a9d76d29b2212d6600c89715a.png/show",
+          "livelli": [
+            "Recruit's Insignia",
+            "Sergeant's Insignia",
+            "Lieutenant's Insignia"
+          ],
+          "immagine": "https://img.game8.co/3316525/15f1540a9d76d29b2212d6600c89715a.png/show"
+        },
+        "Energy Nectar": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Whopperflower",
+          "livelli": [
+            "Whopperflower Nectar",
+            "Shimmering Nectar",
+            "Energy Nectar"
+          ],
+          "immagine": "https://img.game8.co/3316508/f76b72a31b06aa18f30c9bd9f2bee8e9.png/show"
+        },
+        "Famed Handguard": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Nobushi/Kairagi",
+          "livelli": ["Old Handguard", "Kageuchi Handguard", "Famed Handguard"],
+          "immagine": "https://img.game8.co/3390210/d6fec3f782bc21457067d1d8b72daa5f.png/show"
+        },
+        "Spectral Nucleus": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Specter",
+          "livelli": ["Spectral Husk", "Spectral Heart", "Spectral Nucleus"],
+          "immagine": "https://img.game8.co/3411654/10fe9f1e8ca8c61e9d5916d7f7d95b9a.png/show"
+        },
+        "Crystalline Cyst Dust": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Fungus",
+          "livelli": [
+            "Fungal Spores",
+            "Luminescent Pollen",
+            "Crystalline Cyst Dust"
+          ],
+          "immagine": "https://img.game8.co/3512348/6ba7a854947e8a4004229112b0faabd7.png/show"
+        },
+        "Dormant Fungal Nucleus": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Fungus",
+          "livelli": [
+            "Fungal Spores",
+            "Luminescent Pollen",
+            "Crystalline Cyst Dust"
+          ],
+          "immagine": "https://img.game8.co/3568489/11cd4bbe3b5ba45667e405ca31f96dda.png/show"
+        },
+        "Artificed Dynamic Gear": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Ruin Guard",
+          "livelli": [
+            "Meshing Gear",
+            "Mechanical Spur Gear",
+            "Artificed Spare Clockwork Component"
+          ],
+          "immagine": "https://img.game8.co/3750669/2655c0d50e586e39a9cbdf6a27f71801.png/show"
+        },
+        "Xenochromatic Crystal": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Oceanid",
+          "livelli": [
+            "Transoceanic Pearl",
+            "Transoceanic Chunk",
+            "Xenochromatic Crystal"
+          ],
+          "immagine": "https://img.game8.co/3750774/ac61b81ea0d20ec891fd1211618b7a87.png/show"
+        },
+        "Saurian-Crowned Warrior's Golden Whistle": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Treasure Hoarder",
+          "livelli": [
+            "Sentry's Wooden Whistle",
+            "Warrior's Metal Whistle",
+            "Golden Raven Insignia"
+          ],
+          "immagine": "https://img.game8.co/3971401/b501c7b9707cc8a1f1e1bba5d69d607d.png/show"
+        },
+        "Tyrant's Fang": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Geovishap",
+          "livelli": ["Juvenile Fang", "Seasoned Fang", "Bloodjade Branch"],
+          "immagine": "https://img.game8.co/3971758/d575334675ffa1c83eb3c81d893fa0a3.png/show"
+        },
+        "Bewildering Broadleaf": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Eremite",
+          "livelli": [
+            "Faded Red Satin",
+            "Trimmed Red Silk",
+            "Rich Red Brocade"
+          ],
+          "immagine": "https://img.game8.co/4047533/5d8f116420bdcdfb23b9a3847f62b8f8.png/show"
+        },
+        "Rich Red Brocade": {
+          "rarita": 3,
+          "descrizione": "Materiale raro di Geovishap",
+          "livelli": [
+            "Faded Red Satin",
+            "Trimmed Red Silk",
+            "Rich Red Brocade"
+          ],
+          "immagine": "https://img.game8.co/3567309/717e76ba515032f341dcc2d0643f24f0.png/show"
+        }
+      }
+    },
+    "materiali_esperienza": {
+      "Hero's Wit": {
+        "rarita": 4,
+        "descrizione": "Materiale di esperienza per personaggi di alto livello",
+        "livelli": ["Hero's Wit"],
+        "immagine": "https://img.game8.co/3316462/ce145c72d040868287e3b767106988ef.png/show"
+      },
+      "Adventurer's Experience": {
+        "rarita": 3,
+        "descrizione": "Materiale di esperienza per personaggi di livello medio",
+        "livelli": ["Adventurer's Experience"],
+        "immagine": "https://img.game8.co/3316461/5d35ffc19710c83e0174f7dce153130e.png/show"
+      },
+      "Wanderer's Advice": {
+        "rarita": 2,
+        "descrizione": "Materiale di esperienza per personaggi di basso livello",
+        "livelli": ["Wanderer's Advice"],
+        "immagine": "https://img.game8.co/3316463/dcb207d4cdb7bd7328878ac507a7b2b9.png/show"
+      }
+    },
+    "materiali_ascensione_armi": {
+      "Tile of Decarabian's Tower": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Tile of Decarabian's Tower",
+          "Debris of Decarabian's City",
+          "Fragment of Decarabian's Epic",
+          "Scattered Piece of Decarabian's Dream"
+        ],
+        "immagine": "https://img.game8.co/3316426/5ce16fa966fe720eef44b144a00071c5.png/show"
+      },
+      "Debris of Decarabian's City": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Tile of Decarabian's Tower",
+          "Debris of Decarabian's City",
+          "Fragment of Decarabian's Epic",
+          "Scattered Piece of Decarabian's Dream"
+        ],
+        "immagine": "https://img.game8.co/3316414/c3cb5009fd67b3adb73eed4b737ae92e.png/show"
+      },
+      "Fragment of Decarabian's Epic": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Tile of Decarabian's Tower",
+          "Debris of Decarabian's City",
+          "Fragment of Decarabian's Epic",
+          "Scattered Piece of Decarabian's Dream"
+        ],
+        "immagine": "https://img.game8.co/3316413/bfa799271ddfb0db670512ef0fbba758.png/show"
+      },
+      "Scattered Piece of Decarabian's Dream": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Tile of Decarabian's Tower",
+          "Debris of Decarabian's City",
+          "Fragment of Decarabian's Epic",
+          "Scattered Piece of Decarabian's Dream"
+        ],
+        "immagine": "https://img.game8.co/3316428/1dce3fa6deaba7dc1e2935b55f04dd69.png/show"
+      },
+      "Chaos Device": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": ["Chaos Device", "Chaos Circuit"],
+        "immagine": "https://img.game8.co/3316495/48c2e20a9d6fbd5b74190259b9829b55.png/show"
+      },
+      "Chaos Circuit": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": ["Chaos Device", "Chaos Circuit"],
+        "immagine": "https://img.game8.co/3316498/9c25760933faa5438151327cee733bde.png/show"
+      },
+      "Chaos Core": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": ["Chaos Device", "Chaos Circuit"],
+        "immagine": "https://img.game8.co/3316497/7f333772836382a3e4a1aba026501ee5.png/show"
+      },
+
+      "Luminous Sands from Guyun": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Luminous Sands from Guyun",
+          "Lustrous Stone from Guyun",
+          "Relic from Guyun",
+          "Divine Body from Guyun"
+        ],
+        "immagine": "https://img.game8.co/3316410/994f12158071c4a34534da79055822e9.png/show"
+      },
+      "Lustrous Stone from Guyun": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Luminous Sands from Guyun",
+          "Lustrous Stone from Guyun",
+          "Relic from Guyun",
+          "Divine Body from Guyun"
+        ],
+        "immagine": "https://img.game8.co/3316407/753bd48b3d53da18537c06f3d0154b5f.png/show"
+      },
+      "Relic from Guyun": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Luminous Sands from Guyun",
+          "Lustrous Stone from Guyun",
+          "Relic from Guyun",
+          "Divine Body from Guyun"
+        ],
+        "immagine": "https://img.game8.co/3316422/fe50177482bcf6cc97c5af71b3e81507.png/show"
+      },
+      "Divine Body from Guyun": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Luminous Sands from Guyun",
+          "Lustrous Stone from Guyun",
+          "Relic from Guyun",
+          "Divine Body from Guyun"
+        ],
+        "immagine": "https://img.game8.co/3316409/4d4983579f5a09b3053583ac93bd9e13.png/show"
+      },
+      "Mist Veiled Lead Elixir": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Mist Veiled Lead Elixir",
+          "Mist Veiled Mercury Elixir",
+          "Mist Veiled Gold Elixir",
+          "Mist Veiled Primo Elixir"
+        ],
+        "immagine": "https://img.game8.co/3316427/af01b12c2907182c428aa82445093f32.png/show"
+      },
+      "Mist Veiled Mercury Elixir": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Mist Veiled Lead Elixir",
+          "Mist Veiled Mercury Elixir",
+          "Mist Veiled Gold Elixir",
+          "Mist Veiled Primo Elixir"
+        ],
+        "immagine": "https://img.game8.co/3316429/53daa83eae3f560a5191104293e00060.png/show"
+      },
+      "Mist Veiled Gold Elixir": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Mist Veiled Lead Elixir",
+          "Mist Veiled Mercury Elixir",
+          "Mist Veiled Gold Elixir",
+          "Mist Veiled Primo Elixir"
+        ],
+        "immagine": "https://img.game8.co/3316406/4444379c244ba2123856bcf6d6bd4f06.png/show"
+      },
+      "Mist Veiled Primo Elixir": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Mist Veiled Lead Elixir",
+          "Mist Veiled Mercury Elixir",
+          "Mist Veiled Gold Elixir",
+          "Mist Veiled Primo Elixir"
+        ],
+        "immagine": "https://img.game8.co/3316417/c3ff546b245f1e9c7f08d28f203a9dc4.png/show"
+      },
+      "Grain of Aerosiderite": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Grain of Aerosiderite",
+          "Piece of Aerosiderite",
+          "Bit of Aerosiderite",
+          "Chunk of Aerosiderite"
+        ],
+        "immagine": "https://img.game8.co/3316408/a82eb55ab2ef0d792eef4dd82448e768.png/show"
+      },
+      "Piece of Aerosiderite": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Grain of Aerosiderite",
+          "Piece of Aerosiderite",
+          "Bit of Aerosiderite",
+          "Chunk of Aerosiderite"
+        ],
+        "immagine": "https://img.game8.co/3316420/80868ff06526bd5d29dc9e9e33dd5b71.png/show"
+      },
+      "Bit of Aerosiderite": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Grain of Aerosiderite",
+          "Piece of Aerosiderite",
+          "Bit of Aerosiderite",
+          "Chunk of Aerosiderite"
+        ],
+        "immagine": "https://img.game8.co/3316415/797664bc67ec879f03f6a965691c28c3.png/show"
+      },
+      "Chunk of Aerosiderite": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Grain of Aerosiderite",
+          "Piece of Aerosiderite",
+          "Bit of Aerosiderite",
+          "Chunk of Aerosiderite"
+        ],
+        "immagine": "https://img.game8.co/3316411/873d7850d1cf00ac3e7c1da75cc11b43.png/show"
+      },
+      "Coral Branch of a Distant Sea": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Jade Branch of a Distant Sea",
+          "Coral Branch of a Distant Sea",
+          "Jeweled Branch of a Distant Sea",
+          "Golden Branch of a Distant Sea"
+        ],
+        "immagine": "https://img.game8.co/3390500/642e1486b678eb90888162b2113bcbd9.png/show"
+      },
+      "Jeweled Branch of a Distant Sea": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Jade Branch of a Distant Sea",
+          "Coral Branch of a Distant Sea",
+          "Jeweled Branch of a Distant Sea",
+          "Golden Branch of a Distant Sea"
+        ],
+        "immagine": "https://img.game8.co/3390502/21373a4a6d9a91f4dbad6fe8ce754ba7.png/show"
+      },
+      "Jade Branch of a Distant Sea": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Jade Branch of a Distant Sea",
+          "Coral Branch of a Distant Sea",
+          "Jeweled Branch of a Distant Sea",
+          "Golden Branch of a Distant Sea"
+        ],
+        "immagine": "https://img.game8.co/3390503/0ae2757804969816dda9e7a7f5babd00.png/show"
+      },
+      "Golden Branch of a Distant Sea": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Liyue",
+        "livelli": [
+          "Jade Branch of a Distant Sea",
+          "Coral Branch of a Distant Sea",
+          "Jeweled Branch of a Distant Sea",
+          "Golden Branch of a Distant Sea"
+        ],
+        "immagine": "https://img.game8.co/3390501/39810419d12e83059c74aee26f8257fe.png/show"
+      },
+      "Boreal Wolf's Milk Tooth": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Boreal Wolf's Milk Tooth",
+          "Boreal Wolf's Cracked Tooth",
+          "Boreal Wolf's Broken Fang",
+          "Boreal Wolf's Nostalgia"
+        ],
+        "immagine": "https://img.game8.co/3316424/d3a91d011c8afe4b6cd861ef3d718f12.png/show"
+      },
+      "Boreal Wolf's Cracked Tooth": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Boreal Wolf's Milk Tooth",
+          "Boreal Wolf's Cracked Tooth",
+          "Boreal Wolf's Broken Fang",
+          "Boreal Wolf's Nostalgia"
+        ],
+        "immagine": "https://img.game8.co/3316423/75ded6014e5562b08e3b3b48c2b199e3.png/show"
+      },
+      "Boreal Wolf's Broken Fang": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Boreal Wolf's Milk Tooth",
+          "Boreal Wolf's Cracked Tooth",
+          "Boreal Wolf's Broken Fang",
+          "Boreal Wolf's Nostalgia"
+        ],
+        "immagine": "https://img.game8.co/3316425/eef19518c67cd03f01227af2c074fc9a.png/show"
+      },
+      "Boreal Wolf's Nostalgia": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Boreal Wolf's Milk Tooth",
+          "Boreal Wolf's Cracked Tooth",
+          "Boreal Wolf's Broken Fang",
+          "Boreal Wolf's Nostalgia"
+        ],
+        "immagine": "https://img.game8.co/3316419/2224643811b48a22a7ad7f8604d8a5c2.png/show"
+      },
+      "Fetters of the Dandelion Gladiator": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Fetters of the Dandelion Gladiator",
+          "Chains of the Dandelion Gladiator",
+          "Shackles of the Dandelion Gladiator",
+          "Dream of the Dandelion Gladiator"
+        ],
+        "immagine": "https://img.game8.co/3316412/d87bcead05965dadbb47370023a199f1.png/show"
+      },
+      " Chains of the Dandelion Gladiator": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Fetters of the Dandelion Gladiator",
+          "Chains of the Dandelion Gladiator",
+          "Shackles of the Dandelion Gladiator",
+          "Dream of the Dandelion Gladiator"
+        ],
+        "immagine": "https://img.game8.co/3316421/c160b70a6fba43947bfb2d56f91f37f2.png/show"
+      },
+      "Shackles of the Dandelion Gladiator": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Fetters of the Dandelion Gladiator",
+          "Chains of the Dandelion Gladiator",
+          "Shackles of the Dandelion Gladiator",
+          "Dream of the Dandelion Gladiator"
+        ],
+        "immagine": "https://img.game8.co/3316418/a4e5b45f3b6435caca9952aa8a532039.png/show"
+      },
+      "Dream of the Dandelion Gladiator": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Mondstadt",
+        "livelli": [
+          "Fetters of the Dandelion Gladiator",
+          "Chains of the Dandelion Gladiator",
+          "Shackles of the Dandelion Gladiator",
+          "Dream of the Dandelion Gladiator"
+        ],
+        "immagine": "https://img.game8.co/3316416/0b0813233ccba60b8aaf0fa59389a15e.png/show"
+      },
+      "Narukami Wisdom": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Inazuma",
+        "livelli": [
+          "Narukami's Wisdom",
+          "Narukami's Joy",
+          "Narukami's Affection",
+          "Narukami's Valor"
+        ],
+        "immagine": "https://img.game8.co/3390499/bed7ec19eeb1899ccb7a53b51942bc1d.png/show"
+      },
+      "Narukami Joy": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Inazuma",
+        "livelli": [
+          "Narukami's Wisdom",
+          "Narukami's Joy",
+          "Narukami's Affection",
+          "Narukami's Valor"
+        ],
+        "immagine": "https://img.game8.co/3390496/5dcf947deda6330a055a26be0cd72ced.png/show"
+      },
+      "Narukami Affection": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Inazuma",
+        "livelli": [
+          "Narukami's Wisdom",
+          "Narukami's Joy",
+          "Narukami's Affection",
+          "Narukami's Valor"
+        ],
+        "immagine": "https://img.game8.co/3390497/20ab543eaac714709037c1ceae1e5b30.png/show"
+      },
+      "Narukami Valor": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Inazuma",
+        "livelli": [
+          "Narukami's Wisdom",
+          "Narukami's Joy",
+          "Narukami's Affection",
+          "Narukami's Valor"
+        ],
+        "immagine": "https://img.game8.co/3390498/ca307f25d70d94f20f14f163131003e8.png/show"
+      },
+      "Mask of the Wicked Lieutenant": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Inazuma",
+        "livelli": [
+          "Mask of the Wicked Lieutenant",
+          "Mask of the Tiger's Bite",
+          "Mask of the One-Horned",
+          "Mask of the Kijin"
+        ],
+        "immagine": "https://img.game8.co/3390479/cb21a1451bd8be08d4e4906207a2f00c.png/show"
+      },
+      "Mask of the Tiger's Bite": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Inazuma",
+        "livelli": [
+          "Mask of the Wicked Lieutenant",
+          "Mask of the Tiger's Bite",
+          "Mask of the One-Horned",
+          "Mask of the Kijin"
+        ],
+        "immagine": "https://img.game8.co/3390478/ddc3fbad42b5ca75a02565ef3591eba8.png/show"
+      },
+      "Mask of the One-Horned": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Inazuma",
+        "livelli": [
+          "Mask of the Wicked Lieutenant",
+          "Mask of the Tiger's Bite",
+          "Mask of the One-Horned",
+          "Mask of the Kijin"
+        ],
+        "immagine": "https://img.game8.co/3390480/0b8e1cd31e8f8dfa48a28a52c3a23f34.png/show"
+      },
+      "Mask of the Kijin": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Inazuma",
+        "livelli": [
+          "Mask of the Wicked Lieutenant",
+          "Mask of the Tiger's Bite",
+          "Mask of the One-Horned",
+          "Mask of the Kijin"
+        ],
+        "immagine": "https://img.game8.co/3390481/511c6d79255090ec2d6b72d24b89143c.png/show"
+      },
+      "Oasis Garden's Reminiscence": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Oasis Garden's Kindness",
+          "Oasis Garden's Mourning",
+          "Oasis Garden's Truth",
+          "Oasis Garden's Reminiscence"
+        ],
+        "immagine": "https://img.game8.co/3929682/e5d00a25a795241b0c4194d70cf13c1a.png/show"
+      },
+      "Oasis Garden's Kindness": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Oasis Garden's Kindness",
+          "Oasis Garden's Mourning",
+          "Oasis Garden's Truth",
+          "Oasis Garden's Reminiscence"
+        ],
+        "immagine": "https://img.game8.co/3929679/a893210816152bd08b8459b77b9fe05b.png/show"
+      },
+      "Oasis Garden's Mourning": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Oasis Garden's Kindness",
+          "Oasis Garden's Mourning",
+          "Oasis Garden's Truth",
+          "Oasis Garden's Reminiscence"
+        ],
+        "immagine": "https://img.game8.co/3929680/528a82fbc8ae18b6bbf1348f4c32adea.png/show"
+      },
+      "Oasis Garden's Truth": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Oasis Garden's Kindness",
+          "Oasis Garden's Mourning",
+          "Oasis Garden's Truth",
+          "Oasis Garden's Reminiscence"
+        ],
+        "immagine": "https://img.game8.co/3929681/0cdfe46379d927b1b128a5f4b1b1114e.png/show"
+      },
+      " Echo Of Scorching Might": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Dream of Scorching Might",
+          "Remnant Glow of Scorching Might",
+          "Echo Of Scorching Might",
+          "Olden Days of Scorching Might"
+        ],
+        "immagine": "https://img.game8.co/3929660/7ea92a9af673169c40eea7edd6795ecc.png/show"
+      },
+      "Remnant Glow of Scorching Might": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Dream of Scorching Might",
+          "Remnant Glow of Scorching Might",
+          "Echo Of Scorching Might",
+          "Olden Days of Scorching Might"
+        ],
+        "immagine": "https://img.game8.co/3914152/05aac0a3519309ec17e4639924fec8d8.png/show"
+      },
+      "Dream of Scorching Might": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Dream of Scorching Might",
+          "Remnant Glow of Scorching Might",
+          "Echo Of Scorching Might",
+          "Olden Days of Scorching Might"
+        ],
+        "immagine": "https://img.game8.co/3914155/0ff5eac212f93e0cb1fb22f8d532e983.png/show"
+      },
+      "Olden Days of Scorching Might": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Dream of Scorching Might",
+          "Remnant Glow of Scorching Might",
+          "Echo Of Scorching Might",
+          "Olden Days of Scorching Might"
+        ],
+        "immagine": "https://img.game8.co/3914151/e39c4e48886ec113a492aafc3f638c8a.png/show"
+      },
+      "Broken Goblet of the Pristine Sea": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Broken Goblet of the Pristine Sea",
+          "RWine Goblet of the Pristine Sea",
+          "Silver Goblet of the Pristine Sea",
+          "Golden Goblet of the Pristine Sea"
+        ],
+        "immagine": "https://img.game8.co/3750782/710f7458354245f9aaba72fa1fe7c04b.png/show"
+      },
+      "Wine Goblet of the Pristine Sea": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Broken Goblet of the Pristine Sea",
+          "Wine Goblet of the Pristine Sea",
+          "Silver Goblet of the Pristine Sea",
+          "Golden Goblet of the Pristine Sea"
+        ],
+        "immagine": "https://img.game8.co/3750783/e4837c5a96408282ccd4bbc0d9065914.png/show"
+      },
+      "Silver Goblet of the Pristine Sea": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Broken Goblet of the Pristine Sea",
+          "Wine Goblet of the Pristine Sea",
+          "Silver Goblet of the Pristine Sea",
+          "Golden Goblet of the Pristine Sea"
+        ],
+        "immagine": "https://img.game8.co/3750784/946a63085fd82aaad3e6bac804df619e.png/show"
+      },
+      "Golden Goblet of the Pristine Sea": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Broken Goblet of the Pristine Sea",
+          "Wine Goblet of the Pristine Sea",
+          "Silver Goblet of the Pristine Sea",
+          "Golden Goblet of the Pristine Sea"
+        ],
+        "immagine": "https://img.game8.co/3750785/51c99f127ea3e1d1e0a42df589653cda.png/show"
+      },
+      "Copper Talisman of the Forest Dew": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Copper Talisman of the Forest Dew",
+          "Iron Talisman of the Forest Dew",
+          "Silver Talisman of the Forest Dew",
+          "Golden Talisman of the Forest Dew"
+        ],
+        "immagine": "https://img.game8.co/3929661/cac094137e075b96994df82ebb82db74.png/show"
+      },
+      "Iron Talisman of the Forest Dew": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Copper Talisman of the Forest Dew",
+          "Iron Talisman of the Forest Dew",
+          "Silver Talisman of the Forest Dew",
+          "Golden Talisman of the Forest Dew"
+        ],
+        "immagine": "https://img.game8.co/3914140/b2abc7ab1a00fab280d881ddfb721f78.png/show"
+      },
+      "Silver Talisman of the Forest Dew": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Copper Talisman of the Forest Dew",
+          "Iron Talisman of the Forest Dew",
+          "Silver Talisman of the Forest Dew",
+          "Golden Talisman of the Forest Dew"
+        ],
+        "immagine": "https://img.game8.co/3914159/c1f360a668ca85758106de69bbcba4ec.png/show"
+      },
+      "Golden Talisman of the Forest Dew": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Sumeru",
+        "livelli": [
+          "Copper Talisman of the Forest Dew",
+          "Iron Talisman of the Forest Dew",
+          "Silver Talisman of the Forest Dew",
+          "Golden Talisman of the Forest Dew"
+        ],
+        "immagine": "https://img.game8.co/3914138/5ef3a57653bd9edc1fa7a6234aaaf874.png/show"
+      },
+
+      "Dross of Pure Sacred Dewdrop": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Sublimation of Pure Sacred Dewdrop",
+          "Spring of Pure Sacred Dewdrop",
+          "Dross of Pure Sacred Dewdrop",
+          "Essence of Pure Sacred Dewdrop"
+        ],
+        "immagine": "https://img.game8.co/3750778/261db9cd96c634c899cd1d301132f73d.png/show"
+      },
+      "Sublimation of Pure Sacred Dewdrop": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Sublimation of Pure Sacred Dewdrop",
+          "Spring of Pure Sacred Dewdrop",
+          "Dross of Pure Sacred Dewdrop",
+          "Essence of Pure Sacred Dewdrop"
+        ],
+        "immagine": "https://img.game8.co/3750779/aa6260bc86ede357a82a69163ef388b7.png/show"
+      },
+      "Spring of Pure Sacred Dewdrop": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Sublimation of Pure Sacred Dewdrop",
+          "Spring of Pure Sacred Dewdrop",
+          "Dross of Pure Sacred Dewdrop",
+          "Essence of Pure Sacred Dewdrop"
+        ],
+        "immagine": "https://img.game8.co/3750780/59285fe6d26e1c95301e5485b582960e.png/show"
+      },
+      "Essence of Pure Sacred Dewdrop": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Sublimation of Pure Sacred Dewdrop",
+          "Spring of Pure Sacred Dewdrop",
+          "Dross of Pure Sacred Dewdrop",
+          "Essence of Pure Sacred Dewdrop"
+        ],
+        "immagine": "https://img.game8.co/3750781/ca80baf8ac395fe275400bbabe1c6b37.png/show"
+      },
+      "Fragment of an Ancient Chord": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Fragment of an Ancient Chord",
+          "Chapter of an Ancient Chord",
+          "Movement of an Ancient Chord",
+          "Echo of an Ancient Chord"
+        ],
+        "immagine": "https://img.game8.co/3750768/fa84f00509daee69d6d85d477bbb5c7c.png/show"
+      },
+      "Chapter of an Ancient Chord": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Fragment of an Ancient Chord",
+          "Chapter of an Ancient Chord",
+          "Movement of an Ancient Chord",
+          "Echo of an Ancient Chord"
+        ],
+        "immagine": "https://img.game8.co/3750766/6fe34c610edfe6e35b989ca280e538bf.png/show"
+      },
+      "Movement of an Ancient Chord": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Fragment of an Ancient Chord",
+          "Chapter of an Ancient Chord",
+          "Movement of an Ancient Chord",
+          "Echo of an Ancient Chord"
+        ],
+        "immagine": "https://img.game8.co/3750769/2e615677aa0a6e590a4d15a69f981539.png/show"
+      },
+      "Echo of an Ancient Chord": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Fragment of an Ancient Chord",
+          "Chapter of an Ancient Chord",
+          "Movement of an Ancient Chord",
+          "Echo of an Ancient Chord"
+        ],
+        "immagine": "https://img.game8.co/3750767/7ea92b5748368c4dcf273d7e5934cd7a.png/show"
+      },
+      "Night-Wind's Mystic Consideration": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Night-Wind's Mystic Consideration",
+          "Night-Wind's Mystic Premonition",
+          "Night-Wind's Mystic Augury",
+          "Night-Wind's Mystic Revelation"
+        ],
+        "immagine": "https://img.game8.co/3971347/3781f42f433e9f5768f1dd29f310878c.png/show"
+      },
+      "Night-Wind's Mystic Premonition": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Night-Wind's Mystic Premonition",
+          "Night-Wind's Mystic Augury",
+          "Night-Wind's Mystic Consideration",
+          "Night-Wind's Mystic Revelation"
+        ],
+        "immagine": "https://img.game8.co/3971345/3fc0d897394668778f63bc67657adca7.png/show"
+      },
+      "Night-Wind's Mystic Augury": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Night-Wind's Mystic Premonition",
+          "Night-Wind's Mystic Augury",
+          "Night-Wind's Mystic Consideration",
+          "Night-Wind's Mystic Revelation"
+        ],
+        "immagine": "https://img.game8.co/3971349/8368ef7e1a3b0db674bbd89685b81576.png/show"
+      },
+      "Night-Wind's Mystic Revelation": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Night-Wind's Mystic Premonition",
+          "Night-Wind's Mystic Augury",
+          "Night-Wind's Mystic Consideration",
+          "Night-Wind's Mystic Revelation"
+        ],
+        "immagine": "https://img.game8.co/3971344/2863e9fe96a0931882c5d89826abb1ee.png/show"
+      },
+      "Delirious Decadence of the Sacred Lord": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Delirious Decadence of the Sacred Lord",
+          "Delirious Desolation of the Sacred Lord",
+          "Delirious Demeanor of the Sacred Lord",
+          "Delirious Divinity of the Sacred Lord"
+        ],
+        "immagine": "https://img.game8.co/3971348/d98657db796774e7d272146733dfd57a.png/show"
+      },
+      "Delirious Desolation of the Sacred Lord": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Delirious Decadence of the Sacred Lord",
+          "Delirious Desolation of the Sacred Lord",
+          "Delirious Demeanor of the Sacred Lord",
+          "Delirious Divinity of the Sacred Lord"
+        ],
+        "immagine": "https://img.game8.co/3971346/a7351dec9393b5d7f4e2ad28fdc2b796.png/show"
+      },
+      "Delirious Demeanor of the Sacred Lord": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Delirious Decadence of the Sacred Lord",
+          "Delirious Desolation of the Sacred Lord",
+          "Delirious Demeanor of the Sacred Lord",
+          "Delirious Divinity of the Sacred Lord"
+        ],
+        "immagine": "https://img.game8.co/3971343/ea9a78054e8bf7d7a1e4dc2e04adeef2.png/show"
+      },
+      "Delirious Divinity of the Sacred Lord": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Delirious Decadence of the Sacred Lord",
+          "Delirious Desolation of the Sacred Lord",
+          "Delirious Demeanor of the Sacred Lord",
+          "Delirious Divinity of the Sacred Lord"
+        ],
+        "immagine": "https://img.game8.co/3971350/428e8fe9cca5391d82420e56ff1d6537.png/show"
+      },
+      "Blazing Sacrificial Heart's Terror": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Blazing Sacrificial Heart's Terror",
+          "Blazing Sacrificial Heart's Hesitance",
+          "Blazing Sacrificial Heart's Resolve",
+          "Blazing Sacrificial Heart's Splendor"
+        ],
+        "immagine": "https://img.game8.co/3971339/65dfc11f126d0ae0dd97a76accd423e2.png/show"
+      },
+      "Blazing Sacrificial Heart's Hesitance": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Blazing Sacrificial Heart's Terror",
+          "Blazing Sacrificial Heart's Hesitance",
+          "Blazing Sacrificial Heart's Resolve",
+          "Blazing Sacrificial Heart's Splendor"
+        ],
+        "immagine": "https://img.game8.co/3971342/9a17779a07ccaba5c9a24dac8b284964.png/show"
+      },
+      "Blazing Sacrificial Heart's Resolve": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Blazing Sacrificial Heart's Terror",
+          "Blazing Sacrificial Heart's Hesitance",
+          "Blazing Sacrificial Heart's Resolve",
+          "Blazing Sacrificial Heart's Splendor"
+        ],
+        "immagine": "https://img.game8.co/3971340/c9b0f09b95edb14939544eb575face6a.png/show"
+      },
+      "Blazing Sacrificial Heart's Splendor": {
+        "rarita": 5,
+        "descrizione": "Materiale di ascensione armi di Fontaine",
+        "livelli": [
+          "Blazing Sacrificial Heart's Terror",
+          "Blazing Sacrificial Heart's Hesitance",
+          "Blazing Sacrificial Heart's Resolve",
+          "Blazing Sacrificial Heart's Splendor"
+        ],
+        "immagine": "https://img.game8.co/3971341/b24411f051c36b4e8481dbf501617508.png/show"
+      },
+      "Hunter's Sacrificial Knife": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Hunter's Sacrificial Knife",
+          "Agent's Sacrificial Knife",
+          "Inspector's Sacrificial Knife"
+        ],
+        "immagine": "https://img.game8.co/3316521/a81924940cd94a508b36daa77ad7bded.png/show"
+      },
+      "Agent's Sacrificial Knife": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Hunter's Sacrificial Knife",
+          "Agent's Sacrificial Knife",
+          "Inspector's Sacrificial Knife"
+        ],
+        "immagine": "https://img.game8.co/3316526/af742bbbe047673ad558e355d3593af1.png/show"
+      },
+      "Inspector's Sacrificial Knife": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Hunter's Sacrificial Knife",
+          "Agent's Sacrificial Knife",
+          "Inspector's Sacrificial Knife"
+        ],
+        "immagine": "https://img.game8.co/3316527/2945cec08b19ae7a1a8141f65f7509b6.png/show"
+      },
+      "Mist Grass Pollen": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Mist Grass Pollen", "Mist Grass", "Mist Grass Wick"],
+        "immagine": "https://img.game8.co/3316513/2c3284efba64bf1d85a37432614c2a7d.png/show"
+      },
+      "Mist Grass": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Mist Grass Pollen", "Mist Grass", "Mist Grass Wick"],
+        "immagine": "https://img.game8.co/3316821/25e2756577f7c9aa6be822b5d128be7a.png/show"
+      },
+      "Mist Grass Wick": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Mist Grass Pollen", "Mist Grass", "Mist Grass Wick"],
+        "immagine": "https://img.game8.co/3316819/ca15e4ee541c4f6f94515eff1e04e34d.png/show"
+      },
+      "Dead Ley Line Branch": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Dead Ley Line Branch",
+          "Dead Ley Line Leaves",
+          "Ley Line Sprout"
+        ],
+        "immagine": "https://img.game8.co/3316504/92821182447e2c724c094250e11a06c8.png/show"
+      },
+      "Dead Ley Line Leaves": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Dead Ley Line Branch",
+          "Dead Ley Line Leaves",
+          "Ley Line Sprout"
+        ],
+        "immagine": "https://img.game8.co/3316506/cc730e41e80ff3be16127abf5afb3142.png/show"
+      },
+      "Ley Line Sprout": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Dead Ley Line Branch",
+          "Dead Ley Line Leaves",
+          "Ley Line Sprout"
+        ],
+        "immagine": "https://img.game8.co/3316523/4c8459aa06d911dcbf5efb28a05bb630.png/show"
+      },
+      "Heavy Horn": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Heavy Horn", "Black Bronze Horn", "Black Crystal Horn"],
+        "immagine": "https://img.game8.co/3316504/92821182447e2c724c094250e11a06c8.png/show"
+      },
+      "Black Bronze Horn": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Heavy Horn", "Black Bronze Horn", "Black Crystal Horn"],
+        "immagine": "https://img.game8.co/3316493/4d3c6b0f321aedf378f4c39c34d9bb21.png/show"
+      },
+      "Black Crystal Horn": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Heavy Horn", "Black Bronze Horn", "Black Crystal Horn"],
+        "immagine": "https://img.game8.co/3316537/3e23c09ff1f388ab37c2243d14a5f71f.png/show"
+      },
+      "Fragile Bone Shard": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Fragile Bone Shard",
+          "Sturdy Bone Shard",
+          "Fossilized Bone Shard"
+        ],
+        "immagine": "https://img.game8.co/3316511/eec42e7b8f8e64e6519c3eb0df22f257.png/show"
+      },
+      "Sturdy Bone Shard": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Fragile Bone Shard",
+          "Sturdy Bone Shard",
+          "Fossilized Bone Shard"
+        ],
+        "immagine": "https://img.game8.co/3316850/d784c14567322d8f256ef75f938ef1d3.png/show"
+      },
+      "Fossilized Bone Shard": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Fragile Bone Shard",
+          "Sturdy Bone Shard",
+          "Fossilized Bone Shard"
+        ],
+        "immagine": "https://img.game8.co/3316524/649ee5b062db72fa246538453617c26f.png/show"
+      },
+      "Dismal Prism": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Dismal Prism", "Crystal Prism", "Polarizing Prism"],
+        "immagine": "https://img.game8.co/3390428/f323a5d2339054a4fce9b42a587a5b46.png/show"
+      },
+      "Crystal Prism": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Dismal Prism", "Crystal Prism", "Polarizing Prism"],
+        "immagine": "https://img.game8.co/3390438/8172adf049cd3a255ae66da61b3b993b.png/show"
+      },
+      "Polarizing Prism": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Dismal Prism", "Crystal Prism", "Polarizing Prism"],
+        "immagine": "https://img.game8.co/3390437/c3bb34487b6f9d411b88574d684e2beb.png/show"
+      },
+      "Chaos Gear": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Chaos Gear", "Chaos Axis", "Chaos Oculus"],
+        "immagine": "https://img.game8.co/3390434/e11db981a3f46a437b5b93ebbf76e7e9.png/show"
+      },
+      "Chaos Axis": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Chaos Gear", "Chaos Axis", "Chaos Oculus"],
+        "immagine": "https://img.game8.co/3390430/3d31db00c8a64acb8e8ad268d3783255.png/show"
+      },
+      "Chaos Oculus": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Chaos Gear", "Chaos Axis", "Chaos Oculus"],
+        "immagine": "https://img.game8.co/3390431/a7d09047db168dd09cd2e15ad7cb3fda.png/show"
+      },
+      "Concealed Claw": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Concealed Claw", "Concealed Unguis", "Concealed Talon"],
+        "immagine": "https://img.game8.co/3432787/9ca5ffe076c45792c0ad47a1d4cfdeb2.png/show"
+      },
+      "Concealed Unguis": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Concealed Claw", "Concealed Unguis", "Concealed Talon"],
+        "immagine": "https://img.game8.co/3432786/6a3ba7135e17c48efab1070315da36a4.png/show"
+      },
+      "Concealed Talon": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Concealed Claw", "Concealed Unguis", "Concealed Talon"],
+        "immagine": "https://img.game8.co/3432788/67ac9b4a7903fb3fd5061f5a05d89325.png/show"
+      },
+      "Gloomy Statuette": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Gloomy Statuette", "Dark Statuette", "Deathly Statuette"],
+        "immagine": "https://img.game8.co/3511241/2dca2dc6e05530e9566f23ab70dfc04c.png/show"
+      },
+      "Dark Statuette": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Gloomy Statuette", "Dark Statuette", "Deathly Statuette"],
+        "immagine": "https://img.game8.co/3511242/f233eba871e0d7be13055b95689b8d49.png/show"
+      },
+      "Deathly Statuette": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Gloomy Statuette", "Dark Statuette", "Deathly Statuette"],
+        "immagine": "https://img.game8.co/3511243/afc26d5ad04e5e5b4d716b39e5435711.png/show"
+      },
+      "Chaos Storage": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Chaos Storage", "Chaos Module", "Chaos Bolt"],
+        "immagine": "https://img.game8.co/3567431/91072a3f8757c96041ad21cc5486d9ef.png/show"
+      },
+      "Chaos Module": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Chaos Storage", "Chaos Module", "Chaos Bolt"],
+        "immagine": "https://img.game8.co/3567432/395a4bc173b49f2a205f1a7993012c32.png/show"
+      },
+      "Chaos Bolt": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Chaos Storage", "Chaos Module", "Chaos Bolt"],
+        "immagine": "https://img.game8.co/3567430/e1d112329675c1faa7fa872ff2504f1c.png/show"
+      },
+      "Damaged Prism": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Damaged Prism", "Turbid Prism", "Radiant Prism"],
+        "immagine": "https://img.game8.co/3587675/a18edeb74d1c19d1791ed8d78287bce9.png/show"
+      },
+      "Turbid Prism": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Damaged Prism", "Turbid Prism", "Radiant Prism"],
+        "immagine": "https://img.game8.co/3587676/f4cdc590fb6f242678f2bcea902fe6da.png/show"
+      },
+      "Radiant Prism": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Damaged Prism", "Turbid Prism", "Radiant Prism"],
+        "immagine": "https://img.game8.co/3587677/4828f64d72b9cbc1bd6fa594cb363707.png/show"
+      },
+      "Desiccated Shell": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Desiccated Shell", "Sturdy Shell", "Marked Shell"],
+        "immagine": "https://img.game8.co/3633715/e7ddc3aa9c44600bfc5767b14026b25f.png/show"
+      },
+      "Sturdy Shell": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Desiccated Shell", "Sturdy Shell", "Marked Shell"],
+        "immagine": "https://img.game8.co/3633637/edab92bc5315a79bb139e9a3cb06ddc9.png/thumb"
+      },
+      "Marked Shell": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Desiccated Shell", "Sturdy Shell", "Marked Shell"],
+        "immagine": "https://img.game8.co/3633648/eb7c60390d6c5b46dd08e6ba36407a44.png/thumb"
+      },
+      "A Flower Yet to Bloom": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "A Flower Yet to Bloom",
+          "Treasured Flower",
+          "Wanderer's Blooming Flower"
+        ],
+        "immagine": "https://img.game8.co/3675893/b12da9adaca9de9b133030c06e0092ce.png/show"
+      },
+      "Treasured Flower": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "A Flower Yet to Bloom",
+          "Treasured Flower",
+          "Wanderer's Blooming Flower"
+        ],
+        "immagine": "https://img.game8.co/3675892/f34ff4de2b83aab474e84c73d95a8c21.png/show"
+      },
+      "Wanderer's Blooming Flower": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "A Flower Yet to Bloom",
+          "Treasured Flower",
+          "Wanderer's Blooming Flower"
+        ],
+        "immagine": "https://img.game8.co/3675891/6cc753281779d4f4bbca3a3e5c827391.png/show"
+      },
+      "Rift Core": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Rift Core", "Foreign Synapse", "Alien Life Core"],
+        "immagine": "https://img.game8.co/3750777/4f4dcbc849cff5a97c9cd0d963ac2b21.png/show"
+      },
+      "Foreign Synapse": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Rift Core", "Foreign Synapse", "Alien Life Core"],
+        "immagine": "https://img.game8.co/3750776/9d246f6477a05038d41985559def8dd3.png/show"
+      },
+      "Alien Life Core": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Rift Core", "Foreign Synapse", "Alien Life Core"],
+        "immagine": "https://img.game8.co/3750775/cecc612d37c19891c0e804842c98cfd5.png/show"
+      },
+      "Drop of Tainted Water": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Drop of Tainted Water",
+          "Scoop of Tainted Water",
+          "Newborn Tainted Hydro Phantasm"
+        ],
+        "immagine": "https://img.game8.co/3750678/42e41492129fdf9a042950769e3d0762.png/show"
+      },
+      "Scoop of Tainted Water": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Drop of Tainted Water",
+          "Scoop of Tainted Water",
+          "Newborn Tainted Hydro Phantasm"
+        ],
+        "immagine": "https://img.game8.co/3750679/3bf87512589b2b3bb0344627332d20d3.png/show"
+      },
+      "Newborn Tainted Hydro Phantasm": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Drop of Tainted Water",
+          "Scoop of Tainted Water",
+          "Newborn Tainted Hydro Phantasm"
+        ],
+        "immagine": "https://img.game8.co/3750680/4ebeac01d460ff5b12969728e8bdd5ea.png/show"
+      },
+      "Old Operative's Pocket Watch": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Old Operative's Pocket Watch",
+          "Operative's Standard Pocket Watch",
+          "Operative's Constancy"
+        ],
+        "immagine": "https://img.game8.co/3771363/be4a5a402f879b23a49957a0eb0823db.png/show"
+      },
+      "Operative's Standard Pocket Watch": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Old Operative's Pocket Watch",
+          "Operative's Standard Pocket Watch",
+          "Operative's Constancy"
+        ],
+        "immagine": "https://img.game8.co/3771365/3ddde4d9331a2fe52c5e6f2fd88d7216.png/show"
+      },
+      "Operative's Constancy": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Old Operative's Pocket Watch",
+          "Operative's Standard Pocket Watch",
+          "Operative's Constancy"
+        ],
+        "immagine": "https://img.game8.co/3771364/b4c07bb5bdcdeacc31ec5e5da2a72693.png/show"
+      },
+      "Feathery Fin": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Feathery Fin", "Lunar Fin", "Chasmlight Fin"],
+        "immagine": "https://img.game8.co/3830368/cb8e45c8ae8e1c460a52db88ad1168e4.png/show"
+      },
+      "Lunar Fin": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Feathery Fin", "Lunar Fin", "Chasmlight Fin"],
+        "immagine": "https://img.game8.co/3830367/e20c40dafa6a8a16bcf18317e3090215.png/show"
+      },
+      "Chasmlight Fin": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Feathery Fin", "Lunar Fin", "Chasmlight Fin"],
+        "immagine": "https://img.game8.co/3830366/dffd4764b563c74b048cb3642f4a1fa1.png/show"
+      },
+      "Ruined Hilt": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Ruined Hilt", "Splintered Hilt", "Still-Smoldering Hilt"],
+        "immagine": "https://img.game8.co/3872800/8e32a5cb01cbde9e8d0014e2aab3faa7.png/show"
+      },
+      "Splintered Hilt": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Ruined Hilt", "Splintered Hilt", "Still-Smoldering Hilt"],
+        "immagine": "https://img.game8.co/3872799/d4253c99a2c250d2e5623b08f56209f9.png/show"
+      },
+      "Still-Smoldering Hilt": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": ["Ruined Hilt", "Splintered Hilt", "Still-Smoldering Hilt"],
+        "immagine": "https://img.game8.co/3872801/41d7dae321440ed760b08c31d38635fc.png/show"
+      },
+      "Shard of a Shattered Will": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Shard of a Shattered Will",
+          "Locus of a Clear Will",
+          "Sigil of a Striding Will"
+        ],
+        "immagine": "https://img.game8.co/3971761/b70f99f1e72cd291a5a89d0436de8f5f.png/show"
+      },
+      "Locus of a Clear Will": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Shard of a Shattered Will",
+          "Locus of a Clear Will",
+          "Sigil of a Striding Will"
+        ],
+        "immagine": "https://img.game8.co/3971756/956182a310e921b25d6c69b0fb870865.png/show"
+      },
+      "Sigil of a Striding Will": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Shard of a Shattered Will",
+          "Locus of a Clear Will",
+          "Sigil of a Striding Will"
+        ],
+        "immagine": "https://img.game8.co/3971760/4c3ec843131e24a74693e9a20fc60330.png/show"
+      },
+      "Ignited Stone": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Ignited Stone",
+          "Ignited Seed of Life",
+          "Ignited Seeing Eye"
+        ],
+        "immagine": "https://img.game8.co/3971762/b03ed16ecbdea2befac940f8d726b8d0.png/show"
+      },
+      "Ignited Seed of Life": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Ignited Stone",
+          "Ignited Seed of Life",
+          "Ignited Seeing Eye"
+        ],
+        "immagine": "https://img.game8.co/3971759/863b7ab976a7c7f0ed4d90a4d1e8e2d6.png/show"
+      },
+      "Ignited Seeing Eye": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Ignited Stone",
+          "Ignited Seed of Life",
+          "Ignited Seeing Eye"
+        ],
+        "immagine": "https://img.game8.co/3971757/b377bacd29ac7ee2215563cfb7abecc9.png/show"
+      },
+      "Axis of the Secret Source": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Axis of the Secret Source",
+          "Sheath of the Secret Source",
+          "Heart of the Secret Source"
+        ],
+        "immagine": "https://img.game8.co/3971754/a128dd0b6d120489297b766540c6e26a.png/show"
+      },
+      "Sheath of the Secret Source": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Axis of the Secret Source",
+          "Sheath of the Secret Source",
+          "Heart of the Secret Source"
+        ],
+        "immagine": "https://img.game8.co/3971765/10960f11d5da1963d53c944d9783e4c1.png/show"
+      },
+      "Heart of the Secret Source": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Axis of the Secret Source",
+          "Sheath of the Secret Source",
+          "Heart of the Secret Source"
+        ],
+        "immagine": "https://img.game8.co/3971755/af9fb86619e92b606dee718aec8d52c7.png/show"
+      },
+      "Cold-Cracked Shellshard": {
+        "rarita": 2,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Cold-Cracked Shellshard",
+          "Warm Back-Shell",
+          "Blazing Prismshell"
+        ],
+        "immagine": "https://img.game8.co/4139659/f23863786dba4c7e4d7e3509614ccd59.png/show"
+      },
+      "Warm Back-Shell": {
+        "rarita": 3,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Cold-Cracked Shellshard",
+          "Warm Back-Shell",
+          "Blazing Prismshell"
+        ],
+        "immagine": "https://img.game8.co/4139660/7fbb23b1c1f9297dcd25b1e4f3b252b2.png/show"
+      },
+      "Blazing Prismshell": {
+        "rarita": 4,
+        "descrizione": "Materiale di ascensione armi ",
+        "livelli": [
+          "Cold-Cracked Shellshard",
+          "Warm Back-Shell",
+          "Blazing Prismshell"
+        ],
+        "immagine": "https://img.game8.co/4139661/ed4b13fcfe6d2c5c61a96de27910043d.png/show"
+      }
+    },
+    "materiali_talenti": {
+      "Teachings of Freedom": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Freedom",
+          "Guide to Freedom",
+          "Philosophies of Freedom"
+        ],
+        "immagine": "https://img.game8.co/3316483/b72a61527d703c92c371fb11e1e046f6.png/show"
+      },
+      "Guide to Freedom": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Freedom",
+          "Guide to Freedom",
+          "Philosophies of Freedom"
+        ],
+        "immagine": "https://img.game8.co/3316468/0c614d70eb8271e7ae6c3cdd71fec11a.png/show"
+      },
+      "Philosophies of Freedom": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Freedom",
+          "Guide to Freedom",
+          "Philosophies of Freedom"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_200.png"
+      },
+      "Teachings of Resistance": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Resistance",
+          "Guide to Resistance",
+          "Philosophies of Resistance"
+        ],
+        "immagine": "https://img.game8.co/3316481/bc331c6acd14b7c051fdf7ca64d0f28f.png/show"
+      },
+      "Guide to Resistance": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Resistance",
+          "Guide to Resistance",
+          "Philosophies of Resistance"
+        ],
+        "immagine": "https://img.game8.co/3316470/70384b9cb7afa63838967c31a1fdfdbf.png/show"
+      },
+      "Philosophies of Resistance": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Resistance",
+          "Guide to Resistance",
+          "Philosophies of Resistance"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_68.png"
+      },
+      "Teachings of Ballad": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Ballad",
+          "Guide to Ballad",
+          "Philosophies of Ballad"
+        ],
+        "immagine": "https://img.game8.co/3316474/a2efbe275ea44783ea78c6a1151c18d3.png/show"
+      },
+      "Guide to Ballad": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Ballad",
+          "Guide to Ballad",
+          "Philosophies of Ballad"
+        ],
+        "immagine": "https://img.game8.co/3316477/3894c955f0c21b84434559e1964c4e8f.png/show"
+      },
+      "Philosophies of Ballad": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Mondstadt",
+        "livelli": [
+          "Teachings of Ballad",
+          "Guide to Ballad",
+          "Philosophies of Ballad"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_71.png"
+      },
+      "Teachings of Prosperity": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Prosperity",
+          "Guide to Prosperity",
+          "Philosophies of Prosperity"
+        ],
+        "immagine": "https://img.game8.co/3316482/f741e418a197e1d414d17c923649fc84.png/show"
+      },
+      "Guide to Prosperity": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Prosperity",
+          "Guide to Prosperity",
+          "Philosophies of Prosperity"
+        ],
+        "immagine": "https://img.game8.co/3316471/2e1d3b3032aad09c86d8a951790be04e.png/show"
+      },
+      "Philosophies of Prosperity": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Prosperity",
+          "Guide to Prosperity",
+          "Philosophies of Prosperity"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_74.png"
+      },
+      "Teachings of Diligence": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Diligence",
+          "Guide to Diligence",
+          "Philosophies of Diligence"
+        ],
+        "immagine": "https://img.game8.co/3316485/0322dd130f78af6a4ebbe0b7fc5b15a6.png/show"
+      },
+      "Guide to Diligence": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Diligence",
+          "Guide to Diligence",
+          "Philosophies of Diligence"
+        ],
+        "immagine": "https://img.game8.co/3316484/652249040ff6777bfc5d5fe17fbce789.png/show"
+      },
+      "Philosophies of Diligence": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Diligence",
+          "Guide to Diligence",
+          "Philosophies of Diligence"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_77.png"
+      },
+      "Teachings of Gold": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Gold",
+          "Guide to Gold",
+          "Philosophies of Gold"
+        ],
+        "immagine": "https://img.game8.co/3316475/315fe5c33d590234030577d95f0371e9.png/show"
+      },
+      "Guide to Gold": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Gold",
+          "Guide to Gold",
+          "Philosophies of Gold"
+        ],
+        "immagine": "https://img.game8.co/3316469/632976b72bb9dd9d028850c70ed9429a.png/show"
+      },
+      "Philosophies of Gold": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Liyue",
+        "livelli": [
+          "Teachings of Gold",
+          "Guide to Gold",
+          "Philosophies of Gold"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_80.png"
+      },
+      "Teachings of Transience": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Transience",
+          "Guide to Transience",
+          "Philosophies of Transience"
+        ],
+        "immagine": "https://img.game8.co/3390463/a273c7fd3a58dd960c9bec4ab2fc2475.png/show"
+      },
+      "Guide to Transience": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Transience",
+          "Guide to Transience",
+          "Philosophies of Transience"
+        ],
+        "immagine": "https://img.game8.co/3390462/b5bce12a94364b4b4da6412253ada4b5.png/show"
+      },
+      "Philosophies of Transience": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Transience",
+          "Guide to Transience",
+          "Philosophies of Transience"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_704.png"
+      },
+      "Teachings of Elegance": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Elegance",
+          "Guide to Elegance",
+          "Philosophies of Elegance"
+        ],
+        "immagine": "https://img.game8.co/3390469/43bd6a855640dce794f135515dc0500f.png/show"
+      },
+      "Guide to Elegance": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Elegance",
+          "Guide to Elegance",
+          "Philosophies of Elegance"
+        ],
+        "immagine": "https://img.game8.co/3390470/5c7709266a3cdbd903dd760edc9b6aa4.png/show"
+      },
+      "Philosophies of Elegance": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Elegance",
+          "Guide to Elegance",
+          "Philosophies of Elegance"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_707.png"
+      },
+      "Teachings of Light": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Light",
+          "Guide to Light",
+          "Philosophies of Light"
+        ],
+        "immagine": "https://img.game8.co/3390467/0e315d1abff0b6c253f6cb5100278fd5.png/show"
+      },
+      "Guide to Light": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Light",
+          "Guide to Light",
+          "Philosophies of Light"
+        ],
+        "immagine": "https://img.game8.co/3390466/8b120a55bcffa0e790837079c29d03c0.png/show"
+      },
+      "Philosophies of Light": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Inazuma",
+        "livelli": [
+          "Teachings of Light",
+          "Guide to Light",
+          "Philosophies of Light"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_710.png"
+      },
+      "Teachings of Admonition": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Admonition",
+          "Guide to Admonition",
+          "Philosophies of Admonition"
+        ],
+        "immagine": "https://img.game8.co/3566892/532de5ec64fa1d2e83837d0b88437658.png/show"
+      },
+      "Guide to Admonition": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Admonition",
+          "Guide to Admonition",
+          "Philosophies of Admonition"
+        ],
+        "immagine": "https://img.game8.co/3566894/25f9de539ae52fd3536b6a4d5cabef01.png/show"
+      },
+      "Philosophies of Admonition": {
+        "rarita": 4,
+        "descrizione": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_1322.png",
+        "livelli": [
+          "Teachings of Admonition",
+          "Guide to Admonition",
+          "Philosophies of Admonition"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_1322.png"
+      },
+      "Teachings of Ingenuity": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Sumeru",
+        "livelli": [
+          "Teachings of Ingenuity",
+          "Guide to Ingenuity",
+          "Philosophies of Ingenuity"
+        ],
+        "immagine": "https://img.game8.co/3566897/4b89600c087a0513529a2f8cb281600c.png/show"
+      },
+      "Guide to Ingenuity": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Sumeru",
+        "livelli": [
+          "Teachings of Ingenuity",
+          "Guide to Ingenuity",
+          "Philosophies of Ingenuity"
+        ],
+        "immagine": "https://img.game8.co/3566893/efd23b5c98c1d003178bb3cfcda0095e.png/show"
+      },
+      "Philosophies of Ingenuity": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Sumeru",
+        "livelli": [
+          "Teachings of Ingenuity",
+          "Guide to Ingenuity",
+          "Philosophies of Ingenuity"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_1343.png"
+      },
+      "Teachings of Praxis": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Sumeru",
+        "livelli": [
+          "Teachings of Praxis",
+          "Guide to Praxis",
+          "Philosophies of Praxis"
+        ],
+        "immagine": "https://img.game8.co/3914163/69ec34dd1eda49e63b323d687baebeaa.png/show"
+      },
+      "Guide to Praxis": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Sumeru",
+        "livelli": [
+          "Teachings of Praxis",
+          "Guide to Praxis",
+          "Philosophies of Praxis"
+        ],
+        "immagine": "https://img.game8.co/3914141/0c38a683ea296d2f7e44bca2dfe6fb43.png/show"
+      },
+      "Philosophies of Praxis": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Sumeru",
+        "livelli": [
+          "Teachings of Praxis",
+          "Guide to Praxis",
+          "Philosophies of Praxis"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_1346.png"
+      },
+      "Teachings of Justice": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Justice",
+          "Guide to Justice",
+          "Philosophies of Justice"
+        ],
+        "immagine": "https://img.game8.co/3750664/e15ffb16ab384e6825969702849c2e27.png/show"
+      },
+      "Guide to Justice": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Justice",
+          "Guide to Justice",
+          "Philosophies of Justice"
+        ],
+        "immagine": "https://img.game8.co/3750665/b81fb225e7908b80c13bed0e7c859d8d.png/show"
+      },
+      "Philosophies of Justice": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Justice",
+          "Guide to Justice",
+          "Philosophies of Justice"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_1814.png"
+      },
+      "Teachings of Order": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Order",
+          "Guide to Order",
+          "Philosophies of Order"
+        ],
+        "immagine": "https://img.game8.co/3750674/95e519a209cea3dbb5c1e2604f08ac80.png/show"
+      },
+      "Guide to Order": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Order",
+          "Guide to Order",
+          "Philosophies of Order"
+        ],
+        "immagine": "https://img.game8.co/3750675/65aee66a54765826e606e6172fee3197.png/show"
+      },
+      "Philosophies of Order": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Order",
+          "Guide to Order",
+          "Philosophies of Order"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_1817.png"
+      },
+      "Teachings of Equity": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Equity",
+          "Guide to Equity",
+          "Philosophies of Equity"
+        ],
+        "immagine": "https://img.game8.co/3750661/40fcd43e55e7ce5582acb9d3fb520de1.png/show"
+      },
+      "Guide to Equity": {
+        "rarita": 3,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Equity",
+          "Guide to Equity",
+          "Philosophies of Equity"
+        ],
+        "immagine": "https://img.game8.co/3750660/3b943cc70e0f6748a1df7f6d91bec730.png/show"
+      },
+      "Philosophies of Equity": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Equity",
+          "Guide to Equity",
+          "Philosophies of Equity"
+        ],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_1811.png"
+      },
+      "Teachings of Conflict": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Conflict",
+          "Guide to Conflict",
+          "Philosophies of Conflict"
+        ],
+        "immagine": "https://img.game8.co/3970614/59394f818c2647edb4a38e48e6572e08.png/show"
+      },
+      "Guide to Conflict": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Conflict",
+          "Guide to Conflict",
+          "Philosophies of Conflict"
+        ],
+        "immagine": "https://img.game8.co/3970676/2502e3df1fecb5c0d5f67c4c5ffc3792.png/show"
+      },
+      "Philosophies of Conflict": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Conflict",
+          "Guide to Conflict",
+          "Philosophies of Conflict"
+        ],
+        "immagine": "https://img.game8.co/3970681/4419de54af72edf0f9d78d9867f78fe6.png/show"
+      },
+      "Teachings of   Kindling": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Kindling",
+          "Guide to Kindling",
+          "Philosophies of Kindling"
+        ],
+        "immagine": "https://img.game8.co/3970616/2ce58cb884a251442c698a29f27f33ae.png/show"
+      },
+      "Guide to Kindling": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Kindling",
+          "Guide to Kindling",
+          "Philosophies of Kindling"
+        ],
+        "immagine": "https://img.game8.co/3970677/952653db32ee046d429abe6912675804.png/show"
+      },
+      "Philosophies of Kindling": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Kindling",
+          "Guide to Kindling",
+          "Philosophies of Kindling"
+        ],
+        "immagine": "https://img.game8.co/3970678/7eae0076271eddc1aaf6a36483e391be.png/show"
+      },
+      "Teachings of   Contention": {
+        "rarita": 2,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Contention",
+          "Guide to Contention",
+          "Philosophies of Contention"
+        ],
+        "immagine": "https://img.game8.co/3970615/64770704297a6e0928592693e5e37d1e.png/show"
+      },
+      "Guide to Contention": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Contention",
+          "Guide to Contention",
+          "Philosophies of Contention"
+        ],
+        "immagine": "https://img.game8.co/3970679/70dd99691051f1e0cb8f43b371f52dc3.png/show"
+      },
+      "Philosophies of Contention": {
+        "rarita": 4,
+        "descrizione": "Materiale di talento di Fontaine",
+        "livelli": [
+          "Teachings of Contention",
+          "Guide to Contention",
+          "Philosophies of Contention"
+        ],
+        "immagine": "https://img.game8.co/3970680/0f69da26d032d3c15058581af48d9407.png/show"
+      }
+    },
+    "materiali_speciali": {
+      "Crown of Insight": {
+        "rarita": 5,
+        "descrizione": "Materiale speciale per livellare i talenti al massimo",
+        "livelli": ["Crown of Insight"],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_235.png"
+      },
+      "Dream Solvent": {
+        "rarita": 4,
+        "descrizione": "Materiale per convertire materiali di talento",
+        "livelli": ["Dream Solvent"],
+        "immagine": "https://s3.us-east-1.amazonaws.com/gamewith-en/article_tools/genshin-impact/gacha/s_i_291.png"
+      },
+      "Mora": {
+        "rarita": 1,
+        "descrizione": "Valuta principale di Teyvat",
+        "livelli": ["Mora"],
+        "immagine": "https://i2.wp.com/images.genshin-builds.com/genshin/materials/mora.png?strip=all&quality=100&w=64"
+      },
+      "mora": {
+        "rarita": 1,
+        "descrizione": "Valuta principale di Teyvat",
+        "livelli": ["Mora"],
+        "immagine": "https://i2.wp.com/images.genshin-builds.com/genshin/materials/mora.png?strip=all&quality=100&w=64"
+      },
+      "Primogem": {
+        "rarita": 5,
+        "descrizione": "Gemma primordiale per gacha",
+        "livelli": ["Primogem"],
+        "immagine": "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/12/genshin-impact-sumeru-view-primogem.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5"
+      },
+      "Intertwined Fate": {
+        "rarita": 5,
+        "descrizione": "Pull per banner gacha",
+        "livelli": ["Intertwined Fate"],
+        "immagine": "https://paidiagaming.com/cdn/shop/articles/Cover.png?v=1709595491"
+      },
+      "Acquaint Fate": {
+        "rarita": 5,
+        "descrizione": "pull per banner base",
+        "livelli": ["Acquaint Fate"],
+        "immagine": "https://ih1.redbubble.net/image.1950298420.6112/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+      },
+      "Stardust": {
+        "rarita": 4,
+        "descrizione": "Polvere stellare per acquisti",
+        "livelli": ["Stardust"],
+        "immagine": "https://img.game8.co/3316383/f886d734f02fd262cd883929d60e550a.png/show"
+      },
+      "Starglitter": {
+        "rarita": 5,
+        "descrizione": "Bagliore stellare per acquisti",
+        "livelli": ["Starglitter"],
+        "immagine": "https://img.game8.co/3316385/42f58458c65c9b9dd4cdb6eb3287c3a1.png/show"
+      },
+      "Resin": {
+        "rarita": 1,
+        "descrizione": "Resina per attività",
+        "livelli": ["Original Resin", "Condensed Resin", "Fragile Resin"],
+        "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragile_Resin.png"
+      }
+    },
+    "materiali_locali": {
+      "Mondstadt": {
+        "Cecilia": {
+          "rarita": 1,
+          "descrizione": "Fiore bianco che cresce solo a Mondstadt",
+          "livelli": ["Cecilia"],
+          "immagine": "https://img.game8.co/3317386/2a08346d04ab3e66fef8902b642e3ee2.png/show"
+        },
+        "cecilia": {
+          "rarita": 1,
+          "descrizione": "Fiore bianco che cresce solo a Mondstadt",
+          "livelli": ["Cecilia"],
+          "immagine": "https://img.game8.co/3317386/2a08346d04ab3e66fef8902b642e3ee2.png/show"
+        },
+        "Dandelion Seed": {
+          "rarita": 1,
+          "descrizione": "Semi di dente di leone",
+          "livelli": ["Dandelion Seed"],
+          "immagine": "https://img.game8.co/3317388/01506dcdc51cae21dc151fd79cd90189.png/show"
+        },
+        "Philanemo Mushroom": {
+          "rarita": 1,
+          "descrizione": "Fungo che cresce sui tetti",
+          "livelli": ["Philanemo Mushroom"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Philanemo_Mushroom.png"
+        },
+        "Valberry": {
+          "rarita": 1,
+          "descrizione": "Bacca viola che cresce a Mondstadt",
+          "livelli": ["Valberry"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Valberry.png"
+        },
+        "Windwheel Aster": {
+          "rarita": 1,
+          "descrizione": "Fiore che gira con il vento",
+          "livelli": ["Windwheel Aster"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Windwheel_Aster.png"
+        },
+        "Wolfhook": {
+          "rarita": 1,
+          "descrizione": "Bacca spinosa che cresce a Mondstadt",
+          "livelli": ["Wolfhook"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Wolfhook.png"
+        },
+        "Small Lamp Grass": {
+          "rarita": 1,
+          "descrizione": "Bacca spinosa che cresce a Mondstadt",
+          "livelli": ["Small Lamp Grass"],
+          "immagine": "https://img.game8.co/3317412/a71c859cee8a2200df02e10decf8f364.png/show"
+        }
+      },
+      "Liyue": {
+        "Cor Lapis": {
+          "rarita": 2,
+          "descrizione": "Cristallo prezioso di Liyue",
+          "livelli": ["Cor Lapis"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Cor_Lapis.png"
+        },
+        "Glaze Lily": {
+          "rarita": 2,
+          "descrizione": "Giglio che cresce solo a Liyue",
+          "livelli": ["Glaze Lily"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Glaze_Lily.png"
+        },
+        "Jueyun Chili": {
+          "rarita": 1,
+          "descrizione": "Peperoncino piccante di Liyue",
+          "livelli": ["Jueyun Chili"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Jueyun_Chili.png"
+        },
+        "Noctilucous Jade": {
+          "rarita": 2,
+          "descrizione": "Giada luminescente di Liyue",
+          "livelli": ["Noctilucous Jade"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Noctilucous_Jade.png"
+        },
+        "Qingxin": {
+          "rarita": 1,
+          "descrizione": "Fiore bianco che cresce sulle montagne",
+          "livelli": ["Qingxin"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Qingxin.png"
+        },
+        "Silk Flower": {
+          "rarita": 1,
+          "descrizione": "Fiore rosso che cresce a Liyue",
+          "livelli": ["Silk Flower"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Silk_Flower.png"
+        },
+        "Starconch": {
+          "rarita": 1,
+          "descrizione": "Conchiglia stellare della spiaggia",
+          "livelli": ["Starconch"],
+          "immagine": "https://img.game8.co/3317410/9ce5d179b18f9cf7774f931de50d5442.png/show"
+        },
+        "Violetgrass": {
+          "rarita": 1,
+          "descrizione": "Erba viola che cresce sulle montagne",
+          "livelli": ["Violetgrass"],
+          "immagine": "https://img.game8.co/3317402/4da634fefa7d61d5c27454c20ca9456c.png/show"
+        }
+      },
+      "Inazuma": {
+        "Crystal Marrow": {
+          "rarita": 1,
+          "descrizione": "Midollo cristallino di Inazuma",
+          "livelli": ["Crystal Marrow"],
+          "immagine": "https://img.game8.co/3390515/fdc3cf5907cbeccf59f119bc3b8ac2d5.png/show"
+        },
+        "Dendrobium": {
+          "rarita": 1,
+          "descrizione": "Fiore rosso che cresce a Inazuma",
+          "livelli": ["Dendrobium"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Dendrobium.png"
+        },
+        "Naku Weed": {
+          "rarita": 1,
+          "descrizione": "Erba che cresce nelle zone elettriche",
+          "livelli": ["Naku Weed"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Naku_Weed.png"
+        },
+        "Onikabuto": {
+          "rarita": 1,
+          "descrizione": "Scarabeo che si attacca ai fulmini",
+          "livelli": ["Onikabuto"],
+          "immagine": "https://img.game8.co/3390514/1745d3d86fef723bc8f8354c5277c8a0.png/show"
+        },
+        "Sango Pearl": {
+          "rarita": 2,
+          "descrizione": "Perla di corallo di Inazuma",
+          "livelli": ["Sango Pearl"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Sango_Pearl.png"
+        },
+        "Sea Ganoderma": {
+          "rarita": 1,
+          "descrizione": "Fungo che cresce nel mare",
+          "livelli": ["Sea Ganoderma"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Sea_Ganoderma.png"
+        },
+        "Amakumo Fruit": {
+          "rarita": 1,
+          "descrizione": "Frutto che cresce nelle tempeste",
+          "livelli": ["Amakumo Fruit"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Amakumo_Fruit.png"
+        }
+      },
+      "Sumeru": {
+        "Kalpalata Lotus": {
+          "rarita": 2,
+          "descrizione": "Loto che cresce a Sumeru",
+          "livelli": ["Kalpalata Lotus"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Kalpalata_Lotus.png"
+        },
+        "Nilotpala Lotus": {
+          "rarita": 1,
+          "descrizione": "Loto blu che cresce a Sumeru",
+          "livelli": ["Nilotpala Lotus"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Nilotpala_Lotus.png"
+        },
+        "Padisarah": {
+          "rarita": 2,
+          "descrizione": "Fiore sacro di Sumeru",
+          "livelli": ["Padisarah"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Padisarah.png"
+        },
+        "Rukkhashava Mushrooms": {
+          "rarita": 1,
+          "descrizione": "Fungo che cresce sugli alberi",
+          "livelli": ["Rukkhashava Mushrooms"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Rukkhashava_Mushrooms.png"
+        },
+        "Sand Grease Pupa": {
+          "rarita": 2,
+          "descrizione": "Pupa che cresce nella sabbia",
+          "livelli": ["Sand Grease Pupa"],
+          "immagine": "https://img.game8.co/3632469/16bcf04253b46bb8eaaf063392011db3.png/show"
+        },
+        "Scarab": {
+          "rarita": 1,
+          "descrizione": "Scarabeo del deserto",
+          "livelli": ["Scarab"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Scarab.png"
+        },
+        "Zaytun Peach": {
+          "rarita": 1,
+          "descrizione": "Pesca che cresce a Sumeru",
+          "livelli": ["Zaytun Peach"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Zaytun_Peach.png"
+        },
+        "Henna Berry": {
+          "rarita": 1,
+          "descrizione": "Bacca che cresce nel deserto",
+          "livelli": ["Henna Berry"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Henna_Berry.png"
+        },
+        "Redcrest": {
+          "rarita": 1,
+          "descrizione": "Cristallo rosso del deserto",
+          "livelli": ["Redcrest"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Redcrest.png"
+        }
+      },
+      "Fontaine": {
+        "Lakelight Lily": {
+          "rarita": 2,
+          "descrizione": "Giglio che cresce nei laghi di Fontaine",
+          "livelli": ["Lakelight Lily"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Lakelight_Lily.png"
+        },
+        "Lumidouce Bell": {
+          "rarita": 1,
+          "descrizione": "Campanula che cresce a Fontaine",
+          "livelli": ["Lumidouce Bell"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Lumidouce_Bell.png"
+        },
+        "Rainbow Rose": {
+          "rarita": 1,
+          "descrizione": "Rosa arcobaleno di Fontaine",
+          "livelli": ["Rainbow Rose"],
+          "immagine": "https://img.game8.co/3750582/32ddd66566dd20799ad6f2bfc9cddbf5.png/show"
+        },
+        "Romaritime Flower": {
+          "rarita": 1,
+          "descrizione": "Fiore marino di Fontaine",
+          "livelli": ["Romaritime Flower"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Romaritime_Flower.png"
+        },
+        "Subdetection Unit": {
+          "rarita": 2,
+          "descrizione": "Unità di rilevamento sottomarina",
+          "livelli": ["Subdetection Unit"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Subdetection_Unit.png"
+        },
+        "Tidalga": {
+          "rarita": 1,
+          "descrizione": "Alga che cresce nelle acque di Fontaine",
+          "livelli": ["Tidalga"],
+          "immagine": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Tidalga.png"
+        }
+      }
+    },
+    "materiali_weekly_boss": {
+      "Tail of Boreas": {
+        "rarita": 5,
+        "descrizione": "Materiale da Lupo del Vento Boreas",
+        "livelli": ["Tail of Boreas"],
+        "immagine": "https://img.game8.co/3316839/324adaa330b011d2197674fd409b3d9c.png/show"
+      },
+      "Ring of Boreas": {
+        "rarita": 5,
+        "descrizione": "Materiale da Lupo del Vento Boreas",
+        "livelli": ["Ring of Boreas"],
+        "immagine": "https://img.game8.co/3316837/3bf77ab27a408eda52e2bff285d6eab1.png/show"
+      },
+      "Spirit Locket of Boreas": {
+        "rarita": 5,
+        "descrizione": "Materiale da Lupo del Vento Boreas",
+        "livelli": ["Spirit Locket of Boreas"],
+        "immagine": "https://img.game8.co/3316854/74af0110ddc7cd0f467ece20f30d7db3.png/show"
+      },
+      "Dvalin's Plume": {
+        "rarita": 5,
+        "descrizione": "Materiale da Drago della Tempesta Dvalin",
+        "livelli": ["Dvalin's Plume"],
+        "immagine": "https://img.game8.co/3316505/10967c0b1c34e3152a7e7a8cb4dc9d7d.png/show"
+      },
+      "Dvalin's Claw": {
+        "rarita": 5,
+        "descrizione": "Materiale da Drago della Tempesta Dvalin",
+        "livelli": ["Dvalin's Claw"],
+        "immagine": "https://img.game8.co/3336437/011323be47ff84fa5b73cc10bedf568e.png/show"
+      },
+      "Dvalin's Sigh": {
+        "rarita": 5,
+        "descrizione": "Materiale da Drago della Tempesta Dvalin",
+        "livelli": ["Dvalin's Sigh"],
+        "immagine": "https://img.game8.co/3316507/2c02a39a81abbca5a069f30cbee867cb.png/show"
+      },
+      "Tusk of Monoceros Caeli": {
+        "rarita": 5,
+        "descrizione": "Materiale da Childe/Tartaglia",
+        "livelli": ["Tusk of Monoceros Caeli"],
+        "immagine": "https://img.game8.co/3307033/501f8cd903ae14968d0d77abfd330c01.png/show"
+      },
+      "Shard of Foul Legacy": {
+        "rarita": 5,
+        "descrizione": "Materiale da Childe/Tartaglia",
+        "livelli": ["Shard of Foul Legacy"],
+        "immagine": "https://img.game8.co/3307033/501f8cd903ae14968d0d77abfd330c01.png/show"
+      },
+      "Shadow of the Warrior": {
+        "rarita": 5,
+        "descrizione": "Materiale da Childe/Tartaglia",
+        "livelli": ["Shadow of the Warrior"],
+        "immagine": "https://img.game8.co/3307030/fc78addd3193aaadf6f7b3ec3218caf6.png/show"
+      },
+      "Dragon Lord's Crown": {
+        "rarita": 5,
+        "descrizione": "Materiale da Azhdaha",
+        "livelli": ["Dragon Lord's Crown"],
+        "immagine": "https://img.game8.co/3350326/173ad5f392f97aa4936b3a31cd0745cc.png/show"
+      },
+      "Gilded Scale": {
+        "rarita": 5,
+        "descrizione": "Materiale da Azhdaha",
+        "livelli": ["Gilded Scale"],
+        "immagine": "https://img.game8.co/3350324/bd77f32ac1042b93d17e6dac7704110d.png/show"
+      },
+      "Bloodjade Branch": {
+        "rarita": 5,
+        "descrizione": "Materiale da Azhdaha",
+        "livelli": ["Bloodjade Branch"],
+        "immagine": "https://img.game8.co/3350325/2a98956edb693cf9f802b14d14159667.png/show"
+      },
+      "Ashen Heart": {
+        "rarita": 5,
+        "descrizione": "Materiale da Signora",
+        "livelli": ["Ashen Heart"],
+        "immagine": "https://img.game8.co/3412009/cbc473fd1f9a67dda9f60967ff472318.png/show"
+      },
+      "Hellfire Butterfly": {
+        "rarita": 5,
+        "descrizione": "Materiale da Signora",
+        "livelli": ["Hellfire Butterfly"],
+        "immagine": "https://img.game8.co/3412010/510db2c27ee89b2c5ff05de756af00c3.png/show"
+      },
+      "Molten Moment": {
+        "rarita": 5,
+        "descrizione": "Materiale da Signora",
+        "livelli": ["Molten Moment"],
+        "immagine": "https://img.game8.co/3412008/fe50045d44c74d865a25136dfb6fea85.png/show"
+      },
+      "Mudra of the Malefic General": {
+        "rarita": 5,
+        "descrizione": "Materiale da Raiden Shogun",
+        "livelli": ["Mudra of the Malefic General"],
+        "immagine": "https://img.game8.co/3487593/400e6811ed3913482148da3f76a3af79.png/show"
+      },
+      "Tears of the Calamitous God": {
+        "rarita": 5,
+        "descrizione": "Materiale da Raiden Shogun",
+        "livelli": ["Tears of the Calamitous God"],
+        "immagine": "https://img.game8.co/3487594/f63a5957716b2197b550620295922033.png/show"
+      },
+      "The Meaning of Aeons": {
+        "rarita": 5,
+        "descrizione": "Materiale da Raiden Shogun",
+        "livelli": ["The Meaning of Aeons"],
+        "immagine": "https://img.game8.co/3487592/925982338a457f524ab82658fbd9900d.png/show"
+      },
+      "Mirror of Mushin": {
+        "rarita": 5,
+        "descrizione": "Materiale da Magu Kenki",
+        "livelli": ["Mirror of Mushin"],
+        "immagine": "https://img.game8.co/3604375/375988f20468148fdbc25f6eafb80302.png/show"
+      },
+      "Daka's Bell": {
+        "rarita": 5,
+        "descrizione": "Materiale da Magu Kenki",
+        "livelli": ["Daka's Bell"],
+        "immagine": "https://img.game8.co/3604376/96a834200f36f8435c38139d5ddd4b4f.png/show"
+      },
+      "Puppet Strings": {
+        "rarita": 5,
+        "descrizione": "Materiale da Magu Kenki",
+        "livelli": ["Puppet Strings"],
+        "immagine": "https://img.game8.co/3604374/7a27572d7aa1cbbbad11c0dc865a9548.png/show"
+      },
+      "Everamber": {
+        "rarita": 5,
+        "descrizione": "Materiale da Thunder Manifestation",
+        "livelli": ["Everamber"],
+        "immagine": "https://img.game8.co/3674991/603d46523cede64feb7bb4df435d2cce.png/show"
+      },
+      "Primordial Greenbloom": {
+        "rarita": 5,
+        "descrizione": "Materiale da Thunder Manifestation",
+        "livelli": ["Primordial Greenbloom"],
+        "immagine": "https://img.game8.co/3674990/d9e3022912999c9b685db63ff057bb98.png/show"
+      },
+      "Worldspan Fern": {
+        "rarita": 5,
+        "descrizione": "Materiale da Thunder Manifestation",
+        "livelli": ["Worldspan Fern"],
+        "immagine": "https://img.game8.co/3674989/c70b6589e66a8ed757914ea78b629cf8.png/show"
+      },
+      "Lightless Mass": {
+        "rarita": 5,
+        "descrizione": "Materiale da Bathysmal Vishap Herd",
+        "livelli": ["Lightless Mass"],
+        "immagine": "https://img.game8.co/3791656/2417ba0f31abc602f94865a69dee4269.png/show"
+      },
+      "Lightless Eye of the Maelstrom": {
+        "rarita": 5,
+        "descrizione": "Materiale da Bathysmal Vishap Herd",
+        "livelli": ["Lightless Eye of the Maelstrom"],
+        "immagine": "https://img.game8.co/3791578/617ba6070d7aede48579babf940421da.png/show"
+      },
+      "Lightless Silk String": {
+        "rarita": 5,
+        "descrizione": "Materiale da Bathysmal Vishap Herd",
+        "livelli": ["Lightless Silk String"],
+        "immagine": "https://img.game8.co/3791577/84ccc4ac83f76f8b4639369e6ba69e8e.png/show"
+      },
+      "Silken Feather": {
+        "rarita": 5,
+        "descrizione": "Materiale da Perpetual Mechanical Array",
+        "livelli": ["Silken Feather"],
+        "immagine": "https://img.game8.co/3872684/8759082d37159f231ec487b495e0bdb8.png/show"
+      },
+      "Fading Candle": {
+        "rarita": 5,
+        "descrizione": "Materiale da Perpetual Mechanical Array",
+        "livelli": ["Fading Candle"],
+        "immagine": "https://img.game8.co/3872685/02ff7c09ce8ef0628218b2a880a0c3df.png/show"
+      },
+      "Denial and Judgment": {
+        "rarita": 5,
+        "descrizione": "Materiale da Perpetual Mechanical Array",
+        "livelli": ["Denial and Judgment"],
+        "immagine": "https://img.game8.co/3872683/661610bd31d2d3dad59dd011a1fcd465.png/show"
+      },
+      "Eroded Horn": {
+        "rarita": 5,
+        "descrizione": "Materiale da Golden Wolflord",
+        "livelli": ["Eroded Horn"],
+        "immagine": "https://img.game8.co/4074977/2b1b17fa3c1f57a06525a86ed59bc580.png/show"
+      },
+      "Eroded Sunfire": {
+        "rarita": 5,
+        "descrizione": "Materiale da Golden Wolflord",
+        "livelli": ["Eroded Sunfire"],
+        "immagine": "https://img.game8.co/4074976/d2d547f75a73c17aa90e77d50f6c0bd8.png/show"
+      },
+      "Eroded Scale-Feather": {
+        "rarita": 5,
+        "descrizione": "Materiale da Golden Wolflord",
+        "livelli": ["Eroded Scale-Feather"],
+        "immagine": "https://img.game8.co/4074975/117035714f38e43c8ebaeaca81071488.png/show"
+      },
+      "Ascended Sample: Rook": {
+        "rarita": 5,
+        "descrizione": "Materiale da Ruin Serpent",
+        "livelli": ["Ascended Sample: Rook"],
+        "immagine": "https://img.game8.co/4166824/baceec53b401d0c33f0eae59eaf0c549.png/show"
+      },
+      "Ascended Sample: Knight": {
+        "rarita": 5,
+        "descrizione": "Materiale da Ruin Serpent",
+        "livelli": ["Ascended Sample: Knight"],
+        "immagine": "https://img.game8.co/4166825/fc9fe67a24ef374d02eaba0c91a830fd.png/show"
+      },
+      "Ascended Sample: Queen": {
+        "rarita": 5,
+        "descrizione": "Materiale da Ruin Serpent",
+        "livelli": ["Ascended Sample: Queen"],
+        "immagine": "https://img.game8.co/4166828/ff72be6954a0954e673d13a533740757.png/show"
+      }
+    }
+  }
+}

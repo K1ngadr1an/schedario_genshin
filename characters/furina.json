@@ -1,0 +1,209 @@
+{
+  "displayName": "Furina",
+  "img": "images/characters/furina.png",
+  "tags": ["Sword", "Hydro", "Fontaine", "5★", "Support", "Buffer"],
+  "description": "The Hydro Archon of Fontaine, Furina excels at providing buffs, healing, and Hydro application to her team.",
+  "weapons": [
+    {
+      "name": "Key of Khaj-Nisut",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Key_of_Khaj-Nisut.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Golden Troupe (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Golden_Troupe.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Tenacity of the Millelith (2) + Vourukasha's Glow (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP% / Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG / HP%" }
+  ],
+  "substats": ["HP%", "Energy Recharge", "CRIT Rate", "CRIT DMG"],
+  "talents": [
+    "Normal Attack: Soloist's Solicitation",
+    "Salon Solitaire",
+    "Let the People Rejoice"
+  ],
+  "info": "Furina is a powerful Hydro support and buffer, excelling in teams that benefit from healing and Hydro application. Build her for HP%, Energy Recharge, and CRIT stats.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Key of Khaj-Nisut",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Key_of_Khaj-Nisut.png",
+        "note": "HP%"
+      },
+      "artifacts": [
+        {
+          "name": "Golden Troupe (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Golden_Troupe.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Furina" },
+      { "name": "Neuvillette" },
+      { "name": "Kazuha" },
+      { "name": "Baizhu" }
+    ],
+    [
+      { "name": "Furina" },
+      { "name": "Xingqiu" },
+      { "name": "Yelan" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Furina" },
+      { "name": "Ayato" },
+      { "name": "Kokomi" },
+      { "name": "Bennett" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Soloist's Solicitation",
+      "desc": "Performs up to 4 consecutive sword strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Soloists_Solicitation.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive sword strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "42.6%",
+          "hit3": "56.2%",
+          "hit4": "71.0%",
+          "charged": "55.9% + 55.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "48.1%",
+          "hit2": "46.1%",
+          "hit3": "60.8%",
+          "hit4": "76.8%",
+          "charged": "60.5% + 60.5%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Salon Solitaire",
+      "desc": "Furina summons the Salon Members, who deal Hydro DMG to nearby enemies and provide healing to allies based on Furina's Max HP.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Salon_Solitaire.png",
+      "details_html": "<div class='skill-section'><b>Salon Solitaire</b><br>Summons the Salon Members, who deal Hydro DMG to nearby enemies and provide healing to allies based on Furina's Max HP. The skill alternates between offensive and healing stances.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "summon_dmg": "120% HP",
+          "healing": "10.2% HP + 970",
+          "cd": "12s"
+        },
+        {
+          "level": 2,
+          "summon_dmg": "130% HP",
+          "healing": "11.0% HP + 1050",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Let the People Rejoice",
+      "desc": "Furina creates a field that increases the team's healing received and Hydro DMG, while dealing continuous Hydro DMG to enemies inside.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Let_the_People_Rejoice.png",
+      "details_html": "<div class='skill-section'><b>Let the People Rejoice</b><br>Creates a field that increases the team's healing received and Hydro DMG, while dealing continuous Hydro DMG to enemies inside. Healing and bonus scale with Furina's Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "180% HP",
+          "hydro_bonus": "20%",
+          "healing_bonus": "20%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "194% HP",
+          "hydro_bonus": "22%",
+          "healing_bonus": "22%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Endless Performance",
+      "phase": "Ascension Phase 1",
+      "desc": "When Furina's HP is above 80%, her Hydro DMG Bonus is increased by 20%."
+    },
+    {
+      "name": "Fontaine's Grace",
+      "phase": "Ascension Phase 4",
+      "desc": "Allies inside Let the People Rejoice's field gain 20% increased Healing Bonus."
+    },
+    {
+      "name": "Archon's Benevolence",
+      "phase": "Passive",
+      "desc": "When Furina is in the party, cooking a perfect dish has a 12% chance to double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Ode to the People",
+      "phase": "Constellation Lv. 1",
+      "desc": "Salon Solitaire's healing is increased by 20%."
+    },
+    {
+      "name": "Song of the Nation",
+      "phase": "Constellation Lv. 2",
+      "desc": "Let the People Rejoice's Hydro DMG Bonus is increased by 10%."
+    },
+    {
+      "name": "Hymn of the Archon",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Let the People Rejoice by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Chorus of the Faithful",
+      "phase": "Constellation Lv. 4",
+      "desc": "Allies inside Let the People Rejoice's field gain 20% increased ATK."
+    },
+    {
+      "name": "Anthem of the Sea",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Salon Solitaire by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Finale of the Fount",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Furina's HP is above 80%, her CRIT Rate is increased by 20%."
+    }
+  ]
+}

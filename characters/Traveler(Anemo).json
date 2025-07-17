@@ -1,0 +1,282 @@
+{
+  "displayName": "Traveler (Anemo)",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Traveler_Icon.png",
+  "tags": [
+    "Sword",
+    "Anemo",
+    "Mondstadt",
+    "Protagonist",
+    "5/15",
+    "Outlander",
+    "Wind"
+  ],
+  "description": "A traveler from another world who has awakened the power of Anemo. The protagonist of the story, capable of wielding multiple elements.",
+  "weapons": [
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Cutter.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mistsplitter_Reforged.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Haran Geppaku Futsu",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Haran_Geppaku_Futsu.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Freedom-Sworn",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Freedom-Sworn.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Black_Sword.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Iron_Sting.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Blackcliff Longsword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Blackcliff_Longsword.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Harbinger_of_Dawn.png",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Viridescent Venerer (2) + Noblesse Oblige (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Viridescent Venerer (2) + Emblem of Severed Fate (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Wanderer's Troupe (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Wanderer%27s_Troupe.png"
+    },
+    {
+      "name": "Gladiator's Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Gladiator%27s_Finale.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Anemo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "CRIT Rate",
+    "CRIT DMG",
+    "ATK%",
+    "Elemental Mastery",
+    "Energy Recharge"
+  ],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Traveler Anemo è un supporto versatile che può essere buildato sia come DPS che come supporto. Eccellente per il crowd control e per applicare Viridescent Venerer.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Freedom-Sworn",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Freedom-Sworn.png",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Viridescent Venerer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Viridescent_Venerer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Traveler (Anemo)", "img": "Traveler(Anemo).png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Xiangling", "img": "xiangling.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ],
+    [
+      { "name": "Traveler (Anemo)", "img": "Traveler(Anemo).png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Beidou", "img": "beidou.png" },
+      { "name": "Barbara", "img": "barbara.png" }
+    ],
+    [
+      { "name": "Traveler (Anemo)", "img": "Traveler(Anemo).png" },
+      { "name": "Kaeya", "img": "kaeya.png" },
+      { "name": "Rosaria", "img": "rosaria.png" },
+      { "name": "Diona", "img": "diona.png" }
+    ],
+    [
+      { "name": "Traveler (Anemo)", "img": "Traveler(Anemo).png" },
+      { "name": "Lisa", "img": "lisa.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Barbara", "img": "barbara.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Foreign Ironwind",
+      "desc": "Performs up to 5 rapid strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Foreign_Ironwind.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Traveler_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "43.4%",
+          "hit3": "52.6%",
+          "hit4": "58.3%",
+          "hit5": "70.8%",
+          "charged": "55.9% + 60.7%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "48.1%",
+          "hit2": "46.9%",
+          "hit3": "56.9%",
+          "hit4": "63.0%",
+          "hit5": "76.5%",
+          "charged": "60.5% + 65.6%",
+          "stamina": "20",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "51.7%",
+          "hit2": "50.4%",
+          "hit3": "61.2%",
+          "hit4": "67.7%",
+          "hit5": "82.2%",
+          "charged": "65.1% + 70.5%",
+          "stamina": "20",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "56.9%",
+          "hit2": "55.4%",
+          "hit3": "67.3%",
+          "hit4": "74.5%",
+          "hit5": "90.4%",
+          "charged": "71.6% + 77.6%",
+          "stamina": "20",
+          "plunge": "81.8%",
+          "lowhigh": "163.5% / 204.2%"
+        },
+        {
+          "level": 5,
+          "hit1": "60.5%",
+          "hit2": "58.9%",
+          "hit3": "71.6%",
+          "hit4": "79.2%",
+          "hit5": "96.1%",
+          "charged": "76.2% + 82.5%",
+          "stamina": "20",
+          "plunge": "87.0%",
+          "lowhigh": "173.9% / 217.2%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash 2 rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Palm Vortex",
+      "desc": "Grasping the wind's might, you form a vacuum of frost in your palm, causing continuous Anemo DMG to opponents in front of you.",
+      "video": "https://www.youtube.com/embed/example",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Palm_Vortex.png",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Grasping the wind's might, you form a vacuum of frost in your palm, causing continuous Anemo DMG to opponents in front of you.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "80.0%", "hold_dmg": "56.0%", "cd": "5s" },
+        { "level": 2, "skill_dmg": "86.0%", "hold_dmg": "60.2%", "cd": "5s" },
+        { "level": 3, "skill_dmg": "92.0%", "hold_dmg": "64.4%", "cd": "5s" },
+        { "level": 4, "skill_dmg": "100.0%", "hold_dmg": "70.0%", "cd": "5s" },
+        { "level": 5, "skill_dmg": "106.0%", "hold_dmg": "74.2%", "cd": "5s" }
+      ]
+    },
+    {
+      "name": "Gust Surge",
+      "video": "https://www.youtube.com/embed/example",
+      "desc": "Guiding the path of the wind currents, you summon a forward-moving tornado that pulls objects and opponents towards itself, dealing continuous Anemo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Gust_Surge.png"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Slitting Wind",
+      "phase": "Ascension Phase 1",
+      "desc": "The last hit of a Normal Attack combo unleashes a wind blade, dealing 60% of ATK as Anemo DMG to all opponents in its path."
+    },
+    {
+      "name": "Second Wind",
+      "phase": "Ascension Phase 4",
+      "desc": "Palm Vortex kills regenerate 2% HP for 5s. This effect can only occur once every 5s."
+    },
+    {
+      "name": "Conqueror of Evil: Tainted Tiger",
+      "phase": "Passive",
+      "desc": "Increases the DMG dealt by all party members' Normal and Charged Attacks by 10% for 6s when Palm Vortex hits an opponent affected by Hydro/Pyro/Electro/Cryo."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Raging Vortex",
+      "phase": "Constellation Lv. 1",
+      "desc": "Palm Vortex pulls in opponents and objects within a 5m radius."
+    },
+    {
+      "name": "Uprising Whirlwind",
+      "phase": "Constellation Lv. 2",
+      "desc": "Increases Energy Recharge by 16%."
+    },
+    {
+      "name": "Sweeping Gust",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Gust Surge by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Cherishing Breezes",
+      "phase": "Constellation Lv. 4",
+      "desc": "Reduces DMG taken while casting Palm Vortex by 10%."
+    },
+    {
+      "name": "Vortex Stellaris",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Palm Vortex by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Intertwined Winds",
+      "phase": "Constellation Lv. 6",
+      "desc": "Targets who take DMG from Gust Surge have their Anemo RES decreased by 20%. If an Elemental Absorption occurred, then their RES towards the corresponding Element is also decreased by 20%."
+    }
+  ]
+}

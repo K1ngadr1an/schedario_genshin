@@ -1,0 +1,483 @@
+{
+  "displayName": "Traveler (Pyro)",
+  "img": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/traveler_pyro/image.png?strip=all&quality=100&w=160",
+  "tags": [
+    "Sword",
+    "Pyro",
+    "Natlan",
+    "7/9",
+    "Viator/Viatrix",
+    "Temple of the Lion"
+  ],
+  "description": "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven. In Natlan, they gained the power of Pyro.",
+  "weapons": [
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Haran Geppaku Futsu",
+      "img": "https://img.game8.co/3511222/2310c3f7ed9c13a4249fccdc256199bb.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Skyward Blade",
+      "img": "https://img.game8.co/3311113/3b0e2ee76a9d421e3f7e4a640f7a9b99.png/show",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://img.game8.co/3314420/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Festering Desire",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Blackcliff Longsword",
+      "img": "https://img.game8.co/3314395/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Prototype Rancour",
+      "img": "https://img.game8.co/3314421/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "Physical DMG"
+    },
+    {
+      "name": "Cool Steel",
+      "img": "https://img.game8.co/3314434/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Silver Sword",
+      "img": "https://img.game8.co/3314396/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "ATK"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3314242/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Emblem of Severed Fate (2)",
+      "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Noblesse Oblige (2)",
+      "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (2) + Noblesse Oblige (2)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge / ATK%" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK%"],
+  "talents": ["Skill", "Normal Attack", "Burst"],
+  "info": "Il Traveler Pyro è un supporto DPS che può infliggere danni AoE Pyro e fornire utility tramite le sue abilità. La sua Elemental Skill e Burst infliggono danni ad area e possono aiutare con la generazione di energia.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Primordial Jade Cutter",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Crimson Witch of Flames (4)",
+          "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Traveler (Pyro)", "img": "traveler_pyro.png" },
+      { "name": "Xiangling", "img": "xiangling.png" },
+      { "name": "Kazuha", "img": "kazuha.png" }
+    ],
+    [
+      { "name": "Traveler (Pyro)", "img": "traveler_pyro.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Traveler (Pyro)", "img": "traveler_pyro.png" },
+      { "name": "Barbara", "img": "barbara.png" },
+      { "name": "Yelan", "img": "yelan.png" },
+      { "name": "Furina", "img": "furina.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Foreign Flameblade",
+      "desc": "Performs up to 5 rapid strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Traveler_Talent_Normal.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Traveler_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "43.4%",
+          "hit3": "54.1%",
+          "hit4": "59.7%",
+          "hit5": "35.5% + 35.5%",
+          "charged": "55.0% + 55.0%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "48.1%",
+          "hit2": "47.0%",
+          "hit3": "58.6%",
+          "hit4": "64.7%",
+          "hit5": "38.5% + 38.5%",
+          "charged": "59.5% + 59.5%",
+          "stamina": "20",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "51.7%",
+          "hit2": "50.6%",
+          "hit3": "63.1%",
+          "hit4": "69.7%",
+          "hit5": "41.5% + 41.5%",
+          "charged": "64.0% + 64.0%",
+          "stamina": "20",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "56.8%",
+          "hit2": "55.6%",
+          "hit3": "69.4%",
+          "hit4": "76.7%",
+          "hit5": "45.8% + 45.8%",
+          "charged": "70.4% + 70.4%",
+          "stamina": "20",
+          "plunge": "81.8%",
+          "lowhigh": "163.5% / 204.2%"
+        },
+        {
+          "level": 5,
+          "hit1": "60.5%",
+          "hit2": "59.3%",
+          "hit3": "73.9%",
+          "hit4": "81.7%",
+          "hit5": "48.8% + 48.8%",
+          "charged": "74.9% + 74.9%",
+          "stamina": "20",
+          "plunge": "87.0%",
+          "lowhigh": "173.9% / 217.2%"
+        },
+        {
+          "level": 6,
+          "hit1": "64.1%",
+          "hit2": "62.9%",
+          "hit3": "78.4%",
+          "hit4": "86.7%",
+          "hit5": "51.8% + 51.8%",
+          "charged": "79.4% + 79.4%",
+          "stamina": "20",
+          "plunge": "92.3%",
+          "lowhigh": "184.3% / 229.7%"
+        },
+        {
+          "level": 7,
+          "hit1": "69.2%",
+          "hit2": "68.0%",
+          "hit3": "84.7%",
+          "hit4": "93.7%",
+          "hit5": "56.1% + 56.1%",
+          "charged": "85.8% + 85.8%",
+          "stamina": "20",
+          "plunge": "99.5%",
+          "lowhigh": "199.2% / 248.5%"
+        },
+        {
+          "level": 8,
+          "hit1": "74.3%",
+          "hit2": "73.1%",
+          "hit3": "91.0%",
+          "hit4": "100.7%",
+          "hit5": "60.4% + 60.4%",
+          "charged": "92.2% + 92.2%",
+          "stamina": "20",
+          "plunge": "106.7%",
+          "lowhigh": "214.1% / 267.3%"
+        },
+        {
+          "level": 9,
+          "hit1": "79.4%",
+          "hit2": "78.2%",
+          "hit3": "97.3%",
+          "hit4": "107.7%",
+          "hit5": "64.7% + 64.7%",
+          "charged": "98.6% + 98.6%",
+          "stamina": "20",
+          "plunge": "113.9%",
+          "lowhigh": "229.0% / 286.1%"
+        },
+        {
+          "level": 10,
+          "hit1": "84.5%",
+          "hit2": "83.3%",
+          "hit3": "103.6%",
+          "hit4": "114.7%",
+          "hit5": "69.0% + 69.0%",
+          "charged": "105.0% + 105.0%",
+          "stamina": "20",
+          "plunge": "121.1%",
+          "lowhigh": "243.9% / 304.9%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash 2 rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Blazing Blade",
+      "desc": "Unleashes a wave of fire that deals AoE Pyro DMG. The fire wave can be aimed and deals continuous Pyro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Blazing_Blade.png",
+      "video": "https://www.youtube.com/embed/example",
+      "details_html": "<div class='skill-section'><b>Elemental Skill</b><br>Unleashes a wave of fire that deals <span class='pyro'>AoE Pyro DMG</span>. The fire wave can be aimed and deals continuous Pyro DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "18.0%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "19.3%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "20.6%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "22.2%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "23.5%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 6,
+          "skill_dmg": "24.8%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 7,
+          "skill_dmg": "26.4%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 8,
+          "skill_dmg": "28.0%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 9,
+          "skill_dmg": "29.6%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        },
+        {
+          "level": 10,
+          "skill_dmg": "31.2%/s",
+          "max_duration": "5s",
+          "cd": "12.0s"
+        }
+      ]
+    },
+    {
+      "name": "Crimson Surge",
+      "desc": "Summons a surge of flames that deals AoE Pyro DMG and increases all party members' ATK.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Crimson_Surge.png",
+      "video": "https://www.youtube.com/embed/example",
+      "details_html": "<div class='skill-section'><b>Elemental Burst</b><br>Summons a surge of flames that deals <span class='pyro'>AoE Pyro DMG</span> and increases all party members' ATK.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "180%",
+          "atk_buff": "20%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "193%",
+          "atk_buff": "21.5%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 3,
+          "burst_dmg": "206%",
+          "atk_buff": "23%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 4,
+          "burst_dmg": "224%",
+          "atk_buff": "24.5%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 5,
+          "burst_dmg": "237%",
+          "atk_buff": "26%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 6,
+          "burst_dmg": "250%",
+          "atk_buff": "27.5%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 7,
+          "burst_dmg": "268%",
+          "atk_buff": "29%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 8,
+          "burst_dmg": "286%",
+          "atk_buff": "30.5%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 9,
+          "burst_dmg": "304%",
+          "atk_buff": "32%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 10,
+          "burst_dmg": "322%",
+          "atk_buff": "33.5%",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Burning Spirit",
+      "phase": "Ascension Phase 1",
+      "desc": "Increases all party members' ATK by 10% when the Traveler is in the party."
+    },
+    {
+      "name": "Scorching Flow",
+      "phase": "Ascension Phase 4",
+      "desc": "Using Blazing Blade increases the Traveler's Pyro DMG by 15% for 8s."
+    },
+    {
+      "name": "Natlan's Wisdom",
+      "phase": "Passive",
+      "desc": "Displays the location of nearby resources unique to Natlan on the mini-map."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Flamebearer",
+      "phase": "Constellation Lv. 1",
+      "desc": "Blazing Blade now also increases the Traveler's ATK by 10% for 8s."
+    },
+    {
+      "name": "Inferno's Gift",
+      "phase": "Constellation Lv. 2",
+      "desc": "Crimson Surge increases all party members' ATK by an additional 10%."
+    },
+    {
+      "name": "Pyro's Will",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Crimson Surge by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Fiery Surge",
+      "phase": "Constellation Lv. 4",
+      "desc": "Blazing Blade now also increases the Traveler's Energy Recharge by 15% for 8s."
+    },
+    {
+      "name": "Pyro Resonance",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Blazing Blade by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Endless Blaze",
+      "phase": "Constellation Lv. 6",
+      "desc": "Crimson Surge's duration is increased by 4s and its ATK buff is increased by an additional 10%."
+    }
+  ]
+}

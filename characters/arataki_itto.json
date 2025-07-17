@@ -1,0 +1,713 @@
+{
+  "displayName": "Arataki Itto",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Arataki_Itto_Icon.png",
+  "tags": ["Geo", "Claymore", "5★", "DPS", "Inazuma", "Arataki Gang"],
+  "description": "The fearless and boisterous leader of the Arataki Gang, Itto is a Geo claymore hypercarry who scales with DEF%.",
+  "weapons": [
+    {
+      "name": "Redhorn Stonethresher",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Redhorn_Stonethresher.png",
+      "note": "Best in Slot"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Serpent_Spine.png",
+      "note": "Battle Pass"
+    },
+    {
+      "name": "Whiteblind",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Whiteblind.png",
+      "note": "F2P"
+    },
+    {
+      "name": "The Unforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Unforged.png",
+      "note": "5★ alternative"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Husk of Opulent Dreams (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Husk_of_Opulent_Dreams.png"
+    },
+    {
+      "name": "Retracing Bolide (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Retracing_Bolide.png"
+    },
+    {
+      "name": "Husk of Opulent Dreams (2) + Archaic Petra (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Husk_of_Opulent_Dreams.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "DEF%" },
+    { "type": "Goblet", "value": "Geo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ATK%"],
+  "talents": ["Elemental Skill", "Normal Attack", "Elemental Burst"],
+  "info": "Itto is a main DPS who shines in mono-Geo teams. Stack as much DEF% as possible, and focus on maximizing his Elemental Skill and Normal Attack. His Burst converts his ATK to scale with DEF%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Redhorn Stonethresher",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Redhorn_Stonethresher.png",
+        "note": "Best in Slot"
+      },
+      "artifacts": [
+        {
+          "name": "Husk of Opulent Dreams (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Husk_of_Opulent_Dreams.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Itto" },
+      { "name": "Gorou" },
+      { "name": "Albedo" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Itto" },
+      { "name": "Gorou" },
+      { "name": "Ningguang" },
+      { "name": "Bennett" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Fight Club Legend",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Performs up to 4 consecutive claymore strikes. On the 2nd and 4th hit, Itto gains Superlative Superstrength stacks.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/UI_GachaTypeIcon_Claymore.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes. On the 2nd and 4th hit, Itto gains Superlative Superstrength stacks.</div><div class='skill-section'><b>Charged Attack</b><br>Performs Arataki Kesagiri slashes at the cost of Superlative Superstrength. When the final stack is used, performs a powerful finishing slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "70.2%",
+          "hit2": "76.4%",
+          "hit3": "95.6%",
+          "hit4": "117.1%",
+          "charged": "91.2% + 103.2%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 2,
+          "hit1": "85.6%",
+          "hit2": "82.6%",
+          "hit3": "103.4%",
+          "hit4": "126.7%",
+          "charged": "99.2% + 112.4%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        },
+        {
+          "level": 3,
+          "hit1": "79.2%",
+          "hit2": "76.4%",
+          "hit3": "95.6%",
+          "hit4": "117.1%",
+          "charged": "91.2% + 103.2%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 4,
+          "hit1": "85.6%",
+          "hit2": "82.6%",
+          "hit3": "103.4%",
+          "hit4": "126.7%",
+          "charged": "99.2% + 112.4%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        },
+        {
+          "level": 5,
+          "hit1": "79.2%",
+          "hit2": "76.4%",
+          "hit3": "95.6%",
+          "hit4": "117.1%",
+          "charged": "91.2% + 103.2%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 6,
+          "hit1": "85.6%",
+          "hit2": "82.6%",
+          "hit3": "103.4%",
+          "hit4": "126.7%",
+          "charged": "99.2% + 112.4%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        },
+        {
+          "level": 7,
+          "hit1": "79.2%",
+          "hit2": "76.4%",
+          "hit3": "95.6%",
+          "hit4": "117.1%",
+          "charged": "91.2% + 103.2%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 8,
+          "hit1": "85.6%",
+          "hit2": "82.6%",
+          "hit3": "103.4%",
+          "hit4": "126.7%",
+          "charged": "99.2% + 112.4%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        },
+        {
+          "level": 9,
+          "hit1": "79.2%",
+          "hit2": "76.4%",
+          "hit3": "95.6%",
+          "hit4": "117.1%",
+          "charged": "91.2% + 103.2%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 10,
+          "hit1": "85.6%",
+          "hit2": "82.6%",
+          "hit3": "103.4%",
+          "hit4": "126.7%",
+          "charged": "99.2% + 112.4%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        },
+        {
+          "level": 11,
+          "hit1": "79.2%",
+          "hit2": "76.4%",
+          "hit3": "95.6%",
+          "hit4": "117.1%",
+          "charged": "91.2% + 103.2%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 12,
+          "hit1": "85.6%",
+          "hit2": "82.6%",
+          "hit3": "103.4%",
+          "hit4": "126.7%",
+          "charged": "99.2% + 112.4%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        },
+        {
+          "level": 13,
+          "hit1": "79.2%",
+          "hit2": "76.4%",
+          "hit3": "95.6%",
+          "hit4": "117.1%",
+          "charged": "91.2% + 103.2%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 14,
+          "hit1": "85.6%",
+          "hit2": "82.6%",
+          "hit3": "103.4%",
+          "hit4": "126.7%",
+          "charged": "99.2% + 112.4%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        },
+        {
+          "level": 15,
+          "hit1": "85.6%",
+          "hit2": "82.6%",
+          "hit3": "103.4%",
+          "hit4": "126.7%",
+          "charged": "99.2% + 112.4%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        }
+      ]
+    },
+    {
+      "name": "Masatsu Zetsugi: Akaushi Burst!",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Throws Ushi, dealing Geo DMG and taunting enemies. Grants Superlative Superstrength stacks when hit.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Itto/talent_2.png",
+      "details_html": "<div class='skill-section'><b>Elemental Skill</b><br>Throws Ushi, dealing Geo DMG to opponents and taunting them. When Ushi takes damage or leaves the field, Itto gains Superlative Superstrength stacks.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "170% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "182% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "194% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "208% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "220% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 6,
+          "skill_dmg": "232% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 7,
+          "skill_dmg": "246% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 8,
+          "skill_dmg": "260% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 9,
+          "skill_dmg": "274% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 10,
+          "skill_dmg": "288% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 11,
+          "skill_dmg": "302% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 12,
+          "skill_dmg": "316% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 13,
+          "skill_dmg": "332% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 14,
+          "skill_dmg": "348% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        },
+        {
+          "level": 15,
+          "skill_dmg": "364% DEF",
+          "inherited_hp": "100%",
+          "taunt_duration": "6s",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Royal Descent: Behold, Itto the Evil!",
+      "desc": "Itto lets out his inner Raging Oni King, converting his ATK to scale with DEF% and infusing his attacks with Geo.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Itto/talent_3.png",
+      "details_html": "<div class='skill-section'><b>Elemental Burst</b><br>Itto lets out his inner Raging Oni King, converting his ATK to scale with DEF% and infusing his attacks with Geo. Increases his ATK SPD and resistance to interruption.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "275% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "295% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 3,
+          "burst_dmg": "315% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 4,
+          "burst_dmg": "337% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 5,
+          "burst_dmg": "359% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 6,
+          "burst_dmg": "381% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 7,
+          "burst_dmg": "405% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 8,
+          "burst_dmg": "429% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 9,
+          "burst_dmg": "453% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 10,
+          "burst_dmg": "477% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 11,
+          "burst_dmg": "501% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 12,
+          "burst_dmg": "525% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 13,
+          "burst_dmg": "551% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 14,
+          "burst_dmg": "577% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 15,
+          "burst_dmg": "603% DEF",
+          "atk_spd": "+10%",
+          "duration": "11s",
+          "cd": "18s",
+          "energy_cost": "70"
+        }
+      ],
+      "video": "https://www.youtube.com/embed/IttoBurstDemo",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Royal_Descent_Behold_Itto_the_Evil.png"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Arataki Ichiban",
+      "phase": "Ascension Phase 1",
+      "desc": "When Itto uses consecutive Arataki Kesagiri slashes, his ATK SPD increases by 10% and he gains 1 Superlative Superstrength stack every 2 slashes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Fight_Club_Legend.png"
+    },
+    {
+      "name": "Bloodline of the Crimson Oni",
+      "phase": "Ascension Phase 4",
+      "desc": "Arataki Kesagiri DMG is increased by 35% of Itto's DEF.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Fight_Club_Legend.png"
+    },
+    {
+      "name": "Woodchuck Chucked",
+      "phase": "Passive",
+      "desc": "When a party member uses an attack to obtain wood from a tree, they have a 25% chance to get an additional log of wood.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Fight_Club_Legend.png"
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Stay a While and Listen Up",
+      "phase": "Constellation Lv. 1",
+      "desc": "After using Royal Descent: Behold, Itto the Evil!, each party member whose element is Geo decreases that skill's CD by 1.5s and restores 6 Energy to Itto.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Royal_Descent_Behold_Itto_the_Evil.png"
+    },
+    {
+      "name": "C2: Gather 'Round, It's a Brawl!",
+      "phase": "Constellation Lv. 2",
+      "desc": "After using Royal Descent: Behold, Itto the Evil!, Itto gains a 20% DEF and 20% ATK increase for 10s.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Royal_Descent_Behold_Itto_the_Evil.png"
+    },
+    {
+      "name": "C3: Horns Lowered, Coming Through",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Masatsu Zetsugi: Akaushi Burst! by 3.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Masatsu_Zetsugi_Akaushi_Burst.png"
+    },
+    {
+      "name": "C4: Jailhouse Bread and Butter",
+      "phase": "Constellation Lv. 4",
+      "desc": "When the Raging Oni King's state ends, all nearby party members gain 20% DEF and 20% ATK for 10s.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Royal_Descent_Behold_Itto_the_Evil.png"
+    },
+    {
+      "name": "C5: 10 Years of Hanamizaka Fame",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Royal Descent: Behold, Itto the Evil! by 3.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Royal_Descent_Behold_Itto_the_Evil.png"
+    },
+    {
+      "name": "C6: Arataki Itto, Present!",
+      "phase": "Constellation Lv. 6",
+      "desc": "Itto's CRIT DMG is increased by 70% for 6s after using Royal Descent: Behold, Itto the Evil!.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Royal_Descent_Behold_Itto_the_Evil.png"
+    }
+  ],
+  "ascension_materials": [
+    { "level": 20, "materials": [{ "name": "Mora", "quantity": 20000 }] },
+    {
+      "level": 40,
+      "materials": [
+        { "name": "Prithiva Topaz Sliver", "quantity": 1 },
+        { "name": "Onikabuto", "quantity": 3 },
+        { "name": "Slime Condensate", "quantity": 3 },
+        { "name": "Riftborn Regalia", "quantity": 2 },
+        { "name": "Mora", "quantity": 40000 }
+      ]
+    },
+    {
+      "level": 50,
+      "materials": [
+        { "name": "Prithiva Topaz Fragment", "quantity": 3 },
+        { "name": "Onikabuto", "quantity": 10 },
+        { "name": "Slime Condensate", "quantity": 15 },
+        { "name": "Riftborn Regalia", "quantity": 4 },
+        { "name": "Mora", "quantity": 60000 }
+      ]
+    },
+    {
+      "level": 60,
+      "materials": [
+        { "name": "Prithiva Topaz Fragment", "quantity": 6 },
+        { "name": "Onikabuto", "quantity": 20 },
+        { "name": "Slime Secretions", "quantity": 12 },
+        { "name": "Riftborn Regalia", "quantity": 8 },
+        { "name": "Mora", "quantity": 80000 }
+      ]
+    },
+    {
+      "level": 70,
+      "materials": [
+        { "name": "Prithiva Topaz Chunk", "quantity": 3 },
+        { "name": "Onikabuto", "quantity": 30 },
+        { "name": "Slime Secretions", "quantity": 18 },
+        { "name": "Riftborn Regalia", "quantity": 12 },
+        { "name": "Mora", "quantity": 100000 }
+      ]
+    },
+    {
+      "level": 80,
+      "materials": [
+        { "name": "Prithiva Topaz Chunk", "quantity": 6 },
+        { "name": "Onikabuto", "quantity": 45 },
+        { "name": "Slime Concentrate", "quantity": 12 },
+        { "name": "Riftborn Regalia", "quantity": 20 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 90,
+      "materials": [
+        { "name": "Prithiva Topaz Gemstone", "quantity": 6 },
+        { "name": "Onikabuto", "quantity": 60 },
+        { "name": "Slime Concentrate", "quantity": 24 },
+        { "name": "Riftborn Regalia", "quantity": 24 },
+        { "name": "Mora", "quantity": 160000 }
+      ]
+    },
+    {
+      "total": true,
+      "materials": [
+        { "name": "Prithiva Topaz Sliver", "quantity": 1 },
+        { "name": "Prithiva Topaz Fragment", "quantity": 9 },
+        { "name": "Prithiva Topaz Chunk", "quantity": 9 },
+        { "name": "Prithiva Topaz Gemstone", "quantity": 6 },
+        { "name": "Onikabuto", "quantity": 168 },
+        { "name": "Slime Condensate", "quantity": 18 },
+        { "name": "Slime Secretions", "quantity": 30 },
+        { "name": "Slime Concentrate", "quantity": 36 },
+        { "name": "Riftborn Regalia", "quantity": 46 },
+        { "name": "Mora", "quantity": 420000 }
+      ]
+    }
+  ],
+  "talent_materials": [
+    {
+      "level": 2,
+      "materials": [
+        { "name": "Teachings of Elegance", "quantity": 3 },
+        { "name": "Slime Condensate", "quantity": 6 },
+        { "name": "Mora", "quantity": 12500 }
+      ]
+    },
+    {
+      "level": 3,
+      "materials": [
+        { "name": "Guide to Elegance", "quantity": 2 },
+        { "name": "Slime Secretions", "quantity": 3 },
+        { "name": "Mora", "quantity": 17500 }
+      ]
+    },
+    {
+      "level": 4,
+      "materials": [
+        { "name": "Guide to Elegance", "quantity": 4 },
+        { "name": "Slime Secretions", "quantity": 4 },
+        { "name": "Mora", "quantity": 25000 }
+      ]
+    },
+    {
+      "level": 5,
+      "materials": [
+        { "name": "Guide to Elegance", "quantity": 6 },
+        { "name": "Slime Secretions", "quantity": 6 },
+        { "name": "Mora", "quantity": 30000 }
+      ]
+    },
+    {
+      "level": 6,
+      "materials": [
+        { "name": "Guide to Elegance", "quantity": 9 },
+        { "name": "Slime Secretions", "quantity": 9 },
+        { "name": "Mora", "quantity": 37500 }
+      ]
+    },
+    {
+      "level": 7,
+      "materials": [
+        { "name": "Philosophies of Elegance", "quantity": 4 },
+        { "name": "Slime Concentrate", "quantity": 4 },
+        { "name": "Ashen Heart", "quantity": 1 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 8,
+      "materials": [
+        { "name": "Philosophies of Elegance", "quantity": 6 },
+        { "name": "Slime Concentrate", "quantity": 6 },
+        { "name": "Ashen Heart", "quantity": 1 },
+        { "name": "Mora", "quantity": 260000 }
+      ]
+    },
+    {
+      "level": 9,
+      "materials": [
+        { "name": "Philosophies of Elegance", "quantity": 12 },
+        { "name": "Slime Concentrate", "quantity": 9 },
+        { "name": "Ashen Heart", "quantity": 2 },
+        { "name": "Mora", "quantity": 450000 }
+      ]
+    },
+    {
+      "level": 10,
+      "materials": [
+        { "name": "Philosophies of Elegance", "quantity": 16 },
+        { "name": "Slime Concentrate", "quantity": 12 },
+        { "name": "Ashen Heart", "quantity": 2 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 700000 }
+      ]
+    },
+    {
+      "total": true,
+      "materials": [
+        { "name": "Teachings of Elegance", "quantity": 3 },
+        { "name": "Guide to Elegance", "quantity": 21 },
+        { "name": "Philosophies of Elegance", "quantity": 38 },
+        { "name": "Slime Condensate", "quantity": 6 },
+        { "name": "Slime Secretions", "quantity": 22 },
+        { "name": "Slime Concentrate", "quantity": 31 },
+        { "name": "Ashen Heart", "quantity": 6 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 1652500 }
+      ]
+    }
+  ]
+}

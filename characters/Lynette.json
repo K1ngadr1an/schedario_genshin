@@ -1,0 +1,184 @@
+{
+  "displayName": "Lynette",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Sword", "Anemo", "Fontaine", "Support", "4★", "Sub-DPS"],
+  "description": "Lynette è l'assistente di Lyney e una spadaccina Anemo di Fontaine. Eccelle come supporto e sub-DPS grazie alla sua capacità di raggruppare i nemici e applicare Anemo.",
+  "weapons": [
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Sword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Viridescent Venerer (2) + Noblesse Oblige (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Elemental Mastery / Energy Recharge" },
+    { "type": "Goblet", "value": "Anemo DMG Bonus / Elemental Mastery" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG / Elemental Mastery" }
+  ],
+  "substats": ["Elemental Mastery", "Energy Recharge", "CRIT Rate", "CRIT DMG"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Lynette è un supporto/sub-DPS che fornisce raggruppamento, applicazione Anemo e riduzione resistenze. Costruiscila con Maestria Elementale e Ricarica Energia per massimizzare il suo impatto.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Favonius Sword",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Viridescent Venerer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Lynette" },
+      { "name": "Lyney" },
+      { "name": "Bennett" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Lynette" },
+      { "name": "Xiangling" },
+      { "name": "Yelan" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Lynette" },
+      { "name": "Ayato" },
+      { "name": "Fischl" },
+      { "name": "Jean" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Rapid Ritesword",
+      "desc": "Effettua fino a 4 colpi consecutivi con la spada.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Rapid_Ritesword.png",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "43.1%",
+          "hit3": "54.1%",
+          "hit4": "67.7%",
+          "charged": "55.0% + 55.0%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 4 colpi consecutivi con la spada.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per sferrare due colpi rapidi.</div><div class='skill-section'><b>Plunging Attack</b><br>Si lancia dall'alto, infliggendo danni Anemo all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Enigmatic Feint",
+      "desc": "Lynette si lancia in avanti, infliggendo danni Anemo e raggruppando i nemici. Può essere tenuta premuta per una carica più lunga.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Enigmatic_Feint.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Enigmatic Feint</b><br>Si lancia in avanti, infliggendo danni Anemo e raggruppando i nemici. Può essere tenuta premuta per una carica più lunga e un raggruppamento maggiore.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "press_dmg": "240% ATK",
+          "hold_dmg": "360% ATK",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Magic Trick: Astonishing Shift",
+      "desc": "Lynette evoca un campo magico che infligge danni Anemo ad area e riduce la resistenza Anemo dei nemici.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Magic_Trick_Astonishing_Shift.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Magic Trick: Astonishing Shift</b><br>Evoca un campo magico che infligge danni Anemo ad area e riduce la resistenza Anemo dei nemici per 10s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "320% ATK",
+          "anemo_res_down": "20%",
+          "duration": "10s",
+          "cd": "20s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Sophisticated Synergy",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando Lynette colpisce un nemico con Enigmatic Feint, la sua Maestria Elementale aumenta di 40 per 8s."
+    },
+    {
+      "name": "Magician's Finesse",
+      "phase": "Ascension Phase 4",
+      "desc": "Magic Trick: Astonishing Shift aumenta la velocità di movimento degli alleati del 10% per 10s."
+    },
+    {
+      "name": "Fontaine's Grace",
+      "phase": "Passive",
+      "desc": "Riduce il consumo di stamina durante la corsa per i membri del party del 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Sleightful Shadow",
+      "phase": "Constellation Lv. 1",
+      "desc": "Enigmatic Feint ottiene una carica aggiuntiva."
+    },
+    {
+      "name": "C2: Misdirection Master",
+      "phase": "Constellation Lv. 2",
+      "desc": "Quando Lynette colpisce un nemico raggruppato, il suo ATK aumenta del 20% per 8s."
+    },
+    {
+      "name": "C3: Illusive Illumination",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Enigmatic Feint di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Phantom's Veil",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando Lynette attiva una reazione Anemo, rigenera 3 energia."
+    },
+    {
+      "name": "C5: Grand Finale",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Magic Trick: Astonishing Shift di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Curtain Call",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando Lynette entra in campo, la durata di Magic Trick: Astonishing Shift aumenta di 4s."
+    }
+  ]
+}

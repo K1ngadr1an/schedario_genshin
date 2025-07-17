@@ -1,0 +1,309 @@
+{
+  "displayName": "Varesa",
+  "img": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/varesa/image.png?strip=all&quality=100&w=160",
+  "tags": ["Catalyst", "Electro", "Natlan", "5★", "DPS", "Thunder Dancer"],
+  "description": "Varesa, la danzatrice del tuono di Natlan, incanta il campo di battaglia con movimenti agili e fulmini devastanti. Maestro delle arti catalizzatrici, trasforma l'energia elettrica in pura grazia offensiva.",
+  "weapons": [
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://img.game8.co/3314417/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Kagura's Verity",
+      "img": "https://img.game8.co/3385778/e37e18f22714bbafe297e8a4beb96749.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Skyward Atlas",
+      "img": "https://img.game8.co/3311114/3b0e2ee76a9d421e3f7e4a640f7a9b99.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://img.game8.co/3314423/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Solar Pearl",
+      "img": "https://img.game8.co/3314424/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mappa Mare",
+      "img": "https://img.game8.co/3314435/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Thundering Fury (4)",
+      "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Thundering Fury (2) + Gilded Dreams (2)",
+      "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    },
+    {
+      "name": "Thundering Fury (2) + Noblesse Oblige (2)",
+      "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Electro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "CRIT Rate",
+    "CRIT DMG",
+    "ATK%",
+    "Elemental Mastery",
+    "Energy Recharge"
+  ],
+  "talents": ["Skill", "Normal Attack", "Burst"],
+  "info": "Varesa brilla come DPS Electro catalizzatore, capace di infliggere danni AoE e single-target con le sue danze elettriche. Ottima in team che sfruttano reazioni come Aggravate e Hyperbloom.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Kagura's Verity",
+        "img": "https://img.game8.co/3385778/e37e18f22714bbafe297e8a4beb96749.png/show",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Thundering Fury (4)",
+          "img": "https://img.game8.co/3314243/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Varesa", "img": "varesa.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "Yae Miko", "img": "yae_miko.png" },
+      { "name": "Kuki Shinobu", "img": "kuki_shinobu.png" }
+    ],
+    [
+      { "name": "Varesa", "img": "varesa.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Baizhu", "img": "baizhu.png" }
+    ],
+    [
+      { "name": "Varesa", "img": "varesa.png" },
+      { "name": "Collei", "img": "collei.png" },
+      { "name": "Beidou", "img": "beidou.png" },
+      { "name": "Barbara", "img": "barbara.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Thunder Waltz",
+      "desc": "Performs up to 3 consecutive lightning-infused dance steps, dealing Electro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Traveler_Talent_Normal.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Traveler_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "48.0%",
+          "hit2": "46.5%",
+          "hit3": "62.0%",
+          "charged": "120.0%",
+          "stamina": "50",
+          "aoe": "80.0%",
+          "lowhigh": "160.0% / 200.0%"
+        },
+        {
+          "level": 2,
+          "hit1": "52.0%",
+          "hit2": "50.5%",
+          "hit3": "67.0%",
+          "charged": "130.0%",
+          "stamina": "50",
+          "aoe": "88.0%",
+          "lowhigh": "176.0% / 220.0%"
+        },
+        {
+          "level": 3,
+          "hit1": "56.0%",
+          "hit2": "54.5%",
+          "hit3": "72.0%",
+          "charged": "140.0%",
+          "stamina": "50",
+          "aoe": "96.0%",
+          "lowhigh": "192.0% / 240.0%"
+        },
+        {
+          "level": 4,
+          "hit1": "61.0%",
+          "hit2": "59.5%",
+          "hit3": "78.0%",
+          "charged": "152.0%",
+          "stamina": "50",
+          "aoe": "105.0%",
+          "lowhigh": "210.0% / 262.0%"
+        },
+        {
+          "level": 5,
+          "hit1": "65.0%",
+          "hit2": "63.5%",
+          "hit3": "83.0%",
+          "charged": "162.0%",
+          "stamina": "50",
+          "aoe": "113.0%",
+          "lowhigh": "226.0% / 282.0%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 3 consecutive lightning-infused dance steps, dealing Electro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes Stamina to unleash a powerful AoE Electro dance.</div>"
+    },
+    {
+      "name": "Stormstep",
+      "desc": "Varesa dashes forward in a flash of lightning, dealing AoE Electro DMG and leaving a static field that damages enemies over time.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Stormstep.png",
+      "video": "https://www.youtube.com/embed/example",
+      "details_html": "<div class='skill-section'><b>Elemental Skill</b><br>Varesa dashes forward in a flash of lightning, dealing <span class='electro'>AoE Electro DMG</span> and leaving a static field that damages enemies over time.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "180%",
+          "field_dmg": "40%/s",
+          "duration": "6s",
+          "cd": "10.0s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "194%",
+          "field_dmg": "44%/s",
+          "duration": "6s",
+          "cd": "10.0s"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "208%",
+          "field_dmg": "48%/s",
+          "duration": "6s",
+          "cd": "10.0s"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "228%",
+          "field_dmg": "53%/s",
+          "duration": "6s",
+          "cd": "10.0s"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "242%",
+          "field_dmg": "57%/s",
+          "duration": "6s",
+          "cd": "10.0s"
+        }
+      ]
+    },
+    {
+      "name": "Thunderous Finale",
+      "desc": "Unleashes a grand dance, calling down a storm that deals massive AoE Electro DMG and increases all party members' Elemental Mastery.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Thunderous_Finale.png",
+      "video": "https://www.youtube.com/embed/example",
+      "details_html": "<div class='skill-section'><b>Elemental Burst</b><br>Unleashes a grand dance, calling down a storm that deals <span class='electro'>massive AoE Electro DMG</span> and increases all party members' Elemental Mastery.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "320%",
+          "em_buff": "60",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "342%",
+          "em_buff": "66",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 3,
+          "burst_dmg": "364%",
+          "em_buff": "72",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 4,
+          "burst_dmg": "392%",
+          "em_buff": "79",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 5,
+          "burst_dmg": "414%",
+          "em_buff": "85",
+          "duration": "12s",
+          "cd": "18.0s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Lightning Grace",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Stormstep, Varesa's ATK is increased by 20% for 8s."
+    },
+    {
+      "name": "Static Elegance",
+      "phase": "Ascension Phase 4",
+      "desc": "Thunderous Finale increases all party members' Elemental Mastery by an additional 40."
+    },
+    {
+      "name": "Dancer's Instinct",
+      "phase": "Passive",
+      "desc": "Decreases sprinting Stamina consumption for your own party members by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Dance of the Storm",
+      "phase": "Constellation Lv. 1",
+      "desc": "Stormstep's field duration is increased by 2s."
+    },
+    {
+      "name": "Thunder's Embrace",
+      "phase": "Constellation Lv. 2",
+      "desc": "Thunderous Finale grants an additional 20% ATK to all party members for 10s."
+    },
+    {
+      "name": "Lightning's Will",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Thunderous Finale by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Electro Waltz",
+      "phase": "Constellation Lv. 4",
+      "desc": "Stormstep's field now also increases the Electro DMG Bonus of all party members by 15%."
+    },
+    {
+      "name": "Thunderous Mastery",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Stormstep by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Endless Performance",
+      "phase": "Constellation Lv. 6",
+      "desc": "Thunderous Finale's EM buff is increased by an additional 60 and its duration is increased by 4s."
+    }
+  ]
+}

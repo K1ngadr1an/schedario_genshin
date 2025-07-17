@@ -1,0 +1,216 @@
+{
+  "displayName": "Sucrose",
+  "img": "images/characters/sucrose.png",
+  "tags": [
+    "Catalyst",
+    "Anemo",
+    "Mondstadt",
+    "4★",
+    "Support",
+    "Swirl",
+    "Alchemist"
+  ],
+  "description": "An alchemist with a curious mind, Sucrose is an Anemo catalyst user from Mondstadt who excels at grouping enemies and boosting Elemental Mastery.",
+  "weapons": [
+    {
+      "name": "Sacrificial Fragments",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Fragments.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Mappa Mare",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mappa_Mare.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Thrilling Tales of Dragon Slayers",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thrilling_Tales_of_Dragon_Slayers.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Hakushin Ring",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Hakushin_Ring.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Instructor (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Instructor.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Elemental Mastery / ATK%" },
+    { "type": "Goblet", "value": "Elemental Mastery / Anemo DMG Bonus" },
+    { "type": "Circlet", "value": "Elemental Mastery / CRIT Rate" }
+  ],
+  "substats": ["Elemental Mastery", "ATK%", "Energy Recharge", "CRIT Rate"],
+  "talents": [
+    "Normal Attack: Wind Spirit Creation",
+    "Astable Anemohypostasis Creation - 6308",
+    "Forbidden Creation - Isomer 75 / Type II"
+  ],
+  "info": "Sucrose is a 4★ Anemo support who excels at grouping enemies, boosting Elemental Mastery, and enabling powerful Swirl reactions. Build her for Elemental Mastery and Energy Recharge.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Sacrificial Fragments",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Fragments.png",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Viridescent Venerer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Sucrose" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Sucrose" },
+      { "name": "Fischl" },
+      { "name": "Beidou" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Sucrose" },
+      { "name": "Klee" },
+      { "name": "Bennett" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Sucrose" },
+      { "name": "Ayato" },
+      { "name": "Yelan" },
+      { "name": "Barbara" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Wind Spirit Creation",
+      "desc": "Performs up to 4 attacks using Wind Spirits, dealing Anemo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Wind_Spirit_Creation.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 attacks using Wind Spirits, dealing Anemo DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to deal AoE Anemo DMG after a short casting time.</div><div class='skill-section'><b>Plunging Attack</b><br>Calling upon the power of Anemo, Sucrose plunges towards the ground from mid-air, damaging all enemies in her path and dealing AoE Anemo DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "33.5%",
+          "hit2": "30.6%",
+          "hit3": "38.4%",
+          "hit4": "47.9%",
+          "charged": "120%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "36.2%",
+          "hit2": "33.1%",
+          "hit3": "41.6%",
+          "hit4": "51.9%",
+          "charged": "129%",
+          "plunge": "61.1%",
+          "lowhigh": "122.1% / 152.6%"
+        }
+      ]
+    },
+    {
+      "name": "Astable Anemohypostasis Creation - 6308",
+      "desc": "Sucrose hurls an unstable concoction that creates a small Wind Spirit, dealing AoE Anemo DMG and pulling in enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Astable_Anemohypostasis_Creation_6308.png",
+      "details_html": "<div class='skill-section'><b>Astable Anemohypostasis Creation - 6308</b><br>Hurls an unstable concoction that creates a small Wind Spirit, dealing AoE Anemo DMG and pulling in enemies.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "211%", "cd": "15s" },
+        { "level": 2, "skill_dmg": "227%", "cd": "15s" }
+      ]
+    },
+    {
+      "name": "Forbidden Creation - Isomer 75 / Type II",
+      "desc": "Sucrose releases a large Wind Spirit that continuously pulls in enemies and objects, dealing AoE Anemo DMG. The Wind Spirit can absorb Hydro/Pyro/Cryo/Electro and deal additional elemental DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Forbidden_Creation_Isomer_75_Type_II.png",
+      "details_html": "<div class='skill-section'><b>Forbidden Creation - Isomer 75 / Type II</b><br>Releases a large Wind Spirit that continuously pulls in enemies and objects, dealing AoE Anemo DMG. The Wind Spirit can absorb Hydro/Pyro/Cryo/Electro and deal additional elemental DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "370%",
+          "elemental_dmg": "44.4% per hit",
+          "duration": "6s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "398%",
+          "elemental_dmg": "47.8% per hit",
+          "duration": "6s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Catalyst Conversion",
+      "phase": "Ascension Phase 1",
+      "desc": "When Sucrose triggers a Swirl reaction, all characters in the party (except Sucrose) gain 50 Elemental Mastery for 8s."
+    },
+    {
+      "name": "Mollis Favonius",
+      "phase": "Ascension Phase 4",
+      "desc": "When Sucrose hits an enemy with Astable Anemohypostasis Creation - 6308 or Forbidden Creation - Isomer 75 / Type II, increases all party members' Elemental Mastery by 20% of Sucrose's Elemental Mastery for 8s."
+    },
+    {
+      "name": "Astable Invention",
+      "phase": "Passive",
+      "desc": "When Sucrose crafts Character and Weapon Enhancement Materials, has a 10% chance to obtain double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Clustered Vacuum Field",
+      "phase": "Constellation Lv. 1",
+      "desc": "Astable Anemohypostasis Creation - 6308 gains 1 additional charge."
+    },
+    {
+      "name": "Beth: Unbound Form",
+      "phase": "Constellation Lv. 2",
+      "desc": "The duration of Forbidden Creation - Isomer 75 / Type II is increased by 2s."
+    },
+    {
+      "name": "Flawless Alchemistress",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Astable Anemohypostasis Creation - 6308 by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Alchemania",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Forbidden Creation - Isomer 75 / Type II absorbs an element, all party members gain a 20% Elemental DMG Bonus for that element for 8s."
+    },
+    {
+      "name": "Caution: Standard Flask",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Forbidden Creation - Isomer 75 / Type II by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Chaotic Entropy",
+      "phase": "Constellation Lv. 6",
+      "desc": "Sucrose's Normal Attack speed is increased by 10% and she gains 2 additional Elemental Mastery for every party member of the same element."
+    }
+  ]
+}

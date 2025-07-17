@@ -1,0 +1,215 @@
+{
+  "displayName": "Sangonomiya Kokomi",
+  "img": "images/characters/sangonomiya_kokomi.png",
+  "tags": ["Catalyst", "Hydro", "Inazuma", "5★", "Healer", "Support", "Buffer"],
+  "description": "The Divine Priestess of Watatsumi Island, Kokomi is a Hydro catalyst user who excels at healing, off-field Hydro application, and team support.",
+  "weapons": [
+    {
+      "name": "Everlasting Moonglow",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "Healing Bonus"
+    },
+    {
+      "name": "Prototype Amber",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "HP%"
+    },
+    {
+      "name": "Thrilling Tales of Dragon Slayers",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thrilling_Tales_of_Dragon_Slayers.png",
+      "note": "HP%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Ocean-Hued Clam (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Tenacity of the Millelith (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+    },
+    {
+      "name": "Maiden Beloved (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP% / Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "Healing Bonus / HP%" }
+  ],
+  "substats": ["HP%", "Healing Bonus", "Energy Recharge", "ATK%"],
+  "talents": [
+    "Normal Attack: The Shape of Water",
+    "Kurage's Oath",
+    "Nereid's Ascension"
+  ],
+  "info": "Kokomi is a 5★ Hydro healer and support who excels at off-field healing and Hydro application. Build her for HP%, Healing Bonus, and Energy Recharge.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Everlasting Moonglow",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Healing Bonus"
+      },
+      "artifacts": [
+        {
+          "name": "Ocean-Hued Clam (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kokomi" },
+      { "name": "Nilou" },
+      { "name": "Nahida" },
+      { "name": "Dendro Traveler" }
+    ],
+    [
+      { "name": "Kokomi" },
+      { "name": "Ayato" },
+      { "name": "Yelan" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Kokomi" },
+      { "name": "Furina" },
+      { "name": "Neuvillette" },
+      { "name": "Baizhu" }
+    ],
+    [
+      { "name": "Kokomi" },
+      { "name": "Xingqiu" },
+      { "name": "Fischl" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: The Shape of Water",
+      "desc": "Performs up to 3 consecutive attacks that take the form of swimming fish, dealing Hydro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_The_Shape_of_Water.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 3 consecutive attacks that take the form of swimming fish, dealing Hydro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to deal AoE Hydro DMG after a short casting time.</div><div class='skill-section'><b>Plunging Attack</b><br>Gathering the might of Hydro, Kokomi plunges towards the ground from mid-air, damaging all enemies in her path and dealing AoE Hydro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "68.9%",
+          "hit2": "62.4%",
+          "hit3": "94.7%",
+          "charged": "156.2%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "74.4%",
+          "hit2": "67.4%",
+          "hit3": "102.3%",
+          "charged": "168.8%",
+          "plunge": "61.1%",
+          "lowhigh": "122.1% / 152.6%"
+        }
+      ]
+    },
+    {
+      "name": "Kurage's Oath",
+      "desc": "Summons a bake-kurage made of water that heals nearby active characters and deals Hydro DMG to surrounding enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Kurages_Oath.png",
+      "details_html": "<div class='skill-section'><b>Kurage's Oath</b><br>Summons a bake-kurage made of water that heals nearby active characters and deals Hydro DMG to surrounding enemies. Healing and DMG scale with Kokomi's Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "4.4% Max HP",
+          "healing": "5.4% Max HP + 518",
+          "duration": "12s",
+          "cd": "20s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "4.7% Max HP",
+          "healing": "5.7% Max HP + 570",
+          "duration": "12s",
+          "cd": "20s"
+        }
+      ]
+    },
+    {
+      "name": "Nereid's Ascension",
+      "desc": "Kokomi summons the might of Watatsumi, dealing AoE Hydro DMG and entering the Ceremonial Garment state, increasing her healing and converting her Normal and Charged Attacks to Hydro DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Nereids_Ascension.png",
+      "details_html": "<div class='skill-section'><b>Nereid's Ascension</b><br>Deals AoE Hydro DMG and puts Kokomi in the Ceremonial Garment state, increasing healing and converting her attacks to Hydro DMG. Healing and DMG scale with Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "10.4% Max HP",
+          "normal_heal": "8.0% Max HP + 770",
+          "charged_heal": "9.4% Max HP + 902",
+          "duration": "10s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "11.2% Max HP",
+          "normal_heal": "8.6% Max HP + 847",
+          "charged_heal": "10.1% Max HP + 992",
+          "duration": "10s",
+          "cd": "18s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Tamanooya's Casket",
+      "phase": "Ascension Phase 1",
+      "desc": "If Kokomi's own Bake-Kurage is on the field when she uses Nereid's Ascension, the Bake-Kurage's duration will be refreshed."
+    },
+    {
+      "name": "Song of Pearls",
+      "phase": "Ascension Phase 4",
+      "desc": "While donning the Ceremonial Garment, Kokomi's Normal and Charged Attack DMG increases by 15% of her Healing Bonus."
+    },
+    {
+      "name": "Princess of Watatsumi",
+      "phase": "Passive",
+      "desc": "Decreases swimming Stamina consumption for your own party members by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "At Water's Edge",
+      "phase": "Constellation Lv. 1",
+      "desc": "While donning the Ceremonial Garment, Kokomi's Normal and Charged Attacks restore 0.8 Energy for her upon hitting opponents (once every 0.2s)."
+    },
+    {
+      "name": "The Clouds Like Waves Rippling",
+      "phase": "Constellation Lv. 2",
+      "desc": "Kokomi gains a 4.5s interruption resistance buff after using Nereid's Ascension. Bake-Kurage deals 30% more DMG to enemies with less than 50% HP."
+    },
+    {
+      "name": "The Moon, A Ship O'er the Seas",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Nereid's Ascension by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "The Moon Overlooks the Waters",
+      "phase": "Constellation Lv. 4",
+      "desc": "While donning the Ceremonial Garment, Kokomi's Normal Attack speed is increased by 10% and Normal Attacks that hit opponents restore 0.8 Energy for her (once every 0.2s)."
+    },
+    {
+      "name": "All Streams Flow to the Sea",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Kurage's Oath by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Sango Isshin",
+      "phase": "Constellation Lv. 6",
+      "desc": "While donning the Ceremonial Garment, Kokomi gains a 40% Hydro DMG Bonus for 4s when her Normal and Charged Attacks heal, or when her Bake-Kurage heals."
+    }
+  ]
+}

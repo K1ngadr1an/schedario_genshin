@@ -1,0 +1,211 @@
+{
+  "displayName": "Hu Tao",
+  "img": "images/characters/hu_tao.png",
+  "tags": ["Polearm", "Pyro", "Liyue", "5★", "DPS", "Director"],
+  "description": "The 77th Director of the Wangsheng Funeral Parlor, Hu Tao is a Pyro polearm user who excels at high single-target damage and Pyro reactions.",
+  "weapons": [
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_Homa.png",
+      "note": "Best in Slot"
+    },
+    {
+      "name": "Dragon's Bane",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Dragons_Bane.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Deathmatch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Deathmatch.png",
+      "note": "CRIT Rate"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Shimenawa's_Reminiscence.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Shimenawa's Reminiscence (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / ATK%" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT DMG / CRIT Rate" }
+  ],
+  "substats": ["CRIT DMG", "CRIT Rate", "HP%", "ATK%"],
+  "talents": [
+    "Normal Attack: Secret Spear of Wangsheng",
+    "Guide to Afterlife",
+    "Spirit Soother"
+  ],
+  "info": "Hu Tao is a top-tier Pyro DPS, excelling at single-target damage and Vaporize/Melt reactions. Build her for CRIT DMG, HP%, and Pyro DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Staff of Homa",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_Homa.png",
+        "note": "Best in Slot"
+      },
+      "artifacts": [
+        {
+          "name": "Crimson Witch of Flames (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Hu Tao" },
+      { "name": "Xingqiu" },
+      { "name": "Yelan" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Hu Tao" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Hu Tao" },
+      { "name": "Thoma" },
+      { "name": "Yelan" },
+      { "name": "Albedo" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Secret Spear of Wangsheng",
+      "desc": "Performs up to 6 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Secret_Spear_of_Wangsheng.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 6 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "46.9%",
+          "hit2": "48.3%",
+          "hit3": "29.0% + 29.0%",
+          "hit4": "76.6%",
+          "hit5": "77.7%",
+          "hit6": "97.4%",
+          "charged": "121%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "50.7%",
+          "hit2": "52.2%",
+          "hit3": "31.3% + 31.3%",
+          "hit4": "82.7%",
+          "hit5": "83.9%",
+          "hit6": "105.1%",
+          "charged": "132%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Guide to Afterlife",
+      "desc": "Hu Tao consumes a portion of her HP to enter the Paramita Papilio state, increasing her ATK based on Max HP and converting her attack DMG to Pyro.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Guide_to_Afterlife.png",
+      "details_html": "<div class='skill-section'><b>Guide to Afterlife</b><br>Consumes a portion of HP to enter the Paramita Papilio state, increasing ATK based on Max HP and converting attack DMG to Pyro. Charged Attacks apply the Blood Blossom effect, dealing Pyro DMG over time.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "atk_bonus": "3.84% Max HP",
+          "blood_blossom": "64% ATK",
+          "duration": "9s",
+          "cd": "16s"
+        },
+        {
+          "level": 2,
+          "atk_bonus": "4.13% Max HP",
+          "blood_blossom": "69% ATK",
+          "duration": "9s",
+          "cd": "16s"
+        }
+      ]
+    },
+    {
+      "name": "Spirit Soother",
+      "desc": "Hu Tao commands a blazing spirit to attack, dealing massive Pyro DMG in a large AoE. Regenerates HP for each enemy hit if Hu Tao's HP is below or equal to 50%.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Spirit_Soother.png",
+      "details_html": "<div class='skill-section'><b>Spirit Soother</b><br>Commands a blazing spirit to attack, dealing massive Pyro DMG in a large AoE. Regenerates HP for each enemy hit if Hu Tao's HP is below or equal to 50%.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "373% ATK",
+          "hp_regen": "6.26% Max HP per enemy",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "401% ATK",
+          "hp_regen": "6.73% Max HP per enemy",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Flutter By",
+      "phase": "Ascension Phase 1",
+      "desc": "When Paramita Papilio state ends, all allies' CRIT Rate is increased by 12% for 8s."
+    },
+    {
+      "name": "Sanguine Rouge",
+      "phase": "Ascension Phase 4",
+      "desc": "Hu Tao gains a 33% Pyro DMG Bonus when her HP is equal to or less than 50%."
+    },
+    {
+      "name": "The More the Merrier",
+      "phase": "Passive",
+      "desc": "When Hu Tao cooks a dish perfectly, she has an 18% chance to receive an additional 'Suspicious' dish of the same type."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Crimson Bouquet",
+      "phase": "Constellation Lv. 1",
+      "desc": "Hu Tao can use Charged Attacks without consuming stamina while in Paramita Papilio state."
+    },
+    {
+      "name": "Ominous Rainfall",
+      "phase": "Constellation Lv. 2",
+      "desc": "Increases Blood Blossom DMG by 10% of Hu Tao's Max HP at the time the effect is applied."
+    },
+    {
+      "name": "Lingering Carmine",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Guide to Afterlife by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Garden of Eternal Rest",
+      "phase": "Constellation Lv. 4",
+      "desc": "Enemies affected by Blood Blossom are reduced by 12% in DEF."
+    },
+    {
+      "name": "Floral Incense",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Spirit Soother by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Butterfly's Embrace",
+      "phase": "Constellation Lv. 6",
+      "desc": "Hu Tao receives a one-time revival when taking fatal damage, restoring 200% of her Max HP and granting 100% CRIT Rate and 200% RES to interruption for 10s."
+    }
+  ]
+}

@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genshin Impact Character Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Apri menu"
+        aria-expanded="false"
+        aria-controls="navbarModal"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="navbar-modal-overlay" id="navbarModalOverlay"></div>
+    <div class="navbar-modal" id="navbarModal">
+      <button
+        class="close-navbar-modal"
+        id="closeNavbarModal"
+        aria-label="Chiudi menu"
+      >
+        &times;
+      </button>
+      <nav class="navbar-modal-links">
+        <a href="index.html" class="nav-link active"
+          ><span>🏠</span> Galleria</a
+        >
+        <a href="gestione personaggio.html" class="nav-link" id="nav-gestione"
+          ><span>🛠️</span> Gestione</a
+        >
+        <a href="calendario.html" class="nav-link"
+          ><span>📅</span> Calendario</a
+        >
+        <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+        <a href="build-rating.html" class="nav-link"
+          ><span>⭐</span> Build Rating</a
+        >
+        <a href="migliori%20team%20abisso.html" class="nav-link"
+          ><span>👥</span> Migliori Team Abisso</a
+        >
+        <a href="best_comp_teatro.html" class="nav-link"
+          ><span>🎭</span> Migliori Team Teatro Immaginario</a
+        >
+        <a href="calcolatore-danni.html" class="nav-link"
+          ><span>⚔️</span> Calcolatore Danni</a
+        >
+        <a href="Community Build.html" class="nav-link"
+          ><span>🏗️</span> Community Build</a
+        >
+        <a href="community_top_build.html" class="nav-link"
+          ><span>🏆</span> Top Build</a
+        >
+      </nav>
+    </div>
+    <script>
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const navbarModal = document.getElementById("navbarModal");
+      const navbarModalOverlay = document.getElementById("navbarModalOverlay");
+      const closeNavbarModal = document.getElementById("closeNavbarModal");
+      function openNavbarModal() {
+        navbarModal.classList.add("open");
+        navbarModalOverlay.classList.add("open");
+        document.body.classList.add("navbar-modal-open");
+      }
+      function closeNavbar() {
+        navbarModal.classList.remove("open");
+        navbarModalOverlay.classList.remove("open");
+        document.body.classList.remove("navbar-modal-open");
+      }
+      hamburgerBtn.addEventListener("click", openNavbarModal);
+      closeNavbarModal.addEventListener("click", closeNavbar);
+      navbarModalOverlay.addEventListener("click", closeNavbar);
+      // Chiudi con ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeNavbar();
+      });
+    </script>
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #0f1419, #1a1f2e, #2d3748);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 3.5rem;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 20% 80%,
+            rgba(100, 255, 218, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(176, 234, 255, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 40%,
+            rgba(255, 100, 150, 0.05) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(15, 20, 25, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        padding: 0.8rem 0;
+        backdrop-filter: blur(20px);
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem;
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        letter-spacing: 0.8px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(100, 255, 218, 0.05);
+        border: 1px solid transparent;
+      }
+
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .nav-link:hover::before {
+        left: 100%;
+      }
+
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.15);
+        color: #64ffda;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.2),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        transform: translateY(-2px);
+        border-color: rgba(100, 255, 218, 0.3);
+      }
+
+      .nav-link.active {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4),
+          0 2px 12px rgba(100, 255, 218, 0.2);
+        cursor: default;
+        font-weight: 800;
+        border-color: rgba(100, 255, 218, 0.5);
+      }
+
+      body {
+        padding-top: 4rem;
+      }
+
+      /* Stili per i controlli utente */
+      #userControls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: auto;
+      }
+
+      #userControls .btn {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 6px 24px rgba(100, 255, 218, 0.25),
+          0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Fredoka", sans-serif;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        transform: translateY(3px) !important;
+      }
+
+      #userControls .btn:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda) !important;
+        color: #16213e !important;
+        box-shadow: 0 10px 35px rgba(100, 255, 218, 0.4),
+          0 4px 20px rgba(100, 255, 218, 0.3);
+        transform: translateY(-2px) scale(1.03);
+      }
+
+      #userControls {
+        margin-right: 1rem;
+      }
+
+      /* CSS per i filtri della galleria */
+      .gallery-filters {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: rgba(15, 20, 25, 0.8);
+        border-radius: 20px;
+        border: 2px solid rgba(100, 255, 218, 0.2);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+          0 4px 20px rgba(100, 255, 218, 0.1);
+        position: relative;
+        overflow: hidden;
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .gallery-filters::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.05),
+          transparent
+        );
+        transition: left 0.8s ease;
+      }
+
+      .gallery-filters:hover::before {
+        left: 100%;
+      }
+
+      .gallery-filters .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        position: relative;
+      }
+
+      .gallery-filters label {
+        color: #64ffda;
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.3rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+
+      .gallery-filters label::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background: linear-gradient(90deg, #64ffda, transparent);
+        border-radius: 1px;
+      }
+
+      .gallery-filters select,
+      .gallery-filters input[type="text"] {
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.9),
+          rgba(15, 20, 25, 0.9)
+        );
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        padding: 1rem 1.2rem;
+        color: #e6f3ff;
+        font-size: 1rem;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gallery-filters select:focus,
+      .gallery-filters input[type="text"]:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.1),
+          0 6px 20px rgba(100, 255, 218, 0.2);
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.95),
+          rgba(15, 20, 25, 0.95)
+        );
+        transform: translateY(-2px);
+      }
+
+      .gallery-filters select:hover,
+      .gallery-filters input[type="text"]:hover {
+        border-color: rgba(100, 255, 218, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.85),
+          rgba(15, 20, 25, 0.85)
+        );
+        transform: translateY(-1px);
+      }
+
+      .gallery-filters option {
+        background: #16213e;
+        color: #e6f3ff;
+        padding: 0.8rem;
+        font-weight: 600;
+      }
+
+      .gallery-filters option:hover {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+      }
+
+      .gallery-filters .btn {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 12px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 6px 25px rgba(100, 255, 218, 0.3),
+          0 2px 12px rgba(100, 255, 218, 0.2);
+        position: relative;
+        overflow: hidden;
+        font-family: "Fredoka", sans-serif;
+      }
+
+      .gallery-filters .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .gallery-filters .btn:hover::before {
+        left: 100%;
+      }
+
+      .gallery-filters .btn:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 10px 35px rgba(100, 255, 218, 0.4),
+          0 4px 20px rgba(100, 255, 218, 0.3);
+      }
+
+      .gallery-filters .btn:active {
+        transform: translateY(-1px) scale(1.01);
+      }
+
+      .gallery-filters .btn-secondary {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.3),
+          0 2px 12px rgba(102, 126, 234, 0.2);
+      }
+
+      .gallery-filters .btn-secondary:hover {
+        /* Rimosso effetto hover */
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3),
+          0 2px 10px rgba(102, 126, 234, 0.2);
+        /* Nessuna trasformazione o cambio colore */
+      }
+
+      @media (max-width: 700px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          font-size: 1rem;
+          padding: 0.5rem 0;
+        }
+        .nav-link {
+          padding: 0.6rem 1rem;
+          font-size: 1rem;
+        }
+
+        .gallery-filters {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          padding: 1.5rem;
+        }
+
+        .gallery-filters select,
+        .gallery-filters input[type="text"] {
+          padding: 0.8rem 1rem;
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Ottimizzazioni per schermi 2K */
+      @media (min-width: 1400px) {
+        .gallery-filters {
+          max-width: 2000px;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          padding: 2.5rem;
+        }
+      }
+
+      @media (min-width: 1800px) {
+        .gallery-filters {
+          max-width: 2200px;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2.5rem;
+          padding: 3rem;
+        }
+      }
+
+      @media (min-width: 2200px) {
+        .gallery-filters {
+          max-width: 2400px;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 3rem;
+          padding: 3.5rem;
+        }
+      }
+
+      /* Miglioramento della griglia personaggi */
+      .character-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+        max-width: 1800px;
+        margin: 0 auto;
+      }
+
+      /* Ottimizzazioni griglia per schermi 2K */
+      @media (min-width: 1400px) {
+        .character-grid {
+          max-width: 2000px;
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: 2.5rem;
+          padding: 2.5rem 0;
+        }
+      }
+
+      @media (min-width: 1800px) {
+        .character-grid {
+          max-width: 2200px;
+          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+          gap: 3rem;
+          padding: 3rem 0;
+        }
+      }
+
+      @media (min-width: 2200px) {
+        .character-grid {
+          max-width: 2400px;
+          grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+          gap: 3.5rem;
+          padding: 3.5rem 0;
+        }
+      }
+
+      .character-card {
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.95),
+          rgba(15, 20, 25, 0.95)
+        );
+        border-radius: 20px;
+        padding: 2rem;
+        border: 2px solid rgba(100, 255, 218, 0.1);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+          0 4px 20px rgba(100, 255, 218, 0.1);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+      }
+
+      .character-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.1),
+          transparent
+        );
+        transition: left 0.6s ease;
+      }
+
+      .character-card:hover::before {
+        left: 100%;
+      }
+
+      .character-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+          0 8px 30px rgba(100, 255, 218, 0.2);
+        border-color: rgba(100, 255, 218, 0.3);
+      }
+
+      .character-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 20px;
+        object-fit: cover;
+        margin: 0 auto 1.5rem auto;
+        display: block;
+        border: 3px solid rgba(100, 255, 218, 0.3);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3),
+          0 4px 15px rgba(100, 255, 218, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .character-card:hover .character-image {
+        border-color: rgba(100, 255, 218, 0.6);
+        transform: scale(1.05);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4),
+          0 6px 20px rgba(100, 255, 218, 0.3);
+      }
+
+      .character-name {
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+        display: block;
+      }
+
+      .character-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        background: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: rgba(100, 255, 218, 0.08);
+        border-radius: 8px;
+        padding: 0.2rem 0.8rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #e0e0e0;
+        border: none;
+        box-shadow: none;
+        justify-content: center;
+      }
+
+      .info-item:hover {
+        background: rgba(100, 255, 218, 0.15);
+        border-color: rgba(100, 255, 218, 0.4);
+        transform: translateY(-2px);
+      }
+
+      .info-label {
+        font-size: 0.85rem;
+        color: #64ffda;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .info-value {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #e0e0e0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .character-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .action-btn {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        overflow: hidden;
+        font-family: "Fredoka", sans-serif;
+      }
+
+      .action-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .action-btn:hover::before {
+        left: 100%;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.3),
+          0 2px 10px rgba(100, 255, 218, 0.2);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 30px rgba(100, 255, 218, 0.4),
+          0 4px 15px rgba(100, 255, 218, 0.3);
+      }
+
+      .btn-secondary {
+        background: linear-gradient(135deg, #64ffda, #00d4aa) !important;
+        color: #16213e !important;
+        border: none;
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 6px 24px rgba(100, 255, 218, 0.25),
+          0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Fredoka", sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        outline: none;
+        transform: translateY(2px);
+      }
+      .btn-secondary:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda) !important;
+        color: #16213e !important;
+        box-shadow: 0 10px 35px rgba(100, 255, 218, 0.4),
+          0 4px 20px rgba(100, 255, 218, 0.3);
+        transform: translateY(-2px) scale(1.03);
+      }
+      .btn-secondary:active {
+        transform: scale(0.98);
+      }
+
+      /* Miglioramento sezioni */
+      .character-gallery h2,
+      .character-selection h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 2rem;
+        background: linear-gradient(135deg, #64ffda, #00d4aa, #64ffda);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientShift 3s ease-in-out infinite;
+        letter-spacing: 2px;
+        text-shadow: 0 0 30px rgba(100, 255, 218, 0.3);
+        position: relative;
+      }
+
+      .character-gallery h2::after,
+      .character-selection h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #64ffda, transparent);
+        border-radius: 2px;
+      }
+
+      @keyframes gradientShift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      /* Container principale */
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Scroll to Top Button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 65px;
+        height: 65px;
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        border: none;
+        border-radius: 50%;
+        color: #16213e;
+        font-size: 1.6rem;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 8px 30px rgba(100, 255, 218, 0.4),
+          0 4px 15px rgba(100, 255, 218, 0.3);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+      }
+
+      .scroll-to-top.show {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      .scroll-to-top:hover {
+        transform: translateY(-8px) scale(1.1);
+        box-shadow: 0 12px 40px rgba(100, 255, 218, 0.6),
+          0 6px 20px rgba(100, 255, 218, 0.4);
+      }
+
+      .scroll-to-top:active {
+        transform: translateY(-4px) scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .scroll-to-top {
+          bottom: 1.5rem;
+          right: 1.5rem;
+          width: 55px;
+          height: 55px;
+          font-size: 1.3rem;
+        }
+      }
+
+      /* Stili per la sezione di gestione personaggi */
+      .character-selection {
+        background: linear-gradient(
+          135deg,
+          rgba(15, 20, 25, 0.9),
+          rgba(26, 32, 44, 0.9)
+        );
+        border-radius: 25px;
+        padding: 3rem;
+        margin-top: 3rem;
+        border: 2px solid rgba(100, 255, 218, 0.2);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4),
+          0 6px 25px rgba(100, 255, 218, 0.1);
+        backdrop-filter: blur(20px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .character-selection::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.05),
+          transparent
+        );
+        transition: left 1s ease;
+      }
+
+      .character-selection:hover::before {
+        left: 100%;
+      }
+
+      .character-selection .form-group {
+        margin-bottom: 2rem;
+      }
+
+      .character-selection label {
+        color: #64ffda;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        display: block;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .character-selection select,
+      .character-selection input[type="text"],
+      .character-selection input[type="number"] {
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.95),
+          rgba(15, 20, 25, 0.95)
+        );
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        padding: 1rem 1.2rem;
+        color: #e6f3ff;
+        font-size: 1rem;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        width: 100%;
+      }
+
+      .character-selection select:focus,
+      .character-selection input[type="text"]:focus,
+      .character-selection input[type="number"]:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.1),
+          0 6px 20px rgba(100, 255, 218, 0.2);
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.98),
+          rgba(15, 20, 25, 0.98)
+        );
+        transform: translateY(-2px);
+      }
+
+      .character-selection select:hover,
+      .character-selection input[type="text"]:hover,
+      .character-selection input[type="number"]:hover {
+        border-color: rgba(100, 255, 218, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.85),
+          rgba(15, 20, 25, 0.85)
+        );
+        transform: translateY(-1px);
+      }
+
+      .character-selection .btn {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 12px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 6px 25px rgba(100, 255, 218, 0.3),
+          0 2px 12px rgba(100, 255, 218, 0.2);
+        position: relative;
+        overflow: hidden;
+        font-family: "Fredoka", sans-serif;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .character-selection .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .character-selection .btn:hover::before {
+        left: 100%;
+      }
+
+      .character-selection .btn:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 10px 35px rgba(100, 255, 218, 0.4),
+          0 4px 20px rgba(100, 255, 218, 0.3);
+      }
+
+      .character-selection .btn:active {
+        transform: translateY(-1px) scale(1.01);
+      }
+
+      .character-selection .btn-danger {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+        box-shadow: 0 6px 25px rgba(255, 107, 107, 0.3),
+          0 2px 12px rgba(255, 107, 107, 0.2);
+      }
+
+      .character-selection .btn-danger:hover {
+        box-shadow: 0 10px 35px rgba(255, 107, 107, 0.4),
+          0 4px 20px rgba(255, 107, 107, 0.3);
+      }
+
+      .character-selection .btn-success {
+        background: linear-gradient(135deg, #51cf66, #40c057);
+        box-shadow: 0 6px 25px rgba(81, 207, 102, 0.3),
+          0 2px 12px rgba(81, 207, 102, 0.2);
+      }
+
+      .character-selection .btn-success:hover {
+        box-shadow: 0 10px 35px rgba(81, 207, 102, 0.4),
+          0 4px 20px rgba(81, 207, 102, 0.3);
+      }
+
+      /* Griglia artefatti */
+      .artifact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Sezioni interne */
+      .character-info,
+      .talents,
+      .artifacts,
+      .saved-teams {
+        background: rgba(15, 20, 25, 0.6);
+        border-radius: 20px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+          0 4px 15px rgba(100, 255, 218, 0.1);
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .character-info::before,
+      .talents::before,
+      .artifacts::before,
+      .saved-teams::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.05),
+          transparent
+        );
+        transition: left 0.8s ease;
+      }
+
+      .character-info:hover::before,
+      .talents:hover::before,
+      .artifacts:hover::before,
+      .saved-teams:hover::before {
+        left: 100%;
+      }
+
+      .character-info h3,
+      .talents h3,
+      .artifacts h3,
+      .saved-teams h3 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        color: #64ffda;
+        text-align: center;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+
+      .character-info h3::after,
+      .talents h3::after,
+      .artifacts h3::after,
+      .saved-teams h3::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #64ffda, transparent);
+        border-radius: 1px;
+      }
+
+      /* Controlli artefatti */
+      .artifact-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: rgba(100, 255, 218, 0.05);
+        border-radius: 15px;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .filter-controls,
+      .view-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .filter-controls label {
+        color: #64ffda;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+
+      .filter-controls input,
+      .filter-controls select {
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.9),
+          rgba(15, 20, 25, 0.9)
+        );
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        color: #e6f3ff;
+        font-size: 0.9rem;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .filter-controls input:focus,
+      .filter-controls select:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+      }
+
+      /* Team controls */
+      .team-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Output JSON */
+      .output {
+        background: rgba(15, 20, 25, 0.8);
+        border-radius: 15px;
+        padding: 2rem;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+          0 4px 15px rgba(100, 255, 218, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      .output h3 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        color: #64ffda;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      .output pre {
+        background: rgba(26, 32, 44, 0.9);
+        border-radius: 12px;
+        padding: 1.5rem;
+        color: #e6f3ff;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        overflow-x: auto;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Messaggio nessun team */
+      .no-teams-message {
+        text-align: center;
+        padding: 3rem;
+        color: #b0eaff;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .no-teams-message p {
+        margin-bottom: 1rem;
+      }
+
+      /* Azioni */
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin: 2rem 0;
+        padding: 2rem;
+        background: rgba(100, 255, 218, 0.05);
+        border-radius: 20px;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+      }
+
+      /* Responsive design migliorato */
+      @media (max-width: 1200px) {
+        .character-grid {
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 1.5rem;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .character-grid {
+          grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+          gap: 1.2rem;
+        }
+
+        .artifact-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+      }
+
+      @media (max-width: 600px) {
+        .character-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .character-card {
+          padding: 1.5rem;
+        }
+
+        .character-selection {
+          padding: 2rem 1.5rem;
+        }
+
+        .artifact-controls {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .filter-controls,
+        .view-controls {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+
+      /* Suggerimenti di ricerca */
+      .search-suggestion {
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.95),
+          rgba(15, 20, 25, 0.95)
+        );
+        border-radius: 15px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+          0 4px 15px rgba(100, 255, 218, 0.2);
+        backdrop-filter: blur(15px);
+        animation: slideInDown 0.5s ease-out;
+      }
+
+      @keyframes slideInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Stati di caricamento */
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        color: #64ffda;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .loading::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(100, 255, 218, 0.3);
+        border-top: 3px solid #64ffda;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 1rem;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Animazioni di entrata per le card */
+      .character-card {
+        animation: fadeInUp 0.6s ease-out;
+        animation-fill-mode: both;
+      }
+
+      .character-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .character-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .character-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .character-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .character-card:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .character-card:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Effetti hover avanzati */
+      .character-card:hover .character-name {
+        animation: glow 1.5s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+        to {
+          text-shadow: 0 0 25px rgba(100, 255, 218, 0.6);
+        }
+      }
+
+      /* Scrollbar personalizzata */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(15, 20, 25, 0.8);
+        border-radius: 6px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        border-radius: 6px;
+        border: 2px solid rgba(15, 20, 25, 0.8);
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda);
+      }
+
+      /* Selezione testo */
+      ::selection {
+        background: rgba(100, 255, 218, 0.3);
+        color: #e6f3ff;
+      }
+
+      ::-moz-selection {
+        background: rgba(100, 255, 218, 0.3);
+        color: #e6f3ff;
+      }
+
+      /* Focus visibile per accessibilità */
+      *:focus {
+        outline: 2px solid #64ffda;
+        outline-offset: 2px;
+      }
+
+      /* Transizioni fluide per tutti gli elementi */
+      * {
+        transition: all 0.2s ease;
+      }
+
+      /* Effetti particellari per il background */
+      body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+            circle at 25% 25%,
+            rgba(100, 255, 218, 0.03) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 75% 75%,
+            rgba(176, 234, 255, 0.03) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: -1;
+        animation: float 20s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+        }
+      }
+
+      /* --- MIGLIORIE ACCESSIBILITÀ E RESPONSIVITÀ --- */
+
+      .character-name {
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+        display: block;
+      }
+
+      .info-item,
+      .info-value,
+      .info-label {
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+      }
+
+      label,
+      .info-label {
+        color: #64ffda !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .form-group {
+        justify-content: flex-end;
+        min-width: 0;
+      }
+
+      .gallery-filters .form-group label {
+        margin-bottom: 0.2rem;
+      }
+
+      .gallery-filters select,
+      .gallery-filters input[type="text"] {
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 900px) {
+        .gallery-filters {
+          grid-template-columns: 1fr 1fr;
+        }
+        .character-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .gallery-filters {
+          grid-template-columns: 1fr;
+        }
+        .character-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .btn,
+      .action-btn {
+        min-width: 110px;
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+        white-space: nowrap;
+      }
+    </style>
+
+    <div class="container">
+      <!-- Galleria Personaggi -->
+      <section class="character-gallery" id="character-gallery">
+        <h2>🎭 Galleria Personaggi</h2>
+
+        <!-- Filtri Galleria -->
+        <div class="gallery-filters">
+          <div class="form-group">
+            <label for="elementFilter">Elemento</label>
+            <select id="elementFilter" onchange="filterCharacters()">
+              <option value="">Tutti</option>
+              <option value="Pyro">🔥 Pyro</option>
+              <option value="Hydro">💧 Hydro</option>
+              <option value="Electro">⚡ Electro</option>
+              <option value="Cryo">❄️ Cryo</option>
+              <option value="Anemo">💨 Anemo</option>
+              <option value="Geo">🪨 Geo</option>
+              <option value="Dendro">🌱 Dendro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="weaponFilter">Arma</label>
+            <select id="weaponFilter" onchange="filterCharacters()">
+              <option value="">Tutte</option>
+              <option value="Sword">⚔️ Spada</option>
+              <option value="Claymore">🗡️ Spadone</option>
+              <option value="Polearm">🔱 Lancia</option>
+              <option value="Bow">🏹 Arco</option>
+              <option value="Catalyst">📖 Catalizzatore</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="regionFilter">Regione</label>
+            <select id="regionFilter" onchange="filterCharacters()">
+              <option value="">Tutte</option>
+              <option value="Mondstadt">🏰 Mondstadt</option>
+              <option value="Liyue">🏮 Liyue</option>
+              <option value="Inazuma">⛩️ Inazuma</option>
+              <option value="Sumeru">🏛️ Sumeru</option>
+              <option value="Fontaine">🌊 Fontaine</option>
+              <option value="Natlan">🌋 Natlan</option>
+              <option value="Snezhnaya">❄️ Snezhnaya</option>
+              <option value="Khaenri'ah">⚫ Khaenri'ah</option>
+              <option value="Other">🌍 Altro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rarityFilter">Rarità</label>
+            <select id="rarityFilter" onchange="filterCharacters()">
+              <option value="">Tutte</option>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="searchInput">Cerca</label>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Nome personaggio..."
+              oninput="filterCharacters()"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="sortCharacters">Ordina</label>
+            <select id="sortCharacters" onchange="filterCharacters()">
+              <option value="name-asc">Nome A-Z</option>
+              <option value="name-desc">Nome Z-A</option>
+              <option value="rarity-desc">Rarità ↓</option>
+              <option value="rarity-asc">Rarità ↑</option>
+              <option value="element">Elemento</option>
+              <option value="weapon">Arma</option>
+              <option value="region">Regione</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>&nbsp;</label>
+            <button class="btn btn-secondary" onclick="resetFilters()">
+              🔄 Reset Filtri
+            </button>
+          </div>
+        </div>
+
+        <!-- Suggerimento Ricerca -->
+        <div
+          id="searchSuggestion"
+          class="search-suggestion"
+          style="display: none"
+        ></div>
+
+        <!-- Griglia Personaggi -->
+        <div class="character-grid" id="characterGrid"></div>
+      </section>
+
+      <!-- Gestione Personaggi -->
+      <section
+        class="character-selection"
+        id="character-selection"
+        tabindex="-1"
+        style="display: none"
+        data-anchor
+      >
+        <a id="gestione"></a>
+        <h2>⚔️ Gestione Personaggio</h2>
+
+        <!-- Selezione Personaggio -->
+        <div class="form-group">
+          <label for="characterSelect">Seleziona Personaggio</label>
+          <select id="characterSelect" onchange="selectCharacter(this.value)">
+            <option value="" disabled selected>Seleziona personaggio</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="newCharacterName">Aggiungi Nuovo</label>
+          <input
+            type="text"
+            id="newCharacterName"
+            placeholder="Nome personaggio"
+          />
+          <button class="btn" onclick="addNewCharacter()">➕ Aggiungi</button>
+        </div>
+
+        <!-- Informazioni Personaggio -->
+        <div class="character-info">
+          <h3>📋 Informazioni Base</h3>
+          <div class="artifact-grid">
+            <div class="form-group">
+              <label for="charName">Nome</label>
+              <input type="text" id="charName" placeholder="Nome personaggio" />
+            </div>
+            <div class="form-group">
+              <label for="weapon">Arma</label>
+              <input type="text" id="weapon" placeholder="Tipo arma" />
+            </div>
+            <div class="form-group">
+              <label for="level">Livello</label>
+              <input
+                type="number"
+                id="level"
+                placeholder="Livello"
+                min="1"
+                max="90"
+              />
+            </div>
+            <div class="form-group">
+              <label for="constellation">Costellazione</label>
+              <input
+                type="number"
+                id="constellation"
+                placeholder="Costellazione"
+                min="0"
+                max="6"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Talenti -->
+        <div class="talents">
+          <h3>🎯 Talenti</h3>
+          <div class="artifact-grid">
+            <div class="form-group">
+              <label for="normalAttack">Attacco Normale</label>
+              <input
+                type="number"
+                id="normalAttack"
+                placeholder="Livello"
+                min="1"
+                max="15"
+              />
+            </div>
+            <div class="form-group">
+              <label for="elementalSkill">Abilità Elementale</label>
+              <input
+                type="number"
+                id="elementalSkill"
+                placeholder="Livello"
+                min="1"
+                max="15"
+              />
+            </div>
+            <div class="form-group">
+              <label for="burst">Burst</label>
+              <input
+                type="number"
+                id="burst"
+                placeholder="Livello"
+                min="1"
+                max="15"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Artefatti -->
+        <div class="artifacts">
+          <h3>💎 Artefatti</h3>
+
+          <!-- Controlli Artefatti -->
+          <div class="artifact-controls">
+            <div class="filter-controls">
+              <label for="slotFilter">Filtra per Slot:</label>
+              <input
+                type="text"
+                id="slotFilter"
+                placeholder="Slot..."
+                oninput="filterArtifacts()"
+              />
+
+              <label for="setFilter">Filtra per Set:</label>
+              <input
+                type="text"
+                id="setFilter"
+                placeholder="Set..."
+                oninput="filterArtifacts()"
+              />
+
+              <label for="sortArtifacts">Ordina:</label>
+              <select id="sortArtifacts" onchange="sortArtifacts()">
+                <option value="">Nessun ordine</option>
+                <option value="slot">Slot</option>
+                <option value="set">Set</option>
+                <option value="level">Livello</option>
+              </select>
+            </div>
+
+            <div class="view-controls">
+              <button
+                id="toggleViewBtn"
+                class="btn btn-secondary"
+                onclick="toggleArtifactView()"
+              >
+                📊 Vista Tabella
+              </button>
+              <button class="btn" onclick="addArtifact()">
+                ➕ Aggiungi Artefatto
+              </button>
+            </div>
+          </div>
+
+          <!-- Lista Artefatti (Vista Form) -->
+          <div id="artifactList"></div>
+
+          <!-- Tabella Artefatti (Vista Tabella) -->
+          <div id="artifactTable" class="artifact-table" style="display: none">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Slot</th>
+                  <th>Set</th>
+                  <th>Main Stat</th>
+                  <th>Sub Stat 1</th>
+                  <th>Sub Stat 2</th>
+                  <th>Sub Stat 3</th>
+                  <th>Sub Stat 4</th>
+                  <th>Livello</th>
+                  <th>Azioni</th>
+                </tr>
+              </thead>
+              <tbody id="artifactTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Team Comps Salvati -->
+        <div class="saved-teams">
+          <h3>👥 Team Comps Salvati</h3>
+          <div class="team-controls" style="margin-bottom: 1rem">
+            <button class="btn btn-secondary" onclick="refreshSavedTeams()">
+              🔄 Aggiorna Team Comps
+            </button>
+            <button class="btn" onclick="openCharacterDetail(currentCharacter)">
+              📝 Modifica Team Comps
+            </button>
+          </div>
+          <div id="savedTeamsContainer">
+            <div class="no-teams-message">
+              <p>Nessun team comp salvato per questo personaggio.</p>
+              <p>Clicca su "Dettagli" per configurare i team comps.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Azioni -->
+        <div class="actions">
+          <button class="btn" onclick="saveData()">💾 Salva</button>
+          <button class="btn btn-secondary" onclick="loadData()">
+            📂 Carica
+          </button>
+          <button class="btn btn-danger" onclick="resetData()">🔄 Reset</button>
+          <button class="btn btn-success" onclick="exportCharacterData()">
+            📤 Esporta
+          </button>
+        </div>
+
+        <!-- Output JSON -->
+        <div class="output">
+          <h3>📄 Dati JSON</h3>
+          <pre id="output"></pre>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Scroll to Top Button -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      onclick="scrollToTop()"
+      aria-label="Torna in cima"
+    >
+      ↑
+    </button>
+
+    <!-- Modal custom per auto-logout -->
+    <div id="autoLogoutModal" class="custom-modal" style="display: none">
+      <div class="custom-modal-content">
+        <h2>Sei stato disconnesso</h2>
+        <p>Sei stato disconnesso per inattività.</p>
+        <button onclick="redirectToLogin()" class="btn btn-secondary">
+          OK
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Scroll to Top functionality
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "auto",
+        });
+      }
+
+      // Show/hide scroll to top button based on scroll position
+      window.addEventListener("scroll", function () {
+        const scrollButton = document.getElementById("scrollToTop");
+        if (window.pageYOffset > 300) {
+          scrollButton.classList.add("show");
+        } else {
+          scrollButton.classList.remove("show");
+        }
+      });
+
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("userControls");
+        if (!el) return;
+        if (user) {
+          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em; transform: translateY(2px);'>Area Utente</a><button class='btn btn-secondary' onclick='doLogout()' style='transform: translateY(2px);'>Logout</button>`;
+        } else {
+          el.innerHTML = `<a href='login.html' class='btn btn-secondary' style='margin-left:0.5em; transform: translateY(2px);'>Login</a> <a href='registrazione.html' class='btn btn-secondary' style='transform: translateY(2px); margin-right:1rem;'>Registrati</a>`;
+        }
+      }
+      function doLogout() {
+        localStorage.removeItem("user");
+        location.reload();
+      }
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+
+      function setActiveNav(el) {
+        document
+          .querySelectorAll(".nav-link")
+          .forEach((link) => link.classList.remove("active"));
+        el.classList.add("active");
+      }
+      // Sezione per mantenere attivo il tab corretto su caricamento pagina
+      document.addEventListener("DOMContentLoaded", function () {
+        // Sezione Gestione attiva se visibile
+        if (
+          document.getElementById("character-selection") &&
+          document.getElementById("character-selection").style.display !==
+            "none"
+        ) {
+          setActiveNav(document.getElementById("nav-gestione"));
+        }
+      });
+
+      // Visualizza la galleria di default, oppure la gestione se hash è #gestione
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash === "#gestione") {
+          showSection("character-selection");
+          setActiveNav(document.getElementById("nav-gestione"));
+          const gestioneAnchor = document.getElementById("gestione");
+          if (gestioneAnchor) {
+            gestioneAnchor.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        } else {
+          showSection("character-gallery");
+          setActiveNav(document.querySelector('.nav-link[href="index.html"]'));
+        }
+      });
+
+      // Carica i personaggi da character.json e popola la select
+      document.addEventListener("DOMContentLoaded", function () {
+        if (document.getElementById("characterSelect")) {
+          fetch("character.json")
+            .then((res) => res.json())
+            .then((data) => {
+              window.allCharacters = data.characters || [];
+              if (typeof populateCharacterList === "function") {
+                populateCharacterList();
+              }
+            });
+        }
+      });
+    </script>
+  </body>
+</html>

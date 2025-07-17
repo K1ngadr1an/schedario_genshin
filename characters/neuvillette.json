@@ -1,0 +1,200 @@
+{
+  "displayName": "Neuvillette",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Neuvillette_Icon.png",
+  "tags": ["Catalyst", "Hydro", "Fontaine", "5★", "DPS", "Chief Justice"],
+  "description": "The Chief Justice of Fontaine, Neuvillette is a powerful Hydro catalyst user who excels at dealing massive AoE Hydro damage and benefits from HP scaling.",
+  "weapons": [
+    {
+      "name": "Tome of the Eternal Flow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Tome_of_the_Eternal_Flow.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Sacrificial Jade",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Jade.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Prototype Amber",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "HP%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Marechaussee Hunter (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+    },
+    {
+      "name": "Heart of Depth (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Marechaussee Hunter (2) + Heart of Depth (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP%" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "HP%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: As Water Seeks Equilibrium",
+    "O Tears, I Shall Repay",
+    "O Tides, I Have Returned"
+  ],
+  "info": "Neuvillette is a Hydro DPS who excels at AoE damage and benefits from HP scaling. Build him for HP%, CRIT, and Hydro DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Tome of the Eternal Flow",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Tome_of_the_Eternal_Flow.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Marechaussee Hunter (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Marechaussee_Hunter.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Neuvillette" },
+      { "name": "Furina" },
+      { "name": "Kazuha" },
+      { "name": "Baizhu" }
+    ],
+    [
+      { "name": "Neuvillette" },
+      { "name": "Yelan" },
+      { "name": "Zhongli" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Neuvillette" },
+      { "name": "Xingqiu" },
+      { "name": "Charlotte" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: As Water Seeks Equilibrium",
+      "desc": "Performs up to 3 consecutive Hydro attacks. Charged Attack: Gathering the power of water, Neuvillette unleashes a powerful torrent that deals continuous AoE Hydro DMG, scaling with Max HP.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_As_Water_Seeks_Equilibrium.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 3 consecutive Hydro attacks.</div><div class='skill-section'><b>Charged Attack</b><br>Gathers the power of water to unleash a torrent, dealing continuous AoE Hydro DMG based on Max HP.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Hydro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "50.0% HP",
+          "hit2": "60.0% HP",
+          "hit3": "80.0% HP",
+          "charged": "180% HP/s",
+          "plunge": "70.0% HP",
+          "lowhigh": "140.0% / 180.0% HP"
+        },
+        {
+          "level": 2,
+          "hit1": "54.0% HP",
+          "hit2": "64.8% HP",
+          "hit3": "86.4% HP",
+          "charged": "194% HP/s",
+          "plunge": "75.6% HP",
+          "lowhigh": "151.2% / 194.4% HP"
+        }
+      ]
+    },
+    {
+      "name": "O Tears, I Shall Repay",
+      "desc": "Neuvillette summons a Raging Waterfall that deals AoE Hydro DMG and heals himself based on Max HP.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_O_Tears_I_Shall_Repay.png",
+      "details_html": "<div class='skill-section'><b>O Tears, I Shall Repay</b><br>Summons a Raging Waterfall, dealing AoE Hydro DMG and healing Neuvillette based on Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "180% HP",
+          "healing": "10% HP",
+          "cd": "12s"
+        },
+        { "level": 2, "skill_dmg": "194% HP", "healing": "11% HP", "cd": "12s" }
+      ]
+    },
+    {
+      "name": "O Tides, I Have Returned",
+      "desc": "Neuvillette unleashes the power of the Law, dealing massive AoE Hydro DMG and increasing his own HP for a short duration.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_O_Tides_I_Have_Returned.png",
+      "details_html": "<div class='skill-section'><b>O Tides, I Have Returned</b><br>Unleashes the power of the Law, dealing massive AoE Hydro DMG and increasing Neuvillette's Max HP for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "320% HP",
+          "hp_bonus": "20%",
+          "duration": "10s",
+          "cd": "18s",
+          "energy_cost": "70"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "345% HP",
+          "hp_bonus": "22%",
+          "duration": "10s",
+          "cd": "18s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Heir to the Ancient Sea's Authority",
+      "phase": "Ascension Phase 1",
+      "desc": "When Neuvillette's HP is above 50%, his Hydro DMG Bonus is increased by 20%."
+    },
+    {
+      "name": "Juridical Exhortation",
+      "phase": "Ascension Phase 4",
+      "desc": "After using his Burst, Neuvillette's Charged Attack DMG is increased by 30% for 10s."
+    },
+    {
+      "name": "Gather Like the Tide",
+      "phase": "Passive",
+      "desc": "When Neuvillette is in the party, swimming stamina consumption is reduced by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Venerable Institution",
+      "phase": "Constellation Lv. 1",
+      "desc": "Neuvillette's Charged Attack CRIT Rate is increased by 15%."
+    },
+    {
+      "name": "Juridical Dominance",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Neuvillette's HP increases or decreases, his Hydro DMG Bonus is increased by 10% for 10s."
+    },
+    {
+      "name": "Supreme Authority",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of O Tears, I Shall Repay by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Impartial Judgement",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Neuvillette's HP is restored, his ATK is increased by 20% for 10s."
+    },
+    {
+      "name": "Absolute Decree",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of O Tides, I Have Returned by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Final Verdict",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using his Burst, Neuvillette's Charged Attack ignores 30% of enemies' Hydro RES for 10s."
+    }
+  ]
+}

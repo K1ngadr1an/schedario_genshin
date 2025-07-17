@@ -1,0 +1,185 @@
+{
+  "displayName": "Mavuika",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Claymore", "Hydro", "Natlan", "DPS", "5★", "Warrior"],
+  "description": "Mavuika è una potente guerriera di Natlan, padrona delle acque e del combattimento con il claymore. Si dice che possa evocare onde impetuose per travolgere i suoi nemici.",
+  "weapons": [
+    {
+      "name": "Beacon of the Reed Sea",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Beacon_of_the_Reed_Sea.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Wolf's Gravestone",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Heart of Depth (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Heart of Depth (2) + Noblesse Oblige (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / HP%" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "HP%"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Mavuika è una DPS Hydro che sfrutta la forza delle onde per infliggere danni AoE e potenziare i suoi attacchi. Si consiglia di massimizzare la statistica di CRIT e l'ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Beacon of the Reed Sea",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Beacon_of_the_Reed_Sea.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Heart of Depth (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Mavuika" },
+      { "name": "Xingqiu" },
+      { "name": "Yelan" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Mavuika" },
+      { "name": "Kazuha" },
+      { "name": "Fischl" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Mavuika" },
+      { "name": "Ayato" },
+      { "name": "Barbara" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Tidal Cleave",
+      "desc": "Effettua fino a 4 colpi potenti con il claymore, infusi di energia Hydro.",
+      "icon": "images/characters/placeholder.svg",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "80.0%",
+          "hit2": "75.0%",
+          "hit3": "100.0%",
+          "hit4": "120.0%",
+          "charged": "60.0% + 120.0%",
+          "stamina": "40",
+          "plunge": "70.0%",
+          "lowhigh": "140.0% / 180.0%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 4 colpi potenti con il claymore, infusi di energia Hydro.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per sferrare un colpo rotante che infligge danni AoE Hydro.</div><div class='skill-section'><b>Plunging Attack</b><br>Si lancia dall'alto, infliggendo danni AoE Hydro all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Wavecrash Strike",
+      "desc": "Mavuika evoca un'onda che travolge i nemici, infliggendo danni Hydro ad area e aumentando la sua resistenza all'interruzione.",
+      "icon": "images/characters/placeholder.svg",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Wavecrash Strike</b><br>Evoca un'onda che travolge i nemici, infliggendo danni Hydro ad area e aumentando la resistenza all'interruzione per 8s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "200% ATK",
+          "res_bonus": "30%",
+          "duration": "8s",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Ocean's Wrath",
+      "desc": "Mavuika scatena la furia dell'oceano, infliggendo danni Hydro ad area e curando leggermente i membri del party.",
+      "icon": "images/characters/placeholder.svg",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Ocean's Wrath</b><br>Scatena la furia dell'oceano, infliggendo danni Hydro ad area e curando leggermente i membri del party per 10s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "400% ATK",
+          "healing": "5% HP max",
+          "duration": "10s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Tide's Endurance",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando Mavuika colpisce un nemico con Wavecrash Strike, la sua Energy Recharge aumenta del 20% per 10s."
+    },
+    {
+      "name": "Oceanic Power",
+      "phase": "Ascension Phase 4",
+      "desc": "Ocean's Wrath aumenta l'ATK degli alleati del 15% per 10s."
+    },
+    {
+      "name": "Natlan's Spirit",
+      "phase": "Passive",
+      "desc": "Riduce il consumo di stamina durante la corsa per i membri del party del 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Wavebreaker",
+      "phase": "Constellation Lv. 1",
+      "desc": "Wavecrash Strike ottiene una carica aggiuntiva."
+    },
+    {
+      "name": "C2: Ocean's Embrace",
+      "phase": "Constellation Lv. 2",
+      "desc": "Quando Mavuika colpisce un nemico bagnato, infligge danni bonus del 20%."
+    },
+    {
+      "name": "C3: Tidal Mastery",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Wavecrash Strike di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Endless Current",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando Mavuika attiva una reazione Hydro, rigenera 3 energia."
+    },
+    {
+      "name": "C5: Ocean's Blessing",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Ocean's Wrath di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Tidal Sovereign",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando Mavuika entra in campo, la durata di Ocean's Wrath aumenta di 4s."
+    }
+  ]
+}

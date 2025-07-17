@@ -1,0 +1,3448 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(26, 26, 46, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 2px 16px #0005;
+        padding: 0.5rem 0 0.5rem 0;
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.13rem;
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.1);
+        color: #64ffda;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .nav-link.active {
+        background: #64ffda;
+        color: #16213e;
+        box-shadow: 0 2px 12px #64ffda55;
+        cursor: default;
+      }
+      body {
+        padding-top: 3.5rem;
+      }
+
+      /* Stili per i controlli utente */
+      #user-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: auto;
+      }
+
+      #user-controls .btn {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 6px 24px rgba(100, 255, 218, 0.25),
+          0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Fredoka", sans-serif;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        transform: translateY(3px) !important;
+      }
+
+      #user-controls .btn:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda) !important;
+        color: #16213e !important;
+        box-shadow: 0 10px 35px rgba(100, 255, 218, 0.4),
+          0 4px 20px rgba(100, 255, 218, 0.3);
+        transform: translateY(-2px) scale(1.03);
+      }
+
+      #user-controls {
+        margin-right: 1rem;
+      }
+      @media (max-width: 700px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          font-size: 0.98rem;
+          padding: 0.3rem 0;
+        }
+        .nav-link {
+          padding: 0.5rem 0.7rem;
+          font-size: 1rem;
+        }
+      }
+
+      /* Scroll to Top Button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #64ffda, #4cd4b0);
+        border: none;
+        border-radius: 50%;
+        color: #16213e;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.4);
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .scroll-to-top.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scroll-to-top:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 8px 30px rgba(100, 255, 218, 0.6);
+      }
+
+      .scroll-to-top:active {
+        transform: translateY(-2px) scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .scroll-to-top {
+          bottom: 1rem;
+          right: 1rem;
+          width: 50px;
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+
+      /* Stili per gli artefatti nelle attività */
+      .task-artifacts {
+        margin: 0.8rem 0;
+        padding: 0.8rem;
+        background: rgb(252, 255, 254);
+        border-radius: 8px;
+        border: 1px solid rgba(100, 255, 218, 0.3);
+      }
+
+      .artifacts-label {
+        font-weight: 600;
+        color: #8064ff;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .artifacts-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .artifact-chip {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        background: rgba(26, 26, 46, 0.8);
+        border: 1px solid rgba(100, 255, 218, 0.5);
+        border-radius: 6px;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        color: #e0e0e0;
+        transition: all 0.3s ease;
+      }
+
+      .artifact-chip:hover {
+        background: rgba(100, 255, 218, 0.2);
+        border-color: #64ffda;
+      }
+
+      .artifact-chip-img {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        object-fit: cover;
+        background: #222;
+      }
+
+      .artifact-chip span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 120px;
+      }
+
+      @media (max-width: 600px) {
+        .artifacts-list {
+          flex-direction: column;
+        }
+
+        .artifact-chip {
+          width: 100%;
+          justify-content: flex-start;
+        }
+
+        .artifact-chip span {
+          max-width: none;
+        }
+      }
+
+      /* Stili professionali per il popup dettagli attività */
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .popup {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        max-width: 500px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        animation: slideIn 0.3s ease;
+        position: relative;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-50px) scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+      }
+
+      .popup-header {
+        background: linear-gradient(135deg, #4b0ac4 0%, #4cd4b0 100%);
+        color: #16213e;
+        padding: 1.5rem 2rem;
+        border-radius: 18px 18px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .popup-title {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .popup-close {
+        background: none;
+        border: none;
+        color: #16213e;
+        font-size: 2rem;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        font-weight: bold;
+      }
+
+      .popup-close:hover {
+        background: rgba(22, 33, 62, 0.2);
+        transform: scale(1.1);
+      }
+
+      .popup-content {
+        padding: 2rem;
+        color: #e0e0e0;
+      }
+
+      .popup-content .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .popup-content label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #64ffda;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .popup-content input[type="text"],
+      .popup-content select,
+      .popup-content textarea,
+      .popup-content input[type="time"] {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        color: #e0e0e0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-family: inherit;
+      }
+
+      .popup-content input[type="text"]:focus,
+      .popup-content select:focus,
+      .popup-content textarea:focus,
+      .popup-content input[type="time"]:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+        background: rgba(22, 33, 62, 0.9);
+      }
+
+      .popup-content input[type="text"]::placeholder,
+      .popup-content textarea::placeholder {
+        color: #888;
+        opacity: 0.7;
+      }
+
+      .popup-content select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364ffda' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.5em;
+        padding-right: 2.5rem;
+      }
+
+      .popup-content textarea {
+        resize: vertical;
+        min-height: 100px;
+        line-height: 1.5;
+      }
+
+      .popup-content input[type="time"] {
+        cursor: pointer;
+      }
+
+      .popup-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(100, 255, 218, 0.2);
+        flex-wrap: wrap;
+      }
+
+      .popup-actions .btn {
+        flex: 1;
+        min-width: 120px;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .popup-actions .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .popup-actions .btn:hover::before {
+        left: 100%;
+      }
+
+      .popup-actions .btn:first-child {
+        background: linear-gradient(135deg, #64ffda 0%, #4cd4b0 100%);
+        color: #16213e;
+        box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+      }
+
+      .popup-actions .btn:first-child:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4);
+      }
+
+      .popup-actions .btn.btn-danger {
+        background: linear-gradient(135deg, #ff6f3c 0%, #e74c3c 100%);
+        color: white;
+        box-shadow: 0 4px 15px rgba(255, 111, 60, 0.3);
+      }
+
+      .popup-actions .btn.btn-danger:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 111, 60, 0.4);
+      }
+
+      .popup-actions .btn.btn-secondary {
+        background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        color: white;
+        box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+      }
+
+      .popup-actions .btn.btn-secondary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+      }
+
+      /* Responsive design per il popup */
+      @media (max-width: 768px) {
+        .popup {
+          width: 95%;
+          margin: 1rem;
+        }
+
+        .popup-header {
+          padding: 1rem 1.5rem;
+        }
+
+        .popup-title {
+          font-size: 1.3rem;
+        }
+
+        .popup-content {
+          padding: 1.5rem;
+        }
+
+        .popup-actions {
+          flex-direction: column;
+        }
+
+        .popup-actions .btn {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .popup-header {
+          padding: 1rem;
+        }
+
+        .popup-content {
+          padding: 1rem;
+        }
+
+        .popup-content input[type="text"],
+        .popup-content select,
+        .popup-content textarea,
+        .popup-content input[type="time"] {
+          padding: 0.7rem 0.8rem;
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Stili professionali per le attività */
+      .task-item {
+        background: linear-gradient(
+          135deg,
+          rgba(22, 33, 62, 0.9) 0%,
+          rgba(26, 26, 46, 0.9) 100%
+        );
+        border: 2px solid rgba(100, 255, 218, 0.2);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 0;
+        transition: all 0.3s ease;
+        position: relative;
+        min-height: 8rem;
+        box-shadow: 0 4px 24px 0 rgba(100, 255, 218, 0.08);
+      }
+
+      .task-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #64ffda, #4cd4b0);
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+
+      .task-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(100, 255, 218, 0.2);
+        border-color: rgba(100, 255, 218, 0.4);
+      }
+
+      .task-item.completed {
+        border-color: rgba(76, 175, 80, 0.4);
+        background: linear-gradient(
+          135deg,
+          rgba(22, 33, 62, 0.7) 0%,
+          rgba(26, 26, 46, 0.7) 100%
+        );
+      }
+
+      .task-item.completed::before {
+        background: linear-gradient(90deg, #4caf50, #66bb6a, #4caf50);
+      }
+
+      .task-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .task-priority,
+      .task-category,
+      .task-status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        min-width: 80px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .task-priority {
+        background: linear-gradient(135deg, #ff9800, #ff5722);
+        color: white;
+        border: 1px solid rgba(255, 152, 0, 0.3);
+      }
+
+      .task-category {
+        background: linear-gradient(135deg, #2196f3, #1976d2);
+        color: white;
+        border: 1px solid rgba(33, 150, 243, 0.3);
+      }
+
+      .task-status {
+        background: linear-gradient(135deg, #9c27b0, #673ab7);
+        color: white;
+        border: 1px solid rgba(156, 39, 176, 0.3);
+      }
+
+      .task-title {
+        flex: 1;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #e0e0e0;
+        margin: 0;
+        min-width: 200px;
+        line-height: 1.4;
+      }
+
+      .task-notes {
+        background: rgba(100, 255, 218, 0.1);
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        border-radius: 8px;
+        padding: 0.8rem;
+        margin: 0.8rem 0;
+        color: #b0eaff;
+        font-style: italic;
+        line-height: 1.6;
+      }
+
+      .task-time {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 193, 7, 0.1);
+        border: 1px solid rgba(255, 193, 7, 0.3);
+        border-radius: 20px;
+        padding: 0.4rem 0.8rem;
+        color: #ffc107;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0.5rem 0;
+      }
+
+      .task-actions {
+        display: flex;
+        gap: 0.8rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .task-actions .btn-small {
+        padding: 0.6rem 1rem;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        overflow: hidden;
+        min-width: 100px;
+      }
+
+      .task-actions .btn-small::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .task-actions .btn-small:hover::before {
+        left: 100%;
+      }
+
+      .task-actions .btn-small:first-child {
+        background: linear-gradient(135deg, #4caf50, #66bb6a);
+        color: white;
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+      }
+
+      .task-actions .btn-small:first-child:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+      }
+
+      .task-actions .btn-small.btn-secondary {
+        background: linear-gradient(135deg, #2196f3, #1976d2);
+        color: white;
+        box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+      }
+
+      .task-actions .btn-small.btn-secondary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+      }
+
+      .task-actions .btn-small.btn-danger {
+        background: linear-gradient(135deg, #f44336, #d32f2f);
+        color: white;
+        box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+      }
+
+      .task-actions .btn-small.btn-danger:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(244, 67, 54, 0.4);
+      }
+
+      /* Stili professionali per la sezione Aggiungi Nuova Attività */
+      .add-task-section {
+        background: linear-gradient(
+          135deg,
+          rgba(22, 33, 62, 0.9) 0%,
+          rgba(26, 26, 46, 0.9) 100%
+        );
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 20px;
+        padding: 2rem;
+        margin-top: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .add-task-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #64ffda, #4cd4b0);
+      }
+
+      .add-task-section h4 {
+        color: #64ffda;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .add-task-form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .add-task-form .form-group {
+        margin-bottom: 0;
+      }
+
+      .add-task-form .form-group:last-child {
+        grid-column: 1 / -1;
+        text-align: center;
+      }
+
+      .add-task-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #64ffda;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .add-task-form input[type="text"],
+      .add-task-form select,
+      .add-task-form textarea,
+      .add-task-form input[type="time"] {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        color: #e0e0e0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-family: inherit;
+      }
+
+      .add-task-form input[type="text"]:focus,
+      .add-task-form select:focus,
+      .add-task-form textarea:focus,
+      .add-task-form input[type="time"]:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+        background: rgba(22, 33, 62, 0.9);
+      }
+
+      .add-task-form input[type="text"]::placeholder,
+      .add-task-form textarea::placeholder {
+        color: #888;
+        opacity: 0.7;
+      }
+
+      .add-task-form select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364ffda' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.5em;
+        padding-right: 2.5rem;
+      }
+
+      .add-task-form textarea {
+        resize: vertical;
+        min-height: 80px;
+        line-height: 1.5;
+        grid-column: 1 / -1;
+      }
+
+      .add-task-form input[type="time"] {
+        cursor: pointer;
+      }
+
+      .add-task-form .btn {
+        background: linear-gradient(135deg, #64ffda 0%, #4cd4b0 100%);
+        color: #16213e;
+        border: none;
+        border-radius: 12px;
+        padding: 1rem 2rem;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+        position: relative;
+        overflow: hidden;
+        min-width: 200px;
+      }
+
+      .add-task-form .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .add-task-form .btn:hover::before {
+        left: 100%;
+      }
+
+      .add-task-form .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4);
+      }
+
+      .add-task-form .btn:active {
+        transform: translateY(-1px);
+      }
+
+      /* Responsive design per le attività e form */
+      @media (max-width: 768px) {
+        .task-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+
+        .task-priority,
+        .task-category,
+        .task-status {
+          min-width: 60px;
+          font-size: 0.8rem;
+          padding: 0.3rem 0.6rem;
+        }
+
+        .task-title {
+          min-width: auto;
+          width: 100%;
+        }
+
+        .task-actions {
+          flex-direction: column;
+        }
+
+        .task-actions .btn-small {
+          width: 100%;
+          min-width: auto;
+        }
+
+        .add-task-form {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .add-task-form .form-group:last-child {
+          grid-column: 1;
+        }
+
+        .add-task-form .btn {
+          width: 100%;
+          min-width: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .task-item {
+          padding: 1rem;
+        }
+
+        .add-task-section {
+          padding: 1.5rem;
+        }
+
+        .add-task-form input[type="text"],
+        .add-task-form select,
+        .add-task-form textarea,
+        .add-task-form input[type="time"] {
+          padding: 0.7rem 0.8rem;
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Stili professionali per la sezione Attività di Oggi */
+      .daily-tasks {
+        background: linear-gradient(
+          135deg,
+          rgba(22, 33, 62, 0.95) 0%,
+          rgba(26, 26, 46, 0.95) 100%
+        );
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 20px;
+        padding: 2rem;
+        margin: 2rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .daily-tasks::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #64ffda, #4cd4b0);
+      }
+
+      .daily-tasks h3 {
+        color: #64ffda;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+
+      .daily-tasks h3::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #64ffda, #4cd4b0);
+        border-radius: 2px;
+      }
+
+      .daily-tasks-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .daily-tasks.expanded {
+        max-height: 4000px !important;
+        transition: max-height 0.7s cubic-bezier(0.4, 2, 0.6, 1);
+        overflow: visible;
+      }
+
+      .daily-tasks {
+        max-height: 900px;
+        transition: max-height 0.7s cubic-bezier(0.4, 2, 0.6, 1);
+        overflow: hidden;
+      }
+
+      /* Stili per i filtri attività */
+      .task-filters {
+        background: rgba(22, 33, 62, 0.6);
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        align-items: end;
+      }
+
+      .task-filters .form-group {
+        margin-bottom: 0;
+      }
+
+      .task-filters label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #64ffda;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .task-filters select {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        color: #e0e0e0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-family: inherit;
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364ffda' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.5em;
+        padding-right: 2.5rem;
+      }
+
+      .task-filters select:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+        background: rgba(22, 33, 62, 0.9);
+      }
+
+      .task-filters .btn {
+        background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 0.8rem 1.5rem;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .task-filters .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .task-filters .btn:hover::before {
+        left: 100%;
+      }
+
+      .task-filters .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4);
+      }
+
+      /* Stili per il contenitore delle attività */
+      .tasks-container {
+        position: relative;
+      }
+
+      .tasks-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        min-height: 200px;
+        height: auto;
+        position: relative;
+        overflow: visible;
+      }
+      .tasks-list::after {
+        content: "";
+        display: block;
+        height: 10px;
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      /* Stili per il messaggio "Nessuna attività" */
+      .no-tasks {
+        text-align: center;
+        padding: 3rem 2rem;
+        background: rgba(22, 33, 62, 0.4);
+        border: 2px dashed rgba(100, 255, 218, 0.3);
+        border-radius: 16px;
+        margin: 2rem 0;
+        transition: all 0.3s ease;
+      }
+
+      .no-tasks:hover {
+        border-color: rgba(100, 255, 218, 0.5);
+        background: rgba(22, 33, 62, 0.6);
+      }
+
+      .no-tasks-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0.7;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .no-tasks h4 {
+        color: #64ffda;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .no-tasks p {
+        color: #b0eaff;
+        font-size: 1rem;
+        opacity: 0.8;
+        line-height: 1.5;
+      }
+
+      /* Responsive design per la sezione attività */
+      @media (max-width: 768px) {
+        .daily-tasks {
+          padding: 1.5rem;
+          margin: 1rem 0;
+        }
+
+        .daily-tasks h3 {
+          font-size: 1.5rem;
+        }
+
+        .task-filters {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+          padding: 1rem;
+        }
+
+        .task-filters .btn {
+          padding: 0.7rem 1rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .daily-tasks {
+          padding: 1rem;
+        }
+
+        .daily-tasks h3 {
+          font-size: 1.3rem;
+        }
+
+        .task-filters {
+          padding: 0.8rem;
+        }
+
+        .task-filters select {
+          padding: 0.7rem 0.8rem;
+          font-size: 0.95rem;
+        }
+
+        .no-tasks {
+          padding: 2rem 1rem;
+        }
+
+        .no-tasks-icon {
+          font-size: 3rem;
+        }
+      }
+
+      /* Stili per il popup template attività */
+      .template-popup {
+        max-width: 600px;
+      }
+
+      .template-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: rgba(100, 255, 218, 0.1);
+        border: 1px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .template-icon {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(100, 255, 218, 0.2);
+        border-radius: 12px;
+        border: 2px solid rgba(100, 255, 218, 0.4);
+      }
+
+      .template-details h4 {
+        color: #64ffda;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0 0 0.3rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .template-details p {
+        color: #b0eaff;
+        font-size: 0.95rem;
+        margin: 0;
+        opacity: 0.9;
+        line-height: 1.4;
+      }
+
+      .template-progress {
+        margin: 1.5rem 0;
+      }
+
+      .template-progress label {
+        display: block;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+        color: #64ffda;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .progress-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+      }
+
+      .progress-btn {
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 10px;
+        padding: 0.8rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        color: #e0e0e0;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .progress-btn:hover {
+        border-color: #64ffda;
+        background: rgba(22, 33, 62, 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+      }
+
+      .progress-btn.active {
+        border-color: #64ffda;
+        background: rgba(100, 255, 218, 0.2);
+        color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+      }
+
+      .progress-btn[data-progress="completed"].active {
+        border-color: #4caf50;
+        background: rgba(76, 175, 80, 0.2);
+        color: #4caf50;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+      }
+
+      .progress-btn[data-progress="in-progress"].active {
+        border-color: #ff9800;
+        background: rgba(255, 152, 0, 0.2);
+        color: #ff9800;
+        box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+      }
+
+      .progress-icon {
+        font-size: 1.5rem;
+      }
+
+      .progress-text {
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 1.2;
+      }
+
+      /* Responsive design per il popup template */
+      @media (max-width: 768px) {
+        .template-popup {
+          width: 95%;
+          margin: 1rem;
+        }
+
+        .template-info {
+          flex-direction: column;
+          text-align: center;
+          gap: 0.8rem;
+        }
+
+        .template-icon {
+          width: 50px;
+          height: 50px;
+          font-size: 2rem;
+        }
+
+        .progress-options {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+        }
+
+        .progress-btn {
+          flex-direction: row;
+          justify-content: center;
+          gap: 0.5rem;
+          padding: 0.6rem;
+        }
+
+        .progress-icon {
+          font-size: 1.2rem;
+        }
+
+        .progress-text {
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .template-info {
+          padding: 0.8rem;
+        }
+
+        .template-details h4 {
+          font-size: 1.1rem;
+        }
+
+        .template-details p {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Stili per il popup farming */
+      .farming-popup {
+        max-width: 800px;
+        max-height: 90vh;
+      }
+
+      .farming-search {
+        margin-bottom: 1.5rem;
+      }
+
+      .farming-search-input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        color: #e0e0e0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-family: inherit;
+      }
+
+      .farming-search-input:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+        background: rgba(22, 33, 62, 0.9);
+      }
+
+      .farming-search-input::placeholder {
+        color: #888;
+        opacity: 0.7;
+      }
+
+      .farming-filters {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        align-items: end;
+      }
+
+      .farming-filters .btn {
+        height: fit-content;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        min-width: 140px;
+      }
+
+      .farming-filter-select {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        color: #e0e0e0;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-family: inherit;
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364ffda' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.5em;
+        padding-right: 2.5rem;
+      }
+
+      .farming-filter-select:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+        background: rgba(22, 33, 62, 0.9);
+      }
+
+      .farming-materials-container {
+        max-height: 300px;
+        overflow-y: auto;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        border-radius: 12px;
+        background: rgba(22, 33, 62, 0.3);
+      }
+
+      .farming-materials-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .material-item {
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.2);
+        border-radius: 12px;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .material-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #64ffda, #4cd4b0);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .material-item:hover {
+        border-color: rgba(100, 255, 218, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+      }
+
+      .material-item:hover::before {
+        transform: scaleX(1);
+      }
+
+      .material-item.selected {
+        border-color: #64ffda;
+        background: rgba(100, 255, 218, 0.1);
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+      }
+
+      .material-item.selected::before {
+        transform: scaleX(1);
+      }
+
+      .material-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        object-fit: cover;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        background: #222;
+        flex-shrink: 0;
+      }
+
+      .material-info {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .material-name {
+        font-weight: 600;
+        color: #e0e0e0;
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+        line-height: 1.3;
+      }
+
+      .material-details {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        color: #b0eaff;
+      }
+
+      .material-rarity {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+      }
+
+      .material-rarity .star {
+        color: #ffd700;
+        font-size: 0.7rem;
+      }
+
+      .material-category {
+        background: rgba(100, 255, 218, 0.2);
+        color: #64ffda;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .material-description {
+        font-size: 0.8rem;
+        color: #888;
+        margin-top: 0.3rem;
+        line-height: 1.3;
+        font-style: italic;
+      }
+
+      .selected-materials {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .selected-materials h4 {
+        color: #64ffda;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .selected-materials-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        min-height: 60px;
+        padding: 1rem;
+        background: rgba(22, 33, 62, 0.3);
+        border: 2px dashed rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        align-items: center;
+        overflow: visible !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+
+      .selected-materials-list:empty::after {
+        content: "Nessun materiale selezionato";
+        color: #888;
+        font-style: italic;
+        text-align: center;
+        width: 100%;
+      }
+
+      .selected-material-chip {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(100, 255, 218, 0.2);
+        border: 1px solid rgba(100, 255, 218, 0.4);
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        color: #64ffda;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .selected-material-chip:hover {
+        background: rgba(100, 255, 218, 0.3);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.3);
+      }
+
+      .selected-material-chip img {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        object-fit: cover;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        min-width: 20px !important;
+        min-height: 20px !important;
+        max-width: 20px !important;
+        max-height: 20px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .remove-material {
+        background: none;
+        border: none;
+        color: #ff6b6b;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 0.2rem;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        margin-left: 0.3rem;
+      }
+
+      .remove-material:hover {
+        background: rgba(255, 107, 107, 0.2);
+        transform: scale(1.1);
+      }
+
+      /* Responsive design per il popup farming */
+      @media (max-width: 768px) {
+        .farming-popup {
+          width: 95%;
+          margin: 1rem;
+        }
+
+        .farming-filters {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+        }
+
+        .farming-filters .btn {
+          width: 100%;
+          min-width: auto;
+        }
+
+        .farming-materials-list {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+        }
+
+        .material-item {
+          padding: 0.8rem;
+        }
+
+        .material-image {
+          width: 40px;
+          height: 40px;
+        }
+
+        .material-name {
+          font-size: 0.9rem;
+        }
+
+        .material-details {
+          font-size: 0.75rem;
+        }
+
+        .selected-materials-list {
+          padding: 0.8rem;
+        }
+
+        .selected-material-chip {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .farming-search-input {
+          padding: 0.8rem 1rem;
+          font-size: 0.95rem;
+        }
+
+        .farming-filter-select {
+          padding: 0.7rem 0.8rem;
+          font-size: 0.9rem;
+        }
+
+        .farming-filters .btn {
+          padding: 0.7rem 0.8rem;
+          font-size: 0.85rem;
+        }
+
+        .material-item {
+          flex-direction: column;
+          text-align: center;
+          gap: 0.8rem;
+        }
+
+        .material-image {
+          width: 45px;
+          height: 45px;
+        }
+
+        .material-details {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+
+      .popup-content input[type="date"] {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background: rgba(22, 33, 62, 0.8);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        color: #e0e0e0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-family: inherit;
+      }
+
+      .popup-content input[type="date"]:focus {
+        outline: none;
+        border-color: #64ffda;
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+        background: rgba(22, 33, 62, 0.9);
+      }
+
+      /* Stili per il popup immagine materiale */
+      .material-image-popup {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border: 3px solid rgba(100, 255, 218, 0.4);
+        border-radius: 20px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        max-width: 600px;
+        width: 90%;
+        max-height: 90vh;
+        position: relative;
+        animation: slideIn 0.3s ease;
+        overflow: hidden;
+      }
+
+      .material-image-container {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .material-image-container img {
+        max-width: 100%;
+        max-height: 400px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .material-image-container img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+      }
+
+      .material-image-info {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: rgba(100, 255, 218, 0.1);
+        border-radius: 12px;
+        border: 1px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .material-image-info h4 {
+        color: #64ffda;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .material-image-info p {
+        color: #b0eaff;
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1.6;
+        opacity: 0.9;
+        white-space: pre-line;
+        word-wrap: break-word;
+        font-family: "Fredoka", sans-serif;
+        text-align: left;
+        padding: 0.5rem 0;
+      }
+
+      .material-image-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(22, 33, 62, 0.9);
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        color: #64ffda;
+        font-size: 1.5rem;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+
+      .material-image-close:hover {
+        background: rgba(100, 255, 218, 0.2);
+        border-color: #64ffda;
+        transform: scale(1.1);
+      }
+
+      /* Stili per le immagini cliccabili nelle attività */
+      .artifact-chip img,
+      .material-chip-img {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .artifact-chip img:hover,
+      .material-chip-img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(100, 255, 218, 0.4);
+        border-color: #64ffda;
+      }
+
+      /* Stili per gli artefatti selezionati */
+      .selected-artifact-chip {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(100, 255, 218, 0.2);
+        border: 1px solid rgba(100, 255, 218, 0.5);
+        border-radius: 8px;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .selected-artifact-chip:hover {
+        background: rgba(100, 255, 218, 0.3);
+        border-color: #64ffda;
+        transform: translateY(-1px);
+      }
+
+      .selected-artifact-chip img {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        object-fit: cover;
+        border: 1px solid rgba(100, 255, 218, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .selected-artifact-chip img:hover {
+        transform: scale(1.2);
+        box-shadow: 0 2px 8px rgba(100, 255, 218, 0.4);
+      }
+
+      .selected-artifact-chip span {
+        color: #fff;
+        flex: 1;
+      }
+
+      .remove-artifact {
+        background: none;
+        border: none;
+        color: #ff6f3c;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .remove-artifact:hover {
+        background: rgba(255, 111, 60, 0.2);
+        transform: scale(1.1);
+      }
+
+      /* Responsive design per il popup immagine */
+      @media (max-width: 768px) {
+        .material-image-popup {
+          width: 95%;
+          margin: 1rem;
+        }
+
+        .material-image-container {
+          padding: 1.5rem;
+        }
+
+        .material-image-container img {
+          max-height: 300px;
+        }
+
+        .material-image-info h4 {
+          font-size: 1.1rem;
+        }
+
+        .material-image-info p {
+          font-size: 0.9rem;
+        }
+
+        .material-image-close {
+          top: 0.5rem;
+          right: 0.5rem;
+          width: 40px;
+          height: 40px;
+          font-size: 1.3rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .material-image-container {
+          padding: 1rem;
+        }
+
+        .material-image-container img {
+          max-height: 250px;
+        }
+
+        .material-image-info {
+          margin-top: 1rem;
+          padding: 0.8rem;
+        }
+      }
+
+      /* Evidenzia la card selezionata nel modal di selezione manufatti */
+      .selected-artifact-card {
+        border-color: #64ffda !important;
+        background: linear-gradient(
+          135deg,
+          rgba(100, 255, 218, 0.18) 0%,
+          rgba(22, 33, 62, 0.95) 100%
+        ) !important;
+        box-shadow: 0 0 12px rgba(100, 255, 218, 0.4),
+          0 4px 12px rgba(0, 0, 0, 0.3) !important;
+        position: relative;
+      }
+      .selected-artifact-card::after {
+        content: "✓";
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        color: #64ffda;
+        font-size: 1.5em;
+        font-weight: bold;
+        background: rgba(22, 33, 62, 0.8);
+        border-radius: 50%;
+        padding: 0.1em 0.3em;
+        pointer-events: none;
+      }
+
+      /* Stili per le card artefatti nel modal di selezione */
+      .artifact-to-create-item {
+        background: linear-gradient(
+          135deg,
+          rgba(10, 10, 26, 0.9) 0%,
+          rgba(22, 33, 62, 0.9) 100%
+        );
+        border: 2px solid transparent;
+        border-radius: 12px;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .artifact-to-create-item:hover {
+        border-color: rgba(100, 255, 218, 0.5);
+        transform: translateY(-2px);
+      }
+
+      .artifact-to-create-item.selected-artifact-card {
+        border-color: #64ffda !important;
+        background: linear-gradient(
+          135deg,
+          rgba(100, 255, 218, 0.18) 0%,
+          rgba(22, 33, 62, 0.95) 100%
+        ) !important;
+        box-shadow: 0 0 12px rgba(100, 255, 218, 0.4),
+          0 4px 12px rgba(0, 0, 0, 0.3) !important;
+        position: relative;
+      }
+
+      .artifact-to-create-item.selected-artifact-card::after {
+        content: "✓";
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        color: #64ffda;
+        font-size: 1.5em;
+        font-weight: bold;
+        background: rgba(22, 33, 62, 0.8);
+        border-radius: 50%;
+        padding: 0.1em 0.3em;
+        pointer-events: none;
+      }
+
+      /* --- Fix materiali selezionati che non si vedono --- */
+      .selected-materials-list {
+        min-width: 200px !important;
+        min-height: 40px !important;
+        width: 100% !important;
+        height: auto !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+      }
+      .selected-materials {
+        width: 100% !important;
+        min-width: 200px !important;
+        display: block !important;
+      }
+      .selected-materials-list img,
+      .selected-material-chip img {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        min-height: 32px !important;
+        max-width: 32px !important;
+        max-height: 32px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+
+      /* Regole specifiche per il modal dei materiali */
+      #materialSelectionPopup .selected-materials-list img,
+      #materialSelectionPopup .selected-material-chip img {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        min-height: 32px !important;
+        max-width: 32px !important;
+        max-height: 32px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        background: #222 !important;
+        border: 1px solid rgba(100, 255, 218, 0.3) !important;
+        border-radius: 4px !important;
+        object-fit: cover !important;
+        flex-shrink: 0 !important;
+      }
+
+      /* Forza la visualizzazione anche per immagini con ID specifico nel modal */
+      #materialSelectionPopup img[id*="material-img"] {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        min-height: 32px !important;
+        max-width: 32px !important;
+        max-height: 32px !important;
+        position: relative !important;
+        z-index: 10 !important;
+      }
+
+      #selectedMaterialsNames {
+        margin-top: 0.7em;
+        color: #64ffda;
+        font-weight: bold;
+        font-size: 1.1em;
+        background: rgba(22, 33, 62, 0.15);
+        border-radius: 8px;
+        padding: 0.4em 0.8em;
+        min-height: 1.5em;
+        letter-spacing: 0.5px;
+      }
+
+      /* Stili per il popup Report Settimanale */
+      .weekly-report-popup {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border: 3px solid rgba(100, 255, 218, 0.4);
+        border-radius: 20px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        max-width: 600px;
+        width: 90%;
+        max-height: 90vh;
+        position: relative;
+        animation: slideIn 0.3s ease;
+        overflow: hidden;
+      }
+
+      .weekly-report-header {
+        background: linear-gradient(135deg, #4b0ac4 0%, #4cd4b0 100%);
+        color: #16213e;
+        padding: 1.5rem 2rem;
+        border-radius: 17px 17px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .weekly-report-title {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .weekly-report-close {
+        background: none;
+        border: none;
+        color: #16213e;
+        font-size: 2rem;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        font-weight: bold;
+      }
+
+      .weekly-report-close:hover {
+        background: rgba(22, 33, 62, 0.2);
+        transform: scale(1.1);
+      }
+
+      .weekly-report-content {
+        padding: 2rem;
+        color: #e0e0e0;
+        max-height: 60vh;
+        overflow-y: auto;
+      }
+
+      .weekly-report-summary {
+        background: rgba(100, 255, 218, 0.1);
+        border: 1px solid rgba(100, 255, 218, 0.3);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .weekly-report-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .weekly-stat-card {
+        background: linear-gradient(
+          135deg,
+          rgba(22, 33, 62, 0.8) 0%,
+          rgba(26, 26, 46, 0.8) 100%
+        );
+        border: 2px solid rgba(100, 255, 218, 0.2);
+        border-radius: 12px;
+        padding: 1.2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .weekly-stat-card:hover {
+        border-color: rgba(100, 255, 218, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+      }
+
+      .weekly-stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #64ffda;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .weekly-stat-label {
+        font-size: 0.9rem;
+        color: #b0eaff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+      }
+
+      .weekly-report-days {
+        background: rgba(22, 33, 62, 0.4);
+        border: 1px solid rgba(100, 255, 218, 0.2);
+        border-radius: 12px;
+        padding: 1.5rem;
+      }
+
+      .weekly-report-days h4 {
+        color: #64ffda;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .weekly-day-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+        background: rgba(22, 33, 62, 0.6);
+        border-radius: 8px;
+        border: 1px solid rgba(100, 255, 218, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .weekly-day-item:hover {
+        background: rgba(22, 33, 62, 0.8);
+        border-color: rgba(100, 255, 218, 0.3);
+      }
+
+      .weekly-day-name {
+        font-weight: 600;
+        color: #e0e0e0;
+      }
+
+      .weekly-day-stats {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+      }
+
+      .weekly-day-completed {
+        color: #4caf50;
+      }
+
+      .weekly-day-total {
+        color: #b0eaff;
+      }
+
+      .weekly-day-percentage {
+        background: rgba(100, 255, 218, 0.2);
+        color: #64ffda;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .weekly-report-progress {
+        background: rgba(22, 33, 62, 0.6);
+        border-radius: 10px;
+        height: 8px;
+        margin: 1rem 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .weekly-report-progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #64ffda, #4cd4b0);
+        border-radius: 10px;
+        transition: width 0.8s ease;
+        position: relative;
+      }
+
+      .weekly-report-progress-bar::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      .weekly-report-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .weekly-report-btn {
+        background: linear-gradient(135deg, #64ffda 0%, #4cd4b0 100%);
+        color: #16213e;
+        border: none;
+        border-radius: 10px;
+        padding: 0.8rem 1.5rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+      }
+
+      .weekly-report-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4);
+      }
+
+      .weekly-report-btn.btn-secondary {
+        background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        color: white;
+        box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+      }
+
+      .weekly-report-btn.btn-secondary:hover {
+        box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+      }
+
+      /* Responsive design per il popup report settimanale */
+      @media (max-width: 768px) {
+        .weekly-report-popup {
+          width: 95%;
+          margin: 1rem;
+        }
+
+        .weekly-report-header {
+          padding: 1rem 1.5rem;
+        }
+
+        .weekly-report-title {
+          font-size: 1.3rem;
+        }
+
+        .weekly-report-content {
+          padding: 1.5rem;
+        }
+
+        .weekly-report-stats {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+        }
+
+        .weekly-stat-number {
+          font-size: 1.5rem;
+        }
+
+        .weekly-report-actions {
+          flex-direction: column;
+        }
+
+        .weekly-report-btn {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .weekly-report-header {
+          padding: 1rem;
+        }
+
+        .weekly-report-content {
+          padding: 1rem;
+        }
+
+        .weekly-day-item {
+          flex-direction: column;
+          gap: 0.5rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="gestione%20personaggio.html" class="nav-link"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link active"
+        ><span>📅</span> Calendario</a
+      >
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community%20Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div
+        id="user-controls"
+        style="
+          margin-left: auto;
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+        "
+      ></div>
+    </nav>
+
+    <div class="container">
+      <!-- Header Calendario -->
+      <section class="calendar-header">
+        <h2>📅 Calendario Attività Giornaliere</h2>
+        <div class="calendar-controls">
+          <button class="btn btn-secondary" onclick="previousMonth()">
+            ◀️ Mese Precedente
+          </button>
+          <div class="current-month">
+            <h3 id="currentMonthYear">Gennaio 2024</h3>
+            <span class="today-indicator"
+              >Oggi: <span id="todayDate">15 Gen</span></span
+            >
+          </div>
+          <button class="btn btn-secondary" onclick="nextMonth()">
+            Mese Successivo ▶️
+          </button>
+        </div>
+      </section>
+
+      <!-- Statistiche Attività -->
+      <section class="activity-stats">
+        <h3>📊 Statistiche Attività</h3>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+              <span class="stat-number" id="completedTasks">0</span>
+              <span class="stat-label">Completate Oggi</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📋</div>
+            <div class="stat-content">
+              <span class="stat-number" id="totalTasks">0</span>
+              <span class="stat-label">Totali Oggi</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-content">
+              <span class="stat-number" id="streakDays">0</span>
+              <span class="stat-label">Giorni di Streak</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-content">
+              <span class="stat-number" id="completionRate">0%</span>
+              <span class="stat-label">Tasso Completamento</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendario Principale -->
+      <section class="calendar-main">
+        <h2>Calendario Mensile</h2>
+        <div class="calendar-grid">
+          <!-- Header giorni della settimana -->
+          <div class="calendar-weekdays">
+            <div class="weekday">Domenica</div>
+            <div class="weekday">Lunedì</div>
+            <div class="weekday">Martedì</div>
+            <div class="weekday">Mercoledì</div>
+            <div class="weekday">Giovedì</div>
+            <div class="weekday">Venerdì</div>
+            <div class="weekday">Sabato</div>
+          </div>
+
+          <!-- Griglia giorni -->
+          <div class="calendar-days" id="calendarDays">
+            <!-- Giorni generati dinamicamente -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Attività Giornaliere -->
+      <section class="daily-tasks">
+        <h3>🎯 Attività di <span id="selectedDate">Oggi</span></h3>
+        <div class="daily-tasks-actions">
+          <button
+            class="btn btn-secondary"
+            id="expandTasksBtn"
+            onclick="expandDailyTasks()"
+          >
+            ⬇️ Espandi
+          </button>
+          <button
+            class="btn btn-secondary"
+            id="compressTasksBtn"
+            onclick="compressDailyTasks()"
+            style="display: none"
+          >
+            ⬆️ Comprimi
+          </button>
+        </div>
+
+        <!-- Filtri Attività -->
+        <div class="task-filters">
+          <div class="form-group">
+            <label for="taskCategoryFilter">Categoria</label>
+            <select id="taskCategoryFilter" onchange="filterTasks()">
+              <option value="">Tutte</option>
+              <option value="daily">📅 Daily</option>
+              <option value="weekly">📆 Weekly</option>
+              <option value="events">🎉 Eventi</option>
+              <option value="farming">🌾 Farming</option>
+              <option value="domains">🏛️ Domini</option>
+              <option value="abyss">⚔️ Abisso</option>
+              <option value="other">📝 Altro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="taskStatusFilter">Stato</label>
+            <select id="taskStatusFilter" onchange="filterTasks()">
+              <option value="">Tutti</option>
+              <option value="pending">⏳ In Attesa</option>
+              <option value="completed">✅ Completato</option>
+              <option value="skipped">⏭️ Saltato</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>&nbsp;</label>
+            <button class="btn btn-secondary" onclick="resetTaskFilters()">
+              🔄 Reset Filtri
+            </button>
+          </div>
+        </div>
+
+        <!-- Lista Attività -->
+        <div class="tasks-container">
+          <div class="tasks-list" id="tasksList">
+            <!-- Attività generate dinamicamente -->
+          </div>
+
+          <!-- Aggiungi Nuova Attività -->
+          <div class="add-task-section">
+            <h4>➕ Aggiungi Nuova Attività</h4>
+            <div class="add-task-form">
+              <div class="form-group">
+                <label for="newTaskTitle">Titolo Attività</label>
+                <input
+                  type="text"
+                  id="newTaskTitle"
+                  placeholder="Es: Completare Daily Commission"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="newTaskCategory">Categoria</label>
+                <select id="newTaskCategory">
+                  <option value="daily">📅 Daily</option>
+                  <option value="weekly">📆 Weekly</option>
+                  <option value="events">🎉 Eventi</option>
+                  <option value="farming">🌾 Farming</option>
+                  <option value="domains">🏛️ Domini</option>
+                  <option value="abyss">⚔️ Abisso</option>
+                  <option value="other">📝 Altro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="newTaskPriority">Priorità</label>
+                <select id="newTaskPriority">
+                  <option value="low">🟢 Bassa</option>
+                  <option value="medium" selected>🟡 Media</option>
+                  <option value="high">🔴 Alta</option>
+                  <option value="critical">⚫ Critica</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="newTaskNotes">Note</label>
+                <textarea
+                  id="newTaskNotes"
+                  rows="3"
+                  placeholder="Note aggiuntive..."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="newTaskTime">Orario Preferito</label>
+                <input type="time" id="newTaskTime" />
+              </div>
+
+              <!-- Nuovo campo per immagini -->
+              <div class="form-group">
+                <label>Immagini Associate</label>
+                <div style="display: flex; gap: 0.5rem; align-items: center">
+                  <input
+                    type="text"
+                    id="newTaskImagesInput"
+                    readonly
+                    placeholder="Nessuna immagine selezionata"
+                    style="flex: 1"
+                  />
+                  <span id="newTaskImagesContainer"></span>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="openNewTaskImagesModal()"
+                  >
+                    Seleziona
+                  </button>
+                </div>
+              </div>
+
+              <button class="btn" onclick="addNewTask()">
+                ➕ Aggiungi Attività
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Template Attività Predefinite -->
+      <section class="task-templates">
+        <h3>📋 Template Attività Predefinite</h3>
+        <div class="templates-grid">
+          <div class="template-category">
+            <h4>📅 Daily</h4>
+            <div class="template-tasks">
+              <button
+                class="template-task"
+                onclick="addTemplateTask('daily', 'Daily Commission', 'Completare 4 commissioni giornaliere')"
+              >
+                Daily Commission
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('daily', 'Resin Spent', 'Spendere 160 resin')"
+              >
+                Resin Spent
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('daily', 'Expedition', 'Inviare personaggi in spedizione')"
+              >
+                Expedition
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('daily', 'Teapot', 'Raccogliere oggetti dal teapot')"
+              >
+                Teapot
+              </button>
+            </div>
+          </div>
+
+          <div class="template-category">
+            <h4>📆 Weekly</h4>
+            <div class="template-tasks">
+              <button
+                class="template-task"
+                onclick="addTemplateTask('weekly', 'Weekly Boss', 'Sconfiggere boss settimanale')"
+              >
+                Weekly Boss
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('weekly', 'Abyss Reset', 'Completare abisso spiral')"
+              >
+                Abyss Reset
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('weekly', 'Bounties', 'Completare bounty settimanali')"
+              >
+                Bounties
+              </button>
+            </div>
+          </div>
+
+          <div class="template-category">
+            <h4>🌾 Farming</h4>
+            <div class="template-tasks">
+              <button
+                class="template-task"
+                onclick="addTemplateTask('farming', 'Artifact Farming', 'Farmare artefatti')"
+              >
+                Artifact Farming
+              </button>
+              <button class="template-task" onclick="showMaterialTable()">
+                Material Farming
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('farming', 'Mora Farming', 'Farmare mora')"
+              >
+                Mora Farming
+              </button>
+            </div>
+          </div>
+
+          <div class="template-category">
+            <h4>🎉 Eventi</h4>
+            <div class="template-tasks">
+              <button
+                class="template-task"
+                onclick="addTemplateTask('events', 'Event Activities', 'Partecipare ad attività evento')"
+              >
+                Event Activities
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('events', 'Event Shop', 'Acquistare da shop evento')"
+              >
+                Event Shop
+              </button>
+            </div>
+          </div>
+
+          <div class="template-category">
+            <h4>🎫 Pass Battaglia</h4>
+            <div class="template-tasks">
+              <button
+                class="template-task"
+                onclick="addTemplateTask('battlepass', 'Usa Resina', 'Usa 1500 di Resina')"
+              >
+                Usa 1500 Resina
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('battlepass', 'Completare Domini', 'Completa 15 Domini')"
+              >
+                Completa 15 Domini
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('battlepass', 'Sconfiggi Boss', 'Sconfiggi 10 Boss del Mondo')"
+              >
+                Sconfiggi 10 Boss del Mondo
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('battlepass', 'Cucina Piatti', 'Cucina 20 piatti')"
+              >
+                Cucina 20 Piatti
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('battlepass', 'Raccogli Minerali', 'Raccogli 100 minerali')"
+              >
+                Raccogli 100 Minerali
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('battlepass', 'Spedisci Spedizioni', 'Completa 25 spedizioni')"
+              >
+                Completa 25 Spedizioni
+              </button>
+              <button
+                class="template-task"
+                onclick="addTemplateTask('battlepass', 'Acquisto Pass Battaglia', 'Acquista il Pass Battaglia (BP)')"
+              >
+                Acquisto Pass Battaglia
+              </button>
+            </div>
+          </div>
+
+          <!-- Nuova sezione Varie -->
+          <div class="template-category">
+            <h4>🧪 Varie</h4>
+            <div class="template-tasks">
+              <button
+                class="template-task"
+                onclick="addTemplateTask('other', 'Trasmutatore Manufatti', 'Usa il Trasmutatore di Manufatti per convertire materiali')"
+              >
+                Trasmutatore Manufatti
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Azioni Globali -->
+      <section class="calendar-actions">
+        <h3>⚙️ Azioni Globali</h3>
+        <div class="actions-grid">
+          <button class="btn btn-secondary" onclick="exportCalendarData()">
+            📤 Esporta Dati
+          </button>
+          <button class="btn btn-secondary" onclick="importCalendarData()">
+            📥 Importa Dati
+          </button>
+          <button class="btn btn-danger" onclick="clearAllTasks()">
+            🗑️ Cancella Tutto
+          </button>
+          <button class="btn btn-success" onclick="markAllCompleted()">
+            ✅ Segna Tutto Completato
+          </button>
+          <button class="btn" onclick="generateWeeklyReport()">
+            📊 Report Settimanale
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Popup Dettagli Attività -->
+    <div id="taskDetailPopup" class="popup-overlay" style="display: none">
+      <div class="popup">
+        <div class="popup-header">
+          <h3 class="popup-title">Dettagli Attività</h3>
+          <button class="popup-close" onclick="closeTaskDetail()">×</button>
+        </div>
+        <div class="popup-content">
+          <div class="form-group">
+            <label for="editTaskTitle">Titolo</label>
+            <input type="text" id="editTaskTitle" />
+          </div>
+          <div class="form-group">
+            <label for="editTaskDate">Data</label>
+            <input type="date" id="editTaskDate" />
+          </div>
+          <div class="form-group">
+            <label for="editTaskCategory">Categoria</label>
+            <select id="editTaskCategory">
+              <option value="daily">📅 Daily</option>
+              <option value="weekly">📆 Weekly</option>
+              <option value="events">🎉 Eventi</option>
+              <option value="farming">🌾 Farming</option>
+              <option value="domains">🏛️ Domini</option>
+              <option value="abyss">⚔️ Abisso</option>
+              <option value="other">📝 Altro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="editTaskPriority">Priorità</label>
+            <select id="editTaskPriority">
+              <option value="low">🟢 Bassa</option>
+              <option value="medium">🟡 Media</option>
+              <option value="high">🔴 Alta</option>
+              <option value="critical">⚫ Critica</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="editTaskNotes">Note</label>
+            <textarea id="editTaskNotes" rows="4"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="editTaskTime">Orario</label>
+            <input type="time" id="editTaskTime" />
+          </div>
+
+          <!-- Campo immagini per modifica -->
+          <div class="form-group">
+            <label>Immagini Associate</label>
+            <div style="display: flex; gap: 0.5rem; align-items: center">
+              <input
+                type="text"
+                id="editTaskImagesInput"
+                readonly
+                placeholder="Nessuna immagine selezionata"
+                style="flex: 1"
+              />
+              <span id="editTaskImagesContainer"></span>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="openEditTaskImagesModal()"
+              >
+                Seleziona
+              </button>
+            </div>
+          </div>
+
+          <div class="popup-actions">
+            <button class="btn" onclick="saveTaskChanges()">💾 Salva</button>
+            <button class="btn btn-danger" onclick="deleteTask()">
+              🗑️ Elimina
+            </button>
+            <button class="btn btn-secondary" onclick="closeTaskDetail()">
+              ❌ Annulla
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Template Attività Predefinite -->
+    <div id="templateTaskPopup" class="popup-overlay" style="display: none">
+      <div class="popup template-popup">
+        <div class="popup-header">
+          <h3 class="popup-title">Personalizza Attività</h3>
+          <button class="popup-close" onclick="closeTemplateTask()">×</button>
+        </div>
+        <div class="popup-content">
+          <div class="template-info">
+            <div class="template-icon" id="templateIcon">📅</div>
+            <div class="template-details">
+              <h4 id="templateTitle">Daily Commission</h4>
+              <p id="templateDescription">
+                Completare 4 commissioni giornaliere
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="templateTaskTitle">Titolo Personalizzato</label>
+            <input
+              type="text"
+              id="templateTaskTitle"
+              placeholder="Es: Completare Daily Commission"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="templateTaskCategory">Categoria</label>
+            <select id="templateTaskCategory">
+              <option value="daily">📅 Daily</option>
+              <option value="weekly">📆 Weekly</option>
+              <option value="events">🎉 Eventi</option>
+              <option value="farming">🌾 Farming</option>
+              <option value="domains">🏛️ Domini</option>
+              <option value="abyss">⚔️ Abisso</option>
+              <option value="other">📝 Altro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="templateTaskPriority">Priorità</label>
+            <select id="templateTaskPriority">
+              <option value="low">🟢 Bassa</option>
+              <option value="medium" selected>🟡 Media</option>
+              <option value="high">🔴 Alta</option>
+              <option value="critical">⚫ Critica</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="templateTaskNotes">Note Aggiuntive</label>
+            <textarea
+              id="templateTaskNotes"
+              rows="4"
+              placeholder="Aggiungi dettagli specifici, obiettivi, o note per questa attività..."
+            ></textarea>
+          </div>
+
+          <!-- Sezione Manufatto da Creare (solo per Trasmutatore Manufatti) -->
+          <div
+            class="form-group"
+            id="artifactToCreateSection"
+            style="display: none"
+          >
+            <label>Manufatto da Creare</label>
+            <div style="display: flex; gap: 0.5rem; align-items: center">
+              <input
+                type="text"
+                id="artifactToCreateInput"
+                readonly
+                placeholder="Nessun manufatto selezionato"
+                style="flex: 1"
+              />
+              <span id="artifactToCreateImgContainer"></span>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="openArtifactToCreateModal()"
+              >
+                Seleziona
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="templateTaskTime">Orario Preferito</label>
+            <input type="time" id="templateTaskTime" />
+          </div>
+
+          <div class="template-progress">
+            <label>Progresso Attività</label>
+            <div class="progress-options">
+              <button
+                class="progress-btn"
+                data-progress="not-started"
+                onclick="setTaskProgress('not-started')"
+              >
+                <span class="progress-icon">⏳</span>
+                <span class="progress-text">Non Iniziata</span>
+              </button>
+              <button
+                class="progress-btn"
+                data-progress="in-progress"
+                onclick="setTaskProgress('in-progress')"
+              >
+                <span class="progress-icon">🔄</span>
+                <span class="progress-text">In Corso</span>
+              </button>
+              <button
+                class="progress-btn"
+                data-progress="completed"
+                onclick="setTaskProgress('completed')"
+              >
+                <span class="progress-icon">✅</span>
+                <span class="progress-text">Completata</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="popup-actions">
+            <button class="btn" onclick="confirmTemplateTask()">
+              ➕ Aggiungi Attività
+            </button>
+            <button class="btn btn-secondary" onclick="closeTemplateTask()">
+              ❌ Annulla
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Farming Materiali -->
+    <div id="farmingPopup" class="popup-overlay" style="display: none">
+      <div class="popup farming-popup">
+        <div class="popup-header">
+          <h3 class="popup-title">🌾 Seleziona Materiali da Farmare</h3>
+          <button class="popup-close" onclick="closeFarmingPopup()">×</button>
+        </div>
+        <div class="popup-content">
+          <!-- Barra di ricerca -->
+          <div class="farming-search">
+            <input
+              type="text"
+              id="farmingSearchInput"
+              placeholder="🔍 Cerca materiali..."
+              class="farming-search-input"
+            />
+          </div>
+
+          <!-- Filtri -->
+          <div class="farming-filters">
+            <select id="farmingCategoryFilter" class="farming-filter-select">
+              <option value="">Tutte le Categorie</option>
+              <option value="materiali_ascensione_personaggi">
+                📈 Ascensione Personaggi
+              </option>
+              <option value="materiali_esperienza">
+                📚 Materiali Esperienza
+              </option>
+              <option value="materiali_ascensione_armi">
+                ⚔️ Ascensione Armi
+              </option>
+              <option value="materiali_talenti">🎯 Materiali Talenti</option>
+              <option value="materiali_speciali">💎 Materiali Speciali</option>
+              <option value="materiali_locali">🗺️ Materiali Locali</option>
+            </select>
+            <select
+              id="farmingRarityFilter"
+              class="farming-filter-select"
+              onchange="handleRarityChange(this.value)"
+            >
+              <option value="">Tutte le Rarità</option>
+              <option value="1">1★</option>
+              <option value="2">2★</option>
+              <option value="3">3★</option>
+              <option value="4">4★</option>
+              <option value="5">5★</option>
+            </select>
+            <select
+              id="farmingElementFilter"
+              class="farming-filter-select"
+              onchange="handleElementChange(this.value)"
+            >
+              <option value="">Tutti gli Elementi</option>
+              <option value="Pyro">🔥 Pyro</option>
+              <option value="Hydro">💧 Hydro</option>
+              <option value="Electro">⚡ Electro</option>
+              <option value="Cryo">❄️ Cryo</option>
+              <option value="Anemo">🌪️ Anemo</option>
+              <option value="Geo">🪨 Geo</option>
+              <option value="Dendro">🌱 Dendro</option>
+            </select>
+            <button class="btn btn-secondary" onclick="clearFarmingFilters()">
+              🗑️ Pulisci Filtri
+            </button>
+          </div>
+
+          <!-- Lista materiali -->
+          <div class="farming-materials-container">
+            <div class="farming-materials-list" id="farmingMaterialsList">
+              <!-- Materiali generati dinamicamente -->
+            </div>
+          </div>
+
+          <!-- Materiali selezionati -->
+          <div class="selected-materials">
+            <h4>📋 Materiali Selezionati</h4>
+            <div class="selected-materials-list" id="selectedMaterialsList">
+              <!-- Nessun materiale selezionato -->
+            </div>
+          </div>
+
+          <div class="popup-actions">
+            <button class="btn" onclick="confirmFarmingSelection()">
+              ➕ Aggiungi Attività Farming
+            </button>
+            <button class="btn btn-secondary" onclick="closeFarmingPopup()">
+              ❌ Annulla
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Selezione Immagini Attività -->
+    <div
+      id="taskImagesPopup"
+      class="popup-overlay"
+      style="display: none; z-index: 3002"
+    >
+      <div class="popup farming-popup">
+        <div class="popup-header">
+          <h3 class="popup-title">🖼️ Scelta Manufatto</h3>
+          <button class="popup-close" onclick="closeTaskImagesPopup()">
+            ×
+          </button>
+        </div>
+        <div class="popup-content">
+          <!-- Barra di ricerca -->
+          <div class="farming-search">
+            <input
+              type="text"
+              id="taskImagesSearchInput"
+              placeholder="🔍 Cerca immagini..."
+              class="farming-search-input"
+            />
+          </div>
+
+          <!-- Filtri -->
+          <div class="farming-filters">
+            <select id="taskImagesCategoryFilter" class="farming-filter-select">
+              <option value="">Tutte le Categorie</option>
+              <option value="materiali_ascensione_personaggi">
+                📈 Ascensione Personaggi
+              </option>
+              <option value="materiali_esperienza">
+                📚 Materiali Esperienza
+              </option>
+              <option value="materiali_ascensione_armi">
+                ⚔️ Ascensione Armi
+              </option>
+              <option value="materiali_talenti">🎯 Materiali Talenti</option>
+              <option value="materiali_speciali">💎 Materiali Speciali</option>
+              <option value="materiali_locali">🗺️ Materiali Locali</option>
+            </select>
+            <select id="taskImagesRarityFilter" class="farming-filter-select">
+              <option value="">Tutte le Rarità</option>
+              <option value="1">1★</option>
+              <option value="2">2★</option>
+              <option value="3">3★</option>
+              <option value="4">4★</option>
+              <option value="5">5★</option>
+            </select>
+            <button
+              class="btn btn-secondary"
+              onclick="clearTaskImagesFilters()"
+            >
+              🗑️ Pulisci Filtri
+            </button>
+          </div>
+
+          <!-- Lista immagini -->
+          <div class="farming-materials-container">
+            <div class="farming-materials-list" id="taskImagesList">
+              <!-- Immagini generate dinamicamente -->
+            </div>
+          </div>
+
+          <!-- Immagini selezionate -->
+          <div class="selected-materials">
+            <h4>🖼️ Immagini Selezionate</h4>
+            <div class="selected-materials-list" id="selectedTaskImagesList">
+              <!-- Nessuna immagine selezionata -->
+            </div>
+          </div>
+
+          <div class="popup-actions">
+            <button class="btn" onclick="confirmTaskImagesSelection()">
+              ✅ Conferma Selezione
+            </button>
+            <button class="btn btn-secondary" onclick="closeTaskImagesPopup()">
+              ❌ Annulla
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Immagine Materiale -->
+    <div
+      id="materialImagePopup"
+      class="popup-overlay"
+      style="display: none; z-index: 13000"
+    >
+      <div class="material-image-popup">
+        <div class="material-image-container">
+          <img
+            id="materialImageLarge"
+            src="images/characters/placeholder.svg"
+            alt="Immagine Materiale"
+          />
+          <div class="material-image-info">
+            <h4 id="materialImageTitle">Titolo materiale</h4>
+            <p id="materialImageDescription"></p>
+          </div>
+        </div>
+        <button
+          class="popup-close material-image-close"
+          onclick="closeMaterialImagePopup()"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+
+    <!-- Popup Selezione Artefatti -->
+    <div
+      id="artifactTablePopup"
+      class="popup-overlay"
+      style="display: none; z-index: 3003"
+    >
+      <div class="popup farming-popup">
+        <div class="popup-header">
+          <h3 class="popup-title">🏛️ Seleziona Artefatti da Farmare</h3>
+          <button class="popup-close" onclick="closeArtifactTable()">×</button>
+        </div>
+        <div class="popup-content">
+          <!-- Barra di ricerca -->
+          <div class="farming-search">
+            <input
+              type="text"
+              id="artifactSearchInput"
+              placeholder="🔍 Cerca artefatti..."
+              class="farming-search-input"
+            />
+          </div>
+
+          <!-- Lista artefatti -->
+          <div class="farming-materials-container">
+            <div class="farming-materials-list" id="artifactGallery">
+              <!-- Artefatti generati dinamicamente -->
+            </div>
+          </div>
+
+          <!-- Artefatti selezionati -->
+          <div class="selected-materials">
+            <h4>🏛️ Artefatti Selezionati</h4>
+            <div class="selected-materials-list" id="selectedArtifactsList">
+              <!-- Nessun artefatto selezionato -->
+            </div>
+          </div>
+
+          <div class="popup-actions">
+            <button class="btn" onclick="confirmArtifactSelection()">
+              ➕ Aggiungi Attività Farming Artefatti
+            </button>
+            <button class="btn btn-secondary" onclick="closeArtifactTable()">
+              ❌ Annulla
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Conferma Personalizzata -->
+    <div
+      id="customConfirmPopup"
+      class="popup-overlay"
+      style="display: none; z-index: 30000"
+    >
+      <div class="popup" style="max-width: 350px">
+        <div class="popup-header">
+          <h3 class="popup-title">Conferma</h3>
+        </div>
+        <div class="popup-content">
+          <p id="customConfirmMessage"></p>
+          <div
+            style="
+              display: flex;
+              gap: 1rem;
+              justify-content: flex-end;
+              margin-top: 2rem;
+            "
+          >
+            <button id="customConfirmYes" class="btn btn-success">Sì</button>
+            <button id="customConfirmNo" class="btn btn-danger">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Report Settimanale -->
+    <div
+      id="weeklyReportPopup"
+      class="popup-overlay"
+      style="display: none; z-index: 30000"
+    >
+      <div class="weekly-report-popup">
+        <div class="weekly-report-header">
+          <h3 class="weekly-report-title">
+            <span>📊</span>
+            Report Settimanale
+          </h3>
+          <button class="weekly-report-close" onclick="closeWeeklyReport()">
+            ×
+          </button>
+        </div>
+        <div class="weekly-report-content" id="weeklyReportContent">
+          <!-- Contenuto generato dinamicamente -->
+        </div>
+      </div>
+    </div>
+
+    <script src="calendario_complete.js"></script>
+
+    <script>
+      // Funzioni per i controlli utente
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("user-controls");
+        if (!el) return;
+        if (user) {
+          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em; transform: translateY(2px);'>Area Utente</a><button class='btn btn-secondary' onclick='doLogout()' style='transform: translateY(2px);'>Logout</button>`;
+        } else {
+          el.innerHTML = `<a href='login.html' class='btn btn-secondary' style='margin-left:0.5em; transform: translateY(2px);'>Login</a> <a href='registrazione.html' class='btn btn-secondary' style='transform: translateY(2px); margin-right:1rem;'>Registrati</a>`;
+        }
+      }
+
+      function doLogout() {
+        localStorage.removeItem("user");
+        location.reload();
+      }
+
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+    </script>
+  </body>
+</html>

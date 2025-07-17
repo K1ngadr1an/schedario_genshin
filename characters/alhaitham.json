@@ -1,0 +1,599 @@
+{
+  "displayName": "Alhaitham",
+  "img": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/alhaitham/image.png?strip=all&quality=100&w=160",
+  "tags": [
+    "Sword",
+    "Dendro",
+    "Sumeru Akademiya",
+    "11/2",
+    "Vultur Volans",
+    "Steeple of Ignorance"
+  ],
+  "description": "The current scribe of the Sumeru Akademiya, a man endowed with extraordinary intelligence and talent. He lives free — free from the searching eyes of ordinary people, anyway.",
+  "weapons": [
+    {
+      "name": "Light of Foliar Incision",
+      "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Uraku Misugiri",
+      "img": "https://img.game8.co/3855357/0f1bee0c48888db48a19113a1a682e1f.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Haran Geppaku Futsu",
+      "img": "https://img.game8.co/3511222/2310c3f7ed9c13a4249fccdc256199bb.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Freedom-Sworn",
+      "img": "https://img.game8.co/3456283/700b83638b99dba8908463aa92f6b3d6.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Wolf-Fang",
+      "img": "https://img.game8.co/3754179/5c3f27fc2074430d14a5c95dd869df2f.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Toukabou Shigure",
+      "img": "https://img.game8.co/3623676/cf17c8a3bd127aa1a81876b6c27f837b.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://img.game8.co/3314420/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Summit Shaper",
+      "img": "https://img.game8.co/3311113/3b0e2ee76a9d421e3f7e4a640f7a9b99.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Blackcliff Longsword",
+      "img": "https://img.game8.co/3314395/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Deepwood Memories (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Gilded Dreams (2) + Deepwood Memories (2)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Gilded Dreams (2) + Emblem of Severed Fate (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Gilded Dreams (2) + Wanderer's Troupe (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Deepwood Memories (2)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (2)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    },
+    {
+      "name": "Wanderer's Troupe (2)",
+      "img": "https://img.game8.co/3314241/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Elemental Mastery / ATK%" },
+    { "type": "Goblet", "value": "Dendro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "Energy Recharge",
+    "CRIT Rate",
+    "CRIT DMG",
+    "Elemental Mastery",
+    "ATK%"
+  ],
+  "talents": ["Skill", "Normal Attack", "Burst"],
+  "info": "Inserisci qui le note, consigli e spiegazioni per Alhaitham.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Light of Foliar Incision",
+        "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Gilded Dreams (4)",
+          "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Alhaitham", "img": "alhaitam.png" },
+      { "name": "Yae Miko", "img": "yae_miko.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Alhaitham", "img": "alhaitam.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "YaoYao", "img": "kuki_shinobu.png" }
+    ],
+    [
+      { "name": "Alhaitham", "img": "alhaitam.png" },
+      { "name": "Xingqiu", "img": "yaoyao.png" },
+      { "name": "Nahida", "img": "fischl.png" },
+      { "name": "Kuki Shinobu", "img": "beidou.png" }
+    ],
+    [
+      { "name": "Alhaitham", "img": "alhaitam.png" },
+      { "name": "Lisa", "img": "lisa.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Alhaitham", "img": "alhaitam.png" },
+      { "name": "Yae Miko", "img": "yae_miko.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Baizhu", "img": "baizhu.png" }
+    ],
+    [
+      { "name": "Alhaitham", "img": "alhaitam.png" },
+      { "name": "Barbara", "img": "barbara.png" },
+      { "name": "Yelan", "img": "yelan.png" },
+      { "name": "Thoma", "img": "thoma.png" }
+    ],
+    [
+      { "name": "Alhaitham", "img": "alhaitam.png" },
+      { "name": "Nilou", "img": "nilou.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "YaoYao", "img": "yaoyao.png" }
+    ],
+    [
+      { "name": "Alhaitham", "img": "alhaitam.png" },
+      { "name": "Beidou", "img": "beidou.png" },
+      { "name": "Nahida", "img": "nahida.png" },
+      { "name": "Kuki Shinobu", "img": "kuki_shinobu.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Abductive Reasoning",
+      "desc": "",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Alhaitham-NA.webp",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Alhaitham_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/NrzNr0GktTU",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "49.5%",
+          "hit2": "50.7%",
+          "hit3": "34.2% + 34.2%",
+          "hit4": "66.8%",
+          "hit5": "83.9%",
+          "charged": "55.3% + 55.3%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "53.6%",
+          "hit2": "54.9%",
+          "hit3": "37.2% + 37.2%",
+          "hit4": "72.2%",
+          "hit5": "90.7%",
+          "charged": "59.8% + 59.8%",
+          "stamina": "20",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "57.6%",
+          "hit2": "59%",
+          "hit3": "39.7% + 39.7%%",
+          "hit4": "77.6%",
+          "hit5": "97.5%%",
+          "charged": "64.3% + 64.3%",
+          "stamina": "20",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "63.3%",
+          "hit2": "64.9%",
+          "hit3": "43.7% + 43.7%",
+          "hit4": "85.4%",
+          "hit5": "107.3%",
+          "charged": "70.7% + 70.7%",
+          "stamina": "20",
+          "plunge": "81.8%",
+          "lowhigh": "163.5% / 204.2%"
+        },
+        {
+          "level": 5,
+          "hit1": "67.4%",
+          "hit2": "69%",
+          "hit3": "46.5% + 46.5%",
+          "hit4": "90.8%",
+          "hit5": "114.1%",
+          "charged": "75.2% + 75.2%",
+          "stamina": "20",
+          "plunge": "87%",
+          "lowhigh": "173.9% / 217.2%"
+        },
+        {
+          "level": 6,
+          "hit1": "70.5%",
+          "hit2": "71.7%",
+          "hit3": "49.7% + 49.7%",
+          "hit4": "89.3%",
+          "hit5": "107.9%",
+          "charged": "76.8% + 76.8%",
+          "stamina": "20",
+          "plunge": "86.1%",
+          "lowhigh": "149.8% / 181.7%"
+        },
+        {
+          "level": 7,
+          "hit1": "75.5%",
+          "hit2": "76.7%",
+          "hit3": "53.2% + 53.2%",
+          "hit4": "95.8%",
+          "hit5": "115.9%",
+          "charged": "82.3% + 82.3%",
+          "stamina": "20",
+          "plunge": "92.3%",
+          "lowhigh": "155.8% / 187.7%"
+        },
+        {
+          "level": 8,
+          "hit1": "80.5%",
+          "hit2": "81.7%",
+          "hit3": "56.7% + 56.7%",
+          "hit4": "102.3%",
+          "hit5": "123.9%",
+          "charged": "87.8% + 87.8%",
+          "stamina": "20",
+          "plunge": "98.5%",
+          "lowhigh": "161.8% / 193.7%"
+        },
+        {
+          "level": 9,
+          "hit1": "85.5%",
+          "hit2": "86.7%",
+          "hit3": "60.2% + 60.2%",
+          "hit4": "108.8%",
+          "hit5": "131.9%",
+          "charged": "93.3% + 93.3%",
+          "stamina": "20",
+          "plunge": "104.7%",
+          "lowhigh": "167.8% / 199.7%"
+        },
+        {
+          "level": 10,
+          "hit1": "90.5%",
+          "hit2": "91.7%",
+          "hit3": "63.7% + 63.7%",
+          "hit4": "115.3%",
+          "hit5": "139.9%",
+          "charged": "98.8% + 98.8%",
+          "stamina": "20",
+          "plunge": "110.9%",
+          "lowhigh": "173.8% / 205.7%"
+        },
+        {
+          "level": 11,
+          "hit1": "95.5%",
+          "hit2": "96.7%",
+          "hit3": "67.2% + 67.2%",
+          "hit4": "121.8%",
+          "hit5": "147.9%",
+          "charged": "104.3% + 104.3%",
+          "stamina": "20",
+          "plunge": "117.1%",
+          "lowhigh": "179.8% / 211.7%"
+        },
+        {
+          "level": 12,
+          "hit1": "100.5%",
+          "hit2": "101.7%",
+          "hit3": "70.7% + 70.7%",
+          "hit4": "128.3%",
+          "hit5": "155.9%",
+          "charged": "109.8% + 109.8%",
+          "stamina": "20",
+          "plunge": "123.3%",
+          "lowhigh": "185.8% / 217.7%"
+        },
+        {
+          "level": 13,
+          "hit1": "105.5%",
+          "hit2": "106.7%",
+          "hit3": "74.2% + 74.2%",
+          "hit4": "134.8%",
+          "hit5": "163.9%",
+          "charged": "115.3% + 115.3%",
+          "stamina": "20",
+          "plunge": "129.5%",
+          "lowhigh": "191.8% / 223.7%"
+        },
+        {
+          "level": 14,
+          "hit1": "110.5%",
+          "hit2": "111.7%",
+          "hit3": "77.7% + 77.7%",
+          "hit4": "141.3%",
+          "hit5": "171.9%",
+          "charged": "120.8% + 120.8%",
+          "stamina": "20",
+          "plunge": "135.7%",
+          "lowhigh": "197.8% / 229.7%"
+        },
+        {
+          "level": 15,
+          "hit1": "115.5%",
+          "hit2": "116.7%",
+          "hit3": "81.2% + 81.2%",
+          "hit4": "147.8%",
+          "hit5": "179.9%",
+          "charged": "126.3% + 126.3%",
+          "stamina": "20",
+          "plunge": "141.9%",
+          "lowhigh": "203.8% / 235.7%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash 2 rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Universality: An Elaboration on Form",
+      "desc": "Truth inherently exists amidst uncertainty. Even the greatest of scholars are not immune to error.",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Alhaitham-Skill.webp",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Rushes forward, dealing <span class='dendro'>Dendro DMG</span> to nearby opponents when the rush ends, causing a <b>Chisel-Light Mirror</b> to form.<br><span style='color:#b3e6b3;'>Holding this skill will cause it to behave differently.</span></div><div class='skill-section'><b>Hold</b><br>Enters Aiming Mode to adjust the direction of Alhaitham's rush attack.</div><div class='skill-section'><b>Chisel-Light Mirror</b><br>When this skill is unleashed, Alhaitham will generate 1 Chisel-Light Mirror. If there are no Mirrors at this time, he will generate 1 additional Mirror.<br>Chisel-Light Mirrors will have the following properties:<ul style='margin:0 0 0 18px;padding:0;'><li>When he possesses Chisel-Light Mirrors, Alhaitham's Normal, Charged, and Plunging Attacks will be converted to <span class='dendro'>Dendro DMG</span>. This cannot be overridden.</li><li>When attacks of the aforementioned kind hit opponents, the Chisel-Light Mirrors will unleash a Projection Attack that deals <span class='aoe-dendro'>AoE Dendro DMG</span> based on the number of Mirrors on the field.</li><li>A total of 3 Chisel-Light Mirrors can exist at once.</li><li>The Chisel-Light Mirrors will disappear one after the other over time, and will all disappear when Alhaitham leaves the field.</li></ul></div>",
+      "levels": [
+        {
+          "level": 1,
+          "rush_attack_dmg": "193.6% ATK + 154.9% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "67.2% ATK + 134.4% EM",
+          "mirror2_dmg": "(67.2% ATK + 134.4% EM) ×2",
+          "mirror3_dmg": "(67.2% ATK + 134.4% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 2,
+          "rush_attack_dmg": "210.0% ATK + 168.0% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "73.0% ATK + 146.0% EM",
+          "mirror2_dmg": "(73.0% ATK + 146.0% EM) ×2",
+          "mirror3_dmg": "(73.0% ATK + 146.0% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 3,
+          "rush_attack_dmg": "226.4% ATK + 181.1% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "78.8% ATK + 157.6% EM",
+          "mirror2_dmg": "(78.8% ATK + 157.6% EM) ×2",
+          "mirror3_dmg": "(78.8% ATK + 157.6% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 4,
+          "rush_attack_dmg": "243.2% ATK + 194.5% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "84.6% ATK + 169.2% EM",
+          "mirror2_dmg": "(84.6% ATK + 169.2% EM) ×2",
+          "mirror3_dmg": "(84.6% ATK + 169.2% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 5,
+          "rush_attack_dmg": "259.6% ATK + 207.6% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "90.4% ATK + 180.8% EM",
+          "mirror2_dmg": "(90.4% ATK + 180.8% EM) ×2",
+          "mirror3_dmg": "(90.4% ATK + 180.8% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 6,
+          "rush_attack_dmg": "276.0% ATK + 220.8% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "96.2% ATK + 192.4% EM",
+          "mirror2_dmg": "(96.2% ATK + 192.4% EM) ×2",
+          "mirror3_dmg": "(96.2% ATK + 192.4% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 7,
+          "rush_attack_dmg": "292.8% ATK + 234.2% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "102.0% ATK + 204.0% EM",
+          "mirror2_dmg": "(102.0% ATK + 204.0% EM) ×2",
+          "mirror3_dmg": "(102.0% ATK + 204.0% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 8,
+          "rush_attack_dmg": "309.2% ATK + 247.3% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "107.8% ATK + 215.6% EM",
+          "mirror2_dmg": "(107.8% ATK + 215.6% EM) ×2",
+          "mirror3_dmg": "(107.8% ATK + 215.6% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 9,
+          "rush_attack_dmg": "325.6% ATK + 260.4% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "113.6% ATK + 227.2% EM",
+          "mirror2_dmg": "(113.6% ATK + 227.2% EM) ×2",
+          "mirror3_dmg": "(113.6% ATK + 227.2% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 10,
+          "rush_attack_dmg": "342.0% ATK + 273.6% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "119.4% ATK + 238.8% EM",
+          "mirror2_dmg": "(119.4% ATK + 238.8% EM) ×2",
+          "mirror3_dmg": "(119.4% ATK + 238.8% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 11,
+          "rush_attack_dmg": "358.4% ATK + 286.7% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "125.2% ATK + 250.4% EM",
+          "mirror2_dmg": "(125.2% ATK + 250.4% EM) ×2",
+          "mirror3_dmg": "(125.2% ATK + 250.4% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 12,
+          "rush_attack_dmg": "374.8% ATK + 299.8% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "131.0% ATK + 262.0% EM",
+          "mirror2_dmg": "(131.0% ATK + 262.0% EM) ×2",
+          "mirror3_dmg": "(131.0% ATK + 262.0% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 13,
+          "rush_attack_dmg": "391.2% ATK + 313.0% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "136.8% ATK + 273.6% EM",
+          "mirror2_dmg": "(136.8% ATK + 273.6% EM) ×2",
+          "mirror3_dmg": "(136.8% ATK + 273.6% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 14,
+          "rush_attack_dmg": "407.6% ATK + 326.1% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "142.6% ATK + 285.2% EM",
+          "mirror2_dmg": "(142.6% ATK + 285.2% EM) ×2",
+          "mirror3_dmg": "(142.6% ATK + 285.2% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        },
+        {
+          "level": 15,
+          "rush_attack_dmg": "424.0% ATK + 339.2% EM",
+          "projection_attack_interval": "1.6s",
+          "mirror1_dmg": "148.4% ATK + 296.8% EM",
+          "mirror2_dmg": "(148.4% ATK + 296.8% EM) ×2",
+          "mirror3_dmg": "(148.4% ATK + 296.8% EM) ×3",
+          "mirror_removal_interval": "4s",
+          "cd": "18s"
+        }
+      ]
+    },
+    {
+      "name": "Particular Field: Fetters of Phenomena",
+      "video": "https://youtu.be/LnwJ2gWdjD0?si=Mnyp3ULTG8h0nuVx",
+      "desc": "If a researcher makes wisdom their goal, then they should be prepared to make an enemy of every word they read. Only then can they avoid bias.",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Alhaitham-Burst.webp"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Four-Causal Correction",
+      "phase": "Ascension Phase 1",
+      "desc": "When Alhaitham's Charged or Plunging Attacks hit opponents, they will generate 1 Chisel-Light Mirror. This effect can be triggered once every 12s."
+    },
+    {
+      "name": "Mysteries Laid Bare",
+      "phase": "Ascension Phase 4",
+      "desc": "Each point of Alhaitham's Elemental Mastery will increase the DMG dealt by Projection Attacks and Particular Field: Fetters of Phenomena by 0.1%. The DMG of both aforementioned abilities can be increased by a maximum of 100% this way."
+    },
+    {
+      "name": "Law of Reductive Overdetermination",
+      "phase": "Passive",
+      "desc": "When Alhaitham crafts Weapon Ascension Materials, he has a 10% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Intuition",
+      "phase": "Constellation Lv. 1",
+      "desc": "When a Projection Attack hits an opponent, Universality: An Elaboration on Form's CD is decreased by 1.2s. This effect can be triggered once every 1s."
+    },
+    {
+      "name": "Debate",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Alhaitham generates a Chisel-Light Mirror, his Elemental Mastery will be increased by 50 for 8 seconds, max 4 stacks. Each stack's duration is counted independently. This effect can be triggered even when the maximum number of Chisel-Light Mirrors has been reached."
+    },
+    {
+      "name": "Negation",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Universality: An Elaboration on Form by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Elucidation",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Particular Field: Fetters of Phenomena is unleashed, the following effects will become active based on the number of Chisel-Light Mirrors consumed and created this time around: Each Mirror consumed will increase the Elemental Mastery of all other nearby party members by 30 for 15s. Each Mirror generated will grant Alhaitham a 10% Dendro DMG Bonus for 15s. The pre-existing duration of the aforementioned effects will be cleared if you use Particular Field: Fetters of Phenomena again while they are in effect."
+    },
+    {
+      "name": "Sagacity",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Particular Field: Fetters of Phenomena by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Structuration",
+      "phase": "Constellation Lv. 6",
+      "desc": "Alhaitham gains the following effects: 2 seconds after Particular Field: Fetters of Phenomena is unleashed, he will generate 3 Chisel-Light Mirrors regardless of the number of mirrors consumed. If Alhaitham generates Chisel-Light Mirrors when their numbers have already maxed out, his CRIT Rate and CRIT DMG will increase by 10% and 70% respectively for 6s. If this effect is triggered again during its initial duration, the duration remaining will be increased by 6s."
+    }
+  ]
+}

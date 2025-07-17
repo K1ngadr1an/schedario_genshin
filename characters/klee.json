@@ -1,0 +1,182 @@
+{
+  "displayName": "Klee",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Catalyst", "Pyro", "Mondstadt", "DPS", "5★", "Bomber"],
+  "description": "Klee è la piccola e vivace esperta di esplosivi dei Cavalieri di Favonius. Specializzata in attacchi Pyro ad area, è una delle migliori DPS a catalizzatore di Mondstadt.",
+  "weapons": [
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Solar Pearl",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Solar_Pearl.png",
+      "note": "CRIT Rate"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Lavawalker’s Salvation (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Lavawalkers_Salvation.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Gladiator's Finale (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Klee è una DPS Pyro a catalizzatore che infligge danni AoE elevati. Si consiglia di massimizzare la statistica di CRIT e la Maestria Elementale per reazioni potenti.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Lost Prayer to the Sacred Winds",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Crimson Witch of Flames (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Klee" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Klee" },
+      { "name": "Mona" },
+      { "name": "Venti" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Klee" },
+      { "name": "Fischl" },
+      { "name": "Diona" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Kaboom!",
+      "desc": "Effettua fino a 3 attacchi esplosivi che infliggono danni Pyro ad area.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Kaboom.png",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "72.2%",
+          "hit2": "62.5%",
+          "hit3": "89.7%",
+          "charged": "157.5%",
+          "stamina": "50",
+          "plunge": "56.8%",
+          "lowhigh": "114% / 142%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 3 attacchi esplosivi che infliggono danni Pyro ad area.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per infliggere danni Pyro ad area più elevati.</div><div class='skill-section'><b>Plunging Attack</b><br>Scaglia una bomba dal cielo che esplode all'impatto, infliggendo danni AoE Pyro.</div>"
+    },
+    {
+      "name": "Elemental Skill: Jumpy Dumpty",
+      "desc": "Lancia Jumpy Dumpty che rimbalza 3 volte, infliggendo danni Pyro ad area e lasciando mini-mine che esplodono al contatto.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Jumpy_Dumpty.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Jumpy Dumpty</b><br>Lancia Jumpy Dumpty che rimbalza 3 volte, infliggendo danni Pyro ad area e lasciando mini-mine che esplodono al contatto.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "95% x3",
+          "mine_dmg": "33.6% ciascuna",
+          "cd": "20s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Sparks 'n' Splash",
+      "desc": "Klee scatena una pioggia di esplosioni Pyro che colpiscono i nemici vicini per tutta la durata dell'abilità.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Sparks_n_Splash.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Sparks 'n' Splash</b><br>Scatena una pioggia di esplosioni Pyro che colpiscono i nemici vicini per tutta la durata dell'abilità.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "42.6% per colpo",
+          "duration": "10s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Pounding Surprise",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando gli attacchi normali e le skill di Klee infliggono danni, c'è una probabilità di generare una particella di energia."
+    },
+    {
+      "name": "Sparkling Burst",
+      "phase": "Ascension Phase 4",
+      "desc": "Quando Klee usa un attacco caricato, tutti i membri del party ottengono un bonus ATK del 10% per 10s."
+    },
+    {
+      "name": "All Of My Treasures!",
+      "phase": "Passive",
+      "desc": "Mostra la posizione delle risorse uniche di Mondstadt sulla minimappa."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Chained Reactions",
+      "phase": "Constellation Lv. 1",
+      "desc": "Gli attacchi e le skill di Klee hanno una probabilità di far esplodere una mina aggiuntiva."
+    },
+    {
+      "name": "C2: Explosive Frags",
+      "phase": "Constellation Lv. 2",
+      "desc": "Le mine di Jumpy Dumpty riducono la difesa dei nemici colpiti del 23% per 10s."
+    },
+    {
+      "name": "C3: Exquisite Compound",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Jumpy Dumpty di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Sparkly Explosion",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando Klee lascia il campo, i membri del party ottengono un bonus ATK del 10% per 25s."
+    },
+    {
+      "name": "C5: Nova Burst",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Sparks 'n' Splash di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Blazing Delight",
+      "phase": "Constellation Lv. 6",
+      "desc": "Durante Sparks 'n' Splash, Klee ottiene un bonus Pyro DMG del 10% e rigenera 3 energia ogni 3s."
+    }
+  ]
+}

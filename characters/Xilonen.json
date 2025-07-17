@@ -1,0 +1,202 @@
+{
+  "displayName": "Xilonen",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xilonen_Icon.png",
+  "tags": ["Polearm", "Geo", "Liyue", "5★", "DPS", "Geo DPS"],
+  "description": "Xilonen è un personaggio Geo di Liyue, specializzato nel danno Geo e nella manipolazione della terra. Eccelle nel danno fisico e Geo.",
+  "weapons": [
+    {
+      "name": "Primordial Jade Winged-Spear",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Primordial_Jade_Winged-Spear.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Staff_of_Homa.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Vortex Vanquisher",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Vortex_Vanquisher.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Deathmatch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Deathmatch.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Blackcliff Pole",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Blackcliff_Pole.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Lithic Spear",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Lithic_Spear.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Archaic Petra (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Archaic_Petra.png"
+    },
+    {
+      "name": "Gladiator's Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    },
+    {
+      "name": "Archaic Petra (2) + Gladiator's Finale (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Archaic Petra (2) + Shimenawa's Reminiscence (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Geo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Stone Spear",
+    "Earth's Embrace",
+    "Mountain's Fury"
+  ],
+  "info": "Xilonen si concentra su danno Geo e fisico. Priorità a CRIT, ATK% e Energy Recharge per uptime costante delle abilità.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Primordial Jade Winged-Spear",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Primordial_Jade_Winged-Spear.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Archaic Petra (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Archaic_Petra.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Xilonen" },
+      { "name": "Zhongli" },
+      { "name": "Albedo" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Xilonen" },
+      { "name": "Zhongli" },
+      { "name": "Gorou" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Xilonen" },
+      { "name": "Zhongli" },
+      { "name": "Itto" },
+      { "name": "Gorou" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Stone Spear",
+      "desc": "Performs up to 6 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xilonen_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 6 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to perform an upward thrust.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "30.0%",
+          "hit2": "30.0%",
+          "hit3": "40.0%",
+          "hit4": "40.0%",
+          "hit5": "50.0%",
+          "hit6": "50.0%",
+          "charged": "120%",
+          "plunge": "60%",
+          "lowhigh": "120% / 150%"
+        }
+      ]
+    },
+    {
+      "name": "Earth's Embrace",
+      "desc": "Xilonen summons the power of the earth, dealing Geo DMG and creating a protective barrier.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xilonen_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Earth's Embrace</b><br>Xilonen summons the power of the earth, dealing Geo DMG and creating a protective barrier.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "250% ATK",
+          "shield_strength": "15% Max HP",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Mountain's Fury",
+      "desc": "Xilonen unleashes the full power of the mountains, dealing massive Geo DMG to all nearby enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xilonen_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Mountain's Fury</b><br>Xilonen unleashes the full power of the mountains, dealing massive Geo DMG to all nearby enemies.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "400% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Stone Heart",
+      "phase": "Ascension Phase 1",
+      "desc": "Increases Xilonen's Geo DMG by 15% when her HP is above 70%."
+    },
+    {
+      "name": "Mountain's Blessing",
+      "phase": "Ascension Phase 4",
+      "desc": "When Xilonen uses Earth's Embrace, all party members gain 10% increased DEF for 10s."
+    },
+    {
+      "name": "Earth's Guardian",
+      "phase": "Passive",
+      "desc": "When Xilonen crafts Weapon Ascension Materials, she has a 10% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Stone's Resolve",
+      "phase": "Constellation Lv. 1",
+      "desc": "Earth's Embrace's shield strength is increased by 20%."
+    },
+    {
+      "name": "Mountain's Strength",
+      "phase": "Constellation Lv. 2",
+      "desc": "Mountain's Fury grants an additional 15% Geo DMG Bonus to all party members for 10s."
+    },
+    {
+      "name": "Earth's Power",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Mountain's Fury by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Stone's Protection",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Xilonen's HP falls below 50%, she gains a 100% DEF Bonus."
+    },
+    {
+      "name": "Mountain's Legacy",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Earth's Embrace by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Earth's Wrath",
+      "phase": "Constellation Lv. 6",
+      "desc": "Mountain's Fury deals an additional 50% DMG to enemies affected by Geo."
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "displayName": "Kaveh",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Dendro", "Claymore", "Sumeru", "4★", "Support", "Bloom"],
+  "description": "A renowned architect from Sumeru, Kaveh is a Dendro claymore user who excels at triggering Bloom reactions and supporting his team.",
+  "weapons": [
+    {
+      "name": "Mailed Flower",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mailed_Flower.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Forest Regalia",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Forest_Regalia.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Greatsword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Greatsword.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Greatsword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Greatsword.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Flower of Paradise Lost (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Flower_of_Paradise_Lost.png"
+    },
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gilded_Dreams.png"
+    },
+    {
+      "name": "Flower of Paradise Lost (2) + Gilded Dreams (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Flower_of_Paradise_Lost.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Elemental Mastery" },
+    { "type": "Goblet", "value": "Elemental Mastery" },
+    { "type": "Circlet", "value": "Elemental Mastery" }
+  ],
+  "substats": ["Elemental Mastery", "Energy Recharge", "ATK%", "HP%"],
+  "talents": [
+    "Normal Attack: Schematic Setup",
+    "Artistic Ingenuity",
+    "Painted Dome"
+  ],
+  "info": "Kaveh is a Dendro support and Bloom enabler. Build him for Elemental Mastery to maximize Bloom damage.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Mailed Flower",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mailed_Flower.png",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Flower of Paradise Lost (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Flower_of_Paradise_Lost.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kaveh" },
+      { "name": "Nilou" },
+      { "name": "Nahida" },
+      { "name": "Yelan" }
+    ],
+    [
+      { "name": "Kaveh" },
+      { "name": "Kokomi" },
+      { "name": "Collei" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Kaveh" },
+      { "name": "Baizhu" },
+      { "name": "Fischl" },
+      { "name": "Barbara" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Schematic Setup",
+      "desc": "Performs up to 4 consecutive claymore strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Schematic_Setup.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks. At the end of the sequence, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "76.2%",
+          "hit2": "73.6%",
+          "hit3": "95.1%",
+          "hit4": "115.6%",
+          "charged": "56.2% + 56.2%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "82.4%",
+          "hit2": "79.6%",
+          "hit3": "102.8%",
+          "hit4": "125.0%",
+          "charged": "61.2% + 61.2%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Artistic Ingenuity",
+      "desc": "Kaveh scans the battlefield and deals AoE Dendro DMG, triggering all Dendro Cores in range to explode immediately.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Artistic_Ingenuity.png",
+      "details_html": "<div class='skill-section'><b>Artistic Ingenuity</b><br>Deals AoE Dendro DMG and triggers all Dendro Cores in range to explode immediately.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "187.2% ATK", "cd": "6s" },
+        { "level": 2, "skill_dmg": "201.2% ATK", "cd": "6s" }
+      ]
+    },
+    {
+      "name": "Painted Dome",
+      "desc": "Kaveh creates a Painted Dome, dealing AoE Dendro DMG and granting all party members increased Bloom reaction DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Painted_Dome.png",
+      "details_html": "<div class='skill-section'><b>Painted Dome</b><br>Creates a Painted Dome, dealing AoE Dendro DMG and granting all party members increased Bloom reaction DMG for 12s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "250% ATK",
+          "bloom_bonus": "60%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "268% ATK",
+          "bloom_bonus": "65%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "The Art of Budgeting",
+      "phase": "Ascension Phase 1",
+      "desc": "When Kaveh takes DMG from a Dendro Core explosion, he recovers HP equal to 300% of his Elemental Mastery."
+    },
+    {
+      "name": "A Craftsman's Curious Conceptions",
+      "phase": "Ascension Phase 4",
+      "desc": "During Painted Dome, Kaveh's Elemental Mastery is increased by 100."
+    },
+    {
+      "name": "An Architect's Undertaking",
+      "phase": "Passive",
+      "desc": "When Kaveh crafts a weapon ascension material, he has a 10% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Sublime Salutations",
+      "phase": "Constellation Lv. 1",
+      "desc": "Within 3s after using Artistic Ingenuity, Kaveh's Dendro RES is increased by 50%."
+    },
+    {
+      "name": "Grace of Royal Roads",
+      "phase": "Constellation Lv. 2",
+      "desc": "Kaveh's Normal Attack SPD is increased by 15% during Painted Dome."
+    },
+    {
+      "name": "Profferings of Dur Untash",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Artistic Ingenuity by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Feast of Apadana",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Kaveh's HP is less than 50%, he gains 30% incoming healing bonus."
+    },
+    {
+      "name": "Treasures of Bonkhanak",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Painted Dome by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Idylls of Kashan",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using Artistic Ingenuity or Painted Dome, Kaveh's Elemental Mastery is increased by 150 for 8s."
+    }
+  ]
+}

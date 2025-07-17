@@ -1,0 +1,186 @@
+{
+  "displayName": "Lan Yan",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Polearm", "Cryo", "Liyue", "Support", "5★", "Strategist"],
+  "description": "Lan Yan è una stratega di Liyue, abile nell'uso della lancia e nel controllo del ghiaccio. Si dice che le sue tattiche siano fredde e precise come il suo elemento.",
+  "weapons": [
+    {
+      "name": "Staff of Homa",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Primordial Jade Winged-Spear",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Winged-Spear.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Favonius Lance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Lance.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Blizzard Strayer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    },
+    {
+      "name": "Noblesse Oblige (2) + Blizzard Strayer (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Cryo DMG Bonus / ATK%" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG / ATK%" }
+  ],
+  "substats": ["Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK%"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Lan Yan è un supporto Cryo che fornisce buff e controllo del campo di battaglia. Costruiscila con Energy Recharge e CRIT per massimizzare il suo impatto.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Staff of Homa",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Lan Yan" },
+      { "name": "Ganyu" },
+      { "name": "Shenhe" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Lan Yan" },
+      { "name": "Ayaka" },
+      { "name": "Mona" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Lan Yan" },
+      { "name": "Xingqiu" },
+      { "name": "Sucrose" },
+      { "name": "Rosaria" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Frosted Spear",
+      "desc": "Effettua fino a 5 colpi consecutivi con la lancia, infusi di energia Cryo.",
+      "icon": "images/characters/placeholder.svg",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "46.1%",
+          "hit3": "60.8%",
+          "hit4": "64.0%",
+          "hit5": "76.8%",
+          "charged": "60.5% + 60.5%",
+          "stamina": "25",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 5 colpi consecutivi con la lancia, infusi di energia Cryo.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per sferrare due colpi rapidi.</div><div class='skill-section'><b>Plunging Attack</b><br>Si lancia dall'alto, infliggendo danni AoE Cryo all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Glacial Tactics",
+      "desc": "Lan Yan evoca una barriera di ghiaccio che infligge danni Cryo ad area e aumenta la resistenza degli alleati.",
+      "icon": "images/characters/placeholder.svg",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Glacial Tactics</b><br>Evoca una barriera di ghiaccio che infligge danni Cryo ad area e aumenta la resistenza degli alleati per 10s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "180% ATK",
+          "res_bonus": "20%",
+          "duration": "10s",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Winter's Command",
+      "desc": "Lan Yan scatena una tempesta glaciale che infligge danni Cryo ad area e riduce la resistenza Cryo dei nemici.",
+      "icon": "images/characters/placeholder.svg",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Winter's Command</b><br>Scatena una tempesta glaciale che infligge danni Cryo ad area e riduce la resistenza Cryo dei nemici per 12s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "320% ATK",
+          "cryo_res_down": "15%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Icy Strategy",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando Lan Yan colpisce un nemico con Glacial Tactics, la sua Energy Recharge aumenta del 20% per 10s."
+    },
+    {
+      "name": "Frozen Insight",
+      "phase": "Ascension Phase 4",
+      "desc": "Winter's Command aumenta la Maestria Elementale degli alleati di 60 per 12s."
+    },
+    {
+      "name": "Liyue's Wisdom",
+      "phase": "Passive",
+      "desc": "Riduce il consumo di stamina durante la corsa per i membri del party del 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Frost Formation",
+      "phase": "Constellation Lv. 1",
+      "desc": "Glacial Tactics ottiene una carica aggiuntiva."
+    },
+    {
+      "name": "C2: Shattering Cold",
+      "phase": "Constellation Lv. 2",
+      "desc": "Quando Lan Yan colpisce un nemico congelato, infligge danni bonus del 20%."
+    },
+    {
+      "name": "C3: Glacial Authority",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Glacial Tactics di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Winter's Embrace",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando un alleato sotto l'effetto di Glacial Tactics subisce danni, ottiene uno scudo che assorbe danni pari al 20% degli HP max di Lan Yan per 6s."
+    },
+    {
+      "name": "C5: Blizzard's Edge",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Winter's Command di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Absolute Zero",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando Lan Yan attiva una reazione Cryo, la durata di Winter's Command aumenta di 4s (max 1 volta per attivazione)."
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "displayName": "Kamisato Ayato",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Hydro", "Sword", "Inazuma", "5★", "DPS", "Kamisato Clan"],
+  "description": "The head of the Kamisato Clan, Ayato is a Hydro sword user who excels at rapid attacks and AoE Hydro application.",
+  "weapons": [
+    {
+      "name": "Haran Geppaku Futsu",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Haran_Geppaku_Futsu.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Cutter.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Black_Sword.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Amenoma Kageuchi",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Amenoma_Kageuchi.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Echoes of an Offering (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Echoes_of_an_Offering.png"
+    },
+    {
+      "name": "Heart of Depth (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Echoes of an Offering (2) + Heart of Depth (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Echoes_of_an_Offering.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Kamisato Art - Marobashi",
+    "Kamisato Art: Kyouka",
+    "Kamisato Art: Suiyuu"
+  ],
+  "info": "Ayato is a Hydro DPS who excels at rapid Normal Attacks and AoE Hydro application. Build him for CRIT, Hydro DMG, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Haran Geppaku Futsu",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Haran_Geppaku_Futsu.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Echoes of an Offering (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Echoes_of_an_Offering.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Ayato" },
+      { "name": "Yelan" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Ayato" },
+      { "name": "Kazuha" },
+      { "name": "Xingqiu" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Ayato" },
+      { "name": "Fischl" },
+      { "name": "Beidou" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Kamisato Art - Marobashi",
+      "desc": "Performs up to 5 rapid strikes with a sword.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Kamisato_Art_Marobashi.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes with a sword.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a flurry of sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "43.1%",
+          "hit3": "54.2%",
+          "hit4": "58.3%",
+          "hit5": "70.1%",
+          "charged": "55.0% + 66.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "48.1%",
+          "hit2": "46.7%",
+          "hit3": "58.7%",
+          "hit4": "63.2%",
+          "hit5": "76.0%",
+          "charged": "60.0% + 72.9%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Kamisato Art: Kyouka",
+      "desc": "Ayato shifts positions and enters the Takimeguri Kanka state, unleashing rapid Hydro attacks.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Kamisato_Art_Kyouka.png",
+      "details_html": "<div class='skill-section'><b>Kamisato Art: Kyouka</b><br>Shifts positions and enters the Takimeguri Kanka state, unleashing rapid Hydro attacks that scale with Ayato's Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "52.0% HP per slash",
+          "duration": "6s",
+          "cd": "12s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "56.0% HP per slash",
+          "duration": "6s",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Kamisato Art: Suiyuu",
+      "desc": "Ayato creates a garden of purity that increases Normal Attack DMG of characters inside and deals continuous Hydro DMG to enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Kamisato_Art_Suiyuu.png",
+      "details_html": "<div class='skill-section'><b>Kamisato Art: Suiyuu</b><br>Creates a garden of purity that increases Normal Attack DMG of characters inside and deals continuous Hydro DMG to enemies. Lasts for 18s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "110% ATK per wave",
+          "duration": "18s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "118% ATK per wave",
+          "duration": "18s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Kamisato Art: Mine Wo Matoishi Kiyotaki",
+      "phase": "Ascension Phase 1",
+      "desc": "Ayato gains 2 Namisen stacks after using Kyouka."
+    },
+    {
+      "name": "Kamisato Art: Michiyuku Hagetsu",
+      "phase": "Ascension Phase 4",
+      "desc": "When Ayato is not on the field and his Energy is less than 40, he regenerates 2 Energy every second."
+    },
+    {
+      "name": "Kamisato Art: Daily Cooking",
+      "phase": "Passive",
+      "desc": "When Ayato cooks a dish perfectly, he has an 18% chance to receive an additional \"Suspicious\" dish of the same type."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Kyouka Fuushi",
+      "phase": "Constellation Lv. 1",
+      "desc": "Shunsuiken DMG is increased by 40% against opponents with 50% HP or less."
+    },
+    {
+      "name": "World Source",
+      "phase": "Constellation Lv. 2",
+      "desc": "Namisen's maximum stack count is increased to 5."
+    },
+    {
+      "name": "To Admire the Flowers",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Kamisato Art: Kyouka by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Ebb and Flow",
+      "phase": "Constellation Lv. 4",
+      "desc": "Opponents within Suiyuu's field take 20% increased DMG."
+    },
+    {
+      "name": "Endless Flow",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Kamisato Art: Suiyuu by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Boundless Origin",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using Kyouka, Ayato's next Shunsuiken attack creates 2 extra slashes, each dealing 450% of Ayato's ATK as DMG."
+    }
+  ]
+}

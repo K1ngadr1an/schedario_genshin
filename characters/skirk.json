@@ -1,0 +1,210 @@
+{
+  "displayName": "Skirk",
+  "img": "images/characters/skirk.png",
+  "tags": ["Sword", "Hydro", "Fontaine", "5★", "DPS", "Mentor", "Lore"],
+  "description": "A mysterious swordmaster from Fontaine, Skirk is known as the mentor of Tartaglia. She is a Hydro sword user who excels at swift attacks and versatile combat.",
+  "weapons": [
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Festering Desire",
+      "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Heart of Depth (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Gladiator's Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Abyssal Fencing",
+    "Tidecaller's Lesson",
+    "Depth's Requiem"
+  ],
+  "info": "Skirk is a 5★ Hydro sword DPS/mentor from Fontaine, known for her swift swordplay and versatile combat. Build her for CRIT, ATK%, and Hydro DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Primordial Jade Cutter",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Heart of Depth (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Skirk" },
+      { "name": "Xingqiu" },
+      { "name": "Yelan" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Skirk" },
+      { "name": "Furina" },
+      { "name": "Kazuha" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Skirk" },
+      { "name": "Tartaglia" },
+      { "name": "Xiangling" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Skirk" },
+      { "name": "Ayato" },
+      { "name": "Mona" },
+      { "name": "Barbara" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Abyssal Fencing",
+      "desc": "Performs up to 5 rapid sword strikes imbued with Hydro.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Fencing.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid sword strikes imbued with Hydro.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE Hydro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "42.6%",
+          "hit3": "56.2%",
+          "hit4": "59.2%",
+          "hit5": "71.0%",
+          "charged": "55.9% + 55.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "48.1%",
+          "hit2": "46.1%",
+          "hit3": "60.8%",
+          "hit4": "64.0%",
+          "hit5": "76.8%",
+          "charged": "60.5% + 60.5%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Tidecaller's Lesson",
+      "desc": "Skirk unleashes a wave of Hydro energy, dealing AoE Hydro DMG and increasing her resistance to interruption.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Tidecallers_Lesson.png",
+      "details_html": "<div class='skill-section'><b>Tidecaller's Lesson</b><br>Unleashes a wave of Hydro energy, dealing AoE Hydro DMG and increasing resistance to interruption. DMG scales with Skirk's ATK and Hydro DMG Bonus.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "180% ATK", "duration": "8s", "cd": "10s" },
+        { "level": 2, "skill_dmg": "194% ATK", "duration": "8s", "cd": "10s" }
+      ]
+    },
+    {
+      "name": "Depth's Requiem",
+      "desc": "Skirk summons the power of the abyss, dealing massive AoE Hydro DMG and granting all allies increased Hydro DMG Bonus.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Depths_Requiem.png",
+      "details_html": "<div class='skill-section'><b>Depth's Requiem</b><br>Summons the power of the abyss, dealing massive AoE Hydro DMG and granting all allies increased Hydro DMG Bonus for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "220% ATK",
+          "hydro_bonus": "20%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "238% ATK",
+          "hydro_bonus": "22%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Abyssal Insight",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Tidecaller's Lesson, Skirk's Hydro DMG is increased by 20% for 10s."
+    },
+    {
+      "name": "Mentor's Legacy",
+      "phase": "Ascension Phase 4",
+      "desc": "Allies affected by Depth's Requiem gain 15% increased ATK for 10s."
+    },
+    {
+      "name": "Fontaine's Shadow",
+      "phase": "Passive",
+      "desc": "When Skirk is in the party, sprinting stamina consumption is reduced by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "First Lesson",
+      "phase": "Constellation Lv. 1",
+      "desc": "Tidecaller's Lesson gains 1 additional charge."
+    },
+    {
+      "name": "Abyssal Agility",
+      "phase": "Constellation Lv. 2",
+      "desc": "After using Depth's Requiem, Skirk's Movement SPD is increased by 15% for 10s."
+    },
+    {
+      "name": "Swordmaster's Verdict",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Depth's Requiem by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Abyssal Supremacy",
+      "phase": "Constellation Lv. 4",
+      "desc": "Hydro reactions triggered by Skirk restore 3 Energy to her. Can occur once every 2s."
+    },
+    {
+      "name": "Tidecaller's Mastery",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Tidecaller's Lesson by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Mentor's Triumph",
+      "phase": "Constellation Lv. 6",
+      "desc": "Allies within Depth's Requiem's area gain 20% increased CRIT Rate."
+    }
+  ]
+}

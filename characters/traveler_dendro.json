@@ -1,0 +1,644 @@
+{
+  "displayName": "Traveler (Dendro)",
+  "img": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/traveler-dendro/image.png?strip=all&quality=100&w=160",
+  "tags": [
+    "Sword",
+    "Dendro",
+    "Sumeru",
+    "24/8",
+    "Viatrix",
+    "Steeple of Ignorance"
+  ],
+  "description": "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+  "weapons": [
+    {
+      "name": "Freedom-Sworn",
+      "img": "https://img.game8.co/3456283/700b83638b99dba8908463aa92f6b3d6.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Haran Geppaku Futsu",
+      "img": "https://img.game8.co/3511222/2310c3f7ed9c13a4249fccdc256199bb.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Skyward Blade",
+      "img": "https://img.game8.co/3311113/3b0e2ee76a9d421e3f7e4a640f7a9b99.png/show",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://img.game8.co/3314420/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Festering Desire",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Blackcliff Longsword",
+      "img": "https://img.game8.co/3314395/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Prototype Rancour",
+      "img": "https://img.game8.co/3314421/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "Physical DMG"
+    },
+    {
+      "name": "Cool Steel",
+      "img": "https://img.game8.co/3314434/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Silver Sword",
+      "img": "https://img.game8.co/3314396/ed36b836606ea3bbdc2c00773157d76b.png/show",
+      "note": "ATK"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Deepwood Memories (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Gilded Dreams (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    },
+    {
+      "name": "Deepwood Memories (2) + Gilded Dreams (2)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Deepwood Memories (2) + Emblem of Severed Fate (2)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Deepwood Memories (2)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Gilded Dreams (2)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    },
+    {
+      "name": "Emblem of Severed Fate (2)",
+      "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge / Elemental Mastery" },
+    { "type": "Goblet", "value": "Dendro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "Energy Recharge",
+    "CRIT Rate",
+    "CRIT DMG",
+    "Elemental Mastery",
+    "ATK%"
+  ],
+  "talents": ["Normal Attack", "Skill", "Burst"],
+  "info": "Il Traveler Dendro è un supporto che si basa sull'applicazione di Dendro e sulla generazione di energia. La sua abilità Elementale crea lampi di Dendro e il suo Burst fornisce buff di Elemental Mastery.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Freedom-Sworn",
+        "img": "https://img.game8.co/3456283/700b83638b99dba8908463aa92f6b3d6.png/show",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Deepwood Memories (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Alhaitham", "img": "alhaitham.png" },
+      { "name": "Traveler (Dendro)", "img": "traveler_dendro.png" },
+      { "name": "Yae Miko", "img": "yae_miko.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Tighnari", "img": "tighnari.png" },
+      { "name": "Traveler (Dendro)", "img": "traveler_dendro.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Kuki Shinobu", "img": "kuki_shinobu.png" }
+    ],
+    [
+      { "name": "Cyno", "img": "cyno.png" },
+      { "name": "Traveler (Dendro)", "img": "traveler_dendro.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Keqing", "img": "keqing.png" },
+      { "name": "Traveler (Dendro)", "img": "traveler_dendro.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Traveler (Dendro)", "img": "traveler_dendro.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Foreign Ironwind",
+      "desc": "",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Traveler-NA.webp",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Traveler_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.1%",
+          "hit2": "43.4%",
+          "hit3": "52.6%",
+          "hit4": "58.3%",
+          "hit5": "35.8% + 35.8%",
+          "charged": "55.9% + 55.9%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "47.7%",
+          "hit2": "46.9%",
+          "hit3": "56.9%",
+          "hit4": "63.1%",
+          "hit5": "38.7% + 38.7%",
+          "charged": "60.5% + 60.5%",
+          "stamina": "20",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "51.3%",
+          "hit2": "50.4%",
+          "hit3": "61.2%",
+          "hit4": "67.9%",
+          "hit5": "41.6% + 41.6%",
+          "charged": "65.1% + 65.1%",
+          "stamina": "20",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "56.4%",
+          "hit2": "55.4%",
+          "hit3": "67.3%",
+          "hit4": "74.7%",
+          "hit5": "45.8% + 45.8%",
+          "charged": "71.6% + 71.6%",
+          "stamina": "20",
+          "plunge": "81.8%",
+          "lowhigh": "163.5% / 204.2%"
+        },
+        {
+          "level": 5,
+          "hit1": "60.0%",
+          "hit2": "58.9%",
+          "hit3": "71.6%",
+          "hit4": "79.5%",
+          "hit5": "48.7% + 48.7%",
+          "charged": "76.2% + 76.2%",
+          "stamina": "20",
+          "plunge": "87.0%",
+          "lowhigh": "173.9% / 217.2%"
+        },
+        {
+          "level": 6,
+          "hit1": "63.6%",
+          "hit2": "62.4%",
+          "hit3": "76.0%",
+          "hit4": "84.3%",
+          "hit5": "51.6% + 51.6%",
+          "charged": "80.8% + 80.8%",
+          "stamina": "20",
+          "plunge": "92.2%",
+          "lowhigh": "184.3% / 230.2%"
+        },
+        {
+          "level": 7,
+          "hit1": "68.7%",
+          "hit2": "67.4%",
+          "hit3": "82.0%",
+          "hit4": "91.0%",
+          "hit5": "55.8% + 55.8%",
+          "charged": "87.4% + 87.4%",
+          "stamina": "20",
+          "plunge": "100.4%",
+          "lowhigh": "200.6% / 250.5%"
+        },
+        {
+          "level": 8,
+          "hit1": "73.8%",
+          "hit2": "72.4%",
+          "hit3": "88.0%",
+          "hit4": "97.7%",
+          "hit5": "60.0% + 60.0%",
+          "charged": "94.0% + 94.0%",
+          "stamina": "20",
+          "plunge": "108.6%",
+          "lowhigh": "216.9% / 270.8%"
+        },
+        {
+          "level": 9,
+          "hit1": "78.9%",
+          "hit2": "77.4%",
+          "hit3": "94.0%",
+          "hit4": "104.4%",
+          "hit5": "64.2% + 64.2%",
+          "charged": "100.6% + 100.6%",
+          "stamina": "20",
+          "plunge": "116.8%",
+          "lowhigh": "233.2% / 291.1%"
+        },
+        {
+          "level": 10,
+          "hit1": "84.0%",
+          "hit2": "82.4%",
+          "hit3": "100.0%",
+          "hit4": "111.1%",
+          "hit5": "68.4% + 68.4%",
+          "charged": "107.2% + 107.2%",
+          "stamina": "20",
+          "plunge": "125.0%",
+          "lowhigh": "249.5% / 311.4%"
+        },
+        {
+          "level": 11,
+          "hit1": "89.1%",
+          "hit2": "87.4%",
+          "hit3": "106.0%",
+          "hit4": "117.8%",
+          "hit5": "72.6% + 72.6%",
+          "charged": "113.8% + 113.8%",
+          "stamina": "20",
+          "plunge": "133.2%",
+          "lowhigh": "265.8% / 331.7%"
+        },
+        {
+          "level": 12,
+          "hit1": "94.2%",
+          "hit2": "92.4%",
+          "hit3": "112.0%",
+          "hit4": "124.5%",
+          "hit5": "76.8% + 76.8%",
+          "charged": "120.4% + 120.4%",
+          "stamina": "20",
+          "plunge": "141.4%",
+          "lowhigh": "282.1% / 352.0%"
+        },
+        {
+          "level": 13,
+          "hit1": "99.3%",
+          "hit2": "97.4%",
+          "hit3": "118.0%",
+          "hit4": "131.2%",
+          "hit5": "81.0% + 81.0%",
+          "charged": "127.0% + 127.0%",
+          "stamina": "20",
+          "plunge": "149.6%",
+          "lowhigh": "298.4% / 372.3%"
+        },
+        {
+          "level": 14,
+          "hit1": "104.4%",
+          "hit2": "102.4%",
+          "hit3": "124.0%",
+          "hit4": "137.9%",
+          "hit5": "85.2% + 85.2%",
+          "charged": "133.6% + 133.6%",
+          "stamina": "20",
+          "plunge": "157.8%",
+          "lowhigh": "314.7% / 392.6%"
+        },
+        {
+          "level": 15,
+          "hit1": "109.5%",
+          "hit2": "107.4%",
+          "hit3": "130.0%",
+          "hit4": "144.6%",
+          "hit5": "89.4% + 89.4%",
+          "charged": "140.2% + 140.2%",
+          "stamina": "20",
+          "plunge": "166.0%",
+          "lowhigh": "331.0% / 412.9%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash 2 rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Razorgrass Blade",
+      "desc": "With a flourish of your blade, you unleash a spray of razor-sharp leaves that go before you and deal Dendro DMG.",
+      "video": "https://youtu.be/example",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Traveler-Skill.webp",
+      "details_html": "<div class='skill-section'>With a flourish of your blade, you unleash a spray of razor-sharp leaves that go before you and deal <span class='dendro'>Dendro DMG</span>.</div><div class='skill-section'><b>Lamp Grass</b><br>This attack will leave behind a Lamp Grass that will continuously deal <span class='dendro'>Dendro DMG</span> to opponents within its AoE.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "180.0%",
+          "lamp_grass_dmg": "60.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "193.5%",
+          "lamp_grass_dmg": "64.5%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "207.0%",
+          "lamp_grass_dmg": "69.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "225.0%",
+          "lamp_grass_dmg": "75.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "238.5%",
+          "lamp_grass_dmg": "79.5%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 6,
+          "skill_dmg": "252.0%",
+          "lamp_grass_dmg": "84.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 7,
+          "skill_dmg": "270.0%",
+          "lamp_grass_dmg": "90.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 8,
+          "skill_dmg": "288.0%",
+          "lamp_grass_dmg": "96.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 9,
+          "skill_dmg": "306.0%",
+          "lamp_grass_dmg": "102.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 10,
+          "skill_dmg": "324.0%",
+          "lamp_grass_dmg": "108.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 11,
+          "skill_dmg": "342.0%",
+          "lamp_grass_dmg": "114.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 12,
+          "skill_dmg": "360.0%",
+          "lamp_grass_dmg": "120.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 13,
+          "skill_dmg": "382.5%",
+          "lamp_grass_dmg": "127.5%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 14,
+          "skill_dmg": "405.0%",
+          "lamp_grass_dmg": "135.0%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        },
+        {
+          "level": 15,
+          "skill_dmg": "427.5%",
+          "lamp_grass_dmg": "142.5%",
+          "lamp_grass_duration": "12s",
+          "cd": "8s"
+        }
+      ]
+    },
+    {
+      "name": "Surgent Manifestation",
+      "video": "https://youtu.be/example",
+      "desc": "You manifest the consciousness of the forest to create a Lea Lotus Lamp. This Lea Lotus Lamp will continuously radiate Phosphorescence, dealing Dendro DMG to nearby opponents.",
+      "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Traveler-Burst.webp",
+      "details_html": "<div class='skill-section'>You manifest the consciousness of the forest to create a <b>Lea Lotus Lamp</b>. This Lea Lotus Lamp will continuously radiate <b>Phosphorescence</b>, dealing <span class='dendro'>Dendro DMG</span> to nearby opponents.</div><div class='skill-section'><b>Phosphorescence</b><br>When the Lea Lotus Lamp comes into contact with <span class='hydro'>Hydro</span>/<span class='pyro'>Pyro</span>/<span class='electro'>Electro</span>, it will gain a special effect:<ul style='margin:0 0 0 18px;padding:0;'><li><span class='hydro'>Hydro</span>: The Lamp's AoE and the AoE of its attacks are increased.</li><li><span class='pyro'>Pyro</span>: The Lamp will explode after an interval and then disappear, dealing <span class='dendro'>AoE Dendro DMG</span>.</li><li><span class='electro'>Electro</span>: The Lamp's attack interval is decreased.</li></ul>Elemental Absorption may only occur once per use.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "lamp_dmg": "120.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 2,
+          "lamp_dmg": "129.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 3,
+          "lamp_dmg": "138.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 4,
+          "lamp_dmg": "150.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 5,
+          "lamp_dmg": "159.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 6,
+          "lamp_dmg": "168.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 7,
+          "lamp_dmg": "180.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 8,
+          "lamp_dmg": "192.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 9,
+          "lamp_dmg": "204.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 10,
+          "lamp_dmg": "216.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 11,
+          "lamp_dmg": "228.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 12,
+          "lamp_dmg": "240.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 13,
+          "lamp_dmg": "255.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 14,
+          "lamp_dmg": "270.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        },
+        {
+          "level": 15,
+          "lamp_dmg": "285.0%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Verdant Overgrowth",
+      "phase": "Ascension Phase 1",
+      "desc": "When the Lea Lotus Lamp triggers a Burning, Bloom, Quicken, or Spread reaction, its duration will be increased by 3s. The Lea Lotus Lamp can gain a maximum of 3s of duration extension."
+    },
+    {
+      "name": "Verdant Luxury",
+      "phase": "Ascension Phase 4",
+      "desc": "Every point of Elemental Mastery the Traveler possesses increases the DMG dealt by Razorgrass Blade by 0.15% and the DMG dealt by Surgent Manifestation by 0.1%."
+    },
+    {
+      "name": "Resonant Winds",
+      "phase": "Passive",
+      "desc": "Decreases sprinting Stamina consumption for your characters in the party by 15%. Not stackable with Passive Talents that provide the exact same effects."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Symbiotic Creeper",
+      "phase": "Constellation Lv. 1",
+      "desc": "After Razorgrass Blade hits an opponent, it will regenerate 3.5 Energy for the Traveler."
+    },
+    {
+      "name": "Green Resilience",
+      "phase": "Constellation Lv. 2",
+      "desc": "Lea Lotus Lamp's duration is increased by 3s."
+    },
+    {
+      "name": "Whirling Weeds",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Surgent Manifestation by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Treacle Grass",
+      "phase": "Constellation Lv. 4",
+      "desc": "After the Lea Lotus Lamp triggers a Burning, Bloom, Quicken, or Spread reaction, it will gain 5 stacks of the Year of Verdant Favor effect from the Passive Talent \"Verdant Overgrowth.\" Each stack of this effect will decrease the DEF of opponents within the Lamp's AoE by 6%. The DEF decrease of multiple stacks can stack, up to a maximum of 30%. The duration of each stack is counted independently."
+    },
+    {
+      "name": "Viridian Transience",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Razorgrass Blade by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Withering Aggregation",
+      "phase": "Constellation Lv. 6",
+      "desc": "The Dendro DMG Bonus of all party members is increased by 12% for 8s after Razorgrass Blade hits an opponent. The Dendro DMG Bonus of all party members is increased by 12% for 8s after the Lea Lotus Lamp triggers a Burning, Bloom, Quicken, or Spread reaction."
+    }
+  ]
+}

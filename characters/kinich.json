@@ -1,0 +1,186 @@
+{
+  "displayName": "Kinich",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Sword", "Pyro", "Natlan", "DPS", "5★", "Sun Priest"],
+  "description": "Kinich è un misterioso sacerdote del sole di Natlan, maestro della spada e delle arti del fuoco sacro. Si dice che possa evocare la luce solare per bruciare i suoi nemici e proteggere i deboli.",
+  "weapons": [
+    {
+      "name": "Sunblade Radiance",
+      "img": "images/characters/placeholder.svg",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Aquila Favonia",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://img.game8.co/3314420/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+      "note": "CRIT Rate"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Gladiator's Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    },
+    {
+      "name": "Crimson Witch of Flames (2) + Gladiator's Finale (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Kinich è un DPS Pyro che sfrutta la luce solare per infliggere danni AoE e potenziare i suoi attacchi. Si consiglia di massimizzare la ricarica di energia e la statistica di CRIT.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Sunblade Radiance",
+        "img": "images/characters/placeholder.svg",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Crimson Witch of Flames (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kinich" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Kinich" },
+      { "name": "Yelan" },
+      { "name": "Zhongli" },
+      { "name": "Fischl" }
+    ],
+    [
+      { "name": "Kinich" },
+      { "name": "Xingqiu" },
+      { "name": "Thoma" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Solar Edge",
+      "desc": "Effettua fino a 5 rapidi fendenti con la spada, infusi di energia solare.",
+      "icon": "images/characters/placeholder.svg",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "45.0%",
+          "hit2": "47.0%",
+          "hit3": "60.0%",
+          "hit4": "65.0%",
+          "hit5": "80.0%",
+          "charged": "60.0% + 60.0%",
+          "stamina": "20",
+          "plunge": "70.0%",
+          "lowhigh": "140.0% / 180.0%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 5 rapidi fendenti con la spada, infusi di energia solare.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per sferrare due colpi rapidi.</div><div class='skill-section'><b>Plunging Attack</b><br>Si lancia dall'alto, infliggendo danni AoE Pyro all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Sunfire Invocation",
+      "desc": "Kinich evoca un pilastro di fuoco solare che infligge danni Pyro ad area e aumenta l'ATK degli alleati.",
+      "icon": "images/characters/placeholder.svg",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Sunfire Invocation</b><br>Evoca un pilastro di fuoco solare che infligge danni Pyro ad area e aumenta l'ATK degli alleati per 10s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "200% ATK",
+          "atk_bonus": "20%",
+          "duration": "10s",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Solar Zenith",
+      "desc": "Kinich scatena tutta la potenza del sole, infliggendo enormi danni Pyro AoE e fornendo una cura periodica agli alleati.",
+      "icon": "images/characters/placeholder.svg",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Solar Zenith</b><br>Scatena la potenza del sole, infliggendo danni Pyro AoE e curando periodicamente gli alleati per 12s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "400% ATK",
+          "healing": "10% HP + 1000",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Sun's Blessing",
+      "phase": "Ascension Phase 1",
+      "desc": "Dopo aver usato Sunfire Invocation, Kinich ottiene un bonus Pyro DMG del 20% per 10s."
+    },
+    {
+      "name": "Radiant Recovery",
+      "phase": "Ascension Phase 4",
+      "desc": "Quando Kinich cura un alleato con Solar Zenith, aumenta la loro velocità di attacco del 10% per 8s."
+    },
+    {
+      "name": "Priest of the Sun",
+      "phase": "Passive",
+      "desc": "Riduce il consumo di stamina durante la corsa per i membri del party del 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Dawn's Herald",
+      "phase": "Constellation Lv. 1",
+      "desc": "Sunfire Invocation ottiene una carica aggiuntiva."
+    },
+    {
+      "name": "C2: Solar Embrace",
+      "phase": "Constellation Lv. 2",
+      "desc": "Quando Kinich è sotto l'effetto di Solar Zenith, la sua resistenza all'interruzione aumenta del 30%."
+    },
+    {
+      "name": "C3: Sacred Flame",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Sunfire Invocation di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: Burning Faith",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando un alleato viene curato da Solar Zenith, ottiene un bonus Pyro DMG del 15% per 8s."
+    },
+    {
+      "name": "C5: Zenith's Light",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Solar Zenith di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: Incandescent Divinity",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando Kinich attiva una reazione Pyro, la sua velocità di attacco aumenta del 20% e riduce il cooldown di Sunfire Invocation di 50% per 6s."
+    }
+  ]
+}

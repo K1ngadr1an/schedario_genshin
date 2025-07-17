@@ -1,0 +1,202 @@
+{
+  "displayName": "Kamisato Ayaka",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Cryo", "Sword", "Inazuma", "5★", "DPS", "Kamisato Clan"],
+  "description": "The elegant daughter of the Kamisato Clan, Ayaka is a Cryo sword user who excels at swift strikes and powerful AoE Cryo damage.",
+  "weapons": [
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mistsplitter_Reforged.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Cutter.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Black_Sword.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Amenoma Kageuchi",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Amenoma_Kageuchi.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Blizzard Strayer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    },
+    {
+      "name": "Gladiator’s Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    },
+    {
+      "name": "Blizzard Strayer (2) + Gladiator’s Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Cryo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT DMG / CRIT Rate" }
+  ],
+  "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Kamisato Art - Kabuki",
+    "Kamisato Art: Hyouka",
+    "Kamisato Art: Soumetsu"
+  ],
+  "info": "Ayaka is a top-tier Cryo DPS who excels at Freeze teams and AoE Cryo damage. Build her for CRIT, Cryo DMG, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Mistsplitter Reforged",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mistsplitter_Reforged.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Blizzard Strayer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Ayaka" },
+      { "name": "Shenhe" },
+      { "name": "Kokomi" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Ayaka" },
+      { "name": "Mona" },
+      { "name": "Diona" },
+      { "name": "Venti" }
+    ],
+    [
+      { "name": "Ayaka" },
+      { "name": "Rosaria" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Kamisato Art - Kabuki",
+      "desc": "Performs up to 5 rapid strikes with a sword.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Kamisato_Art_Kabuki.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes with a sword.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a flurry of sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "45.7%",
+          "hit2": "46.7%",
+          "hit3": "60.5%",
+          "hit4": "61.2%",
+          "hit5": "77.6%",
+          "charged": "55.0% + 66.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "49.4%",
+          "hit2": "50.5%",
+          "hit3": "65.4%",
+          "hit4": "66.2%",
+          "hit5": "84.0%",
+          "charged": "60.0% + 72.9%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Kamisato Art: Hyouka",
+      "desc": "Ayaka summons blooming ice, launching nearby enemies and dealing AoE Cryo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Kamisato_Art_Hyouka.png",
+      "details_html": "<div class='skill-section'><b>Kamisato Art: Hyouka</b><br>Summons blooming ice, launching nearby enemies and dealing AoE Cryo DMG.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg": "239% ATK", "cd": "10s" },
+        { "level": 2, "skill_dmg": "257% ATK", "cd": "10s" }
+      ]
+    },
+    {
+      "name": "Kamisato Art: Soumetsu",
+      "desc": "Ayaka releases a snowstorm, unleashing a series of icy slashes that deal massive AoE Cryo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Kamisato_Art_Soumetsu.png",
+      "details_html": "<div class='skill-section'><b>Kamisato Art: Soumetsu</b><br>Releases a snowstorm, unleashing a series of icy slashes that deal massive AoE Cryo DMG. Lasts for 5s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "202% x 20",
+          "duration": "5s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "217% x 20",
+          "duration": "5s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Amatsumi Kunitsumi Sanctification",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Kamisato Art: Hyouka, Ayaka's Normal and Charged Attack DMG is increased by 30% for 6s."
+    },
+    {
+      "name": "Kanten Senmyou Blessing",
+      "phase": "Ascension Phase 4",
+      "desc": "When Ayaka's Cryo attacks hit enemies, she restores 10 Stamina and gains 18% Cryo DMG Bonus for 10s."
+    },
+    {
+      "name": "Fruits of Shinsa",
+      "phase": "Passive",
+      "desc": "When Ayaka crafts Weapon Ascension Materials, she has a 10% chance to receive double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Snowswept Sakura",
+      "phase": "Constellation Lv. 1",
+      "desc": "When Ayaka's Normal or Charged Attacks deal Cryo DMG to enemies, she has a 50% chance to decrease the CD of Kamisato Art: Hyouka by 0.3s. Can occur every 0.1s."
+    },
+    {
+      "name": "Blizzard Blade Seki no To",
+      "phase": "Constellation Lv. 2",
+      "desc": "When casting Kamisato Art: Soumetsu, unleashes 2 smaller additional snowstorms, each dealing 20% of the original's DMG."
+    },
+    {
+      "name": "Frostbloom Kamifubuki",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Kamisato Art: Soumetsu by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Ebb and Flow",
+      "phase": "Constellation Lv. 4",
+      "desc": "Opponents damaged by Kamisato Art: Soumetsu's snowstorm will have their DEF decreased by 30% for 6s."
+    },
+    {
+      "name": "Blossom Cloud Irutsuki",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Kamisato Art: Hyouka by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Dance of Suigetsu",
+      "phase": "Constellation Lv. 6",
+      "desc": "Ayaka gains Usurahi Butou every 10s, increasing her Charged Attack DMG by 298%. This effect is cleared 0.5s after a Charged Attack hits."
+    }
+  ]
+}

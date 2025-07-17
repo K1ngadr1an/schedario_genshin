@@ -1,0 +1,293 @@
+{
+  "displayName": "Yun Jin",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yun_Jin_Icon.png",
+  "tags": [
+    "Polearm",
+    "Geo",
+    "Liyue",
+    "Opera",
+    "5/21",
+    "Yun Clan",
+    "Cloud Retainer"
+  ],
+  "description": "A famous Liyue opera singer and director of the Yun-Han Opera Troupe. Known for her elegance and mastery of traditional arts.",
+  "weapons": [
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_Homa.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Favonius Lance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Lance.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Catch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Catch.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Prototype Starglitter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Prototype_Starglitter.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Deathmatch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Deathmatch.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Black Tassel",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Black_Tassel.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Dragon's Bane",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Dragon%27s_Bane.png",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Husk of Opulent Dreams (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Husk_of_Opulent_Dreams.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Husk of Opulent Dreams (2) + Emblem of Severed Fate (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Husk_of_Opulent_Dreams.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Defender's Will (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Defender%27s_Will.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "DEF% / Energy Recharge" },
+    { "type": "Goblet", "value": "DEF%" },
+    { "type": "Circlet", "value": "DEF% / CRIT Rate" }
+  ],
+  "substats": ["Energy Recharge", "DEF%", "CRIT Rate", "HP%"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Yun Jin è un supporto Geo specializzato nel potenziare gli attacchi normali del team. Costruiscila con molta ricarica energia e DEF% per massimizzare il buff della sua burst.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Favonius Lance",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Lance.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Husk of Opulent Dreams (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Husk_of_Opulent_Dreams.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Yun Jin", "img": "Yun_Jin.png" },
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Yun Jin", "img": "Yun_Jin.png" },
+      { "name": "Ayato", "img": "Kamisato_Ayato.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Xiangling", "img": "xiangling.png" }
+    ],
+    [
+      { "name": "Yun Jin", "img": "Yun_Jin.png" },
+      { "name": "Hu Tao", "img": "hu_tao.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ],
+    [
+      { "name": "Yun Jin", "img": "Yun_Jin.png" },
+      { "name": "Yoimiya", "img": "yoimiya.png" },
+      { "name": "Yelan", "img": "yelan.png" },
+      { "name": "Bennett", "img": "bennett.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Cloud-Grazing Strike",
+      "desc": "Performs up to 5 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Cloud-Grazing_Strike.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yun_Jin_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "40.1%",
+          "hit2": "41.2%",
+          "hit3": "53.3%",
+          "hit4": "56.6%",
+          "hit5": "67.2%",
+          "charged": "62.6% + 62.6%",
+          "stamina": "25",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "43.3%",
+          "hit2": "44.5%",
+          "hit3": "57.6%",
+          "hit4": "61.2%",
+          "hit5": "72.7%",
+          "charged": "67.8% + 67.8%",
+          "stamina": "25",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "46.5%",
+          "hit2": "47.8%",
+          "hit3": "61.9%",
+          "hit4": "65.8%",
+          "hit5": "78.2%",
+          "charged": "73.0% + 73.0%",
+          "stamina": "25",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "51.1%",
+          "hit2": "52.5%",
+          "hit3": "68.0%",
+          "hit4": "72.3%",
+          "hit5": "85.9%",
+          "charged": "80.0% + 80.0%",
+          "stamina": "25",
+          "plunge": "81.8%",
+          "lowhigh": "163.5% / 204.2%"
+        },
+        {
+          "level": 5,
+          "hit1": "54.3%",
+          "hit2": "55.8%",
+          "hit3": "72.3%",
+          "hit4": "76.9%",
+          "hit5": "91.4%",
+          "charged": "85.2% + 85.2%",
+          "stamina": "25",
+          "plunge": "87.0%",
+          "lowhigh": "173.9% / 217.2%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Opening Flourish",
+      "desc": "Yun Jin takes up her stance and charges up, forming a shield and unleashing a Geo attack based on charge time.",
+      "video": "https://www.youtube.com/embed/example",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Opening_Flourish.png",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Yun Jin takes up her stance and charges up, forming a shield and unleashing a Geo attack based on charge time. The shield has 150% effectiveness against all Elemental and Physical DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "press_dmg": "149.1% DEF",
+          "hold_dmg": "261.6% DEF",
+          "shield": "12% DEF + 115",
+          "cd": "9s"
+        },
+        {
+          "level": 2,
+          "press_dmg": "160.3% DEF",
+          "hold_dmg": "281.0% DEF",
+          "shield": "12.9% DEF + 127",
+          "cd": "9s"
+        },
+        {
+          "level": 3,
+          "press_dmg": "171.5% DEF",
+          "hold_dmg": "300.4% DEF",
+          "shield": "13.8% DEF + 139",
+          "cd": "9s"
+        },
+        {
+          "level": 4,
+          "press_dmg": "186.4% DEF",
+          "hold_dmg": "326.6% DEF",
+          "shield": "15.2% DEF + 153",
+          "cd": "9s"
+        },
+        {
+          "level": 5,
+          "press_dmg": "197.6% DEF",
+          "hold_dmg": "346.0% DEF",
+          "shield": "16.1% DEF + 165",
+          "cd": "9s"
+        }
+      ]
+    },
+    {
+      "name": "Cliffbreaker's Banner",
+      "video": "https://www.youtube.com/embed/example",
+      "desc": "Deals AoE Geo DMG and grants all nearby party members a Flying Cloud Flag Formation, boosting their Normal Attack DMG based on Yun Jin's DEF.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Cliffbreakers_Banner.png"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "True to Oneself",
+      "phase": "Ascension Phase 1",
+      "desc": "Using Opening Flourish at the precise moment grants an additional shield and increases the DMG dealt."
+    },
+    {
+      "name": "Breaking Conventions",
+      "phase": "Ascension Phase 4",
+      "desc": "Yun Jin's Flying Cloud Flag Formation further increases Normal Attack DMG by an additional 2.5% of her DEF when the party contains characters of 2, 3, or 4 different Elemental Types."
+    },
+    {
+      "name": "Light Nourishment",
+      "phase": "Passive",
+      "desc": "When Perfect Cooking is achieved on Food with Adventure-related effects, there is a 12% chance to obtain double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Thespian Gallop",
+      "phase": "Constellation Lv. 1",
+      "desc": "Opening Flourish's CD is decreased by 18%."
+    },
+    {
+      "name": "Myriad Mise-En-Scène",
+      "phase": "Constellation Lv. 2",
+      "desc": "After Cliffbreaker's Banner is used, all nearby party members' Normal Attack DMG is increased by 15% for 12s."
+    },
+    {
+      "name": "Seafaring General",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Cliffbreaker's Banner by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Flower and a Fighter",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Yun Jin triggers Crystallize, her DEF is increased by 20% for 12s."
+    },
+    {
+      "name": "Famed Throughout the Land",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Opening Flourish by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Decorous Harmony",
+      "phase": "Constellation Lv. 6",
+      "desc": "Characters under the effect of Flying Cloud Flag Formation have their Normal ATK SPD increased by 12%."
+    }
+  ]
+}

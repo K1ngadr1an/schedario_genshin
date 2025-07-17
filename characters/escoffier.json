@@ -1,0 +1,143 @@
+{
+  "displayName": "Escoffier",
+  "img": "images/characters/escoffier.png",
+  "tags": ["Sword", "Pyro", "Fontaine", "5★", "Chef", "Support"],
+  "description": "Escoffier è un celebre chef di Fontaine, maestro nell'arte culinaria e nel supportare i suoi alleati con piatti infuocati e abilità di Pyro.",
+  "weapons": [
+    {
+      "name": "Aquila Favonia",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Aquila_Favonia.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "The Alley Flash",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_Alley_Flash.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Crimson Witch of Flames (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Pyro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["Energy Recharge", "ATK%", "CRIT Rate", "CRIT DMG"],
+  "talents": [
+    "Normal Attack: Culinary Precision",
+    "Flambé Technique",
+    "Signature Dish: Inferno Feast"
+  ],
+  "info": "Escoffier è un supporto Pyro che potenzia i danni del team e fornisce cure tramite le sue abilità culinarie. Costruiscilo con Energy Recharge e Pyro DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Favonius Sword",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Sword.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Noblesse_Oblige.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Escoffier" },
+      { "name": "Bennett" },
+      { "name": "Xiangling" },
+      { "name": "Yelan" }
+    ],
+    [
+      { "name": "Escoffier" },
+      { "name": "Hu Tao" },
+      { "name": "Zhongli" },
+      { "name": "Xingqiu" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Culinary Precision",
+      "desc": "Performs up to 5 precise sword strikes infused with Pyro.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Favonius_Bladework.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 precise sword strikes infused with Pyro.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a flurry of fiery slashes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Pyro DMG upon impact.</div>"
+    },
+    {
+      "name": "Flambé Technique",
+      "desc": "Unleashes a wave of fire, dealing AoE Pyro DMG and increasing the ATK of all nearby allies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Searing_Onslaught.png",
+      "details_html": "<div class='skill-section'><b>Flambé Technique</b><br>Unleashes a wave of fire, dealing AoE Pyro DMG and increasing the ATK of all nearby allies for 10s.</div>"
+    },
+    {
+      "name": "Signature Dish: Inferno Feast",
+      "desc": "Summons a grand Pyro banquet, healing allies and boosting their Pyro DMG Bonus.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Dawn.png",
+      "details_html": "<div class='skill-section'><b>Inferno Feast</b><br>Summons a grand Pyro banquet, healing allies and boosting their Pyro DMG Bonus for 12s. Healing and bonus scale with Escoffier's ATK.</div>"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Master Chef's Touch",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Flambé Technique, all party members gain 10% increased ATK for 10s."
+    },
+    {
+      "name": "Pyro Infusion",
+      "phase": "Ascension Phase 4",
+      "desc": "Signature Dish: Inferno Feast grants 15% Pyro DMG Bonus to all allies for its duration."
+    },
+    {
+      "name": "Gourmet Supplier",
+      "phase": "Passive",
+      "desc": "When Escoffier cooks a dish perfectly, he has a 20% chance to double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Searing Appetite",
+      "phase": "Constellation Lv. 1",
+      "desc": "Flambé Technique grants an additional 10% ATK bonus."
+    },
+    {
+      "name": "C2: Culinary Inspiration",
+      "phase": "Constellation Lv. 2",
+      "desc": "Signature Dish: Inferno Feast also increases all party members' Energy Recharge by 15%."
+    },
+    {
+      "name": "C3: Pyro Perfection",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Flambé Technique by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "C4: Banquet Master",
+      "phase": "Constellation Lv. 4",
+      "desc": "Allies healed by Inferno Feast gain 20% increased Healing Bonus for 10s."
+    },
+    {
+      "name": "C5: Infernal Upgrade",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Signature Dish: Inferno Feast by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "C6: Supreme Saucier",
+      "phase": "Constellation Lv. 6",
+      "desc": "When an ally receives a Pyro-related buff from Escoffier, their CRIT Rate is increased by 10% for 8s."
+    }
+  ]
+}

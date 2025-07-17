@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Top Build - Genshin Impact</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #151a23;
+        color: #e0e0e0;
+        font-family: "Fredoka", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 4rem;
+      }
+
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(15, 20, 25, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        padding: 0.8rem 0;
+        backdrop-filter: blur(20px);
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem;
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        letter-spacing: 0.8px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(100, 255, 218, 0.05);
+        border: 1px solid transparent;
+      }
+
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.15);
+        color: #64ffda;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.2),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        transform: translateY(-2px);
+        border-color: rgba(100, 255, 218, 0.3);
+      }
+
+      .nav-link.active {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4),
+          0 2px 12px rgba(100, 255, 218, 0.2);
+        cursor: default;
+        font-weight: 800;
+        border-color: rgba(100, 255, 218, 0.5);
+      }
+
+      /* Stili per i controlli utente */
+      #userControls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: auto;
+      }
+
+      #userControls .btn {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        border: none;
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 6px 24px rgba(100, 255, 218, 0.25),
+          0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Fredoka", sans-serif;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #userControls .btn:hover {
+        background: linear-gradient(135deg, #00d4aa, #64ffda) !important;
+        color: #16213e !important;
+        box-shadow: 0 10px 35px rgba(100, 255, 218, 0.4),
+          0 4px 20px rgba(100, 255, 218, 0.3);
+        transform: translateY(-2px) scale(1.03);
+      }
+
+      #userControls .btn:active {
+        transform: translateY(0);
+      }
+
+      #userControls span {
+        color: #64ffda;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      #userControls .btn {
+        transform: translateY(3px) !important;
+      }
+
+      #userControls {
+        margin-right: 1rem;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: #181f2a;
+        border-radius: 18px;
+        box-shadow: 0 4px 32px #0008;
+      }
+      h1 {
+        text-align: center;
+        color: #64ffda;
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+      }
+      .filters-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+      }
+      .search-box {
+        flex: 1 1 220px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .search-box input {
+        width: 100%;
+        padding: 0.7rem 1.1rem;
+        border-radius: 8px;
+        border: 1.5px solid #222c;
+        background: #20283a;
+        color: #e0e0e0;
+        font-size: 1rem;
+        font-family: inherit;
+        outline: none;
+        transition: border 0.2s;
+      }
+      .search-box input:focus {
+        border-color: #64ffda;
+      }
+      .element-filters {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-left: 1.5rem;
+      }
+      .element-btn {
+        border: none;
+        border-radius: 6px;
+        background: #222c;
+        color: #e0e0e0;
+        font-size: 1.1rem;
+        padding: 0.5rem 1.1rem;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 600;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s,
+          border 0.18s;
+        outline: none;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        border: 2px solid transparent;
+        box-shadow: none;
+      }
+      .element-btn.selected {
+        background: #64ffda22;
+        color: #64ffda;
+        border-color: #64ffda;
+        box-shadow: 0 2px 8px #64ffda33;
+      }
+      .element-btn:focus {
+        outline: none !important;
+      }
+      .element-btn:hover {
+        background: #64ffda33;
+        color: #64ffda;
+        border-color: #64ffda99;
+        box-shadow: none;
+      }
+      .element-btn:not(.selected) {
+        background: #222c !important;
+        color: #e0e0e0 !important;
+        border-color: transparent !important;
+      }
+      .element-btn:not(.selected):focus {
+        outline: none !important;
+      }
+      .element-btn.selected:focus {
+        outline: 2px solid #64ffda99;
+        outline-offset: 2px;
+      }
+      .element-btn:not(.selected):hover,
+      .element-btn:not(.selected):focus {
+        border-color: transparent !important;
+        box-shadow: none !important;
+      }
+      .character-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 1.2rem;
+        margin-top: 2rem;
+      }
+      .character-card {
+        background: #20283a;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px #0005;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0.5rem 0.7rem 0.5rem;
+        transition: transform 0.18s, box-shadow 0.18s;
+        cursor: pointer;
+        border: 2px solid transparent;
+        position: relative;
+      }
+      .character-card:hover {
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 6px 24px #64ffda33;
+        border-color: #64ffda;
+      }
+      .character-img {
+        width: 72px;
+        height: 72px;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 2px solid #222c;
+        background: #222;
+        margin-bottom: 0.7rem;
+        box-shadow: 0 2px 8px #0003;
+      }
+      .character-name {
+        color: #e0e0e0;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0.2rem;
+        word-break: break-word;
+        letter-spacing: 0.2px;
+        line-height: 1.2;
+      }
+
+      /* Gestione specifica per nomi con spazi */
+      .character-name.multi-word {
+        word-break: keep-all;
+        white-space: pre-line;
+      }
+      @media (max-width: 700px) {
+        .container {
+          padding: 0.7rem;
+        }
+        .filters-bar {
+          flex-direction: column;
+          gap: 0.7rem;
+          align-items: stretch;
+        }
+        .element-filters {
+          margin-left: 0;
+          justify-content: flex-start;
+        }
+        .character-grid {
+          gap: 0.7rem;
+        }
+        .character-card {
+          padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+        }
+        .character-img {
+          width: 56px;
+          height: 56px;
+        }
+        .character-name {
+          font-size: 0.92rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="gestione personaggio.html" class="nav-link" id="nav-gestione"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <a href="community_top_build.html" class="nav-link active"
+        ><span>🏆</span> Top Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls"></span>
+    </nav>
+    <div class="container">
+      <h1>Community Top Build - Tutti i Personaggi</h1>
+      <div class="filters-bar">
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cerca personaggio..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="element-filters" id="elementFilters">
+          <button class="element-btn" data-element="Geo">🪨 Geo</button>
+          <button class="element-btn" data-element="Dendro">🌱 Dendro</button>
+          <button class="element-btn" data-element="Cryo">❄️ Cryo</button>
+          <button class="element-btn" data-element="Pyro">🔥 Pyro</button>
+          <button class="element-btn" data-element="Hydro">💧 Hydro</button>
+          <button class="element-btn" data-element="Electro">⚡ Electro</button>
+          <button class="element-btn" data-element="Anemo">🌪️ Anemo</button>
+          <button class="element-btn" data-element="">Tutti</button>
+        </div>
+      </div>
+      <div id="characterGrid" class="character-grid">
+        <!-- Personaggi caricati dinamicamente -->
+      </div>
+    </div>
+    <script>
+      let allCharacters = [];
+      let selectedElements = [];
+      let currentSearch = "";
+
+      async function loadCharacters() {
+        try {
+          const response = await fetch("character.json");
+          const data = await response.json();
+          allCharacters = data.characters || data;
+          renderCharacters();
+        } catch (e) {
+          document.getElementById("characterGrid").innerHTML =
+            '<div style="color:#ff6f3c;text-align:center;">Errore nel caricamento dei personaggi.</div>';
+        }
+      }
+
+      function renderCharacters() {
+        const grid = document.getElementById("characterGrid");
+        let filtered = allCharacters;
+        if (selectedElements.length > 0) {
+          filtered = filtered.filter((char) =>
+            selectedElements.includes(
+              (char.element || char.Element || "").toLowerCase()
+            )
+          );
+        }
+        if (currentSearch.trim() !== "") {
+          filtered = filtered.filter((char) =>
+            char.name.toLowerCase().includes(currentSearch.trim().toLowerCase())
+          );
+        }
+        grid.innerHTML = "";
+        if (filtered.length === 0) {
+          grid.innerHTML =
+            '<div style="color:#ff6f3c;text-align:center;">Nessun personaggio trovato.</div>';
+          return;
+        }
+        filtered.forEach((char) => {
+          const card = document.createElement("div");
+          card.className = "character-card";
+          // Rendi la card cliccabile
+          card.style.cursor = "pointer";
+          card.addEventListener("click", function () {
+            // Nome per URL: minuscolo, spazi sostituiti con _
+            const urlName = char.name.toLowerCase().replace(/\s+/g, "_");
+            window.location.href = `personaggio.html?nome=${urlName}`;
+          });
+          const img = document.createElement("img");
+          img.className = "character-img";
+          img.src =
+            char.image || char.img || "images/characters/placeholder.svg";
+          img.alt = char.name;
+          img.onerror = function () {
+            this.src = "images/characters/placeholder.svg";
+          };
+          const name = document.createElement("div");
+          name.className = "character-name";
+          // Aggiungi classe per nomi con spazi
+          if (char.name.includes(" ")) {
+            name.classList.add("multi-word");
+          }
+          name.textContent = char.name;
+          card.appendChild(img);
+          card.appendChild(name);
+          grid.appendChild(card);
+        });
+      }
+
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", function () {
+          currentSearch = this.value;
+          renderCharacters();
+        });
+
+      document
+        .getElementById("elementFilters")
+        .addEventListener("click", function (e) {
+          if (e.target.classList.contains("element-btn")) {
+            const element = e.target.getAttribute("data-element");
+            if (element === "") {
+              // Se clicchi "Tutti", deseleziona tutti gli altri
+              selectedElements = [];
+              document
+                .querySelectorAll(".element-btn")
+                .forEach((btn) => btn.classList.remove("selected"));
+              e.target.classList.add("selected");
+            } else {
+              // Selezione multipla
+              const el = element.toLowerCase();
+              if (selectedElements.includes(el)) {
+                selectedElements = selectedElements.filter((e) => e !== el);
+                e.target.classList.remove("selected");
+              } else {
+                selectedElements.push(el);
+                e.target.classList.add("selected");
+              }
+              // Deseleziona "Tutti" se almeno un filtro è attivo
+              document
+                .querySelector('.element-btn[data-element=""]')
+                .classList.remove("selected");
+            }
+            // Se nessun filtro è attivo, seleziona "Tutti"
+            if (selectedElements.length === 0) {
+              document
+                .querySelector('.element-btn[data-element=""]')
+                .classList.add("selected");
+            }
+            renderCharacters();
+          }
+        });
+
+      // Seleziona "Tutti" all'avvio
+      window.addEventListener("DOMContentLoaded", () => {
+        document
+          .querySelector('.element-btn[data-element=""]')
+          .classList.add("selected");
+        loadCharacters();
+      });
+
+      // Funzioni per i controlli utente
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("userControls");
+        if (!el) return;
+        if (user) {
+          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em; transform: translateY(2px);'>Area Utente</a><button class='btn btn-secondary' onclick='doLogout()' style='transform: translateY(2px);'>Logout</button>`;
+        } else {
+          el.innerHTML = `<a href='login.html' class='btn btn-secondary' style='margin-left:0.5em; transform: translateY(2px);'>Login</a> <a href='registrazione.html' class='btn btn-secondary' style='transform: translateY(2px); margin-right:1rem;'>Registrati</a>`;
+        }
+      }
+
+      function doLogout() {
+        localStorage.removeItem("user");
+        location.reload();
+      }
+
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+    </script>
+  </body>
+</html>

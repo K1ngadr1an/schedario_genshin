@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tier List - Genshin.me</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: linear-gradient(135deg, #0f1419, #1a1f2e, #2d3748);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 3.5rem;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 20% 80%,
+            rgba(100, 255, 218, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(176, 234, 255, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 40%,
+            rgba(255, 100, 150, 0.05) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(15, 20, 25, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        padding: 0.8rem 0;
+        backdrop-filter: blur(20px);
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem;
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        letter-spacing: 0.8px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(100, 255, 218, 0.05);
+        border: 1px solid transparent;
+      }
+
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .nav-link:hover::before {
+        left: 100%;
+      }
+
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.15);
+        color: #64ffda;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.2),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        transform: translateY(-2px);
+        border-color: rgba(100, 255, 218, 0.3);
+      }
+
+      .nav-link.active {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4),
+          0 2px 12px rgba(100, 255, 218, 0.2);
+        cursor: default;
+        font-weight: 800;
+        border-color: rgba(100, 255, 218, 0.5);
+      }
+
+      body {
+        padding-top: 4rem;
+      }
+      .tierlist-wrapper {
+        max-width: 1600px;
+        margin: 30px auto;
+        padding: 40px;
+        background: #18181a;
+        border-radius: 24px;
+        box-shadow: 0 0 40px #000a;
+      }
+      .tierlist-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+      .tierlist-header h1 {
+        font-size: 3rem;
+        margin: 0;
+        color: #fff;
+      }
+      .tierlist-select {
+        font-size: 1.3rem;
+        padding: 12px 24px;
+        border-radius: 12px;
+        border: none;
+        background: #29292c;
+        color: #fff;
+        outline: none;
+      }
+      .tier-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 16px;
+        margin-bottom: 40px;
+      }
+      .tier-row {
+        display: flex;
+        align-items: center;
+        min-height: 140px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .tier-label {
+        width: 110px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.2rem;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 3px solid #111;
+      }
+      .tier-ss {
+        background: #ffb700;
+        color: #222;
+      }
+      .tier-s {
+        background: #ff6b6b;
+      }
+      .tier-a {
+        background: #ffb86b;
+        color: #222;
+      }
+      .tier-b {
+        background: #ffe66b;
+        color: #222;
+      }
+      .tier-c {
+        background: #eaff6b;
+        color: #222;
+      }
+      .tier-d {
+        background: #b6ff6b;
+        color: #222;
+      }
+      .tier-slot {
+        flex: 1;
+        min-height: 140px;
+        background: #18181a;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 24px 18px;
+        padding: 22px 32px 22px 32px;
+        transition: background 0.2s;
+      }
+      .tier-slot.dragover {
+        background: #232124;
+      }
+      .draggable-img {
+        width: 90px;
+        height: 90px;
+        border-radius: 14px;
+        background: #222;
+        border: 3px solid red !important;
+        object-fit: cover;
+        cursor: grab;
+        transition: box-shadow 0.2s, border 0.2s;
+        box-shadow: 0 2px 12px #0006;
+        pointer-events: auto !important;
+        z-index: 10 !important;
+      }
+      .draggable-img.dragging {
+        opacity: 0.5;
+        border: 3px dashed #64ffda;
+        box-shadow: 0 0 30px #64ffda88;
+      }
+      .bottom-pool {
+        margin-top: 60px;
+        background: #232124;
+        border-radius: 18px;
+        padding: 28px 18px 18px 18px;
+        box-shadow: 0 0 18px #0005;
+      }
+      .bottom-pool-title {
+        color: #ff6b6b;
+        font-weight: bold;
+        margin-bottom: 18px;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+      }
+      .pool-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        min-height: 90px;
+        align-items: center;
+      }
+      .tier-options-menu {
+        position: absolute;
+        background: #232124;
+        border: 1.5px solid #444;
+        border-radius: 10px;
+        box-shadow: 0 4px 24px #000a;
+        padding: 12px 0;
+        min-width: 210px;
+        z-index: 9999;
+        display: none;
+      }
+      .tier-options-menu.active {
+        display: block;
+      }
+      .tier-options-menu button {
+        width: 100%;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.08em;
+        text-align: left;
+        padding: 8px 18px;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+      .tier-options-menu button:hover {
+        background: #2a2a33;
+      }
+
+      /* Stili base per i modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 3000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+      }
+
+      .modal-content {
+        background-color: #18181a;
+        margin: 5% auto;
+        padding: 20px;
+        border-radius: 16px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Stili per il modal delle armi */
+      .weapon-modal-content {
+        max-width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: #18181a;
+        border: 2px solid #64ffda;
+        border-radius: 16px;
+        padding: 0;
+      }
+
+      .weapon-header {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        padding: 20px;
+        border-radius: 14px 14px 0 0;
+        text-align: center;
+      }
+
+      .weapon-header h2 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .weapon-header .weapon-type {
+        font-size: 1.1rem;
+        margin-top: 8px;
+        opacity: 0.9;
+      }
+
+      .weapon-header .weapon-rarity {
+        font-size: 1.2rem;
+        margin-top: 8px;
+        color: #ffd700;
+      }
+
+      .weapon-body {
+        padding: 20px;
+        color: #e0e0e0;
+      }
+
+      .weapon-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .stat-item {
+        background: #232124;
+        padding: 12px;
+        border-radius: 8px;
+        border-left: 3px solid #64ffda;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: #b0eaff;
+        margin-bottom: 4px;
+      }
+
+      .stat-value {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .weapon-passive {
+        background: #232124;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 3px solid #ff6b6b;
+      }
+
+      .weapon-passive h3 {
+        margin: 0 0 10px 0;
+        color: #ff6b6b;
+        font-size: 1.1rem;
+      }
+
+      .weapon-passive p {
+        margin: 0;
+        line-height: 1.5;
+        font-size: 0.95rem;
+      }
+
+      .modal-close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: #16213e;
+        font-size: 24px;
+        font-weight: bold;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      }
+
+      .modal-close-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+      }
+
+      .weapon-header {
+        position: relative;
+      }
+      @media (max-width: 900px) {
+        .tierlist-wrapper {
+          padding: 10px;
+        }
+        .tier-row {
+          min-height: 70px;
+        }
+        .tier-label {
+          font-size: 1.2rem;
+          width: 60px;
+        }
+        .draggable-img {
+          width: 48px;
+          height: 48px;
+        }
+        .tier-slot {
+          gap: 8px;
+          padding: 6px 8px;
+        }
+        .pool-grid {
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="gestione personaggio.html" class="nav-link" id="nav-gestione"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <a href="tierlist.html" class="nav-link active"
+        ><span>📊</span> Tier List</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls"></span>
+    </nav>
+    <!-- Modal login/registrazione -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Login / Registrati</h2>
+        <input id="loginUsername" placeholder="Username" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button onclick="doLogin()">Login</button>
+      </div>
+    </div>
+
+    <!-- Modal dettagli arma -->
+    <div id="weaponModal" class="modal" style="display: none">
+      <div class="modal-content weapon-modal-content">
+        <div id="weaponModalContent"></div>
+      </div>
+    </div>
+    <div class="tierlist-wrapper">
+      <div class="tierlist-header">
+        <h1>Tier List</h1>
+        <select id="modeSelect" class="tierlist-select">
+          <option value="characters">Personaggi</option>
+          <option value="weapons">Armi</option>
+        </select>
+      </div>
+      <button
+        id="addTierBtn"
+        style="
+          margin: 0 0 18px 0;
+          padding: 10px 22px;
+          border-radius: 10px;
+          background: linear-gradient(135deg, #64ffda, #00d4aa);
+          color: #16213e;
+          font-weight: 700;
+          border: none;
+          font-size: 1.08em;
+          cursor: pointer;
+          box-shadow: 0 4px 16px #0005;
+          transition: background 0.18s, color 0.18s, transform 0.12s;
+          outline: none;
+          letter-spacing: 0.5px;
+          display: block;
+        "
+      >
+        + Aggiungi tier
+      </button>
+      <div id="addTierFormContainer"></div>
+      <div id="tierTable">
+        <div class="tier-row tier-s" data-tier="S">
+          <div class="tier-label tier-s">S</div>
+          <div class="tier-slot" data-tier="S"></div>
+          <div class="tier-actions">
+            <span class="tier-gear">⚙️</span>
+            <span class="tier-arrow">⬆️</span>
+            <span class="tier-arrow">⬇️</span>
+          </div>
+        </div>
+        <div class="tier-row tier-a" data-tier="A">
+          <div class="tier-label tier-a">A</div>
+          <div class="tier-slot" data-tier="A"></div>
+          <div class="tier-actions">
+            <span class="tier-gear">⚙️</span>
+            <span class="tier-arrow">⬆️</span>
+            <span class="tier-arrow">⬇️</span>
+          </div>
+        </div>
+        <div class="tier-row tier-b" data-tier="B">
+          <div class="tier-label tier-b">B</div>
+          <div class="tier-slot" data-tier="B"></div>
+          <div class="tier-actions">
+            <span class="tier-gear">⚙️</span>
+            <span class="tier-arrow">⬆️</span>
+            <span class="tier-arrow">⬇️</span>
+          </div>
+        </div>
+        <div class="tier-row tier-c" data-tier="C">
+          <div class="tier-label tier-c">C</div>
+          <div class="tier-slot" data-tier="C"></div>
+          <div class="tier-actions">
+            <span class="tier-gear">⚙️</span>
+            <span class="tier-arrow">⬆️</span>
+            <span class="tier-arrow">⬇️</span>
+          </div>
+        </div>
+        <div class="tier-row tier-d" data-tier="D">
+          <div class="tier-label tier-d">D</div>
+          <div class="tier-slot" data-tier="D"></div>
+          <div class="tier-actions">
+            <span class="tier-gear">⚙️</span>
+            <span class="tier-arrow">⬆️</span>
+            <span class="tier-arrow">⬇️</span>
+          </div>
+        </div>
+      </div>
+      <!-- Elemento nascosto per far caricare i personaggi -->
+      <select id="characterSelect" style="display: none"></select>
+      <div class="bottom-pool">
+        <div class="bottom-pool-title" id="poolTitle">
+          ⬇️ Trascina qui i personaggi da inserire nella tier list
+        </div>
+        <div id="poolGrid" class="pool-grid"></div>
+      </div>
+      <div id="tierOptionsMenu" class="tier-options-menu"></div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // Drag & Drop per la tier list
+      let draggedImg = null;
+      let draggedFrom = null;
+      let autoScrollInterval = null;
+      let autoScrollSpeed = 0;
+
+      // Salva la disposizione attuale su localStorage
+      function saveTierListState() {
+        const mode = document.getElementById("modeSelect").value;
+        const state = { tiers: {}, pool: [] };
+        document.querySelectorAll(".tier-slot").forEach((slot) => {
+          const tier = slot.dataset.tier;
+          state.tiers[tier] = Array.from(
+            slot.querySelectorAll(".draggable-img")
+          ).map((img) => img.getAttribute("data-name"));
+        });
+        state.pool = Array.from(
+          document.querySelectorAll("#poolGrid .draggable-img")
+        ).map((img) => img.getAttribute("data-name"));
+        localStorage.setItem(`tierListState_${mode}`, JSON.stringify(state));
+      }
+
+      // Ripristina la disposizione salvata
+      function restoreTierListState(characters) {
+        const mode = document.getElementById("modeSelect").value;
+        const state = JSON.parse(
+          localStorage.getItem(`tierListState_${mode}`) || "{}"
+        );
+        if (!state || (!state.tiers && !state.pool)) return false;
+        // Svuota tutto
+        document
+          .querySelectorAll(".tier-slot")
+          .forEach((slot) => (slot.innerHTML = ""));
+        document.getElementById("poolGrid").innerHTML = "";
+        // Ricostruisci le tier
+        if (state.tiers) {
+          Object.entries(state.tiers).forEach(([tier, names]) => {
+            const slot = document.querySelector(
+              '.tier-slot[data-tier="' + tier + '"]'
+            );
+            if (slot) {
+              names.forEach((name) => {
+                const char = characters.find((c) => c.name === name);
+                if (char) {
+                  const img = document.createElement("img");
+                  img.src = char.image || "";
+                  img.alt = char.name;
+                  img.title = char.name;
+                  img.className = "draggable-img";
+                  img.draggable = true;
+                  img.setAttribute("data-name", char.name);
+
+                  // Gestione errori per immagini mancanti
+                  img.onerror = function () {
+                    const mode = document.getElementById("modeSelect").value;
+                    if (mode === "weapons") {
+                      // Per le armi, mostra un'icona generica basata sul tipo
+                      const svgContent = `
+                        <svg width="90" height="90" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="90" height="90" fill="#2a2a33" rx="14"/>
+                          <text x="45" y="35" text-anchor="middle" fill="#64ffda" font-size="12" font-family="Arial">SWORD</text>
+                          <text x="45" y="55" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial">${
+                            char.type || "Arma"
+                          }</text>
+                          <text x="45" y="70" text-anchor="middle" fill="#ffd700" font-size="10" font-family="Arial">${"*".repeat(
+                            char.rarity || 3
+                          )}</text>
+                        </svg>
+                      `;
+                      this.src =
+                        "data:image/svg+xml;base64," +
+                        btoa(unescape(encodeURIComponent(svgContent)));
+                    } else {
+                      // Per i personaggi, usa il placeholder esistente
+                      this.src = "images/characters/placeholder.svg";
+                    }
+                  };
+
+                  slot.appendChild(img);
+                }
+              });
+            }
+          });
+        }
+        // Ricostruisci la pool
+        if (state.pool) {
+          const pool = document.getElementById("poolGrid");
+          state.pool.forEach((name) => {
+            const char = characters.find((c) => c.name === name);
+            if (char) {
+              const img = document.createElement("img");
+              img.src = char.image || "";
+              img.alt = char.name;
+              img.title = char.name;
+              img.className = "draggable-img";
+              img.draggable = true;
+              img.setAttribute("data-name", char.name);
+
+              // Gestione errori per immagini mancanti
+              img.onerror = function () {
+                const mode = document.getElementById("modeSelect").value;
+                if (mode === "weapons") {
+                  // Per le armi, mostra un'icona generica basata sul tipo
+                  const svgContent = `
+                    <svg width="90" height="90" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="90" height="90" fill="#2a2a33" rx="14"/>
+                      <text x="45" y="35" text-anchor="middle" fill="#64ffda" font-size="12" font-family="Arial">SWORD</text>
+                      <text x="45" y="55" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial">${
+                        char.type || "Arma"
+                      }</text>
+                      <text x="45" y="70" text-anchor="middle" fill="#ffd700" font-size="10" font-family="Arial">${"*".repeat(
+                        char.rarity || 3
+                      )}</text>
+                    </svg>
+                  `;
+                  this.src =
+                    "data:image/svg+xml;base64," +
+                    btoa(unescape(encodeURIComponent(svgContent)));
+                } else {
+                  // Per i personaggi, usa il placeholder esistente
+                  this.src = "images/characters/placeholder.svg";
+                }
+              };
+
+              pool.appendChild(img);
+            }
+          });
+        }
+        addDragDropEvents();
+        return true;
+      }
+
+      // Modifica renderPoolGrid per non duplicare personaggi già in tier
+      function renderPoolGrid(characters) {
+        const pool = document.getElementById("poolGrid");
+        if (!pool) return;
+        pool.innerHTML = "";
+        // Escludi personaggi già in una tier
+        const used = new Set();
+        document
+          .querySelectorAll(".tier-slot .draggable-img")
+          .forEach((img) => used.add(img.getAttribute("data-name")));
+        characters.forEach((char) => {
+          if (!used.has(char.name)) {
+            const img = document.createElement("img");
+            img.src = char.image || "";
+            img.alt = char.name;
+            img.title = char.name;
+            img.className = "draggable-img";
+            img.draggable = true;
+            img.setAttribute("data-name", char.name);
+
+            // Gestione errori per immagini mancanti
+            img.onerror = function () {
+              const mode = document.getElementById("modeSelect").value;
+              if (mode === "weapons") {
+                // Per le armi, mostra un'icona generica basata sul tipo
+                const svgContent = `
+                  <svg width="90" height="90" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="90" height="90" fill="#2a2a33" rx="14"/>
+                    <text x="45" y="35" text-anchor="middle" fill="#64ffda" font-size="12" font-family="Arial">SWORD</text>
+                    <text x="45" y="55" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial">${
+                      char.type || "Arma"
+                    }</text>
+                    <text x="45" y="70" text-anchor="middle" fill="#ffd700" font-size="10" font-family="Arial">${"*".repeat(
+                      char.rarity || 3
+                    )}</text>
+                  </svg>
+                `;
+                this.src =
+                  "data:image/svg+xml;base64," +
+                  btoa(unescape(encodeURIComponent(svgContent)));
+              } else {
+                // Per i personaggi, usa il placeholder esistente
+                this.src = "images/characters/placeholder.svg";
+              }
+            };
+
+            pool.appendChild(img);
+          }
+        });
+        addDragDropEvents();
+      }
+
+      // Dopo ogni drop, salva la disposizione
+      function addDragDropEvents() {
+        // DEBUG: log drag events
+        function debugLog(msg, ...args) {
+          console.log("[DRAG]", msg, ...args);
+        }
+        // Pool
+        document.querySelectorAll("#poolGrid .draggable-img").forEach((img) => {
+          img.addEventListener("dragstart", (e) => {
+            debugLog("dragstart", img.alt, "from", draggedFrom);
+            console.log("=== DRAG START POOL ===");
+            console.log("Setting draggedImg to:", img);
+            console.log("img.parentNode:", img.parentNode);
+            draggedImg = img;
+            draggedFrom = "pool";
+            setTimeout(() => img.classList.add("dragging"), 0);
+            startAutoScroll(); // Avvia auto-scroll
+            console.log("=== END DRAG START POOL ===");
+          });
+          img.addEventListener("dragend", (e) => {
+            debugLog("dragend", img.alt);
+            console.log("=== DRAG END POOL ===");
+            console.log("Clearing draggedImg");
+            img.classList.remove("dragging");
+            draggedImg = null;
+            draggedFrom = null;
+            stopAutoScroll(); // Ferma auto-scroll
+            console.log("=== END DRAG END POOL ===");
+          });
+        });
+        // Tier slots
+        document.querySelectorAll(".tier-slot").forEach((slot) => {
+          slot.addEventListener("dragover", (e) => {
+            debugLog("dragover", slot.dataset.tier);
+            e.preventDefault();
+            slot.classList.add("dragover");
+          });
+          slot.addEventListener("dragleave", (e) => {
+            slot.classList.remove("dragover");
+          });
+          slot.addEventListener("drop", (e) => {
+            debugLog(
+              "drop",
+              slot.dataset.tier,
+              draggedImg ? draggedImg.alt : null
+            );
+            e.preventDefault();
+            slot.classList.remove("dragover");
+
+            if (draggedImg) {
+              if (draggedFrom === "pool" || draggedFrom === "tier") {
+                console.log("=== DEBUG DROP TIER ===");
+                console.log("draggedImg:", draggedImg);
+                console.log("draggedImg.parentNode:", draggedImg.parentNode);
+                console.log("draggedFrom:", draggedFrom);
+                console.log("slot:", slot);
+
+                // Controllo di sicurezza più robusto per evitare errori
+                try {
+                  if (draggedImg.parentNode) {
+                    console.log("Attempting to remove child from tier...");
+                    draggedImg.parentNode.removeChild(draggedImg);
+                    console.log("Child removed successfully from tier");
+                  } else {
+                    console.log(
+                      "draggedImg.parentNode is null or undefined in tier"
+                    );
+                  }
+                } catch (error) {
+                  console.log("Error removing child from tier:", error);
+                  console.log("Element already removed, continuing...");
+                }
+
+                console.log("Appending to slot...");
+                slot.appendChild(draggedImg);
+                saveTierListState();
+                renderPoolGrid(window.allCharacters);
+                console.log("=== END DEBUG DROP TIER ===");
+              }
+            }
+          });
+        });
+        // Permetti drag da tier a pool (per tutti)
+        document
+          .querySelectorAll(".tier-slot .draggable-img")
+          .forEach((img) => {
+            img.addEventListener("dragstart", (e) => {
+              console.log("=== DRAG START TIER ===");
+              console.log("Setting draggedImg to:", img);
+              console.log("img.parentNode:", img.parentNode);
+              draggedImg = img;
+              draggedFrom = "tier";
+              setTimeout(() => img.classList.add("dragging"), 0);
+              startAutoScroll(); // Avvia auto-scroll
+              console.log("=== END DRAG START TIER ===");
+            });
+            img.addEventListener("dragend", (e) => {
+              console.log("=== DRAG END TIER ===");
+              console.log("Clearing draggedImg");
+              img.classList.remove("dragging");
+              draggedImg = null;
+              draggedFrom = null;
+              stopAutoScroll(); // Ferma auto-scroll
+              console.log("=== END DRAG END TIER ===");
+            });
+          });
+        // Pool come drop zone per rimettere personaggi
+        const pool = document.getElementById("poolGrid");
+        pool.addEventListener("dragover", (e) => {
+          debugLog("dragover pool");
+          e.preventDefault();
+          pool.classList.add("dragover");
+        });
+        pool.addEventListener("dragleave", (e) => {
+          pool.classList.remove("dragover");
+        });
+        pool.addEventListener("drop", (e) => {
+          debugLog("drop pool", draggedImg ? draggedImg.alt : null);
+          e.preventDefault();
+          pool.classList.remove("dragover");
+
+          if (draggedImg && draggedFrom === "tier") {
+            console.log("=== DEBUG DROP POOL ===");
+            console.log("draggedImg:", draggedImg);
+            console.log("draggedImg.parentNode:", draggedImg.parentNode);
+            console.log(
+              "draggedImg.parentNode type:",
+              typeof draggedImg.parentNode
+            );
+
+            // Controllo di sicurezza più robusto per evitare errori
+            try {
+              if (draggedImg.parentNode) {
+                console.log("Attempting to remove child...");
+                draggedImg.parentNode.removeChild(draggedImg);
+                console.log("Child removed successfully");
+              } else {
+                console.log("draggedImg.parentNode is null or undefined");
+              }
+            } catch (error) {
+              console.log("Error removing child:", error);
+              console.log("Element already removed, continuing...");
+            }
+
+            console.log("Appending to pool...");
+            pool.appendChild(draggedImg);
+            saveTierListState();
+            renderPoolGrid(window.allCharacters);
+            console.log("=== END DEBUG DROP POOL ===");
+          }
+        });
+      }
+
+      // Carica i personaggi o le armi e popola la pool o ripristina la disposizione
+      function loadAndRenderPool() {
+        const mode = document.getElementById("modeSelect").value;
+        const fileName = mode === "characters" ? "character.json" : "armi.json";
+
+        // Aggiorna il titolo della pool
+        const poolTitle = document.getElementById("poolTitle");
+        if (mode === "characters") {
+          poolTitle.textContent =
+            "⬇️ Trascina qui i personaggi da inserire nella tier list";
+        } else {
+          poolTitle.textContent =
+            "⬇️ Trascina qui le armi da inserire nella tier list";
+        }
+
+        fetch(fileName)
+          .then((r) => r.json())
+          .then((data) => {
+            if (mode === "characters") {
+              window.allCharacters = data.characters;
+            } else {
+              // Per le armi, converti il formato ma mantieni tutti i dettagli originali
+              window.allCharacters = data.map((weapon) => ({
+                name: weapon.nome,
+                image: weapon.image || "images/characters/placeholder.svg", // Fallback se l'immagine non esiste
+                type: weapon.tipo,
+                rarity: weapon.rarità,
+                // Mantieni tutti i dettagli originali per il modal
+                originalData: weapon,
+              }));
+            }
+
+            // Svuota la tier list quando si cambia modalità
+            document.querySelectorAll(".tier-slot").forEach((slot) => {
+              slot.innerHTML = "";
+            });
+
+            // Ripristina la struttura delle tier per la modalità corrente
+            restoreTierStructure();
+            restoreTierNames();
+            restoreTierColors();
+            restoreTierNotes();
+
+            if (!restoreTierListState(window.allCharacters)) {
+              renderPoolGrid(window.allCharacters);
+            }
+          })
+          .catch((error) => {
+            console.error("Errore nel caricamento dei dati:", error);
+          });
+      }
+
+      // Funzioni per l'auto-scroll durante il drag
+      function startAutoScroll() {
+        if (autoScrollInterval) return;
+
+        autoScrollInterval = setInterval(() => {
+          if (autoScrollSpeed !== 0) {
+            window.scrollBy(0, autoScrollSpeed);
+          }
+        }, 16); // ~60fps
+      }
+
+      function stopAutoScroll() {
+        if (autoScrollInterval) {
+          clearInterval(autoScrollInterval);
+          autoScrollInterval = null;
+        }
+        autoScrollSpeed = 0;
+      }
+
+      function updateAutoScroll(mouseY) {
+        const windowHeight = window.innerHeight;
+        const scrollThreshold = 100; // Distanza dal bordo per attivare scroll
+
+        if (mouseY < scrollThreshold) {
+          // Scroll verso l'alto
+          autoScrollSpeed = -Math.max(5, (scrollThreshold - mouseY) / 10);
+        } else if (mouseY > windowHeight - scrollThreshold) {
+          // Scroll verso il basso
+          autoScrollSpeed = Math.max(
+            5,
+            (mouseY - (windowHeight - scrollThreshold)) / 10
+          );
+        } else {
+          // Nessuno scroll
+          autoScrollSpeed = 0;
+        }
+      }
+
+      // Dopo ogni drop, riapplica gli eventi drag & drop
+      document.addEventListener("DOMContentLoaded", () => {
+        loadAndRenderPool();
+        // Dopo un piccolo delay, aggiungi eventi drag & drop anche alle tier
+        setTimeout(() => {
+          addDragDropEvents();
+        }, 1000);
+
+        // Aggiungi event listener per il cambio di modalità
+        document.getElementById("modeSelect").addEventListener("change", () => {
+          loadAndRenderPool();
+        });
+
+        // Event listener globale per l'auto-scroll durante il drag
+        document.addEventListener("dragover", (e) => {
+          if (draggedImg) {
+            updateAutoScroll(e.clientY);
+          }
+        });
+      });
+      // Ogni volta che cambia la pool, riapplica eventi
+      // (già gestito in renderPoolGrid)
+
+      // Sposta il personaggio a sinistra o destra nella stessa tier
+      function moveCharacterInTier(img, direction) {
+        const parent = img.parentNode;
+        if (!parent || !parent.classList.contains("tier-slot")) return;
+        if (direction === "left" && img.previousElementSibling) {
+          parent.insertBefore(img, img.previousElementSibling);
+        } else if (direction === "right" && img.nextElementSibling) {
+          parent.insertBefore(img.nextElementSibling, img);
+        }
+        saveTierListState();
+      }
+      // Eventi click su ⬆️ e ⬇️ per ogni personaggio nella tier
+      function addArrowEventsToCharacters() {
+        document
+          .querySelectorAll(".tier-slot .draggable-img")
+          .forEach((img) => {
+            // Rimuovi eventuali wrapper precedenti
+            if (
+              img.parentNode &&
+              img.parentNode.classList.contains("character-arrow-wrapper")
+            )
+              return;
+            // Crea wrapper
+            const wrapper = document.createElement("div");
+            wrapper.className = "character-arrow-wrapper";
+            wrapper.style.display = "flex";
+            wrapper.style.alignItems = "center";
+            // Crea frecce
+            const up = document.createElement("span");
+            up.textContent = "⬆️";
+            up.style.cursor = "pointer";
+            up.style.marginRight = "2px";
+            up.onclick = (e) => {
+              e.stopPropagation();
+              moveCharacterInTier(img, "left");
+            };
+            const down = document.createElement("span");
+            down.textContent = "⬇️";
+            down.style.cursor = "pointer";
+            down.style.marginLeft = "2px";
+            down.onclick = (e) => {
+              e.stopPropagation();
+              moveCharacterInTier(img, "right");
+            };
+            // Inserisci
+            wrapper.appendChild(up);
+            wrapper.appendChild(img.cloneNode(true));
+            wrapper.appendChild(down);
+            // Sostituisci img con wrapper
+            img.parentNode.replaceChild(wrapper, img);
+          });
+      }
+      // Sposta il wrapper-personaggio a sinistra o destra nella stessa tier
+      function moveCharacterWrapper(wrapper, direction) {
+        const parent = wrapper.parentNode;
+        if (!parent || !parent.classList.contains("tier-slot")) return;
+        const tierRow = parent.closest(".tier-row");
+        if (!tierRow) return;
+        let targetSlot = null;
+        if (direction === "up") {
+          // Trova la tier superiore
+          const prevRow = tierRow.previousElementSibling;
+          if (prevRow && prevRow.querySelector(".tier-slot")) {
+            targetSlot = prevRow.querySelector(".tier-slot");
+          }
+        } else if (direction === "down") {
+          // Trova la tier inferiore
+          const nextRow = tierRow.nextElementSibling;
+          if (nextRow && nextRow.querySelector(".tier-slot")) {
+            targetSlot = nextRow.querySelector(".tier-slot");
+          }
+        }
+        if (targetSlot) {
+          targetSlot.appendChild(wrapper);
+          saveTierListState();
+        }
+      }
+      // Ricostruisce i wrapper con le frecce per ogni personaggio nella tier
+      function addArrowWrappersToCharacters() {
+        document.querySelectorAll(".tier-slot").forEach((slot) => {
+          // Rimuovi eventuali wrapper vuoti senza immagini
+          Array.from(slot.querySelectorAll(".character-arrow-wrapper")).forEach(
+            (wrapper) => {
+              if (!wrapper.querySelector("img.draggable-img")) {
+                wrapper.remove();
+              }
+            }
+          );
+          // Solo immagini figli diretti dello slot e non già wrappate
+          const imgs = Array.from(slot.children).filter(
+            (el) =>
+              el.tagName === "IMG" &&
+              !el.parentNode.classList.contains("character-arrow-wrapper")
+          );
+          imgs.forEach((img) => {
+            // Verifica ancora che img.parentNode sia lo slot e che slot contenga img
+            if (img.parentNode !== slot || !slot.contains(img)) return;
+            const wrapper = document.createElement("div");
+            wrapper.className = "character-arrow-wrapper";
+            wrapper.style.display = "flex";
+            wrapper.style.alignItems = "center";
+            // Crea frecce SOLO se c'è l'immagine
+            if (img) {
+              const up = document.createElement("span");
+              up.textContent = "⬆️";
+              up.style.cursor = "pointer";
+              up.style.marginRight = "2px";
+              up.onclick = (e) => {
+                e.stopPropagation();
+                moveCharacterWrapper(wrapper, "up");
+              };
+              const down = document.createElement("span");
+              down.textContent = "⬇️";
+              down.style.cursor = "pointer";
+              down.style.marginLeft = "2px";
+              down.onclick = (e) => {
+                e.stopPropagation();
+                moveCharacterWrapper(wrapper, "down");
+              };
+              wrapper.appendChild(up);
+              wrapper.appendChild(img);
+              wrapper.appendChild(down);
+              // Se img è ancora figlio diretto, wrappa normalmente
+              if (img.parentNode === slot) {
+                slot.insertBefore(wrapper, img);
+              } else {
+                slot.appendChild(wrapper);
+              }
+            }
+          });
+        });
+      }
+      // Dopo ogni drop o render, aggiorna le frecce
+      const origAddDragDropEvents = addDragDropEvents;
+      addDragDropEvents = function () {
+        origAddDragDropEvents();
+        setTimeout(addArrowWrappersToCharacters, 100);
+      };
+
+      // Menu contestuale opzioni tier
+      let currentTierMenu = null;
+      function showTierOptionsMenu(tierRow, gearBtn) {
+        const menu = document.getElementById("tierOptionsMenu");
+        menu.innerHTML = `
+          <button onclick="renameTier(this)">✏️ Rinomina tier</button>
+          <button onclick="changeTierColor(this)">🎨 Cambia colore</button>
+          <button onclick="resetTierColor(this)">🔄 Ripristina colore default</button>
+          <button onclick="addTierNote(this)">📝 Aggiungi nota</button>
+          <button onclick="clearTier(this)">🧹 Svuota tier</button>
+          <button onclick="deleteTier(this)">🗑️ Elimina tier</button>
+          <button onclick="exportTier(this)">📤 Esporta tier</button>
+          <button onclick="lockTier(this)">🔒 Blocca tier</button>
+        `;
+        // Posiziona il menu vicino all'ingranaggio
+        const rect = gearBtn.getBoundingClientRect();
+        const menuHeight = 290; // circa, dipende dalle opzioni
+        const spaceBelow = window.innerHeight - rect.bottom;
+        const spaceAbove = rect.top;
+        let top;
+        if (spaceBelow < menuHeight && spaceAbove > menuHeight) {
+          // Apri verso l'alto
+          top = window.scrollY + rect.top - menuHeight - 4;
+        } else {
+          // Apri verso il basso
+          top = window.scrollY + rect.bottom + 4;
+        }
+        menu.style.top = top + "px";
+        menu.style.left = window.scrollX + rect.left - 20 + "px";
+        menu.classList.add("active");
+        currentTierMenu = tierRow;
+      }
+      // Chiudi menu se clicchi fuori
+      document.addEventListener("mousedown", (e) => {
+        const menu = document.getElementById("tierOptionsMenu");
+        if (
+          !menu.contains(e.target) &&
+          !e.target.classList.contains("tier-gear")
+        ) {
+          menu.classList.remove("active");
+          currentTierMenu = null;
+        }
+      });
+      // Mostra menu al click sull'ingranaggio
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".tier-gear").forEach((gear) => {
+          gear.style.cursor = "pointer";
+          gear.onclick = function (e) {
+            e.stopPropagation();
+            const tierRow = this.closest(".tier-row");
+            showTierOptionsMenu(tierRow, this);
+          };
+        });
+      });
+      // Salva/ripristina i nomi custom delle tier
+      function saveTierNames() {
+        const mode = document.getElementById("modeSelect").value;
+        const names = {};
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          const label = row.querySelector(".tier-label");
+          names[row.dataset.tier] = label ? label.textContent : "";
+        });
+        localStorage.setItem(`tierNames_${mode}`, JSON.stringify(names));
+      }
+      function restoreTierNames() {
+        const mode = document.getElementById("modeSelect").value;
+        const names = JSON.parse(
+          localStorage.getItem(`tierNames_${mode}`) || "{}"
+        );
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          const label = row.querySelector(".tier-label");
+          if (label && names[row.dataset.tier]) {
+            label.textContent = names[row.dataset.tier];
+          }
+        });
+      }
+      document.addEventListener("DOMContentLoaded", restoreTierNames);
+
+      // Rinomina tier
+      function renameTier(btn) {
+        const menu = document.getElementById("tierOptionsMenu");
+        // Mostra input per tutte le tier
+        let html = `<div style='padding:12px 18px;'>
+          <label style='font-size:1.1em;'>Rinomina tutte le tier:</label><br>`;
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          const label = row.querySelector(".tier-label");
+          html += `<div style='margin:8px 0;'>
+            <span style='display:inline-block;width:32px;font-weight:bold;'>${
+              row.dataset.tier || label.textContent
+            }</span>
+            <input class='renameTierInput' data-tier='${
+              row.dataset.tier
+            }' type='text' value='${
+            label.textContent
+          }' style='width:70%;margin-left:8px;padding:6px 10px;border-radius:7px;border:1px solid #444;background:#18181a;color:#fff;font-size:1.1em;'>
+          </div>`;
+        });
+        html += `<button onclick='confirmRenameAllTiers()' style='margin-right:8px;'>Salva</button>
+          <button onclick='cancelTierMenu()'>Annulla</button>
+        </div>`;
+        menu.innerHTML = html;
+        setTimeout(() => {
+          const first = document.querySelector(".renameTierInput");
+          if (first) first.focus();
+        }, 100);
+      }
+      function confirmRenameAllTiers() {
+        const inputs = document.querySelectorAll(".renameTierInput");
+        inputs.forEach((input) => {
+          const tier = input.getAttribute("data-tier");
+          const row = document.querySelector(`.tier-row[data-tier='${tier}']`);
+          if (row) {
+            const label = row.querySelector(".tier-label");
+            if (label) label.textContent = input.value;
+          }
+        });
+        saveTierNames();
+        cancelTierMenu();
+      }
+      function cancelTierMenu() {
+        document.getElementById("tierOptionsMenu").classList.remove("active");
+        currentTierMenu = null;
+      }
+      // Salva/ripristina i colori custom delle tier
+      function saveTierColors() {
+        const mode = document.getElementById("modeSelect").value;
+        const colors = {};
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          colors[row.dataset.tier] = row.style.backgroundColor || "";
+        });
+        localStorage.setItem(`tierColors_${mode}`, JSON.stringify(colors));
+      }
+      function restoreTierColors() {
+        const mode = document.getElementById("modeSelect").value;
+        const colors = JSON.parse(
+          localStorage.getItem(`tierColors_${mode}`) || "{}"
+        );
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          if (colors[row.dataset.tier]) {
+            row.style.backgroundColor = colors[row.dataset.tier];
+          }
+        });
+      }
+      document.addEventListener("DOMContentLoaded", restoreTierColors);
+
+      // Cambia colore tier
+      function changeTierColor(btn) {
+        const menu = document.getElementById("tierOptionsMenu");
+        if (!currentTierMenu) return;
+        const row = currentTierMenu;
+        const currentColor =
+          row.style.backgroundColor ||
+          window.getComputedStyle(row).backgroundColor;
+        // Mostra color picker inline
+        menu.innerHTML = `<div style='padding:12px 18px;'>
+          <label style='font-size:1.1em;'>Scegli un colore per la tier:</label><br>
+          <input id='tierColorInput' type='color' value='${rgbToHex(
+            currentColor
+          )}' style='width:60px;height:36px;margin:10px 0 8px 0;vertical-align:middle;'>
+          <button onclick='confirmTierColor()' style='margin-left:10px;'>Salva</button>
+          <button onclick='cancelTierMenu()' style='margin-left:6px;'>Annulla</button>
+        </div>`;
+      }
+      function confirmTierColor() {
+        if (!currentTierMenu) return;
+        const input = document.getElementById("tierColorInput");
+        if (input) {
+          currentTierMenu.style.backgroundColor = input.value;
+          saveTierColors();
+        }
+        cancelTierMenu();
+      }
+      // Ripristina colore default tier
+      function resetTierColor(btn) {
+        if (!currentTierMenu) return;
+        currentTierMenu.style.backgroundColor = "";
+        saveTierColors();
+        cancelTierMenu();
+      }
+      // Utility: RGB -> HEX
+      function rgbToHex(rgb) {
+        if (!rgb) return "#232124";
+        if (rgb.startsWith("#")) return rgb;
+        const result = rgb.match(/\d+/g);
+        if (!result) return "#232124";
+        return (
+          "#" +
+          (
+            (1 << 24) +
+            (parseInt(result[0]) << 16) +
+            (parseInt(result[1]) << 8) +
+            parseInt(result[2])
+          )
+            .toString(16)
+            .slice(1)
+        );
+      }
+      // Salva/ripristina le note delle tier
+      function saveTierNotes() {
+        const mode = document.getElementById("modeSelect").value;
+        const notes = {};
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          const noteDiv = row.querySelector(".tier-note");
+          notes[row.dataset.tier] = noteDiv ? noteDiv.textContent : "";
+        });
+        localStorage.setItem(`tierNotes_${mode}`, JSON.stringify(notes));
+      }
+      function restoreTierNotes() {
+        const mode = document.getElementById("modeSelect").value;
+        const notes = JSON.parse(
+          localStorage.getItem(`tierNotes_${mode}`) || "{}"
+        );
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          let noteDiv = row.querySelector(".tier-note");
+          if (!noteDiv) {
+            noteDiv = document.createElement("div");
+            noteDiv.className = "tier-note";
+            noteDiv.style.fontSize = "1em";
+            noteDiv.style.fontStyle = "italic";
+            noteDiv.style.color = "#b0e0ff";
+            noteDiv.style.margin = "6px 0 0 120px";
+            row.appendChild(noteDiv);
+          }
+          noteDiv.textContent = notes[row.dataset.tier] || "";
+          noteDiv.style.display = noteDiv.textContent ? "block" : "none";
+        });
+      }
+      document.addEventListener("DOMContentLoaded", restoreTierNotes);
+
+      // Aggiungi nota tier
+      function addTierNote(btn) {
+        const menu = document.getElementById("tierOptionsMenu");
+        if (!currentTierMenu) return;
+        let noteDiv = currentTierMenu.querySelector(".tier-note");
+        if (!noteDiv) {
+          noteDiv = document.createElement("div");
+          noteDiv.className = "tier-note";
+          noteDiv.style.fontSize = "1em";
+          noteDiv.style.fontStyle = "italic";
+          noteDiv.style.color = "#b0e0ff";
+          noteDiv.style.margin = "6px 0 0 120px";
+          currentTierMenu.appendChild(noteDiv);
+        }
+        // Mostra textarea inline
+        menu.innerHTML = `<div style='padding:12px 18px;'>
+          <label style='font-size:1.1em;'>Nota/descrizione per la tier:</label><br>
+          <textarea id='tierNoteInput' style='width:95%;min-height:48px;margin:10px 0 8px 0;padding:6px 10px;border-radius:7px;border:1px solid #444;background:#18181a;color:#fff;font-size:1.08em;'>${
+            noteDiv.textContent || ""
+          }</textarea>
+          <button onclick='confirmTierNote()' style='margin-right:8px;'>Salva</button>
+          <button onclick='cancelTierMenu()'>Annulla</button>
+        </div>`;
+        setTimeout(() => {
+          document.getElementById("tierNoteInput").focus();
+        }, 100);
+      }
+      function confirmTierNote() {
+        if (!currentTierMenu) return;
+        const input = document.getElementById("tierNoteInput");
+        let noteDiv = currentTierMenu.querySelector(".tier-note");
+        if (!noteDiv) {
+          noteDiv = document.createElement("div");
+          noteDiv.className = "tier-note";
+          noteDiv.style.fontSize = "1em";
+          noteDiv.style.fontStyle = "italic";
+          noteDiv.style.color = "#b0e0ff";
+          noteDiv.style.margin = "6px 0 0 120px";
+          currentTierMenu.appendChild(noteDiv);
+        }
+        noteDiv.textContent = input.value;
+        noteDiv.style.display = input.value ? "block" : "none";
+        saveTierNotes();
+        cancelTierMenu();
+      }
+      function cancelTierMenu() {
+        document.getElementById("tierOptionsMenu").classList.remove("active");
+        currentTierMenu = null;
+      }
+      function clearTier(btn) {
+        const menu = document.getElementById("tierOptionsMenu");
+        menu.innerHTML = `<div style='padding:12px 18px;'>
+          <div style='margin-bottom:10px;'>Vuoi svuotare solo questa riga o tutta la tier list?</div>
+          <button onclick='confirmClearTierRow()' style='margin-right:8px;'>Svuota solo questa riga</button>
+          <button onclick='confirmClearAllTiers()' style='margin-right:8px;'>Svuota tutta la tier list</button>
+          <button onclick='cancelTierMenu()'>Annulla</button>
+        </div>`;
+      }
+      function confirmClearTierRow() {
+        if (!currentTierMenu) return;
+        const slot = currentTierMenu.querySelector(".tier-slot");
+        if (slot) {
+          Array.from(slot.querySelectorAll(".character-arrow-wrapper")).forEach(
+            (w) => w.remove()
+          );
+          Array.from(slot.querySelectorAll("img.draggable-img")).forEach(
+            (img) => img.remove()
+          );
+        }
+        saveTierListState();
+        renderPoolGrid(window.allCharacters);
+        cancelTierMenu();
+      }
+      function confirmClearAllTiers() {
+        document.querySelectorAll(".tier-slot").forEach((slot) => {
+          Array.from(slot.querySelectorAll(".character-arrow-wrapper")).forEach(
+            (w) => w.remove()
+          );
+          Array.from(slot.querySelectorAll("img.draggable-img")).forEach(
+            (img) => img.remove()
+          );
+        });
+        saveTierListState();
+        renderPoolGrid(window.allCharacters);
+        cancelTierMenu();
+      }
+      function deleteTier(btn) {
+        if (!currentTierMenu) return;
+        const label = currentTierMenu.querySelector(".tier-label");
+        const tierName = label ? label.textContent : "Questa tier";
+        const ok = confirm(
+          `Vuoi davvero eliminare la tier "${tierName}"? Tutti i personaggi verranno rimessi nella pool.`
+        );
+        if (!ok) return;
+        // Rimetti i personaggi nella pool
+        const slot = currentTierMenu.querySelector(".tier-slot");
+        if (slot) {
+          Array.from(slot.querySelectorAll(".character-arrow-wrapper")).forEach(
+            (w) => w.remove()
+          );
+          Array.from(slot.querySelectorAll("img.draggable-img")).forEach(
+            (img) => img.remove()
+          );
+        }
+        // Rimuovi la tier
+        currentTierMenu.remove();
+        saveTierStructure();
+        renderPoolGrid(window.allCharacters);
+        cancelTierMenu();
+      }
+      function exportTier(btn) {
+        alert("TODO: esporta tier");
+      }
+      function lockTier(btn) {
+        alert("TODO: blocca tier");
+      }
+
+      // Funzione per mostrare il form di aggiunta tier
+      document.getElementById("addTierBtn").onclick = function () {
+        const container = document.getElementById("addTierFormContainer");
+        // Costruisci le opzioni di posizione
+        let options = '<option value="end">In fondo</option>';
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          const label = row.querySelector(".tier-label");
+          const tier = row.dataset.tier || label.textContent;
+          options += `<option value="before-${tier}">Sopra ${label.textContent}</option>`;
+          options += `<option value="after-${tier}">Sotto ${label.textContent}</option>`;
+        });
+        container.innerHTML = `<div style='background:#232124;padding:18px 22px;border-radius:12px;box-shadow:0 2px 16px #0007;max-width:420px;margin-bottom:18px;'>
+          <label>Nome nuova tier:</label><br>
+          <input id='newTierName' type='text' style='width:90%;margin:8px 0 12px 0;padding:6px 10px;border-radius:7px;border:1px solid #444;background:#18181a;color:#fff;font-size:1.1em;'><br>
+          <label>Colore:</label>
+          <input id='newTierColor' type='color' value='#64ffda' style='width:60px;height:36px;margin:0 0 12px 10px;vertical-align:middle;'><br>
+          <label>Posizione:</label>
+          <select id='newTierPosition' style='margin-left:10px;'>${options}</select><br>
+          <button onclick='addNewTier()' style='margin-top:12px;margin-right:8px;'>Aggiungi</button>
+          <button onclick='cancelAddTier()'>Annulla</button>
+        </div>`;
+        setTimeout(() => {
+          document.getElementById("newTierName").focus();
+        }, 100);
+      };
+      function cancelAddTier() {
+        document.getElementById("addTierFormContainer").innerHTML = "";
+      }
+      // Funzione per aggiungere la nuova tier
+      function addNewTier() {
+        const name =
+          document.getElementById("newTierName").value.trim() || "Nuova";
+        const color = document.getElementById("newTierColor").value;
+        const pos = document.getElementById("newTierPosition").value;
+        // Crea la nuova tier-row
+        const row = document.createElement("div");
+        row.className = "tier-row";
+        // Genera un data-tier unico
+        let base = name.replace(/\s+/g, "").toUpperCase();
+        let dataTier = base;
+        let i = 2;
+        while (document.querySelector(`.tier-row[data-tier='${dataTier}']`)) {
+          dataTier = base + i++;
+        }
+        row.setAttribute("data-tier", dataTier);
+        row.style.backgroundColor = color;
+        row.innerHTML = `
+          <div class="tier-label">${name}</div>
+          <div class="tier-slot" data-tier="${dataTier}"></div>
+          <div class="tier-actions">
+            <span class="tier-gear">⚙️</span>
+            <span class="tier-arrow">⬆️</span>
+            <span class="tier-arrow">⬇️</span>
+          </div>
+        `;
+        // Inserisci nella posizione scelta
+        if (pos === "end") {
+          document.getElementById("tierTable").appendChild(row);
+        } else if (pos.startsWith("before-")) {
+          const ref = document.querySelector(
+            `.tier-row[data-tier='${pos.slice(7)}']`
+          );
+          if (ref) ref.parentNode.insertBefore(row, ref);
+        } else if (pos.startsWith("after-")) {
+          const ref = document.querySelector(
+            `.tier-row[data-tier='${pos.slice(6)}']`
+          );
+          if (ref && ref.nextSibling)
+            ref.parentNode.insertBefore(row, ref.nextSibling);
+          else if (ref) ref.parentNode.appendChild(row);
+        }
+        // Aggiorna eventi e salva
+        setTimeout(() => {
+          addDragDropEvents();
+          document.querySelectorAll(".tier-gear").forEach((gear) => {
+            gear.style.cursor = "pointer";
+            gear.onclick = function (e) {
+              e.stopPropagation();
+              const tierRow = this.closest(".tier-row");
+              showTierOptionsMenu(tierRow, this);
+            };
+          });
+          saveTierNames();
+          saveTierColors();
+          saveTierNotes();
+          saveTierStructure();
+        }, 200);
+        document.getElementById("addTierFormContainer").innerHTML = "";
+      }
+
+      // Salva la struttura completa delle tier su localStorage
+      function saveTierStructure() {
+        const mode = document.getElementById("modeSelect").value;
+        const tiers = [];
+        document.querySelectorAll(".tier-row").forEach((row) => {
+          const label = row.querySelector(".tier-label");
+          const slot = row.querySelector(".tier-slot");
+          const noteDiv = row.querySelector(".tier-note");
+          tiers.push({
+            dataTier: row.getAttribute("data-tier"),
+            name: label ? label.textContent : "",
+            color: row.style.backgroundColor || "",
+            note: noteDiv ? noteDiv.textContent : "",
+          });
+        });
+        localStorage.setItem(`tierStructure_${mode}`, JSON.stringify(tiers));
+      }
+
+      // Ricostruisci la tier list da localStorage
+      function restoreTierStructure() {
+        const mode = document.getElementById("modeSelect").value;
+        const tiers = JSON.parse(
+          localStorage.getItem(`tierStructure_${mode}`) || "null"
+        );
+        if (!tiers || !Array.isArray(tiers) || tiers.length === 0) return;
+        const table = document.getElementById("tierTable");
+        table.innerHTML = "";
+        tiers.forEach((tier) => {
+          const row = document.createElement("div");
+          // Aggiungi la classe CSS di default se la tier è S, A, B, C, D
+          let className = "tier-row";
+          if (tier.dataTier === "S") className += " tier-s";
+          if (tier.dataTier === "A") className += " tier-a";
+          if (tier.dataTier === "B") className += " tier-b";
+          if (tier.dataTier === "C") className += " tier-c";
+          if (tier.dataTier === "D") className += " tier-d";
+          row.className = className;
+          row.setAttribute("data-tier", tier.dataTier);
+          if (tier.color) row.style.backgroundColor = tier.color;
+          else row.style.backgroundColor = "";
+          row.innerHTML = `
+            <div class=\"tier-label\">${tier.name}</div>
+            <div class=\"tier-slot\" data-tier=\"${tier.dataTier}\"></div>
+            <div class=\"tier-actions\">\n               <span class=\"tier-gear\">⚙️</span>\n               <span class=\"tier-arrow\">⬆️</span>\n               <span class=\"tier-arrow\">⬇️</span>\n             </div>\n           `;
+          if (tier.note) {
+            const noteDiv = document.createElement("div");
+            noteDiv.className = "tier-note";
+            noteDiv.style.fontSize = "1em";
+            noteDiv.style.fontStyle = "italic";
+            noteDiv.style.color = "#b0e0ff";
+            noteDiv.style.margin = "6px 0 0 120px";
+            noteDiv.textContent = tier.note;
+            row.appendChild(noteDiv);
+          }
+          table.appendChild(row);
+        });
+        setTimeout(() => {
+          addDragDropEvents();
+          document.querySelectorAll(".tier-gear").forEach((gear) => {
+            gear.style.cursor = "pointer";
+            gear.onclick = function (e) {
+              e.stopPropagation();
+              const tierRow = this.closest(".tier-row");
+              showTierOptionsMenu(tierRow, this);
+            };
+          });
+        }, 200);
+      }
+
+      // Aggiorna tutte le funzioni di salvataggio tier per chiamare saveTierStructure
+      function saveTierNames() {
+        setTimeout(saveTierStructure, 50);
+      }
+      function saveTierColors() {
+        setTimeout(saveTierStructure, 50);
+      }
+      function saveTierNotes() {
+        setTimeout(saveTierStructure, 50);
+      }
+      // Dopo aggiunta/eliminazione tier, chiamare saveTierStructure
+      // All'avvio, ripristina la struttura se presente (ora gestito in loadAndRenderPool)
+
+      // Funzioni per il modal delle armi
+      function showWeaponModal(weaponName) {
+        console.log("showWeaponModal called with:", weaponName);
+        const mode = document.getElementById("modeSelect").value;
+        console.log("Current mode:", mode);
+
+        if (mode !== "weapons") {
+          console.log("Mode is not weapons, returning");
+          return;
+        }
+
+        const weapon = window.allCharacters.find((w) => w.name === weaponName);
+        console.log("Found weapon:", weapon);
+
+        if (!weapon || !weapon.originalData) {
+          console.log("Weapon or originalData not found");
+          return;
+        }
+
+        const weaponData = weapon.originalData;
+        const modal = document.getElementById("weaponModal");
+        const content = document.getElementById("weaponModalContent");
+
+        // Genera le stelle per la rarità
+        const stars = "★".repeat(weaponData.rarità);
+
+        content.innerHTML = `
+          <div class="weapon-header">
+            <h2>${weaponData.nome}</h2>
+            <div class="weapon-type">${weaponData.tipo}</div>
+            <div class="weapon-rarity">${stars}</div>
+            <button class="modal-close-btn" onclick="closeWeaponModal()">×</button>
+          </div>
+          <div class="weapon-body">
+            <div class="weapon-stats">
+              <div class="stat-item">
+                <div class="stat-label">ATK Base</div>
+                <div class="stat-value">${weaponData.atk_base}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">${weaponData.stat_secondaria.tipo}</div>
+                <div class="stat-value">${weaponData.stat_secondaria.valore}%</div>
+              </div>
+            </div>
+            <div class="weapon-passive">
+              <h3>🎯 Bonus Passiva</h3>
+              <p>${weaponData.bonus_passiva}</p>
+            </div>
+          </div>
+        `;
+
+        modal.style.display = "block";
+      }
+
+      function closeWeaponModal() {
+        const modal = document.getElementById("weaponModal");
+        if (modal) {
+          modal.style.display = "none";
+          console.log("Weapon modal closed");
+        }
+      }
+
+      // Chiudi modal se clicchi fuori
+      window.onclick = function (event) {
+        const loginModal = document.getElementById("loginModal");
+        const weaponModal = document.getElementById("weaponModal");
+        if (event.target === loginModal) {
+          loginModal.style.display = "none";
+        }
+        if (event.target === weaponModal) {
+          weaponModal.style.display = "none";
+        }
+      };
+
+      // Aggiungi event listener per il click sulle armi
+      function addWeaponHoverEvents() {
+        const mode = document.getElementById("modeSelect").value;
+        console.log("addWeaponHoverEvents called, mode:", mode);
+
+        if (mode === "weapons") {
+          const weaponImages = document.querySelectorAll(".draggable-img");
+          console.log("Found weapon images:", weaponImages.length);
+
+          weaponImages.forEach((img) => {
+            img.style.cursor = "grab";
+
+            // Per le armi, riabilita il drag ma gestisci hover intelligente
+            img.draggable = true;
+
+            let hoverTimeout;
+            let isDragging = false;
+
+            img.addEventListener("dragstart", function (e) {
+              console.log("Drag start on weapon");
+              isDragging = true;
+              if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
+              }
+            });
+
+            img.addEventListener("dragend", function (e) {
+              console.log("Drag end on weapon");
+              setTimeout(() => {
+                isDragging = false;
+              }, 100);
+            });
+
+            img.addEventListener("mouseenter", function (e) {
+              console.log("Mouse enter detected on weapon image");
+              if (isDragging) {
+                console.log("Dragging in progress, skipping modal");
+                return; // Non mostrare modal durante drag
+              }
+
+              const weaponName = this.getAttribute("data-name");
+              console.log("Hover detected on weapon:", weaponName);
+
+              // Mostra il modal dopo un breve delay per evitare hover accidentali
+              hoverTimeout = setTimeout(() => {
+                console.log("Timeout fired, isDragging:", isDragging);
+                if (!isDragging) {
+                  console.log("Calling showWeaponModal for:", weaponName);
+                  showWeaponModal(weaponName);
+                }
+              }, 300);
+            });
+
+            img.addEventListener("mouseleave", function (e) {
+              // Cancella il timeout se il mouse esce prima che il modal si apra
+              if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
+              }
+              // NON chiudiamo il modal se è già aperto - rimane fisso
+            });
+          });
+        } else {
+          // Per i personaggi, riabilita il drag e rimuovi gli event hover
+          document.querySelectorAll(".draggable-img").forEach((img) => {
+            img.style.cursor = "grab";
+            img.draggable = true;
+            // Rimuovi gli event listener personalizzati
+            img.onmouseenter = null;
+            img.onmouseleave = null;
+            img.ondragstart = null;
+            img.ondragend = null;
+          });
+        }
+      }
+
+      // Aggiorna le funzioni esistenti per includere gli eventi hover
+      const originalAddDragDropEvents = addDragDropEvents;
+      addDragDropEvents = function () {
+        originalAddDragDropEvents();
+        setTimeout(addWeaponHoverEvents, 100);
+      };
+
+      // Aggiungi anche al cambio di modalità
+      const originalLoadAndRenderPool = loadAndRenderPool;
+      loadAndRenderPool = function () {
+        originalLoadAndRenderPool();
+        setTimeout(addWeaponHoverEvents, 500);
+      };
+    </script>
+  </body>
+</html>

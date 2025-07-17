@@ -1,0 +1,209 @@
+{
+  "displayName": "Ganyu",
+  "img": "images/characters/ganyu.png",
+  "tags": ["Bow", "Cryo", "Liyue", "5★", "DPS", "Support"],
+  "description": "The secretary to the Liyue Qixing, Ganyu is a Cryo bow user who excels at powerful charged shots and AoE Cryo damage.",
+  "weapons": [
+    {
+      "name": "Amos' Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Amos_Bow.png",
+      "note": "Best in Slot"
+    },
+    {
+      "name": "Prototype Crescent",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Prototype_Crescent.png",
+      "note": "F2P"
+    },
+    {
+      "name": "Hamayumi",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Hamayumi.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Blizzard Strayer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    },
+    {
+      "name": "Wanderer's Troupe (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Wanderers_Troupe.png"
+    },
+    {
+      "name": "Blizzard Strayer (2) + Noblesse Oblige (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Cryo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT DMG / CRIT Rate" }
+  ],
+  "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Liutian Archery",
+    "Trail of the Qilin",
+    "Celestial Shower"
+  ],
+  "info": "Ganyu is a top-tier Cryo DPS and support, excelling at charged shot damage and AoE Cryo application. Build her for CRIT DMG, ATK%, and Cryo DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Amos' Bow",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Amos_Bow.png",
+        "note": "Best in Slot"
+      },
+      "artifacts": [
+        {
+          "name": "Blizzard Strayer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Ganyu" },
+      { "name": "Venti" },
+      { "name": "Mona" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Ganyu" },
+      { "name": "Ayaka" },
+      { "name": "Shenhe" },
+      { "name": "Kokomi" }
+    ],
+    [
+      { "name": "Ganyu" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Liutian Archery",
+      "desc": "Performs up to 6 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Liutian_Archery.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 6 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Cryo DMG and blooms, dealing AoE Cryo DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "31.7%",
+          "hit2": "35.6%",
+          "hit3": "45.4%",
+          "hit4": "45.4%",
+          "hit5": "49.0%",
+          "hit6": "57.0%",
+          "charged": "43.9% / 124%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "34.2%",
+          "hit2": "38.4%",
+          "hit3": "49.0%",
+          "hit4": "49.0%",
+          "hit5": "52.9%",
+          "hit6": "61.6%",
+          "charged": "48.2% / 136%",
+          "plunge": "61.2%",
+          "lowhigh": "122.3% / 152.8%"
+        }
+      ]
+    },
+    {
+      "name": "Trail of the Qilin",
+      "desc": "Ganyu dashes backward, leaving an Ice Lotus that taunts enemies and deals AoE Cryo DMG when destroyed or when its duration ends.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Trail_of_the_Qilin.png",
+      "details_html": "<div class='skill-section'><b>Trail of the Qilin</b><br>Dashes backward, leaving an Ice Lotus that taunts enemies and deals AoE Cryo DMG when destroyed or when its duration ends. Ice Lotus HP scales with Ganyu's Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "132% ATK",
+          "lotus_hp": "120% Max HP",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "142% ATK",
+          "lotus_hp": "129% Max HP",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Celestial Shower",
+      "desc": "Ganyu summons a Sacred Cryo Pearl that rains down shards of ice, dealing AoE Cryo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Celestial_Shower.png",
+      "details_html": "<div class='skill-section'><b>Celestial Shower</b><br>Summons a Sacred Cryo Pearl that rains down shards of ice, dealing AoE Cryo DMG. Increases Cryo DMG taken by enemies inside the field.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "70.3% ATK per shard",
+          "duration": "15s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "75.6% ATK per shard",
+          "duration": "15s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Undivided Heart",
+      "phase": "Ascension Phase 1",
+      "desc": "After firing a Frostflake Arrow, CRIT Rate of subsequent Frostflake Arrows and their bloom effects is increased by 20% for 5s."
+    },
+    {
+      "name": "Harmony between Heaven and Earth",
+      "phase": "Ascension Phase 4",
+      "desc": "Celestial Shower grants a 20% Cryo DMG Bonus to active characters in the AoE."
+    },
+    {
+      "name": "Preserved for the Hunt",
+      "phase": "Passive",
+      "desc": "Refunds 15% of the ores used when crafting Bow-type weapons."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Dew-Drinker",
+      "phase": "Constellation Lv. 1",
+      "desc": "Trail of the Qilin gains 1 additional charge."
+    },
+    {
+      "name": "The Auspicious",
+      "phase": "Constellation Lv. 2",
+      "desc": "Celestial Shower grants 20% Cryo RES to active characters in the AoE."
+    },
+    {
+      "name": "Cloud-Strider",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Celestial Shower by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Westward Sojourn",
+      "phase": "Constellation Lv. 4",
+      "desc": "Enemies standing within Celestial Shower's AoE take increased DMG."
+    },
+    {
+      "name": "The Merciful",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Trail of the Qilin by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "The Clement",
+      "phase": "Constellation Lv. 6",
+      "desc": "Using Trail of the Qilin causes the next Frostflake Arrow shot within 30s to not require charging."
+    }
+  ]
+}

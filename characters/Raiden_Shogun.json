@@ -1,0 +1,293 @@
+{
+  "displayName": "Raiden Shogun",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Raiden_Shogun_Icon.png",
+  "tags": [
+    "Polearm",
+    "Electro",
+    "Inazuma",
+    "Archon",
+    "6/26",
+    "Eternity",
+    "Shogunate"
+  ],
+  "description": "The Electro Archon and ruler of Inazuma. Seeks eternity and enforces the Vision Hunt Decree. Master of polearms and the Musou Isshin.",
+  "weapons": [
+    {
+      "name": "Engulfing Lightning",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Engulfing_Lightning.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "The Catch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Catch.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_Homa.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Wavebreaker's Fin",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Wavebreakers_Fin.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Favonius Lance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Lance.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Deathmatch",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Deathmatch.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Prototype Starglitter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Prototype_Starglitter.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (2) + Noblesse Oblige (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Thundering Fury (2) + Emblem of Severed Fate (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Thundering_Fury.png"
+    },
+    {
+      "name": "Thundersoother (2) + Emblem of Severed Fate (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Thundersoother.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Energy Recharge" },
+    { "type": "Goblet", "value": "ATK% / Electro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK%"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Raiden Shogun è una burst DPS e battery, eccellente per team che richiedono molta energia. Builda Energy Recharge, CRIT e ATK% per massimizzare la burst.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Engulfing Lightning",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Engulfing_Lightning.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Emblem of Severed Fate (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Emblem_of_Severed_Fate.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Xiangling", "img": "xiangling.png" },
+      { "name": "Kujou Sara", "img": "kujou_sara.png" }
+    ],
+    [
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Yelan", "img": "yelan.png" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Kokomi", "img": "sangonomiya_kokomi.png" }
+    ],
+    [
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Eula", "img": "eula.png" },
+      { "name": "Rosaria", "img": "rosaria.png" },
+      { "name": "Diona", "img": "diona.png" }
+    ],
+    [
+      { "name": "Raiden Shogun", "img": "raiden.png" },
+      { "name": "Kazuha", "img": "kazuha.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Beidou", "img": "beidou.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Origin",
+      "desc": "Performs up to 5 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Origin.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Raiden_Shogun_Talent_Normal.png",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "39.7%",
+          "hit2": "39.7%",
+          "hit3": "49.5%",
+          "hit4": "28.7% + 28.7%",
+          "hit5": "63.1%",
+          "charged": "62.6% + 62.6%",
+          "stamina": "25",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "42.9%",
+          "hit2": "42.9%",
+          "hit3": "53.6%",
+          "hit4": "31.1% + 31.1%",
+          "hit5": "68.2%",
+          "charged": "67.8% + 67.8%",
+          "stamina": "25",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        },
+        {
+          "level": 3,
+          "hit1": "46.1%",
+          "hit2": "46.1%",
+          "hit3": "57.6%",
+          "hit4": "33.5% + 33.5%",
+          "hit5": "73.3%",
+          "charged": "73.0% + 73.0%",
+          "stamina": "25",
+          "plunge": "74.3%",
+          "lowhigh": "148.6% / 185.7%"
+        },
+        {
+          "level": 4,
+          "hit1": "50.7%",
+          "hit2": "50.7%",
+          "hit3": "63.3%",
+          "hit4": "36.8% + 36.8%",
+          "hit5": "80.5%",
+          "charged": "80.0% + 80.0%",
+          "stamina": "25",
+          "plunge": "81.8%",
+          "lowhigh": "163.5% / 204.2%"
+        },
+        {
+          "level": 5,
+          "hit1": "53.9%",
+          "hit2": "53.9%",
+          "hit3": "67.4%",
+          "hit4": "39.2% + 39.2%",
+          "hit5": "85.6%",
+          "charged": "85.2% + 85.2%",
+          "stamina": "25",
+          "plunge": "87.0%",
+          "lowhigh": "173.9% / 217.2%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to perform an upward slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+    },
+    {
+      "name": "Transcendence: Baleful Omen",
+      "desc": "Unleashes a shard of her Euthymia, dealing AoE Electro DMG and granting party members the Eye of Stormy Judgment, which increases Elemental Burst DMG.",
+      "video": "https://www.youtube.com/embed/example",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Transcendence_Baleful_Omen.png",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Unleashes a shard of her Euthymia, dealing AoE Electro DMG and granting party members the Eye of Stormy Judgment, which increases Elemental Burst DMG based on Raiden's Energy Recharge.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "117.3% ATK",
+          "eye_bonus": "38.7%",
+          "duration": "25s",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "126.6% ATK",
+          "eye_bonus": "41.6%",
+          "duration": "25s",
+          "cd": "10s"
+        },
+        {
+          "level": 3,
+          "skill_dmg": "135.9% ATK",
+          "eye_bonus": "44.5%",
+          "duration": "25s",
+          "cd": "10s"
+        },
+        {
+          "level": 4,
+          "skill_dmg": "147.6% ATK",
+          "eye_bonus": "48.0%",
+          "duration": "25s",
+          "cd": "10s"
+        },
+        {
+          "level": 5,
+          "skill_dmg": "156.9% ATK",
+          "eye_bonus": "50.9%",
+          "duration": "25s",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Secret Art: Musou Shinsetsu",
+      "video": "https://www.youtube.com/embed/example",
+      "desc": "Unleashes the Musou no Hitotachi, dealing massive AoE Electro DMG and entering the Musou Isshin state, converting attacks to Electro and regenerating energy for the party.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Secret_Art_Musou_Shinsetsu.png"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Enlightened One",
+      "phase": "Ascension Phase 1",
+      "desc": "Each 1% above 100% Energy Recharge grants 0.6% greater Energy restoration from Musou Isshin and 0.4% Electro DMG Bonus."
+    },
+    {
+      "name": "Wishes Unnumbered",
+      "phase": "Ascension Phase 4",
+      "desc": "When nearby party members gain Elemental Orbs/Particles, resolve is built up for Raiden Shogun."
+    },
+    {
+      "name": "All-Preserver",
+      "phase": "Passive",
+      "desc": "Mora expended when ascending Swords and Polearms is decreased by 50%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Ominous Inscription",
+      "phase": "Constellation Lv. 1",
+      "desc": "Chakra Desiderata gathers Resolve even faster. When nearby party members use their Elemental Bursts, the Resolve gained is increased by 80%."
+    },
+    {
+      "name": "Steelbreaker",
+      "phase": "Constellation Lv. 2",
+      "desc": "Secret Art: Musou Shinsetsu ignores 60% of opponents' DEF."
+    },
+    {
+      "name": "Shinkage Bygones",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Secret Art: Musou Shinsetsu by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Pledge of Propriety",
+      "phase": "Constellation Lv. 4",
+      "desc": "When the Musou Isshin state ends, all nearby party members (excluding Raiden) gain 30% ATK for 10s."
+    },
+    {
+      "name": "Shogun's Descent",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Transcendence: Baleful Omen by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Wishbearer",
+      "phase": "Constellation Lv. 6",
+      "desc": "While in the Musou Isshin state, Raiden Shogun's Normal, Charged, and Plunging Attacks decrease all nearby party members' (except herself) Elemental Burst CD by 1s when they hit opponents. Can trigger once every 1s, up to 5 times during the state."
+    }
+  ]
+}

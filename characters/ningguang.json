@@ -1,0 +1,201 @@
+{
+  "displayName": "Ningguang",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Ningguang_Icon.png",
+  "tags": ["Catalyst", "Geo", "Liyue", "4★", "DPS", "Burst", "Jade Chamber"],
+  "description": "The Tianquan of the Liyue Qixing, Ningguang is a Geo catalyst user who excels at single-target damage and provides powerful shields with her Jade Screen.",
+  "weapons": [
+    {
+      "name": "Memory of Dust",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Memory_of_Dust.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Solar Pearl",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Solar_Pearl.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Archaic Petra (4)",
+      "img": "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Archaic Petra (2) + Noblesse Oblige (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Geo DMG Bonus" },
+    { "type": "Goblet", "value": "Geo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": ["Normal Attack: Sparkling Scatter", "Jade Screen", "Starshatter"],
+  "info": "Ningguang is a Geo DPS who excels at single-target damage and provides utility with her Jade Screen. Build her for CRIT, ATK%, and Geo DMG Bonus.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Memory of Dust",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Memory_of_Dust.png",
+        "note": "ATK%"
+      },
+      "artifacts": [
+        {
+          "name": "Archaic Petra (4)",
+          "img": "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Ningguang" },
+      { "name": "Zhongli" },
+      { "name": "Albedo" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Ningguang" },
+      { "name": "Noelle" },
+      { "name": "Fischl" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Ningguang" },
+      { "name": "Yun Jin" },
+      { "name": "Barbara" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Sparkling Scatter",
+      "desc": "Shoots gems that deal Geo DMG. Upon hit, grants Ningguang a Star Jade. Charged Attack: Consumes stamina to fire off a giant gem, dealing Geo DMG. If Star Jades are present, they are fired at the enemy as well, dealing additional Geo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Sparkling_Scatter.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Shoots gems that deal Geo DMG. Grants a Star Jade on hit.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to fire a giant gem. If Star Jades are present, they are fired as well, dealing additional Geo DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of gems in mid-air before falling and striking the ground, dealing AoE Geo DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "28.7%",
+          "hit2": "28.7%",
+          "hit3": "35.6%",
+          "hit4": "36.2%",
+          "charged": "174%",
+          "star_jade": "49.6%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "31.0%",
+          "hit2": "31.0%",
+          "hit3": "38.5%",
+          "hit4": "39.1%",
+          "charged": "187%",
+          "star_jade": "53.4%",
+          "plunge": "61.0%",
+          "lowhigh": "122.1% / 152.6%"
+        }
+      ]
+    },
+    {
+      "name": "Jade Screen",
+      "desc": "Ningguang creates a Jade Screen that blocks projectiles and deals AoE Geo DMG. The screen's HP scales with Ningguang's Max HP.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Jade_Screen.png",
+      "details_html": "<div class='skill-section'><b>Jade Screen</b><br>Creates a Jade Screen that blocks projectiles and deals AoE Geo DMG. HP scales with Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "230% ATK",
+          "screen_hp": "50.1% Max HP",
+          "cd": "12s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "247% ATK",
+          "screen_hp": "53.8% Max HP",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Starshatter",
+      "desc": "Gathering a great number of gems, Ningguang scatters them all at once, sending homing projectiles at her enemies that deal massive Geo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Starshatter.png",
+      "details_html": "<div class='skill-section'><b>Starshatter</b><br>Scatters gems that home in on enemies, dealing massive Geo DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "87.6% x 6",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "94.3% x 6",
+          "cd": "12s",
+          "energy_cost": "40"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Backup Plan",
+      "phase": "Ascension Phase 1",
+      "desc": "When Ningguang is in possession of Star Jades, her Charged Attack does not consume stamina."
+    },
+    {
+      "name": "Strategic Reserve",
+      "phase": "Ascension Phase 4",
+      "desc": "A character that passes through the Jade Screen gains a 12% Geo DMG Bonus for 10s."
+    },
+    {
+      "name": "Trove of Marvelous Treasures",
+      "phase": "Passive",
+      "desc": "Displays the location of nearby ore veins used in forging on the mini-map."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Piercing Fragments",
+      "phase": "Constellation Lv. 1",
+      "desc": "When a Normal Attack hits, it deals AoE DMG."
+    },
+    {
+      "name": "Shock Effect",
+      "phase": "Constellation Lv. 2",
+      "desc": "Jade Screen grants 10% Elemental RES to all nearby characters."
+    },
+    {
+      "name": "Majesty be the Array of Stars",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Starshatter by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Exquisite be the Jade, Outshining All Beneath",
+      "phase": "Constellation Lv. 4",
+      "desc": "Jade Screen regenerates 10% of Ningguang's Max HP when destroyed."
+    },
+    {
+      "name": "Invincible be the Jade Screen",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Jade Screen by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Grandeur be the Seven Stars",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Starshatter is used, Ningguang gains 7 Star Jades."
+    }
+  ]
+}

@@ -1,0 +1,3978 @@
+{
+  "alhaitham": {
+    "displayName": "Alhaitham",
+    "img": "https://i2.wp.com/images.genshin-builds.com/genshin/characters/alhaitham/image.png?strip=all&quality=100&w=160",
+    "tags": [
+      "Sword",
+      "Dendro",
+      "Sumeru Akademiya",
+      "11/2",
+      "Vultur Volans",
+      "Steeple of Ignorance"
+    ],
+    "description": "The current scribe of the Sumeru Akademiya, a man endowed with extraordinary intelligence and talent. He lives free — free from the searching eyes of ordinary people, anyway.",
+    "weapons": [
+      {
+        "name": "Light of Foliar Incision",
+        "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+        "note": "CRIT DMG"
+      },
+      {
+        "name": "Uraku Misugiri",
+        "img": "https://img.game8.co/3855357/0f1bee0c48888db48a19113a1a682e1f.png/show",
+        "note": "CRIT DMG"
+      },
+      {
+        "name": "Primordial Jade Cutter",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Mistsplitter Reforged",
+        "img": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+        "note": "CRIT DMG"
+      },
+      {
+        "name": "Haran Geppaku Futsu",
+        "img": "https://img.game8.co/3511222/2310c3f7ed9c13a4249fccdc256199bb.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Freedom-Sworn",
+        "img": "https://img.game8.co/3456283/700b83638b99dba8908463aa92f6b3d6.png/show",
+        "note": "Elemental Mastery"
+      },
+      {
+        "name": "Wolf-Fang",
+        "img": "https://img.game8.co/3754179/5c3f27fc2074430d14a5c95dd869df2f.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Toukabou Shigure",
+        "img": "https://img.game8.co/3623676/cf17c8a3bd127aa1a81876b6c27f837b.png/show",
+        "note": "Elemental Mastery"
+      },
+      {
+        "name": "The Black Sword",
+        "img": "https://img.game8.co/3314420/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Summit Shaper",
+        "img": "https://img.game8.co/3311113/3b0e2ee76a9d421e3f7e4a640f7a9b99.png/show",
+        "note": "ATK%"
+      },
+      {
+        "name": "Iron Sting",
+        "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+        "note": "Elemental Mastery"
+      },
+      {
+        "name": "Blackcliff Longsword",
+        "img": "https://img.game8.co/3314395/ed36b836606ea3bbdc2c00773157d76b.png/show",
+        "note": "CRIT DMG"
+      },
+      {
+        "name": "Harbinger of Dawn",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "CRIT DMG"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Gilded Dreams (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      },
+      {
+        "name": "Deepwood Memories (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Gilded Dreams (2) + Deepwood Memories (2)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      },
+      {
+        "name": "Gilded Dreams (2) + Emblem of Severed Fate (2)",
+        "img": "images/characters/placeholder.svg"
+      },
+      {
+        "name": "Gilded Dreams (2) + Wanderer's Troupe (2)",
+        "img": "images/characters/placeholder.svg"
+      },
+      {
+        "name": "Deepwood Memories (2)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Emblem of Severed Fate (2)",
+        "img": "https://img.game8.co/3397405/a433d977e1c7c160422861b1a086ea58.png/show"
+      },
+      {
+        "name": "Wanderer's Troupe (2)",
+        "img": "https://img.game8.co/3314241/3a1d36b72fbc5fc0370ccf75d20c8d28.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "Elemental Mastery / ATK%" },
+      { "type": "Goblet", "value": "Dendro DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": [
+      "Energy Recharge",
+      "CRIT Rate",
+      "CRIT DMG",
+      "Elemental Mastery",
+      "ATK%"
+    ],
+    "talents": ["Skill", "Normal Attack", "Burst"],
+    "info": "Inserisci qui le note, consigli e spiegazioni per Alhaitham.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Light of Foliar Incision",
+          "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+          "note": "CRIT DMG"
+        },
+        "artifacts": [
+          {
+            "name": "Gilded Dreams (4)",
+            "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Alhaitham", "img": "alhaitam.png" },
+        { "name": "Yae Miko", "img": "yae_miko.png" },
+        { "name": "Nahida", "img": "nahida.png" },
+        { "name": "Zhongli", "img": "zhongli.png" }
+      ],
+      [
+        { "name": "Alhaitham", "img": "alhaitam.png" },
+        { "name": "Xingqiu", "img": "xingqiu.png" },
+        { "name": "Raiden Shogun", "img": "raiden.png" },
+        { "name": "YaoYao", "img": "kuki_shinobu.png" }
+      ],
+      [
+        { "name": "Alhaitham", "img": "alhaitam.png" },
+        { "name": "Xingqiu", "img": "yaoyao.png" },
+        { "name": "Nahida", "img": "fischl.png" },
+        { "name": "Kuki Shinobu", "img": "beidou.png" }
+      ],
+      [
+        { "name": "Alhaitham", "img": "alhaitam.png" },
+        { "name": "Lisa", "img": "lisa.png" },
+        { "name": "Nahida", "img": "nahida.png" },
+        { "name": "Zhongli", "img": "zhongli.png" }
+      ],
+      [
+        { "name": "Alhaitham", "img": "alhaitam.png" },
+        { "name": "Yae Miko", "img": "yae_miko.png" },
+        { "name": "Fischl", "img": "fischl.png" },
+        { "name": "Baizhu", "img": "baizhu.png" }
+      ],
+      [
+        { "name": "Alhaitham", "img": "alhaitam.png" },
+        { "name": "Barbara", "img": "barbara.png" },
+        { "name": "Yelan", "img": "yelan.png" },
+        { "name": "Thoma", "img": "thoma.png" }
+      ],
+      [
+        { "name": "Alhaitham", "img": "alhaitam.png" },
+        { "name": "Nilou", "img": "nilou.png" },
+        { "name": "Xingqiu", "img": "xingqiu.png" },
+        { "name": "YaoYao", "img": "yaoyao.png" }
+      ],
+      [
+        { "name": "Alhaitham", "img": "alhaitam.png" },
+        { "name": "Beidou", "img": "beidou.png" },
+        { "name": "Nahida", "img": "nahida.png" },
+        { "name": "Kuki Shinobu", "img": "kuki_shinobu.png" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Abductive Reasoning",
+        "desc": "",
+        "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Alhaitham-NA.webp",
+        "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Alhaitham_Talent_Normal.png",
+        "video": "https://www.youtube.com/embed/NrzNr0GktTU",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "49.5%",
+            "hit2": "50.7%",
+            "hit3": "34.2% + 34.2%",
+            "hit4": "66.8%",
+            "hit5": "83.9%",
+            "charged": "55.3% + 55.3%",
+            "stamina": "20",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "53.6%",
+            "hit2": "54.9%",
+            "hit3": "37.2% + 37.2%",
+            "hit4": "72.2%",
+            "hit5": "90.7%",
+            "charged": "59.8% + 59.8%",
+            "stamina": "20",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          },
+          {
+            "level": 3,
+            "hit1": "57.6%",
+            "hit2": "59%",
+            "hit3": "39.7% + 39.7%%",
+            "hit4": "77.6%",
+            "hit5": "97.5%%",
+            "charged": "64.3% + 64.3%",
+            "stamina": "20",
+            "plunge": "74.3%",
+            "lowhigh": "148.6% / 185.7%"
+          },
+          {
+            "level": 4,
+            "hit1": "63.3%",
+            "hit2": "64.9%",
+            "hit3": "43.7% + 43.7%",
+            "hit4": "85.4%",
+            "hit5": "107.3%",
+            "charged": "70.7% + 70.7%",
+            "stamina": "20",
+            "plunge": "81.8%",
+            "lowhigh": "163.5% / 204.2%"
+          },
+          {
+            "level": 5,
+            "hit1": "67.4%",
+            "hit2": "69%",
+            "hit3": "46.5% + 46.5%",
+            "hit4": "90.8%",
+            "hit5": "114.1%",
+            "charged": "75.2% + 75.2%",
+            "stamina": "20",
+            "plunge": "87%",
+            "lowhigh": "173.9% / 217.2%"
+          },
+          {
+            "level": 6,
+            "hit1": "70.5%",
+            "hit2": "71.7%",
+            "hit3": "49.7% + 49.7%",
+            "hit4": "89.3%",
+            "hit5": "107.9%",
+            "charged": "76.8% + 76.8%",
+            "stamina": "20",
+            "plunge": "86.1%",
+            "lowhigh": "149.8% / 181.7%"
+          },
+          {
+            "level": 7,
+            "hit1": "75.5%",
+            "hit2": "76.7%",
+            "hit3": "53.2% + 53.2%",
+            "hit4": "95.8%",
+            "hit5": "115.9%",
+            "charged": "82.3% + 82.3%",
+            "stamina": "20",
+            "plunge": "92.3%",
+            "lowhigh": "155.8% / 187.7%"
+          },
+          {
+            "level": 8,
+            "hit1": "80.5%",
+            "hit2": "81.7%",
+            "hit3": "56.7% + 56.7%",
+            "hit4": "102.3%",
+            "hit5": "123.9%",
+            "charged": "87.8% + 87.8%",
+            "stamina": "20",
+            "plunge": "98.5%",
+            "lowhigh": "161.8% / 193.7%"
+          },
+          {
+            "level": 9,
+            "hit1": "85.5%",
+            "hit2": "86.7%",
+            "hit3": "60.2% + 60.2%",
+            "hit4": "108.8%",
+            "hit5": "131.9%",
+            "charged": "93.3% + 93.3%",
+            "stamina": "20",
+            "plunge": "104.7%",
+            "lowhigh": "167.8% / 199.7%"
+          },
+          {
+            "level": 10,
+            "hit1": "90.5%",
+            "hit2": "91.7%",
+            "hit3": "63.7% + 63.7%",
+            "hit4": "115.3%",
+            "hit5": "139.9%",
+            "charged": "98.8% + 98.8%",
+            "stamina": "20",
+            "plunge": "110.9%",
+            "lowhigh": "173.8% / 205.7%"
+          },
+          {
+            "level": 11,
+            "hit1": "95.5%",
+            "hit2": "96.7%",
+            "hit3": "67.2% + 67.2%",
+            "hit4": "121.8%",
+            "hit5": "147.9%",
+            "charged": "104.3% + 104.3%",
+            "stamina": "20",
+            "plunge": "117.1%",
+            "lowhigh": "179.8% / 211.7%"
+          },
+          {
+            "level": 12,
+            "hit1": "100.5%",
+            "hit2": "101.7%",
+            "hit3": "70.7% + 70.7%",
+            "hit4": "128.3%",
+            "hit5": "155.9%",
+            "charged": "109.8% + 109.8%",
+            "stamina": "20",
+            "plunge": "123.3%",
+            "lowhigh": "185.8% / 217.7%"
+          },
+          {
+            "level": 13,
+            "hit1": "105.5%",
+            "hit2": "106.7%",
+            "hit3": "74.2% + 74.2%",
+            "hit4": "134.8%",
+            "hit5": "163.9%",
+            "charged": "115.3% + 115.3%",
+            "stamina": "20",
+            "plunge": "129.5%",
+            "lowhigh": "191.8% / 223.7%"
+          },
+          {
+            "level": 14,
+            "hit1": "110.5%",
+            "hit2": "111.7%",
+            "hit3": "77.7% + 77.7%",
+            "hit4": "141.3%",
+            "hit5": "171.9%",
+            "charged": "120.8% + 120.8%",
+            "stamina": "20",
+            "plunge": "135.7%",
+            "lowhigh": "197.8% / 229.7%"
+          },
+          {
+            "level": 15,
+            "hit1": "115.5%",
+            "hit2": "116.7%",
+            "hit3": "81.2% + 81.2%",
+            "hit4": "147.8%",
+            "hit5": "179.9%",
+            "charged": "126.3% + 126.3%",
+            "stamina": "20",
+            "plunge": "141.9%",
+            "lowhigh": "203.8% / 235.7%"
+          }
+        ],
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash 2 rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>"
+      },
+      {
+        "name": "Universality: An Elaboration on Form",
+        "desc": "Truth inherently exists amidst uncertainty. Even the greatest of scholars are not immune to error.",
+        "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+        "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Alhaitham-Skill.webp",
+        "details_html": "<div class='skill-section' style='margin-bottom:0;'>Rushes forward, dealing <span class='dendro'>Dendro DMG</span> to nearby opponents when the rush ends, causing a <b>Chisel-Light Mirror</b> to form.<br><span style='color:#b3e6b3;'>Holding this skill will cause it to behave differently.</span></div><div class='skill-section'><b>Hold</b><br>Enters Aiming Mode to adjust the direction of Alhaitham's rush attack.</div><div class='skill-section'><b>Chisel-Light Mirror</b><br>When this skill is unleashed, Alhaitham will generate 1 Chisel-Light Mirror. If there are no Mirrors at this time, he will generate 1 additional Mirror.<br>Chisel-Light Mirrors will have the following properties:<ul style='margin:0 0 0 18px;padding:0;'><li>When he possesses Chisel-Light Mirrors, Alhaitham's Normal, Charged, and Plunging Attacks will be converted to <span class='dendro'>Dendro DMG</span>. This cannot be overridden.</li><li>When attacks of the aforementioned kind hit opponents, the Chisel-Light Mirrors will unleash a Projection Attack that deals <span class='aoe-dendro'>AoE Dendro DMG</span> based on the number of Mirrors on the field.</li><li>A total of 3 Chisel-Light Mirrors can exist at once.</li><li>The Chisel-Light Mirrors will disappear one after the other over time, and will all disappear when Alhaitham leaves the field.</li></ul></div>",
+        "levels": [
+          {
+            "level": 1,
+            "rush_attack_dmg": "193.6% ATK + 154.9% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "67.2% ATK + 134.4% EM",
+            "mirror2_dmg": "(67.2% ATK + 134.4% EM) ×2",
+            "mirror3_dmg": "(67.2% ATK + 134.4% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 2,
+            "rush_attack_dmg": "210.0% ATK + 168.0% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "73.0% ATK + 146.0% EM",
+            "mirror2_dmg": "(73.0% ATK + 146.0% EM) ×2",
+            "mirror3_dmg": "(73.0% ATK + 146.0% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 3,
+            "rush_attack_dmg": "226.4% ATK + 181.1% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "78.8% ATK + 157.6% EM",
+            "mirror2_dmg": "(78.8% ATK + 157.6% EM) ×2",
+            "mirror3_dmg": "(78.8% ATK + 157.6% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 4,
+            "rush_attack_dmg": "243.2% ATK + 194.5% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "84.6% ATK + 169.2% EM",
+            "mirror2_dmg": "(84.6% ATK + 169.2% EM) ×2",
+            "mirror3_dmg": "(84.6% ATK + 169.2% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 5,
+            "rush_attack_dmg": "259.6% ATK + 207.6% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "90.4% ATK + 180.8% EM",
+            "mirror2_dmg": "(90.4% ATK + 180.8% EM) ×2",
+            "mirror3_dmg": "(90.4% ATK + 180.8% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 6,
+            "rush_attack_dmg": "276.0% ATK + 220.8% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "96.2% ATK + 192.4% EM",
+            "mirror2_dmg": "(96.2% ATK + 192.4% EM) ×2",
+            "mirror3_dmg": "(96.2% ATK + 192.4% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 7,
+            "rush_attack_dmg": "292.8% ATK + 234.2% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "102.0% ATK + 204.0% EM",
+            "mirror2_dmg": "(102.0% ATK + 204.0% EM) ×2",
+            "mirror3_dmg": "(102.0% ATK + 204.0% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 8,
+            "rush_attack_dmg": "309.2% ATK + 247.3% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "107.8% ATK + 215.6% EM",
+            "mirror2_dmg": "(107.8% ATK + 215.6% EM) ×2",
+            "mirror3_dmg": "(107.8% ATK + 215.6% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 9,
+            "rush_attack_dmg": "325.6% ATK + 260.4% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "113.6% ATK + 227.2% EM",
+            "mirror2_dmg": "(113.6% ATK + 227.2% EM) ×2",
+            "mirror3_dmg": "(113.6% ATK + 227.2% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 10,
+            "rush_attack_dmg": "342.0% ATK + 273.6% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "119.4% ATK + 238.8% EM",
+            "mirror2_dmg": "(119.4% ATK + 238.8% EM) ×2",
+            "mirror3_dmg": "(119.4% ATK + 238.8% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 11,
+            "rush_attack_dmg": "358.4% ATK + 286.7% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "125.2% ATK + 250.4% EM",
+            "mirror2_dmg": "(125.2% ATK + 250.4% EM) ×2",
+            "mirror3_dmg": "(125.2% ATK + 250.4% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 12,
+            "rush_attack_dmg": "374.8% ATK + 299.8% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "131.0% ATK + 262.0% EM",
+            "mirror2_dmg": "(131.0% ATK + 262.0% EM) ×2",
+            "mirror3_dmg": "(131.0% ATK + 262.0% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 13,
+            "rush_attack_dmg": "391.2% ATK + 313.0% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "136.8% ATK + 273.6% EM",
+            "mirror2_dmg": "(136.8% ATK + 273.6% EM) ×2",
+            "mirror3_dmg": "(136.8% ATK + 273.6% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 14,
+            "rush_attack_dmg": "407.6% ATK + 326.1% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "142.6% ATK + 285.2% EM",
+            "mirror2_dmg": "(142.6% ATK + 285.2% EM) ×2",
+            "mirror3_dmg": "(142.6% ATK + 285.2% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          },
+          {
+            "level": 15,
+            "rush_attack_dmg": "424.0% ATK + 339.2% EM",
+            "projection_attack_interval": "1.6s",
+            "mirror1_dmg": "148.4% ATK + 296.8% EM",
+            "mirror2_dmg": "(148.4% ATK + 296.8% EM) ×2",
+            "mirror3_dmg": "(148.4% ATK + 296.8% EM) ×3",
+            "mirror_removal_interval": "4s",
+            "cd": "18s"
+          }
+        ]
+      },
+      {
+        "name": "Particular Field: Fetters of Phenomena",
+        "video": "https://youtu.be/LnwJ2gWdjD0?si=Mnyp3ULTG8h0nuVx",
+        "desc": "If a researcher makes wisdom their goal, then they should be prepared to make an enemy of every word they read. Only then can they avoid bias.",
+        "icon": "https://keqingmains.com/wp-content/uploads/2024/06/Alhaitham-Burst.webp"
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Four-Causal Correction",
+        "phase": "Ascension Phase 1",
+        "desc": "When Alhaitham's Charged or Plunging Attacks hit opponents, they will generate 1 Chisel-Light Mirror. This effect can be triggered once every 12s."
+      },
+      {
+        "name": "Mysteries Laid Bare",
+        "phase": "Ascension Phase 4",
+        "desc": "Each point of Alhaitham's Elemental Mastery will increase the DMG dealt by Projection Attacks and Particular Field: Fetters of Phenomena by 0.1%. The DMG of both aforementioned abilities can be increased by a maximum of 100% this way."
+      },
+      {
+        "name": "Law of Reductive Overdetermination",
+        "phase": "Passive",
+        "desc": "When Alhaitham crafts Weapon Ascension Materials, he has a 10% chance to receive double the product."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Intuition",
+        "phase": "Constellation Lv. 1",
+        "desc": "When a Projection Attack hits an opponent, Universality: An Elaboration on Form's CD is decreased by 1.2s. This effect can be triggered once every 1s."
+      },
+      {
+        "name": "Debate",
+        "phase": "Constellation Lv. 2",
+        "desc": "When Alhaitham generates a Chisel-Light Mirror, his Elemental Mastery will be increased by 50 for 8 seconds, max 4 stacks. Each stack's duration is counted independently. This effect can be triggered even when the maximum number of Chisel-Light Mirrors has been reached."
+      },
+      {
+        "name": "Negation",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the Level of Universality: An Elaboration on Form by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Elucidation",
+        "phase": "Constellation Lv. 4",
+        "desc": "When Particular Field: Fetters of Phenomena is unleashed, the following effects will become active based on the number of Chisel-Light Mirrors consumed and created this time around: Each Mirror consumed will increase the Elemental Mastery of all other nearby party members by 30 for 15s. Each Mirror generated will grant Alhaitham a 10% Dendro DMG Bonus for 15s. The pre-existing duration of the aforementioned effects will be cleared if you use Particular Field: Fetters of Phenomena again while they are in effect."
+      },
+      {
+        "name": "Sagacity",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the Level of Particular Field: Fetters of Phenomena by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Structuration",
+        "phase": "Constellation Lv. 6",
+        "desc": "Alhaitham gains the following effects: 2 seconds after Particular Field: Fetters of Phenomena is unleashed, he will generate 3 Chisel-Light Mirrors regardless of the number of mirrors consumed. If Alhaitham generates Chisel-Light Mirrors when their numbers have already maxed out, his CRIT Rate and CRIT DMG will increase by 10% and 70% respectively for 6s. If this effect is triggered again during its initial duration, the duration remaining will be increased by 6s."
+      }
+    ]
+  },
+  "baizhu": {
+    "displayName": "Baizhu",
+    "img": "images/characters/baizhu.png",
+    "tags": ["Catalyst", "Dendro", "Healer", "Liyue", "Bubu Pharmacy"],
+    "description": "The owner of Bubu Pharmacy, Baizhu is a gentle and knowledgeable doctor from Liyue who specializes in Dendro healing arts.",
+    "weapons": [
+      {
+        "name": "Jadefall's Splendor",
+        "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Prototype Amber",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Everlasting Moonglow",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Healing Bonus"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Deepwood Memories (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Ocean-Hued Clam (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "HP%" },
+      { "type": "Goblet", "value": "HP% / Dendro DMG Bonus" },
+      { "type": "Circlet", "value": "Healing Bonus / HP%" }
+    ],
+    "substats": [
+      "HP%",
+      "Energy Recharge",
+      "Healing Bonus",
+      "Elemental Mastery"
+    ],
+    "talents": [
+      "Normal Attack: The Classics of Acupuncture",
+      "Universal Diagnosis",
+      "Holistic Revivification"
+    ],
+    "info": "Baizhu is a Dendro healer who excels at providing continuous healing and Dendro application for his team.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Jadefall's Splendor",
+          "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+          "note": "HP%"
+        },
+        "artifacts": [
+          {
+            "name": "Deepwood Memories (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Baizhu" },
+        { "name": "Nahida" },
+        { "name": "Nilou" },
+        { "name": "Xingqiu" }
+      ],
+      [
+        { "name": "Baizhu" },
+        { "name": "Alhaitham" },
+        { "name": "Yelan" },
+        { "name": "Kuki Shinobu" }
+      ],
+      [
+        { "name": "Baizhu" },
+        { "name": "Tighnari" },
+        { "name": "Collei" },
+        { "name": "Fischl" }
+      ],
+      [
+        { "name": "Baizhu" },
+        { "name": "Raiden Shogun" },
+        { "name": "Yae Miko" },
+        { "name": "Kokomi" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: The Classics of Acupuncture",
+        "desc": "Performs up to 4 attacks that deal Dendro DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_The_Classics_of_Acupuncture.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 attacks that deal Dendro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to unleash a stronger Dendro attack.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Dendro DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "37.5%",
+            "hit2": "36.2%",
+            "hit3": "45.8%",
+            "hit4": "56.7%",
+            "charged": "48.0% + 48.0%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "40.5%",
+            "hit2": "39.2%",
+            "hit3": "49.8%",
+            "hit4": "61.7%",
+            "charged": "52.0% + 52.0%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Universal Diagnosis",
+        "desc": "Controls a Gossamer Sprite that roams and attacks, healing the active character and dealing Dendro DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Universal_Diagnosis.png",
+        "details_html": "<div class='skill-section'><b>Universal Diagnosis</b><br>Controls a Gossamer Sprite that roams and attacks, healing the active character and dealing Dendro DMG. Healing scales with Baizhu's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "96% HP",
+            "healing": "10.2% HP + 970",
+            "cd": "10s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "103% HP",
+            "healing": "11.0% HP + 1050",
+            "cd": "10s"
+          }
+        ]
+      },
+      {
+        "name": "Holistic Revivification",
+        "desc": "Enters a state where Baizhu creates a Seamless Shield that heals and protects the team, dealing Dendro DMG to nearby enemies.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Holistic_Revivification.png",
+        "details_html": "<div class='skill-section'><b>Holistic Revivification</b><br>Enters a state where Baizhu creates a Seamless Shield that heals and protects the team, dealing Dendro DMG to nearby enemies. Healing and shield strength scale with Baizhu's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "120% HP",
+            "healing": "8.0% HP + 800",
+            "shield": "20% HP",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "128% HP",
+            "healing": "8.6% HP + 880",
+            "shield": "21% HP",
+            "cd": "20s",
+            "energy_cost": "80"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Five Fortunes Forever",
+        "phase": "Ascension Phase 1",
+        "desc": "Baizhu gains different effects depending on the HP of the active character."
+      },
+      {
+        "name": "All Things Are of the Earth",
+        "phase": "Ascension Phase 4",
+        "desc": "After Baizhu uses his Elemental Burst, all party members gain increased Healing Bonus."
+      },
+      {
+        "name": "Herbal Nourishment",
+        "phase": "Passive",
+        "desc": "When Baizhu is in the party, interacting with certain plants will heal the active character."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Attentive Observation",
+        "phase": "Constellation Lv. 1",
+        "desc": "Universal Diagnosis gains 1 additional charge."
+      },
+      {
+        "name": "Incisive Discernment",
+        "phase": "Constellation Lv. 2",
+        "desc": "When Baizhu's Seamless Shield heals, it also increases the target's Dendro RES."
+      },
+      {
+        "name": "Encyclopedic Understanding",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Universal Diagnosis by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Divine Attunement",
+        "phase": "Constellation Lv. 4",
+        "desc": "When a character is healed by Baizhu, they gain increased Elemental Mastery."
+      },
+      {
+        "name": "Transcendent Wisdom",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Holistic Revivification by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Elixir of Immortality",
+        "phase": "Constellation Lv. 6",
+        "desc": "Baizhu's healing effects are increased when the active character's HP is below 50%."
+      }
+    ]
+  },
+
+  "beidou": {
+    "displayName": "Beidou",
+    "img": "images/characters/beidou.png",
+    "tags": ["Claymore", "Electro", "Liyue", "Captain", "4★", "DPS", "Support"],
+    "description": "The Uncrowned Lord of the Ocean, captain of The Crux. Beidou is a powerful Electro claymore user who excels at counterattacks and AoE damage.",
+    "weapons": [
+      {
+        "name": "Wolf's Gravestone",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "ATK%"
+      },
+      {
+        "name": "Serpent Spine",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Lithic Blade",
+        "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+        "note": "ATK%"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Emblem of Severed Fate (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Noblesse Oblige (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "ATK% / Energy Recharge" },
+      { "type": "Goblet", "value": "Electro DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+    "talents": ["Normal Attack: Oceanborne", "Tidecaller", "Stormbreaker"],
+    "info": "Beidou is a versatile Electro DPS/support who excels in counterattacks and provides strong AoE Electro DMG with her Burst.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Wolf's Gravestone",
+          "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+          "note": "ATK%"
+        },
+        "artifacts": [
+          {
+            "name": "Emblem of Severed Fate (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Beidou" },
+        { "name": "Fischl" },
+        { "name": "Xingqiu" },
+        { "name": "Bennett" }
+      ],
+      [
+        { "name": "Beidou" },
+        { "name": "Raiden Shogun" },
+        { "name": "Xiangling" },
+        { "name": "Bennett" }
+      ],
+      [
+        { "name": "Beidou" },
+        { "name": "Kazuha" },
+        { "name": "Xingqiu" },
+        { "name": "Rosaria" }
+      ],
+      [
+        { "name": "Beidou" },
+        { "name": "Yelan" },
+        { "name": "Fischl" },
+        { "name": "Barbara" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Oceanborne",
+        "desc": "Performs up to 5 consecutive strikes with a claymore.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Oceanborne.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive strikes with a claymore.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous slashes. At the end, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "37.1%",
+            "hit2": "38.2%",
+            "hit3": "47.6%",
+            "hit4": "50.1%",
+            "hit5": "60.2%",
+            "charged": "56.2% + 56.2%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "40.1%",
+            "hit2": "41.2%",
+            "hit3": "51.6%",
+            "hit4": "54.1%",
+            "hit5": "65.2%",
+            "charged": "61.2% + 61.2%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Tidecaller",
+        "desc": "Press: Swings her blade forward, dealing Electro DMG. Hold: Lifts her weapon as a shield. DMG absorbed scales with Beidou's Max HP. Releases the energy as a counterattack, dealing massive Electro DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Tidecaller.png",
+        "details_html": "<div class='skill-section'><b>Tidecaller</b><br>Press: Swings her blade forward, dealing Electro DMG.<br>Hold: Lifts her weapon as a shield. DMG absorbed scales with Max HP. Releases the energy as a counterattack, dealing massive Electro DMG.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "press_dmg": "122% ATK",
+            "hold_dmg": "137% ATK",
+            "max_dmg": "246% ATK",
+            "cd": "7.5s"
+          },
+          {
+            "level": 2,
+            "press_dmg": "131% ATK",
+            "hold_dmg": "147% ATK",
+            "max_dmg": "264% ATK",
+            "cd": "7.5s"
+          }
+        ]
+      },
+      {
+        "name": "Stormbreaker",
+        "desc": "Summons a Thunderbeast's Targe, surrounding Beidou with a lightning shield that deals Electro DMG to nearby enemies and increases resistance to interruption.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Stormbreaker.png",
+        "details_html": "<div class='skill-section'><b>Stormbreaker</b><br>Summons a Thunderbeast's Targe, surrounding Beidou with a lightning shield that deals Electro DMG to nearby enemies and increases resistance to interruption. Attacks under this effect will chain lightning between enemies.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "121% ATK",
+            "chain_dmg": "96% ATK",
+            "duration": "15s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "130% ATK",
+            "chain_dmg": "104% ATK",
+            "duration": "15s",
+            "cd": "20s",
+            "energy_cost": "80"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Retribution",
+        "phase": "Ascension Phase 1",
+        "desc": "Counterattacking with Tidecaller at the precise moment grants maximum DMG bonus."
+      },
+      {
+        "name": "Lightning Storm",
+        "phase": "Ascension Phase 4",
+        "desc": "After using Tidecaller with maximum stacks, Beidou's ATK SPD is increased by 15% for 10s."
+      },
+      {
+        "name": "Conqueror of Tides",
+        "phase": "Passive",
+        "desc": "Decreases swimming stamina consumption for your own party members by 20%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Sea Beast's Scourge",
+        "phase": "Constellation Lv. 1",
+        "desc": "Stormbreaker creates a shield that absorbs up to 16% of Beidou's Max HP for 15s."
+      },
+      {
+        "name": "Upon the Turbulent Sea, the Thunder Arises",
+        "phase": "Constellation Lv. 2",
+        "desc": "Stormbreaker's arc lightning can jump to 2 additional targets."
+      },
+      {
+        "name": "Summoner of Storm",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Tidecaller by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Stunning Revenge",
+        "phase": "Constellation Lv. 4",
+        "desc": "Upon being attacked, Beidou's ATK is increased by 30% for 10s."
+      },
+      {
+        "name": "Crimson Tidewalker",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Stormbreaker by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Bane of Evil",
+        "phase": "Constellation Lv. 6",
+        "desc": "During the duration of Stormbreaker, the Electro RES of surrounding enemies is decreased by 15%."
+      }
+    ]
+  },
+  "bennett": {
+    "displayName": "Bennett",
+    "img": "images/characters/bennett.png",
+    "tags": ["Sword", "Pyro", "Mondstadt", "Support", "4★", "Healer", "Buffer"],
+    "description": "A passionate adventurer from Mondstadt and the leader of \"Benny's Adventure Team\". Bennett is a top-tier support and healer who boosts his team's ATK and provides strong healing.",
+    "weapons": [
+      {
+        "name": "Aquila Favonia",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "ATK%"
+      },
+      {
+        "name": "Skyward Blade",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "Festering Desire",
+        "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+        "note": "Energy Recharge"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Noblesse Oblige (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Emblem of Severed Fate (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "Energy Recharge / HP%" },
+      { "type": "Goblet", "value": "HP% / Pyro DMG Bonus" },
+      { "type": "Circlet", "value": "Healing Bonus / HP%" }
+    ],
+    "substats": ["Energy Recharge", "HP%", "Healing Bonus", "ATK%"],
+    "talents": [
+      "Normal Attack: Strike of Fortune",
+      "Passion Overload",
+      "Fantastic Voyage"
+    ],
+    "info": "Bennett is a premier support who provides massive ATK buffs and healing with his Elemental Burst. Build him for Energy Recharge and HP% to maximize his support potential.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Skyward Blade",
+          "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+          "note": "Energy Recharge"
+        },
+        "artifacts": [
+          {
+            "name": "Noblesse Oblige (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Bennett" },
+        { "name": "Xiangling" },
+        { "name": "Xingqiu" },
+        { "name": "Chongyun" }
+      ],
+      [
+        { "name": "Bennett" },
+        { "name": "Kazuha" },
+        { "name": "Hu Tao" },
+        { "name": "Zhongli" }
+      ],
+      [
+        { "name": "Bennett" },
+        { "name": "Raiden Shogun" },
+        { "name": "Sara" },
+        { "name": "Jean" }
+      ],
+      [
+        { "name": "Bennett" },
+        { "name": "Diluc" },
+        { "name": "Fischl" },
+        { "name": "Sucrose" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Strike of Fortune",
+        "desc": "Performs up to 5 rapid strikes with a sword.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Strike_of_Fortune.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid strikes with a sword.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "44.5%",
+            "hit2": "42.6%",
+            "hit3": "56.2%",
+            "hit4": "59.2%",
+            "hit5": "71.0%",
+            "charged": "55.9% + 55.9%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "48.1%",
+            "hit2": "46.1%",
+            "hit3": "60.8%",
+            "hit4": "64.0%",
+            "hit5": "76.8%",
+            "charged": "60.5% + 60.5%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Passion Overload",
+        "desc": "Bennett strikes with a sword imbued with Pyro. Press: Swift single strike. Hold: Charges up for up to 2 additional strikes, each dealing increased Pyro DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Passion_Overload.png",
+        "details_html": "<div class='skill-section'><b>Passion Overload</b><br>Press: Swift single Pyro strike.<br>Hold: Charges up for up to 2 additional strikes, each dealing increased Pyro DMG. Overcharged attack causes an explosion, launching both Bennett and enemies.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "press_dmg": "137% ATK",
+            "level1_dmg": "124% ATK",
+            "level2_dmg": "189% ATK",
+            "overcharged": "253% ATK",
+            "cd": "5s"
+          },
+          {
+            "level": 2,
+            "press_dmg": "147% ATK",
+            "level1_dmg": "133% ATK",
+            "level2_dmg": "203% ATK",
+            "overcharged": "272% ATK",
+            "cd": "5s"
+          }
+        ]
+      },
+      {
+        "name": "Fantastic Voyage",
+        "desc": "Bennett performs a jumping attack that deals Pyro DMG and creates an Inspiration Field. If the health of a character within the AoE is equal to or falls below 70%, their HP will continuously regenerate. If their health is higher than 70%, they gain an ATK Bonus based on Bennett's Base ATK.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Fantastic_Voyage.png",
+        "details_html": "<div class='skill-section'><b>Fantastic Voyage</b><br>Performs a jumping Pyro attack, creating an Inspiration Field. Characters inside are healed if below 70% HP, or gain an ATK Bonus if above 70%. Healing and ATK Bonus scale with Bennett's stats.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "233% ATK",
+            "healing": "12% HP + 1230",
+            "atk_bonus": "56% Base ATK",
+            "duration": "12s",
+            "cd": "15s",
+            "energy_cost": "60"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "250% ATK",
+            "healing": "13% HP + 1350",
+            "atk_bonus": "60% Base ATK",
+            "duration": "12s",
+            "cd": "15s",
+            "energy_cost": "60"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Rekindle",
+        "phase": "Ascension Phase 1",
+        "desc": "Decreases Passion Overload's cooldown by 20%."
+      },
+      {
+        "name": "Fearnaught",
+        "phase": "Ascension Phase 4",
+        "desc": "Within the Inspiration Field created by Fantastic Voyage, Passion Overload does not cause Bennett to be launched and its cooldown is decreased by 50%."
+      },
+      {
+        "name": "It Should Be Safe...",
+        "phase": "Passive",
+        "desc": "When dispatched on an expedition in Mondstadt, time consumed is reduced by 25%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Grand Expectation",
+        "phase": "Constellation Lv. 1",
+        "desc": "Fantastic Voyage's ATK increase no longer has an HP restriction, and gains an additional 20% of Bennett's Base ATK."
+      },
+      {
+        "name": "Impasse Conqueror",
+        "phase": "Constellation Lv. 2",
+        "desc": "When Bennett's HP falls below 70%, his Energy Recharge is increased by 30%."
+      },
+      {
+        "name": "Unstoppable Fervor",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Passion Overload by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Unexpected Odyssey",
+        "phase": "Constellation Lv. 4",
+        "desc": "Using a Normal Attack when executing the second attack of Passion Overload's Charge Level 1 allows an additional attack to be performed."
+      },
+      {
+        "name": "True Explorer",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Fantastic Voyage by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Fire Ventures with Me",
+        "phase": "Constellation Lv. 6",
+        "desc": "Sword, Claymore, or Polearm-wielding characters inside Fantastic Voyage's Inspiration Field gain 15% Pyro DMG Bonus and their weapons are infused with Pyro."
+      }
+    ]
+  },
+  "candace": {
+    "displayName": "Candace",
+    "img": "images/characters/candace.png",
+    "tags": [
+      "Polearm",
+      "Hydro",
+      "Sumeru",
+      "Support",
+      "4★",
+      "Buffer",
+      "Shielder"
+    ],
+    "description": "The guardian of Aaru Village, Candace is a Hydro polearm user who provides shields and buffs to her team.",
+    "weapons": [
+      {
+        "name": "Staff of Homa",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Favonius Lance",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "Black Tassel",
+        "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+        "note": "HP%"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Noblesse Oblige (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Emblem of Severed Fate (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "HP% / Energy Recharge" },
+      { "type": "Goblet", "value": "HP% / Hydro DMG Bonus" },
+      { "type": "Circlet", "value": "HP% / Healing Bonus" }
+    ],
+    "substats": ["HP%", "Energy Recharge", "ATK%", "CRIT Rate"],
+    "talents": [
+      "Normal Attack: Gleaming Spear - Guardian Stance",
+      "Sacred Rite: Heron's Sanctum",
+      "Sacred Rite: Wagtail's Tide"
+    ],
+    "info": "Candace is a support who provides Hydro application, shields, and buffs to Normal Attacks of her team. Build her for HP% and Energy Recharge.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Favonius Lance",
+          "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+          "note": "Energy Recharge"
+        },
+        "artifacts": [
+          {
+            "name": "Noblesse Oblige (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Candace" },
+        { "name": "Nilou" },
+        { "name": "Nahida" },
+        { "name": "Barbara" }
+      ],
+      [
+        { "name": "Candace" },
+        { "name": "Xingqiu" },
+        { "name": "Yelan" },
+        { "name": "Kuki Shinobu" }
+      ],
+      [
+        { "name": "Candace" },
+        { "name": "Ayato" },
+        { "name": "Kokomi" },
+        { "name": "Dendro Traveler" }
+      ],
+      [
+        { "name": "Candace" },
+        { "name": "Tighnari" },
+        { "name": "Collei" },
+        { "name": "Fischl" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Gleaming Spear - Guardian Stance",
+        "desc": "Performs up to 4 consecutive spear strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Gleaming_Spear_Guardian_Stance.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "44.5%",
+            "hit2": "42.6%",
+            "hit3": "56.2%",
+            "hit4": "71.0%",
+            "charged": "110%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "48.1%",
+            "hit2": "46.1%",
+            "hit3": "60.8%",
+            "hit4": "76.8%",
+            "charged": "120%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Sacred Rite: Heron's Sanctum",
+        "desc": "Candace raises her shield, creating a barrier that absorbs damage based on her Max HP and deals Hydro DMG when released.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Sacred_Rite_Herons_Sanctum.png",
+        "details_html": "<div class='skill-section'><b>Sacred Rite: Heron's Sanctum</b><br>Raises a shield that absorbs damage based on Max HP. When released, deals Hydro DMG to nearby opponents.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "shield": "12% HP",
+            "skill_dmg": "160% HP",
+            "cd": "9s"
+          },
+          { "level": 2, "shield": "13% HP", "skill_dmg": "172% HP", "cd": "9s" }
+        ]
+      },
+      {
+        "name": "Sacred Rite: Wagtail's Tide",
+        "desc": "Candace unleashes a wave of Hydro energy, dealing AoE Hydro DMG and granting the Prayer of the Crimson Crown buff to all nearby characters.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Sacred_Rite_Wagtails_Tide.png",
+        "details_html": "<div class='skill-section'><b>Sacred Rite: Wagtail's Tide</b><br>Unleashes a wave of Hydro energy, dealing AoE Hydro DMG and granting the Prayer of the Crimson Crown buff, which increases Normal Attack DMG and infuses attacks with Hydro.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "180% HP",
+            "buff": "20% NA DMG",
+            "duration": "9s",
+            "cd": "15s",
+            "energy_cost": "60"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "194% HP",
+            "buff": "22% NA DMG",
+            "duration": "9s",
+            "cd": "15s",
+            "energy_cost": "60"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "To Dawn's First Light",
+        "phase": "Ascension Phase 1",
+        "desc": "Decreases climbing stamina consumption for your own party members by 20%."
+      },
+      {
+        "name": "Aegis of Crossed Arrows",
+        "phase": "Ascension Phase 4",
+        "desc": "Characters affected by Prayer of the Crimson Crown deal increased Elemental DMG."
+      },
+      {
+        "name": "Celestial Dome of Sand",
+        "phase": "Passive",
+        "desc": "Increases the resistance of all party members to interruption while protected by a shield."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Returning Heiress of the Scarlet Sands",
+        "phase": "Constellation Lv. 1",
+        "desc": "The duration of Prayer of the Crimson Crown is increased by 3s."
+      },
+      {
+        "name": "Moon-Piercing Brilliance",
+        "phase": "Constellation Lv. 2",
+        "desc": "When characters protected by Candace's shield take damage, they gain increased Energy Recharge."
+      },
+      {
+        "name": "Hunter's Supplication",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Sacred Rite: Heron's Sanctum by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Sentinel Oath",
+        "phase": "Constellation Lv. 4",
+        "desc": "Characters affected by Prayer of the Crimson Crown gain increased Hydro DMG Bonus."
+      },
+      {
+        "name": "Hallowed Gold of the Desert",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Sacred Rite: Wagtail's Tide by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "The Overflow",
+        "phase": "Constellation Lv. 6",
+        "desc": "When a character affected by Prayer of the Crimson Crown triggers an Elemental Reaction, they gain increased ATK for 8s."
+      }
+    ]
+  },
+  "charlotte": {
+    "displayName": "Charlotte",
+    "img": "images/characters/charlotte.png",
+    "tags": [
+      "Catalyst",
+      "Cryo",
+      "Fontaine",
+      "Support",
+      "4★",
+      "Healer",
+      "Buffer"
+    ],
+    "description": "A renowned reporter from Fontaine, Charlotte is a Cryo catalyst user who excels at healing and providing buffs to her team.",
+    "weapons": [
+      {
+        "name": "Prototype Amber",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Favonius Codex",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "Thrilling Tales of Dragon Slayers",
+        "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+        "note": "HP%"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Ocean-Hued Clam (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Maiden Beloved (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "HP% / Energy Recharge" },
+      { "type": "Goblet", "value": "HP% / Cryo DMG Bonus" },
+      { "type": "Circlet", "value": "Healing Bonus / HP%" }
+    ],
+    "substats": ["HP%", "Energy Recharge", "Healing Bonus", "ATK%"],
+    "talents": [
+      "Normal Attack: Press Release",
+      "Frostprint Snapshot",
+      "Exclusive Interview"
+    ],
+    "info": "Charlotte is a Cryo support and healer who provides strong healing and buffs. Build her for HP% and Energy Recharge.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Prototype Amber",
+          "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+          "note": "HP%"
+        },
+        "artifacts": [
+          {
+            "name": "Ocean-Hued Clam (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Charlotte" },
+        { "name": "Neuvillette" },
+        { "name": "Furina" },
+        { "name": "Kokomi" }
+      ],
+      [
+        { "name": "Charlotte" },
+        { "name": "Ayaka" },
+        { "name": "Shenhe" },
+        { "name": "Kazuha" }
+      ],
+      [
+        { "name": "Charlotte" },
+        { "name": "Ganyu" },
+        { "name": "Mona" },
+        { "name": "Diona" }
+      ],
+      [
+        { "name": "Charlotte" },
+        { "name": "Bennett" },
+        { "name": "Xiangling" },
+        { "name": "Sucrose" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Press Release",
+        "desc": "Performs up to 4 consecutive shots with her camera, dealing Cryo DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Press_Release.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive shots with her camera, dealing Cryo DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a focused Cryo shot.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Cryo DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "38.5%",
+            "hit2": "36.2%",
+            "hit3": "45.8%",
+            "hit4": "56.7%",
+            "charged": "48.0% + 48.0%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "41.5%",
+            "hit2": "39.2%",
+            "hit3": "49.8%",
+            "hit4": "61.7%",
+            "charged": "52.0% + 52.0%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Frostprint Snapshot",
+        "desc": "Charlotte takes a snapshot, healing all nearby allies and dealing AoE Cryo DMG to enemies.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Frostprint_Snapshot.png",
+        "details_html": "<div class='skill-section'><b>Frostprint Snapshot</b><br>Takes a snapshot, healing all nearby allies and dealing AoE Cryo DMG. Healing scales with Charlotte's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "120% HP",
+            "healing": "10.2% HP + 970",
+            "cd": "12s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "130% HP",
+            "healing": "11.0% HP + 1050",
+            "cd": "12s"
+          }
+        ]
+      },
+      {
+        "name": "Exclusive Interview",
+        "desc": "Charlotte conducts an exclusive interview, creating a field that continuously heals allies and deals Cryo DMG to enemies inside.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Exclusive_Interview.png",
+        "details_html": "<div class='skill-section'><b>Exclusive Interview</b><br>Creates a field that continuously heals allies and deals Cryo DMG to enemies inside. Healing scales with Charlotte's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "180% HP",
+            "healing": "8.0% HP + 800",
+            "duration": "12s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "194% HP",
+            "healing": "8.6% HP + 880",
+            "duration": "12s",
+            "cd": "20s",
+            "energy_cost": "80"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Quick Shutter",
+        "phase": "Ascension Phase 1",
+        "desc": "After using Frostprint Snapshot, Charlotte's healing effectiveness is increased by 20% for 10s."
+      },
+      {
+        "name": "Photo Finish",
+        "phase": "Ascension Phase 4",
+        "desc": "Allies inside Exclusive Interview's field gain increased CRIT Rate."
+      },
+      {
+        "name": "Fontaine's Finest",
+        "phase": "Passive",
+        "desc": "When Charlotte is in the party, the chance to obtain double food from cooking is increased by 12%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Front Page Scoop",
+        "phase": "Constellation Lv. 1",
+        "desc": "Frostprint Snapshot gains 1 additional charge."
+      },
+      {
+        "name": "Breaking News",
+        "phase": "Constellation Lv. 2",
+        "desc": "Allies healed by Charlotte gain increased Elemental Mastery for 8s."
+      },
+      {
+        "name": "Headline Maker",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Frostprint Snapshot by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Exclusive Access",
+        "phase": "Constellation Lv. 4",
+        "desc": "Allies inside Exclusive Interview's field gain increased Healing Bonus."
+      },
+      {
+        "name": "Prime Time",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Exclusive Interview by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Pulitzer Dream",
+        "phase": "Constellation Lv. 6",
+        "desc": "When an ally is healed by Charlotte, they gain increased ATK for 8s."
+      }
+    ]
+  },
+  "chasca": {
+    "displayName": "Chasca",
+    "img": "images/characters/chasca.png",
+    "tags": ["Bow", "Anemo", "Natlan", "Support", "4★", "Buffer", "Swirl"],
+    "description": "A swift and clever archer from Natlan, Chasca uses Anemo powers to control the battlefield and support her allies.",
+    "weapons": [
+      {
+        "name": "Staff of Homa",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Favonius Lance",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "Black Tassel",
+        "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+        "note": "HP%"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Noblesse Oblige (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Emblem of Severed Fate (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "HP% / Energy Recharge" },
+      { "type": "Goblet", "value": "HP% / Hydro DMG Bonus" },
+      { "type": "Circlet", "value": "HP% / Healing Bonus" }
+    ],
+    "substats": ["HP%", "Energy Recharge", "ATK%", "CRIT Rate"],
+    "talents": [
+      "Normal Attack: Gleaming Spear - Guardian Stance",
+      "Sacred Rite: Heron's Sanctum",
+      "Sacred Rite: Wagtail's Tide"
+    ],
+    "info": "Candace is a support who provides Hydro application, shields, and buffs to Normal Attacks of her team. Build her for HP% and Energy Recharge.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Favonius Lance",
+          "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+          "note": "Energy Recharge"
+        },
+        "artifacts": [
+          {
+            "name": "Noblesse Oblige (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Candace" },
+        { "name": "Nilou" },
+        { "name": "Nahida" },
+        { "name": "Barbara" }
+      ],
+      [
+        { "name": "Candace" },
+        { "name": "Xingqiu" },
+        { "name": "Yelan" },
+        { "name": "Kuki Shinobu" }
+      ],
+      [
+        { "name": "Candace" },
+        { "name": "Ayato" },
+        { "name": "Kokomi" },
+        { "name": "Dendro Traveler" }
+      ],
+      [
+        { "name": "Candace" },
+        { "name": "Tighnari" },
+        { "name": "Collei" },
+        { "name": "Fischl" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Gleaming Spear - Guardian Stance",
+        "desc": "Performs up to 4 consecutive spear strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Gleaming_Spear_Guardian_Stance.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "44.5%",
+            "hit2": "42.6%",
+            "hit3": "56.2%",
+            "hit4": "71.0%",
+            "charged": "110%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "48.1%",
+            "hit2": "46.1%",
+            "hit3": "60.8%",
+            "hit4": "76.8%",
+            "charged": "120%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Sacred Rite: Heron's Sanctum",
+        "desc": "Candace raises her shield, creating a barrier that absorbs damage based on her Max HP and deals Hydro DMG when released.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Sacred_Rite_Herons_Sanctum.png",
+        "details_html": "<div class='skill-section'><b>Sacred Rite: Heron's Sanctum</b><br>Raises a shield that absorbs damage based on Max HP. When released, deals Hydro DMG to nearby opponents.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "shield": "12% HP",
+            "skill_dmg": "160% HP",
+            "cd": "9s"
+          },
+          { "level": 2, "shield": "13% HP", "skill_dmg": "172% HP", "cd": "9s" }
+        ]
+      },
+      {
+        "name": "Sacred Rite: Wagtail's Tide",
+        "desc": "Candace unleashes a wave of Hydro energy, dealing AoE Hydro DMG and granting the Prayer of the Crimson Crown buff to all nearby characters.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Sacred_Rite_Wagtails_Tide.png",
+        "details_html": "<div class='skill-section'><b>Sacred Rite: Wagtail's Tide</b><br>Unleashes a wave of Hydro energy, dealing AoE Hydro DMG and granting the Prayer of the Crimson Crown buff, which increases Normal Attack DMG and infuses attacks with Hydro.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "180% HP",
+            "buff": "20% NA DMG",
+            "duration": "9s",
+            "cd": "15s",
+            "energy_cost": "60"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "194% HP",
+            "buff": "22% NA DMG",
+            "duration": "9s",
+            "cd": "15s",
+            "energy_cost": "60"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "To Dawn's First Light",
+        "phase": "Ascension Phase 1",
+        "desc": "Decreases climbing stamina consumption for your own party members by 20%."
+      },
+      {
+        "name": "Aegis of Crossed Arrows",
+        "phase": "Ascension Phase 4",
+        "desc": "Characters affected by Prayer of the Crimson Crown deal increased Elemental DMG."
+      },
+      {
+        "name": "Celestial Dome of Sand",
+        "phase": "Passive",
+        "desc": "Increases the resistance of all party members to interruption while protected by a shield."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Returning Heiress of the Scarlet Sands",
+        "phase": "Constellation Lv. 1",
+        "desc": "The duration of Prayer of the Crimson Crown is increased by 3s."
+      },
+      {
+        "name": "Moon-Piercing Brilliance",
+        "phase": "Constellation Lv. 2",
+        "desc": "When characters protected by Candace's shield take damage, they gain increased Energy Recharge."
+      },
+      {
+        "name": "Hunter's Supplication",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Sacred Rite: Heron's Sanctum by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Sentinel Oath",
+        "phase": "Constellation Lv. 4",
+        "desc": "Characters affected by Prayer of the Crimson Crown gain increased Hydro DMG Bonus."
+      },
+      {
+        "name": "Hallowed Gold of the Desert",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Sacred Rite: Wagtail's Tide by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "The Overflow",
+        "phase": "Constellation Lv. 6",
+        "desc": "When a character affected by Prayer of the Crimson Crown triggers an Elemental Reaction, they gain increased ATK for 8s."
+      }
+    ]
+  },
+  "chiori": {
+    "displayName": "Chiori",
+    "img": "images/characters/chiori.png",
+    "tags": ["Sword", "Geo", "Fontaine", "DPS", "4★", "Sub-DPS", "Fashionista"],
+    "description": "A renowned fashion designer from Fontaine, Chiori uses Geo powers and her sword to create stylish attacks and support her allies.",
+    "weapons": [
+      {
+        "name": "Primordial Jade Cutter",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "The Black Sword",
+        "img": "https://img.game8.co/3314420/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Harbinger of Dawn",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "CRIT DMG"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Husk of Opulent Dreams (4)",
+        "img": "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+      },
+      {
+        "name": "Archaic Petra (4)",
+        "img": "https://img.game8.co/3314253/4eb3b6c1c375a92a7f80ad1376dc6a0d.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "DEF% / ATK%" },
+      { "type": "Goblet", "value": "Geo DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ATK%"],
+    "talents": [
+      "Normal Attack: Couture Slash",
+      "Seamstress's Artistry",
+      "Runway Finale"
+    ],
+    "info": "Chiori is a Geo DPS/sub-DPS who excels at dealing consistent Geo DMG and supporting her team with stylish skills. Build her for DEF%, CRIT, and Geo DMG Bonus.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Primordial Jade Cutter",
+          "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+          "note": "CRIT Rate"
+        },
+        "artifacts": [
+          {
+            "name": "Husk of Opulent Dreams (4)",
+            "img": "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Chiori" },
+        { "name": "Noelle" },
+        { "name": "Albedo" },
+        { "name": "Zhongli" }
+      ],
+      [
+        { "name": "Chiori" },
+        { "name": "Itto" },
+        { "name": "Gorou" },
+        { "name": "Yunjin" }
+      ],
+      [
+        { "name": "Chiori" },
+        { "name": "Ningguang" },
+        { "name": "Fischl" },
+        { "name": "Bennett" }
+      ],
+      [
+        { "name": "Chiori" },
+        { "name": "Barbara" },
+        { "name": "Xingqiu" },
+        { "name": "Sucrose" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Couture Slash",
+        "desc": "Performs up to 5 rapid sword strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Couture_Slash.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid sword strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "44.5%",
+            "hit2": "42.6%",
+            "hit3": "56.2%",
+            "hit4": "59.2%",
+            "hit5": "71.0%",
+            "charged": "55.9% + 55.9%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "48.1%",
+            "hit2": "46.1%",
+            "hit3": "60.8%",
+            "hit4": "64.0%",
+            "hit5": "76.8%",
+            "charged": "60.5% + 60.5%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Seamstress's Artistry",
+        "desc": "Chiori creates a Geo construct that deals AoE Geo DMG and increases DEF for all allies inside its field.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Seamstress_Artistry.png",
+        "details_html": "<div class='skill-section'><b>Seamstress's Artistry</b><br>Creates a Geo construct that deals AoE Geo DMG and increases DEF for all allies inside its field. DMG and bonus scale with Chiori's DEF.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "180% DEF",
+            "def_bonus": "20%",
+            "cd": "10s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "194% DEF",
+            "def_bonus": "22%",
+            "cd": "10s"
+          }
+        ]
+      },
+      {
+        "name": "Runway Finale",
+        "desc": "Chiori unleashes a stylish Geo attack, dealing massive AoE Geo DMG and granting all allies increased CRIT Rate.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Runway_Finale.png",
+        "details_html": "<div class='skill-section'><b>Runway Finale</b><br>Unleashes a stylish Geo attack, dealing massive AoE Geo DMG and granting all allies increased CRIT Rate. Bonus scales with Chiori's DEF.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "220% DEF",
+            "crit_bonus": "15%",
+            "duration": "12s",
+            "cd": "20s",
+            "energy_cost": "60"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "238% DEF",
+            "crit_bonus": "17%",
+            "duration": "12s",
+            "cd": "20s",
+            "energy_cost": "60"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Fashion Forward",
+        "phase": "Ascension Phase 1",
+        "desc": "After using Seamstress's Artistry, Chiori's DEF is increased by 20% for 10s."
+      },
+      {
+        "name": "Geo Couture",
+        "phase": "Ascension Phase 4",
+        "desc": "Allies inside Runway Finale's field gain increased Geo DMG Bonus."
+      },
+      {
+        "name": "Fontaine's Elegance",
+        "phase": "Passive",
+        "desc": "When Chiori is in the party, crafting weapon ascension materials has a 10% chance to refund a portion of the materials used."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "First Stitch",
+        "phase": "Constellation Lv. 1",
+        "desc": "Seamstress's Artistry gains 1 additional charge."
+      },
+      {
+        "name": "Pattern Perfection",
+        "phase": "Constellation Lv. 2",
+        "desc": "Allies inside Seamstress's Artistry field gain increased ATK."
+      },
+      {
+        "name": "Runway Ready",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Seamstress's Artistry by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Fashion Icon",
+        "phase": "Constellation Lv. 4",
+        "desc": "Allies inside Runway Finale's field gain increased CRIT DMG."
+      },
+      {
+        "name": "Couture Master",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Runway Finale by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Grand Finale",
+        "phase": "Constellation Lv. 6",
+        "desc": "When an ally inside Runway Finale's field scores a CRIT Hit, they gain increased DEF for 8s."
+      }
+    ]
+  },
+  "chongyun": {
+    "displayName": "Chongyun",
+    "img": "images/characters/chongyun.png",
+    "tags": ["Claymore", "Cryo", "Liyue", "Exorcist", "4★", "DPS", "Support"],
+    "description": "A young exorcist from Liyue, Chongyun uses his Cryo vision to purify evil spirits and support his allies with powerful AoE Cryo attacks.",
+    "weapons": [
+      {
+        "name": "Wolf's Gravestone",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "ATK%"
+      },
+      {
+        "name": "Serpent Spine",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Sacrificial Greatsword",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "Energy Recharge"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Noblesse Oblige (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Emblem of Severed Fate (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      },
+      {
+        "name": "Blizzard Strayer (4)",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "ATK% / Energy Recharge" },
+      { "type": "Goblet", "value": "Cryo DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+    "talents": [
+      "Normal Attack: Demonbane",
+      "Spirit Blade: Chonghua's Layered Frost",
+      "Spirit Blade: Cloud-Parting Star"
+    ],
+    "info": "Chongyun is a Cryo claymore user who excels at AoE Cryo application and can serve as both a main DPS and a support for enabling Melt and Freeze reactions.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Wolf's Gravestone",
+          "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+          "note": "ATK%"
+        },
+        "artifacts": [
+          {
+            "name": "Noblesse Oblige (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Chongyun" },
+        { "name": "Xingqiu" },
+        { "name": "Bennett" },
+        { "name": "Sucrose" }
+      ],
+      [
+        { "name": "Chongyun" },
+        { "name": "Xiangling" },
+        { "name": "Rosaria" },
+        { "name": "Diona" }
+      ],
+      [
+        { "name": "Chongyun" },
+        { "name": "Kaeya" },
+        { "name": "Barbara" },
+        { "name": "Fischl" }
+      ],
+      [
+        { "name": "Chongyun" },
+        { "name": "Ganyu" },
+        { "name": "Mona" },
+        { "name": "Venti" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Demonbane",
+        "desc": "Performs up to 4 consecutive claymore strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Demonbane.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks against all nearby opponents. At the end of the sequence, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "70.0%",
+            "hit2": "63.1%",
+            "hit3": "80.3%",
+            "hit4": "101.5%",
+            "charged": "60.7% + 74.6%",
+            "plunge": "74.6%",
+            "lowhigh": "149.1% / 186.3%"
+          },
+          {
+            "level": 2,
+            "hit1": "75.6%",
+            "hit2": "68.1%",
+            "hit3": "86.7%",
+            "hit4": "109.6%",
+            "charged": "65.5% + 80.5%",
+            "plunge": "80.5%",
+            "lowhigh": "160.9% / 201.1%"
+          }
+        ]
+      },
+      {
+        "name": "Spirit Blade: Chonghua's Layered Frost",
+        "desc": "Chongyun strikes the ground with his claymore, causing a Cryo explosion in a circular AoE and creating a Chonghua Frost Field that converts sword, claymore, and polearm attacks to Cryo DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Spirit_Blade_Chonghua's_Layered_Frost.png",
+        "details_html": "<div class='skill-section'><b>Chonghua's Layered Frost</b><br>Strikes the ground, causing a Cryo explosion in a circular AoE and creating a Frost Field. Sword, claymore, and polearm-wielding characters within the field will have their attacks converted to Cryo DMG.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "172% ATK",
+            "field_duration": "10s",
+            "cd": "15s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "185% ATK",
+            "field_duration": "10s",
+            "cd": "15s"
+          }
+        ]
+      },
+      {
+        "name": "Spirit Blade: Cloud-Parting Star",
+        "desc": "Chongyun summons 3 giant spirit blades in mid-air that fall one by one after a short delay, dealing AoE Cryo DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Spirit_Blade_Cloud-Parting_Star.png",
+        "details_html": "<div class='skill-section'><b>Cloud-Parting Star</b><br>Summons 3 giant spirit blades in mid-air that fall one by one after a short delay, dealing AoE Cryo DMG to all enemies in their path.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "blade_dmg": "142% ATK × 3",
+            "cd": "12s",
+            "energy_cost": "40"
+          },
+          {
+            "level": 2,
+            "blade_dmg": "153% ATK × 3",
+            "cd": "12s",
+            "energy_cost": "40"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Steady Breathing",
+        "phase": "Ascension Phase 1",
+        "desc": "Sword, claymore, or polearm-wielding characters within the field created by Chonghua's Layered Frost have their Normal ATK SPD increased by 8%."
+      },
+      {
+        "name": "Rimechaser Blade",
+        "phase": "Ascension Phase 4",
+        "desc": "When the field created by Chonghua's Layered Frost disappears, another spirit blade will be summoned to strike nearby opponents, dealing AoE Cryo DMG."
+      },
+      {
+        "name": "Gallant Journey",
+        "phase": "Passive",
+        "desc": "When dispatched on an expedition in Liyue, time consumed is reduced by 25%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Ice Unleashed",
+        "phase": "Constellation Lv. 1",
+        "desc": "The last attack of Chongyun's Normal Attack combo releases 3 ice blades, each dealing 50% of Chongyun's ATK as Cryo DMG to all enemies in their path."
+      },
+      {
+        "name": "Atmospheric Revolution",
+        "phase": "Constellation Lv. 2",
+        "desc": "Elemental Skills and Elemental Bursts cast within the Frost Field created by Chonghua's Layered Frost have their CD time decreased by 15%."
+      },
+      {
+        "name": "Cloudburst",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Spirit Blade: Cloud-Parting Star by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Frozen Skies",
+        "phase": "Constellation Lv. 4",
+        "desc": "Chongyun regenerates 1 Energy every time he hits an enemy affected by Cryo. This effect can only occur once every 2s."
+      },
+      {
+        "name": "The True Path",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Spirit Blade: Chonghua's Layered Frost by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Rally of Four Blades",
+        "phase": "Constellation Lv. 6",
+        "desc": "Spirit Blade: Cloud-Parting Star deals 15% more DMG to enemies with less than 50% HP."
+      }
+    ]
+  },
+  "citlali": {
+    "displayName": "Citlali",
+    "img": "images/characters/citlali.png",
+    "tags": ["Bow", "Anemo", "Natlan", "Support", "4★", "Swirl", "Buffer"],
+    "description": "A swift and resourceful archer from Natlan, Citlali uses Anemo powers to control the battlefield and support her allies with Swirl reactions.",
+    "weapons": [
+      {
+        "name": "Favonius Warbow",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "Sacrificial Bow",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Bow.png",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "The Stringless",
+        "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+        "note": "Elemental Mastery"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Viridescent Venerer (4)",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+      },
+      {
+        "name": "Noblesse Oblige (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "Elemental Mastery / Energy Recharge" },
+      { "type": "Goblet", "value": "Anemo DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": [
+      "Elemental Mastery",
+      "Energy Recharge",
+      "CRIT Rate",
+      "CRIT DMG"
+    ],
+    "talents": ["Normal Attack: Windpiercer", "Gale Trap", "Feathered Cyclone"],
+    "info": "Citlali is an Anemo bow user who excels at grouping enemies and enabling Swirl reactions. She can serve as a support or sub-DPS, boosting her team's Elemental DMG.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Favonius Warbow",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+          "note": "Energy Recharge"
+        },
+        "artifacts": [
+          {
+            "name": "Viridescent Venerer (4)",
+            "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Citlali" },
+        { "name": "Xiangling" },
+        { "name": "Bennett" },
+        { "name": "Sucrose" }
+      ],
+      [
+        { "name": "Citlali" },
+        { "name": "Xingqiu" },
+        { "name": "Fischl" },
+        { "name": "Kazuha" }
+      ],
+      [
+        { "name": "Citlali" },
+        { "name": "Ayato" },
+        { "name": "Yelan" },
+        { "name": "Jean" }
+      ],
+      [
+        { "name": "Citlali" },
+        { "name": "Ganyu" },
+        { "name": "Mona" },
+        { "name": "Venti" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Windpiercer",
+        "desc": "Performs up to 5 consecutive shots with a bow.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Sharpshooter.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Anemo DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "36.7%",
+            "hit2": "37.6%",
+            "hit3": "47.1%",
+            "hit4": "49.1%",
+            "hit5": "58.3%",
+            "charged": "47.3% + 47.3%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "39.7%",
+            "hit2": "40.7%",
+            "hit3": "51.0%",
+            "hit4": "53.2%",
+            "hit5": "63.2%",
+            "charged": "51.2% + 51.2%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Gale Trap",
+        "desc": "Citlali sets a wind trap that pulls in enemies and deals AoE Anemo DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Anemo_Trap.png",
+        "details_html": "<div class='skill-section'><b>Gale Trap</b><br>Sets a wind trap that pulls in enemies and deals AoE Anemo DMG. Triggers Swirl reactions with elements present in the area.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "180% ATK",
+            "pull_duration": "2s",
+            "cd": "10s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "194% ATK",
+            "pull_duration": "2s",
+            "cd": "10s"
+          }
+        ]
+      },
+      {
+        "name": "Feathered Cyclone",
+        "desc": "Citlali fires a cyclone arrow that creates a vortex, dealing continuous Anemo DMG and pulling in enemies.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Cyclone_Arrow.png",
+        "details_html": "<div class='skill-section'><b>Feathered Cyclone</b><br>Fires a cyclone arrow that creates a vortex, dealing continuous Anemo DMG and pulling in enemies. The vortex lasts for a few seconds and triggers Swirl reactions.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "220% ATK",
+            "duration": "6s",
+            "cd": "15s",
+            "energy_cost": "60"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "238% ATK",
+            "duration": "6s",
+            "cd": "15s",
+            "energy_cost": "60"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Swirling Precision",
+        "phase": "Ascension Phase 1",
+        "desc": "After triggering a Swirl reaction, Citlali's Elemental Mastery is increased by 50 for 8s."
+      },
+      {
+        "name": "Wind's Favor",
+        "phase": "Ascension Phase 4",
+        "desc": "Allies within the area of Feathered Cyclone gain 20% increased Elemental DMG."
+      },
+      {
+        "name": "Natlan's Grace",
+        "phase": "Passive",
+        "desc": "When Citlali is in the party, gliding stamina consumption is reduced by 20%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Breeze's Call",
+        "phase": "Constellation Lv. 1",
+        "desc": "Gale Trap gains 1 additional charge."
+      },
+      {
+        "name": "Windrider's Agility",
+        "phase": "Constellation Lv. 2",
+        "desc": "After using Feathered Cyclone, Citlali's Movement SPD is increased by 15% for 10s."
+      },
+      {
+        "name": "Cyclone Mastery",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Feathered Cyclone by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Swirl Specialist",
+        "phase": "Constellation Lv. 4",
+        "desc": "Swirl reactions triggered by Citlali restore 3 Energy to her. Can occur once every 2s."
+      },
+      {
+        "name": "Trap Tactician",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Gale Trap by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Eye of the Storm",
+        "phase": "Constellation Lv. 6",
+        "desc": "Allies within Feathered Cyclone's area gain 20% increased CRIT Rate."
+      }
+    ]
+  },
+  "clorinde": {
+    "displayName": "Clorinde",
+    "img": "images/characters/clorinde.png",
+    "tags": ["Sword", "Electro", "Fontaine", "DPS", "5★", "Duelist", "Crit"],
+    "description": "A renowned duelist from Fontaine, Clorinde wields her sword with precision and channels Electro energy to overwhelm her foes.",
+    "weapons": [
+      {
+        "name": "Light of Foliar Incision",
+        "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+        "note": "CRIT DMG"
+      },
+      {
+        "name": "Mistsplitter Reforged",
+        "img": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+        "note": "CRIT DMG"
+      },
+      {
+        "name": "The Black Sword",
+        "img": "https://img.game8.co/3314420/8a1f23d3b4b90ff418e7760224c37f2e.png/show",
+        "note": "CRIT Rate"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Thundering Fury (4)",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+      },
+      {
+        "name": "Gladiator's Finale (4)",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+      { "type": "Goblet", "value": "Electro DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+    "talents": [
+      "Normal Attack: Duelist's Edge",
+      "Lightning Riposte",
+      "Judgment of the Court"
+    ],
+    "info": "Clorinde is an Electro sword DPS who excels at single-target damage and quick Electro application. She can trigger powerful reactions and benefits from high CRIT and ATK stats.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Light of Foliar Incision",
+          "img": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+          "note": "CRIT DMG"
+        },
+        "artifacts": [
+          {
+            "name": "Thundering Fury (4)",
+            "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Clorinde" },
+        { "name": "Fischl" },
+        { "name": "Kazuha" },
+        { "name": "Bennett" }
+      ],
+      [
+        { "name": "Clorinde" },
+        { "name": "Yae Miko" },
+        { "name": "Zhongli" },
+        { "name": "Jean" }
+      ],
+      [
+        { "name": "Clorinde" },
+        { "name": "Raiden Shogun" },
+        { "name": "Sara" },
+        { "name": "Kokomi" }
+      ],
+      [
+        { "name": "Clorinde" },
+        { "name": "Xingqiu" },
+        { "name": "Beidou" },
+        { "name": "Sucrose" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Duelist's Edge",
+        "desc": "Performs up to 5 rapid sword strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Favonius_Bladework.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 rapid sword strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid sword strikes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "44.5%",
+            "hit2": "42.6%",
+            "hit3": "56.2%",
+            "hit4": "59.2%",
+            "hit5": "71.0%",
+            "charged": "55.9% + 55.9%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "48.1%",
+            "hit2": "46.1%",
+            "hit3": "60.8%",
+            "hit4": "64.0%",
+            "hit5": "76.8%",
+            "charged": "60.5% + 60.5%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Lightning Riposte",
+        "desc": "Clorinde dashes forward, dealing Electro DMG and leaving a mark on enemies. Marked enemies take increased damage from her attacks.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Lightning_Riposte.png",
+        "details_html": "<div class='skill-section'><b>Lightning Riposte</b><br>Dashes forward, dealing Electro DMG and marking enemies. Marked enemies take increased damage from Clorinde's attacks for a short duration.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "180% ATK",
+            "mark_duration": "6s",
+            "cd": "10s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "194% ATK",
+            "mark_duration": "6s",
+            "cd": "10s"
+          }
+        ]
+      },
+      {
+        "name": "Judgment of the Court",
+        "desc": "Clorinde unleashes a powerful Electro slash, dealing massive AoE Electro DMG and increasing her CRIT Rate for a short time.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Judgment_of_the_Court.png",
+        "details_html": "<div class='skill-section'><b>Judgment of the Court</b><br>Unleashes a powerful Electro slash, dealing massive AoE Electro DMG and increasing Clorinde's CRIT Rate for a short time.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "220% ATK",
+            "crit_bonus": "15%",
+            "duration": "8s",
+            "cd": "15s",
+            "energy_cost": "60"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "238% ATK",
+            "crit_bonus": "17%",
+            "duration": "8s",
+            "cd": "15s",
+            "energy_cost": "60"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Duelist's Instinct",
+        "phase": "Ascension Phase 1",
+        "desc": "After using Lightning Riposte, Clorinde's ATK is increased by 20% for 10s."
+      },
+      {
+        "name": "Electro Mastery",
+        "phase": "Ascension Phase 4",
+        "desc": "Judgment of the Court increases all party members' Electro DMG Bonus by 20% for 10s."
+      },
+      {
+        "name": "Fontaine's Honor",
+        "phase": "Passive",
+        "desc": "When Clorinde is in the party, sprinting stamina consumption is reduced by 20%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "First Strike",
+        "phase": "Constellation Lv. 1",
+        "desc": "Lightning Riposte gains 1 additional charge."
+      },
+      {
+        "name": "Duelist's Finesse",
+        "phase": "Constellation Lv. 2",
+        "desc": "After using Judgment of the Court, Clorinde's Movement SPD is increased by 15% for 10s."
+      },
+      {
+        "name": "Court's Verdict",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Judgment of the Court by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Electro Supremacy",
+        "phase": "Constellation Lv. 4",
+        "desc": "Electro reactions triggered by Clorinde restore 3 Energy to her. Can occur once every 2s."
+      },
+      {
+        "name": "Riposte Master",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Lightning Riposte by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Duelist's Triumph",
+        "phase": "Constellation Lv. 6",
+        "desc": "Allies within Judgment of the Court's area gain 20% increased CRIT Rate."
+      }
+    ]
+  },
+  "collei": {
+    "displayName": "Collei",
+    "img": "images/characters/collei.png",
+    "tags": ["Bow", "Dendro", "Sumeru", "Support", "4★", "Sub-DPS", "Sprout"],
+    "description": "A trainee Forest Ranger from Sumeru, Collei uses her Dendro vision and bow to support her allies and trigger powerful reactions.",
+    "weapons": [
+      {
+        "name": "Elegy for the End",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "Favonius Warbow",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "The Stringless",
+        "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+        "note": "Elemental Mastery"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Deepwood Memories (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Emblem of Severed Fate (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "Energy Recharge / Elemental Mastery" },
+      { "type": "Goblet", "value": "Dendro DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": [
+      "Energy Recharge",
+      "Elemental Mastery",
+      "CRIT Rate",
+      "CRIT DMG"
+    ],
+    "talents": [
+      "Normal Attack: Supplicant's Bowmanship",
+      "Floral Brush",
+      "Trump-Card Kitty"
+    ],
+    "info": "Collei is a Dendro bow user who excels at off-field Dendro application and supporting her team in reaction-based teams. Build her for Energy Recharge and Elemental Mastery.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Elegy for the End",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+          "note": "Energy Recharge"
+        },
+        "artifacts": [
+          {
+            "name": "Deepwood Memories (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Collei" },
+        { "name": "Tighnari" },
+        { "name": "Yelan" },
+        { "name": "Kuki Shinobu" }
+      ],
+      [
+        { "name": "Collei" },
+        { "name": "Nahida" },
+        { "name": "Xingqiu" },
+        { "name": "Raiden Shogun" }
+      ],
+      [
+        { "name": "Collei" },
+        { "name": "Alhaitham" },
+        { "name": "Yae Miko" },
+        { "name": "Barbara" }
+      ],
+      [
+        { "name": "Collei" },
+        { "name": "Nilou" },
+        { "name": "Kokomi" },
+        { "name": "Dendro Traveler" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Supplicant's Bowmanship",
+        "desc": "Performs up to 4 consecutive shots with a bow.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Supplicants_Bowmanship.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Dendro DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "36.7%",
+            "hit2": "37.6%",
+            "hit3": "47.1%",
+            "hit4": "58.3%",
+            "charged": "47.3% + 47.3%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "39.7%",
+            "hit2": "40.7%",
+            "hit3": "51.0%",
+            "hit4": "63.2%",
+            "charged": "51.2% + 51.2%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Floral Brush",
+        "desc": "Collei throws a Floral Ring that deals Dendro DMG to enemies it passes through, both outward and return.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Floral_Brush.png",
+        "details_html": "<div class='skill-section'><b>Floral Brush</b><br>Throws a Floral Ring that deals Dendro DMG to enemies it passes through, both outward and return.</div>",
+        "levels": [
+          { "level": 1, "skill_dmg": "150% ATK", "cd": "12s" },
+          { "level": 2, "skill_dmg": "162% ATK", "cd": "12s" }
+        ]
+      },
+      {
+        "name": "Trump-Card Kitty",
+        "desc": "Collei throws the doll Cuilein-Anbar, creating a zone that deals continuous Dendro DMG to enemies inside.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Trump-Card_Kitty.png",
+        "details_html": "<div class='skill-section'><b>Trump-Card Kitty</b><br>Throws the doll Cuilein-Anbar, creating a zone that deals continuous Dendro DMG to enemies inside for 6s.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "200% ATK",
+            "duration": "6s",
+            "cd": "15s",
+            "energy_cost": "60"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "216% ATK",
+            "duration": "6s",
+            "cd": "15s",
+            "energy_cost": "60"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Floral Sidewinder",
+        "phase": "Ascension Phase 1",
+        "desc": "If one of your party members has triggered Burning, Quicken, Aggravate, Spread, Bloom, Hyperbloom, or Burgeon reactions before the Floral Ring returns, it grants the character the Sprout effect, dealing Dendro DMG based on 40% of Collei's ATK for 3s."
+      },
+      {
+        "name": "The Languid Wood",
+        "phase": "Ascension Phase 4",
+        "desc": "Characters who are within the zone created by Trump-Card Kitty gain 60 Elemental Mastery after triggering a Dendro reaction."
+      },
+      {
+        "name": "Gliding Champion of Sumeru",
+        "phase": "Passive",
+        "desc": "Decreases gliding Stamina consumption for your own party members by 20%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Deepwood Patrol",
+        "phase": "Constellation Lv. 1",
+        "desc": "When in the party and not on the field, Collei's Energy Recharge is increased by 20%."
+      },
+      {
+        "name": "Through Hill and Copse",
+        "phase": "Constellation Lv. 2",
+        "desc": "The Passive Talent Floral Sidewinder is changed: The Sprout effect can be triggered by the entire party, not just the character who triggered the reaction."
+      },
+      {
+        "name": "Scent of Summer",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Floral Brush by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Gift of the Woods",
+        "phase": "Constellation Lv. 4",
+        "desc": "Using Trump-Card Kitty increases all party members' Elemental Mastery by 60 for 12s."
+      },
+      {
+        "name": "All Embers",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Trump-Card Kitty by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Forest of Falling Arrows",
+        "phase": "Constellation Lv. 6",
+        "desc": "When the Floral Ring hits, it creates a miniature zone that deals 40% of Collei's ATK as Dendro DMG to nearby enemies for 3s."
+      }
+    ]
+  },
+  "cyno": {
+    "displayName": "Cyno",
+    "img": "images/characters/cyno.png",
+    "tags": ["Polearm", "Electro", "Sumeru", "DPS", "5★", "Judicator", "Burst"],
+    "description": "The General Mahamatra of the Akademiya, Cyno is a relentless Electro polearm user who excels at sustained on-field DPS and quick Electro reactions.",
+    "weapons": [
+      {
+        "name": "Staff of the Scarlet Sands",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_the_Scarlet_Sands.png",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Primordial Jade Winged-Spear",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Winged-Spear.png",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Deathmatch",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Deathmatch.png",
+        "note": "CRIT Rate"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Gilded Dreams (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      },
+      {
+        "name": "Thundering Fury (4)",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "Elemental Mastery / ATK%" },
+      { "type": "Goblet", "value": "Electro DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": ["CRIT Rate", "CRIT DMG", "Elemental Mastery", "ATK%"],
+    "talents": [
+      "Normal Attack: Invoker's Spear",
+      "Secret Rite: Chasmic Soulfarer",
+      "Sacred Rite: Wolf's Swiftness"
+    ],
+    "info": "Cyno is an Electro polearm DPS who excels at sustained on-field damage during his Burst. Build him for CRIT, Elemental Mastery, and Electro DMG Bonus.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Staff of the Scarlet Sands",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Staff_of_the_Scarlet_Sands.png",
+          "note": "CRIT Rate"
+        },
+        "artifacts": [
+          {
+            "name": "Gilded Dreams (4)",
+            "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Cyno" },
+        { "name": "Nahida" },
+        { "name": "Kuki Shinobu" },
+        { "name": "Yelan" }
+      ],
+      [
+        { "name": "Cyno" },
+        { "name": "Dendro Traveler" },
+        { "name": "Fischl" },
+        { "name": "Zhongli" }
+      ],
+      [
+        { "name": "Cyno" },
+        { "name": "Collei" },
+        { "name": "Yae Miko" },
+        { "name": "Barbara" }
+      ],
+      [
+        { "name": "Cyno" },
+        { "name": "Tighnari" },
+        { "name": "Xingqiu" },
+        { "name": "Kazuha" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Invoker's Spear",
+        "desc": "Performs up to 4 consecutive spear strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Invoker's_Spear.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "49.5%",
+            "hit2": "50.7%",
+            "hit3": "63.9%",
+            "hit4": "74.3%",
+            "charged": "120%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "53.6%",
+            "hit2": "54.9%",
+            "hit3": "69.1%",
+            "hit4": "80.5%",
+            "charged": "130%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Secret Rite: Chasmic Soulfarer",
+        "desc": "Cyno performs a swift thrust, dealing Electro DMG. If used during his Burst, triggers a Duststalker Bolt that deals AoE Electro DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Secret_Rite_Chasmic_Soulfarer.png",
+        "details_html": "<div class='skill-section'><b>Secret Rite: Chasmic Soulfarer</b><br>Performs a swift thrust, dealing Electro DMG. If used during Sacred Rite: Wolf's Swiftness, triggers a Duststalker Bolt that deals AoE Electro DMG.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "130% ATK",
+            "bolt_dmg": "100% ATK",
+            "cd": "7.5s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "140% ATK",
+            "bolt_dmg": "110% ATK",
+            "cd": "7.5s"
+          }
+        ]
+      },
+      {
+        "name": "Sacred Rite: Wolf's Swiftness",
+        "desc": "Cyno calls upon a divine spirit, entering the Pactsworn Pathclearer state, increasing his abilities and converting his attacks to Electro DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Sacred_Rite_Wolfs_Swiftness.png",
+        "details_html": "<div class='skill-section'><b>Sacred Rite: Wolf's Swiftness</b><br>Enters the Pactsworn Pathclearer state, increasing Cyno's abilities and converting his attacks to Electro DMG. In this state, using his Elemental Skill triggers Duststalker Bolts.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "200% ATK",
+            "duration": "10s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "216% ATK",
+            "duration": "10s",
+            "cd": "20s",
+            "energy_cost": "80"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Featherfall Judgment",
+        "phase": "Ascension Phase 1",
+        "desc": "When Cyno is in the Pactsworn Pathclearer state, his Normal Attack SPD is increased by 20%."
+      },
+      {
+        "name": "Authority Over the Nine Bows",
+        "phase": "Ascension Phase 4",
+        "desc": "Duststalker Bolts triggered by Cyno's Elemental Skill deal 35% more DMG."
+      },
+      {
+        "name": "The Gift of Silence",
+        "phase": "Passive",
+        "desc": "Gains 25% more rewards when dispatched on a Sumeru Expedition."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Ordinance: Unceasing Vigil",
+        "phase": "Constellation Lv. 1",
+        "desc": "After using Sacred Rite: Wolf's Swiftness, Cyno's Normal Attack SPD is increased by 20% for 10s."
+      },
+      {
+        "name": "Ceremony: Homecoming of Spirits",
+        "phase": "Constellation Lv. 2",
+        "desc": "When Cyno's Normal Attacks hit opponents affected by Electro, he regenerates 3 Energy. Can occur once every 5s."
+      },
+      {
+        "name": "Precept: Lawful Enforcer",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Sacred Rite: Wolf's Swiftness by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Austerity: Forbidding Guard",
+        "phase": "Constellation Lv. 4",
+        "desc": "When Cyno triggers an Electro reaction, his ATK is increased by 20% for 10s."
+      },
+      {
+        "name": "Funerary Rite: The Passing of Starlight",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Secret Rite: Chasmic Soulfarer by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Raiment: Just Scales",
+        "phase": "Constellation Lv. 6",
+        "desc": "When Cyno is in the Pactsworn Pathclearer state, his Electro DMG Bonus is increased by 20%."
+      }
+    ]
+  },
+  "dahlia": {
+    "displayName": "Dahlia",
+    "img": "images/characters/dahlia.png",
+    "tags": [
+      "Catalyst",
+      "Hydro",
+      "Fontaine",
+      "Support",
+      "5★",
+      "Buffer",
+      "Healer"
+    ],
+    "description": "A brilliant Hydro catalyst user from Fontaine, Dahlia excels at healing and supporting her allies with powerful Hydro abilities.",
+    "weapons": [
+      {
+        "name": "Everlasting Moonglow",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Healing Bonus"
+      },
+      {
+        "name": "Prototype Amber",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Thrilling Tales of Dragon Slayers",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thrilling_Tales_of_Dragon_Slayers.png",
+        "note": "HP%"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Ocean-Hued Clam (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Maiden Beloved (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "HP% / Energy Recharge" },
+      { "type": "Goblet", "value": "HP% / Hydro DMG Bonus" },
+      { "type": "Circlet", "value": "Healing Bonus / HP%" }
+    ],
+    "substats": ["HP%", "Healing Bonus", "Energy Recharge", "CRIT Rate"],
+    "talents": [
+      "Normal Attack: Dewdrop Arc",
+      "Aqua Restoration",
+      "Tide of Renewal"
+    ],
+    "info": "Dahlia is a Hydro catalyst support and healer who provides strong healing and buffs. Build her for HP%, Healing Bonus, and Energy Recharge.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Everlasting Moonglow",
+          "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+          "note": "Healing Bonus"
+        },
+        "artifacts": [
+          {
+            "name": "Ocean-Hued Clam (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Dahlia" },
+        { "name": "Neuvillette" },
+        { "name": "Furina" },
+        { "name": "Kazuha" }
+      ],
+      [
+        { "name": "Dahlia" },
+        { "name": "Yelan" },
+        { "name": "Xingqiu" },
+        { "name": "Jean" }
+      ],
+      [
+        { "name": "Dahlia" },
+        { "name": "Ayato" },
+        { "name": "Kokomi" },
+        { "name": "Bennett" }
+      ],
+      [
+        { "name": "Dahlia" },
+        { "name": "Nilou" },
+        { "name": "Collei" },
+        { "name": "Barbara" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Dewdrop Arc",
+        "desc": "Performs up to 4 consecutive Hydro attacks.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Whisper_of_Water.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive Hydro attacks.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a focused Hydro blast.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Hydro DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "37.5%",
+            "hit2": "36.2%",
+            "hit3": "45.8%",
+            "hit4": "56.7%",
+            "charged": "48.0% + 48.0%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "41.5%",
+            "hit2": "39.2%",
+            "hit3": "49.8%",
+            "hit4": "61.7%",
+            "charged": "52.0% + 52.0%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Aqua Restoration",
+        "desc": "Dahlia creates a healing rain that restores HP to all nearby allies and deals AoE Hydro DMG to enemies.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Let_the_Show_Begin.png",
+        "details_html": "<div class='skill-section'><b>Aqua Restoration</b><br>Creates a healing rain that restores HP to all nearby allies and deals AoE Hydro DMG. Healing scales with Dahlia's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "120% HP",
+            "healing": "10.2% HP + 970",
+            "cd": "12s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "130% HP",
+            "healing": "11.0% HP + 1050",
+            "cd": "12s"
+          }
+        ]
+      },
+      {
+        "name": "Tide of Renewal",
+        "desc": "Dahlia summons a wave of healing water, creating a field that continuously heals allies and deals Hydro DMG to enemies inside.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Shining_Miracle.png",
+        "details_html": "<div class='skill-section'><b>Tide of Renewal</b><br>Summons a wave of healing water, creating a field that continuously heals allies and deals Hydro DMG to enemies inside. Healing scales with Dahlia's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "180% HP",
+            "healing": "8.0% HP + 800",
+            "duration": "12s",
+            "cd": "20s",
+            "energy_cost": "80"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "194% HP",
+            "healing": "8.6% HP + 880",
+            "duration": "12s",
+            "cd": "20s",
+            "energy_cost": "80"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Soothing Waters",
+        "phase": "Ascension Phase 1",
+        "desc": "After using Aqua Restoration, Dahlia's Healing Bonus is increased by 20% for 10s."
+      },
+      {
+        "name": "Fontaine's Blessing",
+        "phase": "Ascension Phase 4",
+        "desc": "Allies inside Tide of Renewal's field gain 20% increased Hydro DMG Bonus."
+      },
+      {
+        "name": "Graceful Hostess",
+        "phase": "Passive",
+        "desc": "When Dahlia is in the party, cooking a perfect dish has a 12% chance to double the product."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Healing Cascade",
+        "phase": "Constellation Lv. 1",
+        "desc": "Aqua Restoration gains 1 additional charge."
+      },
+      {
+        "name": "Tide's Embrace",
+        "phase": "Constellation Lv. 2",
+        "desc": "Allies healed by Dahlia gain 20% increased ATK for 8s."
+      },
+      {
+        "name": "Ocean's Gift",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Aqua Restoration by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Restorative Flow",
+        "phase": "Constellation Lv. 4",
+        "desc": "Allies inside Tide of Renewal's field gain 20% increased Healing Bonus."
+      },
+      {
+        "name": "Blessed Tides",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Tide of Renewal by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Fontaine's Grace",
+        "phase": "Constellation Lv. 6",
+        "desc": "When an ally is healed by Dahlia, they gain 20% increased Energy Recharge for 8s."
+      }
+    ]
+  },
+  "dehya": {
+    "displayName": "Dehya",
+    "img": "images/characters/dehya.png",
+    "tags": ["Claymore", "Pyro", "Sumeru", "DPS", "5★", "Tank", "Desertfolk"],
+    "description": "A fierce Eremite warrior from Sumeru, Dehya uses her claymore and Pyro vision to protect her allies and deal powerful AoE damage.",
+    "weapons": [
+      {
+        "name": "Beacon of the Reed Sea",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Beacon_of_the_Reed_Sea.png",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "Wolf's Gravestone",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "ATK%"
+      },
+      {
+        "name": "Serpent Spine",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Emblem of Severed Fate (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Crimson Witch of Flames (4)",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "HP% / ATK%" },
+      { "type": "Goblet", "value": "Pyro DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": ["CRIT Rate", "CRIT DMG", "HP%", "ATK%"],
+    "talents": [
+      "Normal Attack: Sandstorm Assault",
+      "Molten Inferno",
+      "Leonine Bite"
+    ],
+    "info": "Dehya is a Pyro claymore DPS and tank who excels at providing interruption resistance and AoE Pyro damage. Build her for HP%, CRIT, and Pyro DMG Bonus.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Beacon of the Reed Sea",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Beacon_of_the_Reed_Sea.png",
+          "note": "CRIT Rate"
+        },
+        "artifacts": [
+          {
+            "name": "Emblem of Severed Fate (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Dehya" },
+        { "name": "Bennett" },
+        { "name": "Xingqiu" },
+        { "name": "Kazuha" }
+      ],
+      [
+        { "name": "Dehya" },
+        { "name": "Yelan" },
+        { "name": "Fischl" },
+        { "name": "Jean" }
+      ],
+      [
+        { "name": "Dehya" },
+        { "name": "Xiangling" },
+        { "name": "Sucrose" },
+        { "name": "Barbara" }
+      ],
+      [
+        { "name": "Dehya" },
+        { "name": "Nilou" },
+        { "name": "Collei" },
+        { "name": "Diona" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Sandstorm Assault",
+        "desc": "Performs up to 4 consecutive claymore strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Sandstorm_Assault.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous slashes. At the end, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "75.0%",
+            "hit2": "67.1%",
+            "hit3": "80.3%",
+            "hit4": "101.5%",
+            "charged": "60.7% + 74.6%",
+            "plunge": "74.6%",
+            "lowhigh": "149.1% / 186.3%"
+          },
+          {
+            "level": 2,
+            "hit1": "81.6%",
+            "hit2": "73.1%",
+            "hit3": "86.7%",
+            "hit4": "109.6%",
+            "charged": "65.5% + 80.5%",
+            "plunge": "80.5%",
+            "lowhigh": "160.9% / 201.1%"
+          }
+        ]
+      },
+      {
+        "name": "Molten Inferno",
+        "desc": "Dehya creates a Fiery Sanctum field, dealing AoE Pyro DMG and providing interruption resistance to allies inside.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Molten_Inferno.png",
+        "details_html": "<div class='skill-section'><b>Molten Inferno</b><br>Creates a Fiery Sanctum field, dealing AoE Pyro DMG and providing interruption resistance to allies inside. Field duration and DMG scale with Dehya's Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "skill_dmg": "120% HP",
+            "field_duration": "12s",
+            "cd": "20s"
+          },
+          {
+            "level": 2,
+            "skill_dmg": "130% HP",
+            "field_duration": "12s",
+            "cd": "20s"
+          }
+        ]
+      },
+      {
+        "name": "Leonine Bite",
+        "desc": "Dehya unleashes a powerful Pyro attack, dealing massive AoE Pyro DMG and increasing her resistance to interruption.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Leonine_Bite.png",
+        "details_html": "<div class='skill-section'><b>Leonine Bite</b><br>Unleashes a powerful Pyro attack, dealing massive AoE Pyro DMG and increasing Dehya's resistance to interruption. DMG scales with Max HP.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "180% HP",
+            "duration": "4s",
+            "cd": "18s",
+            "energy_cost": "70"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "194% HP",
+            "duration": "4s",
+            "cd": "18s",
+            "energy_cost": "70"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Unstinting Succor",
+        "phase": "Ascension Phase 1",
+        "desc": "Within the Fiery Sanctum field, Dehya's interruption resistance is increased by 30%."
+      },
+      {
+        "name": "Stalwart and True",
+        "phase": "Ascension Phase 4",
+        "desc": "After using Leonine Bite, Dehya's ATK is increased by 20% for 10s."
+      },
+      {
+        "name": "Gold-Dusted Tradition",
+        "phase": "Passive",
+        "desc": "When Dehya is in the party, the chance to obtain double product when forging weapons is increased by 10%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "The Flame Incandescent",
+        "phase": "Constellation Lv. 1",
+        "desc": "Molten Inferno gains 1 additional charge."
+      },
+      {
+        "name": "The Sand-Blades Glittering",
+        "phase": "Constellation Lv. 2",
+        "desc": "Allies inside Fiery Sanctum gain 20% increased ATK."
+      },
+      {
+        "name": "A Rage Swift as Fire",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Leonine Bite by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "An Oath Abiding",
+        "phase": "Constellation Lv. 4",
+        "desc": "After using Leonine Bite, Dehya's HP is restored by 20%."
+      },
+      {
+        "name": "The Alpha Unleashed",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Molten Inferno by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "The Burning Claws Cleaving",
+        "phase": "Constellation Lv. 6",
+        "desc": "Dehya's Pyro DMG Bonus is increased by 20% when inside Fiery Sanctum."
+      }
+    ]
+  },
+  "diluc": {
+    "displayName": "Diluc",
+    "img": "images/characters/diluc.png",
+    "tags": [
+      "Claymore",
+      "Pyro",
+      "Mondstadt",
+      "DPS",
+      "5★",
+      "Dawn Winery",
+      "Crit"
+    ],
+    "description": "The owner of the Dawn Winery, Diluc is a powerful Pyro claymore user who excels at sustained Pyro DPS and strong single-target damage.",
+    "weapons": [
+      {
+        "name": "Wolf's Gravestone",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "ATK%"
+      },
+      {
+        "name": "Serpent Spine",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "CRIT Rate"
+      },
+      {
+        "name": "The Unforged",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Unforged.png",
+        "note": "Shielded ATK%"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Crimson Witch of Flames (4)",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+      },
+      {
+        "name": "Gladiator's Finale (4)",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "ATK%" },
+      { "type": "Goblet", "value": "Pyro DMG Bonus" },
+      { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+    ],
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+    "talents": ["Normal Attack: Tempered Sword", "Searing Onslaught", "Dawn"],
+    "info": "Diluc is a Pyro claymore DPS who excels at sustained Pyro damage and strong single-target attacks. Build him for CRIT, ATK%, and Pyro DMG Bonus.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Wolf's Gravestone",
+          "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+          "note": "ATK%"
+        },
+        "artifacts": [
+          {
+            "name": "Crimson Witch of Flames (4)",
+            "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Crimson_Witch_of_Flames.png"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Diluc" },
+        { "name": "Bennett" },
+        { "name": "Xingqiu" },
+        { "name": "Sucrose" }
+      ],
+      [
+        { "name": "Diluc" },
+        { "name": "Fischl" },
+        { "name": "Diona" },
+        { "name": "Kazuha" }
+      ],
+      [
+        { "name": "Diluc" },
+        { "name": "Xiangling" },
+        { "name": "Rosaria" },
+        { "name": "Barbara" }
+      ],
+      [
+        { "name": "Diluc" },
+        { "name": "Jean" },
+        { "name": "Mona" },
+        { "name": "Zhongli" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Tempered Sword",
+        "desc": "Performs up to 4 consecutive claymore strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Tempered_Sword.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous slashes. At the end, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "89.7%",
+            "hit2": "87.6%",
+            "hit3": "98.9%",
+            "hit4": "134.6%",
+            "charged": "68.8% + 124.1%",
+            "plunge": "89.5%",
+            "lowhigh": "179.0% / 223.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "97.0%",
+            "hit2": "94.7%",
+            "hit3": "107.0%",
+            "hit4": "145.6%",
+            "charged": "74.5% + 134.3%",
+            "plunge": "96.7%",
+            "lowhigh": "193.4% / 241.1%"
+          }
+        ]
+      },
+      {
+        "name": "Searing Onslaught",
+        "desc": "Diluc performs up to 3 consecutive slashes, each dealing Pyro DMG in a line.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Searing_Onslaught.png",
+        "details_html": "<div class='skill-section'><b>Searing Onslaught</b><br>Performs up to 3 consecutive slashes, each dealing Pyro DMG in a line. Each slash can be cast within a short time window.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "slash1": "94.4%",
+            "slash2": "97.6%",
+            "slash3": "129.6%",
+            "cd": "10s"
+          },
+          {
+            "level": 2,
+            "slash1": "102.0%",
+            "slash2": "105.5%",
+            "slash3": "140.1%",
+            "cd": "10s"
+          }
+        ]
+      },
+      {
+        "name": "Dawn",
+        "desc": "Diluc releases intense flames to knock back enemies, then summons a Phoenix that deals massive Pyro DMG in its path and explodes at the end.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Dawn.png",
+        "details_html": "<div class='skill-section'><b>Dawn</b><br>Releases intense flames to knock back enemies, then summons a Phoenix that deals massive Pyro DMG in its path and explodes at the end. The Phoenix infuses Diluc's weapon with Pyro for a duration.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "phoenix_dmg": "204%",
+            "explosion": "204%",
+            "infuse_duration": "8s",
+            "cd": "12s",
+            "energy_cost": "40"
+          },
+          {
+            "level": 2,
+            "phoenix_dmg": "219%",
+            "explosion": "219%",
+            "infuse_duration": "8s",
+            "cd": "12s",
+            "energy_cost": "40"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Relentless",
+        "phase": "Ascension Phase 1",
+        "desc": "Diluc's Charged Attack Stamina cost is decreased by 50%, and its duration is increased by 3s."
+      },
+      {
+        "name": "Blessing of Phoenix",
+        "phase": "Ascension Phase 4",
+        "desc": "The Pyro Enchantment provided by Dawn lasts for 4s longer."
+      },
+      {
+        "name": "Tradition of the Dawn Knight",
+        "phase": "Passive",
+        "desc": "Refunds 15% of the ores used when crafting Claymore-type weapons."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Conviction",
+        "phase": "Constellation Lv. 1",
+        "desc": "Diluc deals 15% more DMG to enemies whose HP is above 50%."
+      },
+      {
+        "name": "Searing Ember",
+        "phase": "Constellation Lv. 2",
+        "desc": "When Diluc takes DMG, his ATK increases by 10% and his ATK SPD increases by 5% for 10s. Can stack up to 3 times."
+      },
+      {
+        "name": "Fire and Steel",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Searing Onslaught by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Flowing Flame",
+        "phase": "Constellation Lv. 4",
+        "desc": "Casting Searing Onslaught in rhythm increases DMG dealt by 40%."
+      },
+      {
+        "name": "Phoenix, Harbinger of Dawn",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Dawn by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Flaming Sword, Nemesis of Dark",
+        "phase": "Constellation Lv. 6",
+        "desc": "After casting Searing Onslaught, the next 2 Normal Attacks within the next 6s will have their DMG and ATK SPD increased by 30%."
+      }
+    ]
+  },
+  "diona": { "displayName": "Diona", "info": "Build non ancora disponibile." },
+  "dori": { "displayName": "Dori", "info": "Build non ancora disponibile." },
+  "chevreuse": {
+    "displayName": "Chevreuse",
+    "img": "images/characters/chevreuse.png",
+    "tags": [
+      "Polearm",
+      "Pyro",
+      "Fontaine",
+      "Support",
+      "4★",
+      "Buffer",
+      "Shielder"
+    ],
+    "description": "A disciplined officer from Fontaine, Chevreuse is a Pyro polearm user who provides shields and buffs to her team.",
+    "weapons": [
+      {
+        "name": "Staff of Homa",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "HP%"
+      },
+      {
+        "name": "Favonius Lance",
+        "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+        "note": "Energy Recharge"
+      },
+      {
+        "name": "Black Tassel",
+        "img": "https://img.game8.co/3453993/51c1c5e022256e3ad176d4b713799669.png/show",
+        "note": "HP%"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "Noblesse Oblige (4)",
+        "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+      },
+      {
+        "name": "Emblem of Severed Fate (4)",
+        "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+      }
+    ],
+    "stats": [
+      { "type": "Sands", "value": "HP% / Energy Recharge" },
+      { "type": "Goblet", "value": "HP% / Pyro DMG Bonus" },
+      { "type": "Circlet", "value": "HP% / Healing Bonus" }
+    ],
+    "substats": ["HP%", "Energy Recharge", "ATK%", "CRIT Rate"],
+    "talents": [
+      "Normal Attack: Orderly Strike",
+      "Crimson Command",
+      "Shield of Justice"
+    ],
+    "info": "Chevreuse is a Pyro support who provides shields, buffs, and Pyro application. Build her for HP% and Energy Recharge.",
+    "community_build": [
+      {
+        "weapon": {
+          "name": "Favonius Lance",
+          "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+          "note": "Energy Recharge"
+        },
+        "artifacts": [
+          {
+            "name": "Noblesse Oblige (4)",
+            "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+          }
+        ]
+      }
+    ],
+    "best_teams": [
+      [
+        { "name": "Chevreuse" },
+        { "name": "Lyney" },
+        { "name": "Bennett" },
+        { "name": "Xiangling" }
+      ],
+      [
+        { "name": "Chevreuse" },
+        { "name": "Hu Tao" },
+        { "name": "Yelan" },
+        { "name": "Zhongli" }
+      ],
+      [
+        { "name": "Chevreuse" },
+        { "name": "Xingqiu" },
+        { "name": "Kazuha" },
+        { "name": "Thoma" }
+      ],
+      [
+        { "name": "Chevreuse" },
+        { "name": "Diluc" },
+        { "name": "Fischl" },
+        { "name": "Sucrose" }
+      ]
+    ],
+    "skills": [
+      {
+        "name": "Normal Attack: Orderly Strike",
+        "desc": "Performs up to 4 consecutive spear strikes.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Orderly_Strike.png",
+        "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "hit1": "44.5%",
+            "hit2": "42.6%",
+            "hit3": "56.2%",
+            "hit4": "71.0%",
+            "charged": "110%",
+            "plunge": "63.9%",
+            "lowhigh": "127.8% / 159.7%"
+          },
+          {
+            "level": 2,
+            "hit1": "48.1%",
+            "hit2": "46.1%",
+            "hit3": "60.8%",
+            "hit4": "76.8%",
+            "charged": "120%",
+            "plunge": "69.1%",
+            "lowhigh": "138.2% / 172.7%"
+          }
+        ]
+      },
+      {
+        "name": "Crimson Command",
+        "desc": "Chevreuse commands her allies, granting a shield based on her Max HP and dealing AoE Pyro DMG.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Crimson_Command.png",
+        "details_html": "<div class='skill-section'><b>Crimson Command</b><br>Grants a shield based on Max HP and deals AoE Pyro DMG to nearby opponents.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "shield": "12% HP",
+            "skill_dmg": "160% HP",
+            "cd": "9s"
+          },
+          { "level": 2, "shield": "13% HP", "skill_dmg": "172% HP", "cd": "9s" }
+        ]
+      },
+      {
+        "name": "Shield of Justice",
+        "desc": "Chevreuse creates a field of justice, dealing AoE Pyro DMG and granting all allies increased resistance to interruption and ATK.",
+        "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Shield_of_Justice.png",
+        "details_html": "<div class='skill-section'><b>Shield of Justice</b><br>Creates a field that deals AoE Pyro DMG and grants all allies increased resistance to interruption and ATK. Field duration and bonus scale with Chevreuse's stats.</div>",
+        "levels": [
+          {
+            "level": 1,
+            "burst_dmg": "180% HP",
+            "atk_bonus": "20%",
+            "duration": "9s",
+            "cd": "15s",
+            "energy_cost": "60"
+          },
+          {
+            "level": 2,
+            "burst_dmg": "194% HP",
+            "atk_bonus": "22%",
+            "duration": "9s",
+            "cd": "15s",
+            "energy_cost": "60"
+          }
+        ]
+      }
+    ],
+    "passive_talents": [
+      {
+        "name": "Disciplined Officer",
+        "phase": "Ascension Phase 1",
+        "desc": "After using Crimson Command, Chevreuse's shield strength is increased by 20% for 10s."
+      },
+      {
+        "name": "Pyro Tactics",
+        "phase": "Ascension Phase 4",
+        "desc": "Allies inside Shield of Justice's field gain increased Pyro DMG Bonus."
+      },
+      {
+        "name": "Fontaine's Duty",
+        "phase": "Passive",
+        "desc": "When Chevreuse is in the party, sprinting stamina consumption is reduced by 20%."
+      }
+    ],
+    "constellations": [
+      {
+        "name": "Commander's Resolve",
+        "phase": "Constellation Lv. 1",
+        "desc": "Crimson Command gains 1 additional charge."
+      },
+      {
+        "name": "Shielded Advance",
+        "phase": "Constellation Lv. 2",
+        "desc": "Allies protected by Chevreuse's shield gain increased Energy Recharge."
+      },
+      {
+        "name": "Justice's Edge",
+        "phase": "Constellation Lv. 3",
+        "desc": "Increases the level of Crimson Command by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "Unyielding Spirit",
+        "phase": "Constellation Lv. 4",
+        "desc": "Allies inside Shield of Justice's field gain increased Healing Bonus."
+      },
+      {
+        "name": "Pyro's Blessing",
+        "phase": "Constellation Lv. 5",
+        "desc": "Increases the level of Shield of Justice by 3. Maximum upgrade level is 15."
+      },
+      {
+        "name": "True Justice",
+        "phase": "Constellation Lv. 6",
+        "desc": "When an ally is shielded by Chevreuse and takes damage, they gain increased ATK for 8s."
+      }
+    ]
+  }
+}

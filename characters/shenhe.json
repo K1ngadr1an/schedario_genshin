@@ -1,0 +1,224 @@
+{
+  "displayName": "Shenhe",
+  "img": "images/characters/shenhe.png",
+  "tags": ["Polearm", "Cryo", "Liyue", "5★", "Support", "Buffer", "Exorcist"],
+  "description": "A disciple of the adepti, Shenhe is a Cryo polearm user from Liyue who excels at buffing Cryo DMG and supporting her team.",
+  "weapons": [
+    {
+      "name": "Calamity Queller",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Calamity_Queller.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Engulfing Lightning",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Engulfing_Lightning.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Lance",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Wavebreaker's Fin",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Wavebreakers_Fin.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Gladiator's Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "ATK%" },
+    { "type": "Circlet", "value": "ATK% / CRIT DMG" }
+  ],
+  "substats": ["ATK%", "Energy Recharge", "CRIT DMG", "CRIT Rate"],
+  "talents": [
+    "Normal Attack: Dawnstar Piercer",
+    "Spring Spirit Summoning",
+    "Divine Maiden's Deliverance"
+  ],
+  "info": "Shenhe is a 5★ Cryo support who excels at buffing Cryo DMG and supporting Cryo DPS units. Build her for ATK%, Energy Recharge, and CRIT.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Calamity Queller",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Calamity_Queller.png",
+        "note": "ATK%"
+      },
+      "artifacts": [
+        {
+          "name": "Noblesse Oblige (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Shenhe" },
+      { "name": "Ayaka" },
+      { "name": "Kokomi" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Shenhe" },
+      { "name": "Ganyu" },
+      { "name": "Venti" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Shenhe" },
+      { "name": "Rosaria" },
+      { "name": "Mona" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Shenhe" },
+      { "name": "Chongyun" },
+      { "name": "Xingqiu" },
+      { "name": "Bennett" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Dawnstar Piercer",
+      "desc": "Performs up to 5 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Dawnstar_Piercer.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to lunge forward, dealing damage to opponents along the way.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "43.3%",
+          "hit2": "42.1%",
+          "hit3": "54.2%",
+          "hit4": "60.5%",
+          "hit5": "72.1%",
+          "charged": "110%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "46.9%",
+          "hit2": "45.6%",
+          "hit3": "58.7%",
+          "hit4": "65.6%",
+          "hit5": "78.2%",
+          "charged": "120%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Spring Spirit Summoning",
+      "desc": "Shenhe grants all nearby party members the Icy Quill effect and deals Cryo DMG. Press: Rushes forward. Hold: Deals AoE Cryo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Spring_Spirit_Summoning.png",
+      "details_html": "<div class='skill-section'><b>Spring Spirit Summoning</b><br>Grants all nearby party members the Icy Quill effect and deals Cryo DMG. Press: Rushes forward, dealing Cryo DMG. Hold: Deals AoE Cryo DMG. Icy Quill increases Cryo DMG dealt by party members based on Shenhe's ATK.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "press_dmg": "188.8%",
+          "hold_dmg": "251.2%",
+          "icy_quill": "45.7% ATK",
+          "cd": "10/15s"
+        },
+        {
+          "level": 2,
+          "press_dmg": "202.0%",
+          "hold_dmg": "269.0%",
+          "icy_quill": "49.0% ATK",
+          "cd": "10/15s"
+        }
+      ]
+    },
+    {
+      "name": "Divine Maiden's Deliverance",
+      "desc": "Shenhe creates a Talisman Spirit field that deals AoE Cryo DMG and decreases Cryo/Physical RES of enemies inside.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Divine_Maidens_Deliverance.png",
+      "details_html": "<div class='skill-section'><b>Divine Maiden's Deliverance</b><br>Creates a Talisman Spirit field that deals AoE Cryo DMG and decreases Cryo/Physical RES of enemies inside. Field scales with Shenhe's ATK.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "101.1% ATK",
+          "dot": "67.6% ATK",
+          "res_reduction": "-15%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "108.7% ATK",
+          "dot": "72.7% ATK",
+          "res_reduction": "-15%",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Deific Embrace",
+      "phase": "Ascension Phase 1",
+      "desc": "An active character within the field created by Divine Maiden's Deliverance gains 10% Cryo DMG Bonus."
+    },
+    {
+      "name": "Spirit Communion Seal",
+      "phase": "Ascension Phase 4",
+      "desc": "After using Spring Spirit Summoning, all party members' Elemental Skill and Burst DMG is increased by 15% for 10s."
+    },
+    {
+      "name": "Precise Comings and Goings",
+      "phase": "Passive",
+      "desc": "When dispatched on an expedition in Liyue, time consumed is reduced by 25%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Clarity of Heart",
+      "phase": "Constellation Lv. 1",
+      "desc": "Spring Spirit Summoning can be used 1 additional time."
+    },
+    {
+      "name": "Centered Spirit",
+      "phase": "Constellation Lv. 2",
+      "desc": "Divine Maiden's Deliverance lasts 6s longer. Active characters inside the field deal 15% increased Cryo CRIT DMG."
+    },
+    {
+      "name": "Seclusion",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Spring Spirit Summoning by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Insight",
+      "phase": "Constellation Lv. 4",
+      "desc": "When characters under the effect of Icy Quill trigger its bonus DMG, Shenhe gains 1 stack of Skyfrost Mantra, increasing her Elemental Skill DMG by 5% for 6s. Max 50 stacks."
+    },
+    {
+      "name": "Divine Attainment",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Divine Maiden's Deliverance by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Mystical Abandon",
+      "phase": "Constellation Lv. 6",
+      "desc": "When characters trigger Icy Quill's effect, no trigger count will be consumed for 1s."
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "displayName": "Freminet",
+  "img": "images/characters/freminet.png",
+  "tags": ["Claymore", "Cryo", "Fontaine", "4★", "Physical DPS", "Diver"],
+  "description": "A renowned diver from Fontaine, Freminet is a Cryo claymore user who excels at physical damage and sustained DPS.",
+  "weapons": [
+    {
+      "name": "Snow-Tombed Starsilver",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Snow-Tombed_Starsilver.png",
+      "note": "Physical DMG Bonus"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Unforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Unforged.png",
+      "note": "Shielded ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Pale Flame (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+    },
+    {
+      "name": "Bloodstained Chivalry (2) + Pale Flame (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Gladiator's Finale (2) + Shimenawa's Reminiscence (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Physical DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+  "talents": [
+    "Normal Attack: Flowing Eddies",
+    "Pressurized Floe",
+    "Shadowhunter's Ambush"
+  ],
+  "info": "Freminet is a physical DPS who excels at sustained damage with his claymore and Cryo application. Build him for Physical DMG Bonus, CRIT, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Snow-Tombed Starsilver",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Snow-Tombed_Starsilver.png",
+        "note": "Physical DMG Bonus"
+      },
+      "artifacts": [
+        {
+          "name": "Pale Flame (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Pale_Flame.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Freminet" },
+      { "name": "Raiden Shogun" },
+      { "name": "Yelan" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Freminet" },
+      { "name": "Mika" },
+      { "name": "Rosaria" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Freminet" },
+      { "name": "Eula" },
+      { "name": "Fischl" },
+      { "name": "Diona" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Flowing Eddies",
+      "desc": "Performs up to 4 consecutive strikes with a claymore.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Flowing_Eddies.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive strikes with a claymore.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous spinning attacks against all nearby opponents. At the end of the sequence, performs a more powerful slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "72.2%",
+          "hit2": "69.1%",
+          "hit3": "89.7%",
+          "hit4": "112.3%",
+          "charged": "60.7% + 74.6%",
+          "plunge": "74.6%",
+          "lowhigh": "149.1% / 186.3%"
+        },
+        {
+          "level": 2,
+          "hit1": "78.6%",
+          "hit2": "75.2%",
+          "hit3": "97.6%",
+          "hit4": "122.1%",
+          "charged": "65.5% + 80.5%",
+          "plunge": "80.5%",
+          "lowhigh": "160.9% / 201.1%"
+        }
+      ]
+    },
+    {
+      "name": "Pressurized Floe",
+      "desc": "Freminet executes a rapid dash, dealing Cryo DMG and entering the Pers Timer state, increasing his resistance to interruption and enabling special attacks.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Pressurized_Floe.png",
+      "details_html": "<div class='skill-section'><b>Pressurized Floe</b><br>Executes a rapid dash, dealing Cryo DMG and entering the Pers Timer state, increasing resistance to interruption and enabling special attacks. Consecutive attacks increase Pers Timer stacks, enhancing damage.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "120% ATK",
+          "pers_timer_bonus": "+20% DMG per stack",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "130% ATK",
+          "pers_timer_bonus": "+22% DMG per stack",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Shadowhunter's Ambush",
+      "desc": "Freminet unleashes a powerful attack, dealing AoE Physical DMG and ending the Pers Timer state.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Shadowhunters_Ambush.png",
+      "details_html": "<div class='skill-section'><b>Shadowhunter's Ambush</b><br>Unleashes a powerful attack, dealing AoE Physical DMG and ending the Pers Timer state. Damage scales with the number of Pers Timer stacks consumed.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "220% ATK",
+          "stack_bonus": "+40% DMG per stack",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "238% ATK",
+          "stack_bonus": "+44% DMG per stack",
+          "duration": "8s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Deepwater Navigation",
+      "phase": "Ascension Phase 1",
+      "desc": "Increases underwater movement speed for all party members by 15%."
+    },
+    {
+      "name": "Pressure Maintenance",
+      "phase": "Ascension Phase 4",
+      "desc": "When Freminet triggers a Frozen reaction, his ATK is increased by 20% for 10s."
+    },
+    {
+      "name": "Diver's Endurance",
+      "phase": "Passive",
+      "desc": "When dispatched on an expedition in Fontaine, the time consumed is reduced by 25%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Dreams of the Deep",
+      "phase": "Constellation Lv. 1",
+      "desc": "Pressurized Floe gains 1 additional charge."
+    },
+    {
+      "name": "Chilling Dive",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Freminet triggers a Frozen reaction, his CRIT Rate is increased by 15% for 10s."
+    },
+    {
+      "name": "Tide's Embrace",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Pressurized Floe by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Abyssal Hunter",
+      "phase": "Constellation Lv. 4",
+      "desc": "Shadowhunter's Ambush deals 30% more DMG to enemies affected by Cryo."
+    },
+    {
+      "name": "Ocean's Resolve",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Shadowhunter's Ambush by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Unyielding Current",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Freminet's HP falls below 50%, his Physical DMG Bonus is increased by 20%."
+    }
+  ]
+}

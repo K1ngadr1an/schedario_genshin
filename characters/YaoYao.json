@@ -1,0 +1,202 @@
+{
+  "displayName": "YaoYao",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/YaoYao_Icon.png",
+  "tags": ["Polearm", "Dendro", "Liyue", "4★", "Healer", "Support"],
+  "description": "YaoYao è una giovane adepti di Liyue che utilizza il potere del Dendro per guarire e supportare il team. Eccelle nella guarigione e nell'applicazione Dendro.",
+  "weapons": [
+    {
+      "name": "Staff of Homa",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Staff_of_Homa.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Black Tassel",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Black_Tassel.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Favonius Lance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Lance.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Prototype Starglitter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Prototype_Starglitter.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Dragon's Bane",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Dragons_Bane.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Kitain Cross Spear",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Kitain_Cross_Spear.png",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Deepwood Memories (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Deepwood_Memories.png"
+    },
+    {
+      "name": "Ocean-Hued Clam (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Ocean-Hued_Clam.png"
+    },
+    {
+      "name": "Deepwood Memories (2) + Ocean-Hued Clam (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Deepwood Memories (2) + Maiden Beloved (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP%" },
+    { "type": "Circlet", "value": "Healing Bonus / HP%" }
+  ],
+  "substats": ["HP%", "Energy Recharge", "Healing Bonus", "Elemental Mastery"],
+  "talents": [
+    "Normal Attack: Toss 'N' Turn Spear",
+    "Raphanus Sky Cluster",
+    "Moonjade Descent"
+  ],
+  "info": "YaoYao si concentra su HP% e Healing Bonus per massimizzare la guarigione. Energy Recharge è utile per uptime costante del Burst.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Black Tassel",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Black_Tassel.png",
+        "note": "HP%"
+      },
+      "artifacts": [
+        {
+          "name": "Deepwood Memories (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Deepwood_Memories.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "YaoYao" },
+      { "name": "Alhaitham" },
+      { "name": "Yae Miko" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "YaoYao" },
+      { "name": "Nilou" },
+      { "name": "Xingqiu" },
+      { "name": "Alhaitham" }
+    ],
+    [
+      { "name": "YaoYao" },
+      { "name": "Cyno" },
+      { "name": "Xingqiu" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Toss 'N' Turn Spear",
+      "desc": "Performs up to 4 consecutive spear strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/YaoYao_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive spear strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to perform an upward thrust.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "40.5%",
+          "hit2": "40.5%",
+          "hit3": "54.0%",
+          "hit4": "67.5%",
+          "charged": "120%",
+          "plunge": "60%",
+          "lowhigh": "120% / 150%"
+        }
+      ]
+    },
+    {
+      "name": "Raphanus Sky Cluster",
+      "desc": "YaoYao throws out White Jade Radishes that will explode when they hit opponents or after a certain period of time, dealing Dendro DMG and healing nearby active characters.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/YaoYao_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Raphanus Sky Cluster</b><br>YaoYao throws out White Jade Radishes that will explode when they hit opponents or after a certain period of time, dealing Dendro DMG and healing nearby active characters.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "200% ATK",
+          "healing": "10% Max HP + 1200",
+          "cd": "15s"
+        }
+      ]
+    },
+    {
+      "name": "Moonjade Descent",
+      "desc": "YaoYao calls upon a myriad of White Jade Radishes to fall from the sky, dealing Dendro DMG and healing nearby active characters.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/YaoYao_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Moonjade Descent</b><br>YaoYao calls upon a myriad of White Jade Radishes to fall from the sky, dealing Dendro DMG and healing nearby active characters.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "300% ATK",
+          "healing": "15% Max HP + 2000",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "70"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Starscatter",
+      "phase": "Ascension Phase 1",
+      "desc": "When White Jade Radishes explode, active characters within their AoE will gain 15% Dendro DMG Bonus for 8s and 15 Elemental Mastery for 8s."
+    },
+    {
+      "name": "In Others' Shoes",
+      "phase": "Ascension Phase 4",
+      "desc": "When White Jade Radishes explode, they will heal active characters within their AoE based on 2.5% of YaoYao's Max HP every 0.5s for 5s."
+    },
+    {
+      "name": "Tailing on Tiptoes",
+      "phase": "Passive",
+      "desc": "When YaoYao is in the party, your own party members' Movement SPD is increased by 5%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Osmanthus Wine",
+      "phase": "Constellation Lv. 1",
+      "desc": "When White Jade Radishes explode, active characters within their AoE will gain 15% Dendro DMG Bonus for 8s and 15 Elemental Mastery for 8s."
+    },
+    {
+      "name": "Clouds Cover Five Peaks",
+      "phase": "Constellation Lv. 2",
+      "desc": "While affected by the Adeptal Legacy state caused by Moonjade Descent, if White Jade Radishes explode, they will heal active characters within their AoE based on 3% of YaoYao's Max HP every 0.5s for 5s."
+    },
+    {
+      "name": "A Thousand Floating Dreams",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Raphanus Sky Cluster by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "The Moon's Composed Brow",
+      "phase": "Constellation Lv. 4",
+      "desc": "YaoYao's Max HP will be increased by 15% for 15s after using Raphanus Sky Cluster."
+    },
+    {
+      "name": "A Thousand Nights' Dawnsong",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Moonjade Descent by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Golden Soul's Return",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using Raphanus Sky Cluster or Moonjade Descent, YaoYao will gain 4 Elemental Energy for every 5 White Jade Radishes that explode."
+    }
+  ]
+}

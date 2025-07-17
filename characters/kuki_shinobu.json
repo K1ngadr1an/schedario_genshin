@@ -1,0 +1,184 @@
+{
+  "displayName": "Kuki Shinobu",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Sword", "Electro", "Inazuma", "Healer", "4★", "Support"],
+  "description": "Kuki Shinobu è la vicecapo della Arataki Gang di Inazuma. Specializzata in cura e applicazione Electro, eccelle come supporto e sub-DPS in team di reazione.",
+  "weapons": [
+    {
+      "name": "Freedom-Sworn",
+      "img": "https://img.game8.co/3456283/700b83638b99dba8908463aa92f6b3d6.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Iron Sting",
+      "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Favonius Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Favonius_Sword.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Tenacity of the Millelith (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Tenacity_of_the_Millelith.png"
+    },
+    {
+      "name": "Flower of Paradise Lost (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Flower_of_Paradise_Lost.png"
+    },
+    {
+      "name": "Tenacity of the Millelith (2) + Flower of Paradise Lost (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "Elemental Mastery / HP%" },
+    { "type": "Goblet", "value": "Elemental Mastery / HP%" },
+    { "type": "Circlet", "value": "Healing Bonus / Elemental Mastery / HP%" }
+  ],
+  "substats": ["Elemental Mastery", "HP%", "Energy Recharge", "Flat HP"],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Kuki Shinobu è una healer e sub-DPS che brilla in team di reazione come Hyperbloom e Aggravate. Costruiscila con Maestria Elementale e HP% per massimizzare la cura e i danni da reazione.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Iron Sting",
+        "img": "https://img.game8.co/3314433/4fb2afba31159663b239b33e38cb47c5.png/show",
+        "note": "Elemental Mastery"
+      },
+      "artifacts": [
+        {
+          "name": "Flower of Paradise Lost (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Flower_of_Paradise_Lost.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Kuki Shinobu" },
+      { "name": "Nahida" },
+      { "name": "Yelan" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Kuki Shinobu" },
+      { "name": "Alhaitham" },
+      { "name": "Raiden Shogun" },
+      { "name": "Yae Miko" }
+    ],
+    [
+      { "name": "Kuki Shinobu" },
+      { "name": "Tighnari" },
+      { "name": "Collei" },
+      { "name": "Fischl" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Shinobu's Shadowsword",
+      "desc": "Effettua fino a 4 colpi consecutivi con la spada.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Shinobus_Shadowsword.png",
+      "image": "images/characters/placeholder.svg",
+      "video": "",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "43.1%",
+          "hit3": "54.1%",
+          "hit4": "67.7%",
+          "charged": "55.0% + 55.0%",
+          "stamina": "20",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Effettua fino a 4 colpi consecutivi con la spada.</div><div class='skill-section'><b>Charged Attack</b><br>Consuma stamina per sferrare due colpi rapidi.</div><div class='skill-section'><b>Plunging Attack</b><br>Si lancia dall'alto, infliggendo danni AoE all'impatto.</div>"
+    },
+    {
+      "name": "Elemental Skill: Sanctifying Ring",
+      "desc": "Kuki Shinobu sacrifica una parte della sua vita per creare un anello che infligge danni Electro ai nemici e cura i membri del party in base ai suoi HP max.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Sanctifying_Ring.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Sanctifying Ring</b><br>Sacrifica una parte della sua vita per creare un anello che infligge danni Electro ai nemici e cura i membri del party in base ai suoi HP max. L'effetto dura 12s.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "75.2% ATK",
+          "healing": "3.0% HP max + 289",
+          "duration": "12s",
+          "cd": "15s"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Burst: Gyoei Narukami Kariyama Rite",
+      "desc": "Kuki Shinobu evoca un campo di purificazione che infligge danni AoE Electro in base ai suoi HP max.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Gyoei_Narukami_Kariyama_Rite.png",
+      "video": "",
+      "details_html": "<div class='skill-section'><b>Gyoei Narukami Kariyama Rite</b><br>Evoca un campo di purificazione che infligge danni AoE Electro in base ai suoi HP max.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "118.6% HP max",
+          "duration": "2s",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Breaking Free",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando la vita di Kuki Shinobu è inferiore al 50%, la sua cura aumenta del 15%."
+    },
+    {
+      "name": "Heart's Repose",
+      "phase": "Ascension Phase 4",
+      "desc": "La Maestria Elementale aumenta la cura e i danni di Sanctifying Ring."
+    },
+    {
+      "name": "Protracted Prayers",
+      "phase": "Passive",
+      "desc": "Aumenta le ricompense delle spedizioni a Inazuma del 25%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: To Cloister Compassion",
+      "phase": "Constellation Lv. 1",
+      "desc": "Il raggio di Sanctifying Ring aumenta del 50%."
+    },
+    {
+      "name": "C2: To Forsake Fortune",
+      "phase": "Constellation Lv. 2",
+      "desc": "La durata di Sanctifying Ring aumenta di 3s."
+    },
+    {
+      "name": "C3: To Sequester Sorrow",
+      "phase": "Constellation Lv. 3",
+      "desc": "Aumenta il livello di Sanctifying Ring di 3. Massimo livello 15."
+    },
+    {
+      "name": "C4: To Sever Sealing",
+      "phase": "Constellation Lv. 4",
+      "desc": "Quando Kuki Shinobu subisce danni letali, non viene sconfitta e la sua vita viene ridotta a 1. Può verificarsi una volta ogni 60s."
+    },
+    {
+      "name": "C5: To Cease Courtesies",
+      "phase": "Constellation Lv. 5",
+      "desc": "Aumenta il livello di Gyoei Narukami Kariyama Rite di 3. Massimo livello 15."
+    },
+    {
+      "name": "C6: To Ward Weakness",
+      "phase": "Constellation Lv. 6",
+      "desc": "Quando Kuki Shinobu attiva una reazione Electro, rigenera 1.5 energia."
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "displayName": "Aloy",
+  "description": "La cacciatrice Nora venuta da un altro mondo.",
+  "tags": ["Cryo", "Bow", "5★", "DPS"],
+  "weapons": [
+    {
+      "name": "Thundering Pulse",
+      "img": "https://img.game8.co/3441958/f896203efe9ce4f6598fa5ac23c3a196.png/show",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Polar Star",
+      "img": "https://img.game8.co/3441955/4d6e9bd57053a0002ee39fd2c79a5ded.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Skyward Harp",
+      "img": "https://img.game8.co/3346261/9c2f66fddbb0cbe55f2e79b8ac8c25a0.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Stringless",
+      "img": "https://img.game8.co/3314487/79dd9495f5329d39595706ccc31cd8f6.png/show",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Noblesse Oblige",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Blizzard Strayer",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Blizzard_Strayer.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Cryo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["ATK%", "Cryo DMG Bonus", "CRIT DMG", "CRIT Rate"],
+  "talents": [
+    "Normal Attack: Rapid Fire",
+    "Frozen Wilds",
+    "Prophecies of Dawn"
+  ],
+  "info": "Aloy è una cacciatrice versatile che sfrutta il Cryo e le sue trappole.",
+  "community_build": [],
+  "best_teams": [
+    [
+      { "name": "Aloy" },
+      { "name": "Xiangling" },
+      { "name": "Kazuha" },
+      { "name": "Diona" }
+    ],
+    [
+      { "name": "Aloy" },
+      { "name": "Xiangling" },
+      { "name": "Bennett" },
+      { "name": "Chongyun" }
+    ],
+    [
+      { "name": "Aloy" },
+      { "name": "Kamisato Ayaka" },
+      { "name": "Sangonomiya Kokomi" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Aloy" },
+      { "name": "Rosaria" },
+      { "name": "Fischl" },
+      { "name": "Sucrose" }
+    ],
+    [
+      { "name": "Aloy" },
+      { "name": "Ganyu" },
+      { "name": "Venti" },
+      { "name": "Barbara" }
+    ],
+    [
+      { "name": "Aloy" },
+      { "name": "Shenhe" },
+      { "name": "Mona" },
+      { "name": "Jean" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Rapid Fire",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "desc": "Performs up to 4 consecutive shots with a bow.\n\n<color=#ffd780ff>Normal Attack</color>\nPerforms up to 4 consecutive shots with a bow.\n\n<color=#ffd780ff>Charged Attack</color>\nPerforms a more precise Aimed Shot with increased DMG. While aiming, biting frost will accumulate on the arrowhead. A fully charged frost arrow will deal <color=#99eaff>Cryo DMG</color>.\n\n<color=#ffd780ff>Plunging Attack</color>\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/UI_GachaTypeIcon_Bow.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Rapid_Fire.png",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "21.1% + 23.8%",
+          "hit2": "43.1%",
+          "hit3": "52.8%",
+          "hit4": "65.6%",
+          "aimed": "43.9%",
+          "fully_charged": "124%",
+          "plunge": "56.8%",
+          "lowhigh": "113.6% / 141.9%"
+        },
+        {
+          "level": 2,
+          "hit1": "22.7% + 25.6%",
+          "hit2": "46.3%",
+          "hit3": "56.8%",
+          "hit4": "70.6%",
+          "aimed": "47.3%",
+          "fully_charged": "133.3%",
+          "plunge": "61.0%",
+          "lowhigh": "122.1% / 152.6%"
+        },
+        {
+          "level": 3,
+          "hit1": "24.3% + 27.4%",
+          "hit2": "49.5%",
+          "hit3": "60.8%",
+          "hit4": "75.6%",
+          "aimed": "50.7%",
+          "fully_charged": "142.6%",
+          "plunge": "65.2%",
+          "lowhigh": "130.6% / 163.3%"
+        },
+        {
+          "level": 4,
+          "hit1": "26.4% + 29.8%",
+          "hit2": "53.2%",
+          "hit3": "65.4%",
+          "hit4": "81.3%",
+          "aimed": "54.5%",
+          "fully_charged": "153.5%",
+          "plunge": "70.0%",
+          "lowhigh": "140.3% / 175.5%"
+        },
+        {
+          "level": 5,
+          "hit1": "28.0% + 31.6%",
+          "hit2": "56.4%",
+          "hit3": "69.4%",
+          "hit4": "86.3%",
+          "aimed": "57.9%",
+          "fully_charged": "162.8%",
+          "plunge": "74.2%",
+          "lowhigh": "148.8% / 186.2%"
+        },
+        {
+          "level": 6,
+          "hit1": "29.6% + 33.4%",
+          "hit2": "59.6%",
+          "hit3": "73.4%",
+          "hit4": "91.3%",
+          "aimed": "61.3%",
+          "fully_charged": "172.1%",
+          "plunge": "78.4%",
+          "lowhigh": "157.3% / 196.9%"
+        },
+        {
+          "level": 7,
+          "hit1": "31.7% + 35.8%",
+          "hit2": "63.3%",
+          "hit3": "78.0%",
+          "hit4": "97.0%",
+          "aimed": "65.1%",
+          "fully_charged": "183.0%",
+          "plunge": "83.2%",
+          "lowhigh": "167.0% / 209.1%"
+        },
+        {
+          "level": 8,
+          "hit1": "33.8% + 38.2%",
+          "hit2": "67.0%",
+          "hit3": "82.6%",
+          "hit4": "102.7%",
+          "aimed": "68.9%",
+          "fully_charged": "193.9%",
+          "plunge": "88.0%",
+          "lowhigh": "176.7% / 221.3%"
+        },
+        {
+          "level": 9,
+          "hit1": "35.9% + 40.6%",
+          "hit2": "70.7%",
+          "hit3": "87.2%",
+          "hit4": "108.4%",
+          "aimed": "72.7%",
+          "fully_charged": "204.8%",
+          "plunge": "92.8%",
+          "lowhigh": "186.4% / 233.5%"
+        },
+        {
+          "level": 10,
+          "hit1": "38.0% + 43.0%",
+          "hit2": "74.4%",
+          "hit3": "91.8%",
+          "hit4": "114.1%",
+          "aimed": "76.5%",
+          "fully_charged": "215.7%",
+          "plunge": "97.6%",
+          "lowhigh": "196.1% / 245.7%"
+        },
+        {
+          "level": 11,
+          "hit1": "40.1% + 45.4%",
+          "hit2": "78.1%",
+          "hit3": "96.4%",
+          "hit4": "119.8%",
+          "aimed": "80.3%",
+          "fully_charged": "226.6%",
+          "plunge": "102.4%",
+          "lowhigh": "205.8% / 257.9%"
+        },
+        {
+          "level": 12,
+          "hit1": "42.2% + 47.8%",
+          "hit2": "81.8%",
+          "hit3": "101.0%",
+          "hit4": "125.5%",
+          "aimed": "84.1%",
+          "fully_charged": "237.5%",
+          "plunge": "107.2%",
+          "lowhigh": "215.5% / 270.1%"
+        },
+        {
+          "level": 13,
+          "hit1": "44.3% + 50.2%",
+          "hit2": "85.5%",
+          "hit3": "105.6%",
+          "hit4": "131.2%",
+          "aimed": "87.9%",
+          "fully_charged": "248.4%",
+          "plunge": "112.0%",
+          "lowhigh": "225.2% / 282.3%"
+        },
+        {
+          "level": 14,
+          "hit1": "46.4% + 52.6%",
+          "hit2": "89.2%",
+          "hit3": "110.2%",
+          "hit4": "136.9%",
+          "aimed": "91.7%",
+          "fully_charged": "259.3%",
+          "plunge": "116.8%",
+          "lowhigh": "234.9% / 294.5%"
+        },
+        {
+          "level": 15,
+          "hit1": "48.5% + 55.0%",
+          "hit2": "92.9%",
+          "hit3": "114.8%",
+          "hit4": "142.6%",
+          "aimed": "95.5%",
+          "fully_charged": "270.2%",
+          "plunge": "121.6%",
+          "lowhigh": "244.6% / 306.7%"
+        }
+      ]
+    },
+    {
+      "name": "Frozen Wilds",
+      "desc": "Aloy throws a Freeze Bomb that explodes on impact, dealing Cryo DMG. After the explosion, the Freeze Bomb scatters into Chillwater Bomblets that explode on contact with opponents or after a short delay, dealing Cryo DMG.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Aloy/talent_2.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Frozen_Wilds.png",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "details_html": "<div class='skill-section'><b>Frozen Wilds</b><br>Aloy throws a Freeze Bomb in the targeted direction that explodes on impact, dealing <span style='color:#64bfff;font-weight:bold;'>Cryo DMG</span>. After it explodes, the Freeze Bomb will split up into many Chillwater Bomblets that explode on contact with opponents or after a short delay, dealing <span style='color:#64bfff;font-weight:bold;'>Cryo DMG</span>.<br><br>When a Freeze Bomb or Chillwater Bomblet hits an opponent, the opponent's ATK is decreased and Aloy receives 1 Coil stack. Aloy can gain up to 1 Coil stack every 0.1s.<br><br><b>Coil</b><br><ul style='margin:0 0 0 18px;padding:0;'><li>Each stack increases Aloy's Normal Attack DMG.</li><li>When Aloy has 4 Coil stacks, all stacks of Coil are cleared. She then enters the Rushing Ice state, which further increases the DMG dealt by her Normal Attacks and converts her Normal Attack DMG to <span style='color:#64bfff;font-weight:bold;'>Cryo DMG</span>.</li></ul>While in the Rushing Ice state, Aloy cannot obtain new Coil stacks. Coil effects will be cleared 30s after Aloy leaves combat.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "freeze_bomb_dmg": "176%",
+          "bomblet_dmg": "40%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "41%",
+          "rushing_ice_bonus": "56%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 2,
+          "freeze_bomb_dmg": "189.2%",
+          "bomblet_dmg": "43%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "44%",
+          "rushing_ice_bonus": "60%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 3,
+          "freeze_bomb_dmg": "202.4%",
+          "bomblet_dmg": "46%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "47%",
+          "rushing_ice_bonus": "64%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 4,
+          "freeze_bomb_dmg": "220%",
+          "bomblet_dmg": "50%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "51%",
+          "rushing_ice_bonus": "69%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 5,
+          "freeze_bomb_dmg": "233.2%",
+          "bomblet_dmg": "53%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "54%",
+          "rushing_ice_bonus": "73%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 6,
+          "freeze_bomb_dmg": "246.4%",
+          "bomblet_dmg": "56%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "57%",
+          "rushing_ice_bonus": "77%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 7,
+          "freeze_bomb_dmg": "264%",
+          "bomblet_dmg": "60%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "61%",
+          "rushing_ice_bonus": "82%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 8,
+          "freeze_bomb_dmg": "281.6%",
+          "bomblet_dmg": "64%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "65%",
+          "rushing_ice_bonus": "87%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 9,
+          "freeze_bomb_dmg": "299.2%",
+          "bomblet_dmg": "68%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "69%",
+          "rushing_ice_bonus": "92%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 10,
+          "freeze_bomb_dmg": "316.8%",
+          "bomblet_dmg": "72%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "73%",
+          "rushing_ice_bonus": "97%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 11,
+          "freeze_bomb_dmg": "334.4%",
+          "bomblet_dmg": "76%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "77%",
+          "rushing_ice_bonus": "102%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 12,
+          "freeze_bomb_dmg": "352%",
+          "bomblet_dmg": "80%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "81%",
+          "rushing_ice_bonus": "107%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 13,
+          "freeze_bomb_dmg": "374%",
+          "bomblet_dmg": "85%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "86%",
+          "rushing_ice_bonus": "113%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 14,
+          "freeze_bomb_dmg": "396%",
+          "bomblet_dmg": "90%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "91%",
+          "rushing_ice_bonus": "119%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        },
+        {
+          "level": 15,
+          "freeze_bomb_dmg": "418%",
+          "bomblet_dmg": "95%",
+          "atk_decrease": "12%",
+          "atk_decrease_duration": "6s",
+          "coil_bonus": "96%",
+          "rushing_ice_bonus": "125%",
+          "rushing_ice_duration": "10s",
+          "cd": "20s"
+        }
+      ]
+    },
+    {
+      "name": "Prophecies of Dawn",
+      "desc": "Aloy throws a Power Cell filled with Cryo in the targeted direction, then detonates it with an arrow, dealing AoE Cryo DMG.",
+      "icon": "https://sunderarmor.com/GENSHIN/Skill/1/Aloy/talent_3.png",
+      "image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Prophecies_of_Dawn.png",
+      "video": "https://youtu.be/-ofdiruqjZ8?si=DVTiIfDE0vy2GJLh",
+      "levels": [
+        { "level": 1, "skill_dmg": "359.2%", "cd": "12s", "energy_cost": "40" },
+        { "level": 2, "skill_dmg": "386.1%", "cd": "12s", "energy_cost": "40" },
+        { "level": 3, "skill_dmg": "413.0%", "cd": "12s", "energy_cost": "40" },
+        { "level": 4, "skill_dmg": "448.9%", "cd": "12s", "energy_cost": "40" },
+        { "level": 5, "skill_dmg": "475.8%", "cd": "12s", "energy_cost": "40" },
+        { "level": 6, "skill_dmg": "502.7%", "cd": "12s", "energy_cost": "40" },
+        { "level": 7, "skill_dmg": "538.6%", "cd": "12s", "energy_cost": "40" },
+        { "level": 8, "skill_dmg": "574.5%", "cd": "12s", "energy_cost": "40" },
+        { "level": 9, "skill_dmg": "610.4%", "cd": "12s", "energy_cost": "40" },
+        {
+          "level": 10,
+          "skill_dmg": "646.3%",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 11,
+          "skill_dmg": "682.2%",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 12,
+          "skill_dmg": "718.1%",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 13,
+          "skill_dmg": "763.0%",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 14,
+          "skill_dmg": "807.9%",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        { "level": 15, "skill_dmg": "852.8%", "cd": "12s", "energy_cost": "40" }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Combat Override",
+      "phase": "Ascension Phase 1",
+      "desc": "Quando Aloy riceve un buff ATK, il suo ATK aumenta del 16% per 10s."
+    },
+    {
+      "name": "Strong Strike",
+      "phase": "Ascension Phase 4",
+      "desc": "Quando Aloy è in stato Rushing Ice, il suo CRIT Rate aumenta del 10%."
+    },
+    {
+      "name": "Easy Does It",
+      "phase": "Passive",
+      "desc": "Gli animali non scappano quando Aloy si avvicina."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Star of Another World",
+      "phase": "Constellation Lv. 1",
+      "desc": "The time has not yet come for this person's corner of the night sky to light up."
+    },
+    {
+      "name": "Star of Another World",
+      "phase": "Constellation Lv. 2",
+      "desc": "The time has not yet come for this person's corner of the night sky to light up."
+    },
+    {
+      "name": "Star of Another World",
+      "phase": "Constellation Lv. 3",
+      "desc": "The time has not yet come for this person's corner of the night sky to light up."
+    },
+    {
+      "name": "Star of Another World",
+      "phase": "Constellation Lv. 4",
+      "desc": "The time has not yet come for this person's corner of the night sky to light up."
+    },
+    {
+      "name": "Star of Another World",
+      "phase": "Constellation Lv. 5",
+      "desc": "The time has not yet come for this person's corner of the night sky to light up."
+    },
+    {
+      "name": "Star of Another World",
+      "phase": "Constellation Lv. 6",
+      "desc": "The time has not yet come for this person's corner of the night sky to light up."
+    }
+  ],
+  "ascension_materials": [
+    { "level": 20, "materials": [{ "name": "Mora", "quantity": 20000 }] },
+    {
+      "level": 40,
+      "materials": [
+        { "name": "Shivada Jade Sliver", "quantity": 1 },
+        { "name": "Crystal Marrow", "quantity": 3 },
+        { "name": "Spectral Husk", "quantity": 3 },
+        { "name": "Crystalline Bloom", "quantity": 2 },
+        { "name": "Mora", "quantity": 40000 }
+      ]
+    },
+    {
+      "level": 50,
+      "materials": [
+        { "name": "Shivada Jade Fragment", "quantity": 3 },
+        { "name": "Crystal Marrow", "quantity": 10 },
+        { "name": "Spectral Husk", "quantity": 15 },
+        { "name": "Crystalline Bloom", "quantity": 4 },
+        { "name": "Mora", "quantity": 60000 }
+      ]
+    },
+    {
+      "level": 60,
+      "materials": [
+        { "name": "Shivada Jade Fragment", "quantity": 6 },
+        { "name": "Crystal Marrow", "quantity": 20 },
+        { "name": "Spectral Heart", "quantity": 12 },
+        { "name": "Crystalline Bloom", "quantity": 8 },
+        { "name": "Mora", "quantity": 80000 }
+      ]
+    },
+    {
+      "level": 70,
+      "materials": [
+        { "name": "Shivada Jade Chunk", "quantity": 3 },
+        { "name": "Crystal Marrow", "quantity": 30 },
+        { "name": "Spectral Heart", "quantity": 18 },
+        { "name": "Crystalline Bloom", "quantity": 12 },
+        { "name": "Mora", "quantity": 100000 }
+      ]
+    },
+    {
+      "level": 80,
+      "materials": [
+        { "name": "Shivada Jade Chunk", "quantity": 6 },
+        { "name": "Crystal Marrow", "quantity": 45 },
+        { "name": "Spectral Nucleus", "quantity": 12 },
+        { "name": "Crystalline Bloom", "quantity": 20 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 90,
+      "materials": [
+        { "name": "Shivada Jade Gemstone", "quantity": 6 },
+        { "name": "Crystal Marrow", "quantity": 60 },
+        { "name": "Spectral Nucleus", "quantity": 24 },
+        { "name": "Crystalline Bloom", "quantity": 24 },
+        { "name": "Mora", "quantity": 160000 }
+      ]
+    },
+    {
+      "total": true,
+      "materials": [
+        { "name": "Shivada Jade Sliver", "quantity": 1 },
+        { "name": "Shivada Jade Fragment", "quantity": 9 },
+        { "name": "Shivada Jade Chunk", "quantity": 9 },
+        { "name": "Shivada Jade Gemstone", "quantity": 6 },
+        { "name": "Crystal Marrow", "quantity": 168 },
+        { "name": "Spectral Husk", "quantity": 18 },
+        { "name": "Spectral Heart", "quantity": 30 },
+        { "name": "Spectral Nucleus", "quantity": 36 },
+        { "name": "Crystalline Bloom", "quantity": 46 },
+        { "name": "Mora", "quantity": 420000 }
+      ]
+    }
+  ],
+  "talent_materials": [
+    {
+      "level": 2,
+      "materials": [
+        { "name": "Teachings of Freedom", "quantity": 3 },
+        { "name": "Spectral Husk", "quantity": 6 },
+        { "name": "Mora", "quantity": 12500 }
+      ]
+    },
+    {
+      "level": 3,
+      "materials": [
+        { "name": "Guide to Freedom", "quantity": 2 },
+        { "name": "Spectral Heart", "quantity": 3 },
+        { "name": "Mora", "quantity": 17500 }
+      ]
+    },
+    {
+      "level": 4,
+      "materials": [
+        { "name": "Guide to Freedom", "quantity": 4 },
+        { "name": "Spectral Heart", "quantity": 4 },
+        { "name": "Mora", "quantity": 25000 }
+      ]
+    },
+    {
+      "level": 5,
+      "materials": [
+        { "name": "Guide to Freedom", "quantity": 6 },
+        { "name": "Spectral Heart", "quantity": 6 },
+        { "name": "Mora", "quantity": 30000 }
+      ]
+    },
+    {
+      "level": 6,
+      "materials": [
+        { "name": "Guide to Freedom", "quantity": 9 },
+        { "name": "Spectral Heart", "quantity": 9 },
+        { "name": "Mora", "quantity": 37500 }
+      ]
+    },
+    {
+      "level": 7,
+      "materials": [
+        { "name": "Philosophies of Freedom", "quantity": 4 },
+        { "name": "Spectral Nucleus", "quantity": 4 },
+        { "name": "Molten Moment", "quantity": 1 },
+        { "name": "Mora", "quantity": 120000 }
+      ]
+    },
+    {
+      "level": 8,
+      "materials": [
+        { "name": "Philosophies of Freedom", "quantity": 6 },
+        { "name": "Spectral Nucleus", "quantity": 6 },
+        { "name": "Molten Moment", "quantity": 1 },
+        { "name": "Mora", "quantity": 260000 }
+      ]
+    },
+    {
+      "level": 9,
+      "materials": [
+        { "name": "Philosophies of Freedom", "quantity": 12 },
+        { "name": "Spectral Nucleus", "quantity": 9 },
+        { "name": "Molten Moment", "quantity": 2 },
+        { "name": "Mora", "quantity": 450000 }
+      ]
+    },
+    {
+      "level": 10,
+      "materials": [
+        { "name": "Philosophies of Freedom", "quantity": 16 },
+        { "name": "Spectral Nucleus", "quantity": 12 },
+        { "name": "Molten Moment", "quantity": 2 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 700000 }
+      ]
+    },
+    {
+      "total": true,
+      "materials": [
+        { "name": "Teachings of Freedom", "quantity": 3 },
+        { "name": "Guide to Freedom", "quantity": 21 },
+        { "name": "Philosophies of Freedom", "quantity": 38 },
+        { "name": "Spectral Husk", "quantity": 6 },
+        { "name": "Spectral Heart", "quantity": 22 },
+        { "name": "Spectral Nucleus", "quantity": 31 },
+        { "name": "Molten Moment", "quantity": 6 },
+        { "name": "Crown of Insight", "quantity": 1 },
+        { "name": "Mora", "quantity": 1652500 }
+      ]
+    }
+  ]
+}

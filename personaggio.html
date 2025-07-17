@@ -1,0 +1,4346 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dettaglio Personaggio</title>
+    <link rel="stylesheet" href="dettaglio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #181c2a;
+        color: #fff;
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 4rem;
+      }
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(15, 20, 25, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        padding: 0.8rem 0;
+        backdrop-filter: blur(20px);
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem;
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        letter-spacing: 0.8px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(100, 255, 218, 0.05);
+        border: 1px solid transparent;
+      }
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+      .nav-link:hover::before {
+        left: 100%;
+      }
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.15);
+        color: #64ffda;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.2),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        transform: translateY(-2px);
+        border-color: rgba(100, 255, 218, 0.3);
+      }
+      .nav-link.active {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4),
+          0 2px 12px rgba(100, 255, 218, 0.2);
+        cursor: default;
+        font-weight: 800;
+        border-color: rgba(100, 255, 218, 0.5);
+      }
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #23263a;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 24px #0006;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+      .header img {
+        width: 96px;
+        height: 96px;
+        border-radius: 12px;
+        background: #222;
+        border-radius: 50%;
+        box-shadow: 0 4px 16px #0005;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+      }
+      .header img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px #0007;
+      }
+      .header-info {
+        flex: 1;
+      }
+      .header-info h1 {
+        margin: 0 0 8px 0;
+        font-size: 2rem;
+      }
+      .tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+      }
+      .tag {
+        background: #2d3250;
+        color: #b3c6ff;
+        border-radius: 6px;
+        padding: 2px 10px;
+        font-size: 0.9em;
+      }
+      .desc {
+        color: #b3b3b3;
+        font-size: 1.1em;
+      }
+      .section-title {
+        margin-top: 32px;
+        font-size: 1.3em;
+        color: #ffe082;
+      }
+      .build-table {
+        width: 100%;
+        margin-top: 16px;
+        border-collapse: separate;
+        border-spacing: 0 8px;
+      }
+      .build-table th,
+      .build-table td {
+        padding: 8px 12px;
+        background: #23263a;
+      }
+      .build-table th {
+        color: #ffe082;
+        text-align: left;
+      }
+      .build-table th:nth-child(2) {
+        padding-top: 24px;
+      }
+      .build-table td img {
+        width: 48px;
+        height: 48px;
+        vertical-align: middle;
+        margin-right: 8px;
+        border-radius: 6px;
+      }
+      .info-box {
+        background: #23263a;
+        border-radius: 10px;
+        padding: 16px;
+        margin-top: 16px;
+        color: #b3b3b3;
+      }
+      .priority-list {
+        display: flex;
+        gap: 16px;
+        margin: 8px 0;
+      }
+      .priority-list span {
+        background: #2d3250;
+        border-radius: 6px;
+        padding: 2px 10px;
+        color: #ffe082;
+      }
+      .build-table td#char-artifacts {
+        padding-top: 0 !important;
+      }
+      .build-table td {
+        vertical-align: top;
+      }
+      .build-table td#char-stats {
+        padding-top: 48px;
+        display: block;
+      }
+      @media (max-width: 700px) {
+        .container {
+          padding: 10px;
+        }
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      /* Effetto hover sulle immagini dei personaggi nei Best Teams */
+      .best-team-img {
+        transition: transform 0.18s cubic-bezier(0.4, 1.3, 0.6, 1);
+      }
+      .best-team-img:hover {
+        transform: scale(1.18);
+        z-index: 2;
+        box-shadow: 0 4px 16px #0007;
+      }
+      /* Modal Styles migliorati */
+      #skill-modal {
+        display: none;
+        position: fixed;
+        z-index: 3000;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 14, 30, 0.85);
+        align-items: center;
+        justify-content: center;
+      }
+      #skill-modal-content {
+        background: #20283a;
+        border-radius: 18px;
+        max-width: 500px;
+        max-height: 80vh;
+        width: 90vw;
+        box-shadow: 0 8px 40px #000b;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      #skill-modal-close {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #ffe082;
+        cursor: pointer;
+        z-index: 10;
+      }
+      #skill-modal-media {
+        width: 100%;
+        height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #181c2a;
+        overflow: hidden;
+      }
+      #skill-modal-media img,
+      #skill-modal-media iframe {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 0;
+      }
+      #skill-modal-media iframe {
+        width: 100%;
+        height: 100%;
+      }
+      #skill-modal-details {
+        padding: 20px 20px 16px 20px;
+        background: #20283a;
+        color: #e0e0e0;
+        font-size: 1em;
+        overflow-y: auto;
+        max-height: 40vh;
+      }
+      #skill-modal-title {
+        font-size: 1.3em;
+        font-weight: 700;
+        text-align: center;
+        margin: 12px 0 12px 0;
+        color: #ffe082;
+        letter-spacing: 0.5px;
+      }
+      #skill-modal-details b {
+        color: #ffe082;
+        font-weight: 700;
+        font-size: 1.08em;
+      }
+      #skill-modal-details .skill-section {
+        margin-bottom: 10px;
+      }
+      /* Tabella valori skill nel modal */
+      #skill-modal-level-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 12px 0 8px 0;
+      }
+      #skill-modal-level-row button {
+        background: #23263a;
+        color: #ffe082;
+        border: none;
+        font-size: 1.1em;
+        border-radius: 6px;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        font-weight: 700;
+        transition: background 0.15s;
+      }
+      #skill-modal-level-row button:active {
+        background: #1a1f2e;
+      }
+      #skill-modal-level-row span {
+        font-size: 1em;
+        font-weight: 700;
+        color: #ffe082;
+        background: #23263a;
+        padding: 2px 12px;
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      #skill-modal-values-table {
+        width: 100%;
+        margin: 0 auto 0 auto;
+        color: #e0e0e0;
+        font-size: 0.9em;
+        border-collapse: collapse;
+        margin-bottom: 8px;
+      }
+      #skill-modal-values-table td {
+        padding: 3px 6px 3px 0;
+        border: none;
+      }
+      #skill-modal-values-table tr td:first-child {
+        color: #ffe082;
+        font-weight: 600;
+        text-align: left;
+        min-width: 120px;
+      }
+      #skill-modal-values-table tr td:last-child {
+        text-align: right;
+      }
+      @media (max-width: 600px) {
+        #skill-modal-content {
+          max-width: 98vw;
+        }
+        #skill-modal-details {
+          padding: 14px 6vw 14px 6vw;
+        }
+        #skill-modal-media {
+          height: 180px;
+        }
+      }
+      .skill-modal-content {
+        max-height: 80vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        width: 95vw;
+        background: #1a2233;
+        border-radius: 14px;
+        box-shadow: 0 8px 32px #000a;
+        padding: 24px 0 2px 0;
+        position: relative;
+      }
+      #skill-modal-media,
+      #skill-modal-title {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: #1a2233;
+      }
+      .skill-modal-img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 14px 14px 0 0;
+        display: block;
+        max-width: 100%;
+        max-height: 400px;
+      }
+      @media (max-width: 600px) {
+        .skill-modal-img {
+          height: 180px;
+          max-height: 220px;
+        }
+      }
+      .skill-modal-scrollable {
+        overflow-y: auto;
+        flex: 1 1 0;
+        min-height: 0;
+        padding: 0 1px 1px 1px;
+        max-height: calc(80vh - 250px - 32px);
+      }
+      .skill-modal-details {
+        font-size: 0.82em;
+        padding: 0;
+      }
+      .skill-section {
+        margin-bottom: 1px;
+      }
+      .dendro {
+        color: #7be676;
+        font-weight: bold;
+      }
+      .aoe-dendro {
+        color: #baffb0;
+        font-weight: bold;
+      }
+      #skill-modal-values-table {
+        width: 100%;
+        margin-top: 12px;
+        background: #20283a;
+        border-radius: 10px;
+        border-collapse: separate;
+        border-spacing: 0 4px;
+        font-size: 1em;
+      }
+      #skill-modal-values-table td {
+        padding: 1px 1px;
+        font-size: 0.82em;
+      }
+      #skill-modal-level-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        margin: 1px 0 1px 0;
+      }
+      .skill-modal-level-btn {
+        background: #23263a;
+        color: #ffe082;
+        border: none;
+        border-radius: 6px;
+        padding: 4px 12px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .skill-modal-level-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      /* Responsive per il modal ultimate di Alhaitham */
+      @media (max-width: 600px) {
+        #alhaitham-ult-modal-media {
+          height: 180px !important;
+        }
+        #alhaitham-ult-modal .modal-content {
+          max-width: 98vw !important;
+        }
+      }
+      .stats-level-btn {
+        background: #20263a;
+        color: #b3c6ff;
+        border: none;
+        border-radius: 18px;
+        padding: 7px 22px;
+        font-size: 1.08em;
+        font-weight: 600;
+        margin-right: 6px;
+        cursor: pointer;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        box-shadow: 0 2px 8px #0002;
+        outline: none;
+      }
+      .stats-level-btn:last-child {
+        margin-right: 0;
+      }
+      .stats-level-btn.active,
+      .stats-level-btn:focus {
+        background: #ffe082;
+        color: #232b3e;
+        box-shadow: 0 2px 12px #ffe08244;
+      }
+      .stats-level-btn:hover:not(.active) {
+        background: #29304a;
+        color: #ffe082;
+      }
+      .asc-mat-img {
+        width: 56px;
+        height: 56px;
+        border-radius: 10px;
+        box-shadow: 0 3px 12px #0006;
+        transition: transform 0.18s, box-shadow 0.18s;
+        cursor: pointer;
+        vertical-align: middle;
+        background: #23263a;
+        display: inline-block;
+        position: relative;
+        box-sizing: content-box;
+        transform-origin: center center;
+      }
+      .asc-mat-img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 2px 8px #64ffda66;
+        z-index: 2;
+      }
+      .asc-mat-tooltip {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 110%;
+        transform: translateX(-50%);
+        background: #232b3e;
+        color: #ffe082;
+        padding: 6px 14px;
+        border-radius: 8px;
+        font-size: 1em;
+        white-space: nowrap;
+        box-shadow: 0 2px 12px #0008;
+        z-index: 10;
+        pointer-events: none;
+      }
+      .asc-mat-img:hover .asc-mat-tooltip {
+        display: block;
+      }
+
+      /* Forza tutte le celle della tabella ascension ad avere la stessa altezza */
+      #ascension-materials-table {
+        table-layout: fixed;
+      }
+
+      #ascension-materials-table td {
+        height: 220px !important;
+        vertical-align: middle !important;
+        padding: 10px 8px !important;
+        position: relative;
+        overflow: visible;
+      }
+
+      #ascension-materials-table td:first-child {
+        height: auto !important;
+        vertical-align: top !important;
+        padding: 10px 8px !important;
+      }
+
+      /* Contenitore per ogni materiale con altezza fissa */
+      .material-cell-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 200px;
+        width: 100%;
+      }
+      .material-img-zoom {
+        width: 56px;
+        height: 56px;
+        border-radius: 10px;
+        box-shadow: 0 3px 12px #0006;
+        background: #23263a;
+        transition: transform 0.18s, box-shadow 0.18s;
+        transform-origin: center center;
+        display: block;
+        z-index: 1;
+      }
+      .material-img-zoom:hover {
+        transform: scale(1.08);
+        box-shadow: 0 2px 8px #64ffda66;
+        z-index: 2;
+      }
+
+      .material-quantity {
+        position: absolute;
+        top: 95px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.08em;
+        font-weight: 600;
+        z-index: 3;
+        color: #fff;
+        text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
+      }
+
+      .material-name {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.93em;
+        color: #b3c6ff;
+        text-align: center;
+        line-height: 1.2;
+        max-width: 98%;
+        min-width: 90px;
+        white-space: normal;
+        word-break: break-word;
+      }
+      .toc-link {
+        color: #ffe082;
+        text-decoration: none;
+        padding: 6px 18px;
+        border-radius: 8px;
+        transition: background 0.18s, color 0.18s;
+        background: none;
+        border: none;
+        outline: none;
+      }
+      .toc-link:hover,
+      .toc-link:focus {
+        background: #23263a;
+        color: #64ffda;
+      }
+      @media (max-width: 700px) {
+        #toc-bottom {
+          font-size: 0.98em;
+          gap: 10px;
+          padding: 10px 0 8px 0;
+        }
+        .toc-link {
+          padding: 4px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="gestione personaggio.html" class="nav-link" id="nav-gestione"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls"></span>
+    </nav>
+    <div class="container">
+      <div class="header">
+        <img
+          id="char-img"
+          src="images/characters/placeholder.svg"
+          alt="Immagine personaggio"
+        />
+        <div class="header-info">
+          <h1 id="char-name">Nome Personaggio</h1>
+          <div class="tags" id="char-tags"></div>
+          <div class="desc" id="char-desc"></div>
+        </div>
+      </div>
+      <div class="section-title" id="best-builds-section">
+        Best <span id="char-name-inline">Personaggio</span> Builds
+      </div>
+      <table class="build-table">
+        <tr>
+          <th>Weapons</th>
+          <th>Artifacts</th>
+          <th>Recommended Primary Stats</th>
+        </tr>
+        <tr>
+          <td id="char-weapons"></td>
+          <td id="char-artifacts"></td>
+          <td id="char-stats"></td>
+        </tr>
+      </table>
+      <div class="section-title">Substats Priority</div>
+      <div class="priority-list" id="char-substats"></div>
+      <div class="section-title">Talents Priority</div>
+      <div class="priority-list" id="char-talents"></div>
+      <div class="info-box" id="char-info"></div>
+      <div id="community-section"></div>
+      <div id="char-abilities-section"></div>
+      <!-- Modal per dettagli skill -->
+      <div
+        id="skill-modal"
+        style="
+          display: none;
+          position: fixed;
+          z-index: 3000;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(10, 14, 30, 0.85);
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div
+          id="skill-modal-content"
+          style="
+            background: #20283a;
+            border-radius: 18px;
+            max-width: 480px;
+            width: 95vw;
+            box-shadow: 0 8px 40px #000b;
+            position: relative;
+            overflow: hidden;
+          "
+        >
+          <button
+            id="skill-modal-close"
+            style="
+              position: absolute;
+              top: 10px;
+              right: 16px;
+              font-size: 2rem;
+              background: none;
+              border: none;
+              color: #ffe082;
+              cursor: pointer;
+              z-index: 10;
+            "
+          >
+            &times;
+          </button>
+          <div id="skill-modal-media"></div>
+          <div
+            id="skill-modal-title"
+            style="
+              font-size: 1.5em;
+              font-weight: 700;
+              text-align: center;
+              margin: 18px 0 18px 0;
+              color: #ffe082;
+              letter-spacing: 0.5px;
+            "
+          ></div>
+          <div
+            id="skill-modal-details"
+            style="
+              padding: 28px 28px 22px 28px;
+              background: #20283a;
+              color: #e0e0e0;
+              font-size: 1.08em;
+            "
+          ></div>
+        </div>
+      </div>
+      <!-- Modal Ultimate Alhaitham -->
+      <div
+        id="alhaitham-ult-modal"
+        style="
+          display: none;
+          position: fixed;
+          z-index: 4000;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(10, 14, 30, 0.85);
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div
+          style="
+            background: #20283a;
+            border-radius: 18px;
+            max-width: 600px;
+            width: 95vw;
+            box-shadow: 0 8px 40px #000b;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+          "
+        >
+          <button
+            id="alhaitham-ult-modal-close"
+            style="
+              position: absolute;
+              top: 10px;
+              right: 16px;
+              font-size: 2rem;
+              background: none;
+              border: none;
+              color: #ffe082;
+              cursor: pointer;
+              z-index: 10;
+            "
+          >
+            &times;
+          </button>
+          <div
+            id="alhaitham-ult-modal-media"
+            style="
+              width: 100%;
+              height: 320px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #181c2a;
+              overflow: hidden;
+            "
+          >
+            <iframe
+              id="alhaitham-ult-video"
+              src="https://www.youtube.com/embed/1t2ZzF3gQ6A"
+              frameborder="0"
+              allowfullscreen
+              style="
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                display: block;
+              "
+            ></iframe>
+          </div>
+          <div
+            id="alhaitham-ult-modal-title"
+            style="
+              font-size: 1.5em;
+              font-weight: 700;
+              text-align: center;
+              margin: 18px 0 18px 0;
+              color: #ffe082;
+              letter-spacing: 0.5px;
+            "
+          >
+            Particular Field: Fetters of Phenomena
+          </div>
+          <div
+            id="alhaitham-ult-modal-details"
+            style="
+              padding: 28px 28px 22px 28px;
+              background: #20283a;
+              color: #e0e0e0;
+              font-size: 1.08em;
+            "
+          >
+            <div style="margin-bottom: 12px">
+              Creates a Particular Binding Field and deals multiple instances of
+              <span style="color: #baffb0; font-weight: bold"
+                >AoE Dendro DMG.</span
+              ><br /><br />
+              <span style="color: #ffe082"
+                >If Chisel-Light Mirrors exist when this ability is unleashed,
+                all such Mirrors will be consumed and increase the number of DMG
+                instances dealt.<br />
+                2s after this ability is unleashed, if 0/1/2/3 Mirrors were
+                consumed, Alhaitham will generate 3/2/1/0 new Mirrors in
+                turn.</span
+              >
+            </div>
+            <div
+              style="
+                text-align: center;
+                font-size: 1.15em;
+                font-weight: 700;
+                margin-bottom: 8px;
+              "
+            >
+              Level
+              <span
+                style="
+                  background: #23263a;
+                  padding: 2px 16px;
+                  border-radius: 8px;
+                  color: #ffe082;
+                "
+                >1</span
+              >
+            </div>
+            <table
+              style="
+                width: 100%;
+                margin: 0 auto 0 auto;
+                color: #e0e0e0;
+                font-size: 1.04em;
+                border-collapse: collapse;
+                margin-bottom: 8px;
+                background: #20283a;
+                border-radius: 10px;
+              "
+            >
+              <tr>
+                <td
+                  style="
+                    color: #ffe082;
+                    font-weight: 600;
+                    text-align: left;
+                    min-width: 120px;
+                  "
+                >
+                  Single-Instance DMG
+                </td>
+                <td style="text-align: right">
+                  121.6% ATK + 97.3% Elemental Mastery
+                </td>
+              </tr>
+              <tr>
+                <td>Basic Attack Instances</td>
+                <td style="text-align: right">4</td>
+              </tr>
+              <tr>
+                <td>1-Mirror Attack Instances</td>
+                <td style="text-align: right">6</td>
+              </tr>
+              <tr>
+                <td>2-Mirror Attack Instances</td>
+                <td style="text-align: right">8</td>
+              </tr>
+              <tr>
+                <td>3-Mirror Attack Instances</td>
+                <td style="text-align: right">10</td>
+              </tr>
+              <tr>
+                <td>CD</td>
+                <td style="text-align: right">18s</td>
+              </tr>
+              <tr>
+                <td>Energy Cost</td>
+                <td style="text-align: right">70</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- STATS SECTION -->
+    <div class="container" id="stats-section" style="margin-top: 32px">
+      <div class="section-title" style="margin-bottom: 12px">Stats</div>
+      <div
+        style="
+          background: #181f2e;
+          border-radius: 12px;
+          padding: 24px 18px 18px 18px;
+          box-shadow: 0 2px 12px #0004;
+        "
+      >
+        <div
+          id="stats-level-buttons"
+          style="display: flex; gap: 12px; margin-bottom: 18px"
+        >
+          <button class="stats-level-btn active" data-level="1">Lv.1</button>
+          <button class="stats-level-btn" data-level="20">Lv.20</button>
+          <button class="stats-level-btn" data-level="40">Lv.40</button>
+          <button class="stats-level-btn" data-level="50">Lv.50</button>
+          <button class="stats-level-btn" data-level="60">Lv.60</button>
+          <button class="stats-level-btn" data-level="70">Lv.70</button>
+          <button class="stats-level-btn" data-level="80">Lv.80</button>
+          <button class="stats-level-btn" data-level="90">Lv.90</button>
+        </div>
+        <table
+          style="
+            width: 100%;
+            background: #232b3e;
+            border-radius: 8px;
+            overflow: hidden;
+            color: #e0e0e0;
+          "
+        >
+          <thead>
+            <tr style="background: #20263a; color: #b3c6ff">
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600">
+                Before Ascension
+              </th>
+              <th style="padding: 10px 0; font-weight: 600">After Ascension</th>
+            </tr>
+          </thead>
+          <tbody id="stats-table-body">
+            <!-- Popolato da JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- ASCENSION MATERIALS SECTION -->
+    <div class="container" id="ascension-section" style="margin-top: 32px">
+      <div class="section-title" style="margin-bottom: 12px">
+        Ascension Materials
+      </div>
+      <div
+        style="
+          background: #181f2e;
+          border-radius: 12px;
+          padding: 24px 18px 18px 18px;
+          box-shadow: 0 2px 12px #0004;
+        "
+      >
+        <table
+          id="ascension-materials-table"
+          style="
+            width: 100%;
+            background: #232b3e;
+            border-radius: 8px;
+            overflow: hidden;
+            color: #e0e0e0;
+          "
+        >
+          <thead>
+            <tr style="background: #20263a; color: #b3c6ff">
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+            </tr>
+          </thead>
+          <tbody id="ascension-materials-tbody">
+            <!-- Popolato da JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- TALENT MATERIALS SECTION -->
+    <div class="container" id="talent-section" style="margin-top: 32px">
+      <div class="section-title" style="margin-bottom: 12px">
+        Talent Materials
+      </div>
+      <div
+        style="
+          background: #181f2e;
+          border-radius: 12px;
+          padding: 24px 18px 18px 18px;
+          box-shadow: 0 2px 12px #0004;
+        "
+      >
+        <table
+          id="talent-materials-table"
+          style="
+            width: 100%;
+            background: #232b3e;
+            border-radius: 8px;
+            overflow: hidden;
+            color: #e0e0e0;
+          "
+        >
+          <thead>
+            <tr style="background: #20263a; color: #b3c6ff">
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+              <th style="padding: 10px 0; font-weight: 600"></th>
+            </tr>
+          </thead>
+          <tbody id="talent-materials-tbody">
+            <!-- Popolato da JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- TAB CONTENTS (TOC) -->
+    <div
+      id="toc-bottom"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(24, 28, 42, 0.98);
+        box-shadow: 0 -2px 16px #0007;
+        z-index: 5000;
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        padding: 16px 0 12px 0;
+        font-size: 1.13em;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        border-top: 2px solid #23263a;
+      "
+    >
+      <a href="#talent-section" class="toc-link">Talent Materials</a>
+      <a href="#ascension-section" class="toc-link">Ascension Materials</a>
+      <a href="#stats-section" class="toc-link">Stats</a>
+      <a href="#constellations-section" class="toc-link">Constellations</a>
+      <a href="#best-builds-section" class="toc-link">Best Alhaitham Builds</a>
+      <a href="#best-teams-section" class="toc-link">Best Alhaitham Team</a>
+    </div>
+    <script>
+      // Scroll istantaneo senza animazione
+      document.querySelectorAll(".toc-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            window.scrollTo({
+              top: target.getBoundingClientRect().top + window.scrollY - 24,
+              left: 0,
+              behavior: "auto", // istantaneo
+            });
+          }
+        });
+      });
+    </script>
+    <script>
+      // Funzione per ottenere il parametro dalla query string
+      function getQueryParam(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      }
+
+      // Variabile globale per il nome del personaggio (necessaria per la logica del modal)
+      let charName = getQueryParam("nome") || "albedo";
+
+      // Funzione per controllare se un file esiste
+      async function fetchCharacterData(name) {
+        // Gestione speciale per Traveler Electro
+        if (
+          name.toLowerCase().includes("traveler") &&
+          name.toLowerCase().includes("electro")
+        ) {
+          const file = "/characters/Traveler(Electro).json";
+          try {
+            const res = await fetch(file);
+            if (res.ok) {
+              console.log("Carico da file singolo:", file);
+              return await res.json();
+            }
+          } catch (e) {
+            console.error("Errore fetch file singolo:", e);
+          }
+        }
+        // Gestione speciale per Traveler Geo
+        if (
+          name.toLowerCase().includes("traveler") &&
+          name.toLowerCase().includes("geo")
+        ) {
+          const file = "/characters/Traveler(Geo).json";
+          try {
+            const res = await fetch(file);
+            if (res.ok) {
+              console.log("Carico da file singolo:", file);
+              return await res.json();
+            }
+          } catch (e) {
+            console.error("Errore fetch file singolo:", e);
+          }
+        }
+        // Gestione speciale per Traveler Hydro
+        if (
+          name.toLowerCase().includes("traveler") &&
+          name.toLowerCase().includes("hydro")
+        ) {
+          const file = "/characters/Traveler(Hydro).json";
+          try {
+            const res = await fetch(file);
+            if (res.ok) {
+              console.log("Carico da file singolo:", file);
+              return await res.json();
+            }
+          } catch (e) {
+            console.error("Errore fetch file singolo:", e);
+          }
+        }
+        // Gestione speciale per Traveler Pyro
+        if (
+          name.toLowerCase().includes("traveler") &&
+          name.toLowerCase().includes("pyro")
+        ) {
+          const file = "/characters/Traveler(Pyro).json";
+          try {
+            const res = await fetch(file);
+            if (res.ok) {
+              console.log("Carico da file singolo:", file);
+              return await res.json();
+            }
+          } catch (e) {
+            console.error("Errore fetch file singolo:", e);
+          }
+        }
+        // Gestione speciale per Traveler Anemo
+        if (
+          name.toLowerCase().includes("traveler") &&
+          name.toLowerCase().includes("anemo")
+        ) {
+          const file = "/characters/Traveler(Anemo).json";
+          try {
+            const res = await fetch(file);
+            if (res.ok) {
+              console.log("Carico da file singolo:", file);
+              return await res.json();
+            }
+          } catch (e) {
+            console.error("Errore fetch file singolo:", e);
+          }
+        }
+        // Gestione speciale per Traveler Dendro
+        if (
+          name.toLowerCase().includes("traveler") &&
+          name.toLowerCase().includes("dendro")
+        ) {
+          const file = "/characters/traveler_dendro.json";
+          try {
+            const res = await fetch(file);
+            if (res.ok) {
+              console.log("Carico da file singolo:", file);
+              return await res.json();
+            }
+          } catch (e) {
+            console.error("Errore fetch file singolo:", e);
+          }
+        }
+        // Gestione speciale per Baizhu
+        if (name.toLowerCase() === "baizhu") {
+          const file = "/characters/baizhu.json";
+          try {
+            const res = await fetch(file);
+            if (res.ok) {
+              const data = await res.json();
+              // Se il file ha la chiave "baizhu", restituisci solo l'oggetto interno
+              if (data.baizhu) return data.baizhu;
+              return data;
+            }
+          } catch (e) {
+            console.error("Errore fetch file singolo:", e);
+          }
+        }
+        // Gestione speciale per Barbara
+        if (name.toLowerCase() === "barbara") {
+          const file = "/characters/barbara.json";
+          try {
+            const res = await fetch(file);
+            if (res.ok) {
+              const data = await res.json();
+              // Se il file ha la chiave "barbara", restituisci solo l'oggetto interno
+              if (data.barbara) return data.barbara;
+              return data;
+            }
+          } catch (e) {
+            console.error("Errore fetch file singolo:", e);
+          }
+        }
+        // Normalizza il nome per il file: minuscolo, spazi/parentesi/virgole/accents/"-" in underscore, rimuovi caratteri strani
+        let fileName = name
+          .toLowerCase()
+          .replace(/\s+/g, "_")
+          .replace(/[()\[\]\-]/g, "_")
+          .replace(/[^a-z0-9_]/g, "") // solo lettere, numeri, underscore
+          .replace(/_+/g, "_"); // sostituisci underscore multipli
+        const file = `/characters/${fileName}.json`;
+        try {
+          const res = await fetch(file);
+          if (res.ok) {
+            console.log("Carico da file singolo:", file);
+            return await res.json();
+          }
+        } catch (e) {
+          console.error("Errore fetch file singolo:", e);
+        }
+        // Fallback: carica da character_details.json
+        console.log("Carico da character_details.json");
+        const detailsData = await fetch("/character_details.json").then((r) =>
+          r.json()
+        );
+        return detailsData[name.toLowerCase()];
+      }
+
+      // Carica dati dinamicamente e popola la pagina
+      Promise.all([
+        fetchCharacterData(charName),
+        fetch("/character.json").then((res) => res.json()),
+      ]).then(([charDetails, baseData]) => {
+        if (!charDetails) {
+          alert("Dati del personaggio non trovati!");
+          return;
+        }
+        // Usa sempre l'immagine principale da character.json
+        let charImg = "images/characters/placeholder.svg";
+        if (baseData.characters) {
+          // Gestione speciale per Traveler Anemo
+          let searchName = charDetails.displayName || charName;
+          if (
+            searchName.toLowerCase().includes("traveler") &&
+            searchName.toLowerCase().includes("anemo")
+          ) {
+            searchName = "Traveler(Anemo)";
+          }
+          // Gestione speciale per Traveler Electro
+          if (
+            searchName.toLowerCase().includes("traveler") &&
+            searchName.toLowerCase().includes("electro")
+          ) {
+            searchName = "Traveler (Electro)";
+          }
+          // Gestione speciale per Traveler Dendro
+          if (
+            searchName.toLowerCase().includes("traveler") &&
+            searchName.toLowerCase().includes("dendro")
+          ) {
+            searchName = "Traveler (Dendro)";
+          }
+          // Gestione speciale per Traveler Geo
+          if (
+            searchName.toLowerCase().includes("traveler") &&
+            searchName.toLowerCase().includes("geo")
+          ) {
+            searchName = "Traveler (Geo)";
+          }
+          // Gestione speciale per Traveler Hydro
+          if (
+            searchName.toLowerCase().includes("traveler") &&
+            searchName.toLowerCase().includes("hydro")
+          ) {
+            searchName = "Traveler (Hydro)";
+          }
+          // Gestione speciale per Traveler Pyro
+          if (
+            searchName.toLowerCase().includes("traveler") &&
+            searchName.toLowerCase().includes("pyro")
+          ) {
+            searchName = "Traveler (Pyro)";
+          }
+
+          const baseChar = baseData.characters.find(
+            (c) => c.name.toLowerCase() === searchName.toLowerCase()
+          );
+          if (baseChar && baseChar.image) charImg = baseChar.image;
+        }
+        document.getElementById("char-img").src = charImg;
+        // Format Traveler names to display on two lines
+        let displayName = charDetails.displayName || charName;
+        if (/^Traveler \(.+\)$/.test(displayName)) {
+          displayName = displayName.replace(
+            /^(Traveler) \((.+)\)$/i,
+            "$1<br>($2)"
+          );
+        }
+        document.getElementById("char-name").innerHTML = displayName;
+        document.getElementById("char-name-inline").innerHTML = displayName;
+        // Tags
+        const tags = (charDetails.tags || [])
+          .map((t) => `<span class=\"tag\">${t}</span>`)
+          .join(" ");
+        document.getElementById("char-tags").innerHTML = tags;
+        document.getElementById("char-desc").textContent =
+          charDetails.description || "";
+        // Weapons
+        document.getElementById("char-weapons").innerHTML = (
+          charDetails.weapons || []
+        )
+          .map(
+            (w) =>
+              `<div style='margin-bottom:8px;display:flex;align-items:flex-start;'><img class='best-team-img' src="${
+                w.img
+              }" alt="" style="width:64px;height:64px;border-radius:12px;background:#23263a;box-shadow:0 2px 8px #0005;"><div style='padding-left:8px;display:flex;flex-direction:column;justify-content:flex-start;'>${
+                w.name
+              }<br><span style=\"color:#ffe082;font-weight:bold;display:block;margin-top:2px;\">${
+                w.note || ""
+              }</span></div></div>`
+          )
+          .join("");
+        // Artifacts
+        document.getElementById("char-artifacts").innerHTML = (
+          charDetails.artifacts || []
+        )
+          .map((a) => {
+            if (
+              a.name === "Golden Troupe (2)" ||
+              a.name === "Archaic Petra (2)" ||
+              a.name === "Deepwood Memories (2)" ||
+              a.name === "Wanderer's Troupe (2)" ||
+              a.name === "Emblem of Severed Fate (2)"
+            )
+              return "";
+            if (a.name.includes("+")) {
+              // Se img è un array, mostra solo quelle immagini
+              if (Array.isArray(a.img)) {
+                let imgs = a.img
+                  .map(
+                    (url) => `<img class='best-team-img' src="${url}" alt="" />`
+                  )
+                  .join("");
+                return `<div style='margin-bottom:8px;display:flex;align-items:flex-start;'><div class="artifact-img-group">${imgs}</div><div style='padding-left:8px;display:flex;flex-direction:column;justify-content:flex-start;'>${
+                  a.name
+                }<br><span style=\"color:#ffe082;font-weight:bold;display:block;margin-top:2px;\">${
+                  a.note || ""
+                }</span></div></div>`;
+              }
+              // Altrimenti, fallback vecchio metodo
+              const parts = a.name.split("+").map((s) => s.trim());
+              let imgs = [];
+              for (const part of parts) {
+                const found = (charDetails.artifacts || []).find(
+                  (x) => part && x.name.startsWith(part)
+                );
+                if (found) {
+                  if (Array.isArray(found.img)) {
+                    found.img.forEach((url) => {
+                      imgs.push(
+                        `<img class='best-team-img' src="${
+                          url !== "images/characters/placeholder.svg"
+                            ? url
+                            : "images/characters/placeholder.svg"
+                        }" alt="" />`
+                      );
+                    });
+                  } else {
+                    imgs.push(
+                      `<img class='best-team-img' src="${
+                        found.img !== "images/characters/placeholder.svg"
+                          ? found.img
+                          : "images/characters/placeholder.svg"
+                      }" alt="" />`
+                    );
+                  }
+                }
+              }
+              return `<div style='margin-bottom:8px;display:flex;align-items:flex-start;'><div class="artifact-img-group">${imgs.join(
+                ""
+              )}</div><div style='padding-left:8px;display:flex;flex-direction:column;justify-content:flex-start;'>${
+                a.name
+              }<br><span style=\"color:#ffe082;font-weight:bold;display:block;margin-top:2px;\">${
+                a.note || ""
+              }</span></div></div>`;
+            } else {
+              // Supporta anche img come array per artefatti "singoli"
+              if (Array.isArray(a.img)) {
+                let imgs = a.img
+                  .map(
+                    (url) =>
+                      `<img class='best-team-img' src="${
+                        url !== "images/characters/placeholder.svg"
+                          ? url
+                          : "images/characters/placeholder.svg"
+                      }" alt="" />`
+                  )
+                  .join("");
+                return `<div style='margin-bottom:8px;display:flex;align-items:flex-start;'><div class="artifact-img-group">${imgs}</div><div style='padding-left:8px;display:flex;flex-direction:column;justify-content:flex-start;'>${
+                  a.name
+                }<br><span style=\"color:#ffe082;font-weight:bold;display:block;margin-top:2px;\">${
+                  a.note || ""
+                }</span></div></div>`;
+              } else {
+                return `<div style='margin-bottom:8px;display:flex;align-items:flex-start;'><img class='best-team-img' src="${
+                  a.img
+                }" alt="" /><div style='padding-left:8px;display:flex;flex-direction:column;justify-content:flex-start;'>${
+                  a.name
+                }<br><span style=\"color:#ffe082;font-weight:bold;display:block;margin-top:2px;\">${
+                  a.note || ""
+                }</span></div></div>`;
+              }
+            }
+          })
+          .join("");
+        // Stats
+        document.getElementById("char-stats").innerHTML = (
+          charDetails.stats || []
+        )
+          .map((s) => `<div><b>${s.type}:</b> ${s.value}</div>`)
+          .join("");
+        // Substats
+        document.getElementById("char-substats").innerHTML = (
+          charDetails.substats || []
+        )
+          .map((s) => `<span>${s}</span>`)
+          .join("");
+        // Talents
+        document.getElementById("char-talents").innerHTML = (
+          charDetails.talents || []
+        )
+          .map((t) => `<span>${t}</span>`)
+          .join("");
+        // Descrizione aggiuntiva per Talents Priority di Albedo
+        if ((charDetails.displayName || charName).toLowerCase() === "albedo") {
+          const talentsPriorityDesc = `<div class='talents-priority-desc' style='margin-top:10px;color:#ffe082;background:#23263a;padding:12px 16px;border-radius:10px;font-size:1.05em;'>
+            <b>Albedo's Elemental Skill particle generation</b> is completely based on RNG, similar to Zhongli, but with better odds of around 20-30% chance to generate particles.<br><br>
+            This makes Albedo a reliable EM battery for his teammates, especially in teams that rely on Elemental Reactions like <b>Melt</b> or <b>Vaporize</b>.<br><br>
+            To maximize Albedo's particle generation, it's recommended to use him with a high <b>ER Artifact set</b> and a Weapon that provides <b>EM</b> or <b>ER</b> bonus effects.<br><br>
+            Some popular team compositions that utilize Albedo's particle generation include:<br>
+            <ul style='margin:8px 0 8px 24px;'>
+              <li>Albedo as the main EM battery for a <b>Melt</b> team</li>
+              <li>Albedo as a support character for a <b>Vaporize</b> team</li>
+            </ul>
+            When farming for Albedo's materials, players can visit locations like <b>Spiral Abyss</b> or <b>Stormbearer Mountain</b> to collect Crystal and Ore resources.
+          </div>`;
+          document
+            .getElementById("char-talents")
+            .insertAdjacentHTML("afterend", talentsPriorityDesc);
+        }
+        // Info box
+        document.getElementById("char-info").innerHTML = charDetails.info || "";
+        // Abilità, passivi e costellazioni
+        function renderAbilitiesSection(char) {
+          if (!char.skills && !char.passive_talents && !char.constellations)
+            return;
+          let html =
+            "<div style='margin-top:48px;max-width:1200px;margin-left:auto;margin-right:auto;'>";
+          if (char.skills) {
+            html += `<div style='font-size:2rem;font-weight:700;margin-bottom:12px;'>${char.displayName} Skills</div><div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:32px;'>`;
+            char.skills.forEach((skill, idx) => {
+              html += `<div class='skill-card' data-skill-idx='${idx}' style='cursor:pointer;background:#20283a;border-radius:14px;padding:24px 18px;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transition:box-shadow 0.18s;'>`;
+              html += `<div style='font-size:1.2em;font-weight:700;margin-bottom:8px;'>${skill.name}</div>`;
+              if (skill.icon)
+                html += `<img src='${skill.icon}' alt='' style='width:48px;height:48px;opacity:0.4;margin-bottom:8px;'>`;
+              html += `<div style='color:#b3b3b3;font-size:1.08em;'>${skill.desc}</div>`;
+              html += `</div>`;
+            });
+            html += `</div>`;
+          }
+          if (char.passive_talents) {
+            html += `<div style='font-size:2rem;font-weight:700;margin-bottom:12px;'>Passive Talent</div><div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:32px;'>`;
+            char.passive_talents.forEach((talent) => {
+              html += `<div style='background:#20283a;border-radius:14px;padding:24px 18px;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;'>`;
+              html += `<div style='font-size:1.1em;font-weight:700;margin-bottom:8px;'>${talent.name}</div>`;
+              if (talent.phase)
+                html += `<div style='font-size:0.98em;color:#ffe082;margin-bottom:4px;'>${talent.phase}</div>`;
+              html += `<div style='color:#b3b3b3;font-size:1.08em;'>${talent.desc}</div>`;
+              html += `</div>`;
+            });
+            html += `</div>`;
+          }
+          if (char.constellations) {
+            html += `<div style='font-size:2rem;font-weight:700;margin-bottom:12px;' id='constellations-section'>Constellations</div><div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:32px;'>`;
+            char.constellations.forEach((cons) => {
+              html += `<div style='background:#20283a;border-radius:14px;padding:24px 18px;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;'>`;
+              html += `<div style='font-size:1.1em;font-weight:700;margin-bottom:8px;'>${cons.name}</div>`;
+              if (cons.phase)
+                html += `<div style='font-size:0.98em;color:#ffe082;margin-bottom:4px;'>${cons.phase}</div>`;
+              html += `<div style='color:#b3b3b3;font-size:1.08em;'>${cons.desc}</div>`;
+              html += `</div>`;
+            });
+            html += `</div>`;
+          }
+          html += `</div>`;
+          document.getElementById("char-abilities-section").innerHTML = html;
+        }
+        renderAbilitiesSection(charDetails);
+        // Community build e best teams
+        function renderCommunitySection(char) {
+          let html = "";
+          // Most Used Build from the Community
+          if (char.community_build) {
+            html += `<div style="margin-bottom:32px;">
+              <h2 style='color:#ffe082;margin-bottom:8px;'>Most Used Build from the Community</h2>
+              <div style='font-size:0.98em;color:#b3b3b3;margin-bottom:8px;'>This build is based on the most used artifacts and weapons by the community.</div>
+              <table style='width:100%;background:#20283a;border-radius:10px;'>
+                <tr><th style='color:#64ffda;text-align:left;padding:8px 12px;'>Weapons</th><th style='color:#64ffda;text-align:left;padding:8px 12px;'>Artifacts</th></tr>
+                ${char.community_build
+                  .map(
+                    (b) => `
+                  <tr>
+                    <td style='padding:8px 12px;vertical-align:middle;'>
+                      <img class='best-team-img' src="${
+                        b.weapon.img
+                      }" alt="" style="width:64px;height:64px;vertical-align:middle;margin-right:8px;border-radius:12px;background:#23263a;box-shadow:0 2px 8px #0005;">
+                      <span style='font-weight:600;'>${b.weapon.name}</span>
+                      <span style='color:#ffe082;font-size:0.95em;font-weight:bold;margin-left:6px;'>${
+                        b.weapon.note || ""
+                      }</span>
+                    </td>
+                    <td style='padding:8px 12px;vertical-align:middle;'>
+                      ${b.artifacts
+                        .map((a) => {
+                          if (Array.isArray(a.img)) {
+                            return a.img
+                              .map(
+                                (url) =>
+                                  `<img class='best-team-img' src="${url}" alt="" style="width:64px;height:64px;vertical-align:middle;margin-right:4px;border-radius:12px;background:#23263a;box-shadow:0 2px 8px #0005;">`
+                              )
+                              .join("");
+                          } else {
+                            return `<img class='best-team-img' src="${a.img}" alt="" style="width:64px;height:64px;vertical-align:middle;margin-right:4px;border-radius:12px;background:#23263a;box-shadow:0 2px 8px #0005;">`;
+                          }
+                        })
+                        .join("")}
+                      ${b.artifacts
+                        .map(
+                          (a) =>
+                            `<span style='font-weight:600;margin-right:8px;'>${a.name}</span>`
+                        )
+                        .join("")}
+                    </td>
+                  </tr>
+                `
+                  )
+                  .join("")}
+              </table>
+            </div>`;
+          }
+          // Best Teams
+          if (char.best_teams) {
+            // Funzione per trovare l'immagine dal nome
+            function getCharImgFromBase(name) {
+              if (!baseData.characters)
+                return "images/characters/placeholder.svg";
+              const c = baseData.characters.find(
+                (x) =>
+                  x.name.toLowerCase().replace(/[^a-z0-9]/gi, "") ===
+                  name.toLowerCase().replace(/[^a-z0-9]/gi, "")
+              );
+              return c && c.image
+                ? c.image
+                : "images/characters/placeholder.svg";
+            }
+            html += `<div style="margin-bottom:32px;">
+              <h2 style='color:#ffe082;margin-bottom:8px;'>Best ${
+                char.displayName
+              } Teams</h2>
+              <div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;'>
+                ${char.best_teams
+                  .map((team) => {
+                    // Aggiungi placeholder se il team ha meno di 4 membri
+                    const paddedTeam = [...team];
+                    while (paddedTeam.length < 4) {
+                      paddedTeam.push({ name: "", isPlaceholder: true });
+                    }
+                    return `
+                      <div style='background:#20283a;border-radius:10px;padding:12px 10px;display:flex;align-items:center;justify-content:center;gap:10px;min-height:140px;'>
+                        ${paddedTeam
+                          .map((p) =>
+                            p.isPlaceholder
+                              ? `<div style='width:80px;height:110px;'></div>`
+                              : `<div style='display:flex;flex-direction:column;align-items:center;justify-content:flex-start;width:80px;height:110px;'><img class='best-team-img' src="${getCharImgFromBase(
+                                  p.name
+                                )}" alt="${
+                                  p.name
+                                }" style="width:64px;height:64px;border-radius:50%;background:#23263a;box-shadow:0 2px 8px #0005;"><div style='font-size:0.95em;color:#b3b3b3;margin-top:4px;font-weight:500;width:100px;word-break:break-word;white-space:normal;text-align:center;'>${
+                                  p.name
+                                }</div></div>`
+                          )
+                          .join("")}
+                      </div>
+                    `;
+                  })
+                  .join("")}
+              </div>
+            </div>`;
+          }
+          document.getElementById("community-section").innerHTML = html;
+        }
+        renderCommunitySection(charDetails);
+        // Best Teams section anchor
+        document.getElementById("community-section").id = "best-teams-section";
+        // Funzione per convertire URL YouTube in formato embed
+        function getEmbedUrl(url) {
+          if (!url) return url;
+          // Se è già embed, restituiscilo
+          if (url.includes("youtube.com/embed/")) return url;
+          // Se è youtu.be/ID
+          if (url.includes("youtu.be/")) {
+            const id = url.split("youtu.be/")[1].split("?")[0];
+            return "https://www.youtube.com/embed/" + id;
+          }
+          // Se è youtube.com/watch?v=ID
+          if (url.includes("watch?v=")) {
+            const id = url.split("watch?v=")[1].split("&")[0];
+            return "https://www.youtube.com/embed/" + id;
+          }
+          return url;
+        }
+
+        // Modal logic
+        const modal = document.getElementById("skill-modal");
+        const modalContent = document.getElementById("skill-modal-content");
+        const modalClose = document.getElementById("skill-modal-close");
+        const modalMedia = document.getElementById("skill-modal-media");
+        const modalTitle = document.getElementById("skill-modal-title");
+        const modalDetails = document.getElementById("skill-modal-details");
+        // Variabili globali per la modale skill
+        let currentSkillLevel = 1;
+        let currentSkill = null;
+        // Mappa di label per le skill di Baizhu
+        const skillLabels = {
+          "baizhu:the classics of acupuncture": [
+            { key: "hit1", label: "1-Hit DMG" },
+            { key: "hit2", label: "2-Hit DMG" },
+            { key: "hit3", label: "3-Hit DMG" },
+            { key: "hit4", label: "4-Hit DMG" },
+            { key: "charged", label: "Charged Attack" },
+            { key: "plunge", label: "Plunge DMG" },
+            { key: "lowhigh", label: "Low/High Plunge DMG" }
+          ],
+          "baizhu:universal diagnosis": [
+            { key: "skill_dmg", label: "Skill DMG" },
+            { key: "healing", label: "Healing" },
+            { key: "cd", label: "CD" }
+          ],
+          "baizhu:holistic revivification": [
+            { key: "shield_absorption", label: "Seamless Shield DMG Absorption" },
+            { key: "shield_duration", label: "Seamless Shield Duration" },
+            { key: "healing", label: "Seamless Shield Healing" },
+            { key: "spiritvein_dmg", label: "Spiritvein DMG" },
+            { key: "pulsing_clarity_duration", label: "Pulsing Clarity Duration" },
+            { key: "cd", label: "CD" },
+            { key: "energy_cost", label: "Energy Cost" }
+          ],
+          // Default per altri personaggi/skill
+          "default:normal": [
+            { key: "hit1", label: "1-Hit DMG" },
+            { key: "hit2", label: "2-Hit DMG" },
+            { key: "hit3", label: "3-Hit DMG" },
+            { key: "hit4", label: "4-Hit DMG" },
+            { key: "charged", label: "Charged Attack" },
+            { key: "plunge", label: "Plunge DMG" },
+            { key: "lowhigh", label: "Low/High Plunge DMG" }
+          ]
+        };
+        function renderSkillLevelTable(skill, level) {
+          // PATCH: Tabella custom per Itto Burst Royal Descent: Behold, Itto the Evil! (PRIORITARIA)
+          const ittoNames = ["arataki itto", "arataki_itto", "itto"];
+          const currentChar = (typeof charName === 'string' ? charName : "")
+            .toLowerCase()
+            .replace(/_/g, " ")
+            .trim();
+          const displayChar = (typeof charDetails !== 'undefined' && charDetails.displayName)
+            ? charDetails.displayName.toLowerCase().replace(/_/g, " ").trim()
+            : "";
+          if (
+            (ittoNames.includes(currentChar) || ittoNames.includes(displayChar)) &&
+            skill.name &&
+            skill.name.toLowerCase().includes("royal descent")
+          ) {
+            if (!skill.levels || !skill.levels.length) return "";
+            const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+            const lvl = skill.levels[idx];
+            let levelBtns = "";
+            if (skill.levels.length > 1) {
+              levelBtns = `
+                <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+                  <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+                  <span>Level ${lvl.level}</span>
+                  <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+                </div>
+              `;
+            } else {
+              levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+            }
+            let detailsHtml = skill.details_html ? skill.details_html : "";
+            return `
+              ${detailsHtml}
+              ${levelBtns}
+              <table id='skill-modal-values-table'>
+                <tr><td>ATK Bonus</td><td>${lvl.burst_dmg || "-"}</td></tr>
+                <tr><td>ATK SPD Bonus</td><td>${lvl.atk_spd || "-"}</td></tr>
+                <tr><td>Duration</td><td>${lvl.duration || "-"}</td></tr>
+                <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+                <tr><td>Energy Cost</td><td>${lvl.energy_cost || "-"}</td></tr>
+              </table>
+            `;
+          }
+                // PATCH: Tabella custom per Barbara Let the Show Begin fedele all'immagine
+if (
+  (charDetails.displayName || charName).toLowerCase() === "barbara" &&
+  skill.name &&
+  skill.name.toLowerCase().includes("let the show begin")
+) {
+  if (!skill.levels || !skill.levels.length) return "";
+  const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+  const lvl = skill.levels[idx];
+  let levelBtns = "";
+  if (skill.levels.length > 1) {
+    levelBtns = `
+      <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+        <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+        <span>Level ${lvl.level}</span>
+        <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+      </div>
+    `;
+  } else {
+    levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+  }
+  return `
+    ${levelBtns}
+    <table id='skill-modal-values-table'>
+      <tr><td>HP Regeneration Per Hit</td><td>${lvl.hp_regen_per_hit || "-"}</td></tr>
+      <tr><td>Continuous Regeneration</td><td>${lvl.continuous_regen || "-"}</td></tr>
+      <tr><td>Droplet DMG</td><td>${lvl.droplet_dmg || "-"}</td></tr>
+      <tr><td>Duration</td><td>${lvl.duration || "-"}</td></tr>
+      <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+    </table>
+  `;
+}
+// PATCH: Tabella custom per Barbara Shining Miracle♪ fedele all'immagine
+if (
+  (charDetails.displayName || charName).toLowerCase() === "barbara" &&
+  skill.name &&
+  skill.name.toLowerCase().includes("shining miracle")
+) {
+  if (!skill.levels || !skill.levels.length) return "";
+  const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+  const lvl = skill.levels[idx];
+  let levelBtns = "";
+  if (skill.levels.length > 1) {
+    levelBtns = `
+      <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+        <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+        <span>Level ${lvl.level}</span>
+        <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+      </div>
+    `;
+  } else {
+    levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+  }
+  return `
+    ${levelBtns}
+    <table id='skill-modal-values-table'>
+      <tr><td>Regeneration</td><td>${lvl.regeneration || "-"}</td></tr>
+      <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+      <tr><td>Energy Cost</td><td>${lvl.energy_cost || "-"}</td></tr>
+    </table>
+  `;
+}
+          // PATCH: Tabella custom per Itto Masatsu Zetsugi: Akaushi Burst! (PRIORITARIA E ROBUSTA)
+          if (
+            (ittoNames.includes(currentChar) || ittoNames.includes(displayChar)) &&
+            skill.name &&
+            skill.name.toLowerCase().includes("akaushi burst")
+          ) {
+            if (!skill.levels || !skill.levels.length) return "";
+            const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+            const lvl = skill.levels[idx];
+            let levelBtns = "";
+            if (skill.levels.length > 1) {
+              levelBtns = `
+                <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+                  <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+                  <span>Level ${lvl.level}</span>
+                  <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+                </div>
+              `;
+            } else {
+              levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+            }
+            let detailsHtml = skill.details_html ? skill.details_html : "";
+            return `
+              ${detailsHtml}
+              ${levelBtns}
+              <table id='skill-modal-values-table'>
+                <tr><td>Skill DMG</td><td>${lvl.skill_dmg || "-"}</td></tr>
+                <tr><td>Inherited HP</td><td>${lvl.inherited_hp || "-"}</td></tr>
+                <tr><td>Duration</td><td>${lvl.taunt_duration || "-"}</td></tr>
+                <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+              </table>
+            `;
+          }
+          // PATCH: Tabella custom per Albedo Rite of Progeniture: Tectonic Tide fedele all'immagine
+          if (
+            typeof charName === 'string' &&
+            charName.toLowerCase() === "albedo" &&
+            skill.name &&
+            skill.name.toLowerCase().includes("rite of progeniture")
+          ) {
+            if (!skill.levels || !skill.levels.length) return "";
+            const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+            const lvl = skill.levels[idx];
+            let levelBtns = "";
+            if (skill.levels.length > 1) {
+              levelBtns = `
+                <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+                  <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+                  <span>Level ${lvl.level}</span>
+                  <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+                </div>
+              `;
+            } else {
+              levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+            }
+            return `
+              ${levelBtns}
+              <table id='skill-modal-values-table'>
+                <tr><td>Burst DMG</td><td>${lvl.burst_dmg || "-"}</td></tr>
+                <tr><td>Fatal Blossom DMG</td><td>${lvl.fatal_blossom || "-"}</td></tr>
+                <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+                <tr><td>Energy Cost</td><td>${lvl.energy_cost || "-"}</td></tr>
+              </table>
+            `;
+          }
+          // PATCH: Tabella custom per Baizhu skills fedele all'immagine
+// PATCH: Tabella custom SOLO per la burst di Baizhu fedele all'immagine
+if (
+  typeof charName === 'string' &&
+  charName.toLowerCase() === "baizhu" &&
+  skill.name &&
+  skill.name.toLowerCase().replace(/\s/g,"") === "holisticrevivification"
+) {
+  if (!skill.levels || !skill.levels.length) return "";
+  const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+  const lvl = skill.levels[idx];
+  let levelBtns = "";
+  if (skill.levels.length > 1) {
+    levelBtns = `
+      <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+        <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+        <span>Level ${lvl.level}</span>
+        <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+      </div>
+    `;
+  } else {
+    levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+  }
+  let detailsHtml = skill.details_html ? skill.details_html : "";
+  return `
+    ${detailsHtml}
+    ${levelBtns}
+    <table id='skill-modal-values-table'>
+      <tr><td>Seamless Shield DMG Absorption</td><td>${lvl.shield_absorption || "-"}</td></tr>
+      <tr><td>Seamless Shield Duration</td><td>${lvl.shield_duration || "-"}</td></tr>
+      <tr><td>Seamless Shield Healing</td><td>${lvl.healing || "-"}</td></tr>
+      <tr><td>Spiritvein DMG</td><td>${lvl.spiritvein_dmg || "-"}</td></tr>
+      <tr><td>Pulsing Clarity Duration</td><td>${lvl.pulsing_clarity_duration || "-"}</td></tr>
+      <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+      <tr><td>Energy Cost</td><td>${lvl.energy_cost || "-"}</td></tr>
+    </table>
+  `;
+}
+          // PATCH: Tabella custom per Aloy Rapid Fire con tutte le funzioni di Alhaitham
+          if (
+            charName.toLowerCase() === "aloy" &&
+            skill.name &&
+            skill.name.toLowerCase().includes("rapid fire")
+          ) {
+            if (!skill.levels || !skill.levels.length) return "";
+            const idx = Math.max(
+              0,
+              Math.min(skill.levels.length - 1, level - 1)
+            );
+            const lvl = skill.levels[idx];
+            // Pulsanti livello
+            let levelBtns = "";
+            if (skill.levels.length > 1) {
+              levelBtns = `
+                <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+                  <button type='button' class='skill-modal-level-btn' data-dir='min' ${
+                    level <= 1 ? "disabled" : ""
+                  }>min</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='minus' ${
+                    level <= 1 ? "disabled" : ""
+                  }>-</button>
+                  <span>Level ${lvl.level}</span>
+                  <button type='button' class='skill-modal-level-btn' data-dir='plus' ${
+                    level >= skill.levels.length ? "disabled" : ""
+                  }>+</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='max' ${
+                    level >= skill.levels.length ? "disabled" : ""
+                  }>max</button>
+                </div>
+              `;
+            } else {
+              levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+            }
+            // Mostra details_html sopra la tabella
+            let detailsHtml = skill.details_html ? skill.details_html : "";
+            return `
+              ${detailsHtml}
+              ${levelBtns}
+              <table id='skill-modal-values-table'>
+                <tr><td>1-Hit DMG</td><td>${lvl.hit1 || "-"}</td></tr>
+                <tr><td>2-Hit DMG</td><td>${lvl.hit2 || "-"}</td></tr>
+                <tr><td>3-Hit DMG</td><td>${lvl.hit3 || "-"}</td></tr>
+                <tr><td>4-Hit DMG</td><td>${lvl.hit4 || "-"}</td></tr>
+                <tr><td>Aimed Shot</td><td>${lvl.aimed || "-"}</td></tr>
+                <tr><td>Fully-Charged Aimed Shot</td><td>${
+                  lvl.fully_charged || "-"
+                }</td></tr>
+                <tr><td>Plunge DMG</td><td>${lvl.plunge || "-"}</td></tr>
+                <tr><td>Low/High Plunge DMG</td><td>${
+                  lvl.lowhigh || "-"
+                }</td></tr>
+              </table>
+            `;
+          }
+          // PATCH: Tabella custom per Aloy Frozen Wilds fedele all'immagine
+          if (
+            charName.toLowerCase() === "aloy" &&
+            skill.name &&
+            skill.name.toLowerCase().includes("frozen wilds")
+          ) {
+            if (!skill.levels || !skill.levels.length) return "";
+            const idx = Math.max(
+              0,
+              Math.min(skill.levels.length - 1, level - 1)
+            );
+            const lvl = skill.levels[idx];
+            let levelBtns = "";
+            if (skill.levels.length > 1) {
+              levelBtns = `
+                <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+                  <button type='button' class='skill-modal-level-btn' data-dir='min' ${
+                    level <= 1 ? "disabled" : ""
+                  }>min</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='minus' ${
+                    level <= 1 ? "disabled" : ""
+                  }>-</button>
+                  <span>Level ${lvl.level}</span>
+                  <button type='button' class='skill-modal-level-btn' data-dir='plus' ${
+                    level >= skill.levels.length ? "disabled" : ""
+                  }>+</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='max' ${
+                    level >= skill.levels.length ? "disabled" : ""
+                  }>max</button>
+                </div>
+              `;
+            } else {
+              levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+            }
+            let detailsHtml = skill.details_html ? skill.details_html : "";
+            return `
+              ${detailsHtml}
+              ${levelBtns}
+              <table id='skill-modal-values-table'>
+                <tr><td>Freeze Bomb DMG</td><td>${
+                  lvl.freeze_bomb_dmg || "-"
+                }</td></tr>
+                <tr><td>Chillwater Bomblet DMG</td><td>${
+                  lvl.bomblet_dmg || "-"
+                }</td></tr>
+                <tr><td>ATK Decrease</td><td>${
+                  lvl.atk_decrease || "-"
+                }</td></tr>
+                <tr><td>ATK Decrease Duration</td><td>${
+                  lvl.atk_decrease_duration || "-"
+                }</td></tr>
+                <tr><td>Coil Normal Attack DMG Bonus</td><td>${
+                  lvl.coil_bonus || "-"
+                }</td></tr>
+                <tr><td>Rushing Ice Normal Attack DMG Bonus</td><td>${
+                  lvl.rushing_ice_bonus || "-"
+                }</td></tr>
+                <tr><td>Rushing Ice Duration</td><td>${
+                  lvl.rushing_ice_duration || "-"
+                }</td></tr>
+                <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+              </table>
+            `;
+          }
+          // PATCH: Tabella custom per Aloy Prophecies of Dawn
+          if (
+            charName.toLowerCase() === "aloy" &&
+            skill.name &&
+            skill.name.toLowerCase().includes("prophecies of dawn")
+          ) {
+            if (!skill.levels || !skill.levels.length) return "";
+            const idx = Math.max(
+              0,
+              Math.min(skill.levels.length - 1, level - 1)
+            );
+            const lvl = skill.levels[idx];
+            let levelBtns = "";
+            if (skill.levels.length > 1) {
+              levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+                <button type='button' class='skill-modal-level-btn' data-dir='min' ${
+                  level <= 1 ? "disabled" : ""
+                }>min</button>
+                <button type='button' class='skill-modal-level-btn' data-dir='minus' ${
+                  level <= 1 ? "disabled" : ""
+                }>-</button>
+                <span>Level ${lvl.level}</span>
+                <button type='button' class='skill-modal-level-btn' data-dir='plus' ${
+                  level >= skill.levels.length ? "disabled" : ""
+                }>+</button>
+                <button type='button' class='skill-modal-level-btn' data-dir='max' ${
+                  level >= skill.levels.length ? "disabled" : ""
+                }>max</button>
+              </div>`;
+            }
+            return `
+              ${levelBtns}
+              <table id='skill-modal-values-table'>
+                <tr><td>Skill DMG</td><td>${lvl.skill_dmg || ""}</td></tr>
+                <tr><td>CD</td><td>${lvl.cd || ""}</td></tr>
+                <tr><td>Energy Cost</td><td>${lvl.energy_cost || ""}</td></tr>
+              </table>
+            `;
+          }
+            // PATCH: Tabella custom per Amber Explosive Puppet fedele all'immagine
+  if (
+    typeof charName === 'string' &&
+    charName.toLowerCase() === "amber" &&
+    skill.name &&
+    skill.name.toLowerCase().includes("explosive puppet")
+  ) {
+    if (!skill.levels || !skill.levels.length) return "";
+    const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+    const lvl = skill.levels[idx];
+    let levelBtns = "";
+    if (skill.levels.length > 1) {
+      levelBtns = `
+        <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+          <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+          <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+          <span>Level ${lvl.level}</span>
+          <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+          <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+        </div>
+      `;
+    } else {
+      levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+    }
+    return `
+      ${levelBtns}
+      <table id='skill-modal-values-table'>
+        <tr><td>Inherited HP</td><td>${lvl.inherited_hp || "-"}</td></tr>
+        <tr><td>Explosion DMG</td><td>${lvl.explosion_dmg || "-"}</td></tr>
+        <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+      </table>
+    `;
+  }
+  // PATCH: Tabella custom per Amber Fiery Rain fedele all'immagine
+if (
+  typeof charName === 'string' &&
+  charName.toLowerCase() === "amber" &&
+  skill.name &&
+  skill.name.toLowerCase().includes("fiery rain")
+) {
+  if (!skill.levels || !skill.levels.length) return "";
+  const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+  const lvl = skill.levels[idx];
+  let levelBtns = "";
+  if (skill.levels.length > 1) {
+    levelBtns = `
+      <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+        <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+        <span>Level ${lvl.level}</span>
+        <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+      </div>
+    `;
+  } else {
+    levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+  }
+  return `
+    ${levelBtns}
+    <table id='skill-modal-values-table'>
+      <tr><td>Fiery Rain DMG Per Wave</td><td>${lvl.rain_dmg_per_wave || "-"}</td></tr>
+      <tr><td>Total Fiery Rain DMG</td><td>${lvl.total_rain_dmg || "-"}</td></tr>
+      <tr><td>Duration</td><td>${lvl.duration || "-"}</td></tr>
+      <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+      <tr><td>Energy Cost</td><td>${lvl.energy_cost || "-"}</td></tr>
+    </table>
+  `;
+}
+// PATCH: Tabella custom per Arlecchino Invitation to a Beheading fedele all'immagine
+if (
+  typeof charName === 'string' &&
+  charName.toLowerCase() === "arlecchino" &&
+  skill.name &&
+  skill.name.toLowerCase().includes("invitation to a beheading")
+) {
+  if (!skill.levels || !skill.levels.length) return "";
+  const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+  const lvl = skill.levels[idx];
+  let levelBtns = "";
+  if (skill.levels.length > 1) {
+    levelBtns = `
+      <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+        <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+        <span>Level ${lvl.level}</span>
+        <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+      </div>
+    `;
+  } else {
+    levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+  }
+  return `
+    ${levelBtns}
+    <table id='skill-modal-values-table'>
+      <tr><td>Masque of the Red Death Increase</td><td>${lvl.masque || "-"}</td></tr>
+      <tr><td>1-Hit DMG</td><td>${lvl.hit1 || "-"}</td></tr>
+      <tr><td>2-Hit DMG</td><td>${lvl.hit2 || "-"}</td></tr>
+      <tr><td>3-Hit DMG</td><td>${lvl.hit3 || "-"}</td></tr>
+      <tr><td>4-Hit DMG</td><td>${lvl.hit4 || "-"}</td></tr>
+      <tr><td>5-Hit DMG</td><td>${lvl.hit5 || "-"}</td></tr>
+      <tr><td>6-Hit DMG</td><td>${lvl.hit6 || "-"}</td></tr>
+      <tr><td>Charged Attack DMG</td><td>${lvl.charged || "-"}</td></tr>
+      <tr><td>Charged Attack Stamina Cost</td><td>${lvl.charged_stamina || "-"}</td></tr>
+      <tr><td>High-Speed Movement Stamina Cost</td><td>${lvl.high_speed_stamina || "-"}</td></tr>
+      <tr><td>Plunge DMG</td><td>${lvl.plunge || "-"}</td></tr>
+      <tr><td>Low/High Plunge DMG</td><td>${lvl.lowhigh || "-"}</td></tr>
+    </table>
+  `;
+}
+// PATCH: Tabella custom per Arlecchino All Is Ash fedele all'immagine
+if (
+  typeof charName === 'string' &&
+  charName.toLowerCase() === "arlecchino" &&
+  skill.name &&
+  skill.name.toLowerCase().includes("all is ash")
+) {
+  if (!skill.levels || !skill.levels.length) return "";
+  const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+  const lvl = skill.levels[idx];
+  let levelBtns = "";
+  if (skill.levels.length > 1) {
+    levelBtns = `
+      <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+        <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+        <span>Level ${lvl.level}</span>
+        <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+      </div>
+    `;
+  } else {
+    levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+  }
+  let detailsHtml = skill.details_html ? skill.details_html : "";
+  return `
+    <div style='font-size:1.5em;font-weight:700;text-align:center;margin-bottom:12px;color:#ffe082;'>All Is Ash</div>
+    ${detailsHtml}
+    <div style='text-align:center;font-size:1.15em;font-weight:700;margin-bottom:8px;'>Level ${lvl.level}</div>
+    ${levelBtns}
+    <table id='skill-modal-values-table'>
+      <tr><td>Spike DMG</td><td>${lvl.spike_dmg || "-"}</td></tr>
+      <tr><td>Cleave DMG</td><td>${lvl.cleave_dmg || "-"}</td></tr>
+      <tr><td>Blood-Debt Directive DMG</td><td>${lvl.blood_debt_dmg || "-"}</td></tr>
+      <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+    </table>
+  `;
+}
+// PATCH: Tabella custom per Arlecchino Elemental Burst Crimson Masquerade fedele all'immagine
+if (
+  typeof charName === 'string' &&
+  charName.toLowerCase() === "arlecchino" &&
+  skill.name &&
+  skill.name.toLowerCase().includes("crimson masquerade")
+) {
+  if (!skill.levels || !skill.levels.length) return "";
+  const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+  const lvl = skill.levels[idx];
+  let levelBtns = "";
+  if (skill.levels.length > 1) {
+    levelBtns = `
+      <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+        <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+        <span>Level ${lvl.level}</span>
+        <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+      </div>
+    `;
+  } else {
+    levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+  }
+  let detailsHtml = skill.details_html ? skill.details_html : "";
+  return `
+    <div style='font-size:1.5em;font-weight:700;text-align:center;margin-bottom:12px;color:#ffe082;'>Crimson Masquerade</div>
+    ${detailsHtml}
+    <div style='text-align:center;font-size:1.15em;font-weight:700;margin-bottom:8px;'>Level ${lvl.level}</div>
+    ${levelBtns}
+    <table id='skill-modal-values-table'>
+      <tr><td>Burst DMG</td><td>${lvl.burst_dmg || "-"}</td></tr>
+      <tr><td>ATK SPD Bonus</td><td>${lvl.atk_spd || "-"}</td></tr>
+      <tr><td>Duration</td><td>${lvl.duration || "-"}</td></tr>
+      <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+      <tr><td>Energy Cost</td><td>${lvl.energy_cost || "-"}</td></tr>
+    </table>
+  `;
+}
+// PATCH: Tabella custom per Arlecchino Ultimate Balemoon Rising fedele all'immagine
+if (
+  typeof charName === 'string' &&
+  charName.toLowerCase() === "arlecchino" &&
+  skill.name &&
+  (skill.name.toLowerCase().includes("balemoon rising") || skill.name.toLowerCase().includes("crimson masquerade"))
+) {
+  if (!skill.levels || !skill.levels.length) return "";
+  const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+  const lvl = skill.levels[idx];
+  let levelBtns = "";
+  if (skill.levels.length > 1) {
+    levelBtns = `
+      <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+        <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+        <span>Level ${lvl.level}</span>
+        <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+        <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+      </div>
+    `;
+  } else {
+    levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+  }
+  let detailsHtml = skill.details_html ? skill.details_html : "";
+  return `
+    <div style='font-size:1.5em;font-weight:700;text-align:center;margin-bottom:12px;color:#ffe082;'>Balemoon Rising</div>
+    ${detailsHtml}
+    <div style='text-align:center;font-size:1.15em;font-weight:700;margin-bottom:8px;'>Level ${lvl.level}</div>
+    ${levelBtns}
+    <table id='skill-modal-values-table'>
+      <tr><td>Skill DMG</td><td>${lvl.skill_dmg || "-"}</td></tr>
+      <tr><td>Amount of HP Restored</td><td>${lvl.heal || "-"}</td></tr>
+      <tr><td>CD</td><td>${lvl.cd || "-"}</td></tr>
+      <tr><td>Energy Cost</td><td>${lvl.energy_cost || "-"}</td></tr>
+    </table>
+  `;
+}
+
+          if (!skill.levels || !skill.levels.length) return "";
+          const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+          const lvl = skill.levels[idx];
+          // Tabella standard intelligente per tutte le skill
+          if (skill.levels && skill.levels.length) {
+            const idx = Math.max(0, Math.min(skill.levels.length - 1, level - 1));
+            const lvl = skill.levels[idx];
+            let levelBtns = "";
+            if (skill.levels.length > 1) {
+              levelBtns = `
+                <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+                  <button type='button' class='skill-modal-level-btn' data-dir='min' ${level <= 1 ? "disabled" : ""}>min</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='minus' ${level <= 1 ? "disabled" : ""}>-</button>
+                  <span>Level ${lvl.level}</span>
+                  <button type='button' class='skill-modal-level-btn' data-dir='plus' ${level >= skill.levels.length ? "disabled" : ""}>+</button>
+                  <button type='button' class='skill-modal-level-btn' data-dir='max' ${level >= skill.levels.length ? "disabled" : ""}>max</button>
+                </div>
+              `;
+            } else {
+              levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+            }
+            let rows = "";
+            // Solo i campi effettivamente presenti
+            const labels = {
+              hit1: "1-Hit DMG",
+              hit2: "2-Hit DMG",
+              hit3: "3-Hit DMG",
+              hit4: "4-Hit DMG",
+              hit5: "5-Hit DMG",
+              hit6: "6-Hit DMG",
+              charged: "Charged Attack",
+              plunge: "Plunge DMG",
+              lowhigh: "Low/High Plunge DMG",
+              skill_dmg: "Skill DMG",
+              healing: "Healing",
+              shield: "Shield",
+              burst_dmg: "Burst DMG",
+              cd: "CD",
+              energy_cost: "Energy Cost",
+              duration: "Duration",
+              atk_spd: "ATK SPD Bonus",
+              fatal_blossom: "Fatal Blossom DMG",
+              inherited_hp: "Inherited HP",
+              taunt_duration: "Duration",
+              // aggiungi altri label se servono
+            };
+            Object.keys(labels).forEach(key => {
+              if (lvl[key]) rows += `<tr><td>${labels[key]}</td><td>${lvl[key]}</td></tr>`;
+            });
+            if (rows) {
+              return `
+                ${levelBtns}
+                <table id='skill-modal-values-table'>
+                  ${rows}
+                </table>
+              `;
+            }
+          }
+          // Tabella standard per le altre skill
+          return `
+            <div id='skill-modal-level-row'>
+              <button type='button' class='skill-modal-level-btn' data-dir='min' ${
+                level <= 1 ? "disabled" : ""
+              }>min</button>
+              <button type='button' class='skill-modal-level-btn' data-dir='minus' ${
+                level <= 1 ? "disabled" : ""
+              }>-</button>
+              <span>Level ${lvl.level}</span>
+              <button type='button' class='skill-modal-level-btn' data-dir='plus' ${
+                level >= skill.levels.length ? "disabled" : ""
+              }>+</button>
+              <button type='button' class='skill-modal-level-btn' data-dir='max' ${
+                level >= skill.levels.length ? "disabled" : ""
+              }>max</button>
+            </div>
+            <table id='skill-modal-values-table'>
+              <tr><td>1-Hit DMG</td><td>${lvl.hit1}</td></tr>
+              <tr><td>2-Hit DMG</td><td>${lvl.hit2}</td></tr>
+              <tr><td>3-Hit DMG</td><td>${lvl.hit3}</td></tr>
+              <tr><td>4-Hit DMG</td><td>${lvl.hit4}</td></tr>
+              <tr><td>5-Hit DMG</td><td>${lvl.hit5}</td></tr>
+              <tr><td>Charged Attack DMG</td><td>${lvl.charged}</td></tr>
+              <tr><td>Charged Attack Stamina Cost</td><td>${
+                lvl.stamina
+              }</td></tr>
+              <tr><td>Plunge DMG</td><td>${lvl.plunge}</td></tr>
+              <tr><td>Low/High Plunge DMG</td><td>${lvl.lowhigh}</td></tr>
+            </table>
+          `;
+        }
+        document.addEventListener("click", function (e) {
+          // Open modal on skill click
+          if (e.target.closest(".skill-card")) {
+            const idx = e.target
+              .closest(".skill-card")
+              .getAttribute("data-skill-idx");
+            currentSkill = (charDetails.skills || [])[idx];
+            // Se è la ultimate di Alhaitham, apri il modal custom
+            if (
+              (charDetails.displayName || charName).toLowerCase() ===
+                "alhaitham" &&
+              currentSkill &&
+              currentSkill.name &&
+              currentSkill.name.toLowerCase().includes("fetters of phenomena")
+            ) {
+              document.getElementById("alhaitham-ult-modal").style.display =
+                "flex";
+              document.body.style.overflow = "hidden";
+              // Se la skill ha un video, usalo, altrimenti usa quello di default
+              var videoUrl = "https://www.youtube.com/embed/1t2ZzF3gQ6A";
+              if (currentSkill.video) {
+                // Conversione a embed se serve
+                if (currentSkill.video.includes("youtube.com/embed/")) {
+                  videoUrl = currentSkill.video;
+                } else if (currentSkill.video.includes("youtu.be/")) {
+                  const id = currentSkill.video
+                    .split("youtu.be/")[1]
+                    .split("?")[0];
+                  videoUrl = "https://www.youtube.com/embed/" + id;
+                } else if (currentSkill.video.includes("watch?v=")) {
+                  const id = currentSkill.video
+                    .split("watch?v=")[1]
+                    .split("&")[0];
+                  videoUrl = "https://www.youtube.com/embed/" + id;
+                }
+              }
+              document.getElementById("alhaitham-ult-video").src = videoUrl;
+              return;
+            }
+            let mediaHtml = "";
+            if (currentSkill.video) {
+              const embedUrl = getEmbedUrl(currentSkill.video);
+              mediaHtml = `<iframe class='skill-modal-img' src='${embedUrl}' frameborder='0' allowfullscreen></iframe>`;
+            } else if (currentSkill.image) {
+              mediaHtml = `<img class='skill-modal-img' src='${currentSkill.image}' alt=''>`;
+            } else if (currentSkill.icon) {
+              mediaHtml = `<img class='skill-modal-img' src='${currentSkill.icon}' alt='' style='opacity:0.3;'>`;
+            }
+            modalMedia.innerHTML = mediaHtml;
+            // Modal custom per Abiogenesis: Solar Isotoma
+            if (
+  currentSkill.name &&
+  currentSkill.name.toLowerCase().includes("abiogenesis: solar isotoma")
+) {
+  modalTitle.innerHTML = `<div class='skill-modal-title'>Abiogenesis: Solar Isotoma</div>`;
+  currentSkillLevel = 1;
+  // Dati esempio per livelli 1-10 (puoi estendere con altri livelli se vuoi)
+  const skillLevels = [
+    { level: 1, skill_dmg: "135.4%", blossom_dmg: "133.6% DEF", duration: "30s", cd: "4s" },
+    { level: 2, skill_dmg: "140.2%", blossom_dmg: "143.1% DEF", duration: "30s", cd: "4s" },
+    { level: 3, skill_dmg: "150.0%", blossom_dmg: "152.6% DEF", duration: "30s", cd: "4s" },
+    { level: 4, skill_dmg: "162.6%", blossom_dmg: "165.1% DEF", duration: "30s", cd: "4s" },
+    { level: 5, skill_dmg: "172.4%", blossom_dmg: "174.6% DEF", duration: "30s", cd: "4s" },
+    { level: 6, skill_dmg: "182.2%", blossom_dmg: "184.1% DEF", duration: "30s", cd: "4s" },
+    { level: 7, skill_dmg: "194.8%", blossom_dmg: "196.6% DEF", duration: "30s", cd: "4s" },
+    { level: 8, skill_dmg: "207.4%", blossom_dmg: "209.1% DEF", duration: "30s", cd: "4s" },
+    { level: 9, skill_dmg: "220.0%", blossom_dmg: "221.6% DEF", duration: "30s", cd: "4s" },
+    { level: 10, skill_dmg: "232.6%", blossom_dmg: "234.1% DEF", duration: "30s", cd: "4s" },
+    { level: 11, skill_dmg: "245.2%", blossom_dmg: "246.6% DEF", duration: "30s", cd: "4s" },
+    { level: 12, skill_dmg: "257.8%", blossom_dmg: "259.1% DEF", duration: "30s", cd: "4s" },
+    { level: 13, skill_dmg: "273.0%", blossom_dmg: "274.6% DEF", duration: "30s", cd: "4s" },
+    { level: 14, skill_dmg: "288.2%", blossom_dmg: "290.1% DEF", duration: "30s", cd: "4s" },
+    { level: 15, skill_dmg: "303.4%", blossom_dmg: "305.6% DEF", duration: "30s", cd: "4s" },
+  ];
+  function renderSolarIsotomaDetails() {
+    const idx = Math.max(0, Math.min(skillLevels.length - 1, currentSkillLevel - 1));
+    const lvl = skillLevels[idx];
+    // Pulsanti livello
+    let levelBtns = '';
+    if (skillLevels.length > 1) {
+      levelBtns = `
+        <div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'>
+          <button type='button' class='skill-modal-level-btn' data-dir='min' ${currentSkillLevel <= 1 ? "disabled" : ""}>min</button>
+          <button type='button' class='skill-modal-level-btn' data-dir='minus' ${currentSkillLevel <= 1 ? "disabled" : ""}>-</button>
+          <span>Level ${lvl.level}</span>
+          <button type='button' class='skill-modal-level-btn' data-dir='plus' ${currentSkillLevel >= skillLevels.length ? "disabled" : ""}>+</button>
+          <button type='button' class='skill-modal-level-btn' data-dir='max' ${currentSkillLevel >= skillLevels.length ? "disabled" : ""}>max</button>
+        </div>
+      `;
+    } else {
+      levelBtns = `<div id='skill-modal-level-row' style='justify-content:center;gap:12px;margin:12px 0 8px 0;'><span>Level 1</span></div>`;
+    }
+    modalDetails.innerHTML = `
+      <div style="margin-bottom:18px;">
+        Albedo creates a Solar Isotoma using alchemy, which deals <span style='color:#ffe082;font-weight:bold;'>AoE Geo DMG</span> on appearance.
+      </div>
+      <div style="color:#ffe082;font-weight:700;font-size:1.08em;margin-bottom:4px;">Solar Isotoma</div>
+      <ul style="margin:0 0 12px 0;padding-left:18px;text-align:left;">
+        <li>When opponents within the Solar Isotoma field take DMG, the Solar Isotoma will generate Transient Blossoms which deal <span style='color:#ffe082;font-weight:bold;'>AoE Geo DMG</span>. DMG dealt scales off Albedo's DEF.</li>
+        <li>Transient Blossoms can only be generated once every 2s.</li>
+        <li>When a character is located at the locus of the Solar Isotoma, the Solar Isotoma will accumulate Geo power to form a crystallized platform that lifts the character up to a certain height. Only one crystallized platform can exist at a time.</li>
+        <li>Solar Isotoma is considered a <span style='color:#ffe082;font-weight:bold;'>Geo construct</span>. Only one Solar Isotoma created by Albedo himself can exist at a time.</li>
+      </ul>
+      <div style="margin-bottom:12px;"><b>Hold</b> to designate the location of the skill.</div>
+      ${levelBtns}
+      <table style="width:100%;margin:0 auto 0 auto;color:#e0e0e0;font-size:1.04em;border-collapse:collapse;margin-bottom:8px;background:#20283a;border-radius:10px;">
+        <tr><td style='color:#ffe082;font-weight:600;text-align:left;min-width:120px;'>Skill DMG</td><td style='text-align:right;'>${lvl.skill_dmg}</td></tr>
+        <tr><td style='color:#ffe082;font-weight:600;text-align:left;min-width:120px;'>Transient Blossom DMG</td><td style='text-align:right;'>${lvl.blossom_dmg}</td></tr>
+        <tr><td style='color:#ffe082;font-weight:600;text-align:left;min-width:120px;'>Duration</td><td style='text-align:right;'>${lvl.duration}</td></tr>
+        <tr><td style='color:#ffe082;font-weight:600;text-align:left;min-width:120px;'>Skill CD</td><td style='text-align:right;'>${lvl.cd}</td></tr>
+      </table>
+    `;
+  }
+  renderSolarIsotomaDetails();
+  // Event delegation per i pulsanti livello
+  modalDetails.onclick = function(e) {
+    if (!e.target.classList.contains('skill-modal-level-btn')) return;
+    const dir = e.target.getAttribute('data-dir');
+    if (dir === 'plus' && currentSkillLevel < skillLevels.length) {
+      currentSkillLevel++;
+    } else if (dir === 'minus' && currentSkillLevel > 1) {
+      currentSkillLevel--;
+    } else if (dir === 'min') {
+      currentSkillLevel = 1;
+    } else if (dir === 'max') {
+      currentSkillLevel = skillLevels.length;
+    }
+    renderSolarIsotomaDetails();
+  };
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+  return;
+}
+            // Modal standard per le altre skill
+            modalTitle.innerHTML = `<div class='skill-modal-title'>${
+              currentSkill.name || ""
+            }</div>`;
+            currentSkillLevel = 1;
+            function updateSkillModalDetails() {
+              let html = "";
+              if (currentSkill.details_html) html += currentSkill.details_html;
+              html += renderSkillLevelTable(currentSkill, currentSkillLevel);
+              modalDetails.innerHTML = html;
+            }
+            updateSkillModalDetails();
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+          }
+          // Gestione click su + e - livello skill (event delegation)
+          // Gestione click su + e - livello skill (event delegation)
+if (
+  e.target.classList &&
+  e.target.classList.contains("skill-modal-level-btn")
+) {
+  // PATCH: gestione custom per Abiogenesis: Solar Isotoma
+  if (
+    currentSkill &&
+    currentSkill.name &&
+    currentSkill.name.toLowerCase().includes("abiogenesis: solar isotoma")
+  ) {
+    // skillLevels e renderSolarIsotomaDetails devono essere nello scope!
+    const dir = e.target.getAttribute("data-dir");
+    if (dir === "plus" && currentSkillLevel < skillLevels.length) {
+      currentSkillLevel++;
+    } else if (dir === "minus" && currentSkillLevel > 1) {
+      currentSkillLevel--;
+    } else if (dir === "min") {
+      currentSkillLevel = 1;
+    } else if (dir === "max") {
+      currentSkillLevel = skillLevels.length;
+    }
+    renderSolarIsotomaDetails();
+    return; // Blocca la propagazione!
+  }
+  // --- resto della gestione standard ---
+  if (!currentSkill || !currentSkill.levels) return;
+  const dir = e.target.getAttribute("data-dir");
+  if (
+    dir === "plus" &&
+    currentSkillLevel < currentSkill.levels.length
+  ) {
+    currentSkillLevel++;
+  } else if (dir === "minus" && currentSkillLevel > 1) {
+    currentSkillLevel--;
+  } else if (dir === "min") {
+    currentSkillLevel = 1;
+  } else if (dir === "max") {
+    currentSkillLevel = currentSkill.levels.length;
+  }
+  let html = "";
+  if (currentSkill.details_html) html += currentSkill.details_html;
+  html += renderSkillLevelTable(currentSkill, currentSkillLevel);
+  modalDetails.innerHTML = html;
+}
+          // Close modal
+          if (e.target === modal || e.target === modalClose) {
+            modal.style.display = "none";
+            document.body.style.overflow = "";
+            modalMedia.innerHTML = "";
+            modalTitle.textContent = "";
+            modalDetails.innerHTML = "";
+            return; // <<--- AGGIUNTO return per bloccare la propagazione
+          }
+          // Close Alhaitham ult modal
+          if (
+            e.target === document.getElementById("alhaitham-ult-modal") ||
+            e.target === document.getElementById("alhaitham-ult-modal-close")
+          ) {
+            document.getElementById("alhaitham-ult-modal").style.display =
+              "none";
+            document.body.style.overflow = "";
+            return; // <<--- AGGIUNTO return per bloccare la propagazione
+          }
+         
+          // PATCH: Modal custom per Barbara (Normal Attack stile avanzato, dinamico)
+    
+        });
+      });
+    </script>
+    <script>
+      // Dati di esempio per Alhaitham (puoi estendere per altri personaggi)
+      const alhaithamStats = {
+        1: {
+          ascend: { before: "-", after: "0" },
+          hp: { before: "", after: "1039" },
+          atk: { before: "-", after: "24" },
+          def: { before: "-", after: "61" },
+          bonus: { before: "-", after: "0.0%" },
+        },
+        20: {
+          ascend: { before: "0", after: "1" },
+          hp: { before: "2695", after: "3586" },
+          atk: { before: "63", after: "84" },
+          def: { before: "158", after: "210" },
+          bonus: { before: "0.0%", after: "0.0%" },
+        },
+        40: {
+          ascend: { before: "1", after: "2" },
+          hp: { before: "5366", after: "5999" },
+          atk: { before: "126", after: "141" },
+          def: { before: "314", after: "351" },
+          bonus: { before: "0.0%", after: "7.2%" },
+        },
+        50: {
+          ascend: { before: "2", after: "3" },
+          hp: { before: "6902", after: "7747" },
+          atk: { before: "162", after: "182" },
+          def: { before: "404", after: "454" },
+          bonus: { before: "7.2%", after: "14.4%" },
+        },
+        60: {
+          ascend: { before: "3", after: "4" },
+          hp: { before: "8659", after: "9292" },
+          atk: { before: "203", after: "218" },
+          def: { before: "507", after: "544" },
+          bonus: { before: "14.4%", after: "14.4%" },
+        },
+        70: {
+          ascend: { before: "4", after: "5" },
+          hp: { before: "10213", after: "10846" },
+          atk: { before: "240", after: "255" },
+          def: { before: "598", after: "635" },
+          bonus: { before: "14.4%", after: "21.6%" },
+        },
+        80: {
+          ascend: { before: "5", after: "6" },
+          hp: { before: "11777", after: "12410" },
+          atk: { before: "276", after: "291" },
+          def: { before: "690", after: "727" },
+          bonus: { before: "21.6%", after: "28.8%" },
+        },
+        90: {
+          ascend: { before: "6", after: "7" },
+          hp: { before: "13348", after: "13348" },
+          atk: { before: "313", after: "313" },
+          def: { before: "782", after: "782" },
+          bonus: { before: "28.8%", after: "28.8%" },
+        },
+      };
+      const albedoStats = {
+        1: {
+          ascend: { before: "-", after: "1" },
+          hp: { before: "", after: "1030" },
+          atk: { before: "-", after: "20" },
+          def: { before: "-", after: "68" },
+          bonus: { before: "-", after: "0.0%" },
+        },
+        20: {
+          ascend: { before: "0", after: "1" },
+          hp: { before: "2671", after: "3554" },
+          atk: { before: "51", after: "67" },
+          def: { before: "177", after: "235" },
+          bonus: { before: "0.0%", after: "0.0%" },
+        },
+        40: {
+          ascend: { before: "1", after: "2" },
+          hp: { before: "5317", after: "5944" },
+          atk: { before: "101", after: "113" },
+          def: { before: "352", after: "394" },
+          bonus: { before: "0.0%", after: "7.2%" },
+        },
+        50: {
+          ascend: { before: "2", after: "3" },
+          hp: { before: "6839", after: "7575" },
+          atk: { before: "130", after: "146" },
+          def: { before: "453", after: "508" },
+          bonus: { before: "7.2%", after: "14.4%" },
+        },
+        60: {
+          ascend: { before: "3", after: "4" },
+          hp: { before: "8579", after: "9207" },
+          atk: { before: "163", after: "175" },
+          def: { before: "568", after: "610" },
+          bonus: { before: "14.4%", after: "14.4%" },
+        },
+        70: {
+          ascend: { before: "4", after: "5" },
+          hp: { before: "10119", after: "10746" },
+          atk: { before: "192", after: "204" },
+          def: { before: "670", after: "712" },
+          bonus: { before: "14.4%", after: "21.6%" },
+        },
+        80: {
+          ascend: { before: "5", after: "6" },
+          hp: { before: "11669", after: "12296" },
+          atk: { before: "222", after: "233" },
+          def: { before: "773", after: "815" },
+          bonus: { before: "21.6%", after: "28.8%" },
+        },
+        90: {
+          ascend: { before: "6", after: "7" },
+          hp: { before: "13226", after: "13226" },
+          atk: { before: "251", after: "251" },
+          def: { before: "876", after: "876" },
+          bonus: { before: "28.8%", after: "28.8%" },
+        },
+      };
+      // Dati di esempio per Aloy (valori casuali)
+      const aloyStats = {
+        1: {
+          ascend: { before: "-", after: "1" },
+          hp: { before: "-", after: "848" },
+          atk: { before: "-", after: "18" },
+          def: { before: "-", after: "53" },
+          bonus: { before: "-", after: "0.0%" },
+        },
+        20: {
+          ascend: { before: "0", after: "1" },
+          hp: { before: "2201", after: "2928" },
+          atk: { before: "47", after: "63" },
+          def: { before: "137", after: "182" },
+          bonus: { before: "0.0%", after: "0.0%" },
+        },
+        40: {
+          ascend: { before: "1", after: "2" },
+          hp: { before: "4382", after: "4899" },
+          atk: { before: "94", after: "105" },
+          def: { before: "272", after: "304" },
+          bonus: { before: "0.0%", after: "7.2%" },
+        },
+        50: {
+          ascend: { before: "2", after: "3" },
+          hp: { before: "5636", after: "6325" },
+          atk: { before: "121", after: "136" },
+          def: { before: "350", after: "393" },
+          bonus: { before: "7.2%", after: "14.4%" },
+        },
+        60: {
+          ascend: { before: "3", after: "4" },
+          hp: { before: "7070", after: "7587" },
+          atk: { before: "152", after: "163" },
+          def: { before: "439", after: "471" },
+          bonus: { before: "14.4%", after: "14.4%" },
+        },
+        70: {
+          ascend: { before: "4", after: "5" },
+          hp: { before: "8339", after: "8856" },
+          atk: { before: "179", after: "190" },
+          def: { before: "517", after: "550" },
+          bonus: { before: "14.4%", after: "21.6%" },
+        },
+        80: {
+          ascend: { before: "5", after: "6" },
+          hp: { before: "9616", after: "10133" },
+          atk: { before: "206", after: "217" },
+          def: { before: "597", after: "629" },
+          bonus: { before: "21.6%", after: "28.8%" },
+        },
+        90: {
+          ascend: { before: "6", after: "7" },
+          hp: { before: "10889", after: "10899" },
+          atk: { before: "234", after: "234" },
+          def: { before: "676", after: "676" },
+          bonus: { before: "28.8%", after: "28.8%" },
+        },
+      };
+      const AmberStats = {
+        1: {
+          ascend: { before: "-", after: "1" },
+          hp: { before: "-", after: "793" },
+          atk: { before: "-", after: "19" },
+          def: { before: "-", after: "50" },
+          bonus: { before: "-", after: "0.0%" },
+        },
+        20: {
+          ascend: { before: "0", after: "1" },
+          hp: { before: "2038", after: "2630" },
+          atk: { before: "48", after: "62" },
+          def: { before: "129", after: "167" },
+          bonus: { before: "0.0%", after: "0.0%" },
+        },
+        40: {
+          ascend: { before: "1", after: "2" },
+          hp: { before: "3940", after: "4361" },
+          atk: { before: "93", after: "103" },
+          def: { before: "250", after: "277" },
+          bonus: { before: "0.0%", after: "6.0%" },
+        },
+        50: {
+          ascend: { before: "2", after: "3" },
+          hp: { before: "5016", after: "5578" },
+          atk: { before: "118", after: "131" },
+          def: { before: "318", after: "354" },
+          bonus: { before: "6.0%", after: "12.0%" },
+        },
+        60: {
+          ascend: { before: "3", after: "4" },
+          hp: { before: "6233", after: "6654" },
+          atk: { before: "147", after: "157" },
+          def: { before: "396", after: "422" },
+          bonus: { before: "12.0%", after: "12.0%" },
+        },
+        70: {
+          ascend: { before: "4", after: "5" },
+          hp: { before: "7309", after: "7730" },
+          atk: { before: "172", after: "182" },
+          def: { before: "464", after: "491" },
+          bonus: { before: "12.0%", after: "18.0%" },
+        },
+        80: {
+          ascend: { before: "5", after: "6" },
+          hp: { before: "8385", after: "8806" },
+          atk: { before: "198", after: "208" },
+          def: { before: "532", after: "559" },
+          bonus: { before: "18.0%", after: "24.0%" },
+        },
+        90: {
+          ascend: { before: "6", after: "7" },
+          hp: { before: "9461", after: "9461" },
+          atk: { before: "223", after: "223" },
+          def: { before: "601", after: "601" },
+          bonus: { before: "24.0%", after: "24.0%" },
+        },
+      };
+      const arataki_ittoStats = {
+        1: {
+          ascend: { before: "-", after: "1" },
+          hp: { before: "-", after: "793" },
+          atk: { before: "-", after: "19" },
+          def: { before: "-", after: "50" },
+          bonus: { before: "-", after: "0.0%" },
+        },
+        20: {
+          ascend: { before: "0", after: "1" },
+          hp: { before: "2038", after: "2630" },
+          atk: { before: "48", after: "62" },
+          def: { before: "129", after: "167" },
+          bonus: { before: "0.0%", after: "0.0%" },
+        },
+        40: {
+          ascend: { before: "1", after: "2" },
+          hp: { before: "3940", after: "4361" },
+          atk: { before: "93", after: "103" },
+          def: { before: "250", after: "277" },
+          bonus: { before: "0.0%", after: "6.0%" },
+        },
+        50: {
+          ascend: { before: "2", after: "3" },
+          hp: { before: "5016", after: "5578" },
+          atk: { before: "118", after: "131" },
+          def: { before: "318", after: "354" },
+          bonus: { before: "6.0%", after: "12.0%" },
+        },
+        60: {
+          ascend: { before: "3", after: "4" },
+          hp: { before: "6233", after: "6654" },
+          atk: { before: "147", after: "157" },
+          def: { before: "396", after: "422" },
+          bonus: { before: "12.0%", after: "12.0%" },
+        },
+        70: {
+          ascend: { before: "4", after: "5" },
+          hp: { before: "7309", after: "7730" },
+          atk: { before: "172", after: "182" },
+          def: { before: "464", after: "491" },
+          bonus: { before: "12.0%", after: "18.0%" },
+        },
+        80: {
+          ascend: { before: "5", after: "6" },
+          hp: { before: "8385", after: "8806" },
+          atk: { before: "198", after: "208" },
+          def: { before: "532", after: "559" },
+          bonus: { before: "18.0%", after: "24.0%" },
+        },
+        90: {
+          ascend: { before: "6", after: "7" },
+          hp: { before: "9461", after: "9461" },
+          atk: { before: "223", after: "223" },
+          def: { before: "601", after: "601" },
+          bonus: { before: "24.0%", after: "24.0%" },
+        },
+      };
+      const ArlecchinoStats = {
+        1: {
+          ascend: { before: "-", after: "1" },
+          hp: { before: "-", after: "1020" },
+          atk: { before: "-", after: "27" },
+          def: { before: "-", after: "60" },
+          bonus: { before: "-", after: "50.00%" },
+        },
+        20: {
+          ascend: { before: "0", after: "1" },
+          hp: { before: "2646", after: "3521" },
+          atk: { before: "69", after: "92" },
+          def: { before: "154", after: "205" },
+          bonus: { before: "50.00%", after: "50.00%" },
+        },
+        40: {
+          ascend: { before: "1", after: "2" },
+          hp: { before: "5268", after: "5889" },
+          atk: { before: "138", after: "154" },
+          def: { before: "307", after: "344" },
+          bonus: { before: "50.00%", after: "59.6%" },
+        },
+        50: {
+          ascend: { before: "2", after: "3" },
+          hp: { before: "6776", after: "7604" },
+          atk: { before: "177", after: "198" },
+          def: { before: "395", after: "444" },
+          bonus: { before: "59.6%", after: "69.2%" },
+        },
+        60: {
+          ascend: { before: "3", after: "4" },
+          hp: { before: "8500", after: "9121" },
+          atk: { before: "222", after: "238" },
+          def: { before: "496", after: "532" },
+          bonus: { before: "69.2%", after: "69.2%" },
+        },
+        70: {
+          ascend: { before: "4", after: "5" },
+          hp: { before: "10025", after: "10647" },
+          atk: { before: "262", after: "278" },
+          def: { before: "585", after: "621" },
+          bonus: { before: "69.2%", after: "78.8%" },
+        },
+        80: {
+          ascend: { before: "5", after: "6" },
+          hp: { before: "11561", after: "12182" },
+          atk: { before: "302", after: "318" },
+          def: { before: "675", after: "711" },
+          bonus: { before: "78.8%", after: "88.4%" },
+        },
+        90: {
+          ascend: { before: "6", after: "7" },
+          hp: { before: "13103", after: "13103" },
+          atk: { before: "342", after: "342" },
+          def: { before: "765", after: "765" },
+          bonus: { before: "88.4%", after: "88.4%" },
+        },
+      };
+      const BaizhuStats = {
+        1: {
+          ascend: { before: "-", after: "1" },
+          hp: { before: "-", after: "1020" },
+          atk: { before: "-", after: "27" },
+          def: { before: "-", after: "60" },
+          bonus: { before: "-", after: "50.00%" },
+        },
+        20: {
+          ascend: { before: "0", after: "1" },
+          hp: { before: "2646", after: "3521" },
+          atk: { before: "69", after: "92" },
+          def: { before: "154", after: "205" },
+          bonus: { before: "50.00%", after: "50.00%" },
+        },
+        40: {
+          ascend: { before: "1", after: "2" },
+          hp: { before: "5268", after: "5889" },
+          atk: { before: "138", after: "154" },
+          def: { before: "307", after: "344" },
+          bonus: { before: "50.00%", after: "59.6%" },
+        },
+        50: {
+          ascend: { before: "2", after: "3" },
+          hp: { before: "6776", after: "7604" },
+          atk: { before: "177", after: "198" },
+          def: { before: "395", after: "444" },
+          bonus: { before: "59.6%", after: "69.2%" },
+        },
+        60: {
+          ascend: { before: "3", after: "4" },
+          hp: { before: "8500", after: "9121" },
+          atk: { before: "222", after: "238" },
+          def: { before: "496", after: "532" },
+          bonus: { before: "69.2%", after: "69.2%" },
+        },
+        70: {
+          ascend: { before: "4", after: "5" },
+          hp: { before: "10025", after: "10647" },
+          atk: { before: "262", after: "278" },
+          def: { before: "585", after: "621" },
+          bonus: { before: "69.2%", after: "78.8%" },
+        },
+        80: {
+          ascend: { before: "5", after: "6" },
+          hp: { before: "11561", after: "12182" },
+          atk: { before: "302", after: "318" },
+          def: { before: "675", after: "711" },
+          bonus: { before: "78.8%", after: "88.4%" },
+        },
+        90: {
+          ascend: { before: "6", after: "7" },
+          hp: { before: "13103", after: "13103" },
+          atk: { before: "342", after: "342" },
+          def: { before: "765", after: "765" },
+          bonus: { before: "88.4%", after: "88.4%" },
+        },
+      };
+      const BarbaraStats = {
+        1: {
+          ascend: { before: "-", after: "1" },
+          hp: { before: "-", after: "1020" },
+          atk: { before: "-", after: "27" },
+          def: { before: "-", after: "60" },
+          bonus: { before: "-", after: "50.00%" },
+        },
+        20: {
+          ascend: { before: "0", after: "1" },
+          hp: { before: "2646", after: "3521" },
+          atk: { before: "69", after: "92" },
+          def: { before: "154", after: "205" },
+          bonus: { before: "50.00%", after: "50.00%" },
+        },
+        40: {
+          ascend: { before: "1", after: "2" },
+          hp: { before: "5268", after: "5889" },
+          atk: { before: "138", after: "154" },
+          def: { before: "307", after: "344" },
+          bonus: { before: "50.00%", after: "59.6%" },
+        },
+        50: {
+          ascend: { before: "2", after: "3" },
+          hp: { before: "6776", after: "7604" },
+          atk: { before: "177", after: "198" },
+          def: { before: "395", after: "444" },
+          bonus: { before: "59.6%", after: "69.2%" },
+        },
+        60: {
+          ascend: { before: "3", after: "4" },
+          hp: { before: "8500", after: "9121" },
+          atk: { before: "222", after: "238" },
+          def: { before: "496", after: "532" },
+          bonus: { before: "69.2%", after: "69.2%" },
+        },
+        70: {
+          ascend: { before: "4", after: "5" },
+          hp: { before: "10025", after: "10647" },
+          atk: { before: "262", after: "278" },
+          def: { before: "585", after: "621" },
+          bonus: { before: "69.2%", after: "78.8%" },
+        },
+        80: {
+          ascend: { before: "5", after: "6" },
+          hp: { before: "11561", after: "12182" },
+          atk: { before: "302", after: "318" },
+          def: { before: "675", after: "711" },
+          bonus: { before: "78.8%", after: "88.4%" },
+        },
+        90: {
+          ascend: { before: "6", after: "7" },
+          hp: { before: "13103", after: "13103" },
+          atk: { before: "342", after: "342" },
+          def: { before: "765", after: "765" },
+          bonus: { before: "88.4%", after: "88.4%" },
+        },
+      };
+      
+      // Mappa livelli ai "milestone" disponibili
+      const statsLevels = [1, 20, 40, 50, 60, 70, 80, 90];
+      function renderStatsTable(level) {
+  const charName = getQueryParam("nome") || "albedo";
+  let statsData = alhaithamStats;
+  let bonusLabel = "Dendro DMG Bonus";
+  if (charName.toLowerCase() === "aloy") {
+    statsData = aloyStats;
+    bonusLabel = "Cryo DMG Bonus";
+  } else if (charName.toLowerCase() === "albedo") {
+    statsData = albedoStats;
+    bonusLabel = "Geo DMG Bonus";
+  } else if (charName.toLowerCase() === "amber") {
+    statsData = AmberStats;
+    bonusLabel = "Pyro DMG Bonus";
+  } else if (charName.toLowerCase() === "arataki itto" || charName.toLowerCase() === "arataki_itto" || charName.toLowerCase() === "itto") {
+    statsData = arataki_ittoStats;
+    bonusLabel = "Geo DMG Bonus";
+  } else if (charName.toLowerCase() === "arlecchino") {
+    statsData = ArlecchinoStats;
+    bonusLabel = "Pyro DMG Bonus";
+    const s = statsData[level];
+    document.getElementById("stats-table-body").innerHTML = `
+      <tr><td>Ascend</td><td>${s.ascend.before}</td><td>${s.ascend.after}</td></tr>
+      <tr><td>Base HP</td><td>${s.hp.before}</td><td>${s.hp.after}</td></tr>
+      <tr><td>Base ATK</td><td>${s.atk.before}</td><td>${s.atk.after}</td></tr>
+      <tr><td>Base DEF</td><td>${s.def.before}</td><td>${s.def.after}</td></tr>
+      <tr><td>${bonusLabel}</td><td>${s.bonus.before}</td><td>${s.bonus.after}</td></tr>
+    `;
+    return;
+  } else if (charName.toLowerCase() === "baizhu") {
+    statsData = BaizhuStats;
+    bonusLabel = "Dendro DMG Bonus";
+  } else if (charName.toLowerCase() === "barbara") {
+    statsData = BarbaraStats;
+    bonusLabel = "Hydro DMG Bonus";
+  }
+  const s = statsData[level];
+  document.getElementById("stats-table-body").innerHTML = `
+    <tr><td>Ascend</td><td>${s.ascend.before}</td><td>${s.ascend.after}</td></tr>
+    <tr><td>Base HP</td><td>${s.hp.before}</td><td>${s.hp.after}</td></tr>
+    <tr><td>Base ATK</td><td>${s.atk.before}</td><td>${s.atk.after}</td></tr>
+    <tr><td>Base DEF</td><td>${s.def.before}</td><td>${s.def.after}</td></tr>
+    <tr><td>${bonusLabel}</td><td>${s.bonus.before}</td><td>${s.bonus.after}</td></tr>
+  `;
+}
+      // Gestione click sui bottoni livello
+      document.addEventListener("DOMContentLoaded", function () {
+        renderStatsTable(1);
+        document.querySelectorAll(".stats-level-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            document
+              .querySelectorAll(".stats-level-btn")
+              .forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+            renderStatsTable(this.getAttribute("data-level"));
+          });
+        });
+      });
+    </script>
+    <script>
+      // Struttura ascension materials per Alhaitham (id materiali e quantità)
+      const alhaithamAscension = [
+        // Ogni step: array di materiali (id, qty)
+        [
+          // LV.1
+          { id: "mora", qty: 0 },
+        ],
+        [
+          // LV.20
+          { id: "mora", qty: 20000 },
+          { id: "Nagadus Emerald Sliver", qty: 1 },
+          { id: "Sand Grease Pupa", qty: 3 },
+          { id: "Faded Red Satin", qty: 3 },
+        ],
+        [
+          // LV.40
+          { id: "mora", qty: 40000 },
+          { id: "Nagadus Emerald Fragment", qty: 3 },
+          { id: "Pseudo-Stamens", qty: 2 },
+          { id: "Sand Grease Pupa", qty: 10 },
+          { id: "Faded Red Satin", qty: 15 },
+        ],
+        [
+          // LV.50
+          { id: "mora", qty: 60000 },
+          { id: "Nagadus Emerald Fragment", qty: 6 },
+          { id: "Pseudo-Stamens", qty: 4 },
+          { id: "Sand Grease Pupa", qty: 20 },
+          { id: "Trimmed Red Silk", qty: 12 },
+        ],
+        [
+          // LV.60
+          { id: "mora", qty: 80000 },
+          { id: "Nagadus Emerald Chunk", qty: 3 },
+          { id: "Pseudo-Stamens", qty: 8 },
+          { id: "Sand Grease Pupa", qty: 30 },
+          { id: "Trimmed Red Silk", qty: 18 },
+        ],
+        [
+          // LV.70
+          { id: "mora", qty: 100000 },
+          { id: "Nagadus Emerald Chunk", qty: 6 },
+          { id: "Pseudo-Stamens", qty: 12 },
+          { id: "Sand Grease Pupa", qty: 45 },
+          { id: "Rich Red Brocade", qty: 12 },
+        ],
+        [
+          // LV.80
+          { id: "mora", qty: 120000 },
+          { id: "Nagadus Emerald Gemstone", qty: 6 },
+          { id: "Pseudo-Stamens", qty: 20 },
+          { id: "Sand Grease Pupa", qty: 60 },
+          { id: "Rich Red Brocade", qty: 24 },
+        ],
+        [
+          // LV.90
+          // Totali
+          { id: "mora", qty: 420000 },
+          { id: "Nagadus Emerald Sliver", qty: 1 },
+          { id: "Nagadus Emerald Fragment", qty: 9 },
+          { id: "Nagadus Emerald Chunk", qty: 9 },
+          { id: "Nagadus Emerald Gemstone", qty: 6 },
+          { id: "Pseudo-Stamens", qty: 46 },
+          { id: "Sand Grease Pupa", qty: 168 },
+          { id: "Faded Red Satin", qty: 18 },
+          { id: "Trimmed Red Silk", qty: 30 },
+          { id: "Rich Red Brocade", qty: 36 },
+        ],
+      ];
+      const albedoAscension = [
+  // LV.1
+  [ { id: "mora", qty: 0 } ],
+  // LV.20
+  [ { id: "mora", qty: 20000 }, { id: "Prithiva Topaz Sliver", qty: 1 }, { id: "Cecilia", qty: 3 }, { id: "Divining Scroll", qty: 3 } ],
+  // LV.40
+  [ { id: "mora", qty: 40000 }, { id: "Prithiva Topaz Fragment", qty: 3 }, { id: "Basalt Pillar", qty: 2 }, { id: "Cecilia", qty: 10 }, { id: "Divining Scroll", qty: 15 } ],
+  // LV.50
+  [ { id: "mora", qty: 60000 }, { id: "Prithiva Topaz Fragment", qty: 6 }, { id: "Basalt Pillar", qty: 4 }, { id: "Cecilia", qty: 20 }, { id: "Sealed Scroll", qty: 12 } ],
+  // LV.60
+  [ { id: "mora", qty: 80000 }, { id: "Prithiva Topaz Chunk", qty: 3 }, { id: "Basalt Pillar", qty: 8 }, { id: "Cecilia", qty: 30 }, { id: "Sealed Scroll", qty: 18 } ],
+  // LV.70
+  [ { id: "mora", qty: 100000 }, { id: "Prithiva Topaz Chunk", qty: 6 }, { id: "Basalt Pillar", qty: 12 }, { id: "Cecilia", qty: 45 }, { id: "Forbidden Curse Scroll", qty: 12 } ],
+  // LV.80
+  [ { id: "mora", qty: 120000 }, { id: "Prithiva Topaz Gemstone", qty: 6 }, { id: "Basalt Pillar", qty: 20 }, { id: "Cecilia", qty: 60 }, { id: "Forbidden Curse Scroll", qty: 24 } ],
+];
+      const aloyAscension = [
+        // LV.1
+        [ { id: "mora", qty: 0 } ],
+        // LV.20
+        [ { id: "mora", qty: 20000 }, { id: "Shivada Jade Sliver", qty: 1 }, { id: "Crystal Marrow", qty: 3 }, { id: "Spectral Husk", qty: 3 } ],
+        // LV.40
+        [ { id: "mora", qty: 40000 }, { id: "Shivada Jade Fragment", qty: 3 }, { id: "Crystalline Bloom", qty: 2 }, { id: "Crystal Marrow", qty: 10 }, { id: "Spectral Husk", qty: 15 } ],
+        // LV.50
+        [ { id: "mora", qty: 60000 }, { id: "Shivada Jade Fragment", qty: 6 }, { id: "Crystalline Bloom", qty: 4 }, { id: "Crystal Marrow", qty: 20 }, { id: "Spectral Heart", qty: 12 } ],
+        // LV.60
+        [ { id: "mora", qty: 80000 }, { id: "Shivada Jade Chunk", qty: 3 }, { id: "Crystalline Bloom", qty: 8 }, { id: "Crystal Marrow", qty: 30 }, { id: "Spectral Heart", qty: 18 } ],
+        // LV.70
+        [ { id: "mora", qty: 100000 }, { id: "Shivada Jade Chunk", qty: 6 }, { id: "Crystalline Bloom", qty: 12 }, { id: "Crystal Marrow", qty: 45 }, { id: "Spectral Nucleus", qty: 12 } ],
+        // LV.80
+        [ { id: "mora", qty: 120000 }, { id: "Shivada Jade Gemstone", qty: 6 }, { id: "Crystalline Bloom", qty: 20 }, { id: "Crystal Marrow", qty: 60 }, { id: "Spectral Nucleus", qty: 24 } ],
+      ];
+      const amberAscension = [
+        // LV.1
+        [ { id: "mora", qty: 0 } ],
+        // LV.20
+        [ { id: "mora", qty: 20000 }, { id: "Agnidus Agate Sliver", qty: 1 }, { id: "Small Lamp Grass", qty: 3 }, { id: "Firm Arrowhead", qty: 3 } ],
+        // LV.40
+        [ { id: "mora", qty: 40000 }, { id: "Agnidus Agate Fragment", qty: 3 }, { id: "Everflame Seed", qty: 2 }, { id: "Small Lamp Grass", qty: 10 }, { id: "Firm Arrowhead", qty: 15 } ],
+        // LV.50
+        [ { id: "mora", qty: 60000 }, { id: "Agnidus Agate Fragment", qty: 6 }, { id: "Everflame Seed", qty: 4 }, { id: "Small Lamp Grass", qty: 20 }, { id: "Sharp Arrowhead", qty: 12 } ],
+        // LV.60
+        [ { id: "mora", qty: 80000 }, { id: "Agnidus Agate Chunk", qty: 3 }, { id: "Everflame Seed", qty: 8 }, { id: "Small Lamp Grass", qty: 30 }, { id: "Sharp Arrowhead", qty: 18 } ],
+        // LV.70
+        [ { id: "mora", qty: 100000 }, { id: "Agnidus Agate Chunk", qty: 6 }, { id: "Everflame Seed", qty: 12 }, { id: "Small Lamp Grass", qty: 45 }, { id: "Weathered Arrowhead", qty: 12 } ],
+        // LV.80
+        [ { id: "mora", qty: 120000 }, { id: "Agnidus Agate Gemstone", qty: 6 }, { id: "Everflame Seed", qty: 20 }, { id: "Small Lamp Grass", qty: 60 }, { id: "Weathered Arrowhead", qty: 24 } ],
+      ];
+      // Ascension materials per Arataki Itto
+      const arataki_ittoAscension = [
+        // LV.1
+        [ { id: "mora", qty: 0 } ],
+        // LV.20
+        [ { id: "mora", qty: 20000 }, { id: "Prithiva Topaz Sliver", qty: 1 }, { id: "Onikabuto", qty: 3 }, { id: "Slime Condensate", qty: 3 } ],
+        // LV.40
+        [ { id: "mora", qty: 40000 }, { id: "Prithiva Topaz Fragment", qty: 3 }, { id: "Riftborn Regalia", qty: 2 }, { id: "Onikabuto", qty: 10 }, { id: "Slime Condensate", qty: 15 } ],
+        // LV.50
+        [ { id: "mora", qty: 60000 }, { id: "Prithiva Topaz Fragment", qty: 6 }, { id: "Riftborn Regalia", qty: 4 }, { id: "Onikabuto", qty: 20 }, { id: "Slime Secretions", qty: 12 } ],
+        // LV.60
+        [ { id: "mora", qty: 80000 }, { id: "Prithiva Topaz Chunk", qty: 3 }, { id: "Riftborn Regalia", qty: 8 }, { id: "Onikabuto", qty: 30 }, { id: "Slime Secretions", qty: 18 } ],
+        // LV.70
+        [ { id: "mora", qty: 100000 }, { id: "Prithiva Topaz Chunk", qty: 6 }, { id: "Riftborn Regalia", qty: 12 }, { id: "Onikabuto", qty: 45 }, { id: "Slime Concentrate", qty: 12 } ],
+        // LV.80
+        [ { id: "mora", qty: 120000 }, { id: "Prithiva Topaz Gemstone", qty: 6 }, { id: "Riftborn Regalia", qty: 20 }, { id: "Onikabuto", qty: 60 }, { id: "Slime Concentrate", qty: 24 } ],
+      ];
+      const ascensionLabels = [
+        "LV.1",
+        "LV.20",
+        "LV.40",
+        "LV.50",
+        "LV.60",
+        "LV.70",
+        "LV.80",
+        "TOTAL",
+      ];
+      // Mappa id -> info materiale (nome, immagine, descrizione)
+      let materialiMap = {};
+      // Carica materiali.json e popola la tabella
+      fetch("materiali.json")
+        .then((res) => res.json())
+        .then((data) => {
+          // Estrai tutti i materiali utili in una mappa
+          function addMat(mat, id) {
+            materialiMap[id.toLowerCase()] = {
+              name: id,
+              img: mat.immagine || "",
+              desc: mat.descrizione || "",
+            };
+          }
+          // Dendro gems
+          const dendro =
+            data.materiali.materiali_ascensione_personaggi.elementi.Dendro;
+          Object.keys(dendro).forEach((id) => addMat(dendro[id], id));
+          // PYRO gems (per Amber)
+          const pyro = data.materiali.materiali_ascensione_personaggi.elementi.Pyro;
+          Object.keys(pyro).forEach((id) => addMat(pyro[id], id));
+          // GEO gems (per Albedo)
+          const geo = data.materiali.materiali_ascensione_personaggi.elementi.Geo;
+          Object.keys(geo).forEach((id) => addMat(geo[id], id));
+          // CRYO gems (per Aloy)
+          const cryo =
+            data.materiali.materiali_ascensione_personaggi.elementi.Cryo;
+          Object.keys(cryo).forEach((id) => addMat(cryo[id], id));
+          // HYDRO gems (per Barbara)
+          const hydro = data.materiali.materiali_ascensione_personaggi.elementi.Hydro;
+          Object.keys(hydro).forEach((id) => addMat(hydro[id], id));
+          // Condivisi
+          const condivisi =
+            data.materiali.materiali_ascensione_personaggi.materiali_condivisi;
+          Object.keys(condivisi).forEach((id) => addMat(condivisi[id], id));
+          // Comuni
+          const comuni =
+            data.materiali.materiali_ascensione_personaggi.materiali_comuni;
+          Object.keys(comuni).forEach((id) => addMat(comuni[id], id));
+          // Epici
+          const epici =
+            data.materiali.materiali_ascensione_personaggi.materiali_epici;
+          Object.keys(epici).forEach((id) => addMat(epici[id], id));
+          // Materiali locali (Sumeru per Alhaitham, Inazuma per Aloy)
+          const sumeruLocali = data.materiali.materiali_locali.Sumeru;
+          Object.keys(sumeruLocali).forEach((id) =>
+            addMat(sumeruLocali[id], id)
+          );
+          const inazumaLocali = data.materiali.materiali_locali.Inazuma;
+          Object.keys(inazumaLocali).forEach((id) =>
+            addMat(inazumaLocali[id], id)
+          );
+          // AGGIUNTA: carica anche i materiali locali di Liyue (per Violetgrass)
+          const liyueLocali = data.materiali.materiali_locali.Liyue;
+          if (liyueLocali) {
+            Object.keys(liyueLocali).forEach((id) =>
+              addMat(liyueLocali[id], id)
+            );
+            // Fix: forza la chiave esatta per Violetgrass
+            if (liyueLocali["Violetgrass"]) {
+              addMat(liyueLocali["Violetgrass"], "Violetgrass");
+            } else if (liyueLocali["Violet_grass"]) {
+              addMat(liyueLocali["Violet_grass"], "Violetgrass");
+            } else {
+              // Cerca una chiave simile
+              const key = Object.keys(liyueLocali).find(k => k.replace(/\s+|_/g, "").toLowerCase() === "violetgrass");
+              if (key) addMat(liyueLocali[key], "Violetgrass");
+            }
+          }
+          // AGGIUNTA: carica anche i materiali locali di Fontaine (per Rainbow Rose)
+          const fontaineLocali = data.materiali.materiali_locali.Fontaine;
+          if (fontaineLocali) {
+            Object.keys(fontaineLocali).forEach((id) =>
+              addMat(fontaineLocali[id], id)
+            );
+          }
+          // AGGIUNTA: carica anche Mondstadt (per Small Lamp Grass di Amber)
+          const mondstadtLocali = data.materiali.materiali_locali.Mondstadt;
+          if (mondstadtLocali) {
+            Object.keys(mondstadtLocali).forEach((id) =>
+              addMat(mondstadtLocali[id], id)
+            );
+            // Fix: forza la chiave esatta per Small Lamp Grass
+            if (mondstadtLocali["Small Lamp Grass"]) {
+              addMat(mondstadtLocali["Small Lamp Grass"], "Small Lamp Grass");
+            } else if (mondstadtLocali["Small_Lamp_Grass"]) {
+              addMat(mondstadtLocali["Small_Lamp_Grass"], "Small Lamp Grass");
+            } else {
+              // Cerca una chiave simile
+              const key = Object.keys(mondstadtLocali).find(k => k.replace(/\s+|_/g, "").toLowerCase() === "smalllampgrass");
+              if (key) addMat(mondstadtLocali[key], "Small Lamp Grass");
+            }
+          }
+          // Materiali speciali (Mora, Primogem, etc.)
+          const speciali = data.materiali.materiali_speciali;
+          Object.keys(speciali).forEach((id) => addMat(speciali[id], id));
+          // Materiali boss settimanali e boss normali (Crystalline Bloom)
+          const weeklyBoss = data.materiali.materiali_weekly_boss;
+          Object.keys(weeklyBoss).forEach((id) => addMat(weeklyBoss[id], id));
+          const boss = data.materiali.materiali_boss;
+          if (boss) Object.keys(boss).forEach((id) => addMat(boss[id], id));
+          // Materiali non comuni (inclusi i materiali Eremite)
+          const nonComuni =
+            data.materiali.materiali_ascensione_personaggi.materiali_non_comuni;
+          Object.keys(nonComuni).forEach((id) => addMat(nonComuni[id], id));
+          // Materiali rari (inclusi i materiali Eremite di livello superiore)
+          const rari =
+            data.materiali.materiali_ascensione_personaggi.materiali_rari;
+          Object.keys(rari).forEach((id) => addMat(rari[id], id));
+          // Materiali talento (libri)
+          const talentBooks = data.materiali.materiali_talenti;
+          if (talentBooks) {
+            Object.keys(talentBooks).forEach((id) =>
+              addMat(talentBooks[id], id)
+            );
+          }
+          // Debug: controlla se Mora è stato caricato
+          console.log("Materiali caricati:", Object.keys(materialiMap));
+          console.log("Mora info:", materialiMap["mora"]);
+          // Genera la tabella
+          renderAscensionTable();
+        });
+      // Funzione di lookup robusta per materiali (case-insensitive)
+      function getMatInfo(id) {
+        let matInfo = materialiMap[id.toLowerCase()];
+        if (!matInfo) {
+          // Prova a normalizzare: togli spazi e underscore, tutto minuscolo
+          const normId = id.replace(/\s+|_/g, "").toLowerCase();
+          const foundKey = Object.keys(materialiMap).find(
+            (k) => k.replace(/\s+|_/g, "").toLowerCase() === normId
+          );
+          if (foundKey) matInfo = materialiMap[foundKey];
+        }
+        if (!matInfo) {
+          console.warn("Materiale non trovato:", id);
+          matInfo = {
+            name: id,
+            img: "",
+            desc: "",
+          };
+        }
+        return matInfo;
+      }
+      // Funzione UNICA per tutti i personaggi (Aloy compresa)
+      function renderAscensionTable() {
+        const charName = getQueryParam("nome") || "albedo";
+        let ascensionData = alhaithamAscension;
+        let ascensionLabelsLocal = ascensionLabels;
+        // --- PATCH ARLECCHINO ---
+        if (charName.toLowerCase() === "arlecchino") {
+          // Carica i dati dal JSON del personaggio già fetchato
+          fetchCharacterData("arlecchino").then((charDetails) => {
+            if (!charDetails || !charDetails.ascension_materials) return;
+            const ascensionDataArlecchino = charDetails.ascension_materials.map((step) =>
+              step.materials.map((mat) => ({ id: mat.name, qty: mat.quantity }))
+            );
+            const ascensionLabelsArlecchino = [
+              "LV.20",
+              "LV.40",
+              "LV.50",
+              "LV.60",
+              "LV.70",
+              "LV.80",
+              "LV.90"
+            ];
+            const tbody = document.getElementById("ascension-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < ascensionDataArlecchino.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              // Se è la riga dei totali, mostra 'TOTAL'
+              if (charDetails.ascension_materials[i].total) {
+                labelCell.textContent = "TOTAL";
+              } else {
+                labelCell.textContent = ascensionLabelsArlecchino[i] || "";
+              }
+              row.appendChild(labelCell);
+              ascensionDataArlecchino[i].forEach((mat) => {
+                const matInfo = getMatInfo(mat.id);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                const imgSrc = matInfo.img || "";
+                cell.innerHTML = `
+                  <div class="material-cell-content">
+                    <img src="${imgSrc}" alt="${matInfo.name}" class="material-img-zoom" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <div style="display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;">${matInfo.name.charAt(0)}</div>
+                    <div class="material-quantity">${mat.qty}</div>
+                    <div class="material-name">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH BAIZHU ---
+        if (charName.toLowerCase() === "baizhu") {
+          fetchCharacterData("baizhu").then((charDetails) => {
+            if (!charDetails || !charDetails.ascension_materials) return;
+            const ascensionDataBaizhu = charDetails.ascension_materials.map((step) =>
+              step.materials.map((mat) => ({ id: mat.name, qty: mat.quantity }))
+            );
+            const ascensionLabelsBaizhu = [
+              "LV.20",
+              "LV.40",
+              "LV.50",
+              "LV.60",
+              "LV.70",
+              "LV.80",
+              "LV.90"
+            ];
+            const tbody = document.getElementById("ascension-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < ascensionDataBaizhu.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              // Se è la riga dei totali, mostra 'TOTAL'
+              if (charDetails.ascension_materials[i].total) {
+                labelCell.textContent = "TOTAL";
+              } else {
+                labelCell.textContent = ascensionLabelsBaizhu[i] || "";
+              }
+              row.appendChild(labelCell);
+              ascensionDataBaizhu[i].forEach((mat) => {
+                const matInfo = getMatInfo(mat.id);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class="material-cell-content">
+                    <img src="${matInfo.img}" alt="${matInfo.name}" class="material-img-zoom" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <div style="display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;">${matInfo.name.charAt(0)}</div>
+                    <div class="material-quantity">${mat.qty}</div>
+                    <div class="material-name">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH ALBEDO ---
+        if (charName.toLowerCase() === "albedo") {
+          fetchCharacterData("albedo").then((charDetails) => {
+            if (!charDetails || !charDetails.ascension_materials) return;
+            const ascensionDataAlbedo = charDetails.ascension_materials.map((step) =>
+              step.materials.map((mat) => ({ id: mat.name, qty: mat.quantity }))
+            );
+            // Genera le label (usa LV.20, LV.40, ... e TOTAL se presente)
+            const ascensionLabelsAlbedo = charDetails.ascension_materials.map((step, i) => step.total ? "TOTAL" : (step.level ? `LV.${step.level}` : ""));
+            const tbody = document.getElementById("ascension-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < ascensionDataAlbedo.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = ascensionLabelsAlbedo[i] || "";
+              row.appendChild(labelCell);
+              ascensionDataAlbedo[i].forEach((mat) => {
+                const matInfo = getMatInfo(mat.id);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.qty}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH ALOY ---
+        if (charName.toLowerCase() === "aloy") {
+          fetchCharacterData("aloy").then((charDetails) => {
+            if (!charDetails || !charDetails.ascension_materials) return;
+            const ascensionDataAloy = charDetails.ascension_materials.map((step) =>
+              step.materials.map((mat) => ({ id: mat.name, qty: mat.quantity }))
+            );
+            const ascensionLabelsAloy = charDetails.ascension_materials.map((step, i) => step.total ? "TOTAL" : (step.level ? `LV.${step.level}` : ""));
+            const tbody = document.getElementById("ascension-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < ascensionDataAloy.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = ascensionLabelsAloy[i] || "";
+              row.appendChild(labelCell);
+              ascensionDataAloy[i].forEach((mat) => {
+                const matInfo = getMatInfo(mat.id);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.qty}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH AMBER ---
+        if (charName.toLowerCase() === "amber") {
+          fetchCharacterData("amber").then((charDetails) => {
+            if (!charDetails || !charDetails.ascension_materials) return;
+            const ascensionDataAmber = charDetails.ascension_materials.map((step) =>
+              step.materials.map((mat) => ({ id: mat.name, qty: mat.quantity }))
+            );
+            const ascensionLabelsAmber = charDetails.ascension_materials.map((step, i) => step.total ? "TOTAL" : (step.level ? `LV.${step.level}` : ""));
+            const tbody = document.getElementById("ascension-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < ascensionDataAmber.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = ascensionLabelsAmber[i] || "";
+              row.appendChild(labelCell);
+              ascensionDataAmber[i].forEach((mat) => {
+                const matInfo = getMatInfo(mat.id);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.qty}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH ARATAKI ITTO ---
+        if (charName.toLowerCase() === "arataki itto" || charName.toLowerCase() === "arataki_itto") {
+          fetchCharacterData("arataki_itto").then((charDetails) => {
+            if (!charDetails || !charDetails.ascension_materials) return;
+            const ascensionDataItto = charDetails.ascension_materials.map((step) =>
+              step.materials.map((mat) => ({ id: mat.name, qty: mat.quantity }))
+            );
+            const ascensionLabelsItto = charDetails.ascension_materials.map((step, i) => step.total ? "TOTAL" : (step.level ? `LV.${step.level}` : ""));
+            const tbody = document.getElementById("ascension-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < ascensionDataItto.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = ascensionLabelsItto[i] || "";
+              row.appendChild(labelCell);
+              ascensionDataItto[i].forEach((mat) => {
+                const matInfo = getMatInfo(mat.id);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.qty}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH BARBARA ---
+        if (charName.toLowerCase() === "barbara") {
+          fetchCharacterData("barbara").then((charDetails) => {
+            if (!charDetails || !charDetails.ascension_materials) return;
+            const ascensionDataBarbara = charDetails.ascension_materials.map((step) =>
+              step.materials.map((mat) => ({ id: mat.name, qty: mat.quantity }))
+            );
+            const ascensionLabelsBarbara = charDetails.ascension_materials.map((step, i) => step.total ? "TOTAL" : (step.level ? `LV.${step.level}` : ""));
+            const tbody = document.getElementById("ascension-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < ascensionDataBarbara.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = ascensionLabelsBarbara[i] || "";
+              row.appendChild(labelCell);
+              ascensionDataBarbara[i].forEach((mat) => {
+                const matInfo = getMatInfo(mat.id);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.qty}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // ... existing code ...
+      }
+    </script>
+    <script>
+      // Talent materials per Alhaitham (id materiali e quantità per livello)
+      const alhaithamTalent = [
+        // Ogni step: array di materiali (id, qty)
+        [
+          // LV.1→2
+          { id: "mora", qty: 12500 },
+          { id: "Teachings of Ingenuity", qty: 3 },
+          { id: "Faded Red Satin", qty: 6 },
+        ],
+        [
+          // LV.2→3
+          { id: "mora", qty: 17500 },
+          { id: "Guide to Ingenuity", qty: 2 },
+          { id: "Trimmed Red Silk", qty: 3 },
+        ],
+        [
+          // LV.3→4
+          { id: "mora", qty: 25000 },
+          { id: "Guide to Ingenuity", qty: 4 },
+          { id: "Trimmed Red Silk", qty: 4 },
+        ],
+        [
+          // LV.4→5
+          { id: "mora", qty: 30000 },
+          { id: "Guide to Ingenuity", qty: 6 },
+          { id: "Trimmed Red Silk", qty: 6 },
+        ],
+        [
+          // LV.5→6
+          { id: "mora", qty: 37500 },
+          { id: "Guide to Ingenuity", qty: 9 },
+          { id: "Trimmed Red Silk", qty: 9 },
+        ],
+        [
+          // LV.6→7
+          { id: "mora", qty: 120000 },
+          { id: "Philosophies of Ingenuity", qty: 4 },
+          { id: "Rich Red Brocade", qty: 4 },
+          { id: "Mirror of Mushin", qty: 1 },
+        ],
+        [
+          // LV.7→8
+          { id: "mora", qty: 260000 },
+          { id: "Philosophies of Ingenuity", qty: 6 },
+          { id: "Rich Red Brocade", qty: 6 },
+          { id: "Mirror of Mushin", qty: 1 },
+        ],
+        [
+          // LV.8→9
+          { id: "mora", qty: 450000 },
+          { id: "Philosophies of Ingenuity", qty: 12 },
+          { id: "Rich Red Brocade", qty: 9 },
+          { id: "Mirror of Mushin", qty: 2 },
+        ],
+        [
+          // LV.9→10
+          { id: "mora", qty: 700000 },
+          { id: "Philosophies of Ingenuity", qty: 16 },
+          { id: "Rich Red Brocade", qty: 12 },
+          { id: "Mirror of Mushin", qty: 2 },
+          { id: "Crown of Insight", qty: 1 },
+        ],
+      ];
+      const talentLabels = [
+        "LV.1→2",
+        "LV.2→3",
+        "LV.3→4",
+        "LV.4→5",
+        "LV.5→6",
+        "LV.6→7",
+        "LV.7→8",
+        "LV.8→9",
+        "LV.9→10",
+        "TOTAL",
+      ];
+      // Funzione per calcolare i totali
+      function getTalentTotals() {
+        const totals = {};
+        alhaithamTalent.forEach((row) => {
+          row.forEach((mat) => {
+            if (!totals[mat.id]) totals[mat.id] = 0;
+            totals[mat.id] += mat.qty;
+          });
+        });
+        return totals;
+      }
+      // Popola la tabella talent materials
+      function renderTalentTable() {
+        const charName = getQueryParam("nome") || "albedo";
+        let talentData = alhaithamTalent;
+        let talentLabelsLocal = talentLabels;
+        // --- PATCH ARLECCHINO ---
+        if (charName.toLowerCase() === "arlecchino") {
+          fetchCharacterData("arlecchino").then((charDetails) => {
+            if (!charDetails || !charDetails.talent_materials) return;
+            // Costruisci la tabella dinamicamente dai dati JSON
+            const talentMaterials = charDetails.talent_materials;
+            const tbody = document.getElementById("talent-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < talentMaterials.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              // Se è la riga dei totali, mostra 'TOTAL'
+              if (talentMaterials[i].total) {
+                labelCell.textContent = "TOTAL";
+              } else {
+                labelCell.textContent = `LV.${talentMaterials[i].level - 1}→${talentMaterials[i].level}`;
+              }
+              row.appendChild(labelCell);
+              talentMaterials[i].materials.forEach((mat) => {
+                const matInfo = getMatInfo(mat.name);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class="material-cell-content">
+                    <img src="${matInfo.img}" alt="${matInfo.name}" class="material-img-zoom" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <div style="display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;">${matInfo.name.charAt(0)}</div>
+                    <div class="material-quantity">${mat.quantity}</div>
+                    <div class="material-name">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH BAIZHU ---
+        if (charName.toLowerCase() === "baizhu") {
+          fetchCharacterData("baizhu").then((charDetails) => {
+            if (!charDetails || !charDetails.talent_materials) return;
+            const talentMaterials = charDetails.talent_materials;
+            const tbody = document.getElementById("talent-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < talentMaterials.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              // Se è la riga dei totali, mostra 'TOTAL'
+              if (talentMaterials[i].total) {
+                labelCell.textContent = "TOTAL";
+              } else {
+                labelCell.textContent = `LV.${talentMaterials[i].level - 1}→${talentMaterials[i].level}`;
+              }
+              row.appendChild(labelCell);
+              talentMaterials[i].materials.forEach((mat) => {
+                const matInfo = getMatInfo(mat.name);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class="material-cell-content">
+                    <img src="${matInfo.img}" alt="${matInfo.name}" class="material-img-zoom" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <div style="display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;">${matInfo.name.charAt(0)}</div>
+                    <div class="material-quantity">${mat.quantity}</div>
+                    <div class="material-name">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH ALBEDO ---
+        if (charName.toLowerCase() === "albedo") {
+          fetchCharacterData("albedo").then((charDetails) => {
+            if (!charDetails || !charDetails.talent_materials) return;
+            const talentMaterials = charDetails.talent_materials;
+            const tbody = document.getElementById("talent-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < talentMaterials.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = talentMaterials[i].total ? "TOTAL" : (talentMaterials[i].level ? `LV.${talentMaterials[i].level - 1}→${talentMaterials[i].level}` : "");
+              row.appendChild(labelCell);
+              talentMaterials[i].materials.forEach((mat) => {
+                const matInfo = getMatInfo(mat.name);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.quantity}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH ALOY ---
+        if (charName.toLowerCase() === "aloy") {
+          fetchCharacterData("aloy").then((charDetails) => {
+            if (!charDetails || !charDetails.talent_materials) return;
+            const talentMaterials = charDetails.talent_materials;
+            const tbody = document.getElementById("talent-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < talentMaterials.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = talentMaterials[i].total ? "TOTAL" : (talentMaterials[i].level ? `LV.${talentMaterials[i].level - 1}→${talentMaterials[i].level}` : "");
+              row.appendChild(labelCell);
+              talentMaterials[i].materials.forEach((mat) => {
+                const matInfo = getMatInfo(mat.name);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.quantity}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH AMBER ---
+        if (charName.toLowerCase() === "amber") {
+          fetchCharacterData("amber").then((charDetails) => {
+            if (!charDetails || !charDetails.talent_materials) return;
+            const talentMaterials = charDetails.talent_materials;
+            const tbody = document.getElementById("talent-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < talentMaterials.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = talentMaterials[i].total ? "TOTAL" : (talentMaterials[i].level ? `LV.${talentMaterials[i].level - 1}→${talentMaterials[i].level}` : "");
+              row.appendChild(labelCell);
+              talentMaterials[i].materials.forEach((mat) => {
+                const matInfo = getMatInfo(mat.name);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.quantity}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH ARATAKI ITTO ---
+        if (charName.toLowerCase() === "arataki itto" || charName.toLowerCase() === "arataki_itto") {
+          fetchCharacterData("arataki_itto").then((charDetails) => {
+            if (!charDetails || !charDetails.talent_materials) return;
+            const talentMaterials = charDetails.talent_materials;
+            const tbody = document.getElementById("talent-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < talentMaterials.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              labelCell.textContent = talentMaterials[i].total ? "TOTAL" : (talentMaterials[i].level ? `LV.${talentMaterials[i].level - 1}→${talentMaterials[i].level}` : "");
+              row.appendChild(labelCell);
+              talentMaterials[i].materials.forEach((mat) => {
+                const matInfo = getMatInfo(mat.name);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class=\"material-cell-content\">
+                    <img src=\"${matInfo.img}\" alt=\"${matInfo.name}\" class=\"material-img-zoom\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='inline-block';\">
+                    <div style=\"display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;\">${matInfo.name.charAt(0)}</div>
+                    <div class=\"material-quantity\">${mat.quantity}</div>
+                    <div class=\"material-name\">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // --- PATCH BARBARA ---
+        if (charName.toLowerCase() === "barbara") {
+          fetchCharacterData("barbara").then((charDetails) => {
+            if (!charDetails || !charDetails.talent_materials) return;
+            const talentMaterials = charDetails.talent_materials;
+            const tbody = document.getElementById("talent-materials-tbody");
+            tbody.innerHTML = "";
+            for (let i = 0; i < talentMaterials.length; i++) {
+              const row = document.createElement("tr");
+              const labelCell = document.createElement("td");
+              if (talentMaterials[i].total) {
+                labelCell.textContent = "TOTAL";
+              } else if (talentMaterials[i].level) {
+                labelCell.textContent = `LV.${talentMaterials[i].level - 1}→${talentMaterials[i].level}`;
+              } else {
+                labelCell.textContent = "";
+              }
+              row.appendChild(labelCell);
+              talentMaterials[i].materials.forEach((mat) => {
+                const matInfo = getMatInfo(mat.name);
+                const cell = document.createElement("td");
+                cell.style.textAlign = "center";
+                cell.innerHTML = `
+                  <div class="material-cell-content">
+                    <img src="${matInfo.img}" alt="${matInfo.name}" class="material-img-zoom" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <div style="display:none; width:56px; height:56px; background:#666; color:#fff; border-radius:6px; text-align:center; line-height:56px; font-weight:bold; font-size:18px;">${matInfo.name.charAt(0)}</div>
+                    <div class="material-quantity">${mat.quantity}</div>
+                    <div class="material-name">${matInfo.name}</div>
+                  </div>
+                `;
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
+            }
+          });
+          return;
+        }
+        // ... existing code ...
+      }
+      // Dopo aver caricato materialiMap, chiama anche renderTalentTable
+      const oldRenderAscensionTable = renderAscensionTable;
+      renderAscensionTable = function () {
+        oldRenderAscensionTable();
+        renderTalentTable();
+      };
+  
+      const aloyTalent = [
+        [
+          // LV.1→2
+          { id: "mora", qty: 12500 },
+          { id: "Teachings of Freedom", qty: 3 },
+          { id: "Spectral Husk", qty: 6 },
+        ],
+        [
+          // LV.2→3
+          { id: "mora", qty: 17500 },
+          { id: "Guide to Freedom", qty: 2 },
+          { id: "Spectral Heart", qty: 3 },
+        ],
+        [
+          // LV.3→4
+          { id: "mora", qty: 25000 },
+          { id: "Guide to Freedom", qty: 4 },
+          { id: "Spectral Heart", qty: 4 },
+        ],
+        [
+          // LV.4→5
+          { id: "mora", qty: 30000 },
+          { id: "Guide to Freedom", qty: 6 },
+          { id: "Spectral Heart", qty: 6 },
+        ],
+        [
+          // LV.5→6
+          { id: "mora", qty: 37500 },
+          { id: "Guide to Freedom", qty: 9 },
+          { id: "Spectral Heart", qty: 9 },
+        ],
+        [
+          // LV.6→7
+          { id: "mora", qty: 120000 },
+          { id: "Philosophies of Freedom", qty: 4 },
+          { id: "Spectral Nucleus", qty: 4 },
+          { id: "Molten Moment", qty: 1 },
+        ],
+        [
+          // LV.7→8
+          { id: "mora", qty: 260000 },
+          { id: "Philosophies of Freedom", qty: 6 },
+          { id: "Spectral Nucleus", qty: 6 },
+          { id: "Molten Moment", qty: 1 },
+        ],
+        [
+          // LV.8→9
+          { id: "mora", qty: 450000 },
+          { id: "Philosophies of Freedom", qty: 12 },
+          { id: "Spectral Nucleus", qty: 9 },
+          { id: "Molten Moment", qty: 2 },
+        ],
+        [
+          // LV.9→10
+          { id: "mora", qty: 700000 },
+          { id: "Philosophies of Freedom", qty: 16 },
+          { id: "Spectral Nucleus", qty: 12 },
+          { id: "Molten Moment", qty: 2 },
+          { id: "Crown of Insight", qty: 1 },
+        ],
+      ];
+      const aloyTalentLabels = [
+        "LV.1→2",
+        "LV.2→3",
+        "LV.3→4",
+        "LV.4→5",
+        "LV.5→6",
+        "LV.6→7",
+        "LV.7→8",
+        "LV.8→9",
+        "LV.9→10",
+        "TOTAL",
+      ];
+      // Dati talent materials per Albedo (come nell'immagine)
+      const albedoTalent = [
+        [ // LV.1→2
+          { id: "mora", qty: 12500 },
+          { id: "Teachings of Ballad", qty: 3 },
+          { id: "Divining Scroll", qty: 6 },
+        ],
+        [ // LV.2→3
+          { id: "mora", qty: 17500 },
+          { id: "Guide to Ballad", qty: 2 },
+          { id: "Sealed Scroll", qty: 3 },
+        ],
+        [ // LV.3→4
+          { id: "mora", qty: 25000 },
+          { id: "Guide to Ballad", qty: 4 },
+          { id: "Sealed Scroll", qty: 4 },
+        ],
+        [ // LV.4→5
+          { id: "mora", qty: 30000 },
+          { id: "Guide to Ballad", qty: 6 },
+          { id: "Sealed Scroll", qty: 6 },
+        ],
+        [ // LV.5→6
+          { id: "mora", qty: 37500 },
+          { id: "Guide to Ballad", qty: 9 },
+          { id: "Sealed Scroll", qty: 9 },
+        ],
+        [ // LV.6→7
+          { id: "mora", qty: 120000 },
+          { id: "Philosophies of Ballad", qty: 4 },
+          { id: "Forbidden Curse Scroll", qty: 4 },
+          { id: "Tusk of Monoceros Caeli", qty: 1 },
+        ],
+        [ // LV.7→8
+          { id: "mora", qty: 260000 },
+          { id: "Philosophies of Ballad", qty: 6 },
+          { id: "Forbidden Curse Scroll", qty: 6 },
+          { id: "Tusk of Monoceros Caeli", qty: 1 },
+        ],
+        [ // LV.8→9
+          { id: "mora", qty: 450000 },
+          { id: "Philosophies of Ballad", qty: 12 },
+          { id: "Forbidden Curse Scroll", qty: 9 },
+          { id: "Tusk of Monoceros Caeli", qty: 2 },
+        ],
+        [ // LV.9→10
+          { id: "mora", qty: 700000 },
+          { id: "Philosophies of Ballad", qty: 16 },
+          { id: "Forbidden Curse Scroll", qty: 12 },
+          { id: "Tusk of Monoceros Caeli", qty: 2 },
+          { id: "Crown of Insight", qty: 1 },
+        ],
+      ];
+      const albedoTalentLabels = [
+        "LV.1→2",
+        "LV.2→3",
+        "LV.3→4",
+        "LV.4→5",
+        "LV.5→6",
+        "LV.6→7",
+        "LV.7→8",
+        "LV.8→9",
+        "LV.9→10",
+        "TOTAL",
+      ];
+      // Dati talent materials per Amber
+      const amberTalent = [
+        [ // LV.1→2
+          { id: "mora", qty: 12500 },
+          { id: "Teachings of Freedom", qty: 3 },
+          { id: "Firm Arrowhead", qty: 6 },
+        ],
+        [ // LV.2→3
+          { id: "mora", qty: 17500 },
+          { id: "Guide to Freedom", qty: 2 },
+          { id: "Sharp Arrowhead", qty: 3 },
+        ],
+        [ // LV.3→4
+          { id: "mora", qty: 25000 },
+          { id: "Guide to Freedom", qty: 4 },
+          { id: "Sharp Arrowhead", qty: 4 },
+        ],
+        [ // LV.4→5
+          { id: "mora", qty: 30000 },
+          { id: "Guide to Freedom", qty: 6 },
+          { id: "Sharp Arrowhead", qty: 6 },
+        ],
+        [ // LV.5→6
+          { id: "mora", qty: 37500 },
+          { id: "Guide to Freedom", qty: 9 },
+          { id: "Sharp Arrowhead", qty: 9 },
+        ],
+        [ // LV.6→7
+          { id: "mora", qty: 120000 },
+          { id: "Philosophies of Freedom", qty: 4 },
+          { id: "Weathered Arrowhead", qty: 4 },
+          { id: "Dvalin's Sigh", qty: 1 },
+        ],
+        [ // LV.7→8
+          { id: "mora", qty: 260000 },
+          { id: "Philosophies of Freedom", qty: 6 },
+          { id: "Weathered Arrowhead", qty: 6 },
+          { id: "Dvalin's Sigh", qty: 1 },
+        ],
+        [ // LV.8→9
+          { id: "mora", qty: 450000 },
+          { id: "Philosophies of Freedom", qty: 12 },
+          { id: "Weathered Arrowhead", qty: 9 },
+          { id: "Dvalin's Sigh", qty: 2 },
+        ],
+        [ // LV.9→10
+          { id: "mora", qty: 700000 },
+          { id: "Philosophies of Freedom", qty: 16 },
+          { id: "Weathered Arrowhead", qty: 12 },
+          { id: "Dvalin's Sigh", qty: 2 },
+          { id: "Crown of Insight", qty: 1 },
+        ],
+      ];
+      const amberTalentLabels = [
+        "LV.1→2",
+        "LV.2→3",
+        "LV.3→4",
+        "LV.4→5",
+        "LV.5→6",
+        "LV.6→7",
+        "LV.7→8",
+        "LV.8→9",
+        "LV.9→10",
+        "TOTAL",
+      ];
+      // Talent materials per Arataki Itto
+      const arataki_ittoTalent = [
+        [ // LV.1→2
+          { id: "mora", qty: 12500 },
+          { id: "Teachings of Elegance", qty: 3 },
+          { id: "Slime Condensate", qty: 6 },
+        ],
+        [ // LV.2→3
+          { id: "mora", qty: 17500 },
+          { id: "Guide to Elegance", qty: 2 },
+          { id: "Slime Secretions", qty: 3 },
+        ],
+        [ // LV.3→4
+          { id: "mora", qty: 25000 },
+          { id: "Guide to Elegance", qty: 4 },
+          { id: "Slime Secretions", qty: 4 },
+        ],
+        [ // LV.4→5
+          { id: "mora", qty: 30000 },
+          { id: "Guide to Elegance", qty: 6 },
+          { id: "Slime Secretions", qty: 6 },
+        ],
+        [ // LV.5→6
+          { id: "mora", qty: 37500 },
+          { id: "Guide to Elegance", qty: 9 },
+          { id: "Slime Secretions", qty: 9 },
+        ],
+        [ // LV.6→7
+          { id: "mora", qty: 120000 },
+          { id: "Philosophies of Elegance", qty: 4 },
+          { id: "Slime Concentrate", qty: 4 },
+          { id: "Ashen Heart", qty: 1 },
+        ],
+        [ // LV.7→8
+          { id: "mora", qty: 260000 },
+          { id: "Philosophies of Elegance", qty: 6 },
+          { id: "Slime Concentrate", qty: 6 },
+          { id: "Ashen Heart", qty: 1 },
+        ],
+        [ // LV.8→9
+          { id: "mora", qty: 450000 },
+          { id: "Philosophies of Elegance", qty: 12 },
+          { id: "Slime Concentrate", qty: 9 },
+          { id: "Ashen Heart", qty: 2 },
+        ],
+        [ // LV.9→10
+          { id: "mora", qty: 700000 },
+          { id: "Philosophies of Elegance", qty: 16 },
+          { id: "Slime Concentrate", qty: 12 },
+          { id: "Ashen Heart", qty: 2 },
+          { id: "Crown of Insight", qty: 1 },
+        ],
+      ];
+      const arataki_ittoTalentLabels = [
+        "LV.1→2",
+        "LV.2→3",
+        "LV.3→4",
+        "LV.4→5",
+        "LV.5→6",
+        "LV.6→7",
+        "LV.7→8",
+        "LV.8→9",
+        "LV.9→10",
+        "TOTAL",
+      ];
+      // ... existing code ...
+    </script>
+    <script>
+      // DEBUG: crea l'elemento char-name se non esiste
+      window.addEventListener("DOMContentLoaded", function () {
+        if (!document.getElementById("char-name")) {
+          var h1 = document.createElement("h1");
+          h1.id = "char-name";
+          h1.style.background = "#ff0";
+          h1.style.color = "#000";
+          h1.style.padding = "16px";
+          h1.style.textAlign = "center";
+          h1.textContent = "DEBUG CHAR-NAME";
+          document.body.insertBefore(h1, document.body.firstChild);
+        }
+      });
+  

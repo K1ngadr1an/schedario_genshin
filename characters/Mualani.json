@@ -1,0 +1,209 @@
+{
+  "displayName": "Mualani",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Claymore", "Hydro", "Natlan", "5★", "DPS", "Speculative"],
+  "description": "A legendary warrior from Natlan, Mualani wields a mighty claymore and commands the power of Hydro to overwhelm her foes. (Speculative/Community Build)",
+  "weapons": [
+    {
+      "name": "Wolf's Gravestone",
+      "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+      "note": "ATK%"
+    },
+    {
+      "name": "Serpent Spine",
+      "img": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Bell",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Bell.png",
+      "note": "HP%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Heart of Depth (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Heart of Depth (2) + Noblesse Oblige (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / HP%" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "HP%"],
+  "talents": [
+    "Normal Attack: Tidal Cleave",
+    "Wavebreaker Strike",
+    "Ocean's Wrath"
+  ],
+  "info": "Mualani is a speculative Hydro claymore DPS from Natlan. Build her for CRIT, ATK%, and Hydro DMG Bonus. (Community/Placeholder)",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Wolf's Gravestone",
+        "img": "https://img.game8.co/3314332/6e6acc719cc65f5a0772f14e67c90bcc.png/show",
+        "note": "ATK%"
+      },
+      "artifacts": [
+        {
+          "name": "Heart of Depth (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Heart_of_Depth.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Mualani" },
+      { "name": "Xingqiu" },
+      { "name": "Bennett" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Mualani" },
+      { "name": "Yelan" },
+      { "name": "Furina" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Mualani" },
+      { "name": "Ayato" },
+      { "name": "Barbara" },
+      { "name": "Sucrose" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Tidal Cleave",
+      "desc": "Performs up to 4 consecutive claymore strikes imbued with Hydro.",
+      "icon": "images/characters/placeholder.svg",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive claymore strikes imbued with Hydro.</div><div class='skill-section'><b>Charged Attack</b><br>Drains stamina over time to perform continuous slashes. At the end, performs a more powerful Hydro slash.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Hydro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "80.0%",
+          "hit2": "75.0%",
+          "hit3": "90.0%",
+          "hit4": "120.0%",
+          "charged": "60.0% + 80.0%",
+          "plunge": "70.0%",
+          "lowhigh": "140.0% / 180.0%"
+        },
+        {
+          "level": 2,
+          "hit1": "86.0%",
+          "hit2": "81.0%",
+          "hit3": "97.2%",
+          "hit4": "129.6%",
+          "charged": "64.8% + 86.4%",
+          "plunge": "75.6%",
+          "lowhigh": "151.2% / 194.4%"
+        }
+      ]
+    },
+    {
+      "name": "Wavebreaker Strike",
+      "desc": "Mualani swings her claymore, sending forth a wave that deals Hydro DMG and reduces enemy resistance to Hydro.",
+      "icon": "images/characters/placeholder.svg",
+      "details_html": "<div class='skill-section'><b>Wavebreaker Strike</b><br>Sends forth a wave that deals Hydro DMG and reduces enemy Hydro RES.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "180% ATK",
+          "hydro_res_down": "15%",
+          "duration": "8s",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "194% ATK",
+          "hydro_res_down": "18%",
+          "duration": "8s",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Ocean's Wrath",
+      "desc": "Mualani summons a tidal wave, dealing massive AoE Hydro DMG and increasing her own ATK for a short duration.",
+      "icon": "images/characters/placeholder.svg",
+      "details_html": "<div class='skill-section'><b>Ocean's Wrath</b><br>Summons a tidal wave, dealing massive AoE Hydro DMG and increasing Mualani's ATK for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "320% ATK",
+          "atk_bonus": "20%",
+          "duration": "10s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "345% ATK",
+          "atk_bonus": "22%",
+          "duration": "10s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Tide's Blessing",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Wavebreaker Strike, Mualani's Hydro DMG is increased by 15% for 10s. (Placeholder)"
+    },
+    {
+      "name": "Endless Current",
+      "phase": "Ascension Phase 4",
+      "desc": "Ocean's Wrath increases all party members' ATK by 10% for 10s. (Placeholder)"
+    },
+    {
+      "name": "Natlan's Swimmer",
+      "phase": "Passive",
+      "desc": "Decreases swimming stamina consumption for your own party members by 20%. (Placeholder)"
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Breaker of Waves",
+      "phase": "Constellation Lv. 1",
+      "desc": "Wavebreaker Strike grants a shield that absorbs damage equal to 10% of Mualani's Max HP for 6s. (Placeholder)"
+    },
+    {
+      "name": "Tidal Momentum",
+      "phase": "Constellation Lv. 2",
+      "desc": "Ocean's Wrath increases Hydro DMG Bonus by 15% for 10s. (Placeholder)"
+    },
+    {
+      "name": "Flood's Edge",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Wavebreaker Strike by 3. Maximum upgrade level is 15. (Placeholder)"
+    },
+    {
+      "name": "Abyssal Surge",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Mualani's HP falls below 50%, her ATK is increased by 20% for 10s. (Placeholder)"
+    },
+    {
+      "name": "Queen of the Tides",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Ocean's Wrath by 3. Maximum upgrade level is 15. (Placeholder)"
+    },
+    {
+      "name": "Tide Unleashed",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using Ocean's Wrath, Mualani's Normal Attacks deal an additional 30% Hydro DMG for 10s. (Placeholder)"
+    }
+  ]
+}

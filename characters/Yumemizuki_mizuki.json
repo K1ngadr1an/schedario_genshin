@@ -1,0 +1,291 @@
+{
+  "displayName": "Yumemizuki Mizuki",
+  "img": "images/characters/placeholder.svg",
+  "tags": [
+    "Catalyst",
+    "Hydro",
+    "Inazuma",
+    "Dreamweaver",
+    "8/8",
+    "Mizuki Clan",
+    "Shirasagi"
+  ],
+  "description": "A mysterious dreamweaver from Inazuma, known for her ethereal presence and mastery over illusions and water. She is said to walk between dreams and reality.",
+  "weapons": [
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Kagura's Verity",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Kagura%27s_Verity.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Tulaytullah's Remembrance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Tulaytullah%27s_Remembrance.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Skyward Atlas",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Skyward_Atlas.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Sacrificial Fragments",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Fragments.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Mappa Mare",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mappa_Mare.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Hakushin Ring",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Hakushin_Ring.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Prototype Amber",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Prototype_Amber.png",
+      "note": "HP%"
+    },
+    {
+      "name": "Thrilling Tales of Dragon Slayers",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Thrilling_Tales_of_Dragon_Slayers.png",
+      "note": "HP%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Heart of Depth (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Heart of Depth (2) + Noblesse Oblige (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Heart_of_Depth.png"
+    },
+    {
+      "name": "Emblem of Severed Fate (2) + Heart of Depth (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Emblem_of_Severed_Fate.png"
+    },
+    {
+      "name": "Noblesse Oblige (2) + Emblem of Severed Fate (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Noblesse_Oblige.png"
+    },
+    {
+      "name": "Wanderer's Troupe (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Wanderer%27s_Troupe.png"
+    },
+    {
+      "name": "Tenacity of the Millelith (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Tenacity_of_the_Millelith.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Energy Recharge" },
+    { "type": "Goblet", "value": "Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": [
+    "CRIT Rate",
+    "CRIT DMG",
+    "ATK%",
+    "Energy Recharge",
+    "Elemental Mastery"
+  ],
+  "talents": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+  "info": "Yumemizuki Mizuki è una catalizzatrice Hydro focalizzata su danni AoE e supporto tramite buff e debuff. Ottima in team con altri Hydro o per reazioni Elemental.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Lost Prayer to the Sacred Winds",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Heart of Depth (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Heart_of_Depth.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Yumemizuki Mizuki", "img": "placeholder.svg" },
+      { "name": "Xingqiu", "img": "xingqiu.png" },
+      { "name": "Yelan", "img": "yelan.png" },
+      { "name": "Kazuha", "img": "kazuha.png" }
+    ],
+    [
+      { "name": "Yumemizuki Mizuki", "img": "placeholder.svg" },
+      { "name": "Ayato", "img": "Kamisato_Ayato.png" },
+      { "name": "Mona", "img": "Mona.png" },
+      { "name": "Sucrose", "img": "sucrose.png" }
+    ],
+    [
+      { "name": "Yumemizuki Mizuki", "img": "placeholder.svg" },
+      { "name": "Barbara", "img": "barbara.png" },
+      { "name": "Fischl", "img": "fischl.png" },
+      { "name": "Beidou", "img": "beidou.png" }
+    ],
+    [
+      { "name": "Yumemizuki Mizuki", "img": "placeholder.svg" },
+      { "name": "Xiangling", "img": "xiangling.png" },
+      { "name": "Bennett", "img": "bennett.png" },
+      { "name": "Zhongli", "img": "zhongli.png" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Dreamweaver's Waltz",
+      "desc": "Performs up to 4 consecutive Hydro-infused attacks, weaving illusions that deal AoE Hydro DMG.",
+      "icon": "images/characters/placeholder.svg",
+      "image": "images/characters/placeholder.svg",
+      "video": "https://www.youtube.com/embed/example",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "38.2%",
+          "hit2": "41.0%",
+          "hit3": "52.3%",
+          "hit4": "62.1%",
+          "charged": "48.0% + 48.0%",
+          "stamina": "20",
+          "plunge": "56.0%",
+          "lowhigh": "112.0% / 140.0%"
+        },
+        {
+          "level": 2,
+          "hit1": "41.2%",
+          "hit2": "44.2%",
+          "hit3": "56.4%",
+          "hit4": "67.0%",
+          "charged": "52.0% + 52.0%",
+          "stamina": "20",
+          "plunge": "61.0%",
+          "lowhigh": "122.0% / 153.0%"
+        },
+        {
+          "level": 3,
+          "hit1": "44.2%",
+          "hit2": "47.4%",
+          "hit3": "60.5%",
+          "hit4": "71.9%",
+          "charged": "56.0% + 56.0%",
+          "stamina": "20",
+          "plunge": "66.0%",
+          "lowhigh": "132.0% / 165.0%"
+        },
+        {
+          "level": 4,
+          "hit1": "48.6%",
+          "hit2": "52.1%",
+          "hit3": "66.6%",
+          "hit4": "79.1%",
+          "charged": "62.0% + 62.0%",
+          "stamina": "20",
+          "plunge": "72.6%",
+          "lowhigh": "145.2% / 181.5%"
+        },
+        {
+          "level": 5,
+          "hit1": "51.6%",
+          "hit2": "55.3%",
+          "hit3": "70.7%",
+          "hit4": "84.0%",
+          "charged": "66.0% + 66.0%",
+          "stamina": "20",
+          "plunge": "77.2%",
+          "lowhigh": "154.4% / 193.0%"
+        }
+      ],
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive Hydro-infused attacks, weaving illusions that deal AoE Hydro DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a powerful Hydro illusion, dealing AoE Hydro DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Hydro DMG upon impact.</div>"
+    },
+    {
+      "name": "Illusory Cascade",
+      "desc": "Summons a wave of dreamwater that deals AoE Hydro DMG and applies the Dreamweaver Mark to enemies hit.",
+      "video": "https://www.youtube.com/embed/example",
+      "icon": "images/characters/placeholder.svg",
+      "details_html": "<div class='skill-section' style='margin-bottom:0;'>Summons a wave of dreamwater that deals AoE Hydro DMG and applies the Dreamweaver Mark to enemies hit. Marked enemies take increased Hydro DMG for 10s.</div>",
+      "levels": [
+        { "level": 1, "cascade_dmg": "168.0%", "duration": "10s", "cd": "12s" },
+        { "level": 2, "cascade_dmg": "180.0%", "duration": "10s", "cd": "12s" },
+        { "level": 3, "cascade_dmg": "192.0%", "duration": "10s", "cd": "12s" },
+        { "level": 4, "cascade_dmg": "206.0%", "duration": "10s", "cd": "12s" },
+        { "level": 5, "cascade_dmg": "218.0%", "duration": "10s", "cd": "12s" }
+      ]
+    },
+    {
+      "name": "Dream's Embrace",
+      "video": "https://www.youtube.com/embed/example",
+      "desc": "Unleashes a torrent of dreamwater, dealing massive AoE Hydro DMG and healing all party members based on Mizuki's ATK.",
+      "icon": "images/characters/placeholder.svg"
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Dreamwalker",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Illusory Cascade, Yumemizuki Mizuki's Hydro DMG is increased by 20% for 10s."
+    },
+    {
+      "name": "Lucid Reflection",
+      "phase": "Ascension Phase 4",
+      "desc": "When a party member triggers a Hydro-related reaction, all party members gain 10% ATK for 8s."
+    },
+    {
+      "name": "Ethereal Artisan",
+      "phase": "Passive",
+      "desc": "Refunds 15% of the ores used when crafting Catalyst-type weapons."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Dream's Dawning",
+      "phase": "Constellation Lv. 1",
+      "desc": "Dreamweaver's Waltz grants 10% Hydro DMG Bonus for 8s after hitting an enemy."
+    },
+    {
+      "name": "Rippled Reality",
+      "phase": "Constellation Lv. 2",
+      "desc": "Illusory Cascade's Dreamweaver Mark duration is increased by 4s and affected enemies take 15% more Hydro DMG."
+    },
+    {
+      "name": "Mirage's Gift",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Illusory Cascade by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Oneiric Overflow",
+      "phase": "Constellation Lv. 4",
+      "desc": "When Dream's Embrace is used, all party members are healed for an additional 10% of Mizuki's ATK."
+    },
+    {
+      "name": "Lucid Dreamer",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Dream's Embrace by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Eternal Reverie",
+      "phase": "Constellation Lv. 6",
+      "desc": "After using Illusory Cascade or Dream's Embrace, Yumemizuki Mizuki's Elemental Mastery is increased by 100 for 12s."
+    }
+  ]
+}

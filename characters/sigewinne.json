@@ -1,0 +1,220 @@
+{
+  "displayName": "Sigewinne",
+  "img": "images/characters/sigewinne.png",
+  "tags": ["Bow", "Hydro", "Fontaine", "5★", "Healer", "Support", "Nurse"],
+  "description": "The head nurse of the Fortress of Meropide, Sigewinne is a Hydro bow user who excels at healing, buffing, and supporting her team.",
+  "weapons": [
+    {
+      "name": "Aqua Simulacra",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Aqua_Simulacra.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Elegy for the End",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Bow.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Ocean-Hued Clam (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Maiden Beloved (4)",
+      "img": "https://img.game8.co/3573554/4348193983d1b12841f70ca024cb6abd.png/show"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "HP% / Energy Recharge" },
+    { "type": "Goblet", "value": "HP% / Hydro DMG Bonus" },
+    { "type": "Circlet", "value": "Healing Bonus / HP%" }
+  ],
+  "substats": ["HP%", "Healing Bonus", "Energy Recharge", "CRIT Rate"],
+  "talents": [
+    "Normal Attack: Syringe Shot",
+    "Rejuvenating Bubble",
+    "Nurse's Oath"
+  ],
+  "info": "Sigewinne is a 5★ Hydro healer/support who excels at healing, buffing, and supporting her team. Build her for HP%, Healing Bonus, and Energy Recharge.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Aqua Simulacra",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Aqua_Simulacra.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Ocean-Hued Clam (4)",
+          "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Sigewinne" },
+      { "name": "Neuvillette" },
+      { "name": "Furina" },
+      { "name": "Kazuha" }
+    ],
+    [
+      { "name": "Sigewinne" },
+      { "name": "Yelan" },
+      { "name": "Xingqiu" },
+      { "name": "Jean" }
+    ],
+    [
+      { "name": "Sigewinne" },
+      { "name": "Ayato" },
+      { "name": "Kokomi" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Sigewinne" },
+      { "name": "Nilou" },
+      { "name": "Collei" },
+      { "name": "Barbara" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Syringe Shot",
+      "desc": "Performs up to 5 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Syringe_Shot.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Hydro DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.7%",
+          "hit2": "37.6%",
+          "hit3": "47.1%",
+          "hit4": "49.1%",
+          "hit5": "58.3%",
+          "charged": "47.3% + 47.3%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "39.7%",
+          "hit2": "40.7%",
+          "hit3": "51.0%",
+          "hit4": "53.2%",
+          "hit5": "63.2%",
+          "charged": "51.2% + 51.2%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Rejuvenating Bubble",
+      "desc": "Sigewinne fires a healing bubble that bounces between allies, healing them and dealing Hydro DMG to enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Rejuvenating_Bubble.png",
+      "details_html": "<div class='skill-section'><b>Rejuvenating Bubble</b><br>Fires a healing bubble that bounces between allies, healing them and dealing Hydro DMG to enemies. Healing and DMG scale with Sigewinne's Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "120% HP",
+          "healing": "10.2% HP + 970",
+          "cd": "12s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "130% HP",
+          "healing": "11.0% HP + 1050",
+          "cd": "12s"
+        }
+      ]
+    },
+    {
+      "name": "Nurse's Oath",
+      "desc": "Sigewinne creates a field of healing water, continuously healing allies and dealing Hydro DMG to enemies inside.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Nurses_Oath.png",
+      "details_html": "<div class='skill-section'><b>Nurse's Oath</b><br>Creates a field of healing water, continuously healing allies and dealing Hydro DMG to enemies inside. Healing and DMG scale with Sigewinne's Max HP.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "180% HP",
+          "healing": "8.0% HP + 800",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "194% HP",
+          "healing": "8.6% HP + 880",
+          "duration": "12s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Nurse's Touch",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Rejuvenating Bubble, Sigewinne's Healing Bonus is increased by 20% for 10s."
+    },
+    {
+      "name": "Fontaine's Blessing",
+      "phase": "Ascension Phase 4",
+      "desc": "Allies inside Nurse's Oath's field gain 20% increased Hydro DMG Bonus."
+    },
+    {
+      "name": "Gentle Care",
+      "phase": "Passive",
+      "desc": "When Sigewinne is in the party, cooking a perfect dish has a 12% chance to double the product."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Healing Cascade",
+      "phase": "Constellation Lv. 1",
+      "desc": "Rejuvenating Bubble gains 1 additional charge."
+    },
+    {
+      "name": "Tide's Embrace",
+      "phase": "Constellation Lv. 2",
+      "desc": "Allies healed by Sigewinne gain 20% increased ATK for 8s."
+    },
+    {
+      "name": "Ocean's Gift",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Rejuvenating Bubble by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Restorative Flow",
+      "phase": "Constellation Lv. 4",
+      "desc": "Allies inside Nurse's Oath's field gain 20% increased Healing Bonus."
+    },
+    {
+      "name": "Blessed Tides",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Nurse's Oath by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Fontaine's Grace",
+      "phase": "Constellation Lv. 6",
+      "desc": "When an ally is healed by Sigewinne, they gain 20% increased Energy Recharge for 8s."
+    }
+  ]
+}

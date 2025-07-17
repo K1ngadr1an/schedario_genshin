@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area Utente - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* --- NAVBAR STYLE UGUALE AD ALTRE PAGINE --- */
+      .main-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: rgba(15, 20, 25, 0.98);
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        padding: 0.8rem 0;
+        backdrop-filter: blur(20px);
+        border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+      }
+      .nav-link {
+        color: #b0eaff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem;
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        letter-spacing: 0.8px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(100, 255, 218, 0.05);
+        border: 1px solid transparent;
+      }
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(100, 255, 218, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+      .nav-link:hover::before {
+        left: 100%;
+      }
+      .nav-link:hover {
+        background: rgba(100, 255, 218, 0.15);
+        color: #64ffda;
+        box-shadow: 0 4px 20px rgba(100, 255, 218, 0.2),
+          0 2px 8px rgba(100, 255, 218, 0.1);
+        transform: translateY(-2px);
+        border-color: rgba(100, 255, 218, 0.3);
+      }
+      .nav-link.active {
+        background: linear-gradient(135deg, #64ffda, #00d4aa);
+        color: #16213e;
+        box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4),
+          0 2px 12px rgba(100, 255, 218, 0.2);
+        cursor: default;
+        font-weight: 800;
+        border-color: rgba(100, 255, 218, 0.5);
+      }
+      @media (max-width: 700px) {
+        .main-navbar {
+          flex-wrap: wrap;
+          font-size: 1rem;
+          padding: 0.5rem 0;
+        }
+        .nav-link {
+          padding: 0.6rem 1rem;
+          font-size: 1rem;
+        }
+      }
+      /* --- FINE NAVBAR --- */
+      .user-area {
+        max-width: 500px;
+        margin: 4rem auto;
+        background: rgba(15, 20, 25, 0.9);
+        border-radius: 20px;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+          0 4px 15px rgba(100, 255, 218, 0.1);
+        border: 2px solid rgba(100, 255, 218, 0.2);
+        color: #e0e0e0;
+        font-family: "Fredoka", sans-serif;
+      }
+      .user-area h2 {
+        text-align: center;
+        color: #64ffda;
+        margin-bottom: 2rem;
+      }
+      .user-area label {
+        color: #64ffda;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      .user-area input[type="text"],
+      .user-area input[type="password"] {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 12px;
+        border: 2px solid rgba(100, 255, 218, 0.3);
+        background: linear-gradient(
+          135deg,
+          rgba(26, 32, 44, 0.9),
+          rgba(15, 20, 25, 0.9)
+        );
+        color: #e6f3ff;
+        font-size: 1rem;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        transition: border-color 0.3s;
+      }
+      .user-area input:focus {
+        border-color: #64ffda;
+        outline: none;
+      }
+      .user-area .btn {
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .user-area .success {
+        color: #51cf66;
+        text-align: center;
+        margin-top: 1rem;
+      }
+      .user-area .error {
+        color: #ff6b6b;
+        text-align: center;
+        margin-top: 1rem;
+      }
+      .user-area .current-user {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        color: #b0eaff;
+      }
+      .user-area .logout-link {
+        display: block;
+        text-align: center;
+        margin-top: 2rem;
+        color: #64ffda;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="gestione personaggio.html" class="nav-link"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <div style="flex: 1"></div>
+      <span id="userControls"></span>
+    </nav>
+    <div class="user-area" id="userArea">
+      <!-- Contenuto dinamico JS -->
+    </div>
+    <script>
+      function renderUserControls() {
+        const user = localStorage.getItem("user");
+        const el = document.getElementById("userControls");
+        if (!el) return;
+        if (user) {
+          if (window.location.pathname.includes("utente.html")) {
+            el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><button class='btn btn-secondary' onclick='doLogout()'>Logout</button>`;
+          } else {
+            el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em;'>Area Utente</a><button class='btn btn-secondary' onclick='doLogout()'>Logout</button>`;
+          }
+        } else {
+          el.innerHTML = `<a href='login.html' class='btn btn-secondary' style='margin-left:0.5em;'>Login</a> <a href='registrazione.html' class='btn btn-secondary'>Registrati</a>`;
+        }
+      }
+      function doLogout() {
+        localStorage.removeItem("user");
+        location.href = "login.html";
+      }
+      window.addEventListener("DOMContentLoaded", renderUserControls);
+
+      function renderUserArea() {
+        const user = localStorage.getItem("user");
+        const area = document.getElementById("userArea");
+        if (!user) {
+          area.innerHTML = `<div class='error'>Devi essere loggato per accedere a questa pagina.<br><a href='login.html'>Vai al login</a></div>`;
+          return;
+        }
+        area.innerHTML = `
+        <h2>Area Utente</h2>
+        <div class='current-user'>Username attuale: <strong id='currentUsername'></strong></div>
+        <form id='userForm' autocomplete='off'>
+          <label for='newUsername'>Nuovo Username</label>
+          <input type='text' id='newUsername' placeholder='Lascia vuoto per non cambiare' />
+          <label for='newPassword'>Nuova Password</label>
+          <input type='password' id='newPassword' placeholder='Lascia vuoto per non cambiare' />
+          <button type='submit' class='btn btn-primary'>Salva Modifiche</button>
+        </form>
+        <div id='userMsg'></div>
+        <span class='logout-link' onclick='doLogout()'>Logout</span>
+      `;
+        document.getElementById("currentUsername").textContent = user;
+        document.getElementById("userForm").onsubmit = function (e) {
+          e.preventDefault();
+          const newUsername = document
+            .getElementById("newUsername")
+            .value.trim();
+          const newPassword = document
+            .getElementById("newPassword")
+            .value.trim();
+          let msg = "";
+          if (!newUsername && !newPassword) {
+            msg = `<div class='error'>Nessuna modifica da salvare.</div>`;
+          } else {
+            // Gestione utenti registrati
+            let regData = {};
+            try {
+              regData = JSON.parse(
+                localStorage.getItem("registeredUsers") || "{}"
+              );
+            } catch (e) {}
+            if (!regData[user]) {
+              msg = `<div class='error'>Utente non trovato nei registrati.</div>`;
+            } else {
+              let updatedUser = user;
+              // Cambio username
+              if (newUsername) {
+                if (regData[newUsername] && newUsername !== user) {
+                  msg = `<div class='error'>Username già esistente.</div>`;
+                  document.getElementById("userMsg").innerHTML = msg;
+                  return;
+                }
+                regData[newUsername] = regData[user];
+                delete regData[user];
+                localStorage.setItem("user", newUsername);
+                updatedUser = newUsername;
+                document.getElementById("currentUsername").textContent =
+                  newUsername;
+                msg = `<div class='success'>Username aggiornato!</div>`;
+              }
+              // Cambio password
+              if (newPassword) {
+                regData[updatedUser] = newPassword;
+                msg += `<div class='success'>Password aggiornata!</div>`;
+              }
+              localStorage.setItem("registeredUsers", JSON.stringify(regData));
+            }
+          }
+          document.getElementById("userMsg").innerHTML = msg;
+          if (newUsername) setTimeout(() => location.reload(), 1200);
+        };
+      }
+      window.addEventListener("DOMContentLoaded", renderUserArea);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+{
+  "displayName": "Wanderer",
+  "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Wanderer_Icon.png",
+  "tags": ["Catalyst", "Anemo", "Sumeru", "5★", "DPS", "Flying"],
+  "description": "Wanderer, precedentemente noto come Scaramouche, è un personaggio Anemo che può volare e infliggere danni a distanza. Eccelle nel danno Anemo e nella mobilità aerea.",
+  "weapons": [
+    {
+      "name": "Tulaytullah's Remembrance",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Tulaytullahs_Remembrance.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "The Widsith",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_The_Widsith.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Solar Pearl",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Solar_Pearl.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Skyward Atlas",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Skyward_Atlas.png",
+      "note": "ATK%"
+    },
+    {
+      "name": "Mappa Mare",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Mappa_Mare.png",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Desert Pavilion Chronicle (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Desert_Pavilion_Chronicle.png"
+    },
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Desert Pavilion Chronicle (2) + Viridescent Venerer (2)",
+      "img": "images/characters/placeholder.svg"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (2) + Viridescent Venerer (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK%" },
+    { "type": "Goblet", "value": "Anemo DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": [
+    "Normal Attack: Yuuban Meigen",
+    "Hanega: Song of the Wind",
+    "Kyougen: Five Ceremonial Plays"
+  ],
+  "info": "Wanderer si concentra su danno Anemo e mobilità aerea. Priorità a CRIT, ATK% e Elemental Mastery per massimizzare i danni da Swirl.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Tulaytullah's Remembrance",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Tulaytullahs_Remembrance.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Desert Pavilion Chronicle (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Desert_Pavilion_Chronicle.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Wanderer" },
+      { "name": "Faruzan" },
+      { "name": "Bennett" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Wanderer" },
+      { "name": "Faruzan" },
+      { "name": "Yelan" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Wanderer" },
+      { "name": "Faruzan" },
+      { "name": "Xingqiu" },
+      { "name": "Bennett" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Yuuban Meigen",
+      "desc": "Performs up to 3 attacks using wind blades, dealing Anemo DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Wanderer_Talent_Normal.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 3 attacks using wind blades, dealing Anemo DMG.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes a certain amount of Stamina to deal AoE Anemo DMG after a short casting time.</div><div class='skill-section'><b>Plunging Attack</b><br>Calling upon the power of anemo, plunges toward the ground from mid-air, damaging all enemies in his path and dealing AoE Anemo DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "58.3%",
+          "hit2": "54.6%",
+          "hit3": "78.3%",
+          "charged": "157%",
+          "plunge": "60%",
+          "lowhigh": "120% / 150%"
+        }
+      ]
+    },
+    {
+      "name": "Hanega: Song of the Wind",
+      "desc": "Wanderer enters a hovering state, increasing his attack range and allowing him to move freely in the air.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Wanderer_Talent_Skill.png",
+      "details_html": "<div class='skill-section'><b>Hanega: Song of the Wind</b><br>Wanderer enters a hovering state, increasing his attack range and allowing him to move freely in the air.</div>",
+      "levels": [
+        { "level": 1, "skill_dmg_bonus": "30%", "duration": "10s", "cd": "6s" }
+      ]
+    },
+    {
+      "name": "Kyougen: Five Ceremonial Plays",
+      "desc": "Wanderer unleashes the power of his catalyst, dealing massive Anemo DMG to all nearby enemies.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Wanderer_Talent_Burst.png",
+      "details_html": "<div class='skill-section'><b>Kyougen: Five Ceremonial Plays</b><br>Wanderer unleashes the power of his catalyst, dealing massive Anemo DMG to all nearby enemies.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "400% ATK",
+          "cd": "15s",
+          "energy_cost": "60"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Jade-Claimed Flower",
+      "phase": "Ascension Phase 1",
+      "desc": "If Hanega: Song of the Wind comes into contact with Hydro/Pyro/Cryo/Electro when cast, this instance of the Windfavored state will obtain buffs according to the contacted element."
+    },
+    {
+      "name": "Gales of Reverie",
+      "phase": "Ascension Phase 4",
+      "desc": "When Wanderer hits opponents with Normal and Charged Attacks, he has a 16% chance to obtain the Descent effect: The next time he uses Windfavored state: Skydive, this effect is cleared, and the Skydive attack deals 30% increased DMG."
+    },
+    {
+      "name": "Strum the Swirling Winds",
+      "phase": "Passive",
+      "desc": "Mora expended when ascending Bows and Catalysts is decreased by 50%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Shoban: Ostentatious Plumage",
+      "phase": "Constellation Lv. 1",
+      "desc": "When in the Windfavored state, the Attack SPD of Wanderer's Normal and Charged Attacks is increased by 10%."
+    },
+    {
+      "name": "Niban: Moonlit Isle Amidst White Waves",
+      "phase": "Constellation Lv. 2",
+      "desc": "When Kyougen: Five Ceremonial Plays is unleashed, the Cores of Sin from the previous skill will be consumed and will each increase the DMG of this Unleashed Kyougen: Five Ceremonial Plays by 20%."
+    },
+    {
+      "name": "Sanban: Moonflower Kusemai",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the Level of Kyougen: Five Ceremonial Plays by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Yonban: Set Adrift into Spring",
+      "phase": "Constellation Lv. 4",
+      "desc": "When casting Hanega: Song of the Wind, should the Passive Talent 'Jade-Claimed Flower' be triggered, the character will gain buffs in correspondence to the contacted Elemental Type(s), and also obtain a random untriggered buff."
+    },
+    {
+      "name": "Matsuban: Ancient Illuminator From Abroad",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the Level of Hanega: Song of the Wind by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Shugen: The Curtains' Melancholic Sway",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Wanderer actively hits an opponent with Kuugo: Fushoudan while in the Windfavored state, the following effects will occur: Deals an additional instance of Kuugo: Fushoudan at the position hit, dealing 40% of the attack's original DMG. This DMG is considered Normal Attack DMG."
+    }
+  ]
+}

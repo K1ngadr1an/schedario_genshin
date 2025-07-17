@@ -1,0 +1,209 @@
+{
+  "displayName": "Ifa",
+  "img": "images/characters/placeholder.svg",
+  "tags": ["Electro", "Sword", "Natlan", "5★", "DPS", "Unreleased"],
+  "description": "A legendary swordswoman from Natlan, Ifa is rumored to command the power of Electro and swift swordplay.",
+  "weapons": [
+    {
+      "name": "Mistsplitter Reforged",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mistsplitter_Reforged.png",
+      "note": "CRIT DMG"
+    },
+    {
+      "name": "Primordial Jade Cutter",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Primordial_Jade_Cutter.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "The Black Sword",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_The_Black_Sword.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Lion's Roar",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lion's_Roar.png",
+      "note": "ATK%"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Thundering Fury (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+    },
+    {
+      "name": "Gladiator’s Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    },
+    {
+      "name": "Thundering Fury (2) + Gladiator’s Finale (2)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Electro DMG Bonus" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": [
+    "Normal Attack: Thunderclap Edge",
+    "Storm Surge",
+    "Judgment Flash"
+  ],
+  "info": "Ifa is a speculative Electro sword DPS from Natlan. Build her for Electro DMG, CRIT, and ATK%.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Mistsplitter Reforged",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mistsplitter_Reforged.png",
+        "note": "CRIT DMG"
+      },
+      "artifacts": [
+        {
+          "name": "Thundering Fury (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Thundering_Fury.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Ifa" },
+      { "name": "Fischl" },
+      { "name": "Kazuha" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Ifa" },
+      { "name": "Yae Miko" },
+      { "name": "Zhongli" },
+      { "name": "Xingqiu" }
+    ],
+    [
+      { "name": "Ifa" },
+      { "name": "Raiden Shogun" },
+      { "name": "Sara" },
+      { "name": "Jean" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Thunderclap Edge",
+      "desc": "Performs up to 5 consecutive Electro sword strikes.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Favonius_Bladework.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 consecutive Electro sword strikes.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash two rapid Electro slashes.</div><div class='skill-section'><b>Plunging Attack</b><br>Plunges from mid-air to strike the ground below, dealing AoE Electro DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "44.5%",
+          "hit2": "42.6%",
+          "hit3": "56.2%",
+          "hit4": "59.2%",
+          "hit5": "71.0%",
+          "charged": "55.9% + 55.9%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "48.1%",
+          "hit2": "46.1%",
+          "hit3": "60.8%",
+          "hit4": "64.0%",
+          "hit5": "76.8%",
+          "charged": "60.5% + 60.5%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Storm Surge",
+      "desc": "Ifa dashes forward, dealing AoE Electro DMG and increasing her ATK.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Lightning_Riposte.png",
+      "details_html": "<div class='skill-section'><b>Storm Surge</b><br>Dashes forward, dealing AoE Electro DMG and increasing Ifa's ATK for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "120% ATK",
+          "atk_bonus": "20%",
+          "cd": "12s"
+        },
+        { "level": 2, "skill_dmg": "130% ATK", "atk_bonus": "22%", "cd": "12s" }
+      ]
+    },
+    {
+      "name": "Judgment Flash",
+      "desc": "Ifa unleashes a powerful Electro slash, dealing massive AoE Electro DMG and granting all allies increased Electro DMG Bonus.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Judgment_of_the_Court.png",
+      "details_html": "<div class='skill-section'><b>Judgment Flash</b><br>Unleashes a powerful Electro slash, dealing massive AoE Electro DMG and granting all allies increased Electro DMG Bonus for a short duration.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "180% ATK",
+          "electro_bonus": "20%",
+          "duration": "8s",
+          "cd": "20s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "194% ATK",
+          "electro_bonus": "22%",
+          "duration": "8s",
+          "cd": "20s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Lightning Focus",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Storm Surge, Ifa's Electro DMG is increased by 20% for 10s."
+    },
+    {
+      "name": "Sword of Natlan",
+      "phase": "Ascension Phase 4",
+      "desc": "Allies affected by Judgment Flash gain 20% increased ATK."
+    },
+    {
+      "name": "Swift Step",
+      "phase": "Passive",
+      "desc": "When Ifa is in the party, sprinting stamina consumption is reduced by 20%."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "C1: Thunder’s Resolve",
+      "phase": "Constellation Lv. 1",
+      "desc": "Storm Surge gains 1 additional charge."
+    },
+    {
+      "name": "C2: Flashing Zeal",
+      "phase": "Constellation Lv. 2",
+      "desc": "After using Judgment Flash, Ifa's CRIT Rate is increased by 10% for 8s."
+    },
+    {
+      "name": "C3: Electro Ascendant",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Storm Surge by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "C4: Storm’s Blessing",
+      "phase": "Constellation Lv. 4",
+      "desc": "Allies affected by Judgment Flash gain 20% increased Energy Recharge."
+    },
+    {
+      "name": "C5: Judgment’s Embrace",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Judgment Flash by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "C6: Natlan’s Storm",
+      "phase": "Constellation Lv. 6",
+      "desc": "When Ifa triggers an Electro-related reaction, her ATK is increased by 20% for 10s."
+    }
+  ]
+}

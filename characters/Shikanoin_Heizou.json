@@ -1,0 +1,222 @@
+{
+  "displayName": "Shikanoin Heizou",
+  "img": "images/characters/heizou.png",
+  "tags": ["Catalyst", "Anemo", "Inazuma", "4★", "DPS", "Support", "Detective"],
+  "description": "A prodigy detective of the Tenryou Commission, Heizou is an Anemo catalyst user who excels at close-range combat and Swirl reactions.",
+  "weapons": [
+    {
+      "name": "Solar Pearl",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Solar_Pearl.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Lost Prayer to the Sacred Winds",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Lost_Prayer_to_the_Sacred_Winds.png",
+      "note": "CRIT Rate"
+    },
+    {
+      "name": "Sacrificial Fragments",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Sacrificial_Fragments.png",
+      "note": "Elemental Mastery"
+    },
+    {
+      "name": "Mappa Mare",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Mappa_Mare.png",
+      "note": "Elemental Mastery"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Viridescent Venerer (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+    },
+    {
+      "name": "Shimenawa's Reminiscence (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Shimenawa%27s_Reminiscence.png"
+    },
+    {
+      "name": "Gladiator's Finale (4)",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Gladiators_Finale.png"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "ATK% / Elemental Mastery" },
+    { "type": "Goblet", "value": "Anemo DMG Bonus / ATK%" },
+    { "type": "Circlet", "value": "CRIT Rate / CRIT DMG" }
+  ],
+  "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+  "talents": [
+    "Normal Attack: Fudou Style Martial Arts",
+    "Heartstopper Strike",
+    "Windmuster Kick"
+  ],
+  "info": "Heizou is a 4★ Anemo catalyst DPS/support who excels at close-range combat and Swirl reactions. Build him for CRIT, ATK%, and Elemental Mastery.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Solar Pearl",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Solar_Pearl.png",
+        "note": "CRIT Rate"
+      },
+      "artifacts": [
+        {
+          "name": "Viridescent Venerer (4)",
+          "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Viridescent_Venerer.png"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Heizou" },
+      { "name": "Xingqiu" },
+      { "name": "Fischl" },
+      { "name": "Bennett" }
+    ],
+    [
+      { "name": "Heizou" },
+      { "name": "Sucrose" },
+      { "name": "Xiangling" },
+      { "name": "Barbara" }
+    ],
+    [
+      { "name": "Heizou" },
+      { "name": "Yelan" },
+      { "name": "Kazuha" },
+      { "name": "Thoma" }
+    ],
+    [
+      { "name": "Heizou" },
+      { "name": "Raiden Shogun" },
+      { "name": "Sara" },
+      { "name": "Jean" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Fudou Style Martial Arts",
+      "desc": "Performs up to 5 fisticuffs empowered by Anemo.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Fudou_Style_Martial_Arts.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 5 fisticuffs empowered by Anemo.</div><div class='skill-section'><b>Charged Attack</b><br>Consumes stamina to unleash a powerful Anemo punch.</div><div class='skill-section'><b>Plunging Attack</b><br>Heizou plunges from mid-air to strike the ground below, dealing AoE Anemo DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.9%",
+          "hit2": "36.9%",
+          "hit3": "46.6%",
+          "hit4": "58.3%",
+          "hit5": "71.0%",
+          "charged": "136%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "39.9%",
+          "hit2": "39.9%",
+          "hit3": "50.4%",
+          "hit4": "63.1%",
+          "hit5": "76.8%",
+          "charged": "148%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Heartstopper Strike",
+      "desc": "Heizou winds up and delivers a powerful Anemo punch. Hold: Charges up, increasing DMG and granting Declension stacks. At 4 stacks, gains Conviction, further increasing DMG.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Heartstopper_Strike.png",
+      "details_html": "<div class='skill-section'><b>Heartstopper Strike</b><br>Winds up and delivers a powerful Anemo punch. Hold: Charges up, increasing DMG and granting Declension stacks. At 4 stacks, gains Conviction, further increasing DMG.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "tap_dmg": "176%",
+          "hold_dmg": "239% (4 stacks)",
+          "conviction": "+100%",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "tap_dmg": "189%",
+          "hold_dmg": "257% (4 stacks)",
+          "conviction": "+100%",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Windmuster Kick",
+      "desc": "Heizou launches a powerful kick, creating a Windmuster vortex that pulls in enemies and deals AoE Anemo DMG. Swirls with elements present.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Windmuster_Kick.png",
+      "details_html": "<div class='skill-section'><b>Windmuster Kick</b><br>Launches a powerful kick, creating a Windmuster vortex that pulls in enemies and deals AoE Anemo DMG. Swirls with elements present.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "kick_dmg": "360%",
+          "swirl_dmg": "120%",
+          "duration": "6s",
+          "cd": "12s",
+          "energy_cost": "40"
+        },
+        {
+          "level": 2,
+          "kick_dmg": "387%",
+          "swirl_dmg": "129%",
+          "duration": "6s",
+          "cd": "12s",
+          "energy_cost": "40"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Pre-Existing Guilt",
+      "phase": "Ascension Phase 1",
+      "desc": "Increases Heartstopper Strike's Declension stacks by 1 when Heizou triggers a Swirl reaction."
+    },
+    {
+      "name": "Paradoxical Practice",
+      "phase": "Ascension Phase 4",
+      "desc": "After Heizou triggers a Swirl reaction, increases Elemental Mastery by 80 for 10s."
+    },
+    {
+      "name": "Detective's Instinct",
+      "phase": "Passive",
+      "desc": "Displays the location of nearby resources unique to Inazuma on the mini-map."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Named Juvenile Casebook",
+      "phase": "Constellation Lv. 1",
+      "desc": "Heizou's Normal Attack SPD is increased by 15% for 5s after using Heartstopper Strike."
+    },
+    {
+      "name": "Investigative Collection",
+      "phase": "Constellation Lv. 2",
+      "desc": "The pull effect of Windmuster Kick is enhanced and its duration is increased by 1s."
+    },
+    {
+      "name": "Esoteric Puzzle Book",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Heartstopper Strike by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Tome of Lies",
+      "phase": "Constellation Lv. 4",
+      "desc": "The first Windmuster Iris explosion in each Windmuster Kick regenerates 9 Energy for Heizou."
+    },
+    {
+      "name": "Secret Archive",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Windmuster Kick by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Curious Casefiles",
+      "phase": "Constellation Lv. 6",
+      "desc": "Each Declension stack increases the CRIT Rate of Heartstopper Strike by 4%. When Heizou has Conviction, Heartstopper Strike's CRIT DMG is increased by 32%."
+    }
+  ]
+}

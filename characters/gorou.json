@@ -1,0 +1,211 @@
+{
+  "displayName": "Gorou",
+  "img": "images/characters/gorou.png",
+  "tags": ["Bow", "Geo", "Inazuma", "4★", "Support", "Buffer"],
+  "description": "The loyal general of the Watatsumi Army, Gorou is a Geo bow user who excels at buffing and supporting Geo teammates.",
+  "weapons": [
+    {
+      "name": "Favonius Warbow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Sacrificial Bow",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Sacrificial_Bow.png",
+      "note": "Energy Recharge"
+    },
+    {
+      "name": "Elegy for the End",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Elegy_for_the_End.png",
+      "note": "Energy Recharge"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Husk of Opulent Dreams (4)",
+      "img": "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+    },
+    {
+      "name": "Noblesse Oblige (4)",
+      "img": "https://img.game8.co/3573552/11128842ba40369313c567e4bff801c7.png/show"
+    },
+    {
+      "name": "Husk of Opulent Dreams (2) + Emblem of Severed Fate (2)",
+      "img": "images/characters/placeholder.svg"
+    }
+  ],
+  "stats": [
+    { "type": "Sands", "value": "DEF% / Energy Recharge" },
+    { "type": "Goblet", "value": "DEF%" },
+    { "type": "Circlet", "value": "DEF% / Healing Bonus" }
+  ],
+  "substats": ["Energy Recharge", "DEF%", "HP%", "CRIT Rate"],
+  "talents": [
+    "Normal Attack: Ripping Fang Fletching",
+    "Inuzaka All-Round Defense",
+    "Juuga: Forward Unto Victory"
+  ],
+  "info": "Gorou is a top-tier Geo support and buffer, especially for teams with multiple Geo characters. Build him for Energy Recharge and DEF% to maximize his buffs.",
+  "community_build": [
+    {
+      "weapon": {
+        "name": "Favonius Warbow",
+        "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Favonius_Warbow.png",
+        "note": "Energy Recharge"
+      },
+      "artifacts": [
+        {
+          "name": "Husk of Opulent Dreams (4)",
+          "img": "https://img.game8.co/3453210/f3a8e68db064a7f60fbd482e07ade454.png/show"
+        }
+      ]
+    }
+  ],
+  "best_teams": [
+    [
+      { "name": "Gorou" },
+      { "name": "Itto" },
+      { "name": "Albedo" },
+      { "name": "Zhongli" }
+    ],
+    [
+      { "name": "Gorou" },
+      { "name": "Noelle" },
+      { "name": "Yunjin" },
+      { "name": "Ningguang" }
+    ],
+    [
+      { "name": "Gorou" },
+      { "name": "Navia" },
+      { "name": "Albedo" },
+      { "name": "Zhongli" }
+    ]
+  ],
+  "skills": [
+    {
+      "name": "Normal Attack: Ripping Fang Fletching",
+      "desc": "Performs up to 4 consecutive shots with a bow.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Ripping_Fang_Fletching.png",
+      "details_html": "<div class='skill-section'><b>Normal Attack</b><br>Performs up to 4 consecutive shots with a bow.</div><div class='skill-section'><b>Charged Attack</b><br>Performs a more precise Aimed Shot with increased DMG. A fully charged shot deals Geo DMG.</div><div class='skill-section'><b>Plunging Attack</b><br>Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "hit1": "36.7%",
+          "hit2": "37.6%",
+          "hit3": "47.1%",
+          "hit4": "58.3%",
+          "charged": "47.3% + 47.3%",
+          "plunge": "63.9%",
+          "lowhigh": "127.8% / 159.7%"
+        },
+        {
+          "level": 2,
+          "hit1": "39.7%",
+          "hit2": "40.7%",
+          "hit3": "51.0%",
+          "hit4": "63.2%",
+          "charged": "51.2% + 51.2%",
+          "plunge": "69.1%",
+          "lowhigh": "138.2% / 172.7%"
+        }
+      ]
+    },
+    {
+      "name": "Inuzaka All-Round Defense",
+      "desc": "Gorou deals AoE Geo DMG and sets up a General's War Banner, providing buffs to DEF and Geo DMG based on the number of Geo characters in the party.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Inuzaka_All-Round_Defense.png",
+      "details_html": "<div class='skill-section'><b>Inuzaka All-Round Defense</b><br>Deals AoE Geo DMG and sets up a General's War Banner, providing buffs to DEF and Geo DMG based on the number of Geo characters in the party.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "skill_dmg": "120% ATK",
+          "def_bonus": "+20% per Geo",
+          "geo_bonus": "+15% per Geo",
+          "cd": "10s"
+        },
+        {
+          "level": 2,
+          "skill_dmg": "130% ATK",
+          "def_bonus": "+22% per Geo",
+          "geo_bonus": "+17% per Geo",
+          "cd": "10s"
+        }
+      ]
+    },
+    {
+      "name": "Juuga: Forward Unto Victory",
+      "desc": "Gorou deals AoE Geo DMG and creates a field that provides continuous buffs to DEF, Geo DMG, and interruption resistance to party members.",
+      "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Juuga_Forward_Unto_Victory.png",
+      "details_html": "<div class='skill-section'><b>Juuga: Forward Unto Victory</b><br>Deals AoE Geo DMG and creates a field that provides continuous buffs to DEF, Geo DMG, and interruption resistance to party members. Buffs scale with the number of Geo characters in the party.</div>",
+      "levels": [
+        {
+          "level": 1,
+          "burst_dmg": "220% ATK",
+          "def_bonus": "+20% per Geo",
+          "geo_bonus": "+15% per Geo",
+          "duration": "9s",
+          "cd": "15s",
+          "energy_cost": "80"
+        },
+        {
+          "level": 2,
+          "burst_dmg": "238% ATK",
+          "def_bonus": "+22% per Geo",
+          "geo_bonus": "+17% per Geo",
+          "duration": "9s",
+          "cd": "15s",
+          "energy_cost": "80"
+        }
+      ]
+    }
+  ],
+  "passive_talents": [
+    {
+      "name": "Heedless of the Wind and Weather",
+      "phase": "Ascension Phase 1",
+      "desc": "After using Inuzaka All-Round Defense or Juuga: Forward Unto Victory, DEF of all party members is increased by 25% for 12s."
+    },
+    {
+      "name": "A Favor Repaid",
+      "phase": "Ascension Phase 4",
+      "desc": "Gorou's skill and burst grant healing to active characters based on his DEF."
+    },
+    {
+      "name": "Seeker of Shinies",
+      "phase": "Passive",
+      "desc": "Displays the location of nearby resources unique to Inazuma on the mini-map."
+    }
+  ],
+  "constellations": [
+    {
+      "name": "Rushing Hound: Swift as the Wind",
+      "phase": "Constellation Lv. 1",
+      "desc": "After using Inuzaka All-Round Defense, ATK is increased by 10% for 12s."
+    },
+    {
+      "name": "Sitting Hound: Steady as a Clock",
+      "phase": "Constellation Lv. 2",
+      "desc": "General's War Banner grants 15% Geo DMG Bonus to all party members."
+    },
+    {
+      "name": "Mauling Hound: Fierce as Fire",
+      "phase": "Constellation Lv. 3",
+      "desc": "Increases the level of Inuzaka All-Round Defense by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Lapping Hound: Warm as Water",
+      "phase": "Constellation Lv. 4",
+      "desc": "When General's War Banner is on the field, active characters gain 20% increased healing received."
+    },
+    {
+      "name": "Striking Hound: Thunderous Force",
+      "phase": "Constellation Lv. 5",
+      "desc": "Increases the level of Juuga: Forward Unto Victory by 3. Maximum upgrade level is 15."
+    },
+    {
+      "name": "Valiant Hound: Mountainous Fealty",
+      "phase": "Constellation Lv. 6",
+      "desc": "When a character is healed by Gorou, their CRIT DMG is increased by 20% for 10s."
+    }
+  ]
+}
