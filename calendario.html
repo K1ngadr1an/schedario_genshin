@@ -2472,6 +2472,15 @@
   </head>
   <body>
     <nav class="main-navbar">
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Apri menu"
+        aria-expanded="false"
+        aria-controls="navbarModal"
+      >
+        <span></span><span></span><span></span>
+      </button>
       <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
       <a href="gestione%20personaggio.html" class="nav-link"
         ><span>🛠️</span> Gestione</a
@@ -2495,16 +2504,74 @@
       <a href="Community%20Build.html" class="nav-link"
         ><span>🏗️</span> Community Build</a
       >
-      <div
-        id="user-controls"
-        style="
-          margin-left: auto;
-          display: flex;
-          gap: 0.5rem;
-          align-items: center;
-        "
-      ></div>
     </nav>
+    <div class="navbar-modal-overlay" id="navbarModalOverlay"></div>
+    <div class="navbar-modal" id="navbarModal">
+      <button
+        class="close-navbar-modal"
+        id="closeNavbarModal"
+        aria-label="Chiudi menu"
+      >
+        &times;
+      </button>
+      <nav class="navbar-modal-links">
+        <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+        <a href="gestione%20personaggio.html" class="nav-link"
+          ><span>🛠️</span> Gestione</a
+        >
+        <a href="calendario.html" class="nav-link active"
+          ><span>📅</span> Calendario</a
+        >
+        <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+        <a href="build-rating.html" class="nav-link"
+          ><span>⭐</span> Build Rating</a
+        >
+        <a href="migliori%20team%20abisso.html" class="nav-link"
+          ><span>👥</span> Migliori Team Abisso</a
+        >
+        <a href="best_comp_teatro.html" class="nav-link"
+          ><span>🎭</span> Migliori Team Teatro Immaginario</a
+        >
+        <a href="calcolatore-danni.html" class="nav-link"
+          ><span>⚔️</span> Calcolatore Danni</a
+        >
+        <a href="Community%20Build.html" class="nav-link"
+          ><span>🏗️</span> Community Build</a
+        >
+      </nav>
+    </div>
+    <span
+      id="userControls"
+      style="
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        margin-top: 1.5rem;
+      "
+    ></span>
+    <script>
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const navbarModal = document.getElementById("navbarModal");
+      const navbarModalOverlay = document.getElementById("navbarModalOverlay");
+      const closeNavbarModal = document.getElementById("closeNavbarModal");
+      function openNavbarModal() {
+        navbarModal.classList.add("open");
+        navbarModalOverlay.classList.add("open");
+        document.body.classList.add("navbar-modal-open");
+      }
+      function closeNavbar() {
+        navbarModal.classList.remove("open");
+        navbarModalOverlay.classList.remove("open");
+        document.body.classList.remove("navbar-modal-open");
+      }
+      hamburgerBtn.addEventListener("click", openNavbarModal);
+      closeNavbarModal.addEventListener("click", closeNavbar);
+      navbarModalOverlay.addEventListener("click", closeNavbar);
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeNavbar();
+      });
+    </script>
 
     <div class="container">
       <!-- Header Calendario -->

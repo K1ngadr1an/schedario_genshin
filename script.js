@@ -1,3 +1,6 @@
+// In cima al file (dopo eventuali import o variabili globali)
+const API_BASE = "https://9349e2cb6403.ngrok-free.app";
+
 let artifactCount = 0;
 let currentCharacter = null;
 let isTableView = false;
@@ -1101,11 +1104,29 @@ function openCharacterDetail(name) {
 }
 
 // Carica i dati dettagliati del personaggio
-function loadCharacterDetailData(name) {
-  const storageKey = `character_detail_${name}`;
-  const savedData = localStorage.getItem(storageKey);
-  const charData = savedData ? JSON.parse(savedData) : {};
+async function loadCharacterDetailData(name) {
+  try {
+    // Prova a caricare da MongoDB tramite API Flask
+    const res = await fetch(
+      `${API_BASE}/api/character/${encodeURIComponent(name)}`
+    );
+    if (!res.ok) throw new Error("Dati non trovati su MongoDB");
+    const charData = await res.json();
+    // Salva anche in localStorage per offline
+    localStorage.setItem(`character_detail_${name}`, JSON.stringify(charData));
+    // Popola i campi con i dati da MongoDB
+    populateDetailFields(charData);
+  } catch (e) {
+    // Fallback: carica da localStorage
+    const storageKey = `character_detail_${name}`;
+    const savedData = localStorage.getItem(storageKey);
+    const charData = savedData ? JSON.parse(savedData) : {};
+    populateDetailFields(charData);
+  }
+}
 
+// Funzione di supporto per popolare i campi dettagliati
+function populateDetailFields(charData) {
   // Statistiche base
   document.getElementById("detailLevel").value = charData.detailLevel || "";
   document.getElementById("detailConstellation").value =
@@ -1166,7 +1187,7 @@ function loadCharacterDetailData(name) {
     charData.detailPersonalNotes || "";
 
   // Aggiorna le statistiche dell'arma
-  updateWeaponStats();
+  if (typeof updateWeaponStats === "function") updateWeaponStats();
 
   // Aggiorna i membri del team se esistono
   const teamMembers = [
@@ -1183,16 +1204,18 @@ function loadCharacterDetailData(name) {
   teamMembers.forEach((memberId) => {
     const memberName = charData[memberId];
     if (memberName && memberName !== "") {
-      const character = allCharacters.find((c) => c.name === memberName);
+      const character =
+        typeof allCharacters !== "undefined"
+          ? allCharacters.find((c) => c.name === memberName)
+          : null;
       if (character) {
-        // Trova l'emoji del personaggio
-        const emoji = getElementEmoji(character.element);
-
-        // Usa la funzione selectTeamMember locale se disponibile, altrimenti quella globale
+        const emoji =
+          typeof getElementEmoji === "function"
+            ? getElementEmoji(character.element)
+            : "👤";
         if (typeof selectTeamMember === "function") {
           selectTeamMember(memberId, character.name, character.name, emoji);
         } else {
-          // Fallback: aggiorna manualmente il display
           const memberInput = document.querySelector(
             `#${memberId}_dropdown`
           )?.previousElementSibling;
@@ -1200,12 +1223,9 @@ function loadCharacterDetailData(name) {
             const avatar = memberInput.querySelector(".team-member-avatar");
             const nameSpan = memberInput.querySelector(".team-member-name");
             const hiddenInput = document.getElementById(memberId + "_hidden");
-
             if (nameSpan) nameSpan.textContent = character.name;
             if (hiddenInput) hiddenInput.value = character.name;
-
             if (avatar) {
-              // Prima prova a caricare l'immagine personalizzata dal localStorage
               const customImage = localStorage.getItem(
                 `character_image_${character.name}`
               );
@@ -1214,16 +1234,12 @@ function loadCharacterDetailData(name) {
                 avatar.style.backgroundSize = "cover";
                 avatar.style.backgroundPosition = "center";
                 avatar.innerHTML = "";
-              }
-              // Altrimenti usa l'immagine dal JSON
-              else if (character.image) {
+              } else if (character.image) {
                 avatar.style.backgroundImage = `url(${character.image})`;
                 avatar.style.backgroundSize = "cover";
                 avatar.style.backgroundPosition = "center";
                 avatar.innerHTML = "";
-              }
-              // Fallback all'emoji dell'elemento
-              else {
+              } else {
                 avatar.style.backgroundImage = "none";
                 avatar.innerHTML = emoji || "👤";
               }
@@ -1236,7 +1252,7 @@ function loadCharacterDetailData(name) {
 }
 
 // Salva i dati dettagliati del personaggio
-function saveCharacterDetail() {
+async function saveCharacterDetail() {
   const characterName = document.getElementById(
     "detailCharacterName"
   ).textContent;
@@ -1305,8 +1321,32 @@ function saveCharacterDetail() {
     JSON.stringify(data)
   );
 
+  // Salva su MongoDB tramite API Flask
+  let mongoSuccess = false;
+  try {
+    const res = await fetch(
+      `${API_BASE}/api/character/${encodeURIComponent(characterName)}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
+    const result = await res.json();
+    if (result.status === "ok") {
+      mongoSuccess = true;
+    }
+  } catch (e) {
+    // Errore di rete o altro
+    mongoSuccess = false;
+  }
+
   // Mostra conferma
-  showNotification("Dati salvati con successo! 💾", "success");
+  if (mongoSuccess) {
+    showNotification("Dati salvati su MongoDB! 💾", "success");
+  } else {
+    showNotification("Dati salvati solo localmente (offline)! 💾", "warning");
+  }
 }
 
 // Reset dei dati del personaggio dettagliato
@@ -2090,94 +2130,6 @@ async function showCharacterDetail(characterName) {
 
   // Popola il dropdown delle armi
   populateWeaponDropdown();
-}
-
-function loadCharacterDetailData(characterName) {
-  const savedData = localStorage.getItem(`character_detail_${characterName}`);
-  if (savedData) {
-    const data = JSON.parse(savedData);
-
-    // Popola tutti i campi con i dati salvati
-    Object.keys(data).forEach((key) => {
-      const element = document.getElementById(key);
-      if (element) {
-        if (element.type === "number") {
-          element.value = parseInt(data[key]) || 0;
-        } else {
-          element.value = data[key] || "";
-        }
-      }
-    });
-
-    // Aggiorna i membri del team se esistono
-    const teamMembers = [
-      "detailTeam1Member1",
-      "detailTeam1Member2",
-      "detailTeam1Member3",
-      "detailTeam1Member4",
-      "detailTeam2Member1",
-      "detailTeam2Member2",
-      "detailTeam2Member3",
-      "detailTeam2Member4",
-    ];
-
-    teamMembers.forEach((memberId) => {
-      const memberName = data[memberId];
-      if (memberName && memberName !== "") {
-        const character = allCharacters.find((c) => c.name === memberName);
-        if (character) {
-          // Trova l'emoji del personaggio
-          const emoji = getElementEmoji(character.element);
-
-          // Usa la funzione selectTeamMember locale se disponibile, altrimenti quella globale
-          if (typeof selectTeamMember === "function") {
-            selectTeamMember(memberId, character.name, character.name, emoji);
-          } else {
-            // Fallback: aggiorna manualmente il display
-            const memberInput = document.querySelector(
-              `#${memberId}_dropdown`
-            )?.previousElementSibling;
-            if (memberInput) {
-              const avatar = memberInput.querySelector(".team-member-avatar");
-              const nameSpan = memberInput.querySelector(".team-member-name");
-              const hiddenInput = document.getElementById(memberId + "_hidden");
-
-              if (nameSpan) nameSpan.textContent = character.name;
-              if (hiddenInput) hiddenInput.value = character.name;
-
-              if (avatar) {
-                // Prima prova a caricare l'immagine personalizzata dal localStorage
-                const customImage = localStorage.getItem(
-                  `character_image_${character.name}`
-                );
-                if (customImage) {
-                  avatar.style.backgroundImage = `url(${customImage})`;
-                  avatar.style.backgroundSize = "cover";
-                  avatar.style.backgroundPosition = "center";
-                  avatar.innerHTML = "";
-                }
-                // Altrimenti usa l'immagine dal JSON
-                else if (character.image) {
-                  avatar.style.backgroundImage = `url(${character.image})`;
-                  avatar.style.backgroundSize = "cover";
-                  avatar.style.backgroundPosition = "center";
-                  avatar.innerHTML = "";
-                }
-                // Fallback all'emoji dell'elemento
-                else {
-                  avatar.style.backgroundImage = "none";
-                  avatar.innerHTML = emoji || "👤";
-                }
-              }
-            }
-          }
-        }
-      }
-    });
-
-    // Aggiorna le statistiche dell'arma
-    updateWeaponStats();
-  }
 }
 
 function resetCharacterDetail() {

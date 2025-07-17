@@ -4,8 +4,7 @@ console.log("Calendario completo caricato!");
 // Variabili globali
 let currentDate = new Date();
 let selectedDate = new Date();
-let tasks =
-  JSON.parse(localStorage.getItem(getUserStorageKey("calendarTasks"))) || {};
+let tasks = {};
 let selectedArtifactToCreate = null;
 let selectedMaterials = [];
 let selectedTaskImages = [];
@@ -180,19 +179,22 @@ function logoutUser() {
 }
 
 function renderUserControls() {
-  const controls = document.getElementById("user-controls");
-  if (!controls) return;
-  controls.innerHTML = "";
-  if (isLoggedIn()) {
-    controls.innerHTML = `<span style="color:#64ffda;font-weight:600;">👤 ${getCurrentUser()}</span><button class="btn" onclick="logoutUser()">Logout</button>`;
+  const user = localStorage.getItem("user");
+  const el = document.getElementById("userControls");
+  if (!el) return;
+  if (user) {
+    el.innerHTML = `
+      <span style='margin-right:0.5em'>👤 ${user}</span>
+      <a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em;'>Area Utente</a>
+      <button onclick='logoutUser()' class='btn btn-secondary'>Logout</button>
+    `;
   } else {
-    controls.innerHTML = `<a href="login.html" class="btn">Login</a><a href="registrazione.html" class="btn btn-secondary">Registrati</a>`;
+    el.innerHTML = `<a href='login.html' class='btn btn-secondary' style='margin-right:0.5em;'>Login</a> <a href='registrazione.html' class='btn btn-secondary'>Registrati</a>`;
   }
 }
 
-window.logoutUser = logoutUser;
 window.renderUserControls = renderUserControls;
-window.isLoggedIn = isLoggedIn;
+document.addEventListener("DOMContentLoaded", renderUserControls);
 
 // Funzioni per il calendario
 function initializeCalendar() {
@@ -2745,6 +2747,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   console.log("Calendario completo inizializzato!");
   await loadArtifacts(); // Carica gli artefatti
   await loadMaterials(); // Carica i materiali
+  await loadCalendarFromBackend(); // Carica il calendario dal backend
   initializeCalendar();
 });
 
@@ -3891,3 +3894,50 @@ window.addEventListener("DOMContentLoaded", function () {
   updateStats();
   console.log("✅ Calendario inizializzato");
 });
+
+async function loadCalendarFromBackend() {
+  const user = getCurrentUser();
+  try {
+    const res = await fetch(
+      `https://jose-api-tent-theta.trycloudflare.com/api/calendar/${encodeURIComponent(
+        user
+      )}`
+    );
+    if (!res.ok) throw new Error("Errore nel caricamento calendario");
+    tasks = await res.json();
+    loadTasksForDate(selectedDate);
+    updateStats();
+    renderCalendar();
+  } catch (e) {
+    console.error("Errore caricamento calendario:", e);
+    tasks = {};
+    loadTasksForDate(selectedDate);
+    updateStats();
+    renderCalendar();
+  }
+}
+
+async function saveTasks() {
+  const user = getCurrentUser();
+  try {
+    await fetch(
+      `https://jose-api-tent-theta.trycloudflare.com/api/calendar/${encodeURIComponent(
+        user
+      )}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(tasks),
+      }
+    );
+    // (opzionale) mostra un toast di successo
+  } catch (e) {
+    console.error("Errore salvataggio calendario:", e);
+    // (opzionale) mostra un toast di errore
+  }
+}
+
+// Polling automatico per sincronizzazione live
+setInterval(() => {
+  loadCalendarFromBackend();
+}, 5000);

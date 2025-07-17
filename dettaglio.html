@@ -582,6 +582,43 @@
           font-size: 0.95em;
           color: #b0eaff;
         }
+
+        /* Stili per l'indicatore di sincronizzazione */
+        #syncStatus {
+          padding: 0.3rem 0.8rem;
+          border-radius: 20px;
+          font-size: 0.9rem;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        }
+
+        .sync-connected {
+          background: rgba(76, 175, 80, 0.2);
+          color: #4caf50;
+          border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+
+        .sync-disconnected {
+          background: rgba(244, 67, 54, 0.2);
+          color: #f44336;
+          border: 1px solid rgba(244, 67, 54, 0.3);
+        }
+      }
+      @media (max-width: 700px) {
+        #userControls {
+          display: flex !important;
+          flex-direction: row !important;
+          align-items: center !important;
+          gap: 0.5em !important;
+        }
+        #userControls span,
+        #userControls a,
+        #userControls button {
+          font-size: 1em !important;
+          margin: 0 !important;
+          padding: 0.5em 0.8em !important;
+          white-space: nowrap !important;
+        }
       }
     </style>
   </head>
@@ -662,6 +699,7 @@
           <span id="detailElement">💨 Anemo</span>
           <span id="detailWeapon">⚔️ Spada</span>
           <span id="detailRegion">🏰 Mondstadt</span>
+          <span id="syncStatus" class="sync-disconnected">🔴 Disconnesso</span>
         </div>
       </div>
 
@@ -1281,6 +1319,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- <script src="websocket-client.js"></script> -->
     <script>
       // Variabili globali
       let currentMobileMemberId = null;
@@ -1610,29 +1649,39 @@
           totalTeams: teamElements.length,
         };
 
-        // Debug specifico per i team member
-        console.log("Dati dei team:", teamsData);
-        console.log("Dati da salvare:", characterData);
-
-        localStorage.setItem(
-          `character_detail_${characterName}`,
-          JSON.stringify(characterData)
-        );
-
-        console.log("Dati salvati nel localStorage per:", characterName);
-
-        // Mostra feedback solo se richiesto
-        if (showToastNotification) {
-          showToast("✅ Dati salvati con successo!", "success");
-
-          // Effetto visivo sul pulsante
-          const saveBtn = document.querySelector(".btn");
-          if (saveBtn) {
-            saveBtn.classList.add("saved");
-            setTimeout(() => {
-              saveBtn.classList.remove("saved");
-            }, 2000);
+        // Salva su MongoDB Atlas tramite API Flask
+        fetch(
+          `https://jose-api-tent-theta.trycloudflare.com/api/character/${encodeURIComponent(
+            characterName
+          )}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(characterData),
           }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.status === "ok") {
+              if (showToastNotification) {
+                showToast("✅ Dati salvati su MongoDB!", "success");
+              }
+            } else {
+              showToast("❌ Errore nel salvataggio su MongoDB", "error");
+            }
+          })
+          .catch((err) => {
+            showToast("❌ Errore di rete nel salvataggio", "error");
+            console.error(err);
+          });
+
+        // Effetto visivo sul pulsante
+        const saveBtn = document.querySelector(".btn");
+        if (saveBtn) {
+          saveBtn.classList.add("saved");
+          setTimeout(() => {
+            saveBtn.classList.remove("saved");
+          }, 2000);
         }
       }
 
@@ -2164,6 +2213,15 @@
           setTimeout(() => {
             loadCharacterDetailData(characterName);
           }, 300);
+
+          // 🔄 Aggiorna i dati del personaggio ogni 5 secondi
+          setInterval(() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const characterName = urlParams.get("character");
+            if (characterName) {
+              loadCharacterDetailData(characterName);
+            }
+          }, 5000); // ogni 5 secondi
 
           // Aggiungi event listener per salvare quando si chiude la pagina
           window.addEventListener("beforeunload", function () {
@@ -3308,142 +3366,138 @@
 
       // Funzione per caricare i dati del personaggio
       function loadCharacterDetailData(characterName) {
-        const savedData = localStorage.getItem(
-          `character_detail_${characterName}`
-        );
-        if (!savedData) {
-          console.log("Nessun dato salvato per:", characterName);
-          return;
-        }
-
-        try {
-          const data = JSON.parse(savedData);
-          console.log("Dati caricati per:", characterName, data);
-
-          // Mappa delle chiavi salvate ai campi HTML
-          const fieldMappings = {
-            level: "detailLevel",
-            constellation: "detailConstellation",
-            baseAtk: "detailBaseAtk",
-            baseHP: "detailBaseHP",
-            baseDef: "detailBaseDef",
-            critRate: "detailCritRate",
-            critDMG: "detailCritDMG",
-            elementalDMG: "detailElementalDMG",
-            currentWeapon: "detailCurrentWeapon",
-            weaponLevel: "detailWeaponLevel",
-            weaponRefinement: "detailWeaponRefinement",
-            weaponBaseAtk: "detailWeaponBaseAtk",
-            weaponBonus: "detailWeaponBonus",
-            normalAttack: "detailNormalAttack",
-            elementalSkill: "detailElementalSkill",
-            elementalBurst: "detailElementalBurst",
-            mainSet: "detailMainSet",
-            mainSetNotes: "detailMainSetNotes",
-            subSet: "detailSubSet",
-            subSetNotes: "detailSubSetNotes",
-            sandsMain: "detailSandsMain",
-            gobletMain: "detailGobletMain",
-            circletMain: "detailCircletMain",
-            subStatsPriority: "detailSubStatsPriority",
-            personalNotes: "detailPersonalNotes",
-          };
-
-          // Popola tutti i campi base usando la mappa corretta
-          Object.keys(fieldMappings).forEach((savedKey) => {
-            const htmlFieldId = fieldMappings[savedKey];
-            const element = document.getElementById(htmlFieldId);
-            if (
-              element &&
-              data[savedKey] !== undefined &&
-              data[savedKey] !== null
-            ) {
-              console.log(
-                `Caricando ${savedKey}: ${data[savedKey]} in ${htmlFieldId}`
+        fetch(
+          `https://jose-api-tent-theta.trycloudflare.com/api/character/${encodeURIComponent(
+            characterName
+          )}`
+        )
+          .then((response) => {
+            console.log("Status:", response.status, response.statusText);
+            if (!response.ok) {
+              throw new Error(
+                `Errore ${response.status}: ${response.statusText}`
               );
-              element.value = data[savedKey];
-
-              // Gestione speciale per il campo arma
-              if (savedKey === "currentWeapon" && data[savedKey]) {
-                console.log(`Impostando arma selezionata: ${data[savedKey]}`);
-                // Forza l'aggiornamento del select
-                element.dispatchEvent(new Event("change"));
-              }
             }
-          });
-
-          // Gestione dinamica dei team
-          const totalTeams = data.totalTeams || 2; // Default a 2 team se non specificato
-          console.log(`Caricando ${totalTeams} team...`);
-
-          // Ricrea i team se necessario
-          recreateTeamsIfNeeded(totalTeams);
-
-          // Popola i dati dei team dinamicamente
-          const teamElements = document.querySelectorAll(".team-comp");
-          teamElements.forEach((teamElement, index) => {
-            const teamNumber = index + 1;
-            const teamId = `team${teamNumber}`;
-
-            // Popola nome e note del team
-            const teamNameElement = document.getElementById(
-              `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Name`
-            );
-            const teamNotesElement = document.getElementById(
-              `detail${teamId.charAt(0).toUpperCase() + teamId.slice(1)}Notes`
-            );
-
-            if (teamNameElement && data[`${teamId}Name`] !== undefined) {
-              teamNameElement.value = data[`${teamId}Name`];
-            }
-            if (teamNotesElement && data[`${teamId}Notes`] !== undefined) {
-              teamNotesElement.value = data[`${teamId}Notes`];
-            }
-
-            // Popola i membri del team
-            for (let memberIndex = 1; memberIndex <= 4; memberIndex++) {
-              const memberId = `detail${
-                teamId.charAt(0).toUpperCase() + teamId.slice(1)
-              }Member${memberIndex}`;
-              const memberName = data[`${teamId}Member${memberIndex}`];
-
-              if (memberName && memberName.trim() !== "") {
-                console.log(
-                  `Caricando membro ${memberIndex} del team ${teamNumber}:`,
-                  memberName
-                );
-
-                // Trova il personaggio nell'array allCharacters
-                const character = window.allCharacters.find(
-                  (c) => c.name === memberName
-                );
-                if (character) {
-                  // Aggiorna il display del team member
-                  updateTeamMemberDisplay(
-                    memberId,
-                    character.name,
-                    character.name,
-                    getElementEmoji(character.element)
-                  );
+            return response.text();
+          })
+          .then((text) => {
+            console.log("Risposta RAW:", text);
+            try {
+              const data = JSON.parse(text);
+              console.log("Dati JSON:", data);
+              // Aggiorna solo se i dati sono diversi
+              const fieldMappings = {
+                level: "detailLevel",
+                constellation: "detailConstellation",
+                baseAtk: "detailBaseAtk",
+                baseHP: "detailBaseHP",
+                baseDef: "detailBaseDef",
+                critRate: "detailCritRate",
+                critDMG: "detailCritDMG",
+                elementalDMG: "detailElementalDMG",
+                currentWeapon: "detailCurrentWeapon",
+                weaponLevel: "detailWeaponLevel",
+                weaponRefinement: "detailWeaponRefinement",
+                weaponBaseAtk: "detailWeaponBaseAtk",
+                weaponBonus: "detailWeaponBonus",
+                normalAttack: "detailNormalAttack",
+                elementalSkill: "detailElementalSkill",
+                elementalBurst: "detailElementalBurst",
+                mainSet: "detailMainSet",
+                mainSetNotes: "detailMainSetNotes",
+                subSet: "detailSubSet",
+                subSetNotes: "detailSubSetNotes",
+                sandsMain: "detailSandsMain",
+                gobletMain: "detailGobletMain",
+                circletMain: "detailCircletMain",
+                subStatsPriority: "detailSubStatsPriority",
+                personalNotes: "detailPersonalNotes",
+              };
+              Object.keys(fieldMappings).forEach((savedKey) => {
+                const htmlFieldId = fieldMappings[savedKey];
+                const element = document.getElementById(htmlFieldId);
+                if (
+                  element &&
+                  data[savedKey] !== undefined &&
+                  data[savedKey] !== null &&
+                  element.value !== String(data[savedKey])
+                ) {
+                  element.value = data[savedKey];
+                  if (savedKey === "currentWeapon" && data[savedKey]) {
+                    element.dispatchEvent(new Event("change"));
+                  }
                 }
+              });
+              // Gestione dinamica dei team (aggiorna solo se diversi)
+              const totalTeams = data.totalTeams || 2;
+              recreateTeamsIfNeeded(totalTeams);
+              const teamElements = document.querySelectorAll(".team-comp");
+              teamElements.forEach((teamElement, index) => {
+                const teamNumber = index + 1;
+                const teamId = `team${teamNumber}`;
+                const teamNameElement = document.getElementById(
+                  `detail${
+                    teamId.charAt(0).toUpperCase() + teamId.slice(1)
+                  }Name`
+                );
+                const teamNotesElement = document.getElementById(
+                  `detail${
+                    teamId.charAt(0).toUpperCase() + teamId.slice(1)
+                  }Notes`
+                );
+                if (
+                  teamNameElement &&
+                  data[`${teamId}Name`] !== undefined &&
+                  teamNameElement.value !== String(data[`${teamId}Name`])
+                ) {
+                  teamNameElement.value = data[`${teamId}Name`];
+                }
+                if (
+                  teamNotesElement &&
+                  data[`${teamId}Notes`] !== undefined &&
+                  teamNotesElement.value !== String(data[`${teamId}Notes`])
+                ) {
+                  teamNotesElement.value = data[`${teamId}Notes`];
+                }
+                for (let memberIndex = 1; memberIndex <= 4; memberIndex++) {
+                  const memberId = `detail${
+                    teamId.charAt(0).toUpperCase() + teamId.slice(1)
+                  }Member${memberIndex}`;
+                  const memberName = data[`${teamId}Member${memberIndex}`];
+                  const hiddenInput = document.getElementById(
+                    memberId + "_hidden"
+                  );
+                  if (
+                    memberName &&
+                    memberName.trim() !== "" &&
+                    hiddenInput &&
+                    hiddenInput.value !== memberName
+                  ) {
+                    updateTeamMemberDisplay(
+                      memberId,
+                      memberName,
+                      memberName,
+                      getElementEmoji(
+                        (
+                          window.allCharacters.find(
+                            (c) => c.name === memberName
+                          ) || {}
+                        ).element
+                      )
+                    );
+                  }
+                }
+              });
+              if (typeof updateWeaponStats === "function") {
+                updateWeaponStats();
               }
+            } catch (e) {
+              console.error("Risposta non JSON:", text);
             }
+          })
+          .catch((error) => {
+            console.error("Errore nella fetch:", error);
           });
-
-          // Aggiorna le statistiche dell'arma
-          if (typeof updateWeaponStats === "function") {
-            updateWeaponStats();
-          }
-
-          console.log("Dati caricati con successo per:", characterName);
-        } catch (error) {
-          console.error(
-            "Errore nel caricamento dei dati per",
-            characterName,
-            ":",
-            error
-          );
-        }
       }
 
       // Funzione per aggiornare il display di un team member
@@ -4065,7 +4119,11 @@
         const el = document.getElementById("userControls");
         if (!el) return;
         if (user) {
-          el.innerHTML = `<span style='margin-right:1rem'>👤 ${user}</span><a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em;'>Area Utente</a><button onclick='doLogout()'>Logout</button>`;
+          el.innerHTML = `
+            <span style='margin-right:0.5em'>👤 ${user}</span>
+            <a href='utente.html' class='btn btn-secondary' style='margin-right:0.5em;'>Area Utente</a>
+            <button onclick='doLogout()'>Logout</button>
+          `;
         } else {
           el.innerHTML = `<button onclick='openLoginModal()'>Login</button> <button onclick='openLoginModal()'>Registrati</button>`;
         }

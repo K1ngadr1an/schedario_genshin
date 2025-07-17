@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elimina Account - Genshin Impact Character Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Apri menu"
+        aria-expanded="false"
+        aria-controls="navbarModal"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav-link"><span>🏠</span> Galleria</a>
+      <a href="gestione personaggio.html" class="nav-link"
+        ><span>🛠️</span> Gestione</a
+      >
+      <a href="calendario.html" class="nav-link"><span>📅</span> Calendario</a>
+      <a href="journey.html" class="nav-link"><span>🗺️</span> Journey</a>
+      <a href="build-rating.html" class="nav-link"
+        ><span>⭐</span> Build Rating</a
+      >
+      <a href="migliori%20team%20abisso.html" class="nav-link"
+        ><span>👥</span> Migliori Team Abisso</a
+      >
+      <a href="best_comp_teatro.html" class="nav-link"
+        ><span>🎭</span> Migliori Team Teatro Immaginario</a
+      >
+      <a href="calcolatore-danni.html" class="nav-link"
+        ><span>⚔️</span> Calcolatore Danni</a
+      >
+      <a href="Community Build.html" class="nav-link"
+        ><span>🏗️</span> Community Build</a
+      >
+      <a href="community_top_build.html" class="nav-link"
+        ><span>🏆</span> Top Build</a
+      >
+    </nav>
+    <span
+      id="userControls"
+      style="
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        margin-top: 1.5rem;
+      "
+    ></span>
+    <div class="container" style="max-width: 600px; margin-top: 2.5rem">
+      <h1 style="text-align: center; color: #ff6b6b; margin-bottom: 2rem">
+        Elimina Account
+      </h1>
+      <section
+        style="
+          background: rgba(15, 20, 25, 0.9);
+          border-radius: 18px;
+          padding: 2rem;
+          color: #e0e0e0;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        "
+      >
+        <h2 style="color: #ff6b6b">Attenzione!</h2>
+        <p>
+          Questa operazione eliminerà <b>definitivamente</b> il tuo account e
+          tutti i dati associati (personaggi, calendario, ecc.).<br />Non sarà
+          possibile annullare l’operazione.
+        </p>
+        <button
+          id="deleteAccountBtn"
+          class="btn btn-danger"
+          style="margin-top: 2rem; width: 100%; font-size: 1.2rem"
+        >
+          Elimina Account
+        </button>
+        <div
+          id="deleteResult"
+          style="margin-top: 2rem; text-align: center"
+        ></div>
+      </section>
+      <div style="text-align: center; margin-top: 2.5rem">
+        <a href="index.html" class="btn btn-secondary">Annulla</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      function getCurrentUser() {
+        return localStorage.getItem("user");
+      }
+      document.getElementById("deleteAccountBtn").onclick = async function () {
+        const user = getCurrentUser();
+        if (!user) {
+          document.getElementById("deleteResult").innerHTML =
+            '<span style="color:#ff6b6b;">Devi essere loggato per eliminare l’account.</span>';
+          return;
+        }
+        if (
+          !confirm(
+            "Sei sicuro di voler eliminare DEFINITIVAMENTE il tuo account e tutti i dati?"
+          )
+        )
+          return;
+        try {
+          const res = await fetch(
+            `/api/delete_account/${encodeURIComponent(user)}`,
+            { method: "DELETE" }
+          );
+          if (res.ok) {
+            localStorage.removeItem("user");
+            document.getElementById("deleteResult").innerHTML =
+              '<span style="color:#51cf66;">Account eliminato con successo. Verrai reindirizzato alla home...</span>';
+            setTimeout(() => {
+              window.location.href = "index.html";
+            }, 2000);
+          } else {
+            const data = await res.json();
+            document.getElementById(
+              "deleteResult"
+            ).innerHTML = `<span style='color:#ff6b6b;'>Errore: ${
+              data.error || "Impossibile eliminare l’account."
+            }</span>`;
+          }
+        } catch (e) {
+          document.getElementById(
+            "deleteResult"
+          ).innerHTML = `<span style='color:#ff6b6b;'>Errore di rete.</span>`;
+        }
+      };
+    </script>
+  </body>
+</html>
